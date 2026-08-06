@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Challenge · Digital Foundations Quest</title>
+    <link rel="stylesheet" href="css/challenge.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">Challenge Platform</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Leaderboard</a>
+        <a href="challenge.html?test=1&amp;restart=1">Test</a>
+        <a id="restart-link" href="challenge.html?restart=1">Restart</a>
+      </nav>
+    </header>
+
+    <main>
+      <p class="eyebrow">In progress</p>
+      <h1 id="quest-title">Quest</h1>
+      <ol class="progress-track" id="progress-track" aria-label="Progress"></ol>
+      <p id="module-meta" class="sr-only" hidden></p>
+      <p id="status-line" class="sr-only" hidden></p>
+      <div class="panel" id="quiz-root"></div>
+    </main>
+
+    <footer class="site-footer">Answers are checked locally · timing stored in this browser</footer>
+
+    <script src="js/session-log.js?v=6"></script>
+    <script src="js/progress.js?v=5"></script>
+    <script src="js/adaptive-engine.js?v=5"></script>
+    <script src="js/quiz-engine.js?v=5"></script>
+    <script src="js/challenge-app.js?v=5"></script>
+  </body>
+</html>
