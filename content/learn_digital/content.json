@@ -1,0 +1,69 @@
+{
+  "id": "learn_digital",
+  "title": "Digital Foundations Quest",
+  "version": 4,
+  "source_course": "learn_digital",
+  "ux": {
+    "reveal_modules_during_quiz": false,
+    "feedback": "report_only",
+    "module_order": "random",
+    "within_module": "easy_to_hard_clearance"
+  },
+  "timing": {
+    "enabled": true,
+    "limits_s": {
+      "easy": 30,
+      "medium": 45,
+      "hard": 60
+    },
+    "warn_before_s": 10,
+    "on_timeout": "incorrect",
+    "keep_counting_when_hidden": true
+  },
+  "progress": {
+    "unit": "module",
+    "difficulties": ["easy", "medium", "hard"],
+    "need_correct_per_difficulty": 1,
+    "max_attempts_per_difficulty": 10,
+    "bank_multiplier": 3,
+    "advance": "difficulties_cleared_or_exhausted"
+  },
+  "profiles": {
+    "test": {
+      "title": "Digital Foundations Quest (test)",
+      "module_ids": ["module01-radix-converter", "module13-kmap"],
+      "difficulties": ["easy", "medium"],
+      "max_attempts_per_difficulty": 3
+    }
+  },
+  "media_policy": {
+    "download": false,
+    "screenshot_ok": true
+  },
+  "modules": [
+    {
+      "id": "module01-radix-converter",
+      "order": 1,
+      "title": "Radix & bit width",
+      "toolId": "radix-converter",
+      "questions": "questions/module01-radix-converter.json",
+      "source_quiz": "module01-radix-converter/quiz.json"
+    },
+    {
+      "id": "module13-kmap",
+      "order": 2,
+      "title": "K-maps",
+      "toolId": "kmap",
+      "questions": "questions/module13-kmap.json",
+      "source_quiz": "module13-kmap/quiz.json"
+    },
+    {
+      "id": "module26-setup-hold",
+      "order": 3,
+      "title": "Setup / hold",
+      "toolId": "setup-hold",
+      "questions": "questions/module26-setup-hold.json",
+      "source_quiz": "module26-setup-hold/quiz.json"
+    }
+  ]
+}

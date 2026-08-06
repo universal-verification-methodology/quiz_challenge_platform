@@ -1,0 +1,20 @@
+{
+  "certificate": {
+    "issuer": "Challenge Platform",
+    "endorsement_name": "Universal Verification Methodology Community",
+    "endorsement_url": "https://github.com/universal-verification-methodology",
+    "course_label": "Digital Foundations Quest",
+    "require_testimony": true
+  },
+  "results": {
+    "endpoint": "https://quiz-challenge-results.digital-design-challenge.workers.dev",
+    "leaderboard_endpoint": "https://quiz-challenge-results.digital-design-challenge.workers.dev",
+    "auto_submit": true,
+    "github": {
+      "owner": "universal-verification-methodology",
+      "repo": "quiz_challenge_platform",
+      "via": "worker",
+      "notes": "Do not put a GitHub token in the browser. Point endpoint at backend/cloudflare-worker.js (or similar) which uses a server-side token to open an Issue or commit JSON under submissions/."
+    }
+  }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Leaderboard · Digital Foundations Quest</title>
+    <link rel="stylesheet" href="css/challenge.css" />
+  </head>
+  <body class="page-dashboard">
+    <header class="site-header">
+      <a class="brand" href="index.html">Challenge Platform</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="challenge.html?restart=1">Start quest</a>
+        <a href="dashboard.html" aria-current="page">Leaderboard</a>
+      </nav>
+    </header>
+
+    <main class="dashboard-main">
+      <p class="eyebrow">Public ranking</p>
+      <h1>Leaderboard</h1>
+      <p class="lede dashboard-lede">
+        Names are masked (first two letters kept). Ranking uses a composite score so
+        variable-length quests stay comparable. Full and test modes are separate boards.
+      </p>
+
+      <div class="dashboard-toolbar">
+        <div class="mode-tabs" role="tablist" aria-label="Quest mode">
+          <button type="button" class="mode-tab active" data-mode="full">Full quest</button>
+          <button type="button" class="mode-tab" data-mode="test">Test mode</button>
+        </div>
+        <p class="note" id="board-meta">Loading…</p>
+      </div>
+
+      <div class="panel dashboard-panel">
+        <div class="table-wrap">
+          <table class="board-table" id="board-table">
+            <thead>
+              <tr>
+                <th scope="col">Rank</th>
+                <th scope="col">Player</th>
+                <th scope="col">Score</th>
+                <th scope="col">Accuracy</th>
+                <th scope="col">Attempts</th>
+                <th scope="col">Cleared</th>
+                <th scope="col">Median / q</th>
+                <th scope="col">Timeouts</th>
+                <th scope="col">Percentile</th>
+                <th scope="col">Date</th>
+              </tr>
+            </thead>
+            <tbody id="board-body">
+              <tr>
+                <td colspan="10" class="board-empty">Loading rankings…</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note scoring-note" id="scoring-note"></p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      Best full (or test) run per person · email never shown on this page
+    </footer>
+
+    <script src="js/benchmark.js?v=1"></script>
+    <script src="js/dashboard.js?v=1"></script>
+  </body>
+</html>

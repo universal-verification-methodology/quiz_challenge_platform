@@ -1,0 +1,15 @@
+# Cloudflare Worker for quiz result → GitHub Issue
+# Docs: backend/SETUP_GITHUB.md
+
+name = "quiz-challenge-results"
+main = "cloudflare-worker.js"
+compatibility_date = "2024-11-01"
+
+# Non-secret config (safe to commit). Change to your results repo:
+[vars]
+GITHUB_OWNER = "universal-verification-methodology"
+GITHUB_REPO = "quiz_challenge_platform"
+ALLOW_ORIGIN = "*"
+
+# Secrets (NOT in this file — you paste them in the terminal or Cloudflare UI):
+#   wrangler secret put GITHUB_TOKEN

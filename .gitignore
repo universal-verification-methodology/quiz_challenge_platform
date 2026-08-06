@@ -1,0 +1,19 @@
+# dependencies
+node_modules/
+
+# wrangler / secrets
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+
+# local test artifacts
+tmp-*.pdf
+backend/_fix_push.*
+backend/_commit_msg.txt

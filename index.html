@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Digital Foundations Quest</title>
+    <link rel="stylesheet" href="css/challenge.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">Challenge Platform</a>
+      <nav class="nav-links">
+        <a href="docs/DESIGN.md">Design</a>
+        <a href="dashboard.html">Leaderboard</a>
+        <a href="report.html">Last report</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="eyebrow">Digital foundations challenge</p>
+        <h1>Digital Foundations Quest</h1>
+        <p class="lede">
+          Topic blocks are shuffled. Inside each block you climb easy → medium → hard.
+          Clear each difficulty with <strong>one correct</strong> answer (up to 10 tries,
+          no repeats). Length is not fixed — best case is short; tough runs take longer.
+          Analysis comes only at the end. Each question has a time limit
+          (easy 30s · medium 45s · hard 60s) so you answer from knowledge, not a paste into AI.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="challenge.html?restart=1">Start quest</a>
+          <a class="btn ghost" href="challenge.html">Resume</a>
+          <a class="btn ghost" href="dashboard.html">Leaderboard</a>
+          <a class="btn ghost" href="challenge.html?test=1&amp;restart=1">Test mode</a>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>How length works</h2>
+        <ul class="how-list">
+          <li><strong>Best case:</strong> 3 modules × 3 difficulties × 1 correct = <strong>9</strong> questions.</li>
+          <li><strong>Worst case:</strong> 3 × 3 × 10 attempts = <strong>90</strong> questions (then that level gives up).</li>
+          <li><strong>Bank size:</strong> 30 questions per difficulty (3× the max attempts) so items are not reused in a level.</li>
+          <li>No mid-quiz answer key — the report explains right/wrong and timing after you finish.</li>
+          <li>Pick an answer; if it stays selected for about a second, the quest moves on automatically.</li>
+          <li><strong>Time limit:</strong> easy 30s · medium 45s · hard 60s. Timeout counts as wrong and advances.</li>
+          <li><strong>Test mode:</strong> 2 modules × 2 difficulties (easy/medium), max 3 tries per level — best 4 / worst 12.</li>
+        </ul>
+        <p class="note">
+          Module names stay hidden during the quest; the report maps results back to
+          <code>learn_digital</code> for learning feedback.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      Serve with a local HTTP server · use Start quest after updates to clear old sessions
+    </footer>
+  </body>
+</html>
