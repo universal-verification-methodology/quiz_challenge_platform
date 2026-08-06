@@ -4,23 +4,11 @@
 (function (global) {
   function maskName(name) {
     const raw = String(name || "Anonymous").trim() || "Anonymous";
-    let kept = 0;
-    let out = "";
-    for (let i = 0; i < raw.length; i++) {
-      const ch = raw[i];
-      if (/\s/.test(ch)) {
-        out += " ";
-        continue;
-      }
-      if (kept < 2) {
-        out += ch;
-        kept += 1;
-      } else {
-        out += "X";
-      }
-    }
-    if (kept < 2) out += "X".repeat(2 - kept);
-    return out;
+    // "Yongfu Li" → "Yxxxxx Lx" (keep first letter of each word)
+    return raw.replace(/[^\s]+/g, (word) => {
+      if (word.length <= 1) return word;
+      return word[0] + "x".repeat(word.length - 1);
+    });
   }
 
   function countCleared(levelState) {

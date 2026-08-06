@@ -42,7 +42,7 @@ Scoring (higher is better):
 
 `1000 × (cleared / max_levels) + 100 × accuracy − 5 × timeouts − min(40, median_seconds)`
 
-Best run per email is kept; names shown as `YoXXXX XX` (first two letters kept).
+Best run per email is kept; names shown as `Yxxxxx Lx` (first letter of each word kept).
 
 Redeploy the worker after pulling these changes so `GET /leaderboard` exists.
 

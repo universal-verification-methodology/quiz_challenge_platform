@@ -356,7 +356,7 @@ report.html          # post-quest analytical report
 - Payload (`quiz_challenge_result_v1`) may be POSTed to `config/site.json` → `results.endpoint`.
 - That endpoint (e.g. Cloudflare Worker) uses a **server-side** `GITHUB_TOKEN` to open a GitHub Issue or store JSON — never embed the token in Pages JS.
 - See `backend/api.md` and `backend/cloudflare-worker.js`.
-- **Public leaderboard** (`dashboard.html`): `GET /leaderboard?mode=full|test` returns masked names (`YoXXXX XX`), composite score, accuracy, attempts, cleared levels, median time/q, timeouts, top %, and date. Full and test boards are separate; best run per email wins. Email is never exposed.
+- **Public leaderboard** (`dashboard.html`): `GET /leaderboard?mode=full|test` returns masked names (`Yxxxxx Lx`), composite score, accuracy, attempts, cleared levels, median time/q, timeouts, top %, and date. Full and test boards are separate; best run per email wins. Email is never exposed.
 
 ---
 

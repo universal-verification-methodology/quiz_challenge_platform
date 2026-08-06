@@ -2,6 +2,11 @@
 
 Standalone prototype for a **variable-length**, module-mapped quiz challenge (merge-ready with `digital_learning`).
 
+## Live site
+
+- **Cloudflare:** https://quiz-challenge-platform.digital-design-challenge.workers.dev/
+- **GitHub Pages:** https://universal-verification-methodology.github.io/quiz_challenge_platform/ (Actions deploy; may lag while runners are queued)
+
 ## Quick start
 
 ```bash
@@ -50,3 +55,7 @@ py -3 scripts/generate_difficulty_banks.py
 ```
 
 See [docs/DESIGN.md](docs/DESIGN.md).
+
+## Bring your own course
+
+The runtime is **content-agnostic**. Digital foundations is the demo pack; replace or add banks under `content/<course_id>/` and point `CONTENT_BASE` in `js/challenge-app.js`. Step-by-step: [docs/AUTHORING.md](docs/AUTHORING.md).

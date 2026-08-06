@@ -84,6 +84,21 @@
     return Number.isFinite(s) && s > 0 ? Math.round(s * 1000) : 10000;
   }
 
+  function mediaInfo(item) {
+    const m = item && item.media;
+    if (!m || !m.src) return null;
+    const type = String(m.type || "").toLowerCase();
+    if (type !== "video" && type !== "image") return null;
+    return { type: type, src: String(m.src), poster: m.poster ? String(m.poster) : "" };
+  }
+
+  function resolveMediaUrl(src, mediaBase) {
+    if (!src) return "";
+    if (/^https?:\/\//i.test(src) || src.charAt(0) === "/") return src;
+    const base = (mediaBase || "").replace(/\/+$/, "");
+    return base ? base + "/" + src.replace(/^\/+/, "") : src;
+  }
+
   function fmtCountdown(msLeft) {
     const s = Math.max(0, Math.ceil(msLeft / 1000));
     if (s >= 60) {
@@ -159,11 +174,17 @@
 
     const type = global.QCAdaptive.normalizeType(item.type);
     const autoCommit = silent && (type === "multiple_choice" || type === "true_false");
+    const media = mediaInfo(item);
+    const videoStem = media && media.type === "video";
+    const imageStem = media && media.type === "image";
+    const hideQuestionText = !!(videoStem || imageStem || opts.hidePrompt);
 
     let timer = null;
     let countdownId = null;
     let pendingValue = null;
     let committed = false;
+
+    let unlockSoundHandlers = null;
 
     function clearDwell() {
       if (timer != null) {
@@ -182,6 +203,19 @@
     function cleanup() {
       clearDwell();
       clearCountdown();
+      if (unlockSoundHandlers) {
+        document.removeEventListener("pointerdown", unlockSoundHandlers, true);
+        document.removeEventListener("keydown", unlockSoundHandlers, true);
+        unlockSoundHandlers = null;
+      }
+      const vid = root.querySelector("video.stem-video");
+      if (vid) {
+        try {
+          vid.pause();
+        } catch (e) {
+          /* ignore */
+        }
+      }
     }
 
     if (timeLimitMs != null && timeLimitMs > 0) {
@@ -203,13 +237,103 @@
       opts._timerUi = { timerEl, fill, label };
     }
 
-    const prompt = document.createElement("p");
-    prompt.className = "prompt";
-    prompt.textContent = item.prompt || "";
-    root.appendChild(prompt);
+    if (videoStem) {
+      const wrap = document.createElement("div");
+      wrap.className = "stem-media stem-media-video";
+      const video = document.createElement("video");
+      video.className = "stem-video";
+      video.setAttribute("playsinline", "");
+      video.setAttribute("webkit-playsinline", "");
+      video.setAttribute("controls", "");
+      video.setAttribute("controlsList", "nodownload noplaybackrate noremoteplayback");
+      video.setAttribute("disablePictureInPicture", "");
+      video.setAttribute("preload", "auto");
+      video.setAttribute("autoplay", "");
+      // Browsers only allow autoplay when muted; we unmute on first tap.
+      video.muted = true;
+      video.defaultMuted = true;
+      video.setAttribute("muted", "");
+      video.autoplay = true;
+      video.setAttribute("aria-label", "Question stem video");
+      if (media.poster) {
+        video.poster = resolveMediaUrl(media.poster, opts.mediaBase);
+      }
+      const source = document.createElement("source");
+      source.src = resolveMediaUrl(media.src, opts.mediaBase);
+      source.type = "video/mp4";
+      video.appendChild(source);
+      video.addEventListener("contextmenu", (e) => e.preventDefault());
+
+      const unmuteBtn = document.createElement("button");
+      unmuteBtn.type = "button";
+      unmuteBtn.className = "stem-unmute";
+      unmuteBtn.textContent = "Tap for sound";
+      unmuteBtn.setAttribute("aria-label", "Unmute question video");
+
+      function playStem() {
+        const p = video.play();
+        if (p && typeof p.catch === "function") {
+          p.catch(() => {});
+        }
+      }
+
+      function unlockSound(ev) {
+        if (ev) ev.preventDefault();
+        video.muted = false;
+        video.removeAttribute("muted");
+        try {
+          video.currentTime = 0;
+        } catch (e) {
+          /* ignore */
+        }
+        playStem();
+        unmuteBtn.hidden = true;
+        wrap.classList.remove("is-muted");
+        document.removeEventListener("pointerdown", onDocUnlock, true);
+        document.removeEventListener("keydown", onDocUnlock, true);
+      }
+
+      function onDocUnlock(ev) {
+        if (video.muted) unlockSound(ev);
+      }
+      unlockSoundHandlers = onDocUnlock;
+
+      unmuteBtn.addEventListener("click", unlockSound);
+      wrap.appendChild(video);
+      wrap.appendChild(unmuteBtn);
+      wrap.classList.add("is-muted");
+      root.appendChild(wrap);
+
+      const startMutedAutoplay = () => {
+        playStem();
+      };
+      if (video.readyState >= 2) startMutedAutoplay();
+      else video.addEventListener("loadeddata", startMutedAutoplay, { once: true });
+
+      document.addEventListener("pointerdown", onDocUnlock, true);
+      document.addEventListener("keydown", onDocUnlock, true);
+    } else if (imageStem) {
+      const wrap = document.createElement("div");
+      wrap.className = "stem-media stem-media-image";
+      const img = document.createElement("img");
+      img.className = "stem-image";
+      img.src = resolveMediaUrl(media.src, opts.mediaBase);
+      img.alt = "Question stem figure";
+      img.draggable = false;
+      img.addEventListener("contextmenu", (e) => e.preventDefault());
+      wrap.appendChild(img);
+      root.appendChild(wrap);
+    }
+
+    if (!hideQuestionText) {
+      const prompt = document.createElement("p");
+      prompt.className = "prompt";
+      prompt.textContent = item.prompt || "";
+      root.appendChild(prompt);
+    }
 
     const form = document.createElement("form");
-    form.className = "answer-form" + (autoCommit ? " auto-commit" : "");
+    form.className = "answer-form" + (autoCommit ? " auto-commit" : "") + (hideQuestionText ? " stem-only" : "");
     form.setAttribute("novalidate", "");
 
     if (type === "multiple_choice") {
@@ -224,6 +348,7 @@
         input.value = String(ci);
         label.appendChild(input);
         const span = document.createElement("span");
+        // Always show choice text — only the question prompt is hidden for video/image stems.
         span.textContent = choice;
         label.appendChild(span);
         group.appendChild(label);
@@ -250,11 +375,18 @@
       });
       form.appendChild(group);
     } else {
+      if (hideQuestionText) {
+        const saHint = document.createElement("p");
+        saHint.className = "stem-hint";
+        saHint.textContent = "Type your answer after watching the stem.";
+        form.appendChild(saHint);
+      }
       const input = document.createElement("input");
       input.type = "text";
       input.name = "answer";
       input.className = "short-answer";
       input.autocomplete = "off";
+      input.setAttribute("aria-label", "Your answer");
       form.appendChild(input);
     }
 

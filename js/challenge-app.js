@@ -170,6 +170,7 @@
 
     QCQuiz.renderItem(els.quizRoot, pick.item, {
       feedback: (content.ux && content.ux.feedback) || "report_only",
+      mediaBase: CONTENT_BASE,
       timeLimitMs: QCQuiz.resolveTimeLimitMs(content, pick.item, pick.difficulty),
       warnBeforeMs: QCQuiz.resolveWarnBeforeMs(content),
       onGraded: ({ selected, correct, timedOut }) => {
@@ -189,6 +190,47 @@
       },
       onContinue: () => {
         showCurrent();
+      },
+    });
+  }
+
+  async function showStemPreview(stemId) {
+    const modules = content.modules || [];
+    let found = null;
+    let mod = null;
+    for (let i = 0; i < modules.length; i++) {
+      const bank = await loadBank(modules[i]);
+      const item = (bank.items || []).find((it) => it.id === stemId);
+      if (item) {
+        found = item;
+        mod = modules[i];
+        break;
+      }
+    }
+    if (!found) {
+      if (els.status) {
+        els.status.hidden = false;
+        els.status.textContent = "Stem not found: " + stemId;
+      }
+      return;
+    }
+    if (els.moduleMeta) {
+      els.moduleMeta.hidden = false;
+      els.moduleMeta.className = "";
+      els.moduleMeta.textContent = "Stem preview · " + mod.id + " · " + stemId;
+    }
+    if (els.progressTrack) els.progressTrack.hidden = true;
+    QCQuiz.renderItem(els.quizRoot, found, {
+      feedback: "report_only",
+      mediaBase: CONTENT_BASE,
+      timeLimitMs: QCQuiz.resolveTimeLimitMs(content, found, found.difficulty),
+      warnBeforeMs: QCQuiz.resolveWarnBeforeMs(content),
+      onGraded: () => {},
+      onContinue: () => {
+        if (els.status) {
+          els.status.hidden = false;
+          els.status.textContent = "Preview only — restart a quest to play for real.";
+        }
       },
     });
   }
@@ -230,6 +272,14 @@
     if (restartLink) {
       restartLink.href =
         mode === "test" ? "challenge.html?test=1&restart=1" : "challenge.html?restart=1";
+    }
+
+    const stemId = params.get("stem");
+    if (stemId) {
+      if (eyebrow) eyebrow.textContent = "Stem preview";
+      els.title.textContent = "Video stem preview";
+      await showStemPreview(stemId);
+      return;
     }
 
     if (params.get("restart") === "1") QCSession.clear();
