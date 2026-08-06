@@ -1,0 +1,59 @@
+# Deploy static challenge site to GitHub Pages.
+#
+# One-time: Settings → Pages → Source: GitHub Actions
+# (also set via API: build_type=workflow)
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "backend/**"
+      - "docs/**"
+      - "scripts/**"
+      - "**/*.md"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Prepare site bundle
+        run: |
+          mkdir -p _site
+          cp index.html challenge.html dashboard.html report.html _site/
+          cp -r config content css js _site/
+          # Worker / tooling stay off Pages
+          rm -rf _site/backend _site/scripts _site/docs _site/node_modules || true
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
