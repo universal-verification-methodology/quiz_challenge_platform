@@ -1,0 +1,42 @@
+# Deploy the results/leaderboard Worker under backend/.
+# Endpoint used by config/site.json (quiz-challenge-results.*.workers.dev).
+#
+# Same secrets as the static-site workflow:
+#   CLOUDFLARE_API_TOKEN
+#   CLOUDFLARE_ACCOUNT_ID
+# Plus Cloudflare Worker secrets already set on the Worker (e.g. GITHUB_TOKEN).
+
+name: Deploy Cloudflare Results Worker
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "backend/**"
+      - ".github/workflows/cloudflare-results.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: quiz-challenge-cloudflare-results
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy results Worker
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: backend
+          command: deploy --config wrangler.toml

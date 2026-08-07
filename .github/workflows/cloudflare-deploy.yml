@@ -1,0 +1,41 @@
+# Deploy the static challenge site to Cloudflare Workers (assets).
+# Live: https://quiz-challenge-platform.digital-design-challenge.workers.dev/
+#
+# One-time repo secrets (Settings → Secrets and variables → Actions):
+#   CLOUDFLARE_API_TOKEN   — Workers edit permission for this account
+#   CLOUDFLARE_ACCOUNT_ID  — Cloudflare account id
+
+name: Deploy to Cloudflare Workers
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "backend/**"
+      - "docs/**"
+      - "scripts/**"
+      - "paper/**"
+      - "**/*.md"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: quiz-challenge-cloudflare
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy Worker (static assets)
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy
