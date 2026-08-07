@@ -1,11 +1,32 @@
 # Cloudflare Workers static assets — keep deploy under size limits
-node_modules/
-**/node_modules/
+# https://developers.cloudflare.com/workers/static-assets/binding/#ignoring-assets
+
+.git
 .git/
+**/.git
+**/.git/**
+
+node_modules
+node_modules/
+**/node_modules/**
+
+.wrangler
 .wrangler/
+.cursor
 .cursor/
+
+backend
 backend/
+scripts
 scripts/
+paper
 paper/
+docs
+docs/
+
 *.log
+*.pack
+*.idx
+
 content/learn_digital/media/_work/
+content/learn_digital/media/_batch_logs/

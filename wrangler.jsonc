@@ -3,19 +3,9 @@
   "name": "quiz-challenge-platform",
   "compatibility_date": "2024-11-01",
   "workers_dev": true,
+  // Exclusions live in .assetsignore (assets.exclude is not a valid Wrangler field).
   "assets": {
     "directory": ".",
-    "not_found_handling": "404-page",
-    "exclude": [
-      "node_modules/**",
-      "**/node_modules/**",
-      "backend/**",
-      ".git/**",
-      ".wrangler/**",
-      ".cursor/**",
-      "scripts/**",
-      "paper/**",
-      "content/learn_digital/media/_work/**"
-    ]
+    "not_found_handling": "404-page"
   }
 }

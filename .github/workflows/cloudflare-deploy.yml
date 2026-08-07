@@ -32,10 +32,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      # assets.directory is "."; Workers will otherwise scan .git packs (>25 MiB)
+      # and non-site trees even when .assetsignore should skip them.
+      - name: Prune non-site paths before asset upload
+        run: |
+          rm -rf .git backend .cursor paper scripts docs .wrangler node_modules
+          rm -rf content/learn_digital/media/_work content/learn_digital/media/_batch_logs
+          echo "Largest remaining paths:"
+          du -sh ./* .[!.]* 2>/dev/null | sort -hr | head -20
 
       - name: Deploy Worker (static assets)
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          wranglerVersion: "4.34.0"
           command: deploy
