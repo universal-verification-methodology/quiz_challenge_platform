@@ -1,0 +1,2697 @@
+{
+  "module": "module05-gray-code",
+  "title": "Gray code",
+  "items": [
+    {
+      "id": "gray_easy_01",
+      "type": "multiple_choice",
+      "prompt": "Binary → Gray is commonly computed as…",
+      "choices": [
+        "B & (B >> 1)",
+        "B ^ (B >> 1)",
+        "B + (B >> 1)",
+        "B << 1"
+      ],
+      "answer": 1,
+      "explain": "Gray = B XOR (B >> 1).",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "formula",
+        "label": "Show formula",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          },
+          {
+            "click": "#btn-show-formula"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_01.mp4",
+        "poster": "media/images/gray_easy_01-frame.png",
+        "figure": "media/images/gray_easy_01.png"
+      }
+    },
+    {
+      "id": "gray_easy_02",
+      "type": "multiple_choice",
+      "prompt": "The defining Gray property for neighbors is…",
+      "choices": [
+        "0",
+        "1",
+        "All bits",
+        "Exactly 2"
+      ],
+      "answer": 1,
+      "explain": "Exactly one bit flips between adjacent codes.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "step-once",
+        "label": "Step once",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          },
+          {
+            "click": "#btn-step"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_02.mp4",
+        "poster": "media/images/gray_easy_02-frame.png",
+        "figure": "media/images/gray_easy_02.png"
+      }
+    },
+    {
+      "id": "gray_easy_03",
+      "type": "multiple_choice",
+      "prompt": "Single-bit pointer changes help because…",
+      "choices": [
+        "Gray is faster to add",
+        "Only one bit changes across a synchronizer",
+        "Gray ignores clocks",
+        "Gray needs no width"
+      ],
+      "answer": 1,
+      "explain": "One-bit transitions reduce CDC ambiguity.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "step-once",
+        "label": "Step once",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          },
+          {
+            "click": "#btn-step"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_03.mp4",
+        "poster": "media/images/gray_easy_03-frame.png",
+        "figure": "media/images/gray_easy_03.png"
+      }
+    },
+    {
+      "id": "gray_easy_04",
+      "type": "true_false",
+      "prompt": "Gray codes are mainly for adjacency, not for ALU arithmetic.",
+      "answer": true,
+      "explain": "Do not treat Gray bits as binary integers for normal math.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_04.mp4",
+        "poster": "media/images/gray_easy_04-frame.png",
+        "figure": "media/images/gray_easy_04.png"
+      }
+    },
+    {
+      "id": "gray_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Binary → Gray is commonly computed as…",
+      "choices": [
+        "B & (B >> 1)",
+        "B ^ (B >> 1)",
+        "B + (B >> 1)",
+        "B << 1"
+      ],
+      "answer": 1,
+      "explain": "Gray = B XOR (B >> 1).",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "formula",
+        "label": "Show formula",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          },
+          {
+            "click": "#btn-show-formula"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_05.mp4",
+        "poster": "media/images/gray_easy_05-frame.png",
+        "figure": "media/images/gray_easy_05.png"
+      }
+    },
+    {
+      "id": "gray_easy_06",
+      "type": "multiple_choice",
+      "prompt": "The defining Gray property for neighbors is…",
+      "choices": [
+        "0",
+        "1",
+        "All bits",
+        "Exactly 2"
+      ],
+      "answer": 1,
+      "explain": "Exactly one bit flips between adjacent codes.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "step-once",
+        "label": "Step once",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          },
+          {
+            "click": "#btn-step"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_06.mp4",
+        "poster": "media/images/gray_easy_06-frame.png",
+        "figure": "media/images/gray_easy_06.png"
+      }
+    },
+    {
+      "id": "gray_easy_07",
+      "type": "multiple_choice",
+      "prompt": "Single-bit pointer changes help because…",
+      "choices": [
+        "Gray is faster to add",
+        "Only one bit changes across a synchronizer",
+        "Gray ignores clocks",
+        "Gray needs no width"
+      ],
+      "answer": 1,
+      "explain": "One-bit transitions reduce CDC ambiguity.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "step-once",
+        "label": "Step once",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          },
+          {
+            "click": "#btn-step"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_07.mp4",
+        "poster": "media/images/gray_easy_07-frame.png",
+        "figure": "media/images/gray_easy_07.png"
+      }
+    },
+    {
+      "id": "gray_easy_08",
+      "type": "true_false",
+      "prompt": "Gray codes are mainly for adjacency, not for ALU arithmetic.",
+      "answer": true,
+      "explain": "Do not treat Gray bits as binary integers for normal math.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_08.mp4",
+        "poster": "media/images/gray_easy_08-frame.png",
+        "figure": "media/images/gray_easy_08.png"
+      }
+    },
+    {
+      "id": "gray_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Binary → Gray is commonly computed as…",
+      "choices": [
+        "B & (B >> 1)",
+        "B ^ (B >> 1)",
+        "B + (B >> 1)",
+        "B << 1"
+      ],
+      "answer": 1,
+      "explain": "Gray = B XOR (B >> 1).",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "formula",
+        "label": "Show formula",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          },
+          {
+            "click": "#btn-show-formula"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_09.mp4",
+        "poster": "media/images/gray_easy_09-frame.png",
+        "figure": "media/images/gray_easy_09.png"
+      }
+    },
+    {
+      "id": "gray_easy_10",
+      "type": "multiple_choice",
+      "prompt": "The defining Gray property for neighbors is…",
+      "choices": [
+        "0",
+        "1",
+        "All bits",
+        "Exactly 2"
+      ],
+      "answer": 1,
+      "explain": "Exactly one bit flips between adjacent codes.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "step-once",
+        "label": "Step once",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          },
+          {
+            "click": "#btn-step"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_10.mp4",
+        "poster": "media/images/gray_easy_10-frame.png",
+        "figure": "media/images/gray_easy_10.png"
+      }
+    },
+    {
+      "id": "gray_easy_11",
+      "type": "multiple_choice",
+      "prompt": "Single-bit pointer changes help because…",
+      "choices": [
+        "Gray is faster to add",
+        "Only one bit changes across a synchronizer",
+        "Gray ignores clocks",
+        "Gray needs no width"
+      ],
+      "answer": 1,
+      "explain": "One-bit transitions reduce CDC ambiguity.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "step-once",
+        "label": "Step once",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          },
+          {
+            "click": "#btn-step"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_11.mp4",
+        "poster": "media/images/gray_easy_11-frame.png",
+        "figure": "media/images/gray_easy_11.png"
+      }
+    },
+    {
+      "id": "gray_easy_12",
+      "type": "true_false",
+      "prompt": "Gray codes are mainly for adjacency, not for ALU arithmetic.",
+      "answer": true,
+      "explain": "Do not treat Gray bits as binary integers for normal math.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_12.mp4",
+        "poster": "media/images/gray_easy_12-frame.png",
+        "figure": "media/images/gray_easy_12.png"
+      }
+    },
+    {
+      "id": "gray_easy_13",
+      "type": "multiple_choice",
+      "prompt": "Binary → Gray is commonly computed as…",
+      "choices": [
+        "B & (B >> 1)",
+        "B ^ (B >> 1)",
+        "B + (B >> 1)",
+        "B << 1"
+      ],
+      "answer": 1,
+      "explain": "Gray = B XOR (B >> 1).",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "formula",
+        "label": "Show formula",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          },
+          {
+            "click": "#btn-show-formula"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_13.mp4",
+        "poster": "media/images/gray_easy_13-frame.png",
+        "figure": "media/images/gray_easy_13.png"
+      }
+    },
+    {
+      "id": "gray_easy_14",
+      "type": "multiple_choice",
+      "prompt": "The defining Gray property for neighbors is…",
+      "choices": [
+        "0",
+        "1",
+        "All bits",
+        "Exactly 2"
+      ],
+      "answer": 1,
+      "explain": "Exactly one bit flips between adjacent codes.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "step-once",
+        "label": "Step once",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          },
+          {
+            "click": "#btn-step"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_14.mp4",
+        "poster": "media/images/gray_easy_14-frame.png",
+        "figure": "media/images/gray_easy_14.png"
+      }
+    },
+    {
+      "id": "gray_easy_15",
+      "type": "multiple_choice",
+      "prompt": "Single-bit pointer changes help because…",
+      "choices": [
+        "Gray is faster to add",
+        "Only one bit changes across a synchronizer",
+        "Gray ignores clocks",
+        "Gray needs no width"
+      ],
+      "answer": 1,
+      "explain": "One-bit transitions reduce CDC ambiguity.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "step-once",
+        "label": "Step once",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          },
+          {
+            "click": "#btn-step"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_15.mp4",
+        "poster": "media/images/gray_easy_15-frame.png",
+        "figure": "media/images/gray_easy_15.png"
+      }
+    },
+    {
+      "id": "gray_easy_16",
+      "type": "true_false",
+      "prompt": "Gray codes are mainly for adjacency, not for ALU arithmetic.",
+      "answer": true,
+      "explain": "Do not treat Gray bits as binary integers for normal math.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_16.mp4",
+        "poster": "media/images/gray_easy_16-frame.png",
+        "figure": "media/images/gray_easy_16.png"
+      }
+    },
+    {
+      "id": "gray_easy_17",
+      "type": "multiple_choice",
+      "prompt": "Binary → Gray is commonly computed as…",
+      "choices": [
+        "B & (B >> 1)",
+        "B ^ (B >> 1)",
+        "B + (B >> 1)",
+        "B << 1"
+      ],
+      "answer": 1,
+      "explain": "Gray = B XOR (B >> 1).",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "formula",
+        "label": "Show formula",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          },
+          {
+            "click": "#btn-show-formula"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_17.mp4",
+        "poster": "media/images/gray_easy_17-frame.png",
+        "figure": "media/images/gray_easy_17.png"
+      }
+    },
+    {
+      "id": "gray_easy_18",
+      "type": "multiple_choice",
+      "prompt": "The defining Gray property for neighbors is…",
+      "choices": [
+        "0",
+        "1",
+        "All bits",
+        "Exactly 2"
+      ],
+      "answer": 1,
+      "explain": "Exactly one bit flips between adjacent codes.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "step-once",
+        "label": "Step once",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          },
+          {
+            "click": "#btn-step"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_18.mp4",
+        "poster": "media/images/gray_easy_18-frame.png",
+        "figure": "media/images/gray_easy_18.png"
+      }
+    },
+    {
+      "id": "gray_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Single-bit pointer changes help because…",
+      "choices": [
+        "Gray is faster to add",
+        "Only one bit changes across a synchronizer",
+        "Gray ignores clocks",
+        "Gray needs no width"
+      ],
+      "answer": 1,
+      "explain": "One-bit transitions reduce CDC ambiguity.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "step-once",
+        "label": "Step once",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          },
+          {
+            "click": "#btn-step"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_19.mp4",
+        "poster": "media/images/gray_easy_19-frame.png",
+        "figure": "media/images/gray_easy_19.png"
+      }
+    },
+    {
+      "id": "gray_easy_20",
+      "type": "true_false",
+      "prompt": "Gray codes are mainly for adjacency, not for ALU arithmetic.",
+      "answer": true,
+      "explain": "Do not treat Gray bits as binary integers for normal math.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_20.mp4",
+        "poster": "media/images/gray_easy_20-frame.png",
+        "figure": "media/images/gray_easy_20.png"
+      }
+    },
+    {
+      "id": "gray_easy_21",
+      "type": "multiple_choice",
+      "prompt": "Binary → Gray is commonly computed as…",
+      "choices": [
+        "B & (B >> 1)",
+        "B ^ (B >> 1)",
+        "B + (B >> 1)",
+        "B << 1"
+      ],
+      "answer": 1,
+      "explain": "Gray = B XOR (B >> 1).",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "formula",
+        "label": "Show formula",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          },
+          {
+            "click": "#btn-show-formula"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_21.mp4",
+        "poster": "media/images/gray_easy_21-frame.png",
+        "figure": "media/images/gray_easy_21.png"
+      }
+    },
+    {
+      "id": "gray_easy_22",
+      "type": "multiple_choice",
+      "prompt": "The defining Gray property for neighbors is…",
+      "choices": [
+        "0",
+        "1",
+        "All bits",
+        "Exactly 2"
+      ],
+      "answer": 1,
+      "explain": "Exactly one bit flips between adjacent codes.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "step-once",
+        "label": "Step once",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          },
+          {
+            "click": "#btn-step"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_22.mp4",
+        "poster": "media/images/gray_easy_22-frame.png",
+        "figure": "media/images/gray_easy_22.png"
+      }
+    },
+    {
+      "id": "gray_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Single-bit pointer changes help because…",
+      "choices": [
+        "Gray is faster to add",
+        "Only one bit changes across a synchronizer",
+        "Gray ignores clocks",
+        "Gray needs no width"
+      ],
+      "answer": 1,
+      "explain": "One-bit transitions reduce CDC ambiguity.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "step-once",
+        "label": "Step once",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          },
+          {
+            "click": "#btn-step"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_23.mp4",
+        "poster": "media/images/gray_easy_23-frame.png",
+        "figure": "media/images/gray_easy_23.png"
+      }
+    },
+    {
+      "id": "gray_easy_24",
+      "type": "true_false",
+      "prompt": "Gray codes are mainly for adjacency, not for ALU arithmetic.",
+      "answer": true,
+      "explain": "Do not treat Gray bits as binary integers for normal math.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_24.mp4",
+        "poster": "media/images/gray_easy_24-frame.png",
+        "figure": "media/images/gray_easy_24.png"
+      }
+    },
+    {
+      "id": "gray_easy_25",
+      "type": "multiple_choice",
+      "prompt": "Binary → Gray is commonly computed as…",
+      "choices": [
+        "B & (B >> 1)",
+        "B ^ (B >> 1)",
+        "B + (B >> 1)",
+        "B << 1"
+      ],
+      "answer": 1,
+      "explain": "Gray = B XOR (B >> 1).",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "formula",
+        "label": "Show formula",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          },
+          {
+            "click": "#btn-show-formula"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_25.mp4",
+        "poster": "media/images/gray_easy_25-frame.png",
+        "figure": "media/images/gray_easy_25.png"
+      }
+    },
+    {
+      "id": "gray_easy_26",
+      "type": "multiple_choice",
+      "prompt": "The defining Gray property for neighbors is…",
+      "choices": [
+        "0",
+        "1",
+        "All bits",
+        "Exactly 2"
+      ],
+      "answer": 1,
+      "explain": "Exactly one bit flips between adjacent codes.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "step-once",
+        "label": "Step once",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          },
+          {
+            "click": "#btn-step"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_26.mp4",
+        "poster": "media/images/gray_easy_26-frame.png",
+        "figure": "media/images/gray_easy_26.png"
+      }
+    },
+    {
+      "id": "gray_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Single-bit pointer changes help because…",
+      "choices": [
+        "Gray is faster to add",
+        "Only one bit changes across a synchronizer",
+        "Gray ignores clocks",
+        "Gray needs no width"
+      ],
+      "answer": 1,
+      "explain": "One-bit transitions reduce CDC ambiguity.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "step-once",
+        "label": "Step once",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          },
+          {
+            "click": "#btn-step"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_27.mp4",
+        "poster": "media/images/gray_easy_27-frame.png",
+        "figure": "media/images/gray_easy_27.png"
+      }
+    },
+    {
+      "id": "gray_easy_28",
+      "type": "true_false",
+      "prompt": "Gray codes are mainly for adjacency, not for ALU arithmetic.",
+      "answer": true,
+      "explain": "Do not treat Gray bits as binary integers for normal math.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_28.mp4",
+        "poster": "media/images/gray_easy_28-frame.png",
+        "figure": "media/images/gray_easy_28.png"
+      }
+    },
+    {
+      "id": "gray_easy_29",
+      "type": "multiple_choice",
+      "prompt": "Binary → Gray is commonly computed as…",
+      "choices": [
+        "B & (B >> 1)",
+        "B ^ (B >> 1)",
+        "B + (B >> 1)",
+        "B << 1"
+      ],
+      "answer": 1,
+      "explain": "Gray = B XOR (B >> 1).",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "formula",
+        "label": "Show formula",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          },
+          {
+            "click": "#btn-show-formula"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_29.mp4",
+        "poster": "media/images/gray_easy_29-frame.png",
+        "figure": "media/images/gray_easy_29.png"
+      }
+    },
+    {
+      "id": "gray_easy_30",
+      "type": "multiple_choice",
+      "prompt": "The defining Gray property for neighbors is…",
+      "choices": [
+        "0",
+        "1",
+        "All bits",
+        "Exactly 2"
+      ],
+      "answer": 1,
+      "explain": "Exactly one bit flips between adjacent codes.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "step-once",
+        "label": "Step once",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          },
+          {
+            "click": "#btn-step"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_30.mp4",
+        "poster": "media/images/gray_easy_30-frame.png",
+        "figure": "media/images/gray_easy_30.png"
+      }
+    },
+    {
+      "id": "gray_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Binary 0b0000 converts to Gray…",
+      "choices": [
+        "0b0011",
+        "0b0000",
+        "0b0000",
+        "0b1111"
+      ],
+      "answer": 1,
+      "explain": "Gray = 0000 ^ (0000>>1) = 0000.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_01.mp4",
+        "poster": "media/images/gray_medium_01-frame.png",
+        "figure": "media/images/gray_medium_01.png"
+      }
+    },
+    {
+      "id": "gray_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Gray on K-map labels ensures…",
+      "choices": [
+        "Differ in all variables",
+        "Differ by one bit (logic adjacency)",
+        "Count in binary order only",
+        "Ignore don’t-cares"
+      ],
+      "answer": 1,
+      "explain": "Gray order makes edge-neighbors Hamming distance 1.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "width4-tour",
+        "label": "Width 4 tour",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          },
+          {
+            "click": "#btn-step"
+          },
+          {
+            "click": "#btn-step"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_02.mp4",
+        "poster": "media/images/gray_medium_02-frame.png",
+        "figure": "media/images/gray_medium_02.png"
+      }
+    },
+    {
+      "id": "gray_medium_03",
+      "type": "true_false",
+      "prompt": "Rotary encoders often output Gray to avoid multi-bit glitches.",
+      "answer": true,
+      "explain": "Gray is invertible; encoders prefer single-bit changes.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_03.mp4",
+        "poster": "media/images/gray_medium_03-frame.png",
+        "figure": "media/images/gray_medium_03.png"
+      }
+    },
+    {
+      "id": "gray_medium_04",
+      "type": "multiple_choice",
+      "prompt": "In Gray→binary, bit[MSB] equals…",
+      "choices": [
+        "Always 0",
+        "Gray’s MSB (then XOR chain downward)",
+        "Always 1",
+        "The LSB of Gray only"
+      ],
+      "answer": 1,
+      "explain": "Binary MSB = Gray MSB; lower bits accumulate XORs.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_04.mp4",
+        "poster": "media/images/gray_medium_04-frame.png",
+        "figure": "media/images/gray_medium_04.png"
+      }
+    },
+    {
+      "id": "gray_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Binary 0b0100 converts to Gray…",
+      "choices": [
+        "0b0101",
+        "0b0110",
+        "0b1000",
+        "0b1111"
+      ],
+      "answer": 1,
+      "explain": "Gray = 0100 ^ (0100>>1) = 0110.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_05.mp4",
+        "poster": "media/images/gray_medium_05-frame.png",
+        "figure": "media/images/gray_medium_05.png"
+      }
+    },
+    {
+      "id": "gray_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Gray on K-map labels ensures…",
+      "choices": [
+        "Differ in all variables",
+        "Differ by one bit (logic adjacency)",
+        "Count in binary order only",
+        "Ignore don’t-cares"
+      ],
+      "answer": 1,
+      "explain": "Gray order makes edge-neighbors Hamming distance 1.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "width4-tour",
+        "label": "Width 4 tour",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          },
+          {
+            "click": "#btn-step"
+          },
+          {
+            "click": "#btn-step"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_06.mp4",
+        "poster": "media/images/gray_medium_06-frame.png",
+        "figure": "media/images/gray_medium_06.png"
+      }
+    },
+    {
+      "id": "gray_medium_07",
+      "type": "true_false",
+      "prompt": "Rotary encoders often output Gray to avoid multi-bit glitches.",
+      "answer": true,
+      "explain": "Gray is invertible; encoders prefer single-bit changes.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_07.mp4",
+        "poster": "media/images/gray_medium_07-frame.png",
+        "figure": "media/images/gray_medium_07.png"
+      }
+    },
+    {
+      "id": "gray_medium_08",
+      "type": "multiple_choice",
+      "prompt": "In Gray→binary, bit[MSB] equals…",
+      "choices": [
+        "Always 0",
+        "Gray’s MSB (then XOR chain downward)",
+        "Always 1",
+        "The LSB of Gray only"
+      ],
+      "answer": 1,
+      "explain": "Binary MSB = Gray MSB; lower bits accumulate XORs.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_08.mp4",
+        "poster": "media/images/gray_medium_08-frame.png",
+        "figure": "media/images/gray_medium_08.png"
+      }
+    },
+    {
+      "id": "gray_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Binary 0b0000 converts to Gray…",
+      "choices": [
+        "0b0011",
+        "0b0000",
+        "0b0000",
+        "0b1111"
+      ],
+      "answer": 1,
+      "explain": "Gray = 0000 ^ (0000>>1) = 0000.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_09.mp4",
+        "poster": "media/images/gray_medium_09-frame.png",
+        "figure": "media/images/gray_medium_09.png"
+      }
+    },
+    {
+      "id": "gray_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Gray on K-map labels ensures…",
+      "choices": [
+        "Differ in all variables",
+        "Differ by one bit (logic adjacency)",
+        "Count in binary order only",
+        "Ignore don’t-cares"
+      ],
+      "answer": 1,
+      "explain": "Gray order makes edge-neighbors Hamming distance 1.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "width4-tour",
+        "label": "Width 4 tour",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          },
+          {
+            "click": "#btn-step"
+          },
+          {
+            "click": "#btn-step"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_10.mp4",
+        "poster": "media/images/gray_medium_10-frame.png",
+        "figure": "media/images/gray_medium_10.png"
+      }
+    },
+    {
+      "id": "gray_medium_11",
+      "type": "true_false",
+      "prompt": "Rotary encoders often output Gray to avoid multi-bit glitches.",
+      "answer": true,
+      "explain": "Gray is invertible; encoders prefer single-bit changes.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_11.mp4",
+        "poster": "media/images/gray_medium_11-frame.png",
+        "figure": "media/images/gray_medium_11.png"
+      }
+    },
+    {
+      "id": "gray_medium_12",
+      "type": "multiple_choice",
+      "prompt": "In Gray→binary, bit[MSB] equals…",
+      "choices": [
+        "Always 0",
+        "Gray’s MSB (then XOR chain downward)",
+        "Always 1",
+        "The LSB of Gray only"
+      ],
+      "answer": 1,
+      "explain": "Binary MSB = Gray MSB; lower bits accumulate XORs.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_12.mp4",
+        "poster": "media/images/gray_medium_12-frame.png",
+        "figure": "media/images/gray_medium_12.png"
+      }
+    },
+    {
+      "id": "gray_medium_13",
+      "type": "multiple_choice",
+      "prompt": "Binary 0b0100 converts to Gray…",
+      "choices": [
+        "0b0101",
+        "0b0110",
+        "0b1000",
+        "0b1111"
+      ],
+      "answer": 1,
+      "explain": "Gray = 0100 ^ (0100>>1) = 0110.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_13.mp4",
+        "poster": "media/images/gray_medium_13-frame.png",
+        "figure": "media/images/gray_medium_13.png"
+      }
+    },
+    {
+      "id": "gray_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Gray on K-map labels ensures…",
+      "choices": [
+        "Differ in all variables",
+        "Differ by one bit (logic adjacency)",
+        "Count in binary order only",
+        "Ignore don’t-cares"
+      ],
+      "answer": 1,
+      "explain": "Gray order makes edge-neighbors Hamming distance 1.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "width4-tour",
+        "label": "Width 4 tour",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          },
+          {
+            "click": "#btn-step"
+          },
+          {
+            "click": "#btn-step"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_14.mp4",
+        "poster": "media/images/gray_medium_14-frame.png",
+        "figure": "media/images/gray_medium_14.png"
+      }
+    },
+    {
+      "id": "gray_medium_15",
+      "type": "true_false",
+      "prompt": "Rotary encoders often output Gray to avoid multi-bit glitches.",
+      "answer": true,
+      "explain": "Gray is invertible; encoders prefer single-bit changes.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_15.mp4",
+        "poster": "media/images/gray_medium_15-frame.png",
+        "figure": "media/images/gray_medium_15.png"
+      }
+    },
+    {
+      "id": "gray_medium_16",
+      "type": "multiple_choice",
+      "prompt": "In Gray→binary, bit[MSB] equals…",
+      "choices": [
+        "Always 0",
+        "Gray’s MSB (then XOR chain downward)",
+        "Always 1",
+        "The LSB of Gray only"
+      ],
+      "answer": 1,
+      "explain": "Binary MSB = Gray MSB; lower bits accumulate XORs.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_16.mp4",
+        "poster": "media/images/gray_medium_16-frame.png",
+        "figure": "media/images/gray_medium_16.png"
+      }
+    },
+    {
+      "id": "gray_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Binary 0b0000 converts to Gray…",
+      "choices": [
+        "0b0011",
+        "0b0000",
+        "0b0000",
+        "0b1111"
+      ],
+      "answer": 1,
+      "explain": "Gray = 0000 ^ (0000>>1) = 0000.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_17.mp4",
+        "poster": "media/images/gray_medium_17-frame.png",
+        "figure": "media/images/gray_medium_17.png"
+      }
+    },
+    {
+      "id": "gray_medium_18",
+      "type": "multiple_choice",
+      "prompt": "Gray on K-map labels ensures…",
+      "choices": [
+        "Differ in all variables",
+        "Differ by one bit (logic adjacency)",
+        "Count in binary order only",
+        "Ignore don’t-cares"
+      ],
+      "answer": 1,
+      "explain": "Gray order makes edge-neighbors Hamming distance 1.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "width4-tour",
+        "label": "Width 4 tour",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          },
+          {
+            "click": "#btn-step"
+          },
+          {
+            "click": "#btn-step"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_18.mp4",
+        "poster": "media/images/gray_medium_18-frame.png",
+        "figure": "media/images/gray_medium_18.png"
+      }
+    },
+    {
+      "id": "gray_medium_19",
+      "type": "true_false",
+      "prompt": "Rotary encoders often output Gray to avoid multi-bit glitches.",
+      "answer": true,
+      "explain": "Gray is invertible; encoders prefer single-bit changes.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_19.mp4",
+        "poster": "media/images/gray_medium_19-frame.png",
+        "figure": "media/images/gray_medium_19.png"
+      }
+    },
+    {
+      "id": "gray_medium_20",
+      "type": "multiple_choice",
+      "prompt": "In Gray→binary, bit[MSB] equals…",
+      "choices": [
+        "Always 0",
+        "Gray’s MSB (then XOR chain downward)",
+        "Always 1",
+        "The LSB of Gray only"
+      ],
+      "answer": 1,
+      "explain": "Binary MSB = Gray MSB; lower bits accumulate XORs.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_20.mp4",
+        "poster": "media/images/gray_medium_20-frame.png",
+        "figure": "media/images/gray_medium_20.png"
+      }
+    },
+    {
+      "id": "gray_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Binary 0b0100 converts to Gray…",
+      "choices": [
+        "0b0101",
+        "0b0110",
+        "0b1000",
+        "0b1111"
+      ],
+      "answer": 1,
+      "explain": "Gray = 0100 ^ (0100>>1) = 0110.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_21.mp4",
+        "poster": "media/images/gray_medium_21-frame.png",
+        "figure": "media/images/gray_medium_21.png"
+      }
+    },
+    {
+      "id": "gray_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Gray on K-map labels ensures…",
+      "choices": [
+        "Differ in all variables",
+        "Differ by one bit (logic adjacency)",
+        "Count in binary order only",
+        "Ignore don’t-cares"
+      ],
+      "answer": 1,
+      "explain": "Gray order makes edge-neighbors Hamming distance 1.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "width4-tour",
+        "label": "Width 4 tour",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          },
+          {
+            "click": "#btn-step"
+          },
+          {
+            "click": "#btn-step"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_22.mp4",
+        "poster": "media/images/gray_medium_22-frame.png",
+        "figure": "media/images/gray_medium_22.png"
+      }
+    },
+    {
+      "id": "gray_medium_23",
+      "type": "true_false",
+      "prompt": "Rotary encoders often output Gray to avoid multi-bit glitches.",
+      "answer": true,
+      "explain": "Gray is invertible; encoders prefer single-bit changes.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_23.mp4",
+        "poster": "media/images/gray_medium_23-frame.png",
+        "figure": "media/images/gray_medium_23.png"
+      }
+    },
+    {
+      "id": "gray_medium_24",
+      "type": "multiple_choice",
+      "prompt": "In Gray→binary, bit[MSB] equals…",
+      "choices": [
+        "Always 0",
+        "Gray’s MSB (then XOR chain downward)",
+        "Always 1",
+        "The LSB of Gray only"
+      ],
+      "answer": 1,
+      "explain": "Binary MSB = Gray MSB; lower bits accumulate XORs.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_24.mp4",
+        "poster": "media/images/gray_medium_24-frame.png",
+        "figure": "media/images/gray_medium_24.png"
+      }
+    },
+    {
+      "id": "gray_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Binary 0b0000 converts to Gray…",
+      "choices": [
+        "0b0011",
+        "0b0000",
+        "0b0000",
+        "0b1111"
+      ],
+      "answer": 1,
+      "explain": "Gray = 0000 ^ (0000>>1) = 0000.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_25.mp4",
+        "poster": "media/images/gray_medium_25-frame.png",
+        "figure": "media/images/gray_medium_25.png"
+      }
+    },
+    {
+      "id": "gray_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Gray on K-map labels ensures…",
+      "choices": [
+        "Differ in all variables",
+        "Differ by one bit (logic adjacency)",
+        "Count in binary order only",
+        "Ignore don’t-cares"
+      ],
+      "answer": 1,
+      "explain": "Gray order makes edge-neighbors Hamming distance 1.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "width4-tour",
+        "label": "Width 4 tour",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          },
+          {
+            "click": "#btn-step"
+          },
+          {
+            "click": "#btn-step"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_26.mp4",
+        "poster": "media/images/gray_medium_26-frame.png",
+        "figure": "media/images/gray_medium_26.png"
+      }
+    },
+    {
+      "id": "gray_medium_27",
+      "type": "true_false",
+      "prompt": "Rotary encoders often output Gray to avoid multi-bit glitches.",
+      "answer": true,
+      "explain": "Gray is invertible; encoders prefer single-bit changes.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_27.mp4",
+        "poster": "media/images/gray_medium_27-frame.png",
+        "figure": "media/images/gray_medium_27.png"
+      }
+    },
+    {
+      "id": "gray_medium_28",
+      "type": "multiple_choice",
+      "prompt": "In Gray→binary, bit[MSB] equals…",
+      "choices": [
+        "Always 0",
+        "Gray’s MSB (then XOR chain downward)",
+        "Always 1",
+        "The LSB of Gray only"
+      ],
+      "answer": 1,
+      "explain": "Binary MSB = Gray MSB; lower bits accumulate XORs.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_28.mp4",
+        "poster": "media/images/gray_medium_28-frame.png",
+        "figure": "media/images/gray_medium_28.png"
+      }
+    },
+    {
+      "id": "gray_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Binary 0b0100 converts to Gray…",
+      "choices": [
+        "0b0101",
+        "0b0110",
+        "0b1000",
+        "0b1111"
+      ],
+      "answer": 1,
+      "explain": "Gray = 0100 ^ (0100>>1) = 0110.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_29.mp4",
+        "poster": "media/images/gray_medium_29-frame.png",
+        "figure": "media/images/gray_medium_29.png"
+      }
+    },
+    {
+      "id": "gray_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Gray on K-map labels ensures…",
+      "choices": [
+        "Differ in all variables",
+        "Differ by one bit (logic adjacency)",
+        "Count in binary order only",
+        "Ignore don’t-cares"
+      ],
+      "answer": 1,
+      "explain": "Gray order makes edge-neighbors Hamming distance 1.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "width4-tour",
+        "label": "Width 4 tour",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          },
+          {
+            "click": "#btn-step"
+          },
+          {
+            "click": "#btn-step"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_30.mp4",
+        "poster": "media/images/gray_medium_30-frame.png",
+        "figure": "media/images/gray_medium_30.png"
+      }
+    },
+    {
+      "id": "gray_hard_01",
+      "type": "multiple_choice",
+      "prompt": "If a synchronizer samples mid-transition of a multi-bit binary counter…",
+      "choices": [
+        "Always correct values",
+        "Transient illegal intermediate codes",
+        "Faster addition",
+        "Need for clocks"
+      ],
+      "answer": 1,
+      "explain": "Several bits changing can be sampled as garbage combinations.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "quiz-fifo",
+        "label": "Quiz: FIFO",
+        "steps": [
+          {
+            "challenge": "Quiz: FIFO"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_01.mp4",
+        "poster": "media/images/gray_hard_01-frame.png",
+        "figure": "media/images/gray_hard_01.png"
+      }
+    },
+    {
+      "id": "gray_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Next Gray after binary 1 (Gray 0b0001) is…",
+      "choices": [
+        "0b0001",
+        "0b0011",
+        "0b1110",
+        "0b1111"
+      ],
+      "answer": 1,
+      "explain": "Binary 1+1 → Gray 0011.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_02.mp4",
+        "poster": "media/images/gray_hard_02-frame.png",
+        "figure": "media/images/gray_hard_02.png"
+      }
+    },
+    {
+      "id": "gray_hard_03",
+      "type": "true_false",
+      "prompt": "FIFO full/empty logic often converts Gray pointers back to binary.",
+      "answer": true,
+      "explain": "Compare after consistent decode; Gray order ≠ binary magnitude.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "quiz-fifo",
+        "label": "Quiz: FIFO",
+        "steps": [
+          {
+            "challenge": "Quiz: FIFO"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_03.mp4",
+        "poster": "media/images/gray_hard_03-frame.png",
+        "figure": "media/images/gray_hard_03.png"
+      }
+    },
+    {
+      "id": "gray_hard_04",
+      "type": "multiple_choice",
+      "prompt": "2^3 Gray codes means count…",
+      "choices": [
+        "3",
+        "6",
+        "8",
+        "9"
+      ],
+      "answer": 2,
+      "explain": "n-bit Gray has 2^n codes.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_04.mp4",
+        "poster": "media/images/gray_hard_04-frame.png",
+        "figure": "media/images/gray_hard_04.png"
+      }
+    },
+    {
+      "id": "gray_hard_05",
+      "type": "multiple_choice",
+      "prompt": "If a synchronizer samples mid-transition of a multi-bit binary counter…",
+      "choices": [
+        "Always correct values",
+        "Transient illegal intermediate codes",
+        "Faster addition",
+        "Need for clocks"
+      ],
+      "answer": 1,
+      "explain": "Several bits changing can be sampled as garbage combinations.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "quiz-fifo",
+        "label": "Quiz: FIFO",
+        "steps": [
+          {
+            "challenge": "Quiz: FIFO"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_05.mp4",
+        "poster": "media/images/gray_hard_05-frame.png",
+        "figure": "media/images/gray_hard_05.png"
+      }
+    },
+    {
+      "id": "gray_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Next Gray after binary 5 (Gray 0b0111) is…",
+      "choices": [
+        "0b0111",
+        "0b0101",
+        "0b1000",
+        "0b1111"
+      ],
+      "answer": 1,
+      "explain": "Binary 5+1 → Gray 0101.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_06.mp4",
+        "poster": "media/images/gray_hard_06-frame.png",
+        "figure": "media/images/gray_hard_06.png"
+      }
+    },
+    {
+      "id": "gray_hard_07",
+      "type": "true_false",
+      "prompt": "FIFO full/empty logic often converts Gray pointers back to binary.",
+      "answer": true,
+      "explain": "Compare after consistent decode; Gray order ≠ binary magnitude.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "quiz-fifo",
+        "label": "Quiz: FIFO",
+        "steps": [
+          {
+            "challenge": "Quiz: FIFO"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_07.mp4",
+        "poster": "media/images/gray_hard_07-frame.png",
+        "figure": "media/images/gray_hard_07.png"
+      }
+    },
+    {
+      "id": "gray_hard_08",
+      "type": "multiple_choice",
+      "prompt": "2^3 Gray codes means count…",
+      "choices": [
+        "3",
+        "6",
+        "8",
+        "9"
+      ],
+      "answer": 2,
+      "explain": "n-bit Gray has 2^n codes.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_08.mp4",
+        "poster": "media/images/gray_hard_08-frame.png",
+        "figure": "media/images/gray_hard_08.png"
+      }
+    },
+    {
+      "id": "gray_hard_09",
+      "type": "multiple_choice",
+      "prompt": "If a synchronizer samples mid-transition of a multi-bit binary counter…",
+      "choices": [
+        "Always correct values",
+        "Transient illegal intermediate codes",
+        "Faster addition",
+        "Need for clocks"
+      ],
+      "answer": 1,
+      "explain": "Several bits changing can be sampled as garbage combinations.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "quiz-fifo",
+        "label": "Quiz: FIFO",
+        "steps": [
+          {
+            "challenge": "Quiz: FIFO"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_09.mp4",
+        "poster": "media/images/gray_hard_09-frame.png",
+        "figure": "media/images/gray_hard_09.png"
+      }
+    },
+    {
+      "id": "gray_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Next Gray after binary 2 (Gray 0b0011) is…",
+      "choices": [
+        "0b0011",
+        "0b0010",
+        "0b1100",
+        "0b1111"
+      ],
+      "answer": 1,
+      "explain": "Binary 2+1 → Gray 0010.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_10.mp4",
+        "poster": "media/images/gray_hard_10-frame.png",
+        "figure": "media/images/gray_hard_10.png"
+      }
+    },
+    {
+      "id": "gray_hard_11",
+      "type": "true_false",
+      "prompt": "FIFO full/empty logic often converts Gray pointers back to binary.",
+      "answer": true,
+      "explain": "Compare after consistent decode; Gray order ≠ binary magnitude.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "quiz-fifo",
+        "label": "Quiz: FIFO",
+        "steps": [
+          {
+            "challenge": "Quiz: FIFO"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_11.mp4",
+        "poster": "media/images/gray_hard_11-frame.png",
+        "figure": "media/images/gray_hard_11.png"
+      }
+    },
+    {
+      "id": "gray_hard_12",
+      "type": "multiple_choice",
+      "prompt": "2^3 Gray codes means count…",
+      "choices": [
+        "3",
+        "6",
+        "8",
+        "9"
+      ],
+      "answer": 2,
+      "explain": "n-bit Gray has 2^n codes.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_12.mp4",
+        "poster": "media/images/gray_hard_12-frame.png",
+        "figure": "media/images/gray_hard_12.png"
+      }
+    },
+    {
+      "id": "gray_hard_13",
+      "type": "multiple_choice",
+      "prompt": "If a synchronizer samples mid-transition of a multi-bit binary counter…",
+      "choices": [
+        "Always correct values",
+        "Transient illegal intermediate codes",
+        "Faster addition",
+        "Need for clocks"
+      ],
+      "answer": 1,
+      "explain": "Several bits changing can be sampled as garbage combinations.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "quiz-fifo",
+        "label": "Quiz: FIFO",
+        "steps": [
+          {
+            "challenge": "Quiz: FIFO"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_13.mp4",
+        "poster": "media/images/gray_hard_13-frame.png",
+        "figure": "media/images/gray_hard_13.png"
+      }
+    },
+    {
+      "id": "gray_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Next Gray after binary 6 (Gray 0b0101) is…",
+      "choices": [
+        "0b0101",
+        "0b0100",
+        "0b1010",
+        "0b1111"
+      ],
+      "answer": 1,
+      "explain": "Binary 6+1 → Gray 0100.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_14.mp4",
+        "poster": "media/images/gray_hard_14-frame.png",
+        "figure": "media/images/gray_hard_14.png"
+      }
+    },
+    {
+      "id": "gray_hard_15",
+      "type": "true_false",
+      "prompt": "FIFO full/empty logic often converts Gray pointers back to binary.",
+      "answer": true,
+      "explain": "Compare after consistent decode; Gray order ≠ binary magnitude.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "quiz-fifo",
+        "label": "Quiz: FIFO",
+        "steps": [
+          {
+            "challenge": "Quiz: FIFO"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_15.mp4",
+        "poster": "media/images/gray_hard_15-frame.png",
+        "figure": "media/images/gray_hard_15.png"
+      }
+    },
+    {
+      "id": "gray_hard_16",
+      "type": "multiple_choice",
+      "prompt": "2^3 Gray codes means count…",
+      "choices": [
+        "3",
+        "6",
+        "8",
+        "9"
+      ],
+      "answer": 2,
+      "explain": "n-bit Gray has 2^n codes.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_16.mp4",
+        "poster": "media/images/gray_hard_16-frame.png",
+        "figure": "media/images/gray_hard_16.png"
+      }
+    },
+    {
+      "id": "gray_hard_17",
+      "type": "multiple_choice",
+      "prompt": "If a synchronizer samples mid-transition of a multi-bit binary counter…",
+      "choices": [
+        "Always correct values",
+        "Transient illegal intermediate codes",
+        "Faster addition",
+        "Need for clocks"
+      ],
+      "answer": 1,
+      "explain": "Several bits changing can be sampled as garbage combinations.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "quiz-fifo",
+        "label": "Quiz: FIFO",
+        "steps": [
+          {
+            "challenge": "Quiz: FIFO"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_17.mp4",
+        "poster": "media/images/gray_hard_17-frame.png",
+        "figure": "media/images/gray_hard_17.png"
+      }
+    },
+    {
+      "id": "gray_hard_18",
+      "type": "multiple_choice",
+      "prompt": "Next Gray after binary 3 (Gray 0b0010) is…",
+      "choices": [
+        "0b0010",
+        "0b0110",
+        "0b1101",
+        "0b1111"
+      ],
+      "answer": 1,
+      "explain": "Binary 3+1 → Gray 0110.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_18.mp4",
+        "poster": "media/images/gray_hard_18-frame.png",
+        "figure": "media/images/gray_hard_18.png"
+      }
+    },
+    {
+      "id": "gray_hard_19",
+      "type": "true_false",
+      "prompt": "FIFO full/empty logic often converts Gray pointers back to binary.",
+      "answer": true,
+      "explain": "Compare after consistent decode; Gray order ≠ binary magnitude.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "quiz-fifo",
+        "label": "Quiz: FIFO",
+        "steps": [
+          {
+            "challenge": "Quiz: FIFO"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_19.mp4",
+        "poster": "media/images/gray_hard_19-frame.png",
+        "figure": "media/images/gray_hard_19.png"
+      }
+    },
+    {
+      "id": "gray_hard_20",
+      "type": "multiple_choice",
+      "prompt": "2^3 Gray codes means count…",
+      "choices": [
+        "3",
+        "6",
+        "8",
+        "9"
+      ],
+      "answer": 2,
+      "explain": "n-bit Gray has 2^n codes.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_20.mp4",
+        "poster": "media/images/gray_hard_20-frame.png",
+        "figure": "media/images/gray_hard_20.png"
+      }
+    },
+    {
+      "id": "gray_hard_21",
+      "type": "multiple_choice",
+      "prompt": "If a synchronizer samples mid-transition of a multi-bit binary counter…",
+      "choices": [
+        "Always correct values",
+        "Transient illegal intermediate codes",
+        "Faster addition",
+        "Need for clocks"
+      ],
+      "answer": 1,
+      "explain": "Several bits changing can be sampled as garbage combinations.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "quiz-fifo",
+        "label": "Quiz: FIFO",
+        "steps": [
+          {
+            "challenge": "Quiz: FIFO"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_21.mp4",
+        "poster": "media/images/gray_hard_21-frame.png",
+        "figure": "media/images/gray_hard_21.png"
+      }
+    },
+    {
+      "id": "gray_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Next Gray after binary 0 (Gray 0b0000) is…",
+      "choices": [
+        "0b0000",
+        "0b0001",
+        "0b1111",
+        "0b1111"
+      ],
+      "answer": 1,
+      "explain": "Binary 0+1 → Gray 0001.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_22.mp4",
+        "poster": "media/images/gray_hard_22-frame.png",
+        "figure": "media/images/gray_hard_22.png"
+      }
+    },
+    {
+      "id": "gray_hard_23",
+      "type": "true_false",
+      "prompt": "FIFO full/empty logic often converts Gray pointers back to binary.",
+      "answer": true,
+      "explain": "Compare after consistent decode; Gray order ≠ binary magnitude.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "quiz-fifo",
+        "label": "Quiz: FIFO",
+        "steps": [
+          {
+            "challenge": "Quiz: FIFO"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_23.mp4",
+        "poster": "media/images/gray_hard_23-frame.png",
+        "figure": "media/images/gray_hard_23.png"
+      }
+    },
+    {
+      "id": "gray_hard_24",
+      "type": "multiple_choice",
+      "prompt": "2^3 Gray codes means count…",
+      "choices": [
+        "3",
+        "6",
+        "8",
+        "9"
+      ],
+      "answer": 2,
+      "explain": "n-bit Gray has 2^n codes.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_24.mp4",
+        "poster": "media/images/gray_hard_24-frame.png",
+        "figure": "media/images/gray_hard_24.png"
+      }
+    },
+    {
+      "id": "gray_hard_25",
+      "type": "multiple_choice",
+      "prompt": "If a synchronizer samples mid-transition of a multi-bit binary counter…",
+      "choices": [
+        "Always correct values",
+        "Transient illegal intermediate codes",
+        "Faster addition",
+        "Need for clocks"
+      ],
+      "answer": 1,
+      "explain": "Several bits changing can be sampled as garbage combinations.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "quiz-fifo",
+        "label": "Quiz: FIFO",
+        "steps": [
+          {
+            "challenge": "Quiz: FIFO"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_25.mp4",
+        "poster": "media/images/gray_hard_25-frame.png",
+        "figure": "media/images/gray_hard_25.png"
+      }
+    },
+    {
+      "id": "gray_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Next Gray after binary 4 (Gray 0b0110) is…",
+      "choices": [
+        "0b0110",
+        "0b0111",
+        "0b1001",
+        "0b1111"
+      ],
+      "answer": 1,
+      "explain": "Binary 4+1 → Gray 0111.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_26.mp4",
+        "poster": "media/images/gray_hard_26-frame.png",
+        "figure": "media/images/gray_hard_26.png"
+      }
+    },
+    {
+      "id": "gray_hard_27",
+      "type": "true_false",
+      "prompt": "FIFO full/empty logic often converts Gray pointers back to binary.",
+      "answer": true,
+      "explain": "Compare after consistent decode; Gray order ≠ binary magnitude.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "quiz-fifo",
+        "label": "Quiz: FIFO",
+        "steps": [
+          {
+            "challenge": "Quiz: FIFO"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_27.mp4",
+        "poster": "media/images/gray_hard_27-frame.png",
+        "figure": "media/images/gray_hard_27.png"
+      }
+    },
+    {
+      "id": "gray_hard_28",
+      "type": "multiple_choice",
+      "prompt": "2^3 Gray codes means count…",
+      "choices": [
+        "3",
+        "6",
+        "8",
+        "9"
+      ],
+      "answer": 2,
+      "explain": "n-bit Gray has 2^n codes.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_28.mp4",
+        "poster": "media/images/gray_hard_28-frame.png",
+        "figure": "media/images/gray_hard_28.png"
+      }
+    },
+    {
+      "id": "gray_hard_29",
+      "type": "multiple_choice",
+      "prompt": "If a synchronizer samples mid-transition of a multi-bit binary counter…",
+      "choices": [
+        "Always correct values",
+        "Transient illegal intermediate codes",
+        "Faster addition",
+        "Need for clocks"
+      ],
+      "answer": 1,
+      "explain": "Several bits changing can be sampled as garbage combinations.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "quiz-fifo",
+        "label": "Quiz: FIFO",
+        "steps": [
+          {
+            "challenge": "Quiz: FIFO"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_29.mp4",
+        "poster": "media/images/gray_hard_29-frame.png",
+        "figure": "media/images/gray_hard_29.png"
+      }
+    },
+    {
+      "id": "gray_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Next Gray after binary 1 (Gray 0b0001) is…",
+      "choices": [
+        "0b0001",
+        "0b0011",
+        "0b1110",
+        "0b1111"
+      ],
+      "answer": 1,
+      "explain": "Binary 1+1 → Gray 0011.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "gray-code",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#gc-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_30.mp4",
+        "poster": "media/images/gray_hard_30-frame.png",
+        "figure": "media/images/gray_hard_30.png"
+      }
+    }
+  ]
+}

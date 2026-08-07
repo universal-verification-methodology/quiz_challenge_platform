@@ -1,0 +1,2445 @@
+{
+  "module": "module09-bit-fields",
+  "title": "Bit-fields",
+  "items": [
+    {
+      "id": "bitfields_easy_01",
+      "type": "multiple_choice",
+      "prompt": "Field width for [hi:lo] is…",
+      "choices": [
+        "hi-lo",
+        "hi-lo+1",
+        "hi+lo",
+        "2^(hi-lo)"
+      ],
+      "answer": 1,
+      "explain": "Inclusive: w = hi − lo + 1.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "extract",
+        "label": "Extract COUNT",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-extract"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_easy_01.png"
+      }
+    },
+    {
+      "id": "bitfields_easy_02",
+      "type": "multiple_choice",
+      "prompt": "After masking a field, align it by…",
+      "choices": [
+        "<< lo",
+        ">> lo",
+        "& lo",
+        "| lo"
+      ],
+      "answer": 1,
+      "explain": "Mask, then >> lo.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "mask",
+        "label": "Show mask",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-show-mask"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_easy_02.png"
+      }
+    },
+    {
+      "id": "bitfields_easy_03",
+      "type": "multiple_choice",
+      "prompt": "Neighbor bits stay put if you AND with…",
+      "choices": [
+        "mask",
+        "~mask",
+        "lo",
+        "hi"
+      ],
+      "answer": 1,
+      "explain": "AND with ~mask, then OR new bits.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_easy_03.png"
+      }
+    },
+    {
+      "id": "bitfields_easy_04",
+      "type": "true_false",
+      "prompt": "hi >= lo for a nonempty field.",
+      "answer": true,
+      "explain": "LSB numbering; MSB-as-0 is a different convention.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "extract",
+        "label": "Extract COUNT",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-extract"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_easy_04.png"
+      }
+    },
+    {
+      "id": "bitfields_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Field width for [hi:lo] is…",
+      "choices": [
+        "hi-lo",
+        "hi-lo+1",
+        "hi+lo",
+        "2^(hi-lo)"
+      ],
+      "answer": 1,
+      "explain": "Inclusive: w = hi − lo + 1.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "extract",
+        "label": "Extract COUNT",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-extract"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_easy_05.png"
+      }
+    },
+    {
+      "id": "bitfields_easy_06",
+      "type": "multiple_choice",
+      "prompt": "After masking a field, align it by…",
+      "choices": [
+        "<< lo",
+        ">> lo",
+        "& lo",
+        "| lo"
+      ],
+      "answer": 1,
+      "explain": "Mask, then >> lo.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "mask",
+        "label": "Show mask",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-show-mask"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_easy_06.png"
+      }
+    },
+    {
+      "id": "bitfields_easy_07",
+      "type": "multiple_choice",
+      "prompt": "Neighbor bits stay put if you AND with…",
+      "choices": [
+        "mask",
+        "~mask",
+        "lo",
+        "hi"
+      ],
+      "answer": 1,
+      "explain": "AND with ~mask, then OR new bits.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_easy_07.png"
+      }
+    },
+    {
+      "id": "bitfields_easy_08",
+      "type": "true_false",
+      "prompt": "hi >= lo for a nonempty field.",
+      "answer": true,
+      "explain": "LSB numbering; MSB-as-0 is a different convention.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "extract",
+        "label": "Extract COUNT",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-extract"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_easy_08.png"
+      }
+    },
+    {
+      "id": "bitfields_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Field width for [hi:lo] is…",
+      "choices": [
+        "hi-lo",
+        "hi-lo+1",
+        "hi+lo",
+        "2^(hi-lo)"
+      ],
+      "answer": 1,
+      "explain": "Inclusive: w = hi − lo + 1.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "extract",
+        "label": "Extract COUNT",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-extract"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_easy_09.png"
+      }
+    },
+    {
+      "id": "bitfields_easy_10",
+      "type": "multiple_choice",
+      "prompt": "After masking a field, align it by…",
+      "choices": [
+        "<< lo",
+        ">> lo",
+        "& lo",
+        "| lo"
+      ],
+      "answer": 1,
+      "explain": "Mask, then >> lo.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "mask",
+        "label": "Show mask",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-show-mask"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_easy_10.png"
+      }
+    },
+    {
+      "id": "bitfields_easy_11",
+      "type": "multiple_choice",
+      "prompt": "Neighbor bits stay put if you AND with…",
+      "choices": [
+        "mask",
+        "~mask",
+        "lo",
+        "hi"
+      ],
+      "answer": 1,
+      "explain": "AND with ~mask, then OR new bits.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_easy_11.png"
+      }
+    },
+    {
+      "id": "bitfields_easy_12",
+      "type": "true_false",
+      "prompt": "hi >= lo for a nonempty field.",
+      "answer": true,
+      "explain": "LSB numbering; MSB-as-0 is a different convention.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "extract",
+        "label": "Extract COUNT",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-extract"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_easy_12.png"
+      }
+    },
+    {
+      "id": "bitfields_easy_13",
+      "type": "multiple_choice",
+      "prompt": "Field width for [hi:lo] is…",
+      "choices": [
+        "hi-lo",
+        "hi-lo+1",
+        "hi+lo",
+        "2^(hi-lo)"
+      ],
+      "answer": 1,
+      "explain": "Inclusive: w = hi − lo + 1.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "extract",
+        "label": "Extract COUNT",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-extract"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_easy_13.png"
+      }
+    },
+    {
+      "id": "bitfields_easy_14",
+      "type": "multiple_choice",
+      "prompt": "After masking a field, align it by…",
+      "choices": [
+        "<< lo",
+        ">> lo",
+        "& lo",
+        "| lo"
+      ],
+      "answer": 1,
+      "explain": "Mask, then >> lo.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "mask",
+        "label": "Show mask",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-show-mask"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_easy_14.png"
+      }
+    },
+    {
+      "id": "bitfields_easy_15",
+      "type": "multiple_choice",
+      "prompt": "Neighbor bits stay put if you AND with…",
+      "choices": [
+        "mask",
+        "~mask",
+        "lo",
+        "hi"
+      ],
+      "answer": 1,
+      "explain": "AND with ~mask, then OR new bits.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_easy_15.png"
+      }
+    },
+    {
+      "id": "bitfields_easy_16",
+      "type": "true_false",
+      "prompt": "hi >= lo for a nonempty field.",
+      "answer": true,
+      "explain": "LSB numbering; MSB-as-0 is a different convention.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "extract",
+        "label": "Extract COUNT",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-extract"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_easy_16.png"
+      }
+    },
+    {
+      "id": "bitfields_easy_17",
+      "type": "multiple_choice",
+      "prompt": "Field width for [hi:lo] is…",
+      "choices": [
+        "hi-lo",
+        "hi-lo+1",
+        "hi+lo",
+        "2^(hi-lo)"
+      ],
+      "answer": 1,
+      "explain": "Inclusive: w = hi − lo + 1.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "extract",
+        "label": "Extract COUNT",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-extract"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_easy_17.png"
+      }
+    },
+    {
+      "id": "bitfields_easy_18",
+      "type": "multiple_choice",
+      "prompt": "After masking a field, align it by…",
+      "choices": [
+        "<< lo",
+        ">> lo",
+        "& lo",
+        "| lo"
+      ],
+      "answer": 1,
+      "explain": "Mask, then >> lo.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "mask",
+        "label": "Show mask",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-show-mask"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_easy_18.png"
+      }
+    },
+    {
+      "id": "bitfields_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Neighbor bits stay put if you AND with…",
+      "choices": [
+        "mask",
+        "~mask",
+        "lo",
+        "hi"
+      ],
+      "answer": 1,
+      "explain": "AND with ~mask, then OR new bits.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_easy_19.png"
+      }
+    },
+    {
+      "id": "bitfields_easy_20",
+      "type": "true_false",
+      "prompt": "hi >= lo for a nonempty field.",
+      "answer": true,
+      "explain": "LSB numbering; MSB-as-0 is a different convention.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "extract",
+        "label": "Extract COUNT",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-extract"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_easy_20.png"
+      }
+    },
+    {
+      "id": "bitfields_easy_21",
+      "type": "multiple_choice",
+      "prompt": "Field width for [hi:lo] is…",
+      "choices": [
+        "hi-lo",
+        "hi-lo+1",
+        "hi+lo",
+        "2^(hi-lo)"
+      ],
+      "answer": 1,
+      "explain": "Inclusive: w = hi − lo + 1.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "extract",
+        "label": "Extract COUNT",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-extract"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_easy_21.png"
+      }
+    },
+    {
+      "id": "bitfields_easy_22",
+      "type": "multiple_choice",
+      "prompt": "After masking a field, align it by…",
+      "choices": [
+        "<< lo",
+        ">> lo",
+        "& lo",
+        "| lo"
+      ],
+      "answer": 1,
+      "explain": "Mask, then >> lo.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "mask",
+        "label": "Show mask",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-show-mask"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_easy_22.png"
+      }
+    },
+    {
+      "id": "bitfields_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Neighbor bits stay put if you AND with…",
+      "choices": [
+        "mask",
+        "~mask",
+        "lo",
+        "hi"
+      ],
+      "answer": 1,
+      "explain": "AND with ~mask, then OR new bits.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_easy_23.png"
+      }
+    },
+    {
+      "id": "bitfields_easy_24",
+      "type": "true_false",
+      "prompt": "hi >= lo for a nonempty field.",
+      "answer": true,
+      "explain": "LSB numbering; MSB-as-0 is a different convention.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "extract",
+        "label": "Extract COUNT",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-extract"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_easy_24.png"
+      }
+    },
+    {
+      "id": "bitfields_easy_25",
+      "type": "multiple_choice",
+      "prompt": "Field width for [hi:lo] is…",
+      "choices": [
+        "hi-lo",
+        "hi-lo+1",
+        "hi+lo",
+        "2^(hi-lo)"
+      ],
+      "answer": 1,
+      "explain": "Inclusive: w = hi − lo + 1.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "extract",
+        "label": "Extract COUNT",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-extract"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_easy_25.png"
+      }
+    },
+    {
+      "id": "bitfields_easy_26",
+      "type": "multiple_choice",
+      "prompt": "After masking a field, align it by…",
+      "choices": [
+        "<< lo",
+        ">> lo",
+        "& lo",
+        "| lo"
+      ],
+      "answer": 1,
+      "explain": "Mask, then >> lo.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "mask",
+        "label": "Show mask",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-show-mask"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_easy_26.png"
+      }
+    },
+    {
+      "id": "bitfields_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Neighbor bits stay put if you AND with…",
+      "choices": [
+        "mask",
+        "~mask",
+        "lo",
+        "hi"
+      ],
+      "answer": 1,
+      "explain": "AND with ~mask, then OR new bits.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_easy_27.png"
+      }
+    },
+    {
+      "id": "bitfields_easy_28",
+      "type": "true_false",
+      "prompt": "hi >= lo for a nonempty field.",
+      "answer": true,
+      "explain": "LSB numbering; MSB-as-0 is a different convention.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "extract",
+        "label": "Extract COUNT",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-extract"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_easy_28.png"
+      }
+    },
+    {
+      "id": "bitfields_easy_29",
+      "type": "multiple_choice",
+      "prompt": "Field width for [hi:lo] is…",
+      "choices": [
+        "hi-lo",
+        "hi-lo+1",
+        "hi+lo",
+        "2^(hi-lo)"
+      ],
+      "answer": 1,
+      "explain": "Inclusive: w = hi − lo + 1.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "extract",
+        "label": "Extract COUNT",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-extract"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_easy_29.png"
+      }
+    },
+    {
+      "id": "bitfields_easy_30",
+      "type": "multiple_choice",
+      "prompt": "After masking a field, align it by…",
+      "choices": [
+        "<< lo",
+        ">> lo",
+        "& lo",
+        "| lo"
+      ],
+      "answer": 1,
+      "explain": "Mask, then >> lo.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "mask",
+        "label": "Show mask",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-show-mask"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_easy_30.png"
+      }
+    },
+    {
+      "id": "bitfields_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Width of field [7:3] is…",
+      "choices": [
+        "4",
+        "5",
+        "10",
+        "10"
+      ],
+      "answer": 1,
+      "explain": "7−3+1 = 5.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "extract",
+        "label": "Extract COUNT",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-extract"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_medium_01.png"
+      }
+    },
+    {
+      "id": "bitfields_medium_02",
+      "type": "multiple_choice",
+      "prompt": "From 0xA52D, bits 7:3 equal…",
+      "choices": [
+        "0",
+        "5",
+        "0xA5",
+        "0x2D"
+      ],
+      "answer": 1,
+      "explain": "0xA52D → field 7:3 is 5.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_medium_02.png"
+      }
+    },
+    {
+      "id": "bitfields_medium_03",
+      "type": "multiple_choice",
+      "prompt": "((1<<w)-1)<<lo builds…",
+      "choices": [
+        "lo alone",
+        "((1 << (hi - lo + 1)) - 1) << lo",
+        "hi ^ lo",
+        "~0 >> hi"
+      ],
+      "answer": 1,
+      "explain": "Width ones, shifted to lo.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_medium_03.png"
+      }
+    },
+    {
+      "id": "bitfields_medium_04",
+      "type": "true_false",
+      "prompt": "Unmasked OR of a wide value corrupts adjacent bits.",
+      "answer": true,
+      "explain": "Always mask; overlapping specs break packs.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "mask",
+        "label": "Show mask",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-show-mask"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_medium_04.png"
+      }
+    },
+    {
+      "id": "bitfields_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Width of field [11:0] is…",
+      "choices": [
+        "11",
+        "12",
+        "11",
+        "24"
+      ],
+      "answer": 1,
+      "explain": "11−0+1 = 12.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "extract",
+        "label": "Extract COUNT",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-extract"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_medium_05.png"
+      }
+    },
+    {
+      "id": "bitfields_medium_06",
+      "type": "multiple_choice",
+      "prompt": "From 0xA52D, bits 7:3 equal…",
+      "choices": [
+        "0",
+        "5",
+        "0xA5",
+        "0x2D"
+      ],
+      "answer": 1,
+      "explain": "0xA52D → field 7:3 is 5.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_medium_06.png"
+      }
+    },
+    {
+      "id": "bitfields_medium_07",
+      "type": "multiple_choice",
+      "prompt": "((1<<w)-1)<<lo builds…",
+      "choices": [
+        "lo alone",
+        "((1 << (hi - lo + 1)) - 1) << lo",
+        "hi ^ lo",
+        "~0 >> hi"
+      ],
+      "answer": 1,
+      "explain": "Width ones, shifted to lo.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_medium_07.png"
+      }
+    },
+    {
+      "id": "bitfields_medium_08",
+      "type": "true_false",
+      "prompt": "Unmasked OR of a wide value corrupts adjacent bits.",
+      "answer": true,
+      "explain": "Always mask; overlapping specs break packs.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "mask",
+        "label": "Show mask",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-show-mask"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_medium_08.png"
+      }
+    },
+    {
+      "id": "bitfields_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Width of field [2:1] is…",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "2−1+1 = 2.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "extract",
+        "label": "Extract COUNT",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-extract"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_medium_09.png"
+      }
+    },
+    {
+      "id": "bitfields_medium_10",
+      "type": "multiple_choice",
+      "prompt": "From 0xA52D, bits 7:3 equal…",
+      "choices": [
+        "0",
+        "5",
+        "0xA5",
+        "0x2D"
+      ],
+      "answer": 1,
+      "explain": "0xA52D → field 7:3 is 5.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_medium_10.png"
+      }
+    },
+    {
+      "id": "bitfields_medium_11",
+      "type": "multiple_choice",
+      "prompt": "((1<<w)-1)<<lo builds…",
+      "choices": [
+        "lo alone",
+        "((1 << (hi - lo + 1)) - 1) << lo",
+        "hi ^ lo",
+        "~0 >> hi"
+      ],
+      "answer": 1,
+      "explain": "Width ones, shifted to lo.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_medium_11.png"
+      }
+    },
+    {
+      "id": "bitfields_medium_12",
+      "type": "true_false",
+      "prompt": "Unmasked OR of a wide value corrupts adjacent bits.",
+      "answer": true,
+      "explain": "Always mask; overlapping specs break packs.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "mask",
+        "label": "Show mask",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-show-mask"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_medium_12.png"
+      }
+    },
+    {
+      "id": "bitfields_medium_13",
+      "type": "multiple_choice",
+      "prompt": "Width of field [5:0] is…",
+      "choices": [
+        "5",
+        "6",
+        "5",
+        "12"
+      ],
+      "answer": 1,
+      "explain": "5−0+1 = 6.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "extract",
+        "label": "Extract COUNT",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-extract"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_medium_13.png"
+      }
+    },
+    {
+      "id": "bitfields_medium_14",
+      "type": "multiple_choice",
+      "prompt": "From 0xA52D, bits 7:3 equal…",
+      "choices": [
+        "0",
+        "5",
+        "0xA5",
+        "0x2D"
+      ],
+      "answer": 1,
+      "explain": "0xA52D → field 7:3 is 5.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_medium_14.png"
+      }
+    },
+    {
+      "id": "bitfields_medium_15",
+      "type": "multiple_choice",
+      "prompt": "((1<<w)-1)<<lo builds…",
+      "choices": [
+        "lo alone",
+        "((1 << (hi - lo + 1)) - 1) << lo",
+        "hi ^ lo",
+        "~0 >> hi"
+      ],
+      "answer": 1,
+      "explain": "Width ones, shifted to lo.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_medium_15.png"
+      }
+    },
+    {
+      "id": "bitfields_medium_16",
+      "type": "true_false",
+      "prompt": "Unmasked OR of a wide value corrupts adjacent bits.",
+      "answer": true,
+      "explain": "Always mask; overlapping specs break packs.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "mask",
+        "label": "Show mask",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-show-mask"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_medium_16.png"
+      }
+    },
+    {
+      "id": "bitfields_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Width of field [15:8] is…",
+      "choices": [
+        "7",
+        "8",
+        "23",
+        "16"
+      ],
+      "answer": 1,
+      "explain": "15−8+1 = 8.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "extract",
+        "label": "Extract COUNT",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-extract"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_medium_17.png"
+      }
+    },
+    {
+      "id": "bitfields_medium_18",
+      "type": "multiple_choice",
+      "prompt": "From 0xA52D, bits 7:3 equal…",
+      "choices": [
+        "0",
+        "5",
+        "0xA5",
+        "0x2D"
+      ],
+      "answer": 1,
+      "explain": "0xA52D → field 7:3 is 5.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_medium_18.png"
+      }
+    },
+    {
+      "id": "bitfields_medium_19",
+      "type": "multiple_choice",
+      "prompt": "((1<<w)-1)<<lo builds…",
+      "choices": [
+        "lo alone",
+        "((1 << (hi - lo + 1)) - 1) << lo",
+        "hi ^ lo",
+        "~0 >> hi"
+      ],
+      "answer": 1,
+      "explain": "Width ones, shifted to lo.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_medium_19.png"
+      }
+    },
+    {
+      "id": "bitfields_medium_20",
+      "type": "true_false",
+      "prompt": "Unmasked OR of a wide value corrupts adjacent bits.",
+      "answer": true,
+      "explain": "Always mask; overlapping specs break packs.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "mask",
+        "label": "Show mask",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-show-mask"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_medium_20.png"
+      }
+    },
+    {
+      "id": "bitfields_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Width of field [3:1] is…",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "3−1+1 = 3.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "extract",
+        "label": "Extract COUNT",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-extract"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_medium_21.png"
+      }
+    },
+    {
+      "id": "bitfields_medium_22",
+      "type": "multiple_choice",
+      "prompt": "From 0xA52D, bits 7:3 equal…",
+      "choices": [
+        "0",
+        "5",
+        "0xA5",
+        "0x2D"
+      ],
+      "answer": 1,
+      "explain": "0xA52D → field 7:3 is 5.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_medium_22.png"
+      }
+    },
+    {
+      "id": "bitfields_medium_23",
+      "type": "multiple_choice",
+      "prompt": "((1<<w)-1)<<lo builds…",
+      "choices": [
+        "lo alone",
+        "((1 << (hi - lo + 1)) - 1) << lo",
+        "hi ^ lo",
+        "~0 >> hi"
+      ],
+      "answer": 1,
+      "explain": "Width ones, shifted to lo.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_medium_23.png"
+      }
+    },
+    {
+      "id": "bitfields_medium_24",
+      "type": "true_false",
+      "prompt": "Unmasked OR of a wide value corrupts adjacent bits.",
+      "answer": true,
+      "explain": "Always mask; overlapping specs break packs.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "mask",
+        "label": "Show mask",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-show-mask"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_medium_24.png"
+      }
+    },
+    {
+      "id": "bitfields_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Width of field [4:4] is…",
+      "choices": [
+        "0",
+        "1",
+        "8",
+        "2"
+      ],
+      "answer": 1,
+      "explain": "4−4+1 = 1.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "extract",
+        "label": "Extract COUNT",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-extract"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_medium_25.png"
+      }
+    },
+    {
+      "id": "bitfields_medium_26",
+      "type": "multiple_choice",
+      "prompt": "From 0xA52D, bits 7:3 equal…",
+      "choices": [
+        "0",
+        "5",
+        "0xA5",
+        "0x2D"
+      ],
+      "answer": 1,
+      "explain": "0xA52D → field 7:3 is 5.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_medium_26.png"
+      }
+    },
+    {
+      "id": "bitfields_medium_27",
+      "type": "multiple_choice",
+      "prompt": "((1<<w)-1)<<lo builds…",
+      "choices": [
+        "lo alone",
+        "((1 << (hi - lo + 1)) - 1) << lo",
+        "hi ^ lo",
+        "~0 >> hi"
+      ],
+      "answer": 1,
+      "explain": "Width ones, shifted to lo.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_medium_27.png"
+      }
+    },
+    {
+      "id": "bitfields_medium_28",
+      "type": "true_false",
+      "prompt": "Unmasked OR of a wide value corrupts adjacent bits.",
+      "answer": true,
+      "explain": "Always mask; overlapping specs break packs.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "mask",
+        "label": "Show mask",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-show-mask"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_medium_28.png"
+      }
+    },
+    {
+      "id": "bitfields_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Width of field [7:3] is…",
+      "choices": [
+        "4",
+        "5",
+        "10",
+        "10"
+      ],
+      "answer": 1,
+      "explain": "7−3+1 = 5.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "extract",
+        "label": "Extract COUNT",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-extract"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_medium_29.png"
+      }
+    },
+    {
+      "id": "bitfields_medium_30",
+      "type": "multiple_choice",
+      "prompt": "From 0xA52D, bits 7:3 equal…",
+      "choices": [
+        "0",
+        "5",
+        "0xA5",
+        "0x2D"
+      ],
+      "answer": 1,
+      "explain": "0xA52D → field 7:3 is 5.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_medium_30.png"
+      }
+    },
+    {
+      "id": "bitfields_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Insert value 3 into [5:4] of a cleared byte yields bits…",
+      "choices": [
+        "0x03",
+        "0x30",
+        "0x0C",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "3<<4 = 0x30 for a 2-bit field at lo=4.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "pack",
+        "label": "Pack CSR",
+        "steps": [
+          {
+            "click": "#btn-pack"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_hard_01.png"
+      }
+    },
+    {
+      "id": "bitfields_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Real registers also document…",
+      "choices": [
+        "Only the font in the PDF",
+        "Reset values, access types, side effects",
+        "Gray code only",
+        "UART baud only"
+      ],
+      "answer": 1,
+      "explain": "Reset/access/side effects matter as much as bit indices.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_hard_02.png"
+      }
+    },
+    {
+      "id": "bitfields_hard_03",
+      "type": "true_false",
+      "prompt": "Using MSB=0 numbering interchangeably with LSB=0 never causes bugs.",
+      "answer": false,
+      "explain": "Standard mask formulas; bit-order confusion is costly.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_hard_03.png"
+      }
+    },
+    {
+      "id": "bitfields_hard_04",
+      "type": "multiple_choice",
+      "prompt": "8-bit mask for bits [3:1] is…",
+      "choices": [
+        "0xFF",
+        "0x01",
+        "0x80",
+        "0x0E"
+      ],
+      "answer": 3,
+      "explain": "Bits 3..1 → 0b00001110 = 0x0E.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "mask",
+        "label": "Show mask",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-show-mask"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_hard_04.png"
+      }
+    },
+    {
+      "id": "bitfields_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Insert value 3 into [5:4] of a cleared byte yields bits…",
+      "choices": [
+        "0x03",
+        "0x30",
+        "0x0C",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "3<<4 = 0x30 for a 2-bit field at lo=4.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "pack",
+        "label": "Pack CSR",
+        "steps": [
+          {
+            "click": "#btn-pack"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_hard_05.png"
+      }
+    },
+    {
+      "id": "bitfields_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Real registers also document…",
+      "choices": [
+        "Only the font in the PDF",
+        "Reset values, access types, side effects",
+        "Gray code only",
+        "UART baud only"
+      ],
+      "answer": 1,
+      "explain": "Reset/access/side effects matter as much as bit indices.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_hard_06.png"
+      }
+    },
+    {
+      "id": "bitfields_hard_07",
+      "type": "true_false",
+      "prompt": "Using MSB=0 numbering interchangeably with LSB=0 never causes bugs.",
+      "answer": false,
+      "explain": "Standard mask formulas; bit-order confusion is costly.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_hard_07.png"
+      }
+    },
+    {
+      "id": "bitfields_hard_08",
+      "type": "multiple_choice",
+      "prompt": "8-bit mask for bits [3:1] is…",
+      "choices": [
+        "0xFF",
+        "0x01",
+        "0x80",
+        "0x0E"
+      ],
+      "answer": 3,
+      "explain": "Bits 3..1 → 0b00001110 = 0x0E.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "mask",
+        "label": "Show mask",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-show-mask"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_hard_08.png"
+      }
+    },
+    {
+      "id": "bitfields_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Insert value 3 into [5:4] of a cleared byte yields bits…",
+      "choices": [
+        "0x03",
+        "0x30",
+        "0x0C",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "3<<4 = 0x30 for a 2-bit field at lo=4.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "pack",
+        "label": "Pack CSR",
+        "steps": [
+          {
+            "click": "#btn-pack"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_hard_09.png"
+      }
+    },
+    {
+      "id": "bitfields_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Real registers also document…",
+      "choices": [
+        "Only the font in the PDF",
+        "Reset values, access types, side effects",
+        "Gray code only",
+        "UART baud only"
+      ],
+      "answer": 1,
+      "explain": "Reset/access/side effects matter as much as bit indices.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_hard_10.png"
+      }
+    },
+    {
+      "id": "bitfields_hard_11",
+      "type": "true_false",
+      "prompt": "Using MSB=0 numbering interchangeably with LSB=0 never causes bugs.",
+      "answer": false,
+      "explain": "Standard mask formulas; bit-order confusion is costly.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_hard_11.png"
+      }
+    },
+    {
+      "id": "bitfields_hard_12",
+      "type": "multiple_choice",
+      "prompt": "8-bit mask for bits [3:1] is…",
+      "choices": [
+        "0xFF",
+        "0x01",
+        "0x80",
+        "0x0E"
+      ],
+      "answer": 3,
+      "explain": "Bits 3..1 → 0b00001110 = 0x0E.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "mask",
+        "label": "Show mask",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-show-mask"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_hard_12.png"
+      }
+    },
+    {
+      "id": "bitfields_hard_13",
+      "type": "multiple_choice",
+      "prompt": "Insert value 3 into [5:4] of a cleared byte yields bits…",
+      "choices": [
+        "0x03",
+        "0x30",
+        "0x0C",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "3<<4 = 0x30 for a 2-bit field at lo=4.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "pack",
+        "label": "Pack CSR",
+        "steps": [
+          {
+            "click": "#btn-pack"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_hard_13.png"
+      }
+    },
+    {
+      "id": "bitfields_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Real registers also document…",
+      "choices": [
+        "Only the font in the PDF",
+        "Reset values, access types, side effects",
+        "Gray code only",
+        "UART baud only"
+      ],
+      "answer": 1,
+      "explain": "Reset/access/side effects matter as much as bit indices.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_hard_14.png"
+      }
+    },
+    {
+      "id": "bitfields_hard_15",
+      "type": "true_false",
+      "prompt": "Using MSB=0 numbering interchangeably with LSB=0 never causes bugs.",
+      "answer": false,
+      "explain": "Standard mask formulas; bit-order confusion is costly.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_hard_15.png"
+      }
+    },
+    {
+      "id": "bitfields_hard_16",
+      "type": "multiple_choice",
+      "prompt": "8-bit mask for bits [3:1] is…",
+      "choices": [
+        "0xFF",
+        "0x01",
+        "0x80",
+        "0x0E"
+      ],
+      "answer": 3,
+      "explain": "Bits 3..1 → 0b00001110 = 0x0E.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "mask",
+        "label": "Show mask",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-show-mask"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_hard_16.png"
+      }
+    },
+    {
+      "id": "bitfields_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Insert value 3 into [5:4] of a cleared byte yields bits…",
+      "choices": [
+        "0x03",
+        "0x30",
+        "0x0C",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "3<<4 = 0x30 for a 2-bit field at lo=4.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "pack",
+        "label": "Pack CSR",
+        "steps": [
+          {
+            "click": "#btn-pack"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_hard_17.png"
+      }
+    },
+    {
+      "id": "bitfields_hard_18",
+      "type": "multiple_choice",
+      "prompt": "Real registers also document…",
+      "choices": [
+        "Only the font in the PDF",
+        "Reset values, access types, side effects",
+        "Gray code only",
+        "UART baud only"
+      ],
+      "answer": 1,
+      "explain": "Reset/access/side effects matter as much as bit indices.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_hard_18.png"
+      }
+    },
+    {
+      "id": "bitfields_hard_19",
+      "type": "true_false",
+      "prompt": "Using MSB=0 numbering interchangeably with LSB=0 never causes bugs.",
+      "answer": false,
+      "explain": "Standard mask formulas; bit-order confusion is costly.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_hard_19.png"
+      }
+    },
+    {
+      "id": "bitfields_hard_20",
+      "type": "multiple_choice",
+      "prompt": "8-bit mask for bits [3:1] is…",
+      "choices": [
+        "0xFF",
+        "0x01",
+        "0x80",
+        "0x0E"
+      ],
+      "answer": 3,
+      "explain": "Bits 3..1 → 0b00001110 = 0x0E.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "mask",
+        "label": "Show mask",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-show-mask"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_hard_20.png"
+      }
+    },
+    {
+      "id": "bitfields_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Insert value 3 into [5:4] of a cleared byte yields bits…",
+      "choices": [
+        "0x03",
+        "0x30",
+        "0x0C",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "3<<4 = 0x30 for a 2-bit field at lo=4.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "pack",
+        "label": "Pack CSR",
+        "steps": [
+          {
+            "click": "#btn-pack"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_hard_21.png"
+      }
+    },
+    {
+      "id": "bitfields_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Real registers also document…",
+      "choices": [
+        "Only the font in the PDF",
+        "Reset values, access types, side effects",
+        "Gray code only",
+        "UART baud only"
+      ],
+      "answer": 1,
+      "explain": "Reset/access/side effects matter as much as bit indices.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_hard_22.png"
+      }
+    },
+    {
+      "id": "bitfields_hard_23",
+      "type": "true_false",
+      "prompt": "Using MSB=0 numbering interchangeably with LSB=0 never causes bugs.",
+      "answer": false,
+      "explain": "Standard mask formulas; bit-order confusion is costly.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_hard_23.png"
+      }
+    },
+    {
+      "id": "bitfields_hard_24",
+      "type": "multiple_choice",
+      "prompt": "8-bit mask for bits [3:1] is…",
+      "choices": [
+        "0xFF",
+        "0x01",
+        "0x80",
+        "0x0E"
+      ],
+      "answer": 3,
+      "explain": "Bits 3..1 → 0b00001110 = 0x0E.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "mask",
+        "label": "Show mask",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-show-mask"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_hard_24.png"
+      }
+    },
+    {
+      "id": "bitfields_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Insert value 3 into [5:4] of a cleared byte yields bits…",
+      "choices": [
+        "0x03",
+        "0x30",
+        "0x0C",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "3<<4 = 0x30 for a 2-bit field at lo=4.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "pack",
+        "label": "Pack CSR",
+        "steps": [
+          {
+            "click": "#btn-pack"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_hard_25.png"
+      }
+    },
+    {
+      "id": "bitfields_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Real registers also document…",
+      "choices": [
+        "Only the font in the PDF",
+        "Reset values, access types, side effects",
+        "Gray code only",
+        "UART baud only"
+      ],
+      "answer": 1,
+      "explain": "Reset/access/side effects matter as much as bit indices.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_hard_26.png"
+      }
+    },
+    {
+      "id": "bitfields_hard_27",
+      "type": "true_false",
+      "prompt": "Using MSB=0 numbering interchangeably with LSB=0 never causes bugs.",
+      "answer": false,
+      "explain": "Standard mask formulas; bit-order confusion is costly.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_hard_27.png"
+      }
+    },
+    {
+      "id": "bitfields_hard_28",
+      "type": "multiple_choice",
+      "prompt": "8-bit mask for bits [3:1] is…",
+      "choices": [
+        "0xFF",
+        "0x01",
+        "0x80",
+        "0x0E"
+      ],
+      "answer": 3,
+      "explain": "Bits 3..1 → 0b00001110 = 0x0E.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "mask",
+        "label": "Show mask",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          },
+          {
+            "click": "#btn-show-mask"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_hard_28.png"
+      }
+    },
+    {
+      "id": "bitfields_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Insert value 3 into [5:4] of a cleared byte yields bits…",
+      "choices": [
+        "0x03",
+        "0x30",
+        "0x0C",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "3<<4 = 0x30 for a 2-bit field at lo=4.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "pack",
+        "label": "Pack CSR",
+        "steps": [
+          {
+            "click": "#btn-pack"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_hard_29.png"
+      }
+    },
+    {
+      "id": "bitfields_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Real registers also document…",
+      "choices": [
+        "Only the font in the PDF",
+        "Reset values, access types, side effects",
+        "Gray code only",
+        "UART baud only"
+      ],
+      "answer": 1,
+      "explain": "Reset/access/side effects matter as much as bit indices.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "bit-fields",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bf-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/bitfields_hard_30.png"
+      }
+    }
+  ]
+}

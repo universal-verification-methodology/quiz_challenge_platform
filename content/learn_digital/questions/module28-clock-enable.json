@@ -1,0 +1,2580 @@
+{
+  "module": "module28-clock-enable",
+  "title": "Clock enable",
+  "items": [
+    {
+      "id": "clken_easy_01",
+      "type": "multiple_choice",
+      "prompt": "Preferred RTL style for conditional updates?",
+      "choices": [
+        "Clock enable (if ce) on free-running clk",
+        "Raw AND gate on clk always",
+        "No clock at all",
+        "Only async reset"
+      ],
+      "answer": 0,
+      "explain": "Clean clk; if (ce) q <= d.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_easy_01.mp4",
+        "poster": "media/images/clken_easy_01-frame.png",
+        "figure": "media/images/clken_easy_01.png"
+      }
+    },
+    {
+      "id": "clken_easy_02",
+      "type": "multiple_choice",
+      "prompt": "With clock enable low at posedge…",
+      "choices": [
+        "q holds (no load)",
+        "q must toggle",
+        "clk stops globally",
+        "d drives q immediately"
+      ],
+      "answer": 0,
+      "explain": "Enable off → recycle/hold.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_easy_02.mp4",
+        "poster": "media/images/clken_easy_02-frame.png",
+        "figure": "media/images/clken_easy_02.png"
+      }
+    },
+    {
+      "id": "clken_easy_03",
+      "type": "multiple_choice",
+      "prompt": "Enable glitch during clk high on gated clocks…",
+      "choices": [
+        "Glitch / spurious edge",
+        "Always safer than CE",
+        "Only affects reset",
+        "Impossible in simulation"
+      ],
+      "answer": 0,
+      "explain": "Raw AND can pulse clk_g.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_easy_03.mp4",
+        "poster": "media/images/clken_easy_03-frame.png",
+        "figure": "media/images/clken_easy_03.png"
+      }
+    },
+    {
+      "id": "clken_easy_04",
+      "type": "true_false",
+      "prompt": "CE=1 loads D on each posedge for a free-running clk.",
+      "answer": true,
+      "explain": "ICG latches enable safely; CE holds data without stopping clk.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_easy_04.mp4",
+        "poster": "media/images/clken_easy_04-frame.png",
+        "figure": "media/images/clken_easy_04.png"
+      }
+    },
+    {
+      "id": "clken_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Preferred RTL style for conditional updates?",
+      "choices": [
+        "Clock enable (if ce) on free-running clk",
+        "Raw AND gate on clk always",
+        "No clock at all",
+        "Only async reset"
+      ],
+      "answer": 0,
+      "explain": "Clean clk; if (ce) q <= d.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_easy_05.mp4",
+        "poster": "media/images/clken_easy_05-frame.png",
+        "figure": "media/images/clken_easy_05.png"
+      }
+    },
+    {
+      "id": "clken_easy_06",
+      "type": "multiple_choice",
+      "prompt": "With clock enable low at posedge…",
+      "choices": [
+        "q holds (no load)",
+        "q must toggle",
+        "clk stops globally",
+        "d drives q immediately"
+      ],
+      "answer": 0,
+      "explain": "Enable off → recycle/hold.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_easy_06.mp4",
+        "poster": "media/images/clken_easy_06-frame.png",
+        "figure": "media/images/clken_easy_06.png"
+      }
+    },
+    {
+      "id": "clken_easy_07",
+      "type": "multiple_choice",
+      "prompt": "Enable glitch during clk high on gated clocks…",
+      "choices": [
+        "Glitch / spurious edge",
+        "Always safer than CE",
+        "Only affects reset",
+        "Impossible in simulation"
+      ],
+      "answer": 0,
+      "explain": "Raw AND can pulse clk_g.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_easy_07.mp4",
+        "poster": "media/images/clken_easy_07-frame.png",
+        "figure": "media/images/clken_easy_07.png"
+      }
+    },
+    {
+      "id": "clken_easy_08",
+      "type": "true_false",
+      "prompt": "CE=1 loads D on each posedge for a free-running clk.",
+      "answer": true,
+      "explain": "ICG latches enable safely; CE holds data without stopping clk.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_easy_08.mp4",
+        "poster": "media/images/clken_easy_08-frame.png",
+        "figure": "media/images/clken_easy_08.png"
+      }
+    },
+    {
+      "id": "clken_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Preferred RTL style for conditional updates?",
+      "choices": [
+        "Clock enable (if ce) on free-running clk",
+        "Raw AND gate on clk always",
+        "No clock at all",
+        "Only async reset"
+      ],
+      "answer": 0,
+      "explain": "Clean clk; if (ce) q <= d.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_easy_09.mp4",
+        "poster": "media/images/clken_easy_09-frame.png",
+        "figure": "media/images/clken_easy_09.png"
+      }
+    },
+    {
+      "id": "clken_easy_10",
+      "type": "multiple_choice",
+      "prompt": "With clock enable low at posedge…",
+      "choices": [
+        "q holds (no load)",
+        "q must toggle",
+        "clk stops globally",
+        "d drives q immediately"
+      ],
+      "answer": 0,
+      "explain": "Enable off → recycle/hold.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_easy_10.mp4",
+        "poster": "media/images/clken_easy_10-frame.png",
+        "figure": "media/images/clken_easy_10.png"
+      }
+    },
+    {
+      "id": "clken_easy_11",
+      "type": "multiple_choice",
+      "prompt": "Enable glitch during clk high on gated clocks…",
+      "choices": [
+        "Glitch / spurious edge",
+        "Always safer than CE",
+        "Only affects reset",
+        "Impossible in simulation"
+      ],
+      "answer": 0,
+      "explain": "Raw AND can pulse clk_g.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_easy_11.mp4",
+        "poster": "media/images/clken_easy_11-frame.png",
+        "figure": "media/images/clken_easy_11.png"
+      }
+    },
+    {
+      "id": "clken_easy_12",
+      "type": "true_false",
+      "prompt": "CE=1 loads D on each posedge for a free-running clk.",
+      "answer": true,
+      "explain": "ICG latches enable safely; CE holds data without stopping clk.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_easy_12.mp4",
+        "poster": "media/images/clken_easy_12-frame.png",
+        "figure": "media/images/clken_easy_12.png"
+      }
+    },
+    {
+      "id": "clken_easy_13",
+      "type": "multiple_choice",
+      "prompt": "Preferred RTL style for conditional updates?",
+      "choices": [
+        "Clock enable (if ce) on free-running clk",
+        "Raw AND gate on clk always",
+        "No clock at all",
+        "Only async reset"
+      ],
+      "answer": 0,
+      "explain": "Clean clk; if (ce) q <= d.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_easy_13.mp4",
+        "poster": "media/images/clken_easy_13-frame.png",
+        "figure": "media/images/clken_easy_13.png"
+      }
+    },
+    {
+      "id": "clken_easy_14",
+      "type": "multiple_choice",
+      "prompt": "With clock enable low at posedge…",
+      "choices": [
+        "q holds (no load)",
+        "q must toggle",
+        "clk stops globally",
+        "d drives q immediately"
+      ],
+      "answer": 0,
+      "explain": "Enable off → recycle/hold.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_easy_14.mp4",
+        "poster": "media/images/clken_easy_14-frame.png",
+        "figure": "media/images/clken_easy_14.png"
+      }
+    },
+    {
+      "id": "clken_easy_15",
+      "type": "multiple_choice",
+      "prompt": "Enable glitch during clk high on gated clocks…",
+      "choices": [
+        "Glitch / spurious edge",
+        "Always safer than CE",
+        "Only affects reset",
+        "Impossible in simulation"
+      ],
+      "answer": 0,
+      "explain": "Raw AND can pulse clk_g.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_easy_15.mp4",
+        "poster": "media/images/clken_easy_15-frame.png",
+        "figure": "media/images/clken_easy_15.png"
+      }
+    },
+    {
+      "id": "clken_easy_16",
+      "type": "true_false",
+      "prompt": "CE=1 loads D on each posedge for a free-running clk.",
+      "answer": true,
+      "explain": "ICG latches enable safely; CE holds data without stopping clk.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_easy_16.mp4",
+        "poster": "media/images/clken_easy_16-frame.png",
+        "figure": "media/images/clken_easy_16.png"
+      }
+    },
+    {
+      "id": "clken_easy_17",
+      "type": "multiple_choice",
+      "prompt": "Preferred RTL style for conditional updates?",
+      "choices": [
+        "Clock enable (if ce) on free-running clk",
+        "Raw AND gate on clk always",
+        "No clock at all",
+        "Only async reset"
+      ],
+      "answer": 0,
+      "explain": "Clean clk; if (ce) q <= d.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_easy_17.mp4",
+        "poster": "media/images/clken_easy_17-frame.png",
+        "figure": "media/images/clken_easy_17.png"
+      }
+    },
+    {
+      "id": "clken_easy_18",
+      "type": "multiple_choice",
+      "prompt": "With clock enable low at posedge…",
+      "choices": [
+        "q holds (no load)",
+        "q must toggle",
+        "clk stops globally",
+        "d drives q immediately"
+      ],
+      "answer": 0,
+      "explain": "Enable off → recycle/hold.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_easy_18.mp4",
+        "poster": "media/images/clken_easy_18-frame.png",
+        "figure": "media/images/clken_easy_18.png"
+      }
+    },
+    {
+      "id": "clken_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Enable glitch during clk high on gated clocks…",
+      "choices": [
+        "Glitch / spurious edge",
+        "Always safer than CE",
+        "Only affects reset",
+        "Impossible in simulation"
+      ],
+      "answer": 0,
+      "explain": "Raw AND can pulse clk_g.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_easy_19.mp4",
+        "poster": "media/images/clken_easy_19-frame.png",
+        "figure": "media/images/clken_easy_19.png"
+      }
+    },
+    {
+      "id": "clken_easy_20",
+      "type": "true_false",
+      "prompt": "CE=1 loads D on each posedge for a free-running clk.",
+      "answer": true,
+      "explain": "ICG latches enable safely; CE holds data without stopping clk.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_easy_20.mp4",
+        "poster": "media/images/clken_easy_20-frame.png",
+        "figure": "media/images/clken_easy_20.png"
+      }
+    },
+    {
+      "id": "clken_easy_21",
+      "type": "multiple_choice",
+      "prompt": "Preferred RTL style for conditional updates?",
+      "choices": [
+        "Clock enable (if ce) on free-running clk",
+        "Raw AND gate on clk always",
+        "No clock at all",
+        "Only async reset"
+      ],
+      "answer": 0,
+      "explain": "Clean clk; if (ce) q <= d.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_easy_21.mp4",
+        "poster": "media/images/clken_easy_21-frame.png",
+        "figure": "media/images/clken_easy_21.png"
+      }
+    },
+    {
+      "id": "clken_easy_22",
+      "type": "multiple_choice",
+      "prompt": "With clock enable low at posedge…",
+      "choices": [
+        "q holds (no load)",
+        "q must toggle",
+        "clk stops globally",
+        "d drives q immediately"
+      ],
+      "answer": 0,
+      "explain": "Enable off → recycle/hold.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_easy_22.mp4",
+        "poster": "media/images/clken_easy_22-frame.png",
+        "figure": "media/images/clken_easy_22.png"
+      }
+    },
+    {
+      "id": "clken_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Enable glitch during clk high on gated clocks…",
+      "choices": [
+        "Glitch / spurious edge",
+        "Always safer than CE",
+        "Only affects reset",
+        "Impossible in simulation"
+      ],
+      "answer": 0,
+      "explain": "Raw AND can pulse clk_g.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_easy_23.mp4",
+        "poster": "media/images/clken_easy_23-frame.png",
+        "figure": "media/images/clken_easy_23.png"
+      }
+    },
+    {
+      "id": "clken_easy_24",
+      "type": "true_false",
+      "prompt": "CE=1 loads D on each posedge for a free-running clk.",
+      "answer": true,
+      "explain": "ICG latches enable safely; CE holds data without stopping clk.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_easy_24.mp4",
+        "poster": "media/images/clken_easy_24-frame.png",
+        "figure": "media/images/clken_easy_24.png"
+      }
+    },
+    {
+      "id": "clken_easy_25",
+      "type": "multiple_choice",
+      "prompt": "Preferred RTL style for conditional updates?",
+      "choices": [
+        "Clock enable (if ce) on free-running clk",
+        "Raw AND gate on clk always",
+        "No clock at all",
+        "Only async reset"
+      ],
+      "answer": 0,
+      "explain": "Clean clk; if (ce) q <= d.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_easy_25.mp4",
+        "poster": "media/images/clken_easy_25-frame.png",
+        "figure": "media/images/clken_easy_25.png"
+      }
+    },
+    {
+      "id": "clken_easy_26",
+      "type": "multiple_choice",
+      "prompt": "With clock enable low at posedge…",
+      "choices": [
+        "q holds (no load)",
+        "q must toggle",
+        "clk stops globally",
+        "d drives q immediately"
+      ],
+      "answer": 0,
+      "explain": "Enable off → recycle/hold.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_easy_26.mp4",
+        "poster": "media/images/clken_easy_26-frame.png",
+        "figure": "media/images/clken_easy_26.png"
+      }
+    },
+    {
+      "id": "clken_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Enable glitch during clk high on gated clocks…",
+      "choices": [
+        "Glitch / spurious edge",
+        "Always safer than CE",
+        "Only affects reset",
+        "Impossible in simulation"
+      ],
+      "answer": 0,
+      "explain": "Raw AND can pulse clk_g.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_easy_27.mp4",
+        "poster": "media/images/clken_easy_27-frame.png",
+        "figure": "media/images/clken_easy_27.png"
+      }
+    },
+    {
+      "id": "clken_easy_28",
+      "type": "true_false",
+      "prompt": "CE=1 loads D on each posedge for a free-running clk.",
+      "answer": true,
+      "explain": "ICG latches enable safely; CE holds data without stopping clk.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_easy_28.mp4",
+        "poster": "media/images/clken_easy_28-frame.png",
+        "figure": "media/images/clken_easy_28.png"
+      }
+    },
+    {
+      "id": "clken_easy_29",
+      "type": "multiple_choice",
+      "prompt": "Preferred RTL style for conditional updates?",
+      "choices": [
+        "Clock enable (if ce) on free-running clk",
+        "Raw AND gate on clk always",
+        "No clock at all",
+        "Only async reset"
+      ],
+      "answer": 0,
+      "explain": "Clean clk; if (ce) q <= d.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_easy_29.mp4",
+        "poster": "media/images/clken_easy_29-frame.png",
+        "figure": "media/images/clken_easy_29.png"
+      }
+    },
+    {
+      "id": "clken_easy_30",
+      "type": "multiple_choice",
+      "prompt": "With clock enable low at posedge…",
+      "choices": [
+        "q holds (no load)",
+        "q must toggle",
+        "clk stops globally",
+        "d drives q immediately"
+      ],
+      "answer": 0,
+      "explain": "Enable off → recycle/hold.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_easy_30.mp4",
+        "poster": "media/images/clken_easy_30-frame.png",
+        "figure": "media/images/clken_easy_30.png"
+      }
+    },
+    {
+      "id": "clken_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Holding Q with CE differs from gating because…",
+      "choices": [
+        "CE holds data; gating stops edges",
+        "They are identical always",
+        "CE deletes setup checks",
+        "Gating never risks glitches"
+      ],
+      "answer": 0,
+      "explain": "CE recycles Q; gating removes clock edges.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_medium_01.mp4",
+        "poster": "media/images/clken_medium_01-frame.png",
+        "figure": "media/images/clken_medium_01.png"
+      }
+    },
+    {
+      "id": "clken_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Mid-high enable change on AND-gated clk can…",
+      "choices": [
+        "Creating an unintended clock pulse",
+        "Improving hold automatically",
+        "Forcing async FIFO Gray pointers",
+        "Removing STA forever"
+      ],
+      "answer": 0,
+      "explain": "AND can glitch while clk is high.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_medium_02.mp4",
+        "poster": "media/images/clken_medium_02-frame.png",
+        "figure": "media/images/clken_medium_02.png"
+      }
+    },
+    {
+      "id": "clken_medium_03",
+      "type": "multiple_choice",
+      "prompt": "Preferred when you truly must gate clocks?",
+      "choices": [
+        "Invite glitches and STA pain — prefer ICG",
+        "Guarantee maximal LFSR period",
+        "Replace all resets",
+        "Make multi-bit CDC safe alone"
+      ],
+      "answer": 0,
+      "explain": "Use proper ICG; avoid raw AND.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_medium_03.mp4",
+        "poster": "media/images/clken_medium_03-frame.png",
+        "figure": "media/images/clken_medium_03.png"
+      }
+    },
+    {
+      "id": "clken_medium_04",
+      "type": "true_false",
+      "prompt": "Glitches on gated clocks can cause extra captures.",
+      "answer": true,
+      "explain": "CE=0 holds through the edge; d mid-cycle does not load.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_medium_04.mp4",
+        "poster": "media/images/clken_medium_04-frame.png",
+        "figure": "media/images/clken_medium_04.png"
+      }
+    },
+    {
+      "id": "clken_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Holding Q with CE differs from gating because…",
+      "choices": [
+        "CE holds data; gating stops edges",
+        "They are identical always",
+        "CE deletes setup checks",
+        "Gating never risks glitches"
+      ],
+      "answer": 0,
+      "explain": "CE recycles Q; gating removes clock edges.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_medium_05.mp4",
+        "poster": "media/images/clken_medium_05-frame.png",
+        "figure": "media/images/clken_medium_05.png"
+      }
+    },
+    {
+      "id": "clken_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Mid-high enable change on AND-gated clk can…",
+      "choices": [
+        "Creating an unintended clock pulse",
+        "Improving hold automatically",
+        "Forcing async FIFO Gray pointers",
+        "Removing STA forever"
+      ],
+      "answer": 0,
+      "explain": "AND can glitch while clk is high.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_medium_06.mp4",
+        "poster": "media/images/clken_medium_06-frame.png",
+        "figure": "media/images/clken_medium_06.png"
+      }
+    },
+    {
+      "id": "clken_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Preferred when you truly must gate clocks?",
+      "choices": [
+        "Invite glitches and STA pain — prefer ICG",
+        "Guarantee maximal LFSR period",
+        "Replace all resets",
+        "Make multi-bit CDC safe alone"
+      ],
+      "answer": 0,
+      "explain": "Use proper ICG; avoid raw AND.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_medium_07.mp4",
+        "poster": "media/images/clken_medium_07-frame.png",
+        "figure": "media/images/clken_medium_07.png"
+      }
+    },
+    {
+      "id": "clken_medium_08",
+      "type": "true_false",
+      "prompt": "Glitches on gated clocks can cause extra captures.",
+      "answer": true,
+      "explain": "CE=0 holds through the edge; d mid-cycle does not load.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_medium_08.mp4",
+        "poster": "media/images/clken_medium_08-frame.png",
+        "figure": "media/images/clken_medium_08.png"
+      }
+    },
+    {
+      "id": "clken_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Holding Q with CE differs from gating because…",
+      "choices": [
+        "CE holds data; gating stops edges",
+        "They are identical always",
+        "CE deletes setup checks",
+        "Gating never risks glitches"
+      ],
+      "answer": 0,
+      "explain": "CE recycles Q; gating removes clock edges.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_medium_09.mp4",
+        "poster": "media/images/clken_medium_09-frame.png",
+        "figure": "media/images/clken_medium_09.png"
+      }
+    },
+    {
+      "id": "clken_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Mid-high enable change on AND-gated clk can…",
+      "choices": [
+        "Creating an unintended clock pulse",
+        "Improving hold automatically",
+        "Forcing async FIFO Gray pointers",
+        "Removing STA forever"
+      ],
+      "answer": 0,
+      "explain": "AND can glitch while clk is high.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_medium_10.mp4",
+        "poster": "media/images/clken_medium_10-frame.png",
+        "figure": "media/images/clken_medium_10.png"
+      }
+    },
+    {
+      "id": "clken_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Preferred when you truly must gate clocks?",
+      "choices": [
+        "Invite glitches and STA pain — prefer ICG",
+        "Guarantee maximal LFSR period",
+        "Replace all resets",
+        "Make multi-bit CDC safe alone"
+      ],
+      "answer": 0,
+      "explain": "Use proper ICG; avoid raw AND.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_medium_11.mp4",
+        "poster": "media/images/clken_medium_11-frame.png",
+        "figure": "media/images/clken_medium_11.png"
+      }
+    },
+    {
+      "id": "clken_medium_12",
+      "type": "true_false",
+      "prompt": "Glitches on gated clocks can cause extra captures.",
+      "answer": true,
+      "explain": "CE=0 holds through the edge; d mid-cycle does not load.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_medium_12.mp4",
+        "poster": "media/images/clken_medium_12-frame.png",
+        "figure": "media/images/clken_medium_12.png"
+      }
+    },
+    {
+      "id": "clken_medium_13",
+      "type": "multiple_choice",
+      "prompt": "Holding Q with CE differs from gating because…",
+      "choices": [
+        "CE holds data; gating stops edges",
+        "They are identical always",
+        "CE deletes setup checks",
+        "Gating never risks glitches"
+      ],
+      "answer": 0,
+      "explain": "CE recycles Q; gating removes clock edges.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_medium_13.mp4",
+        "poster": "media/images/clken_medium_13-frame.png",
+        "figure": "media/images/clken_medium_13.png"
+      }
+    },
+    {
+      "id": "clken_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Mid-high enable change on AND-gated clk can…",
+      "choices": [
+        "Creating an unintended clock pulse",
+        "Improving hold automatically",
+        "Forcing async FIFO Gray pointers",
+        "Removing STA forever"
+      ],
+      "answer": 0,
+      "explain": "AND can glitch while clk is high.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_medium_14.mp4",
+        "poster": "media/images/clken_medium_14-frame.png",
+        "figure": "media/images/clken_medium_14.png"
+      }
+    },
+    {
+      "id": "clken_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Preferred when you truly must gate clocks?",
+      "choices": [
+        "Invite glitches and STA pain — prefer ICG",
+        "Guarantee maximal LFSR period",
+        "Replace all resets",
+        "Make multi-bit CDC safe alone"
+      ],
+      "answer": 0,
+      "explain": "Use proper ICG; avoid raw AND.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_medium_15.mp4",
+        "poster": "media/images/clken_medium_15-frame.png",
+        "figure": "media/images/clken_medium_15.png"
+      }
+    },
+    {
+      "id": "clken_medium_16",
+      "type": "true_false",
+      "prompt": "Glitches on gated clocks can cause extra captures.",
+      "answer": true,
+      "explain": "CE=0 holds through the edge; d mid-cycle does not load.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_medium_16.mp4",
+        "poster": "media/images/clken_medium_16-frame.png",
+        "figure": "media/images/clken_medium_16.png"
+      }
+    },
+    {
+      "id": "clken_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Holding Q with CE differs from gating because…",
+      "choices": [
+        "CE holds data; gating stops edges",
+        "They are identical always",
+        "CE deletes setup checks",
+        "Gating never risks glitches"
+      ],
+      "answer": 0,
+      "explain": "CE recycles Q; gating removes clock edges.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_medium_17.mp4",
+        "poster": "media/images/clken_medium_17-frame.png",
+        "figure": "media/images/clken_medium_17.png"
+      }
+    },
+    {
+      "id": "clken_medium_18",
+      "type": "multiple_choice",
+      "prompt": "Mid-high enable change on AND-gated clk can…",
+      "choices": [
+        "Creating an unintended clock pulse",
+        "Improving hold automatically",
+        "Forcing async FIFO Gray pointers",
+        "Removing STA forever"
+      ],
+      "answer": 0,
+      "explain": "AND can glitch while clk is high.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_medium_18.mp4",
+        "poster": "media/images/clken_medium_18-frame.png",
+        "figure": "media/images/clken_medium_18.png"
+      }
+    },
+    {
+      "id": "clken_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Preferred when you truly must gate clocks?",
+      "choices": [
+        "Invite glitches and STA pain — prefer ICG",
+        "Guarantee maximal LFSR period",
+        "Replace all resets",
+        "Make multi-bit CDC safe alone"
+      ],
+      "answer": 0,
+      "explain": "Use proper ICG; avoid raw AND.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_medium_19.mp4",
+        "poster": "media/images/clken_medium_19-frame.png",
+        "figure": "media/images/clken_medium_19.png"
+      }
+    },
+    {
+      "id": "clken_medium_20",
+      "type": "true_false",
+      "prompt": "Glitches on gated clocks can cause extra captures.",
+      "answer": true,
+      "explain": "CE=0 holds through the edge; d mid-cycle does not load.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_medium_20.mp4",
+        "poster": "media/images/clken_medium_20-frame.png",
+        "figure": "media/images/clken_medium_20.png"
+      }
+    },
+    {
+      "id": "clken_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Holding Q with CE differs from gating because…",
+      "choices": [
+        "CE holds data; gating stops edges",
+        "They are identical always",
+        "CE deletes setup checks",
+        "Gating never risks glitches"
+      ],
+      "answer": 0,
+      "explain": "CE recycles Q; gating removes clock edges.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_medium_21.mp4",
+        "poster": "media/images/clken_medium_21-frame.png",
+        "figure": "media/images/clken_medium_21.png"
+      }
+    },
+    {
+      "id": "clken_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Mid-high enable change on AND-gated clk can…",
+      "choices": [
+        "Creating an unintended clock pulse",
+        "Improving hold automatically",
+        "Forcing async FIFO Gray pointers",
+        "Removing STA forever"
+      ],
+      "answer": 0,
+      "explain": "AND can glitch while clk is high.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_medium_22.mp4",
+        "poster": "media/images/clken_medium_22-frame.png",
+        "figure": "media/images/clken_medium_22.png"
+      }
+    },
+    {
+      "id": "clken_medium_23",
+      "type": "multiple_choice",
+      "prompt": "Preferred when you truly must gate clocks?",
+      "choices": [
+        "Invite glitches and STA pain — prefer ICG",
+        "Guarantee maximal LFSR period",
+        "Replace all resets",
+        "Make multi-bit CDC safe alone"
+      ],
+      "answer": 0,
+      "explain": "Use proper ICG; avoid raw AND.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_medium_23.mp4",
+        "poster": "media/images/clken_medium_23-frame.png",
+        "figure": "media/images/clken_medium_23.png"
+      }
+    },
+    {
+      "id": "clken_medium_24",
+      "type": "true_false",
+      "prompt": "Glitches on gated clocks can cause extra captures.",
+      "answer": true,
+      "explain": "CE=0 holds through the edge; d mid-cycle does not load.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_medium_24.mp4",
+        "poster": "media/images/clken_medium_24-frame.png",
+        "figure": "media/images/clken_medium_24.png"
+      }
+    },
+    {
+      "id": "clken_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Holding Q with CE differs from gating because…",
+      "choices": [
+        "CE holds data; gating stops edges",
+        "They are identical always",
+        "CE deletes setup checks",
+        "Gating never risks glitches"
+      ],
+      "answer": 0,
+      "explain": "CE recycles Q; gating removes clock edges.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_medium_25.mp4",
+        "poster": "media/images/clken_medium_25-frame.png",
+        "figure": "media/images/clken_medium_25.png"
+      }
+    },
+    {
+      "id": "clken_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Mid-high enable change on AND-gated clk can…",
+      "choices": [
+        "Creating an unintended clock pulse",
+        "Improving hold automatically",
+        "Forcing async FIFO Gray pointers",
+        "Removing STA forever"
+      ],
+      "answer": 0,
+      "explain": "AND can glitch while clk is high.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_medium_26.mp4",
+        "poster": "media/images/clken_medium_26-frame.png",
+        "figure": "media/images/clken_medium_26.png"
+      }
+    },
+    {
+      "id": "clken_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Preferred when you truly must gate clocks?",
+      "choices": [
+        "Invite glitches and STA pain — prefer ICG",
+        "Guarantee maximal LFSR period",
+        "Replace all resets",
+        "Make multi-bit CDC safe alone"
+      ],
+      "answer": 0,
+      "explain": "Use proper ICG; avoid raw AND.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_medium_27.mp4",
+        "poster": "media/images/clken_medium_27-frame.png",
+        "figure": "media/images/clken_medium_27.png"
+      }
+    },
+    {
+      "id": "clken_medium_28",
+      "type": "true_false",
+      "prompt": "Glitches on gated clocks can cause extra captures.",
+      "answer": true,
+      "explain": "CE=0 holds through the edge; d mid-cycle does not load.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_medium_28.mp4",
+        "poster": "media/images/clken_medium_28-frame.png",
+        "figure": "media/images/clken_medium_28.png"
+      }
+    },
+    {
+      "id": "clken_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Holding Q with CE differs from gating because…",
+      "choices": [
+        "CE holds data; gating stops edges",
+        "They are identical always",
+        "CE deletes setup checks",
+        "Gating never risks glitches"
+      ],
+      "answer": 0,
+      "explain": "CE recycles Q; gating removes clock edges.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_medium_29.mp4",
+        "poster": "media/images/clken_medium_29-frame.png",
+        "figure": "media/images/clken_medium_29.png"
+      }
+    },
+    {
+      "id": "clken_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Mid-high enable change on AND-gated clk can…",
+      "choices": [
+        "Creating an unintended clock pulse",
+        "Improving hold automatically",
+        "Forcing async FIFO Gray pointers",
+        "Removing STA forever"
+      ],
+      "answer": 0,
+      "explain": "AND can glitch while clk is high.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_medium_30.mp4",
+        "poster": "media/images/clken_medium_30-frame.png",
+        "figure": "media/images/clken_medium_30.png"
+      }
+    },
+    {
+      "id": "clken_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Real designs with ICGs still need…",
+      "choices": [
+        "Clock-tree constraints, ICG rules, STA on enables",
+        "Only hex fonts",
+        "Deleting the clock entirely",
+        "Ignoring enable paths in timing"
+      ],
+      "answer": 0,
+      "explain": "Constraints and STA on enable paths remain.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_hard_01.mp4",
+        "poster": "media/images/clken_hard_01-frame.png",
+        "figure": "media/images/clken_hard_01.png"
+      }
+    },
+    {
+      "id": "clken_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Which matches free-running clk with CE?",
+      "choices": [
+        "always @(posedge clk) if (ce) q <= d;",
+        "assign clk = ce & clk;",
+        "always @(*) q = d;",
+        "always @(negedge ce) clk = 1;"
+      ],
+      "answer": 0,
+      "explain": "Qualify the load, not the clock net.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_hard_02.mp4",
+        "poster": "media/images/clken_hard_02-frame.png",
+        "figure": "media/images/clken_hard_02.png"
+      }
+    },
+    {
+      "id": "clken_hard_03",
+      "type": "multiple_choice",
+      "prompt": "When you only need recycle, prefer…",
+      "choices": [
+        "Clock enable on free-running clk",
+        "Unlatched AND of clk and ce",
+        "Removing all flops",
+        "Driving Q from async_in"
+      ],
+      "answer": 0,
+      "explain": "CE first; gate only with proper cells when required.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_hard_03.mp4",
+        "poster": "media/images/clken_hard_03-frame.png",
+        "figure": "media/images/clken_hard_03.png"
+      }
+    },
+    {
+      "id": "clken_hard_04",
+      "type": "true_false",
+      "prompt": "Gated-clock glitches can create timing nightmares.",
+      "answer": true,
+      "explain": "CE/ICG preferred; raw AND is the hazard case.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_hard_04.mp4",
+        "poster": "media/images/clken_hard_04-frame.png",
+        "figure": "media/images/clken_hard_04.png"
+      }
+    },
+    {
+      "id": "clken_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Real designs with ICGs still need…",
+      "choices": [
+        "Clock-tree constraints, ICG rules, STA on enables",
+        "Only hex fonts",
+        "Deleting the clock entirely",
+        "Ignoring enable paths in timing"
+      ],
+      "answer": 0,
+      "explain": "Constraints and STA on enable paths remain.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_hard_05.mp4",
+        "poster": "media/images/clken_hard_05-frame.png",
+        "figure": "media/images/clken_hard_05.png"
+      }
+    },
+    {
+      "id": "clken_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Which matches free-running clk with CE?",
+      "choices": [
+        "always @(posedge clk) if (ce) q <= d;",
+        "assign clk = ce & clk;",
+        "always @(*) q = d;",
+        "always @(negedge ce) clk = 1;"
+      ],
+      "answer": 0,
+      "explain": "Qualify the load, not the clock net.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_hard_06.mp4",
+        "poster": "media/images/clken_hard_06-frame.png",
+        "figure": "media/images/clken_hard_06.png"
+      }
+    },
+    {
+      "id": "clken_hard_07",
+      "type": "multiple_choice",
+      "prompt": "When you only need recycle, prefer…",
+      "choices": [
+        "Clock enable on free-running clk",
+        "Unlatched AND of clk and ce",
+        "Removing all flops",
+        "Driving Q from async_in"
+      ],
+      "answer": 0,
+      "explain": "CE first; gate only with proper cells when required.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_hard_07.mp4",
+        "poster": "media/images/clken_hard_07-frame.png",
+        "figure": "media/images/clken_hard_07.png"
+      }
+    },
+    {
+      "id": "clken_hard_08",
+      "type": "true_false",
+      "prompt": "Gated-clock glitches can create timing nightmares.",
+      "answer": true,
+      "explain": "CE/ICG preferred; raw AND is the hazard case.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_hard_08.mp4",
+        "poster": "media/images/clken_hard_08-frame.png",
+        "figure": "media/images/clken_hard_08.png"
+      }
+    },
+    {
+      "id": "clken_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Real designs with ICGs still need…",
+      "choices": [
+        "Clock-tree constraints, ICG rules, STA on enables",
+        "Only hex fonts",
+        "Deleting the clock entirely",
+        "Ignoring enable paths in timing"
+      ],
+      "answer": 0,
+      "explain": "Constraints and STA on enable paths remain.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_hard_09.mp4",
+        "poster": "media/images/clken_hard_09-frame.png",
+        "figure": "media/images/clken_hard_09.png"
+      }
+    },
+    {
+      "id": "clken_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Which matches free-running clk with CE?",
+      "choices": [
+        "always @(posedge clk) if (ce) q <= d;",
+        "assign clk = ce & clk;",
+        "always @(*) q = d;",
+        "always @(negedge ce) clk = 1;"
+      ],
+      "answer": 0,
+      "explain": "Qualify the load, not the clock net.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_hard_10.mp4",
+        "poster": "media/images/clken_hard_10-frame.png",
+        "figure": "media/images/clken_hard_10.png"
+      }
+    },
+    {
+      "id": "clken_hard_11",
+      "type": "multiple_choice",
+      "prompt": "When you only need recycle, prefer…",
+      "choices": [
+        "Clock enable on free-running clk",
+        "Unlatched AND of clk and ce",
+        "Removing all flops",
+        "Driving Q from async_in"
+      ],
+      "answer": 0,
+      "explain": "CE first; gate only with proper cells when required.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_hard_11.mp4",
+        "poster": "media/images/clken_hard_11-frame.png",
+        "figure": "media/images/clken_hard_11.png"
+      }
+    },
+    {
+      "id": "clken_hard_12",
+      "type": "true_false",
+      "prompt": "Gated-clock glitches can create timing nightmares.",
+      "answer": true,
+      "explain": "CE/ICG preferred; raw AND is the hazard case.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_hard_12.mp4",
+        "poster": "media/images/clken_hard_12-frame.png",
+        "figure": "media/images/clken_hard_12.png"
+      }
+    },
+    {
+      "id": "clken_hard_13",
+      "type": "multiple_choice",
+      "prompt": "Real designs with ICGs still need…",
+      "choices": [
+        "Clock-tree constraints, ICG rules, STA on enables",
+        "Only hex fonts",
+        "Deleting the clock entirely",
+        "Ignoring enable paths in timing"
+      ],
+      "answer": 0,
+      "explain": "Constraints and STA on enable paths remain.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_hard_13.mp4",
+        "poster": "media/images/clken_hard_13-frame.png",
+        "figure": "media/images/clken_hard_13.png"
+      }
+    },
+    {
+      "id": "clken_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Which matches free-running clk with CE?",
+      "choices": [
+        "always @(posedge clk) if (ce) q <= d;",
+        "assign clk = ce & clk;",
+        "always @(*) q = d;",
+        "always @(negedge ce) clk = 1;"
+      ],
+      "answer": 0,
+      "explain": "Qualify the load, not the clock net.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_hard_14.mp4",
+        "poster": "media/images/clken_hard_14-frame.png",
+        "figure": "media/images/clken_hard_14.png"
+      }
+    },
+    {
+      "id": "clken_hard_15",
+      "type": "multiple_choice",
+      "prompt": "When you only need recycle, prefer…",
+      "choices": [
+        "Clock enable on free-running clk",
+        "Unlatched AND of clk and ce",
+        "Removing all flops",
+        "Driving Q from async_in"
+      ],
+      "answer": 0,
+      "explain": "CE first; gate only with proper cells when required.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_hard_15.mp4",
+        "poster": "media/images/clken_hard_15-frame.png",
+        "figure": "media/images/clken_hard_15.png"
+      }
+    },
+    {
+      "id": "clken_hard_16",
+      "type": "true_false",
+      "prompt": "Gated-clock glitches can create timing nightmares.",
+      "answer": true,
+      "explain": "CE/ICG preferred; raw AND is the hazard case.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_hard_16.mp4",
+        "poster": "media/images/clken_hard_16-frame.png",
+        "figure": "media/images/clken_hard_16.png"
+      }
+    },
+    {
+      "id": "clken_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Real designs with ICGs still need…",
+      "choices": [
+        "Clock-tree constraints, ICG rules, STA on enables",
+        "Only hex fonts",
+        "Deleting the clock entirely",
+        "Ignoring enable paths in timing"
+      ],
+      "answer": 0,
+      "explain": "Constraints and STA on enable paths remain.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_hard_17.mp4",
+        "poster": "media/images/clken_hard_17-frame.png",
+        "figure": "media/images/clken_hard_17.png"
+      }
+    },
+    {
+      "id": "clken_hard_18",
+      "type": "multiple_choice",
+      "prompt": "Which matches free-running clk with CE?",
+      "choices": [
+        "always @(posedge clk) if (ce) q <= d;",
+        "assign clk = ce & clk;",
+        "always @(*) q = d;",
+        "always @(negedge ce) clk = 1;"
+      ],
+      "answer": 0,
+      "explain": "Qualify the load, not the clock net.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_hard_18.mp4",
+        "poster": "media/images/clken_hard_18-frame.png",
+        "figure": "media/images/clken_hard_18.png"
+      }
+    },
+    {
+      "id": "clken_hard_19",
+      "type": "multiple_choice",
+      "prompt": "When you only need recycle, prefer…",
+      "choices": [
+        "Clock enable on free-running clk",
+        "Unlatched AND of clk and ce",
+        "Removing all flops",
+        "Driving Q from async_in"
+      ],
+      "answer": 0,
+      "explain": "CE first; gate only with proper cells when required.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_hard_19.mp4",
+        "poster": "media/images/clken_hard_19-frame.png",
+        "figure": "media/images/clken_hard_19.png"
+      }
+    },
+    {
+      "id": "clken_hard_20",
+      "type": "true_false",
+      "prompt": "Gated-clock glitches can create timing nightmares.",
+      "answer": true,
+      "explain": "CE/ICG preferred; raw AND is the hazard case.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_hard_20.mp4",
+        "poster": "media/images/clken_hard_20-frame.png",
+        "figure": "media/images/clken_hard_20.png"
+      }
+    },
+    {
+      "id": "clken_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Real designs with ICGs still need…",
+      "choices": [
+        "Clock-tree constraints, ICG rules, STA on enables",
+        "Only hex fonts",
+        "Deleting the clock entirely",
+        "Ignoring enable paths in timing"
+      ],
+      "answer": 0,
+      "explain": "Constraints and STA on enable paths remain.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_hard_21.mp4",
+        "poster": "media/images/clken_hard_21-frame.png",
+        "figure": "media/images/clken_hard_21.png"
+      }
+    },
+    {
+      "id": "clken_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Which matches free-running clk with CE?",
+      "choices": [
+        "always @(posedge clk) if (ce) q <= d;",
+        "assign clk = ce & clk;",
+        "always @(*) q = d;",
+        "always @(negedge ce) clk = 1;"
+      ],
+      "answer": 0,
+      "explain": "Qualify the load, not the clock net.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_hard_22.mp4",
+        "poster": "media/images/clken_hard_22-frame.png",
+        "figure": "media/images/clken_hard_22.png"
+      }
+    },
+    {
+      "id": "clken_hard_23",
+      "type": "multiple_choice",
+      "prompt": "When you only need recycle, prefer…",
+      "choices": [
+        "Clock enable on free-running clk",
+        "Unlatched AND of clk and ce",
+        "Removing all flops",
+        "Driving Q from async_in"
+      ],
+      "answer": 0,
+      "explain": "CE first; gate only with proper cells when required.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_hard_23.mp4",
+        "poster": "media/images/clken_hard_23-frame.png",
+        "figure": "media/images/clken_hard_23.png"
+      }
+    },
+    {
+      "id": "clken_hard_24",
+      "type": "true_false",
+      "prompt": "Gated-clock glitches can create timing nightmares.",
+      "answer": true,
+      "explain": "CE/ICG preferred; raw AND is the hazard case.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_hard_24.mp4",
+        "poster": "media/images/clken_hard_24-frame.png",
+        "figure": "media/images/clken_hard_24.png"
+      }
+    },
+    {
+      "id": "clken_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Real designs with ICGs still need…",
+      "choices": [
+        "Clock-tree constraints, ICG rules, STA on enables",
+        "Only hex fonts",
+        "Deleting the clock entirely",
+        "Ignoring enable paths in timing"
+      ],
+      "answer": 0,
+      "explain": "Constraints and STA on enable paths remain.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_hard_25.mp4",
+        "poster": "media/images/clken_hard_25-frame.png",
+        "figure": "media/images/clken_hard_25.png"
+      }
+    },
+    {
+      "id": "clken_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Which matches free-running clk with CE?",
+      "choices": [
+        "always @(posedge clk) if (ce) q <= d;",
+        "assign clk = ce & clk;",
+        "always @(*) q = d;",
+        "always @(negedge ce) clk = 1;"
+      ],
+      "answer": 0,
+      "explain": "Qualify the load, not the clock net.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_hard_26.mp4",
+        "poster": "media/images/clken_hard_26-frame.png",
+        "figure": "media/images/clken_hard_26.png"
+      }
+    },
+    {
+      "id": "clken_hard_27",
+      "type": "multiple_choice",
+      "prompt": "When you only need recycle, prefer…",
+      "choices": [
+        "Clock enable on free-running clk",
+        "Unlatched AND of clk and ce",
+        "Removing all flops",
+        "Driving Q from async_in"
+      ],
+      "answer": 0,
+      "explain": "CE first; gate only with proper cells when required.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_hard_27.mp4",
+        "poster": "media/images/clken_hard_27-frame.png",
+        "figure": "media/images/clken_hard_27.png"
+      }
+    },
+    {
+      "id": "clken_hard_28",
+      "type": "true_false",
+      "prompt": "Gated-clock glitches can create timing nightmares.",
+      "answer": true,
+      "explain": "CE/ICG preferred; raw AND is the hazard case.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_hard_28.mp4",
+        "poster": "media/images/clken_hard_28-frame.png",
+        "figure": "media/images/clken_hard_28.png"
+      }
+    },
+    {
+      "id": "clken_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Real designs with ICGs still need…",
+      "choices": [
+        "Clock-tree constraints, ICG rules, STA on enables",
+        "Only hex fonts",
+        "Deleting the clock entirely",
+        "Ignoring enable paths in timing"
+      ],
+      "answer": 0,
+      "explain": "Constraints and STA on enable paths remain.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_hard_29.mp4",
+        "poster": "media/images/clken_hard_29-frame.png",
+        "figure": "media/images/clken_hard_29.png"
+      }
+    },
+    {
+      "id": "clken_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Which matches free-running clk with CE?",
+      "choices": [
+        "always @(posedge clk) if (ce) q <= d;",
+        "assign clk = ce & clk;",
+        "always @(*) q = d;",
+        "always @(negedge ce) clk = 1;"
+      ],
+      "answer": 0,
+      "explain": "Qualify the load, not the clock net.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-enable",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#ce-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clken_hard_30.mp4",
+        "poster": "media/images/clken_hard_30-frame.png",
+        "figure": "media/images/clken_hard_30.png"
+      }
+    }
+  ]
+}

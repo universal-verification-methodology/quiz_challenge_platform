@@ -1,0 +1,2580 @@
+{
+  "module": "module25-clock-stepper",
+  "title": "Clock-edge stepper",
+  "items": [
+    {
+      "id": "clock_easy_01",
+      "type": "multiple_choice",
+      "prompt": "D flip-flop: when does Q capture D?",
+      "choices": [
+        "Any time D changes",
+        "On posedge clk",
+        "On negedge clk only",
+        "When reset is low"
+      ],
+      "answer": 1,
+      "explain": "q <= d on posedge clk.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_easy_01.mp4",
+        "poster": "media/images/clock_easy_01-frame.png",
+        "figure": "media/images/clock_easy_01.png"
+      }
+    },
+    {
+      "id": "clock_easy_02",
+      "type": "multiple_choice",
+      "prompt": "Poke D high, then what advances the sequential state?",
+      "choices": [
+        "Wait for Q to update immediately",
+        "Advance a posedge of clk",
+        "Toggle reset only",
+        "Change the clock period"
+      ],
+      "answer": 1,
+      "explain": "Poke first, then clock edge.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_easy_02.mp4",
+        "poster": "media/images/clock_easy_02-frame.png",
+        "figure": "media/images/clock_easy_02.png"
+      }
+    },
+    {
+      "id": "clock_easy_03",
+      "type": "multiple_choice",
+      "prompt": "Clocked enable off: what happens to Q?",
+      "choices": [
+        "Forces Q to follow D",
+        "Holds Q (no capture)",
+        "Toggles Q",
+        "Drives Q to X"
+      ],
+      "answer": 1,
+      "explain": "if (en) q <= d — EN off holds.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "reg-en",
+        "label": "Register + enable",
+        "steps": [
+          {
+            "challenge": "Register + enable"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_easy_03.mp4",
+        "poster": "media/images/clock_easy_03-frame.png",
+        "figure": "media/images/clock_easy_03.png"
+      }
+    },
+    {
+      "id": "clock_easy_04",
+      "type": "true_false",
+      "prompt": "Changing D updates both pipeline stages on the same edge.",
+      "answer": false,
+      "explain": "Each stage advances one edge; two stages need two edges.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "pipe",
+        "label": "2-stage pipeline",
+        "steps": [
+          {
+            "challenge": "2-stage pipeline"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_easy_04.mp4",
+        "poster": "media/images/clock_easy_04-frame.png",
+        "figure": "media/images/clock_easy_04.png"
+      }
+    },
+    {
+      "id": "clock_easy_05",
+      "type": "multiple_choice",
+      "prompt": "D flip-flop: when does Q capture D?",
+      "choices": [
+        "Any time D changes",
+        "On posedge clk",
+        "On negedge clk only",
+        "When reset is low"
+      ],
+      "answer": 1,
+      "explain": "q <= d on posedge clk.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_easy_05.mp4",
+        "poster": "media/images/clock_easy_05-frame.png",
+        "figure": "media/images/clock_easy_05.png"
+      }
+    },
+    {
+      "id": "clock_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Poke D high, then what advances the sequential state?",
+      "choices": [
+        "Wait for Q to update immediately",
+        "Advance a posedge of clk",
+        "Toggle reset only",
+        "Change the clock period"
+      ],
+      "answer": 1,
+      "explain": "Poke first, then clock edge.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_easy_06.mp4",
+        "poster": "media/images/clock_easy_06-frame.png",
+        "figure": "media/images/clock_easy_06.png"
+      }
+    },
+    {
+      "id": "clock_easy_07",
+      "type": "multiple_choice",
+      "prompt": "Clocked enable off: what happens to Q?",
+      "choices": [
+        "Forces Q to follow D",
+        "Holds Q (no capture)",
+        "Toggles Q",
+        "Drives Q to X"
+      ],
+      "answer": 1,
+      "explain": "if (en) q <= d — EN off holds.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "reg-en",
+        "label": "Register + enable",
+        "steps": [
+          {
+            "challenge": "Register + enable"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_easy_07.mp4",
+        "poster": "media/images/clock_easy_07-frame.png",
+        "figure": "media/images/clock_easy_07.png"
+      }
+    },
+    {
+      "id": "clock_easy_08",
+      "type": "true_false",
+      "prompt": "Changing D updates both pipeline stages on the same edge.",
+      "answer": false,
+      "explain": "Each stage advances one edge; two stages need two edges.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "pipe",
+        "label": "2-stage pipeline",
+        "steps": [
+          {
+            "challenge": "2-stage pipeline"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_easy_08.mp4",
+        "poster": "media/images/clock_easy_08-frame.png",
+        "figure": "media/images/clock_easy_08.png"
+      }
+    },
+    {
+      "id": "clock_easy_09",
+      "type": "multiple_choice",
+      "prompt": "D flip-flop: when does Q capture D?",
+      "choices": [
+        "Any time D changes",
+        "On posedge clk",
+        "On negedge clk only",
+        "When reset is low"
+      ],
+      "answer": 1,
+      "explain": "q <= d on posedge clk.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_easy_09.mp4",
+        "poster": "media/images/clock_easy_09-frame.png",
+        "figure": "media/images/clock_easy_09.png"
+      }
+    },
+    {
+      "id": "clock_easy_10",
+      "type": "multiple_choice",
+      "prompt": "Poke D high, then what advances the sequential state?",
+      "choices": [
+        "Wait for Q to update immediately",
+        "Advance a posedge of clk",
+        "Toggle reset only",
+        "Change the clock period"
+      ],
+      "answer": 1,
+      "explain": "Poke first, then clock edge.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_easy_10.mp4",
+        "poster": "media/images/clock_easy_10-frame.png",
+        "figure": "media/images/clock_easy_10.png"
+      }
+    },
+    {
+      "id": "clock_easy_11",
+      "type": "multiple_choice",
+      "prompt": "Clocked enable off: what happens to Q?",
+      "choices": [
+        "Forces Q to follow D",
+        "Holds Q (no capture)",
+        "Toggles Q",
+        "Drives Q to X"
+      ],
+      "answer": 1,
+      "explain": "if (en) q <= d — EN off holds.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "reg-en",
+        "label": "Register + enable",
+        "steps": [
+          {
+            "challenge": "Register + enable"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_easy_11.mp4",
+        "poster": "media/images/clock_easy_11-frame.png",
+        "figure": "media/images/clock_easy_11.png"
+      }
+    },
+    {
+      "id": "clock_easy_12",
+      "type": "true_false",
+      "prompt": "Changing D updates both pipeline stages on the same edge.",
+      "answer": false,
+      "explain": "Each stage advances one edge; two stages need two edges.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "pipe",
+        "label": "2-stage pipeline",
+        "steps": [
+          {
+            "challenge": "2-stage pipeline"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_easy_12.mp4",
+        "poster": "media/images/clock_easy_12-frame.png",
+        "figure": "media/images/clock_easy_12.png"
+      }
+    },
+    {
+      "id": "clock_easy_13",
+      "type": "multiple_choice",
+      "prompt": "D flip-flop: when does Q capture D?",
+      "choices": [
+        "Any time D changes",
+        "On posedge clk",
+        "On negedge clk only",
+        "When reset is low"
+      ],
+      "answer": 1,
+      "explain": "q <= d on posedge clk.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_easy_13.mp4",
+        "poster": "media/images/clock_easy_13-frame.png",
+        "figure": "media/images/clock_easy_13.png"
+      }
+    },
+    {
+      "id": "clock_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Poke D high, then what advances the sequential state?",
+      "choices": [
+        "Wait for Q to update immediately",
+        "Advance a posedge of clk",
+        "Toggle reset only",
+        "Change the clock period"
+      ],
+      "answer": 1,
+      "explain": "Poke first, then clock edge.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_easy_14.mp4",
+        "poster": "media/images/clock_easy_14-frame.png",
+        "figure": "media/images/clock_easy_14.png"
+      }
+    },
+    {
+      "id": "clock_easy_15",
+      "type": "multiple_choice",
+      "prompt": "Clocked enable off: what happens to Q?",
+      "choices": [
+        "Forces Q to follow D",
+        "Holds Q (no capture)",
+        "Toggles Q",
+        "Drives Q to X"
+      ],
+      "answer": 1,
+      "explain": "if (en) q <= d — EN off holds.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "reg-en",
+        "label": "Register + enable",
+        "steps": [
+          {
+            "challenge": "Register + enable"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_easy_15.mp4",
+        "poster": "media/images/clock_easy_15-frame.png",
+        "figure": "media/images/clock_easy_15.png"
+      }
+    },
+    {
+      "id": "clock_easy_16",
+      "type": "true_false",
+      "prompt": "Changing D updates both pipeline stages on the same edge.",
+      "answer": false,
+      "explain": "Each stage advances one edge; two stages need two edges.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "pipe",
+        "label": "2-stage pipeline",
+        "steps": [
+          {
+            "challenge": "2-stage pipeline"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_easy_16.mp4",
+        "poster": "media/images/clock_easy_16-frame.png",
+        "figure": "media/images/clock_easy_16.png"
+      }
+    },
+    {
+      "id": "clock_easy_17",
+      "type": "multiple_choice",
+      "prompt": "D flip-flop: when does Q capture D?",
+      "choices": [
+        "Any time D changes",
+        "On posedge clk",
+        "On negedge clk only",
+        "When reset is low"
+      ],
+      "answer": 1,
+      "explain": "q <= d on posedge clk.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_easy_17.mp4",
+        "poster": "media/images/clock_easy_17-frame.png",
+        "figure": "media/images/clock_easy_17.png"
+      }
+    },
+    {
+      "id": "clock_easy_18",
+      "type": "multiple_choice",
+      "prompt": "Poke D high, then what advances the sequential state?",
+      "choices": [
+        "Wait for Q to update immediately",
+        "Advance a posedge of clk",
+        "Toggle reset only",
+        "Change the clock period"
+      ],
+      "answer": 1,
+      "explain": "Poke first, then clock edge.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_easy_18.mp4",
+        "poster": "media/images/clock_easy_18-frame.png",
+        "figure": "media/images/clock_easy_18.png"
+      }
+    },
+    {
+      "id": "clock_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Clocked enable off: what happens to Q?",
+      "choices": [
+        "Forces Q to follow D",
+        "Holds Q (no capture)",
+        "Toggles Q",
+        "Drives Q to X"
+      ],
+      "answer": 1,
+      "explain": "if (en) q <= d — EN off holds.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "reg-en",
+        "label": "Register + enable",
+        "steps": [
+          {
+            "challenge": "Register + enable"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_easy_19.mp4",
+        "poster": "media/images/clock_easy_19-frame.png",
+        "figure": "media/images/clock_easy_19.png"
+      }
+    },
+    {
+      "id": "clock_easy_20",
+      "type": "true_false",
+      "prompt": "Changing D updates both pipeline stages on the same edge.",
+      "answer": false,
+      "explain": "Each stage advances one edge; two stages need two edges.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "pipe",
+        "label": "2-stage pipeline",
+        "steps": [
+          {
+            "challenge": "2-stage pipeline"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_easy_20.mp4",
+        "poster": "media/images/clock_easy_20-frame.png",
+        "figure": "media/images/clock_easy_20.png"
+      }
+    },
+    {
+      "id": "clock_easy_21",
+      "type": "multiple_choice",
+      "prompt": "D flip-flop: when does Q capture D?",
+      "choices": [
+        "Any time D changes",
+        "On posedge clk",
+        "On negedge clk only",
+        "When reset is low"
+      ],
+      "answer": 1,
+      "explain": "q <= d on posedge clk.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_easy_21.mp4",
+        "poster": "media/images/clock_easy_21-frame.png",
+        "figure": "media/images/clock_easy_21.png"
+      }
+    },
+    {
+      "id": "clock_easy_22",
+      "type": "multiple_choice",
+      "prompt": "Poke D high, then what advances the sequential state?",
+      "choices": [
+        "Wait for Q to update immediately",
+        "Advance a posedge of clk",
+        "Toggle reset only",
+        "Change the clock period"
+      ],
+      "answer": 1,
+      "explain": "Poke first, then clock edge.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_easy_22.mp4",
+        "poster": "media/images/clock_easy_22-frame.png",
+        "figure": "media/images/clock_easy_22.png"
+      }
+    },
+    {
+      "id": "clock_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Clocked enable off: what happens to Q?",
+      "choices": [
+        "Forces Q to follow D",
+        "Holds Q (no capture)",
+        "Toggles Q",
+        "Drives Q to X"
+      ],
+      "answer": 1,
+      "explain": "if (en) q <= d — EN off holds.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "reg-en",
+        "label": "Register + enable",
+        "steps": [
+          {
+            "challenge": "Register + enable"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_easy_23.mp4",
+        "poster": "media/images/clock_easy_23-frame.png",
+        "figure": "media/images/clock_easy_23.png"
+      }
+    },
+    {
+      "id": "clock_easy_24",
+      "type": "true_false",
+      "prompt": "Changing D updates both pipeline stages on the same edge.",
+      "answer": false,
+      "explain": "Each stage advances one edge; two stages need two edges.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "pipe",
+        "label": "2-stage pipeline",
+        "steps": [
+          {
+            "challenge": "2-stage pipeline"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_easy_24.mp4",
+        "poster": "media/images/clock_easy_24-frame.png",
+        "figure": "media/images/clock_easy_24.png"
+      }
+    },
+    {
+      "id": "clock_easy_25",
+      "type": "multiple_choice",
+      "prompt": "D flip-flop: when does Q capture D?",
+      "choices": [
+        "Any time D changes",
+        "On posedge clk",
+        "On negedge clk only",
+        "When reset is low"
+      ],
+      "answer": 1,
+      "explain": "q <= d on posedge clk.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_easy_25.mp4",
+        "poster": "media/images/clock_easy_25-frame.png",
+        "figure": "media/images/clock_easy_25.png"
+      }
+    },
+    {
+      "id": "clock_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Poke D high, then what advances the sequential state?",
+      "choices": [
+        "Wait for Q to update immediately",
+        "Advance a posedge of clk",
+        "Toggle reset only",
+        "Change the clock period"
+      ],
+      "answer": 1,
+      "explain": "Poke first, then clock edge.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_easy_26.mp4",
+        "poster": "media/images/clock_easy_26-frame.png",
+        "figure": "media/images/clock_easy_26.png"
+      }
+    },
+    {
+      "id": "clock_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Clocked enable off: what happens to Q?",
+      "choices": [
+        "Forces Q to follow D",
+        "Holds Q (no capture)",
+        "Toggles Q",
+        "Drives Q to X"
+      ],
+      "answer": 1,
+      "explain": "if (en) q <= d — EN off holds.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "reg-en",
+        "label": "Register + enable",
+        "steps": [
+          {
+            "challenge": "Register + enable"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_easy_27.mp4",
+        "poster": "media/images/clock_easy_27-frame.png",
+        "figure": "media/images/clock_easy_27.png"
+      }
+    },
+    {
+      "id": "clock_easy_28",
+      "type": "true_false",
+      "prompt": "Changing D updates both pipeline stages on the same edge.",
+      "answer": false,
+      "explain": "Each stage advances one edge; two stages need two edges.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "pipe",
+        "label": "2-stage pipeline",
+        "steps": [
+          {
+            "challenge": "2-stage pipeline"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_easy_28.mp4",
+        "poster": "media/images/clock_easy_28-frame.png",
+        "figure": "media/images/clock_easy_28.png"
+      }
+    },
+    {
+      "id": "clock_easy_29",
+      "type": "multiple_choice",
+      "prompt": "D flip-flop: when does Q capture D?",
+      "choices": [
+        "Any time D changes",
+        "On posedge clk",
+        "On negedge clk only",
+        "When reset is low"
+      ],
+      "answer": 1,
+      "explain": "q <= d on posedge clk.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_easy_29.mp4",
+        "poster": "media/images/clock_easy_29-frame.png",
+        "figure": "media/images/clock_easy_29.png"
+      }
+    },
+    {
+      "id": "clock_easy_30",
+      "type": "multiple_choice",
+      "prompt": "Poke D high, then what advances the sequential state?",
+      "choices": [
+        "Wait for Q to update immediately",
+        "Advance a posedge of clk",
+        "Toggle reset only",
+        "Change the clock period"
+      ],
+      "answer": 1,
+      "explain": "Poke first, then clock edge.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_easy_30.mp4",
+        "poster": "media/images/clock_easy_30-frame.png",
+        "figure": "media/images/clock_easy_30.png"
+      }
+    },
+    {
+      "id": "clock_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Sequential logic samples inputs…",
+      "choices": [
+        "On every input wiggle",
+        "On a clock edge",
+        "Only at power-up",
+        "Whenever EN is low"
+      ],
+      "answer": 1,
+      "explain": "Samples on clock edges, not continuous D motion.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_medium_01.mp4",
+        "poster": "media/images/clock_medium_01-frame.png",
+        "figure": "media/images/clock_medium_01.png"
+      }
+    },
+    {
+      "id": "clock_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Counters advance their count primarily on…",
+      "choices": [
+        "An asynchronous D change alone",
+        "A clock edge (with enable if used)",
+        "Only a mid-cycle reset pulse",
+        "Removing the clock tree"
+      ],
+      "answer": 1,
+      "explain": "Counters are edge-triggered after reset clears.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "counter",
+        "label": "4-bit counter",
+        "steps": [
+          {
+            "challenge": "4-bit counter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_medium_02.mp4",
+        "poster": "media/images/clock_medium_02-frame.png",
+        "figure": "media/images/clock_medium_02.png"
+      }
+    },
+    {
+      "id": "clock_medium_03",
+      "type": "multiple_choice",
+      "prompt": "Each FF in a shift register captures on…",
+      "choices": [
+        "Combinationally without clocks",
+        "One stage per clock edge",
+        "Only when reset asserts",
+        "Whenever D floats"
+      ],
+      "answer": 1,
+      "explain": "Each edge advances one stage.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "shift",
+        "label": "4-bit shift register",
+        "steps": [
+          {
+            "challenge": "4-bit shift register"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_medium_03.mp4",
+        "poster": "media/images/clock_medium_03-frame.png",
+        "figure": "media/images/clock_medium_03.png"
+      }
+    },
+    {
+      "id": "clock_medium_04",
+      "type": "true_false",
+      "prompt": "Reset and enable are evaluated with data on the capturing edge.",
+      "answer": true,
+      "explain": "Edge FFs hold until the edge; latches differ; enable/reset matter on that edge.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "reg-en",
+        "label": "Register + enable",
+        "steps": [
+          {
+            "challenge": "Register + enable"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_medium_04.mp4",
+        "poster": "media/images/clock_medium_04-frame.png",
+        "figure": "media/images/clock_medium_04.png"
+      }
+    },
+    {
+      "id": "clock_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Sequential logic samples inputs…",
+      "choices": [
+        "On every input wiggle",
+        "On a clock edge",
+        "Only at power-up",
+        "Whenever EN is low"
+      ],
+      "answer": 1,
+      "explain": "Samples on clock edges, not continuous D motion.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_medium_05.mp4",
+        "poster": "media/images/clock_medium_05-frame.png",
+        "figure": "media/images/clock_medium_05.png"
+      }
+    },
+    {
+      "id": "clock_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Counters advance their count primarily on…",
+      "choices": [
+        "An asynchronous D change alone",
+        "A clock edge (with enable if used)",
+        "Only a mid-cycle reset pulse",
+        "Removing the clock tree"
+      ],
+      "answer": 1,
+      "explain": "Counters are edge-triggered after reset clears.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "counter",
+        "label": "4-bit counter",
+        "steps": [
+          {
+            "challenge": "4-bit counter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_medium_06.mp4",
+        "poster": "media/images/clock_medium_06-frame.png",
+        "figure": "media/images/clock_medium_06.png"
+      }
+    },
+    {
+      "id": "clock_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Each FF in a shift register captures on…",
+      "choices": [
+        "Combinationally without clocks",
+        "One stage per clock edge",
+        "Only when reset asserts",
+        "Whenever D floats"
+      ],
+      "answer": 1,
+      "explain": "Each edge advances one stage.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "shift",
+        "label": "4-bit shift register",
+        "steps": [
+          {
+            "challenge": "4-bit shift register"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_medium_07.mp4",
+        "poster": "media/images/clock_medium_07-frame.png",
+        "figure": "media/images/clock_medium_07.png"
+      }
+    },
+    {
+      "id": "clock_medium_08",
+      "type": "true_false",
+      "prompt": "Reset and enable are evaluated with data on the capturing edge.",
+      "answer": true,
+      "explain": "Edge FFs hold until the edge; latches differ; enable/reset matter on that edge.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "reg-en",
+        "label": "Register + enable",
+        "steps": [
+          {
+            "challenge": "Register + enable"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_medium_08.mp4",
+        "poster": "media/images/clock_medium_08-frame.png",
+        "figure": "media/images/clock_medium_08.png"
+      }
+    },
+    {
+      "id": "clock_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Sequential logic samples inputs…",
+      "choices": [
+        "On every input wiggle",
+        "On a clock edge",
+        "Only at power-up",
+        "Whenever EN is low"
+      ],
+      "answer": 1,
+      "explain": "Samples on clock edges, not continuous D motion.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_medium_09.mp4",
+        "poster": "media/images/clock_medium_09-frame.png",
+        "figure": "media/images/clock_medium_09.png"
+      }
+    },
+    {
+      "id": "clock_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Counters advance their count primarily on…",
+      "choices": [
+        "An asynchronous D change alone",
+        "A clock edge (with enable if used)",
+        "Only a mid-cycle reset pulse",
+        "Removing the clock tree"
+      ],
+      "answer": 1,
+      "explain": "Counters are edge-triggered after reset clears.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "counter",
+        "label": "4-bit counter",
+        "steps": [
+          {
+            "challenge": "4-bit counter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_medium_10.mp4",
+        "poster": "media/images/clock_medium_10-frame.png",
+        "figure": "media/images/clock_medium_10.png"
+      }
+    },
+    {
+      "id": "clock_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Each FF in a shift register captures on…",
+      "choices": [
+        "Combinationally without clocks",
+        "One stage per clock edge",
+        "Only when reset asserts",
+        "Whenever D floats"
+      ],
+      "answer": 1,
+      "explain": "Each edge advances one stage.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "shift",
+        "label": "4-bit shift register",
+        "steps": [
+          {
+            "challenge": "4-bit shift register"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_medium_11.mp4",
+        "poster": "media/images/clock_medium_11-frame.png",
+        "figure": "media/images/clock_medium_11.png"
+      }
+    },
+    {
+      "id": "clock_medium_12",
+      "type": "true_false",
+      "prompt": "Reset and enable are evaluated with data on the capturing edge.",
+      "answer": true,
+      "explain": "Edge FFs hold until the edge; latches differ; enable/reset matter on that edge.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "reg-en",
+        "label": "Register + enable",
+        "steps": [
+          {
+            "challenge": "Register + enable"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_medium_12.mp4",
+        "poster": "media/images/clock_medium_12-frame.png",
+        "figure": "media/images/clock_medium_12.png"
+      }
+    },
+    {
+      "id": "clock_medium_13",
+      "type": "multiple_choice",
+      "prompt": "Sequential logic samples inputs…",
+      "choices": [
+        "On every input wiggle",
+        "On a clock edge",
+        "Only at power-up",
+        "Whenever EN is low"
+      ],
+      "answer": 1,
+      "explain": "Samples on clock edges, not continuous D motion.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_medium_13.mp4",
+        "poster": "media/images/clock_medium_13-frame.png",
+        "figure": "media/images/clock_medium_13.png"
+      }
+    },
+    {
+      "id": "clock_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Counters advance their count primarily on…",
+      "choices": [
+        "An asynchronous D change alone",
+        "A clock edge (with enable if used)",
+        "Only a mid-cycle reset pulse",
+        "Removing the clock tree"
+      ],
+      "answer": 1,
+      "explain": "Counters are edge-triggered after reset clears.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "counter",
+        "label": "4-bit counter",
+        "steps": [
+          {
+            "challenge": "4-bit counter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_medium_14.mp4",
+        "poster": "media/images/clock_medium_14-frame.png",
+        "figure": "media/images/clock_medium_14.png"
+      }
+    },
+    {
+      "id": "clock_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Each FF in a shift register captures on…",
+      "choices": [
+        "Combinationally without clocks",
+        "One stage per clock edge",
+        "Only when reset asserts",
+        "Whenever D floats"
+      ],
+      "answer": 1,
+      "explain": "Each edge advances one stage.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "shift",
+        "label": "4-bit shift register",
+        "steps": [
+          {
+            "challenge": "4-bit shift register"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_medium_15.mp4",
+        "poster": "media/images/clock_medium_15-frame.png",
+        "figure": "media/images/clock_medium_15.png"
+      }
+    },
+    {
+      "id": "clock_medium_16",
+      "type": "true_false",
+      "prompt": "Reset and enable are evaluated with data on the capturing edge.",
+      "answer": true,
+      "explain": "Edge FFs hold until the edge; latches differ; enable/reset matter on that edge.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "reg-en",
+        "label": "Register + enable",
+        "steps": [
+          {
+            "challenge": "Register + enable"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_medium_16.mp4",
+        "poster": "media/images/clock_medium_16-frame.png",
+        "figure": "media/images/clock_medium_16.png"
+      }
+    },
+    {
+      "id": "clock_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Sequential logic samples inputs…",
+      "choices": [
+        "On every input wiggle",
+        "On a clock edge",
+        "Only at power-up",
+        "Whenever EN is low"
+      ],
+      "answer": 1,
+      "explain": "Samples on clock edges, not continuous D motion.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_medium_17.mp4",
+        "poster": "media/images/clock_medium_17-frame.png",
+        "figure": "media/images/clock_medium_17.png"
+      }
+    },
+    {
+      "id": "clock_medium_18",
+      "type": "multiple_choice",
+      "prompt": "Counters advance their count primarily on…",
+      "choices": [
+        "An asynchronous D change alone",
+        "A clock edge (with enable if used)",
+        "Only a mid-cycle reset pulse",
+        "Removing the clock tree"
+      ],
+      "answer": 1,
+      "explain": "Counters are edge-triggered after reset clears.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "counter",
+        "label": "4-bit counter",
+        "steps": [
+          {
+            "challenge": "4-bit counter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_medium_18.mp4",
+        "poster": "media/images/clock_medium_18-frame.png",
+        "figure": "media/images/clock_medium_18.png"
+      }
+    },
+    {
+      "id": "clock_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Each FF in a shift register captures on…",
+      "choices": [
+        "Combinationally without clocks",
+        "One stage per clock edge",
+        "Only when reset asserts",
+        "Whenever D floats"
+      ],
+      "answer": 1,
+      "explain": "Each edge advances one stage.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "shift",
+        "label": "4-bit shift register",
+        "steps": [
+          {
+            "challenge": "4-bit shift register"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_medium_19.mp4",
+        "poster": "media/images/clock_medium_19-frame.png",
+        "figure": "media/images/clock_medium_19.png"
+      }
+    },
+    {
+      "id": "clock_medium_20",
+      "type": "true_false",
+      "prompt": "Reset and enable are evaluated with data on the capturing edge.",
+      "answer": true,
+      "explain": "Edge FFs hold until the edge; latches differ; enable/reset matter on that edge.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "reg-en",
+        "label": "Register + enable",
+        "steps": [
+          {
+            "challenge": "Register + enable"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_medium_20.mp4",
+        "poster": "media/images/clock_medium_20-frame.png",
+        "figure": "media/images/clock_medium_20.png"
+      }
+    },
+    {
+      "id": "clock_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Sequential logic samples inputs…",
+      "choices": [
+        "On every input wiggle",
+        "On a clock edge",
+        "Only at power-up",
+        "Whenever EN is low"
+      ],
+      "answer": 1,
+      "explain": "Samples on clock edges, not continuous D motion.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_medium_21.mp4",
+        "poster": "media/images/clock_medium_21-frame.png",
+        "figure": "media/images/clock_medium_21.png"
+      }
+    },
+    {
+      "id": "clock_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Counters advance their count primarily on…",
+      "choices": [
+        "An asynchronous D change alone",
+        "A clock edge (with enable if used)",
+        "Only a mid-cycle reset pulse",
+        "Removing the clock tree"
+      ],
+      "answer": 1,
+      "explain": "Counters are edge-triggered after reset clears.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "counter",
+        "label": "4-bit counter",
+        "steps": [
+          {
+            "challenge": "4-bit counter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_medium_22.mp4",
+        "poster": "media/images/clock_medium_22-frame.png",
+        "figure": "media/images/clock_medium_22.png"
+      }
+    },
+    {
+      "id": "clock_medium_23",
+      "type": "multiple_choice",
+      "prompt": "Each FF in a shift register captures on…",
+      "choices": [
+        "Combinationally without clocks",
+        "One stage per clock edge",
+        "Only when reset asserts",
+        "Whenever D floats"
+      ],
+      "answer": 1,
+      "explain": "Each edge advances one stage.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "shift",
+        "label": "4-bit shift register",
+        "steps": [
+          {
+            "challenge": "4-bit shift register"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_medium_23.mp4",
+        "poster": "media/images/clock_medium_23-frame.png",
+        "figure": "media/images/clock_medium_23.png"
+      }
+    },
+    {
+      "id": "clock_medium_24",
+      "type": "true_false",
+      "prompt": "Reset and enable are evaluated with data on the capturing edge.",
+      "answer": true,
+      "explain": "Edge FFs hold until the edge; latches differ; enable/reset matter on that edge.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "reg-en",
+        "label": "Register + enable",
+        "steps": [
+          {
+            "challenge": "Register + enable"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_medium_24.mp4",
+        "poster": "media/images/clock_medium_24-frame.png",
+        "figure": "media/images/clock_medium_24.png"
+      }
+    },
+    {
+      "id": "clock_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Sequential logic samples inputs…",
+      "choices": [
+        "On every input wiggle",
+        "On a clock edge",
+        "Only at power-up",
+        "Whenever EN is low"
+      ],
+      "answer": 1,
+      "explain": "Samples on clock edges, not continuous D motion.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_medium_25.mp4",
+        "poster": "media/images/clock_medium_25-frame.png",
+        "figure": "media/images/clock_medium_25.png"
+      }
+    },
+    {
+      "id": "clock_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Counters advance their count primarily on…",
+      "choices": [
+        "An asynchronous D change alone",
+        "A clock edge (with enable if used)",
+        "Only a mid-cycle reset pulse",
+        "Removing the clock tree"
+      ],
+      "answer": 1,
+      "explain": "Counters are edge-triggered after reset clears.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "counter",
+        "label": "4-bit counter",
+        "steps": [
+          {
+            "challenge": "4-bit counter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_medium_26.mp4",
+        "poster": "media/images/clock_medium_26-frame.png",
+        "figure": "media/images/clock_medium_26.png"
+      }
+    },
+    {
+      "id": "clock_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Each FF in a shift register captures on…",
+      "choices": [
+        "Combinationally without clocks",
+        "One stage per clock edge",
+        "Only when reset asserts",
+        "Whenever D floats"
+      ],
+      "answer": 1,
+      "explain": "Each edge advances one stage.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "shift",
+        "label": "4-bit shift register",
+        "steps": [
+          {
+            "challenge": "4-bit shift register"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_medium_27.mp4",
+        "poster": "media/images/clock_medium_27-frame.png",
+        "figure": "media/images/clock_medium_27.png"
+      }
+    },
+    {
+      "id": "clock_medium_28",
+      "type": "true_false",
+      "prompt": "Reset and enable are evaluated with data on the capturing edge.",
+      "answer": true,
+      "explain": "Edge FFs hold until the edge; latches differ; enable/reset matter on that edge.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "reg-en",
+        "label": "Register + enable",
+        "steps": [
+          {
+            "challenge": "Register + enable"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_medium_28.mp4",
+        "poster": "media/images/clock_medium_28-frame.png",
+        "figure": "media/images/clock_medium_28.png"
+      }
+    },
+    {
+      "id": "clock_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Sequential logic samples inputs…",
+      "choices": [
+        "On every input wiggle",
+        "On a clock edge",
+        "Only at power-up",
+        "Whenever EN is low"
+      ],
+      "answer": 1,
+      "explain": "Samples on clock edges, not continuous D motion.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_medium_29.mp4",
+        "poster": "media/images/clock_medium_29-frame.png",
+        "figure": "media/images/clock_medium_29.png"
+      }
+    },
+    {
+      "id": "clock_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Counters advance their count primarily on…",
+      "choices": [
+        "An asynchronous D change alone",
+        "A clock edge (with enable if used)",
+        "Only a mid-cycle reset pulse",
+        "Removing the clock tree"
+      ],
+      "answer": 1,
+      "explain": "Counters are edge-triggered after reset clears.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "counter",
+        "label": "4-bit counter",
+        "steps": [
+          {
+            "challenge": "4-bit counter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_medium_30.mp4",
+        "poster": "media/images/clock_medium_30-frame.png",
+        "figure": "media/images/clock_medium_30.png"
+      }
+    },
+    {
+      "id": "clock_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Browser clock-step labs teach literacy; real silicon still needs…",
+      "choices": [
+        "Setup/hold and CDC rules",
+        "Only ASCII tables",
+        "Removing all clocks",
+        "Never using enable"
+      ],
+      "answer": 0,
+      "explain": "Setup, hold, and CDC still apply in real designs.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_hard_01.mp4",
+        "poster": "media/images/clock_hard_01-frame.png",
+        "figure": "media/images/clock_hard_01.png"
+      }
+    },
+    {
+      "id": "clock_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Besides D, edge sampling often considers…",
+      "choices": [
+        "Reset and enable polarity/state",
+        "Only package pin names",
+        "Baud rate alone",
+        "K-map grouping size"
+      ],
+      "answer": 0,
+      "explain": "Reset and enable are evaluated on the same edge as data.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_hard_02.mp4",
+        "poster": "media/images/clock_hard_02-frame.png",
+        "figure": "media/images/clock_hard_02.png"
+      }
+    },
+    {
+      "id": "clock_hard_03",
+      "type": "multiple_choice",
+      "prompt": "When EN is qualified inside @(posedge clk)…",
+      "choices": [
+        "Free-running clk; load only when EN=1",
+        "AND-gating clk in the testbench only",
+        "Q updates whenever D changes",
+        "Async clear every mid-cycle"
+      ],
+      "answer": 0,
+      "explain": "Clk runs; enable gates the load.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_hard_03.mp4",
+        "poster": "media/images/clock_hard_03-frame.png",
+        "figure": "media/images/clock_hard_03.png"
+      }
+    },
+    {
+      "id": "clock_hard_04",
+      "type": "true_false",
+      "prompt": "Truth tables in the lab record poke and edge events in time order.",
+      "answer": true,
+      "explain": "Latency is one edge per stage; combo is not edge-paced.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_hard_04.mp4",
+        "poster": "media/images/clock_hard_04-frame.png",
+        "figure": "media/images/clock_hard_04.png"
+      }
+    },
+    {
+      "id": "clock_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Browser clock-step labs teach literacy; real silicon still needs…",
+      "choices": [
+        "Setup/hold and CDC rules",
+        "Only ASCII tables",
+        "Removing all clocks",
+        "Never using enable"
+      ],
+      "answer": 0,
+      "explain": "Setup, hold, and CDC still apply in real designs.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_hard_05.mp4",
+        "poster": "media/images/clock_hard_05-frame.png",
+        "figure": "media/images/clock_hard_05.png"
+      }
+    },
+    {
+      "id": "clock_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Besides D, edge sampling often considers…",
+      "choices": [
+        "Reset and enable polarity/state",
+        "Only package pin names",
+        "Baud rate alone",
+        "K-map grouping size"
+      ],
+      "answer": 0,
+      "explain": "Reset and enable are evaluated on the same edge as data.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_hard_06.mp4",
+        "poster": "media/images/clock_hard_06-frame.png",
+        "figure": "media/images/clock_hard_06.png"
+      }
+    },
+    {
+      "id": "clock_hard_07",
+      "type": "multiple_choice",
+      "prompt": "When EN is qualified inside @(posedge clk)…",
+      "choices": [
+        "Free-running clk; load only when EN=1",
+        "AND-gating clk in the testbench only",
+        "Q updates whenever D changes",
+        "Async clear every mid-cycle"
+      ],
+      "answer": 0,
+      "explain": "Clk runs; enable gates the load.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_hard_07.mp4",
+        "poster": "media/images/clock_hard_07-frame.png",
+        "figure": "media/images/clock_hard_07.png"
+      }
+    },
+    {
+      "id": "clock_hard_08",
+      "type": "true_false",
+      "prompt": "Truth tables in the lab record poke and edge events in time order.",
+      "answer": true,
+      "explain": "Latency is one edge per stage; combo is not edge-paced.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_hard_08.mp4",
+        "poster": "media/images/clock_hard_08-frame.png",
+        "figure": "media/images/clock_hard_08.png"
+      }
+    },
+    {
+      "id": "clock_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Browser clock-step labs teach literacy; real silicon still needs…",
+      "choices": [
+        "Setup/hold and CDC rules",
+        "Only ASCII tables",
+        "Removing all clocks",
+        "Never using enable"
+      ],
+      "answer": 0,
+      "explain": "Setup, hold, and CDC still apply in real designs.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_hard_09.mp4",
+        "poster": "media/images/clock_hard_09-frame.png",
+        "figure": "media/images/clock_hard_09.png"
+      }
+    },
+    {
+      "id": "clock_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Besides D, edge sampling often considers…",
+      "choices": [
+        "Reset and enable polarity/state",
+        "Only package pin names",
+        "Baud rate alone",
+        "K-map grouping size"
+      ],
+      "answer": 0,
+      "explain": "Reset and enable are evaluated on the same edge as data.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_hard_10.mp4",
+        "poster": "media/images/clock_hard_10-frame.png",
+        "figure": "media/images/clock_hard_10.png"
+      }
+    },
+    {
+      "id": "clock_hard_11",
+      "type": "multiple_choice",
+      "prompt": "When EN is qualified inside @(posedge clk)…",
+      "choices": [
+        "Free-running clk; load only when EN=1",
+        "AND-gating clk in the testbench only",
+        "Q updates whenever D changes",
+        "Async clear every mid-cycle"
+      ],
+      "answer": 0,
+      "explain": "Clk runs; enable gates the load.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_hard_11.mp4",
+        "poster": "media/images/clock_hard_11-frame.png",
+        "figure": "media/images/clock_hard_11.png"
+      }
+    },
+    {
+      "id": "clock_hard_12",
+      "type": "true_false",
+      "prompt": "Truth tables in the lab record poke and edge events in time order.",
+      "answer": true,
+      "explain": "Latency is one edge per stage; combo is not edge-paced.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_hard_12.mp4",
+        "poster": "media/images/clock_hard_12-frame.png",
+        "figure": "media/images/clock_hard_12.png"
+      }
+    },
+    {
+      "id": "clock_hard_13",
+      "type": "multiple_choice",
+      "prompt": "Browser clock-step labs teach literacy; real silicon still needs…",
+      "choices": [
+        "Setup/hold and CDC rules",
+        "Only ASCII tables",
+        "Removing all clocks",
+        "Never using enable"
+      ],
+      "answer": 0,
+      "explain": "Setup, hold, and CDC still apply in real designs.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_hard_13.mp4",
+        "poster": "media/images/clock_hard_13-frame.png",
+        "figure": "media/images/clock_hard_13.png"
+      }
+    },
+    {
+      "id": "clock_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Besides D, edge sampling often considers…",
+      "choices": [
+        "Reset and enable polarity/state",
+        "Only package pin names",
+        "Baud rate alone",
+        "K-map grouping size"
+      ],
+      "answer": 0,
+      "explain": "Reset and enable are evaluated on the same edge as data.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_hard_14.mp4",
+        "poster": "media/images/clock_hard_14-frame.png",
+        "figure": "media/images/clock_hard_14.png"
+      }
+    },
+    {
+      "id": "clock_hard_15",
+      "type": "multiple_choice",
+      "prompt": "When EN is qualified inside @(posedge clk)…",
+      "choices": [
+        "Free-running clk; load only when EN=1",
+        "AND-gating clk in the testbench only",
+        "Q updates whenever D changes",
+        "Async clear every mid-cycle"
+      ],
+      "answer": 0,
+      "explain": "Clk runs; enable gates the load.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_hard_15.mp4",
+        "poster": "media/images/clock_hard_15-frame.png",
+        "figure": "media/images/clock_hard_15.png"
+      }
+    },
+    {
+      "id": "clock_hard_16",
+      "type": "true_false",
+      "prompt": "Truth tables in the lab record poke and edge events in time order.",
+      "answer": true,
+      "explain": "Latency is one edge per stage; combo is not edge-paced.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_hard_16.mp4",
+        "poster": "media/images/clock_hard_16-frame.png",
+        "figure": "media/images/clock_hard_16.png"
+      }
+    },
+    {
+      "id": "clock_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Browser clock-step labs teach literacy; real silicon still needs…",
+      "choices": [
+        "Setup/hold and CDC rules",
+        "Only ASCII tables",
+        "Removing all clocks",
+        "Never using enable"
+      ],
+      "answer": 0,
+      "explain": "Setup, hold, and CDC still apply in real designs.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_hard_17.mp4",
+        "poster": "media/images/clock_hard_17-frame.png",
+        "figure": "media/images/clock_hard_17.png"
+      }
+    },
+    {
+      "id": "clock_hard_18",
+      "type": "multiple_choice",
+      "prompt": "Besides D, edge sampling often considers…",
+      "choices": [
+        "Reset and enable polarity/state",
+        "Only package pin names",
+        "Baud rate alone",
+        "K-map grouping size"
+      ],
+      "answer": 0,
+      "explain": "Reset and enable are evaluated on the same edge as data.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_hard_18.mp4",
+        "poster": "media/images/clock_hard_18-frame.png",
+        "figure": "media/images/clock_hard_18.png"
+      }
+    },
+    {
+      "id": "clock_hard_19",
+      "type": "multiple_choice",
+      "prompt": "When EN is qualified inside @(posedge clk)…",
+      "choices": [
+        "Free-running clk; load only when EN=1",
+        "AND-gating clk in the testbench only",
+        "Q updates whenever D changes",
+        "Async clear every mid-cycle"
+      ],
+      "answer": 0,
+      "explain": "Clk runs; enable gates the load.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_hard_19.mp4",
+        "poster": "media/images/clock_hard_19-frame.png",
+        "figure": "media/images/clock_hard_19.png"
+      }
+    },
+    {
+      "id": "clock_hard_20",
+      "type": "true_false",
+      "prompt": "Truth tables in the lab record poke and edge events in time order.",
+      "answer": true,
+      "explain": "Latency is one edge per stage; combo is not edge-paced.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_hard_20.mp4",
+        "poster": "media/images/clock_hard_20-frame.png",
+        "figure": "media/images/clock_hard_20.png"
+      }
+    },
+    {
+      "id": "clock_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Browser clock-step labs teach literacy; real silicon still needs…",
+      "choices": [
+        "Setup/hold and CDC rules",
+        "Only ASCII tables",
+        "Removing all clocks",
+        "Never using enable"
+      ],
+      "answer": 0,
+      "explain": "Setup, hold, and CDC still apply in real designs.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_hard_21.mp4",
+        "poster": "media/images/clock_hard_21-frame.png",
+        "figure": "media/images/clock_hard_21.png"
+      }
+    },
+    {
+      "id": "clock_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Besides D, edge sampling often considers…",
+      "choices": [
+        "Reset and enable polarity/state",
+        "Only package pin names",
+        "Baud rate alone",
+        "K-map grouping size"
+      ],
+      "answer": 0,
+      "explain": "Reset and enable are evaluated on the same edge as data.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_hard_22.mp4",
+        "poster": "media/images/clock_hard_22-frame.png",
+        "figure": "media/images/clock_hard_22.png"
+      }
+    },
+    {
+      "id": "clock_hard_23",
+      "type": "multiple_choice",
+      "prompt": "When EN is qualified inside @(posedge clk)…",
+      "choices": [
+        "Free-running clk; load only when EN=1",
+        "AND-gating clk in the testbench only",
+        "Q updates whenever D changes",
+        "Async clear every mid-cycle"
+      ],
+      "answer": 0,
+      "explain": "Clk runs; enable gates the load.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_hard_23.mp4",
+        "poster": "media/images/clock_hard_23-frame.png",
+        "figure": "media/images/clock_hard_23.png"
+      }
+    },
+    {
+      "id": "clock_hard_24",
+      "type": "true_false",
+      "prompt": "Truth tables in the lab record poke and edge events in time order.",
+      "answer": true,
+      "explain": "Latency is one edge per stage; combo is not edge-paced.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_hard_24.mp4",
+        "poster": "media/images/clock_hard_24-frame.png",
+        "figure": "media/images/clock_hard_24.png"
+      }
+    },
+    {
+      "id": "clock_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Browser clock-step labs teach literacy; real silicon still needs…",
+      "choices": [
+        "Setup/hold and CDC rules",
+        "Only ASCII tables",
+        "Removing all clocks",
+        "Never using enable"
+      ],
+      "answer": 0,
+      "explain": "Setup, hold, and CDC still apply in real designs.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_hard_25.mp4",
+        "poster": "media/images/clock_hard_25-frame.png",
+        "figure": "media/images/clock_hard_25.png"
+      }
+    },
+    {
+      "id": "clock_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Besides D, edge sampling often considers…",
+      "choices": [
+        "Reset and enable polarity/state",
+        "Only package pin names",
+        "Baud rate alone",
+        "K-map grouping size"
+      ],
+      "answer": 0,
+      "explain": "Reset and enable are evaluated on the same edge as data.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_hard_26.mp4",
+        "poster": "media/images/clock_hard_26-frame.png",
+        "figure": "media/images/clock_hard_26.png"
+      }
+    },
+    {
+      "id": "clock_hard_27",
+      "type": "multiple_choice",
+      "prompt": "When EN is qualified inside @(posedge clk)…",
+      "choices": [
+        "Free-running clk; load only when EN=1",
+        "AND-gating clk in the testbench only",
+        "Q updates whenever D changes",
+        "Async clear every mid-cycle"
+      ],
+      "answer": 0,
+      "explain": "Clk runs; enable gates the load.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_hard_27.mp4",
+        "poster": "media/images/clock_hard_27-frame.png",
+        "figure": "media/images/clock_hard_27.png"
+      }
+    },
+    {
+      "id": "clock_hard_28",
+      "type": "true_false",
+      "prompt": "Truth tables in the lab record poke and edge events in time order.",
+      "answer": true,
+      "explain": "Latency is one edge per stage; combo is not edge-paced.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_hard_28.mp4",
+        "poster": "media/images/clock_hard_28-frame.png",
+        "figure": "media/images/clock_hard_28.png"
+      }
+    },
+    {
+      "id": "clock_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Browser clock-step labs teach literacy; real silicon still needs…",
+      "choices": [
+        "Setup/hold and CDC rules",
+        "Only ASCII tables",
+        "Removing all clocks",
+        "Never using enable"
+      ],
+      "answer": 0,
+      "explain": "Setup, hold, and CDC still apply in real designs.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_hard_29.mp4",
+        "poster": "media/images/clock_hard_29-frame.png",
+        "figure": "media/images/clock_hard_29.png"
+      }
+    },
+    {
+      "id": "clock_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Besides D, edge sampling often considers…",
+      "choices": [
+        "Reset and enable polarity/state",
+        "Only package pin names",
+        "Baud rate alone",
+        "K-map grouping size"
+      ],
+      "answer": 0,
+      "explain": "Reset and enable are evaluated on the same edge as data.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "clock-stepper",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/clock_hard_30.mp4",
+        "poster": "media/images/clock_hard_30-frame.png",
+        "figure": "media/images/clock_hard_30.png"
+      }
+    }
+  ]
+}

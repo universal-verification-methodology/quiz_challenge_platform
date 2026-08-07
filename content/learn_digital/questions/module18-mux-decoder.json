@@ -1,0 +1,2490 @@
+{
+  "module": "module18-mux-decoder",
+  "title": "Mux / decoder / encoder",
+  "items": [
+    {
+      "id": "mux_easy_01",
+      "type": "multiple_choice",
+      "prompt": "A 4:1 mux needs how many select bits?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "2^S = 4 inputs → S = 2 select bits.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "mux41",
+        "label": "4:1 select D2",
+        "steps": [
+          {
+            "challenge": "4:1 select D2"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_easy_01.png"
+      }
+    },
+    {
+      "id": "mux_easy_02",
+      "type": "multiple_choice",
+      "prompt": "Decoder Y lines are usually…",
+      "choices": [
+        "all high at once",
+        "one-hot",
+        "always zero",
+        "Gray coded only"
+      ],
+      "answer": 1,
+      "explain": "Exactly one output active per address.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_easy_02.png"
+      }
+    },
+    {
+      "id": "mux_easy_03",
+      "type": "multiple_choice",
+      "prompt": "How many Y lines on a 3-to-8?",
+      "choices": [
+        "3",
+        "6",
+        "8",
+        "16"
+      ],
+      "answer": 2,
+      "explain": "2^3 = 8 one-hot outputs.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#btn-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_easy_03.png"
+      }
+    },
+    {
+      "id": "mux_easy_04",
+      "type": "true_false",
+      "prompt": "Select S=0 always forces Y=0 regardless of D0.",
+      "answer": false,
+      "explain": "S chooses which data input reaches Y.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#btn-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_easy_04.png"
+      }
+    },
+    {
+      "id": "mux_easy_05",
+      "type": "multiple_choice",
+      "prompt": "A 4:1 mux needs how many select bits?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "2^S = 4 inputs → S = 2 select bits.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "mux41",
+        "label": "4:1 select D2",
+        "steps": [
+          {
+            "challenge": "4:1 select D2"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_easy_05.png"
+      }
+    },
+    {
+      "id": "mux_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Decoder Y lines are usually…",
+      "choices": [
+        "all high at once",
+        "one-hot",
+        "always zero",
+        "Gray coded only"
+      ],
+      "answer": 1,
+      "explain": "Exactly one output active per address.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_easy_06.png"
+      }
+    },
+    {
+      "id": "mux_easy_07",
+      "type": "multiple_choice",
+      "prompt": "How many Y lines on a 3-to-8?",
+      "choices": [
+        "3",
+        "6",
+        "8",
+        "16"
+      ],
+      "answer": 2,
+      "explain": "2^3 = 8 one-hot outputs.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#btn-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_easy_07.png"
+      }
+    },
+    {
+      "id": "mux_easy_08",
+      "type": "true_false",
+      "prompt": "Select S=0 always forces Y=0 regardless of D0.",
+      "answer": false,
+      "explain": "S chooses which data input reaches Y.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#btn-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_easy_08.png"
+      }
+    },
+    {
+      "id": "mux_easy_09",
+      "type": "multiple_choice",
+      "prompt": "A 4:1 mux needs how many select bits?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "2^S = 4 inputs → S = 2 select bits.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "mux41",
+        "label": "4:1 select D2",
+        "steps": [
+          {
+            "challenge": "4:1 select D2"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_easy_09.png"
+      }
+    },
+    {
+      "id": "mux_easy_10",
+      "type": "multiple_choice",
+      "prompt": "Decoder Y lines are usually…",
+      "choices": [
+        "all high at once",
+        "one-hot",
+        "always zero",
+        "Gray coded only"
+      ],
+      "answer": 1,
+      "explain": "Exactly one output active per address.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_easy_10.png"
+      }
+    },
+    {
+      "id": "mux_easy_11",
+      "type": "multiple_choice",
+      "prompt": "How many Y lines on a 3-to-8?",
+      "choices": [
+        "3",
+        "6",
+        "8",
+        "16"
+      ],
+      "answer": 2,
+      "explain": "2^3 = 8 one-hot outputs.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#btn-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_easy_11.png"
+      }
+    },
+    {
+      "id": "mux_easy_12",
+      "type": "true_false",
+      "prompt": "Select S=0 always forces Y=0 regardless of D0.",
+      "answer": false,
+      "explain": "S chooses which data input reaches Y.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#btn-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_easy_12.png"
+      }
+    },
+    {
+      "id": "mux_easy_13",
+      "type": "multiple_choice",
+      "prompt": "A 4:1 mux needs how many select bits?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "2^S = 4 inputs → S = 2 select bits.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "mux41",
+        "label": "4:1 select D2",
+        "steps": [
+          {
+            "challenge": "4:1 select D2"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_easy_13.png"
+      }
+    },
+    {
+      "id": "mux_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Decoder Y lines are usually…",
+      "choices": [
+        "all high at once",
+        "one-hot",
+        "always zero",
+        "Gray coded only"
+      ],
+      "answer": 1,
+      "explain": "Exactly one output active per address.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_easy_14.png"
+      }
+    },
+    {
+      "id": "mux_easy_15",
+      "type": "multiple_choice",
+      "prompt": "How many Y lines on a 3-to-8?",
+      "choices": [
+        "3",
+        "6",
+        "8",
+        "16"
+      ],
+      "answer": 2,
+      "explain": "2^3 = 8 one-hot outputs.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#btn-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_easy_15.png"
+      }
+    },
+    {
+      "id": "mux_easy_16",
+      "type": "true_false",
+      "prompt": "Select S=0 always forces Y=0 regardless of D0.",
+      "answer": false,
+      "explain": "S chooses which data input reaches Y.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#btn-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_easy_16.png"
+      }
+    },
+    {
+      "id": "mux_easy_17",
+      "type": "multiple_choice",
+      "prompt": "A 4:1 mux needs how many select bits?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "2^S = 4 inputs → S = 2 select bits.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "mux41",
+        "label": "4:1 select D2",
+        "steps": [
+          {
+            "challenge": "4:1 select D2"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_easy_17.png"
+      }
+    },
+    {
+      "id": "mux_easy_18",
+      "type": "multiple_choice",
+      "prompt": "Decoder Y lines are usually…",
+      "choices": [
+        "all high at once",
+        "one-hot",
+        "always zero",
+        "Gray coded only"
+      ],
+      "answer": 1,
+      "explain": "Exactly one output active per address.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_easy_18.png"
+      }
+    },
+    {
+      "id": "mux_easy_19",
+      "type": "multiple_choice",
+      "prompt": "How many Y lines on a 3-to-8?",
+      "choices": [
+        "3",
+        "6",
+        "8",
+        "16"
+      ],
+      "answer": 2,
+      "explain": "2^3 = 8 one-hot outputs.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#btn-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_easy_19.png"
+      }
+    },
+    {
+      "id": "mux_easy_20",
+      "type": "true_false",
+      "prompt": "Select S=0 always forces Y=0 regardless of D0.",
+      "answer": false,
+      "explain": "S chooses which data input reaches Y.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#btn-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_easy_20.png"
+      }
+    },
+    {
+      "id": "mux_easy_21",
+      "type": "multiple_choice",
+      "prompt": "A 4:1 mux needs how many select bits?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "2^S = 4 inputs → S = 2 select bits.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "mux41",
+        "label": "4:1 select D2",
+        "steps": [
+          {
+            "challenge": "4:1 select D2"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_easy_21.png"
+      }
+    },
+    {
+      "id": "mux_easy_22",
+      "type": "multiple_choice",
+      "prompt": "Decoder Y lines are usually…",
+      "choices": [
+        "all high at once",
+        "one-hot",
+        "always zero",
+        "Gray coded only"
+      ],
+      "answer": 1,
+      "explain": "Exactly one output active per address.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_easy_22.png"
+      }
+    },
+    {
+      "id": "mux_easy_23",
+      "type": "multiple_choice",
+      "prompt": "How many Y lines on a 3-to-8?",
+      "choices": [
+        "3",
+        "6",
+        "8",
+        "16"
+      ],
+      "answer": 2,
+      "explain": "2^3 = 8 one-hot outputs.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#btn-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_easy_23.png"
+      }
+    },
+    {
+      "id": "mux_easy_24",
+      "type": "true_false",
+      "prompt": "Select S=0 always forces Y=0 regardless of D0.",
+      "answer": false,
+      "explain": "S chooses which data input reaches Y.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#btn-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_easy_24.png"
+      }
+    },
+    {
+      "id": "mux_easy_25",
+      "type": "multiple_choice",
+      "prompt": "A 4:1 mux needs how many select bits?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "2^S = 4 inputs → S = 2 select bits.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "mux41",
+        "label": "4:1 select D2",
+        "steps": [
+          {
+            "challenge": "4:1 select D2"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_easy_25.png"
+      }
+    },
+    {
+      "id": "mux_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Decoder Y lines are usually…",
+      "choices": [
+        "all high at once",
+        "one-hot",
+        "always zero",
+        "Gray coded only"
+      ],
+      "answer": 1,
+      "explain": "Exactly one output active per address.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_easy_26.png"
+      }
+    },
+    {
+      "id": "mux_easy_27",
+      "type": "multiple_choice",
+      "prompt": "How many Y lines on a 3-to-8?",
+      "choices": [
+        "3",
+        "6",
+        "8",
+        "16"
+      ],
+      "answer": 2,
+      "explain": "2^3 = 8 one-hot outputs.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#btn-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_easy_27.png"
+      }
+    },
+    {
+      "id": "mux_easy_28",
+      "type": "true_false",
+      "prompt": "Select S=0 always forces Y=0 regardless of D0.",
+      "answer": false,
+      "explain": "S chooses which data input reaches Y.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#btn-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_easy_28.png"
+      }
+    },
+    {
+      "id": "mux_easy_29",
+      "type": "multiple_choice",
+      "prompt": "A 4:1 mux needs how many select bits?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "2^S = 4 inputs → S = 2 select bits.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "mux41",
+        "label": "4:1 select D2",
+        "steps": [
+          {
+            "challenge": "4:1 select D2"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_easy_29.png"
+      }
+    },
+    {
+      "id": "mux_easy_30",
+      "type": "multiple_choice",
+      "prompt": "Decoder Y lines are usually…",
+      "choices": [
+        "all high at once",
+        "one-hot",
+        "always zero",
+        "Gray coded only"
+      ],
+      "answer": 1,
+      "explain": "Exactly one output active per address.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_easy_30.png"
+      }
+    },
+    {
+      "id": "mux_medium_01",
+      "type": "multiple_choice",
+      "prompt": "A 2:1 mux needs how many select bits?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "One select bit chooses between two inputs.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "mux21",
+        "label": "2:1 pick D0",
+        "steps": [
+          {
+            "challenge": "2:1 pick D0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_medium_01.png"
+      }
+    },
+    {
+      "id": "mux_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Two address bits decode to…",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 2,
+      "explain": "2^2 = 4.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#btn-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_medium_02.png"
+      }
+    },
+    {
+      "id": "mux_medium_03",
+      "type": "multiple_choice",
+      "prompt": "One-hot input to binary index is an…",
+      "choices": [
+        "expand binary to one-hot",
+        "compress one-hot (or sparse) requests to a binary code",
+        "add carry bits",
+        "only generate clocks"
+      ],
+      "answer": 1,
+      "explain": "Encoder compresses toward a binary code (+ valid).",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_medium_03.png"
+      }
+    },
+    {
+      "id": "mux_medium_04",
+      "type": "true_false",
+      "prompt": "A decoder should assert every Y line on each address.",
+      "answer": false,
+      "explain": "One-hot means one Y; priority resolves conflicts.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_medium_04.png"
+      }
+    },
+    {
+      "id": "mux_medium_05",
+      "type": "multiple_choice",
+      "prompt": "A 2:1 mux needs how many select bits?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "One select bit chooses between two inputs.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "mux21",
+        "label": "2:1 pick D0",
+        "steps": [
+          {
+            "challenge": "2:1 pick D0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_medium_05.png"
+      }
+    },
+    {
+      "id": "mux_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Two address bits decode to…",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 2,
+      "explain": "2^2 = 4.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#btn-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_medium_06.png"
+      }
+    },
+    {
+      "id": "mux_medium_07",
+      "type": "multiple_choice",
+      "prompt": "One-hot input to binary index is an…",
+      "choices": [
+        "expand binary to one-hot",
+        "compress one-hot (or sparse) requests to a binary code",
+        "add carry bits",
+        "only generate clocks"
+      ],
+      "answer": 1,
+      "explain": "Encoder compresses toward a binary code (+ valid).",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_medium_07.png"
+      }
+    },
+    {
+      "id": "mux_medium_08",
+      "type": "true_false",
+      "prompt": "A decoder should assert every Y line on each address.",
+      "answer": false,
+      "explain": "One-hot means one Y; priority resolves conflicts.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_medium_08.png"
+      }
+    },
+    {
+      "id": "mux_medium_09",
+      "type": "multiple_choice",
+      "prompt": "A 2:1 mux needs how many select bits?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "One select bit chooses between two inputs.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "mux21",
+        "label": "2:1 pick D0",
+        "steps": [
+          {
+            "challenge": "2:1 pick D0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_medium_09.png"
+      }
+    },
+    {
+      "id": "mux_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Two address bits decode to…",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 2,
+      "explain": "2^2 = 4.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#btn-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_medium_10.png"
+      }
+    },
+    {
+      "id": "mux_medium_11",
+      "type": "multiple_choice",
+      "prompt": "One-hot input to binary index is an…",
+      "choices": [
+        "expand binary to one-hot",
+        "compress one-hot (or sparse) requests to a binary code",
+        "add carry bits",
+        "only generate clocks"
+      ],
+      "answer": 1,
+      "explain": "Encoder compresses toward a binary code (+ valid).",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_medium_11.png"
+      }
+    },
+    {
+      "id": "mux_medium_12",
+      "type": "true_false",
+      "prompt": "A decoder should assert every Y line on each address.",
+      "answer": false,
+      "explain": "One-hot means one Y; priority resolves conflicts.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_medium_12.png"
+      }
+    },
+    {
+      "id": "mux_medium_13",
+      "type": "multiple_choice",
+      "prompt": "A 2:1 mux needs how many select bits?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "One select bit chooses between two inputs.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "mux21",
+        "label": "2:1 pick D0",
+        "steps": [
+          {
+            "challenge": "2:1 pick D0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_medium_13.png"
+      }
+    },
+    {
+      "id": "mux_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Two address bits decode to…",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 2,
+      "explain": "2^2 = 4.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#btn-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_medium_14.png"
+      }
+    },
+    {
+      "id": "mux_medium_15",
+      "type": "multiple_choice",
+      "prompt": "One-hot input to binary index is an…",
+      "choices": [
+        "expand binary to one-hot",
+        "compress one-hot (or sparse) requests to a binary code",
+        "add carry bits",
+        "only generate clocks"
+      ],
+      "answer": 1,
+      "explain": "Encoder compresses toward a binary code (+ valid).",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_medium_15.png"
+      }
+    },
+    {
+      "id": "mux_medium_16",
+      "type": "true_false",
+      "prompt": "A decoder should assert every Y line on each address.",
+      "answer": false,
+      "explain": "One-hot means one Y; priority resolves conflicts.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_medium_16.png"
+      }
+    },
+    {
+      "id": "mux_medium_17",
+      "type": "multiple_choice",
+      "prompt": "A 2:1 mux needs how many select bits?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "One select bit chooses between two inputs.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "mux21",
+        "label": "2:1 pick D0",
+        "steps": [
+          {
+            "challenge": "2:1 pick D0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_medium_17.png"
+      }
+    },
+    {
+      "id": "mux_medium_18",
+      "type": "multiple_choice",
+      "prompt": "Two address bits decode to…",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 2,
+      "explain": "2^2 = 4.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#btn-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_medium_18.png"
+      }
+    },
+    {
+      "id": "mux_medium_19",
+      "type": "multiple_choice",
+      "prompt": "One-hot input to binary index is an…",
+      "choices": [
+        "expand binary to one-hot",
+        "compress one-hot (or sparse) requests to a binary code",
+        "add carry bits",
+        "only generate clocks"
+      ],
+      "answer": 1,
+      "explain": "Encoder compresses toward a binary code (+ valid).",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_medium_19.png"
+      }
+    },
+    {
+      "id": "mux_medium_20",
+      "type": "true_false",
+      "prompt": "A decoder should assert every Y line on each address.",
+      "answer": false,
+      "explain": "One-hot means one Y; priority resolves conflicts.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_medium_20.png"
+      }
+    },
+    {
+      "id": "mux_medium_21",
+      "type": "multiple_choice",
+      "prompt": "A 2:1 mux needs how many select bits?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "One select bit chooses between two inputs.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "mux21",
+        "label": "2:1 pick D0",
+        "steps": [
+          {
+            "challenge": "2:1 pick D0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_medium_21.png"
+      }
+    },
+    {
+      "id": "mux_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Two address bits decode to…",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 2,
+      "explain": "2^2 = 4.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#btn-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_medium_22.png"
+      }
+    },
+    {
+      "id": "mux_medium_23",
+      "type": "multiple_choice",
+      "prompt": "One-hot input to binary index is an…",
+      "choices": [
+        "expand binary to one-hot",
+        "compress one-hot (or sparse) requests to a binary code",
+        "add carry bits",
+        "only generate clocks"
+      ],
+      "answer": 1,
+      "explain": "Encoder compresses toward a binary code (+ valid).",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_medium_23.png"
+      }
+    },
+    {
+      "id": "mux_medium_24",
+      "type": "true_false",
+      "prompt": "A decoder should assert every Y line on each address.",
+      "answer": false,
+      "explain": "One-hot means one Y; priority resolves conflicts.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_medium_24.png"
+      }
+    },
+    {
+      "id": "mux_medium_25",
+      "type": "multiple_choice",
+      "prompt": "A 2:1 mux needs how many select bits?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "One select bit chooses between two inputs.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "mux21",
+        "label": "2:1 pick D0",
+        "steps": [
+          {
+            "challenge": "2:1 pick D0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_medium_25.png"
+      }
+    },
+    {
+      "id": "mux_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Two address bits decode to…",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 2,
+      "explain": "2^2 = 4.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#btn-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_medium_26.png"
+      }
+    },
+    {
+      "id": "mux_medium_27",
+      "type": "multiple_choice",
+      "prompt": "One-hot input to binary index is an…",
+      "choices": [
+        "expand binary to one-hot",
+        "compress one-hot (or sparse) requests to a binary code",
+        "add carry bits",
+        "only generate clocks"
+      ],
+      "answer": 1,
+      "explain": "Encoder compresses toward a binary code (+ valid).",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_medium_27.png"
+      }
+    },
+    {
+      "id": "mux_medium_28",
+      "type": "true_false",
+      "prompt": "A decoder should assert every Y line on each address.",
+      "answer": false,
+      "explain": "One-hot means one Y; priority resolves conflicts.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_medium_28.png"
+      }
+    },
+    {
+      "id": "mux_medium_29",
+      "type": "multiple_choice",
+      "prompt": "A 2:1 mux needs how many select bits?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "One select bit chooses between two inputs.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "mux21",
+        "label": "2:1 pick D0",
+        "steps": [
+          {
+            "challenge": "2:1 pick D0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_medium_29.png"
+      }
+    },
+    {
+      "id": "mux_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Two address bits decode to…",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 2,
+      "explain": "2^2 = 4.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#btn-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_medium_30.png"
+      }
+    },
+    {
+      "id": "mux_hard_01",
+      "type": "multiple_choice",
+      "prompt": "An 8:1 mux needs how many select bits?",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "2^3 = 8 → three select bits.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "mux21",
+        "label": "2:1 pick D0",
+        "steps": [
+          {
+            "challenge": "2:1 pick D0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_hard_01.png"
+      }
+    },
+    {
+      "id": "mux_hard_02",
+      "type": "multiple_choice",
+      "prompt": "No request active ⇒ V…",
+      "choices": [
+        "1",
+        "0",
+        "Z",
+        "the max index"
+      ],
+      "answer": 1,
+      "explain": "All inputs zero ⇒ V=0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#btn-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_hard_02.png"
+      }
+    },
+    {
+      "id": "mux_hard_03",
+      "type": "multiple_choice",
+      "prompt": "Binary 10 → which decoder output?",
+      "choices": [
+        "Y0",
+        "Y1",
+        "Y2",
+        "Y3"
+      ],
+      "answer": 2,
+      "explain": "Address 2 → Y2.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_hard_03.png"
+      }
+    },
+    {
+      "id": "mux_hard_04",
+      "type": "true_false",
+      "prompt": "A 4:1 mux and a 2→4 decoder need the same number of output pins.",
+      "answer": false,
+      "explain": "4:1 has 1 Y; 2→4 has 4 Y lines.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_hard_04.png"
+      }
+    },
+    {
+      "id": "mux_hard_05",
+      "type": "multiple_choice",
+      "prompt": "An 8:1 mux needs how many select bits?",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "2^3 = 8 → three select bits.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "mux21",
+        "label": "2:1 pick D0",
+        "steps": [
+          {
+            "challenge": "2:1 pick D0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_hard_05.png"
+      }
+    },
+    {
+      "id": "mux_hard_06",
+      "type": "multiple_choice",
+      "prompt": "No request active ⇒ V…",
+      "choices": [
+        "1",
+        "0",
+        "Z",
+        "the max index"
+      ],
+      "answer": 1,
+      "explain": "All inputs zero ⇒ V=0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#btn-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_hard_06.png"
+      }
+    },
+    {
+      "id": "mux_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Binary 10 → which decoder output?",
+      "choices": [
+        "Y0",
+        "Y1",
+        "Y2",
+        "Y3"
+      ],
+      "answer": 2,
+      "explain": "Address 2 → Y2.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_hard_07.png"
+      }
+    },
+    {
+      "id": "mux_hard_08",
+      "type": "true_false",
+      "prompt": "A 4:1 mux and a 2→4 decoder need the same number of output pins.",
+      "answer": false,
+      "explain": "4:1 has 1 Y; 2→4 has 4 Y lines.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_hard_08.png"
+      }
+    },
+    {
+      "id": "mux_hard_09",
+      "type": "multiple_choice",
+      "prompt": "An 8:1 mux needs how many select bits?",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "2^3 = 8 → three select bits.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "mux21",
+        "label": "2:1 pick D0",
+        "steps": [
+          {
+            "challenge": "2:1 pick D0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_hard_09.png"
+      }
+    },
+    {
+      "id": "mux_hard_10",
+      "type": "multiple_choice",
+      "prompt": "No request active ⇒ V…",
+      "choices": [
+        "1",
+        "0",
+        "Z",
+        "the max index"
+      ],
+      "answer": 1,
+      "explain": "All inputs zero ⇒ V=0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#btn-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_hard_10.png"
+      }
+    },
+    {
+      "id": "mux_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Binary 10 → which decoder output?",
+      "choices": [
+        "Y0",
+        "Y1",
+        "Y2",
+        "Y3"
+      ],
+      "answer": 2,
+      "explain": "Address 2 → Y2.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_hard_11.png"
+      }
+    },
+    {
+      "id": "mux_hard_12",
+      "type": "true_false",
+      "prompt": "A 4:1 mux and a 2→4 decoder need the same number of output pins.",
+      "answer": false,
+      "explain": "4:1 has 1 Y; 2→4 has 4 Y lines.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_hard_12.png"
+      }
+    },
+    {
+      "id": "mux_hard_13",
+      "type": "multiple_choice",
+      "prompt": "An 8:1 mux needs how many select bits?",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "2^3 = 8 → three select bits.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "mux21",
+        "label": "2:1 pick D0",
+        "steps": [
+          {
+            "challenge": "2:1 pick D0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_hard_13.png"
+      }
+    },
+    {
+      "id": "mux_hard_14",
+      "type": "multiple_choice",
+      "prompt": "No request active ⇒ V…",
+      "choices": [
+        "1",
+        "0",
+        "Z",
+        "the max index"
+      ],
+      "answer": 1,
+      "explain": "All inputs zero ⇒ V=0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#btn-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_hard_14.png"
+      }
+    },
+    {
+      "id": "mux_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Binary 10 → which decoder output?",
+      "choices": [
+        "Y0",
+        "Y1",
+        "Y2",
+        "Y3"
+      ],
+      "answer": 2,
+      "explain": "Address 2 → Y2.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_hard_15.png"
+      }
+    },
+    {
+      "id": "mux_hard_16",
+      "type": "true_false",
+      "prompt": "A 4:1 mux and a 2→4 decoder need the same number of output pins.",
+      "answer": false,
+      "explain": "4:1 has 1 Y; 2→4 has 4 Y lines.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_hard_16.png"
+      }
+    },
+    {
+      "id": "mux_hard_17",
+      "type": "multiple_choice",
+      "prompt": "An 8:1 mux needs how many select bits?",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "2^3 = 8 → three select bits.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "mux21",
+        "label": "2:1 pick D0",
+        "steps": [
+          {
+            "challenge": "2:1 pick D0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_hard_17.png"
+      }
+    },
+    {
+      "id": "mux_hard_18",
+      "type": "multiple_choice",
+      "prompt": "No request active ⇒ V…",
+      "choices": [
+        "1",
+        "0",
+        "Z",
+        "the max index"
+      ],
+      "answer": 1,
+      "explain": "All inputs zero ⇒ V=0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#btn-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_hard_18.png"
+      }
+    },
+    {
+      "id": "mux_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Binary 10 → which decoder output?",
+      "choices": [
+        "Y0",
+        "Y1",
+        "Y2",
+        "Y3"
+      ],
+      "answer": 2,
+      "explain": "Address 2 → Y2.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_hard_19.png"
+      }
+    },
+    {
+      "id": "mux_hard_20",
+      "type": "true_false",
+      "prompt": "A 4:1 mux and a 2→4 decoder need the same number of output pins.",
+      "answer": false,
+      "explain": "4:1 has 1 Y; 2→4 has 4 Y lines.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_hard_20.png"
+      }
+    },
+    {
+      "id": "mux_hard_21",
+      "type": "multiple_choice",
+      "prompt": "An 8:1 mux needs how many select bits?",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "2^3 = 8 → three select bits.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "mux21",
+        "label": "2:1 pick D0",
+        "steps": [
+          {
+            "challenge": "2:1 pick D0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_hard_21.png"
+      }
+    },
+    {
+      "id": "mux_hard_22",
+      "type": "multiple_choice",
+      "prompt": "No request active ⇒ V…",
+      "choices": [
+        "1",
+        "0",
+        "Z",
+        "the max index"
+      ],
+      "answer": 1,
+      "explain": "All inputs zero ⇒ V=0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#btn-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_hard_22.png"
+      }
+    },
+    {
+      "id": "mux_hard_23",
+      "type": "multiple_choice",
+      "prompt": "Binary 10 → which decoder output?",
+      "choices": [
+        "Y0",
+        "Y1",
+        "Y2",
+        "Y3"
+      ],
+      "answer": 2,
+      "explain": "Address 2 → Y2.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_hard_23.png"
+      }
+    },
+    {
+      "id": "mux_hard_24",
+      "type": "true_false",
+      "prompt": "A 4:1 mux and a 2→4 decoder need the same number of output pins.",
+      "answer": false,
+      "explain": "4:1 has 1 Y; 2→4 has 4 Y lines.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_hard_24.png"
+      }
+    },
+    {
+      "id": "mux_hard_25",
+      "type": "multiple_choice",
+      "prompt": "An 8:1 mux needs how many select bits?",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "2^3 = 8 → three select bits.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "mux21",
+        "label": "2:1 pick D0",
+        "steps": [
+          {
+            "challenge": "2:1 pick D0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_hard_25.png"
+      }
+    },
+    {
+      "id": "mux_hard_26",
+      "type": "multiple_choice",
+      "prompt": "No request active ⇒ V…",
+      "choices": [
+        "1",
+        "0",
+        "Z",
+        "the max index"
+      ],
+      "answer": 1,
+      "explain": "All inputs zero ⇒ V=0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#btn-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_hard_26.png"
+      }
+    },
+    {
+      "id": "mux_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Binary 10 → which decoder output?",
+      "choices": [
+        "Y0",
+        "Y1",
+        "Y2",
+        "Y3"
+      ],
+      "answer": 2,
+      "explain": "Address 2 → Y2.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_hard_27.png"
+      }
+    },
+    {
+      "id": "mux_hard_28",
+      "type": "true_false",
+      "prompt": "A 4:1 mux and a 2→4 decoder need the same number of output pins.",
+      "answer": false,
+      "explain": "4:1 has 1 Y; 2→4 has 4 Y lines.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "dec-y0",
+        "label": "2→4: Y0",
+        "steps": [
+          {
+            "challenge": "2→4: Y0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_hard_28.png"
+      }
+    },
+    {
+      "id": "mux_hard_29",
+      "type": "multiple_choice",
+      "prompt": "An 8:1 mux needs how many select bits?",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "2^3 = 8 → three select bits.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "mux21",
+        "label": "2:1 pick D0",
+        "steps": [
+          {
+            "challenge": "2:1 pick D0"
+          },
+          {
+            "click": "#chal-load"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_hard_29.png"
+      }
+    },
+    {
+      "id": "mux_hard_30",
+      "type": "multiple_choice",
+      "prompt": "No request active ⇒ V…",
+      "choices": [
+        "1",
+        "0",
+        "Z",
+        "the max index"
+      ],
+      "answer": 1,
+      "explain": "All inputs zero ⇒ V=0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "mux-decoder",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#btn-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/mux_hard_30.png"
+      }
+    }
+  ]
+}

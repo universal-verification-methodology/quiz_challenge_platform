@@ -1,0 +1,2424 @@
+{
+  "module": "module15-dont-care-lab",
+  "title": "Don't-care minimization",
+  "items": [
+    {
+      "id": "dontcare_easy_01",
+      "type": "multiple_choice",
+      "prompt": "Don't-care rows in a truth table are written as…",
+      "choices": [
+        "0",
+        "1",
+        "X",
+        "Z"
+      ],
+      "answer": 2,
+      "explain": "X marks combinations that may be treated as 0 or 1.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_easy_01.png"
+      }
+    },
+    {
+      "id": "dontcare_easy_02",
+      "type": "multiple_choice",
+      "prompt": "Onset that must be covered is the set of…",
+      "choices": [
+        "OFF minterms",
+        "ON minterms",
+        "X minterms only",
+        "maxterms"
+      ],
+      "answer": 1,
+      "explain": "ON (F=1) rows must be covered; OFF rows must not.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_easy_02.png"
+      }
+    },
+    {
+      "id": "dontcare_easy_03",
+      "type": "multiple_choice",
+      "prompt": "Optional X entries often…",
+      "choices": [
+        "Always increases term count",
+        "Can shrink the cover",
+        "Forces POS only",
+        "Ignores ON rows"
+      ],
+      "answer": 1,
+      "explain": "X can enlarge groups and drop literals.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_easy_03.png"
+      }
+    },
+    {
+      "id": "dontcare_easy_04",
+      "type": "true_false",
+      "prompt": "OFF rows are forbidden inside any valid implicant.",
+      "answer": true,
+      "explain": "Never cover a specified 0.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_easy_04.png"
+      }
+    },
+    {
+      "id": "dontcare_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Don't-care rows in a truth table are written as…",
+      "choices": [
+        "0",
+        "1",
+        "X",
+        "Z"
+      ],
+      "answer": 2,
+      "explain": "X marks combinations that may be treated as 0 or 1.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_easy_05.png"
+      }
+    },
+    {
+      "id": "dontcare_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Onset that must be covered is the set of…",
+      "choices": [
+        "OFF minterms",
+        "ON minterms",
+        "X minterms only",
+        "maxterms"
+      ],
+      "answer": 1,
+      "explain": "ON (F=1) rows must be covered; OFF rows must not.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_easy_06.png"
+      }
+    },
+    {
+      "id": "dontcare_easy_07",
+      "type": "multiple_choice",
+      "prompt": "Optional X entries often…",
+      "choices": [
+        "Always increases term count",
+        "Can shrink the cover",
+        "Forces POS only",
+        "Ignores ON rows"
+      ],
+      "answer": 1,
+      "explain": "X can enlarge groups and drop literals.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_easy_07.png"
+      }
+    },
+    {
+      "id": "dontcare_easy_08",
+      "type": "true_false",
+      "prompt": "OFF rows are forbidden inside any valid implicant.",
+      "answer": true,
+      "explain": "Never cover a specified 0.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_easy_08.png"
+      }
+    },
+    {
+      "id": "dontcare_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Don't-care rows in a truth table are written as…",
+      "choices": [
+        "0",
+        "1",
+        "X",
+        "Z"
+      ],
+      "answer": 2,
+      "explain": "X marks combinations that may be treated as 0 or 1.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_easy_09.png"
+      }
+    },
+    {
+      "id": "dontcare_easy_10",
+      "type": "multiple_choice",
+      "prompt": "Onset that must be covered is the set of…",
+      "choices": [
+        "OFF minterms",
+        "ON minterms",
+        "X minterms only",
+        "maxterms"
+      ],
+      "answer": 1,
+      "explain": "ON (F=1) rows must be covered; OFF rows must not.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_easy_10.png"
+      }
+    },
+    {
+      "id": "dontcare_easy_11",
+      "type": "multiple_choice",
+      "prompt": "Optional X entries often…",
+      "choices": [
+        "Always increases term count",
+        "Can shrink the cover",
+        "Forces POS only",
+        "Ignores ON rows"
+      ],
+      "answer": 1,
+      "explain": "X can enlarge groups and drop literals.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_easy_11.png"
+      }
+    },
+    {
+      "id": "dontcare_easy_12",
+      "type": "true_false",
+      "prompt": "OFF rows are forbidden inside any valid implicant.",
+      "answer": true,
+      "explain": "Never cover a specified 0.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_easy_12.png"
+      }
+    },
+    {
+      "id": "dontcare_easy_13",
+      "type": "multiple_choice",
+      "prompt": "Don't-care rows in a truth table are written as…",
+      "choices": [
+        "0",
+        "1",
+        "X",
+        "Z"
+      ],
+      "answer": 2,
+      "explain": "X marks combinations that may be treated as 0 or 1.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_easy_13.png"
+      }
+    },
+    {
+      "id": "dontcare_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Onset that must be covered is the set of…",
+      "choices": [
+        "OFF minterms",
+        "ON minterms",
+        "X minterms only",
+        "maxterms"
+      ],
+      "answer": 1,
+      "explain": "ON (F=1) rows must be covered; OFF rows must not.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_easy_14.png"
+      }
+    },
+    {
+      "id": "dontcare_easy_15",
+      "type": "multiple_choice",
+      "prompt": "Optional X entries often…",
+      "choices": [
+        "Always increases term count",
+        "Can shrink the cover",
+        "Forces POS only",
+        "Ignores ON rows"
+      ],
+      "answer": 1,
+      "explain": "X can enlarge groups and drop literals.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_easy_15.png"
+      }
+    },
+    {
+      "id": "dontcare_easy_16",
+      "type": "true_false",
+      "prompt": "OFF rows are forbidden inside any valid implicant.",
+      "answer": true,
+      "explain": "Never cover a specified 0.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_easy_16.png"
+      }
+    },
+    {
+      "id": "dontcare_easy_17",
+      "type": "multiple_choice",
+      "prompt": "Don't-care rows in a truth table are written as…",
+      "choices": [
+        "0",
+        "1",
+        "X",
+        "Z"
+      ],
+      "answer": 2,
+      "explain": "X marks combinations that may be treated as 0 or 1.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_easy_17.png"
+      }
+    },
+    {
+      "id": "dontcare_easy_18",
+      "type": "multiple_choice",
+      "prompt": "Onset that must be covered is the set of…",
+      "choices": [
+        "OFF minterms",
+        "ON minterms",
+        "X minterms only",
+        "maxterms"
+      ],
+      "answer": 1,
+      "explain": "ON (F=1) rows must be covered; OFF rows must not.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_easy_18.png"
+      }
+    },
+    {
+      "id": "dontcare_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Optional X entries often…",
+      "choices": [
+        "Always increases term count",
+        "Can shrink the cover",
+        "Forces POS only",
+        "Ignores ON rows"
+      ],
+      "answer": 1,
+      "explain": "X can enlarge groups and drop literals.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_easy_19.png"
+      }
+    },
+    {
+      "id": "dontcare_easy_20",
+      "type": "true_false",
+      "prompt": "OFF rows are forbidden inside any valid implicant.",
+      "answer": true,
+      "explain": "Never cover a specified 0.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_easy_20.png"
+      }
+    },
+    {
+      "id": "dontcare_easy_21",
+      "type": "multiple_choice",
+      "prompt": "Don't-care rows in a truth table are written as…",
+      "choices": [
+        "0",
+        "1",
+        "X",
+        "Z"
+      ],
+      "answer": 2,
+      "explain": "X marks combinations that may be treated as 0 or 1.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_easy_21.png"
+      }
+    },
+    {
+      "id": "dontcare_easy_22",
+      "type": "multiple_choice",
+      "prompt": "Onset that must be covered is the set of…",
+      "choices": [
+        "OFF minterms",
+        "ON minterms",
+        "X minterms only",
+        "maxterms"
+      ],
+      "answer": 1,
+      "explain": "ON (F=1) rows must be covered; OFF rows must not.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_easy_22.png"
+      }
+    },
+    {
+      "id": "dontcare_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Optional X entries often…",
+      "choices": [
+        "Always increases term count",
+        "Can shrink the cover",
+        "Forces POS only",
+        "Ignores ON rows"
+      ],
+      "answer": 1,
+      "explain": "X can enlarge groups and drop literals.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_easy_23.png"
+      }
+    },
+    {
+      "id": "dontcare_easy_24",
+      "type": "true_false",
+      "prompt": "OFF rows are forbidden inside any valid implicant.",
+      "answer": true,
+      "explain": "Never cover a specified 0.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_easy_24.png"
+      }
+    },
+    {
+      "id": "dontcare_easy_25",
+      "type": "multiple_choice",
+      "prompt": "Don't-care rows in a truth table are written as…",
+      "choices": [
+        "0",
+        "1",
+        "X",
+        "Z"
+      ],
+      "answer": 2,
+      "explain": "X marks combinations that may be treated as 0 or 1.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_easy_25.png"
+      }
+    },
+    {
+      "id": "dontcare_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Onset that must be covered is the set of…",
+      "choices": [
+        "OFF minterms",
+        "ON minterms",
+        "X minterms only",
+        "maxterms"
+      ],
+      "answer": 1,
+      "explain": "ON (F=1) rows must be covered; OFF rows must not.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_easy_26.png"
+      }
+    },
+    {
+      "id": "dontcare_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Optional X entries often…",
+      "choices": [
+        "Always increases term count",
+        "Can shrink the cover",
+        "Forces POS only",
+        "Ignores ON rows"
+      ],
+      "answer": 1,
+      "explain": "X can enlarge groups and drop literals.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_easy_27.png"
+      }
+    },
+    {
+      "id": "dontcare_easy_28",
+      "type": "true_false",
+      "prompt": "OFF rows are forbidden inside any valid implicant.",
+      "answer": true,
+      "explain": "Never cover a specified 0.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_easy_28.png"
+      }
+    },
+    {
+      "id": "dontcare_easy_29",
+      "type": "multiple_choice",
+      "prompt": "Don't-care rows in a truth table are written as…",
+      "choices": [
+        "0",
+        "1",
+        "X",
+        "Z"
+      ],
+      "answer": 2,
+      "explain": "X marks combinations that may be treated as 0 or 1.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_easy_29.png"
+      }
+    },
+    {
+      "id": "dontcare_easy_30",
+      "type": "multiple_choice",
+      "prompt": "Onset that must be covered is the set of…",
+      "choices": [
+        "OFF minterms",
+        "ON minterms",
+        "X minterms only",
+        "maxterms"
+      ],
+      "answer": 1,
+      "explain": "ON (F=1) rows must be covered; OFF rows must not.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_easy_30.png"
+      }
+    },
+    {
+      "id": "dontcare_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Don't-care minterms in a cover are…",
+      "choices": [
+        "mandatory to cover",
+        "forbidden to use",
+        "optional — use if they help",
+        "always forced to 0"
+      ],
+      "answer": 2,
+      "explain": "X may join groups when helpful.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_medium_01.png"
+      }
+    },
+    {
+      "id": "dontcare_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Listing onset and X sets looks like…",
+      "choices": [
+        "only ΠM",
+        "Σm(…) + d(…)",
+        "only Gray codes",
+        "FFT of the table"
+      ],
+      "answer": 1,
+      "explain": "Σm with d(…) lists minterms and don't-cares.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_medium_02.png"
+      }
+    },
+    {
+      "id": "dontcare_medium_03",
+      "type": "multiple_choice",
+      "prompt": "Leaving every X as OFF tends to…",
+      "choices": [
+        "always gives a smaller cover",
+        "can miss a smaller legal cover",
+        "forces dynamic hazards",
+        "removes all ON rows"
+      ],
+      "answer": 1,
+      "explain": "Treating X as OFF by default can miss a smaller cover.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_medium_03.png"
+      }
+    },
+    {
+      "id": "dontcare_medium_04",
+      "type": "true_false",
+      "prompt": "Valid covers may leave some X uncovered.",
+      "answer": true,
+      "explain": "X is optional; leaving X uncovered is fine.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_medium_04.png"
+      }
+    },
+    {
+      "id": "dontcare_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Don't-care minterms in a cover are…",
+      "choices": [
+        "mandatory to cover",
+        "forbidden to use",
+        "optional — use if they help",
+        "always forced to 0"
+      ],
+      "answer": 2,
+      "explain": "X may join groups when helpful.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_medium_05.png"
+      }
+    },
+    {
+      "id": "dontcare_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Listing onset and X sets looks like…",
+      "choices": [
+        "only ΠM",
+        "Σm(…) + d(…)",
+        "only Gray codes",
+        "FFT of the table"
+      ],
+      "answer": 1,
+      "explain": "Σm with d(…) lists minterms and don't-cares.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_medium_06.png"
+      }
+    },
+    {
+      "id": "dontcare_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Leaving every X as OFF tends to…",
+      "choices": [
+        "always gives a smaller cover",
+        "can miss a smaller legal cover",
+        "forces dynamic hazards",
+        "removes all ON rows"
+      ],
+      "answer": 1,
+      "explain": "Treating X as OFF by default can miss a smaller cover.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_medium_07.png"
+      }
+    },
+    {
+      "id": "dontcare_medium_08",
+      "type": "true_false",
+      "prompt": "Valid covers may leave some X uncovered.",
+      "answer": true,
+      "explain": "X is optional; leaving X uncovered is fine.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_medium_08.png"
+      }
+    },
+    {
+      "id": "dontcare_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Don't-care minterms in a cover are…",
+      "choices": [
+        "mandatory to cover",
+        "forbidden to use",
+        "optional — use if they help",
+        "always forced to 0"
+      ],
+      "answer": 2,
+      "explain": "X may join groups when helpful.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_medium_09.png"
+      }
+    },
+    {
+      "id": "dontcare_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Listing onset and X sets looks like…",
+      "choices": [
+        "only ΠM",
+        "Σm(…) + d(…)",
+        "only Gray codes",
+        "FFT of the table"
+      ],
+      "answer": 1,
+      "explain": "Σm with d(…) lists minterms and don't-cares.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_medium_10.png"
+      }
+    },
+    {
+      "id": "dontcare_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Leaving every X as OFF tends to…",
+      "choices": [
+        "always gives a smaller cover",
+        "can miss a smaller legal cover",
+        "forces dynamic hazards",
+        "removes all ON rows"
+      ],
+      "answer": 1,
+      "explain": "Treating X as OFF by default can miss a smaller cover.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_medium_11.png"
+      }
+    },
+    {
+      "id": "dontcare_medium_12",
+      "type": "true_false",
+      "prompt": "Valid covers may leave some X uncovered.",
+      "answer": true,
+      "explain": "X is optional; leaving X uncovered is fine.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_medium_12.png"
+      }
+    },
+    {
+      "id": "dontcare_medium_13",
+      "type": "multiple_choice",
+      "prompt": "Don't-care minterms in a cover are…",
+      "choices": [
+        "mandatory to cover",
+        "forbidden to use",
+        "optional — use if they help",
+        "always forced to 0"
+      ],
+      "answer": 2,
+      "explain": "X may join groups when helpful.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_medium_13.png"
+      }
+    },
+    {
+      "id": "dontcare_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Listing onset and X sets looks like…",
+      "choices": [
+        "only ΠM",
+        "Σm(…) + d(…)",
+        "only Gray codes",
+        "FFT of the table"
+      ],
+      "answer": 1,
+      "explain": "Σm with d(…) lists minterms and don't-cares.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_medium_14.png"
+      }
+    },
+    {
+      "id": "dontcare_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Leaving every X as OFF tends to…",
+      "choices": [
+        "always gives a smaller cover",
+        "can miss a smaller legal cover",
+        "forces dynamic hazards",
+        "removes all ON rows"
+      ],
+      "answer": 1,
+      "explain": "Treating X as OFF by default can miss a smaller cover.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_medium_15.png"
+      }
+    },
+    {
+      "id": "dontcare_medium_16",
+      "type": "true_false",
+      "prompt": "Valid covers may leave some X uncovered.",
+      "answer": true,
+      "explain": "X is optional; leaving X uncovered is fine.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_medium_16.png"
+      }
+    },
+    {
+      "id": "dontcare_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Don't-care minterms in a cover are…",
+      "choices": [
+        "mandatory to cover",
+        "forbidden to use",
+        "optional — use if they help",
+        "always forced to 0"
+      ],
+      "answer": 2,
+      "explain": "X may join groups when helpful.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_medium_17.png"
+      }
+    },
+    {
+      "id": "dontcare_medium_18",
+      "type": "multiple_choice",
+      "prompt": "Listing onset and X sets looks like…",
+      "choices": [
+        "only ΠM",
+        "Σm(…) + d(…)",
+        "only Gray codes",
+        "FFT of the table"
+      ],
+      "answer": 1,
+      "explain": "Σm with d(…) lists minterms and don't-cares.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_medium_18.png"
+      }
+    },
+    {
+      "id": "dontcare_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Leaving every X as OFF tends to…",
+      "choices": [
+        "always gives a smaller cover",
+        "can miss a smaller legal cover",
+        "forces dynamic hazards",
+        "removes all ON rows"
+      ],
+      "answer": 1,
+      "explain": "Treating X as OFF by default can miss a smaller cover.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_medium_19.png"
+      }
+    },
+    {
+      "id": "dontcare_medium_20",
+      "type": "true_false",
+      "prompt": "Valid covers may leave some X uncovered.",
+      "answer": true,
+      "explain": "X is optional; leaving X uncovered is fine.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_medium_20.png"
+      }
+    },
+    {
+      "id": "dontcare_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Don't-care minterms in a cover are…",
+      "choices": [
+        "mandatory to cover",
+        "forbidden to use",
+        "optional — use if they help",
+        "always forced to 0"
+      ],
+      "answer": 2,
+      "explain": "X may join groups when helpful.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_medium_21.png"
+      }
+    },
+    {
+      "id": "dontcare_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Listing onset and X sets looks like…",
+      "choices": [
+        "only ΠM",
+        "Σm(…) + d(…)",
+        "only Gray codes",
+        "FFT of the table"
+      ],
+      "answer": 1,
+      "explain": "Σm with d(…) lists minterms and don't-cares.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_medium_22.png"
+      }
+    },
+    {
+      "id": "dontcare_medium_23",
+      "type": "multiple_choice",
+      "prompt": "Leaving every X as OFF tends to…",
+      "choices": [
+        "always gives a smaller cover",
+        "can miss a smaller legal cover",
+        "forces dynamic hazards",
+        "removes all ON rows"
+      ],
+      "answer": 1,
+      "explain": "Treating X as OFF by default can miss a smaller cover.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_medium_23.png"
+      }
+    },
+    {
+      "id": "dontcare_medium_24",
+      "type": "true_false",
+      "prompt": "Valid covers may leave some X uncovered.",
+      "answer": true,
+      "explain": "X is optional; leaving X uncovered is fine.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_medium_24.png"
+      }
+    },
+    {
+      "id": "dontcare_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Don't-care minterms in a cover are…",
+      "choices": [
+        "mandatory to cover",
+        "forbidden to use",
+        "optional — use if they help",
+        "always forced to 0"
+      ],
+      "answer": 2,
+      "explain": "X may join groups when helpful.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_medium_25.png"
+      }
+    },
+    {
+      "id": "dontcare_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Listing onset and X sets looks like…",
+      "choices": [
+        "only ΠM",
+        "Σm(…) + d(…)",
+        "only Gray codes",
+        "FFT of the table"
+      ],
+      "answer": 1,
+      "explain": "Σm with d(…) lists minterms and don't-cares.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_medium_26.png"
+      }
+    },
+    {
+      "id": "dontcare_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Leaving every X as OFF tends to…",
+      "choices": [
+        "always gives a smaller cover",
+        "can miss a smaller legal cover",
+        "forces dynamic hazards",
+        "removes all ON rows"
+      ],
+      "answer": 1,
+      "explain": "Treating X as OFF by default can miss a smaller cover.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_medium_27.png"
+      }
+    },
+    {
+      "id": "dontcare_medium_28",
+      "type": "true_false",
+      "prompt": "Valid covers may leave some X uncovered.",
+      "answer": true,
+      "explain": "X is optional; leaving X uncovered is fine.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_medium_28.png"
+      }
+    },
+    {
+      "id": "dontcare_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Don't-care minterms in a cover are…",
+      "choices": [
+        "mandatory to cover",
+        "forbidden to use",
+        "optional — use if they help",
+        "always forced to 0"
+      ],
+      "answer": 2,
+      "explain": "X may join groups when helpful.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_medium_29.png"
+      }
+    },
+    {
+      "id": "dontcare_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Listing onset and X sets looks like…",
+      "choices": [
+        "only ΠM",
+        "Σm(…) + d(…)",
+        "only Gray codes",
+        "FFT of the table"
+      ],
+      "answer": 1,
+      "explain": "Σm with d(…) lists minterms and don't-cares.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_medium_30.png"
+      }
+    },
+    {
+      "id": "dontcare_hard_01",
+      "type": "multiple_choice",
+      "prompt": "A legal implicant may contain…",
+      "choices": [
+        "ON and X, never OFF",
+        "OFF only",
+        "OFF and ON mixed freely",
+        "only X, never ON"
+      ],
+      "answer": 0,
+      "explain": "Cover ON; optionally X; never OFF.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_hard_01.png"
+      }
+    },
+    {
+      "id": "dontcare_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Multiple minimal covers can exist when…",
+      "choices": [
+        "must be bitwise identical expressions",
+        "are both functionally acceptable for specified F",
+        "imply the truth table was wrong",
+        "require POS instead"
+      ],
+      "answer": 1,
+      "explain": "Different X choices can give different but valid covers.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_hard_02.png"
+      }
+    },
+    {
+      "id": "dontcare_hard_03",
+      "type": "multiple_choice",
+      "prompt": "Don't-care justification should come from…",
+      "choices": [
+        "a clear spec of what is unreachable or unused",
+        "always forcing X=1",
+        "deleting the rows from silicon",
+        "Gray-code axes only"
+      ],
+      "answer": 0,
+      "explain": "Spec must say what is truly don't-care.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_hard_03.png"
+      }
+    },
+    {
+      "id": "dontcare_hard_04",
+      "type": "true_false",
+      "prompt": "Once minimized with X, the ON set may legally shrink.",
+      "answer": false,
+      "explain": "ON must stay covered; OFF must stay uncovered.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_hard_04.png"
+      }
+    },
+    {
+      "id": "dontcare_hard_05",
+      "type": "multiple_choice",
+      "prompt": "A legal implicant may contain…",
+      "choices": [
+        "ON and X, never OFF",
+        "OFF only",
+        "OFF and ON mixed freely",
+        "only X, never ON"
+      ],
+      "answer": 0,
+      "explain": "Cover ON; optionally X; never OFF.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_hard_05.png"
+      }
+    },
+    {
+      "id": "dontcare_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Multiple minimal covers can exist when…",
+      "choices": [
+        "must be bitwise identical expressions",
+        "are both functionally acceptable for specified F",
+        "imply the truth table was wrong",
+        "require POS instead"
+      ],
+      "answer": 1,
+      "explain": "Different X choices can give different but valid covers.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_hard_06.png"
+      }
+    },
+    {
+      "id": "dontcare_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Don't-care justification should come from…",
+      "choices": [
+        "a clear spec of what is unreachable or unused",
+        "always forcing X=1",
+        "deleting the rows from silicon",
+        "Gray-code axes only"
+      ],
+      "answer": 0,
+      "explain": "Spec must say what is truly don't-care.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_hard_07.png"
+      }
+    },
+    {
+      "id": "dontcare_hard_08",
+      "type": "true_false",
+      "prompt": "Once minimized with X, the ON set may legally shrink.",
+      "answer": false,
+      "explain": "ON must stay covered; OFF must stay uncovered.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_hard_08.png"
+      }
+    },
+    {
+      "id": "dontcare_hard_09",
+      "type": "multiple_choice",
+      "prompt": "A legal implicant may contain…",
+      "choices": [
+        "ON and X, never OFF",
+        "OFF only",
+        "OFF and ON mixed freely",
+        "only X, never ON"
+      ],
+      "answer": 0,
+      "explain": "Cover ON; optionally X; never OFF.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_hard_09.png"
+      }
+    },
+    {
+      "id": "dontcare_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Multiple minimal covers can exist when…",
+      "choices": [
+        "must be bitwise identical expressions",
+        "are both functionally acceptable for specified F",
+        "imply the truth table was wrong",
+        "require POS instead"
+      ],
+      "answer": 1,
+      "explain": "Different X choices can give different but valid covers.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_hard_10.png"
+      }
+    },
+    {
+      "id": "dontcare_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Don't-care justification should come from…",
+      "choices": [
+        "a clear spec of what is unreachable or unused",
+        "always forcing X=1",
+        "deleting the rows from silicon",
+        "Gray-code axes only"
+      ],
+      "answer": 0,
+      "explain": "Spec must say what is truly don't-care.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_hard_11.png"
+      }
+    },
+    {
+      "id": "dontcare_hard_12",
+      "type": "true_false",
+      "prompt": "Once minimized with X, the ON set may legally shrink.",
+      "answer": false,
+      "explain": "ON must stay covered; OFF must stay uncovered.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_hard_12.png"
+      }
+    },
+    {
+      "id": "dontcare_hard_13",
+      "type": "multiple_choice",
+      "prompt": "A legal implicant may contain…",
+      "choices": [
+        "ON and X, never OFF",
+        "OFF only",
+        "OFF and ON mixed freely",
+        "only X, never ON"
+      ],
+      "answer": 0,
+      "explain": "Cover ON; optionally X; never OFF.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_hard_13.png"
+      }
+    },
+    {
+      "id": "dontcare_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Multiple minimal covers can exist when…",
+      "choices": [
+        "must be bitwise identical expressions",
+        "are both functionally acceptable for specified F",
+        "imply the truth table was wrong",
+        "require POS instead"
+      ],
+      "answer": 1,
+      "explain": "Different X choices can give different but valid covers.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_hard_14.png"
+      }
+    },
+    {
+      "id": "dontcare_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Don't-care justification should come from…",
+      "choices": [
+        "a clear spec of what is unreachable or unused",
+        "always forcing X=1",
+        "deleting the rows from silicon",
+        "Gray-code axes only"
+      ],
+      "answer": 0,
+      "explain": "Spec must say what is truly don't-care.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_hard_15.png"
+      }
+    },
+    {
+      "id": "dontcare_hard_16",
+      "type": "true_false",
+      "prompt": "Once minimized with X, the ON set may legally shrink.",
+      "answer": false,
+      "explain": "ON must stay covered; OFF must stay uncovered.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_hard_16.png"
+      }
+    },
+    {
+      "id": "dontcare_hard_17",
+      "type": "multiple_choice",
+      "prompt": "A legal implicant may contain…",
+      "choices": [
+        "ON and X, never OFF",
+        "OFF only",
+        "OFF and ON mixed freely",
+        "only X, never ON"
+      ],
+      "answer": 0,
+      "explain": "Cover ON; optionally X; never OFF.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_hard_17.png"
+      }
+    },
+    {
+      "id": "dontcare_hard_18",
+      "type": "multiple_choice",
+      "prompt": "Multiple minimal covers can exist when…",
+      "choices": [
+        "must be bitwise identical expressions",
+        "are both functionally acceptable for specified F",
+        "imply the truth table was wrong",
+        "require POS instead"
+      ],
+      "answer": 1,
+      "explain": "Different X choices can give different but valid covers.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_hard_18.png"
+      }
+    },
+    {
+      "id": "dontcare_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Don't-care justification should come from…",
+      "choices": [
+        "a clear spec of what is unreachable or unused",
+        "always forcing X=1",
+        "deleting the rows from silicon",
+        "Gray-code axes only"
+      ],
+      "answer": 0,
+      "explain": "Spec must say what is truly don't-care.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_hard_19.png"
+      }
+    },
+    {
+      "id": "dontcare_hard_20",
+      "type": "true_false",
+      "prompt": "Once minimized with X, the ON set may legally shrink.",
+      "answer": false,
+      "explain": "ON must stay covered; OFF must stay uncovered.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_hard_20.png"
+      }
+    },
+    {
+      "id": "dontcare_hard_21",
+      "type": "multiple_choice",
+      "prompt": "A legal implicant may contain…",
+      "choices": [
+        "ON and X, never OFF",
+        "OFF only",
+        "OFF and ON mixed freely",
+        "only X, never ON"
+      ],
+      "answer": 0,
+      "explain": "Cover ON; optionally X; never OFF.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_hard_21.png"
+      }
+    },
+    {
+      "id": "dontcare_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Multiple minimal covers can exist when…",
+      "choices": [
+        "must be bitwise identical expressions",
+        "are both functionally acceptable for specified F",
+        "imply the truth table was wrong",
+        "require POS instead"
+      ],
+      "answer": 1,
+      "explain": "Different X choices can give different but valid covers.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_hard_22.png"
+      }
+    },
+    {
+      "id": "dontcare_hard_23",
+      "type": "multiple_choice",
+      "prompt": "Don't-care justification should come from…",
+      "choices": [
+        "a clear spec of what is unreachable or unused",
+        "always forcing X=1",
+        "deleting the rows from silicon",
+        "Gray-code axes only"
+      ],
+      "answer": 0,
+      "explain": "Spec must say what is truly don't-care.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_hard_23.png"
+      }
+    },
+    {
+      "id": "dontcare_hard_24",
+      "type": "true_false",
+      "prompt": "Once minimized with X, the ON set may legally shrink.",
+      "answer": false,
+      "explain": "ON must stay covered; OFF must stay uncovered.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_hard_24.png"
+      }
+    },
+    {
+      "id": "dontcare_hard_25",
+      "type": "multiple_choice",
+      "prompt": "A legal implicant may contain…",
+      "choices": [
+        "ON and X, never OFF",
+        "OFF only",
+        "OFF and ON mixed freely",
+        "only X, never ON"
+      ],
+      "answer": 0,
+      "explain": "Cover ON; optionally X; never OFF.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_hard_25.png"
+      }
+    },
+    {
+      "id": "dontcare_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Multiple minimal covers can exist when…",
+      "choices": [
+        "must be bitwise identical expressions",
+        "are both functionally acceptable for specified F",
+        "imply the truth table was wrong",
+        "require POS instead"
+      ],
+      "answer": 1,
+      "explain": "Different X choices can give different but valid covers.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_hard_26.png"
+      }
+    },
+    {
+      "id": "dontcare_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Don't-care justification should come from…",
+      "choices": [
+        "a clear spec of what is unreachable or unused",
+        "always forcing X=1",
+        "deleting the rows from silicon",
+        "Gray-code axes only"
+      ],
+      "answer": 0,
+      "explain": "Spec must say what is truly don't-care.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "with-x",
+        "label": "With X",
+        "steps": [
+          {
+            "click": "#btn-starter-preset"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_hard_27.png"
+      }
+    },
+    {
+      "id": "dontcare_hard_28",
+      "type": "true_false",
+      "prompt": "Once minimized with X, the ON set may legally shrink.",
+      "answer": false,
+      "explain": "ON must stay covered; OFF must stay uncovered.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_hard_28.png"
+      }
+    },
+    {
+      "id": "dontcare_hard_29",
+      "type": "multiple_choice",
+      "prompt": "A legal implicant may contain…",
+      "choices": [
+        "ON and X, never OFF",
+        "OFF only",
+        "OFF and ON mixed freely",
+        "only X, never ON"
+      ],
+      "answer": 0,
+      "explain": "Cover ON; optionally X; never OFF.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_hard_29.png"
+      }
+    },
+    {
+      "id": "dontcare_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Multiple minimal covers can exist when…",
+      "choices": [
+        "must be bitwise identical expressions",
+        "are both functionally acceptable for specified F",
+        "imply the truth table was wrong",
+        "require POS instead"
+      ],
+      "answer": 1,
+      "explain": "Different X choices can give different but valid covers.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "dont-care-lab",
+        "key": "minimize",
+        "label": "Minimize",
+        "steps": [
+          {
+            "click": "#dc-starter"
+          },
+          {
+            "click": "#btn-minimize"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/dontcare_hard_30.png"
+      }
+    }
+  ]
+}

@@ -1,0 +1,2310 @@
+{
+  "module": "module29-cdc-sync",
+  "title": "CDC / 2-FF sync",
+  "items": [
+    {
+      "id": "cdc_easy_01",
+      "type": "multiple_choice",
+      "prompt": "CDC stands for…",
+      "choices": [
+        "Clock-domain crossing",
+        "Clock duty cycle",
+        "Combinational delay check",
+        "Core debug console"
+      ],
+      "answer": 0,
+      "explain": "Signal crosses unrelated clocks.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_easy_01.png"
+      }
+    },
+    {
+      "id": "cdc_easy_02",
+      "type": "multiple_choice",
+      "prompt": "In a 2-FF synchronizer, use…",
+      "choices": [
+        "q2 (second dst flop)",
+        "q1 only",
+        "async_in directly",
+        "The source clock"
+      ],
+      "answer": 0,
+      "explain": "q2 samples after settle time.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_easy_02.png"
+      }
+    },
+    {
+      "id": "cdc_easy_03",
+      "type": "multiple_choice",
+      "prompt": "Safe multi-bit crossing uses…",
+      "choices": [
+        "Gray code, handshake, or async FIFO",
+        "Classic 2-FF on each bit alone",
+        "No synchronizer at all",
+        "Only one dst flop"
+      ],
+      "answer": 0,
+      "explain": "Bits can skew on separate 2-FF paths.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_easy_03.png"
+      }
+    },
+    {
+      "id": "cdc_easy_04",
+      "type": "true_false",
+      "prompt": "Never fan q1 into combinational logic in the dst domain.",
+      "answer": true,
+      "explain": "q1 can be metastable; one-FF is unsafe; use q2.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_easy_04.png"
+      }
+    },
+    {
+      "id": "cdc_easy_05",
+      "type": "multiple_choice",
+      "prompt": "CDC stands for…",
+      "choices": [
+        "Clock-domain crossing",
+        "Clock duty cycle",
+        "Combinational delay check",
+        "Core debug console"
+      ],
+      "answer": 0,
+      "explain": "Signal crosses unrelated clocks.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_easy_05.png"
+      }
+    },
+    {
+      "id": "cdc_easy_06",
+      "type": "multiple_choice",
+      "prompt": "In a 2-FF synchronizer, use…",
+      "choices": [
+        "q2 (second dst flop)",
+        "q1 only",
+        "async_in directly",
+        "The source clock"
+      ],
+      "answer": 0,
+      "explain": "q2 samples after settle time.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_easy_06.png"
+      }
+    },
+    {
+      "id": "cdc_easy_07",
+      "type": "multiple_choice",
+      "prompt": "Safe multi-bit crossing uses…",
+      "choices": [
+        "Gray code, handshake, or async FIFO",
+        "Classic 2-FF on each bit alone",
+        "No synchronizer at all",
+        "Only one dst flop"
+      ],
+      "answer": 0,
+      "explain": "Bits can skew on separate 2-FF paths.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_easy_07.png"
+      }
+    },
+    {
+      "id": "cdc_easy_08",
+      "type": "true_false",
+      "prompt": "Never fan q1 into combinational logic in the dst domain.",
+      "answer": true,
+      "explain": "q1 can be metastable; one-FF is unsafe; use q2.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_easy_08.png"
+      }
+    },
+    {
+      "id": "cdc_easy_09",
+      "type": "multiple_choice",
+      "prompt": "CDC stands for…",
+      "choices": [
+        "Clock-domain crossing",
+        "Clock duty cycle",
+        "Combinational delay check",
+        "Core debug console"
+      ],
+      "answer": 0,
+      "explain": "Signal crosses unrelated clocks.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_easy_09.png"
+      }
+    },
+    {
+      "id": "cdc_easy_10",
+      "type": "multiple_choice",
+      "prompt": "In a 2-FF synchronizer, use…",
+      "choices": [
+        "q2 (second dst flop)",
+        "q1 only",
+        "async_in directly",
+        "The source clock"
+      ],
+      "answer": 0,
+      "explain": "q2 samples after settle time.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_easy_10.png"
+      }
+    },
+    {
+      "id": "cdc_easy_11",
+      "type": "multiple_choice",
+      "prompt": "Safe multi-bit crossing uses…",
+      "choices": [
+        "Gray code, handshake, or async FIFO",
+        "Classic 2-FF on each bit alone",
+        "No synchronizer at all",
+        "Only one dst flop"
+      ],
+      "answer": 0,
+      "explain": "Bits can skew on separate 2-FF paths.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_easy_11.png"
+      }
+    },
+    {
+      "id": "cdc_easy_12",
+      "type": "true_false",
+      "prompt": "Never fan q1 into combinational logic in the dst domain.",
+      "answer": true,
+      "explain": "q1 can be metastable; one-FF is unsafe; use q2.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_easy_12.png"
+      }
+    },
+    {
+      "id": "cdc_easy_13",
+      "type": "multiple_choice",
+      "prompt": "CDC stands for…",
+      "choices": [
+        "Clock-domain crossing",
+        "Clock duty cycle",
+        "Combinational delay check",
+        "Core debug console"
+      ],
+      "answer": 0,
+      "explain": "Signal crosses unrelated clocks.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_easy_13.png"
+      }
+    },
+    {
+      "id": "cdc_easy_14",
+      "type": "multiple_choice",
+      "prompt": "In a 2-FF synchronizer, use…",
+      "choices": [
+        "q2 (second dst flop)",
+        "q1 only",
+        "async_in directly",
+        "The source clock"
+      ],
+      "answer": 0,
+      "explain": "q2 samples after settle time.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_easy_14.png"
+      }
+    },
+    {
+      "id": "cdc_easy_15",
+      "type": "multiple_choice",
+      "prompt": "Safe multi-bit crossing uses…",
+      "choices": [
+        "Gray code, handshake, or async FIFO",
+        "Classic 2-FF on each bit alone",
+        "No synchronizer at all",
+        "Only one dst flop"
+      ],
+      "answer": 0,
+      "explain": "Bits can skew on separate 2-FF paths.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_easy_15.png"
+      }
+    },
+    {
+      "id": "cdc_easy_16",
+      "type": "true_false",
+      "prompt": "Never fan q1 into combinational logic in the dst domain.",
+      "answer": true,
+      "explain": "q1 can be metastable; one-FF is unsafe; use q2.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_easy_16.png"
+      }
+    },
+    {
+      "id": "cdc_easy_17",
+      "type": "multiple_choice",
+      "prompt": "CDC stands for…",
+      "choices": [
+        "Clock-domain crossing",
+        "Clock duty cycle",
+        "Combinational delay check",
+        "Core debug console"
+      ],
+      "answer": 0,
+      "explain": "Signal crosses unrelated clocks.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_easy_17.png"
+      }
+    },
+    {
+      "id": "cdc_easy_18",
+      "type": "multiple_choice",
+      "prompt": "In a 2-FF synchronizer, use…",
+      "choices": [
+        "q2 (second dst flop)",
+        "q1 only",
+        "async_in directly",
+        "The source clock"
+      ],
+      "answer": 0,
+      "explain": "q2 samples after settle time.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_easy_18.png"
+      }
+    },
+    {
+      "id": "cdc_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Safe multi-bit crossing uses…",
+      "choices": [
+        "Gray code, handshake, or async FIFO",
+        "Classic 2-FF on each bit alone",
+        "No synchronizer at all",
+        "Only one dst flop"
+      ],
+      "answer": 0,
+      "explain": "Bits can skew on separate 2-FF paths.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_easy_19.png"
+      }
+    },
+    {
+      "id": "cdc_easy_20",
+      "type": "true_false",
+      "prompt": "Never fan q1 into combinational logic in the dst domain.",
+      "answer": true,
+      "explain": "q1 can be metastable; one-FF is unsafe; use q2.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_easy_20.png"
+      }
+    },
+    {
+      "id": "cdc_easy_21",
+      "type": "multiple_choice",
+      "prompt": "CDC stands for…",
+      "choices": [
+        "Clock-domain crossing",
+        "Clock duty cycle",
+        "Combinational delay check",
+        "Core debug console"
+      ],
+      "answer": 0,
+      "explain": "Signal crosses unrelated clocks.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_easy_21.png"
+      }
+    },
+    {
+      "id": "cdc_easy_22",
+      "type": "multiple_choice",
+      "prompt": "In a 2-FF synchronizer, use…",
+      "choices": [
+        "q2 (second dst flop)",
+        "q1 only",
+        "async_in directly",
+        "The source clock"
+      ],
+      "answer": 0,
+      "explain": "q2 samples after settle time.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_easy_22.png"
+      }
+    },
+    {
+      "id": "cdc_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Safe multi-bit crossing uses…",
+      "choices": [
+        "Gray code, handshake, or async FIFO",
+        "Classic 2-FF on each bit alone",
+        "No synchronizer at all",
+        "Only one dst flop"
+      ],
+      "answer": 0,
+      "explain": "Bits can skew on separate 2-FF paths.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_easy_23.png"
+      }
+    },
+    {
+      "id": "cdc_easy_24",
+      "type": "true_false",
+      "prompt": "Never fan q1 into combinational logic in the dst domain.",
+      "answer": true,
+      "explain": "q1 can be metastable; one-FF is unsafe; use q2.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_easy_24.png"
+      }
+    },
+    {
+      "id": "cdc_easy_25",
+      "type": "multiple_choice",
+      "prompt": "CDC stands for…",
+      "choices": [
+        "Clock-domain crossing",
+        "Clock duty cycle",
+        "Combinational delay check",
+        "Core debug console"
+      ],
+      "answer": 0,
+      "explain": "Signal crosses unrelated clocks.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_easy_25.png"
+      }
+    },
+    {
+      "id": "cdc_easy_26",
+      "type": "multiple_choice",
+      "prompt": "In a 2-FF synchronizer, use…",
+      "choices": [
+        "q2 (second dst flop)",
+        "q1 only",
+        "async_in directly",
+        "The source clock"
+      ],
+      "answer": 0,
+      "explain": "q2 samples after settle time.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_easy_26.png"
+      }
+    },
+    {
+      "id": "cdc_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Safe multi-bit crossing uses…",
+      "choices": [
+        "Gray code, handshake, or async FIFO",
+        "Classic 2-FF on each bit alone",
+        "No synchronizer at all",
+        "Only one dst flop"
+      ],
+      "answer": 0,
+      "explain": "Bits can skew on separate 2-FF paths.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_easy_27.png"
+      }
+    },
+    {
+      "id": "cdc_easy_28",
+      "type": "true_false",
+      "prompt": "Never fan q1 into combinational logic in the dst domain.",
+      "answer": true,
+      "explain": "q1 can be metastable; one-FF is unsafe; use q2.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_easy_28.png"
+      }
+    },
+    {
+      "id": "cdc_easy_29",
+      "type": "multiple_choice",
+      "prompt": "CDC stands for…",
+      "choices": [
+        "Clock-domain crossing",
+        "Clock duty cycle",
+        "Combinational delay check",
+        "Core debug console"
+      ],
+      "answer": 0,
+      "explain": "Signal crosses unrelated clocks.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_easy_29.png"
+      }
+    },
+    {
+      "id": "cdc_easy_30",
+      "type": "multiple_choice",
+      "prompt": "In a 2-FF synchronizer, use…",
+      "choices": [
+        "q2 (second dst flop)",
+        "q1 only",
+        "async_in directly",
+        "The source clock"
+      ],
+      "answer": 0,
+      "explain": "q2 samples after settle time.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_easy_30.png"
+      }
+    },
+    {
+      "id": "cdc_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Role of the second flop in a 2-FF sync?",
+      "choices": [
+        "Gives settle time before use",
+        "Removes the need for any sync",
+        "Makes multi-bit buses safe alone",
+        "Stops the source clock"
+      ],
+      "answer": 0,
+      "explain": "Second sample after metastability window.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_medium_01.png"
+      }
+    },
+    {
+      "id": "cdc_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Taking sync_out from q1 alone…",
+      "choices": [
+        "Logic may consume a metastable q1",
+        "It doubles max clock frequency always",
+        "It forces Gray pointers",
+        "It deletes async_in"
+      ],
+      "answer": 0,
+      "explain": "No settle flop before use.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_medium_02.png"
+      }
+    },
+    {
+      "id": "cdc_medium_03",
+      "type": "multiple_choice",
+      "prompt": "Bit skew after independent synchronizers…",
+      "choices": [
+        "Bits settling on different cycles / illegal codes",
+        "Always improving MTBF enough alone",
+        "Forcing one-hot FSMs",
+        "Removing CDC constraints"
+      ],
+      "answer": 0,
+      "explain": "Skewed bits can form illegal intermediate values.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_medium_03.png"
+      }
+    },
+    {
+      "id": "cdc_medium_04",
+      "type": "true_false",
+      "prompt": "q1 should not fan into dst combinational logic.",
+      "answer": true,
+      "explain": "Treat CDC seriously; 2-FF is for single-bit control-class signals.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_medium_04.png"
+      }
+    },
+    {
+      "id": "cdc_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Role of the second flop in a 2-FF sync?",
+      "choices": [
+        "Gives settle time before use",
+        "Removes the need for any sync",
+        "Makes multi-bit buses safe alone",
+        "Stops the source clock"
+      ],
+      "answer": 0,
+      "explain": "Second sample after metastability window.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_medium_05.png"
+      }
+    },
+    {
+      "id": "cdc_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Taking sync_out from q1 alone…",
+      "choices": [
+        "Logic may consume a metastable q1",
+        "It doubles max clock frequency always",
+        "It forces Gray pointers",
+        "It deletes async_in"
+      ],
+      "answer": 0,
+      "explain": "No settle flop before use.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_medium_06.png"
+      }
+    },
+    {
+      "id": "cdc_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Bit skew after independent synchronizers…",
+      "choices": [
+        "Bits settling on different cycles / illegal codes",
+        "Always improving MTBF enough alone",
+        "Forcing one-hot FSMs",
+        "Removing CDC constraints"
+      ],
+      "answer": 0,
+      "explain": "Skewed bits can form illegal intermediate values.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_medium_07.png"
+      }
+    },
+    {
+      "id": "cdc_medium_08",
+      "type": "true_false",
+      "prompt": "q1 should not fan into dst combinational logic.",
+      "answer": true,
+      "explain": "Treat CDC seriously; 2-FF is for single-bit control-class signals.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_medium_08.png"
+      }
+    },
+    {
+      "id": "cdc_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Role of the second flop in a 2-FF sync?",
+      "choices": [
+        "Gives settle time before use",
+        "Removes the need for any sync",
+        "Makes multi-bit buses safe alone",
+        "Stops the source clock"
+      ],
+      "answer": 0,
+      "explain": "Second sample after metastability window.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_medium_09.png"
+      }
+    },
+    {
+      "id": "cdc_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Taking sync_out from q1 alone…",
+      "choices": [
+        "Logic may consume a metastable q1",
+        "It doubles max clock frequency always",
+        "It forces Gray pointers",
+        "It deletes async_in"
+      ],
+      "answer": 0,
+      "explain": "No settle flop before use.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_medium_10.png"
+      }
+    },
+    {
+      "id": "cdc_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Bit skew after independent synchronizers…",
+      "choices": [
+        "Bits settling on different cycles / illegal codes",
+        "Always improving MTBF enough alone",
+        "Forcing one-hot FSMs",
+        "Removing CDC constraints"
+      ],
+      "answer": 0,
+      "explain": "Skewed bits can form illegal intermediate values.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_medium_11.png"
+      }
+    },
+    {
+      "id": "cdc_medium_12",
+      "type": "true_false",
+      "prompt": "q1 should not fan into dst combinational logic.",
+      "answer": true,
+      "explain": "Treat CDC seriously; 2-FF is for single-bit control-class signals.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_medium_12.png"
+      }
+    },
+    {
+      "id": "cdc_medium_13",
+      "type": "multiple_choice",
+      "prompt": "Role of the second flop in a 2-FF sync?",
+      "choices": [
+        "Gives settle time before use",
+        "Removes the need for any sync",
+        "Makes multi-bit buses safe alone",
+        "Stops the source clock"
+      ],
+      "answer": 0,
+      "explain": "Second sample after metastability window.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_medium_13.png"
+      }
+    },
+    {
+      "id": "cdc_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Taking sync_out from q1 alone…",
+      "choices": [
+        "Logic may consume a metastable q1",
+        "It doubles max clock frequency always",
+        "It forces Gray pointers",
+        "It deletes async_in"
+      ],
+      "answer": 0,
+      "explain": "No settle flop before use.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_medium_14.png"
+      }
+    },
+    {
+      "id": "cdc_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Bit skew after independent synchronizers…",
+      "choices": [
+        "Bits settling on different cycles / illegal codes",
+        "Always improving MTBF enough alone",
+        "Forcing one-hot FSMs",
+        "Removing CDC constraints"
+      ],
+      "answer": 0,
+      "explain": "Skewed bits can form illegal intermediate values.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_medium_15.png"
+      }
+    },
+    {
+      "id": "cdc_medium_16",
+      "type": "true_false",
+      "prompt": "q1 should not fan into dst combinational logic.",
+      "answer": true,
+      "explain": "Treat CDC seriously; 2-FF is for single-bit control-class signals.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_medium_16.png"
+      }
+    },
+    {
+      "id": "cdc_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Role of the second flop in a 2-FF sync?",
+      "choices": [
+        "Gives settle time before use",
+        "Removes the need for any sync",
+        "Makes multi-bit buses safe alone",
+        "Stops the source clock"
+      ],
+      "answer": 0,
+      "explain": "Second sample after metastability window.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_medium_17.png"
+      }
+    },
+    {
+      "id": "cdc_medium_18",
+      "type": "multiple_choice",
+      "prompt": "Taking sync_out from q1 alone…",
+      "choices": [
+        "Logic may consume a metastable q1",
+        "It doubles max clock frequency always",
+        "It forces Gray pointers",
+        "It deletes async_in"
+      ],
+      "answer": 0,
+      "explain": "No settle flop before use.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_medium_18.png"
+      }
+    },
+    {
+      "id": "cdc_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Bit skew after independent synchronizers…",
+      "choices": [
+        "Bits settling on different cycles / illegal codes",
+        "Always improving MTBF enough alone",
+        "Forcing one-hot FSMs",
+        "Removing CDC constraints"
+      ],
+      "answer": 0,
+      "explain": "Skewed bits can form illegal intermediate values.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_medium_19.png"
+      }
+    },
+    {
+      "id": "cdc_medium_20",
+      "type": "true_false",
+      "prompt": "q1 should not fan into dst combinational logic.",
+      "answer": true,
+      "explain": "Treat CDC seriously; 2-FF is for single-bit control-class signals.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_medium_20.png"
+      }
+    },
+    {
+      "id": "cdc_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Role of the second flop in a 2-FF sync?",
+      "choices": [
+        "Gives settle time before use",
+        "Removes the need for any sync",
+        "Makes multi-bit buses safe alone",
+        "Stops the source clock"
+      ],
+      "answer": 0,
+      "explain": "Second sample after metastability window.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_medium_21.png"
+      }
+    },
+    {
+      "id": "cdc_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Taking sync_out from q1 alone…",
+      "choices": [
+        "Logic may consume a metastable q1",
+        "It doubles max clock frequency always",
+        "It forces Gray pointers",
+        "It deletes async_in"
+      ],
+      "answer": 0,
+      "explain": "No settle flop before use.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_medium_22.png"
+      }
+    },
+    {
+      "id": "cdc_medium_23",
+      "type": "multiple_choice",
+      "prompt": "Bit skew after independent synchronizers…",
+      "choices": [
+        "Bits settling on different cycles / illegal codes",
+        "Always improving MTBF enough alone",
+        "Forcing one-hot FSMs",
+        "Removing CDC constraints"
+      ],
+      "answer": 0,
+      "explain": "Skewed bits can form illegal intermediate values.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_medium_23.png"
+      }
+    },
+    {
+      "id": "cdc_medium_24",
+      "type": "true_false",
+      "prompt": "q1 should not fan into dst combinational logic.",
+      "answer": true,
+      "explain": "Treat CDC seriously; 2-FF is for single-bit control-class signals.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_medium_24.png"
+      }
+    },
+    {
+      "id": "cdc_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Role of the second flop in a 2-FF sync?",
+      "choices": [
+        "Gives settle time before use",
+        "Removes the need for any sync",
+        "Makes multi-bit buses safe alone",
+        "Stops the source clock"
+      ],
+      "answer": 0,
+      "explain": "Second sample after metastability window.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_medium_25.png"
+      }
+    },
+    {
+      "id": "cdc_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Taking sync_out from q1 alone…",
+      "choices": [
+        "Logic may consume a metastable q1",
+        "It doubles max clock frequency always",
+        "It forces Gray pointers",
+        "It deletes async_in"
+      ],
+      "answer": 0,
+      "explain": "No settle flop before use.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_medium_26.png"
+      }
+    },
+    {
+      "id": "cdc_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Bit skew after independent synchronizers…",
+      "choices": [
+        "Bits settling on different cycles / illegal codes",
+        "Always improving MTBF enough alone",
+        "Forcing one-hot FSMs",
+        "Removing CDC constraints"
+      ],
+      "answer": 0,
+      "explain": "Skewed bits can form illegal intermediate values.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_medium_27.png"
+      }
+    },
+    {
+      "id": "cdc_medium_28",
+      "type": "true_false",
+      "prompt": "q1 should not fan into dst combinational logic.",
+      "answer": true,
+      "explain": "Treat CDC seriously; 2-FF is for single-bit control-class signals.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_medium_28.png"
+      }
+    },
+    {
+      "id": "cdc_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Role of the second flop in a 2-FF sync?",
+      "choices": [
+        "Gives settle time before use",
+        "Removes the need for any sync",
+        "Makes multi-bit buses safe alone",
+        "Stops the source clock"
+      ],
+      "answer": 0,
+      "explain": "Second sample after metastability window.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_medium_29.png"
+      }
+    },
+    {
+      "id": "cdc_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Taking sync_out from q1 alone…",
+      "choices": [
+        "Logic may consume a metastable q1",
+        "It doubles max clock frequency always",
+        "It forces Gray pointers",
+        "It deletes async_in"
+      ],
+      "answer": 0,
+      "explain": "No settle flop before use.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_medium_30.png"
+      }
+    },
+    {
+      "id": "cdc_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Real CDC work beyond the lab still needs…",
+      "choices": [
+        "CDC constraints, sync cells, and data protocols",
+        "Only deleting clocks",
+        "Per-bit 2-FF on every wide bus",
+        "Using async_in as dst combo input"
+      ],
+      "answer": 0,
+      "explain": "Constraints, cells, and proper data-path protocols.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_hard_01.png"
+      }
+    },
+    {
+      "id": "cdc_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Which chain matches q1<=async_in; q2<=q1?",
+      "choices": [
+        "always @(posedge clk_dst) begin q1<=async_in; q2<=q1; end",
+        "assign sync_out = async_in;",
+        "always @(*) q2 = async_in;",
+        "always @(posedge clk_src) q2 <= q1;"
+      ],
+      "answer": 0,
+      "explain": "Both flops in the destination domain; use q2.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_hard_02.png"
+      }
+    },
+    {
+      "id": "cdc_hard_03",
+      "type": "multiple_choice",
+      "prompt": "Metastable indication on the first sync flop…",
+      "choices": [
+        "Metastable / unresolved until it settles",
+        "Guaranteed legal Gray code",
+        "Identical to q2 always",
+        "Driven by the source clock tree"
+      ],
+      "answer": 0,
+      "explain": "First flop can go metastable; wait for q2.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_hard_03.png"
+      }
+    },
+    {
+      "id": "cdc_hard_04",
+      "type": "true_false",
+      "prompt": "Source changing while dst samples is the core CDC hazard.",
+      "answer": true,
+      "explain": "Protocols for multi-bit; 2-FF alone is not enough for buses.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_hard_04.png"
+      }
+    },
+    {
+      "id": "cdc_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Real CDC work beyond the lab still needs…",
+      "choices": [
+        "CDC constraints, sync cells, and data protocols",
+        "Only deleting clocks",
+        "Per-bit 2-FF on every wide bus",
+        "Using async_in as dst combo input"
+      ],
+      "answer": 0,
+      "explain": "Constraints, cells, and proper data-path protocols.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_hard_05.png"
+      }
+    },
+    {
+      "id": "cdc_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Which chain matches q1<=async_in; q2<=q1?",
+      "choices": [
+        "always @(posedge clk_dst) begin q1<=async_in; q2<=q1; end",
+        "assign sync_out = async_in;",
+        "always @(*) q2 = async_in;",
+        "always @(posedge clk_src) q2 <= q1;"
+      ],
+      "answer": 0,
+      "explain": "Both flops in the destination domain; use q2.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_hard_06.png"
+      }
+    },
+    {
+      "id": "cdc_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Metastable indication on the first sync flop…",
+      "choices": [
+        "Metastable / unresolved until it settles",
+        "Guaranteed legal Gray code",
+        "Identical to q2 always",
+        "Driven by the source clock tree"
+      ],
+      "answer": 0,
+      "explain": "First flop can go metastable; wait for q2.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_hard_07.png"
+      }
+    },
+    {
+      "id": "cdc_hard_08",
+      "type": "true_false",
+      "prompt": "Source changing while dst samples is the core CDC hazard.",
+      "answer": true,
+      "explain": "Protocols for multi-bit; 2-FF alone is not enough for buses.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_hard_08.png"
+      }
+    },
+    {
+      "id": "cdc_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Real CDC work beyond the lab still needs…",
+      "choices": [
+        "CDC constraints, sync cells, and data protocols",
+        "Only deleting clocks",
+        "Per-bit 2-FF on every wide bus",
+        "Using async_in as dst combo input"
+      ],
+      "answer": 0,
+      "explain": "Constraints, cells, and proper data-path protocols.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_hard_09.png"
+      }
+    },
+    {
+      "id": "cdc_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Which chain matches q1<=async_in; q2<=q1?",
+      "choices": [
+        "always @(posedge clk_dst) begin q1<=async_in; q2<=q1; end",
+        "assign sync_out = async_in;",
+        "always @(*) q2 = async_in;",
+        "always @(posedge clk_src) q2 <= q1;"
+      ],
+      "answer": 0,
+      "explain": "Both flops in the destination domain; use q2.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_hard_10.png"
+      }
+    },
+    {
+      "id": "cdc_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Metastable indication on the first sync flop…",
+      "choices": [
+        "Metastable / unresolved until it settles",
+        "Guaranteed legal Gray code",
+        "Identical to q2 always",
+        "Driven by the source clock tree"
+      ],
+      "answer": 0,
+      "explain": "First flop can go metastable; wait for q2.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_hard_11.png"
+      }
+    },
+    {
+      "id": "cdc_hard_12",
+      "type": "true_false",
+      "prompt": "Source changing while dst samples is the core CDC hazard.",
+      "answer": true,
+      "explain": "Protocols for multi-bit; 2-FF alone is not enough for buses.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_hard_12.png"
+      }
+    },
+    {
+      "id": "cdc_hard_13",
+      "type": "multiple_choice",
+      "prompt": "Real CDC work beyond the lab still needs…",
+      "choices": [
+        "CDC constraints, sync cells, and data protocols",
+        "Only deleting clocks",
+        "Per-bit 2-FF on every wide bus",
+        "Using async_in as dst combo input"
+      ],
+      "answer": 0,
+      "explain": "Constraints, cells, and proper data-path protocols.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_hard_13.png"
+      }
+    },
+    {
+      "id": "cdc_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Which chain matches q1<=async_in; q2<=q1?",
+      "choices": [
+        "always @(posedge clk_dst) begin q1<=async_in; q2<=q1; end",
+        "assign sync_out = async_in;",
+        "always @(*) q2 = async_in;",
+        "always @(posedge clk_src) q2 <= q1;"
+      ],
+      "answer": 0,
+      "explain": "Both flops in the destination domain; use q2.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_hard_14.png"
+      }
+    },
+    {
+      "id": "cdc_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Metastable indication on the first sync flop…",
+      "choices": [
+        "Metastable / unresolved until it settles",
+        "Guaranteed legal Gray code",
+        "Identical to q2 always",
+        "Driven by the source clock tree"
+      ],
+      "answer": 0,
+      "explain": "First flop can go metastable; wait for q2.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_hard_15.png"
+      }
+    },
+    {
+      "id": "cdc_hard_16",
+      "type": "true_false",
+      "prompt": "Source changing while dst samples is the core CDC hazard.",
+      "answer": true,
+      "explain": "Protocols for multi-bit; 2-FF alone is not enough for buses.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_hard_16.png"
+      }
+    },
+    {
+      "id": "cdc_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Real CDC work beyond the lab still needs…",
+      "choices": [
+        "CDC constraints, sync cells, and data protocols",
+        "Only deleting clocks",
+        "Per-bit 2-FF on every wide bus",
+        "Using async_in as dst combo input"
+      ],
+      "answer": 0,
+      "explain": "Constraints, cells, and proper data-path protocols.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_hard_17.png"
+      }
+    },
+    {
+      "id": "cdc_hard_18",
+      "type": "multiple_choice",
+      "prompt": "Which chain matches q1<=async_in; q2<=q1?",
+      "choices": [
+        "always @(posedge clk_dst) begin q1<=async_in; q2<=q1; end",
+        "assign sync_out = async_in;",
+        "always @(*) q2 = async_in;",
+        "always @(posedge clk_src) q2 <= q1;"
+      ],
+      "answer": 0,
+      "explain": "Both flops in the destination domain; use q2.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_hard_18.png"
+      }
+    },
+    {
+      "id": "cdc_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Metastable indication on the first sync flop…",
+      "choices": [
+        "Metastable / unresolved until it settles",
+        "Guaranteed legal Gray code",
+        "Identical to q2 always",
+        "Driven by the source clock tree"
+      ],
+      "answer": 0,
+      "explain": "First flop can go metastable; wait for q2.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_hard_19.png"
+      }
+    },
+    {
+      "id": "cdc_hard_20",
+      "type": "true_false",
+      "prompt": "Source changing while dst samples is the core CDC hazard.",
+      "answer": true,
+      "explain": "Protocols for multi-bit; 2-FF alone is not enough for buses.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_hard_20.png"
+      }
+    },
+    {
+      "id": "cdc_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Real CDC work beyond the lab still needs…",
+      "choices": [
+        "CDC constraints, sync cells, and data protocols",
+        "Only deleting clocks",
+        "Per-bit 2-FF on every wide bus",
+        "Using async_in as dst combo input"
+      ],
+      "answer": 0,
+      "explain": "Constraints, cells, and proper data-path protocols.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_hard_21.png"
+      }
+    },
+    {
+      "id": "cdc_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Which chain matches q1<=async_in; q2<=q1?",
+      "choices": [
+        "always @(posedge clk_dst) begin q1<=async_in; q2<=q1; end",
+        "assign sync_out = async_in;",
+        "always @(*) q2 = async_in;",
+        "always @(posedge clk_src) q2 <= q1;"
+      ],
+      "answer": 0,
+      "explain": "Both flops in the destination domain; use q2.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_hard_22.png"
+      }
+    },
+    {
+      "id": "cdc_hard_23",
+      "type": "multiple_choice",
+      "prompt": "Metastable indication on the first sync flop…",
+      "choices": [
+        "Metastable / unresolved until it settles",
+        "Guaranteed legal Gray code",
+        "Identical to q2 always",
+        "Driven by the source clock tree"
+      ],
+      "answer": 0,
+      "explain": "First flop can go metastable; wait for q2.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_hard_23.png"
+      }
+    },
+    {
+      "id": "cdc_hard_24",
+      "type": "true_false",
+      "prompt": "Source changing while dst samples is the core CDC hazard.",
+      "answer": true,
+      "explain": "Protocols for multi-bit; 2-FF alone is not enough for buses.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_hard_24.png"
+      }
+    },
+    {
+      "id": "cdc_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Real CDC work beyond the lab still needs…",
+      "choices": [
+        "CDC constraints, sync cells, and data protocols",
+        "Only deleting clocks",
+        "Per-bit 2-FF on every wide bus",
+        "Using async_in as dst combo input"
+      ],
+      "answer": 0,
+      "explain": "Constraints, cells, and proper data-path protocols.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_hard_25.png"
+      }
+    },
+    {
+      "id": "cdc_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Which chain matches q1<=async_in; q2<=q1?",
+      "choices": [
+        "always @(posedge clk_dst) begin q1<=async_in; q2<=q1; end",
+        "assign sync_out = async_in;",
+        "always @(*) q2 = async_in;",
+        "always @(posedge clk_src) q2 <= q1;"
+      ],
+      "answer": 0,
+      "explain": "Both flops in the destination domain; use q2.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_hard_26.png"
+      }
+    },
+    {
+      "id": "cdc_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Metastable indication on the first sync flop…",
+      "choices": [
+        "Metastable / unresolved until it settles",
+        "Guaranteed legal Gray code",
+        "Identical to q2 always",
+        "Driven by the source clock tree"
+      ],
+      "answer": 0,
+      "explain": "First flop can go metastable; wait for q2.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_hard_27.png"
+      }
+    },
+    {
+      "id": "cdc_hard_28",
+      "type": "true_false",
+      "prompt": "Source changing while dst samples is the core CDC hazard.",
+      "answer": true,
+      "explain": "Protocols for multi-bit; 2-FF alone is not enough for buses.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_hard_28.png"
+      }
+    },
+    {
+      "id": "cdc_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Real CDC work beyond the lab still needs…",
+      "choices": [
+        "CDC constraints, sync cells, and data protocols",
+        "Only deleting clocks",
+        "Per-bit 2-FF on every wide bus",
+        "Using async_in as dst combo input"
+      ],
+      "answer": 0,
+      "explain": "Constraints, cells, and proper data-path protocols.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_hard_29.png"
+      }
+    },
+    {
+      "id": "cdc_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Which chain matches q1<=async_in; q2<=q1?",
+      "choices": [
+        "always @(posedge clk_dst) begin q1<=async_in; q2<=q1; end",
+        "assign sync_out = async_in;",
+        "always @(*) q2 = async_in;",
+        "always @(posedge clk_src) q2 <= q1;"
+      ],
+      "answer": 0,
+      "explain": "Both flops in the destination domain; use q2.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "cdc-sync",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#cdc-starter"
+          }
+        ]
+      },
+      "media": {
+        "figure": "media/images/cdc_hard_30.png"
+      }
+    }
+  ]
+}

@@ -1,0 +1,2580 @@
+{
+  "module": "module08-fixed-point",
+  "title": "Fixed-point Qm.n",
+  "items": [
+    {
+      "id": "fixed_easy_01",
+      "type": "multiple_choice",
+      "prompt": "Decoding a signed Qm.n raw value divides by…",
+      "choices": [
+        "2^m",
+        "2^n",
+        "m+n",
+        "10^n"
+      ],
+      "answer": 1,
+      "explain": "Real ≈ signed_raw / 2^n.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_easy_01.mp4",
+        "poster": "media/images/fixed_easy_01-frame.png",
+        "figure": "media/images/fixed_easy_01.png"
+      }
+    },
+    {
+      "id": "fixed_easy_02",
+      "type": "multiple_choice",
+      "prompt": "One LSB in Qm.n equals…",
+      "choices": [
+        "2^m",
+        "2^-n",
+        "1",
+        "0.1"
+      ],
+      "answer": 1,
+      "explain": "Step size is 2^-n.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_easy_02.mp4",
+        "poster": "media/images/fixed_easy_02-frame.png",
+        "figure": "media/images/fixed_easy_02.png"
+      }
+    },
+    {
+      "id": "fixed_easy_03",
+      "type": "multiple_choice",
+      "prompt": "m + n in the lab means…",
+      "choices": [
+        "m only",
+        "n only",
+        "m+n",
+        "2^(m+n)"
+      ],
+      "answer": 2,
+      "explain": "W = m + n (m includes sign here).",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_easy_03.mp4",
+        "poster": "media/images/fixed_easy_03-frame.png",
+        "figure": "media/images/fixed_easy_03.png"
+      }
+    },
+    {
+      "id": "fixed_easy_04",
+      "type": "true_false",
+      "prompt": "Qm.n raw bits are already IEEE floats.",
+      "answer": false,
+      "explain": "Scale by 2^n; raw ≠ float encoding.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_easy_04.mp4",
+        "poster": "media/images/fixed_easy_04-frame.png",
+        "figure": "media/images/fixed_easy_04.png"
+      }
+    },
+    {
+      "id": "fixed_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Decoding a signed Qm.n raw value divides by…",
+      "choices": [
+        "2^m",
+        "2^n",
+        "m+n",
+        "10^n"
+      ],
+      "answer": 1,
+      "explain": "Real ≈ signed_raw / 2^n.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_easy_05.mp4",
+        "poster": "media/images/fixed_easy_05-frame.png",
+        "figure": "media/images/fixed_easy_05.png"
+      }
+    },
+    {
+      "id": "fixed_easy_06",
+      "type": "multiple_choice",
+      "prompt": "One LSB in Qm.n equals…",
+      "choices": [
+        "2^m",
+        "2^-n",
+        "1",
+        "0.1"
+      ],
+      "answer": 1,
+      "explain": "Step size is 2^-n.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_easy_06.mp4",
+        "poster": "media/images/fixed_easy_06-frame.png",
+        "figure": "media/images/fixed_easy_06.png"
+      }
+    },
+    {
+      "id": "fixed_easy_07",
+      "type": "multiple_choice",
+      "prompt": "m + n in the lab means…",
+      "choices": [
+        "m only",
+        "n only",
+        "m+n",
+        "2^(m+n)"
+      ],
+      "answer": 2,
+      "explain": "W = m + n (m includes sign here).",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_easy_07.mp4",
+        "poster": "media/images/fixed_easy_07-frame.png",
+        "figure": "media/images/fixed_easy_07.png"
+      }
+    },
+    {
+      "id": "fixed_easy_08",
+      "type": "true_false",
+      "prompt": "Qm.n raw bits are already IEEE floats.",
+      "answer": false,
+      "explain": "Scale by 2^n; raw ≠ float encoding.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_easy_08.mp4",
+        "poster": "media/images/fixed_easy_08-frame.png",
+        "figure": "media/images/fixed_easy_08.png"
+      }
+    },
+    {
+      "id": "fixed_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Decoding a signed Qm.n raw value divides by…",
+      "choices": [
+        "2^m",
+        "2^n",
+        "m+n",
+        "10^n"
+      ],
+      "answer": 1,
+      "explain": "Real ≈ signed_raw / 2^n.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_easy_09.mp4",
+        "poster": "media/images/fixed_easy_09-frame.png",
+        "figure": "media/images/fixed_easy_09.png"
+      }
+    },
+    {
+      "id": "fixed_easy_10",
+      "type": "multiple_choice",
+      "prompt": "One LSB in Qm.n equals…",
+      "choices": [
+        "2^m",
+        "2^-n",
+        "1",
+        "0.1"
+      ],
+      "answer": 1,
+      "explain": "Step size is 2^-n.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_easy_10.mp4",
+        "poster": "media/images/fixed_easy_10-frame.png",
+        "figure": "media/images/fixed_easy_10.png"
+      }
+    },
+    {
+      "id": "fixed_easy_11",
+      "type": "multiple_choice",
+      "prompt": "m + n in the lab means…",
+      "choices": [
+        "m only",
+        "n only",
+        "m+n",
+        "2^(m+n)"
+      ],
+      "answer": 2,
+      "explain": "W = m + n (m includes sign here).",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_easy_11.mp4",
+        "poster": "media/images/fixed_easy_11-frame.png",
+        "figure": "media/images/fixed_easy_11.png"
+      }
+    },
+    {
+      "id": "fixed_easy_12",
+      "type": "true_false",
+      "prompt": "Qm.n raw bits are already IEEE floats.",
+      "answer": false,
+      "explain": "Scale by 2^n; raw ≠ float encoding.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_easy_12.mp4",
+        "poster": "media/images/fixed_easy_12-frame.png",
+        "figure": "media/images/fixed_easy_12.png"
+      }
+    },
+    {
+      "id": "fixed_easy_13",
+      "type": "multiple_choice",
+      "prompt": "Decoding a signed Qm.n raw value divides by…",
+      "choices": [
+        "2^m",
+        "2^n",
+        "m+n",
+        "10^n"
+      ],
+      "answer": 1,
+      "explain": "Real ≈ signed_raw / 2^n.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_easy_13.mp4",
+        "poster": "media/images/fixed_easy_13-frame.png",
+        "figure": "media/images/fixed_easy_13.png"
+      }
+    },
+    {
+      "id": "fixed_easy_14",
+      "type": "multiple_choice",
+      "prompt": "One LSB in Qm.n equals…",
+      "choices": [
+        "2^m",
+        "2^-n",
+        "1",
+        "0.1"
+      ],
+      "answer": 1,
+      "explain": "Step size is 2^-n.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_easy_14.mp4",
+        "poster": "media/images/fixed_easy_14-frame.png",
+        "figure": "media/images/fixed_easy_14.png"
+      }
+    },
+    {
+      "id": "fixed_easy_15",
+      "type": "multiple_choice",
+      "prompt": "m + n in the lab means…",
+      "choices": [
+        "m only",
+        "n only",
+        "m+n",
+        "2^(m+n)"
+      ],
+      "answer": 2,
+      "explain": "W = m + n (m includes sign here).",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_easy_15.mp4",
+        "poster": "media/images/fixed_easy_15-frame.png",
+        "figure": "media/images/fixed_easy_15.png"
+      }
+    },
+    {
+      "id": "fixed_easy_16",
+      "type": "true_false",
+      "prompt": "Qm.n raw bits are already IEEE floats.",
+      "answer": false,
+      "explain": "Scale by 2^n; raw ≠ float encoding.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_easy_16.mp4",
+        "poster": "media/images/fixed_easy_16-frame.png",
+        "figure": "media/images/fixed_easy_16.png"
+      }
+    },
+    {
+      "id": "fixed_easy_17",
+      "type": "multiple_choice",
+      "prompt": "Decoding a signed Qm.n raw value divides by…",
+      "choices": [
+        "2^m",
+        "2^n",
+        "m+n",
+        "10^n"
+      ],
+      "answer": 1,
+      "explain": "Real ≈ signed_raw / 2^n.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_easy_17.mp4",
+        "poster": "media/images/fixed_easy_17-frame.png",
+        "figure": "media/images/fixed_easy_17.png"
+      }
+    },
+    {
+      "id": "fixed_easy_18",
+      "type": "multiple_choice",
+      "prompt": "One LSB in Qm.n equals…",
+      "choices": [
+        "2^m",
+        "2^-n",
+        "1",
+        "0.1"
+      ],
+      "answer": 1,
+      "explain": "Step size is 2^-n.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_easy_18.mp4",
+        "poster": "media/images/fixed_easy_18-frame.png",
+        "figure": "media/images/fixed_easy_18.png"
+      }
+    },
+    {
+      "id": "fixed_easy_19",
+      "type": "multiple_choice",
+      "prompt": "m + n in the lab means…",
+      "choices": [
+        "m only",
+        "n only",
+        "m+n",
+        "2^(m+n)"
+      ],
+      "answer": 2,
+      "explain": "W = m + n (m includes sign here).",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_easy_19.mp4",
+        "poster": "media/images/fixed_easy_19-frame.png",
+        "figure": "media/images/fixed_easy_19.png"
+      }
+    },
+    {
+      "id": "fixed_easy_20",
+      "type": "true_false",
+      "prompt": "Qm.n raw bits are already IEEE floats.",
+      "answer": false,
+      "explain": "Scale by 2^n; raw ≠ float encoding.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_easy_20.mp4",
+        "poster": "media/images/fixed_easy_20-frame.png",
+        "figure": "media/images/fixed_easy_20.png"
+      }
+    },
+    {
+      "id": "fixed_easy_21",
+      "type": "multiple_choice",
+      "prompt": "Decoding a signed Qm.n raw value divides by…",
+      "choices": [
+        "2^m",
+        "2^n",
+        "m+n",
+        "10^n"
+      ],
+      "answer": 1,
+      "explain": "Real ≈ signed_raw / 2^n.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_easy_21.mp4",
+        "poster": "media/images/fixed_easy_21-frame.png",
+        "figure": "media/images/fixed_easy_21.png"
+      }
+    },
+    {
+      "id": "fixed_easy_22",
+      "type": "multiple_choice",
+      "prompt": "One LSB in Qm.n equals…",
+      "choices": [
+        "2^m",
+        "2^-n",
+        "1",
+        "0.1"
+      ],
+      "answer": 1,
+      "explain": "Step size is 2^-n.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_easy_22.mp4",
+        "poster": "media/images/fixed_easy_22-frame.png",
+        "figure": "media/images/fixed_easy_22.png"
+      }
+    },
+    {
+      "id": "fixed_easy_23",
+      "type": "multiple_choice",
+      "prompt": "m + n in the lab means…",
+      "choices": [
+        "m only",
+        "n only",
+        "m+n",
+        "2^(m+n)"
+      ],
+      "answer": 2,
+      "explain": "W = m + n (m includes sign here).",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_easy_23.mp4",
+        "poster": "media/images/fixed_easy_23-frame.png",
+        "figure": "media/images/fixed_easy_23.png"
+      }
+    },
+    {
+      "id": "fixed_easy_24",
+      "type": "true_false",
+      "prompt": "Qm.n raw bits are already IEEE floats.",
+      "answer": false,
+      "explain": "Scale by 2^n; raw ≠ float encoding.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_easy_24.mp4",
+        "poster": "media/images/fixed_easy_24-frame.png",
+        "figure": "media/images/fixed_easy_24.png"
+      }
+    },
+    {
+      "id": "fixed_easy_25",
+      "type": "multiple_choice",
+      "prompt": "Decoding a signed Qm.n raw value divides by…",
+      "choices": [
+        "2^m",
+        "2^n",
+        "m+n",
+        "10^n"
+      ],
+      "answer": 1,
+      "explain": "Real ≈ signed_raw / 2^n.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_easy_25.mp4",
+        "poster": "media/images/fixed_easy_25-frame.png",
+        "figure": "media/images/fixed_easy_25.png"
+      }
+    },
+    {
+      "id": "fixed_easy_26",
+      "type": "multiple_choice",
+      "prompt": "One LSB in Qm.n equals…",
+      "choices": [
+        "2^m",
+        "2^-n",
+        "1",
+        "0.1"
+      ],
+      "answer": 1,
+      "explain": "Step size is 2^-n.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_easy_26.mp4",
+        "poster": "media/images/fixed_easy_26-frame.png",
+        "figure": "media/images/fixed_easy_26.png"
+      }
+    },
+    {
+      "id": "fixed_easy_27",
+      "type": "multiple_choice",
+      "prompt": "m + n in the lab means…",
+      "choices": [
+        "m only",
+        "n only",
+        "m+n",
+        "2^(m+n)"
+      ],
+      "answer": 2,
+      "explain": "W = m + n (m includes sign here).",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_easy_27.mp4",
+        "poster": "media/images/fixed_easy_27-frame.png",
+        "figure": "media/images/fixed_easy_27.png"
+      }
+    },
+    {
+      "id": "fixed_easy_28",
+      "type": "true_false",
+      "prompt": "Qm.n raw bits are already IEEE floats.",
+      "answer": false,
+      "explain": "Scale by 2^n; raw ≠ float encoding.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_easy_28.mp4",
+        "poster": "media/images/fixed_easy_28-frame.png",
+        "figure": "media/images/fixed_easy_28.png"
+      }
+    },
+    {
+      "id": "fixed_easy_29",
+      "type": "multiple_choice",
+      "prompt": "Decoding a signed Qm.n raw value divides by…",
+      "choices": [
+        "2^m",
+        "2^n",
+        "m+n",
+        "10^n"
+      ],
+      "answer": 1,
+      "explain": "Real ≈ signed_raw / 2^n.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_easy_29.mp4",
+        "poster": "media/images/fixed_easy_29-frame.png",
+        "figure": "media/images/fixed_easy_29.png"
+      }
+    },
+    {
+      "id": "fixed_easy_30",
+      "type": "multiple_choice",
+      "prompt": "One LSB in Qm.n equals…",
+      "choices": [
+        "2^m",
+        "2^-n",
+        "1",
+        "0.1"
+      ],
+      "answer": 1,
+      "explain": "Step size is 2^-n.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_easy_30.mp4",
+        "poster": "media/images/fixed_easy_30-frame.png",
+        "figure": "media/images/fixed_easy_30.png"
+      }
+    },
+    {
+      "id": "fixed_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Q with n=4: raw 8 decodes to…",
+      "choices": [
+        "8",
+        "0.5",
+        "4.0",
+        "16"
+      ],
+      "answer": 1,
+      "explain": "8 / 2^4 = 0.5.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_medium_01.mp4",
+        "poster": "media/images/fixed_medium_01-frame.png",
+        "figure": "media/images/fixed_medium_01.png"
+      }
+    },
+    {
+      "id": "fixed_medium_02",
+      "type": "multiple_choice",
+      "prompt": "To encode, multiply the real by…",
+      "choices": [
+        "2^m",
+        "2^n (then round)",
+        "10^n only",
+        "m−n"
+      ],
+      "answer": 1,
+      "explain": "raw ≈ round(real × 2^n).",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_medium_02.mp4",
+        "poster": "media/images/fixed_medium_02-frame.png",
+        "figure": "media/images/fixed_medium_02.png"
+      }
+    },
+    {
+      "id": "fixed_medium_03",
+      "type": "multiple_choice",
+      "prompt": "Most-negative Q4.4 raw (−128) as real is…",
+      "choices": [
+        "−1",
+        "−8",
+        "−16",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "−128 / 16 = −8.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_medium_03.mp4",
+        "poster": "media/images/fixed_medium_03-frame.png",
+        "figure": "media/images/fixed_medium_03.png"
+      }
+    },
+    {
+      "id": "fixed_medium_04",
+      "type": "true_false",
+      "prompt": "Forgetting /2^n treats fixed-point as an integer by mistake.",
+      "answer": true,
+      "explain": "Sat ≠ wrap; scale is mandatory.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_medium_04.mp4",
+        "poster": "media/images/fixed_medium_04-frame.png",
+        "figure": "media/images/fixed_medium_04.png"
+      }
+    },
+    {
+      "id": "fixed_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Q with n=3: raw 8 decodes to…",
+      "choices": [
+        "8",
+        "1.0",
+        "4.0",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "8 / 2^3 = 1.0.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_medium_05.mp4",
+        "poster": "media/images/fixed_medium_05-frame.png",
+        "figure": "media/images/fixed_medium_05.png"
+      }
+    },
+    {
+      "id": "fixed_medium_06",
+      "type": "multiple_choice",
+      "prompt": "To encode, multiply the real by…",
+      "choices": [
+        "2^m",
+        "2^n (then round)",
+        "10^n only",
+        "m−n"
+      ],
+      "answer": 1,
+      "explain": "raw ≈ round(real × 2^n).",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_medium_06.mp4",
+        "poster": "media/images/fixed_medium_06-frame.png",
+        "figure": "media/images/fixed_medium_06.png"
+      }
+    },
+    {
+      "id": "fixed_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Most-negative Q4.4 raw (−128) as real is…",
+      "choices": [
+        "−1",
+        "−8",
+        "−16",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "−128 / 16 = −8.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_medium_07.mp4",
+        "poster": "media/images/fixed_medium_07-frame.png",
+        "figure": "media/images/fixed_medium_07.png"
+      }
+    },
+    {
+      "id": "fixed_medium_08",
+      "type": "true_false",
+      "prompt": "Forgetting /2^n treats fixed-point as an integer by mistake.",
+      "answer": true,
+      "explain": "Sat ≠ wrap; scale is mandatory.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_medium_08.mp4",
+        "poster": "media/images/fixed_medium_08-frame.png",
+        "figure": "media/images/fixed_medium_08.png"
+      }
+    },
+    {
+      "id": "fixed_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Q with n=4: raw 16 decodes to…",
+      "choices": [
+        "16",
+        "1.0",
+        "8.0",
+        "16"
+      ],
+      "answer": 1,
+      "explain": "16 / 2^4 = 1.0.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_medium_09.mp4",
+        "poster": "media/images/fixed_medium_09-frame.png",
+        "figure": "media/images/fixed_medium_09.png"
+      }
+    },
+    {
+      "id": "fixed_medium_10",
+      "type": "multiple_choice",
+      "prompt": "To encode, multiply the real by…",
+      "choices": [
+        "2^m",
+        "2^n (then round)",
+        "10^n only",
+        "m−n"
+      ],
+      "answer": 1,
+      "explain": "raw ≈ round(real × 2^n).",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_medium_10.mp4",
+        "poster": "media/images/fixed_medium_10-frame.png",
+        "figure": "media/images/fixed_medium_10.png"
+      }
+    },
+    {
+      "id": "fixed_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Most-negative Q4.4 raw (−128) as real is…",
+      "choices": [
+        "−1",
+        "−8",
+        "−16",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "−128 / 16 = −8.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_medium_11.mp4",
+        "poster": "media/images/fixed_medium_11-frame.png",
+        "figure": "media/images/fixed_medium_11.png"
+      }
+    },
+    {
+      "id": "fixed_medium_12",
+      "type": "true_false",
+      "prompt": "Forgetting /2^n treats fixed-point as an integer by mistake.",
+      "answer": true,
+      "explain": "Sat ≠ wrap; scale is mandatory.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_medium_12.mp4",
+        "poster": "media/images/fixed_medium_12-frame.png",
+        "figure": "media/images/fixed_medium_12.png"
+      }
+    },
+    {
+      "id": "fixed_medium_13",
+      "type": "multiple_choice",
+      "prompt": "Q with n=4: raw 8 decodes to…",
+      "choices": [
+        "8",
+        "0.5",
+        "4.0",
+        "16"
+      ],
+      "answer": 1,
+      "explain": "8 / 2^4 = 0.5.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_medium_13.mp4",
+        "poster": "media/images/fixed_medium_13-frame.png",
+        "figure": "media/images/fixed_medium_13.png"
+      }
+    },
+    {
+      "id": "fixed_medium_14",
+      "type": "multiple_choice",
+      "prompt": "To encode, multiply the real by…",
+      "choices": [
+        "2^m",
+        "2^n (then round)",
+        "10^n only",
+        "m−n"
+      ],
+      "answer": 1,
+      "explain": "raw ≈ round(real × 2^n).",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_medium_14.mp4",
+        "poster": "media/images/fixed_medium_14-frame.png",
+        "figure": "media/images/fixed_medium_14.png"
+      }
+    },
+    {
+      "id": "fixed_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Most-negative Q4.4 raw (−128) as real is…",
+      "choices": [
+        "−1",
+        "−8",
+        "−16",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "−128 / 16 = −8.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_medium_15.mp4",
+        "poster": "media/images/fixed_medium_15-frame.png",
+        "figure": "media/images/fixed_medium_15.png"
+      }
+    },
+    {
+      "id": "fixed_medium_16",
+      "type": "true_false",
+      "prompt": "Forgetting /2^n treats fixed-point as an integer by mistake.",
+      "answer": true,
+      "explain": "Sat ≠ wrap; scale is mandatory.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_medium_16.mp4",
+        "poster": "media/images/fixed_medium_16-frame.png",
+        "figure": "media/images/fixed_medium_16.png"
+      }
+    },
+    {
+      "id": "fixed_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Q with n=3: raw 8 decodes to…",
+      "choices": [
+        "8",
+        "1.0",
+        "4.0",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "8 / 2^3 = 1.0.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_medium_17.mp4",
+        "poster": "media/images/fixed_medium_17-frame.png",
+        "figure": "media/images/fixed_medium_17.png"
+      }
+    },
+    {
+      "id": "fixed_medium_18",
+      "type": "multiple_choice",
+      "prompt": "To encode, multiply the real by…",
+      "choices": [
+        "2^m",
+        "2^n (then round)",
+        "10^n only",
+        "m−n"
+      ],
+      "answer": 1,
+      "explain": "raw ≈ round(real × 2^n).",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_medium_18.mp4",
+        "poster": "media/images/fixed_medium_18-frame.png",
+        "figure": "media/images/fixed_medium_18.png"
+      }
+    },
+    {
+      "id": "fixed_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Most-negative Q4.4 raw (−128) as real is…",
+      "choices": [
+        "−1",
+        "−8",
+        "−16",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "−128 / 16 = −8.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_medium_19.mp4",
+        "poster": "media/images/fixed_medium_19-frame.png",
+        "figure": "media/images/fixed_medium_19.png"
+      }
+    },
+    {
+      "id": "fixed_medium_20",
+      "type": "true_false",
+      "prompt": "Forgetting /2^n treats fixed-point as an integer by mistake.",
+      "answer": true,
+      "explain": "Sat ≠ wrap; scale is mandatory.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_medium_20.mp4",
+        "poster": "media/images/fixed_medium_20-frame.png",
+        "figure": "media/images/fixed_medium_20.png"
+      }
+    },
+    {
+      "id": "fixed_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Q with n=4: raw 16 decodes to…",
+      "choices": [
+        "16",
+        "1.0",
+        "8.0",
+        "16"
+      ],
+      "answer": 1,
+      "explain": "16 / 2^4 = 1.0.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_medium_21.mp4",
+        "poster": "media/images/fixed_medium_21-frame.png",
+        "figure": "media/images/fixed_medium_21.png"
+      }
+    },
+    {
+      "id": "fixed_medium_22",
+      "type": "multiple_choice",
+      "prompt": "To encode, multiply the real by…",
+      "choices": [
+        "2^m",
+        "2^n (then round)",
+        "10^n only",
+        "m−n"
+      ],
+      "answer": 1,
+      "explain": "raw ≈ round(real × 2^n).",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_medium_22.mp4",
+        "poster": "media/images/fixed_medium_22-frame.png",
+        "figure": "media/images/fixed_medium_22.png"
+      }
+    },
+    {
+      "id": "fixed_medium_23",
+      "type": "multiple_choice",
+      "prompt": "Most-negative Q4.4 raw (−128) as real is…",
+      "choices": [
+        "−1",
+        "−8",
+        "−16",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "−128 / 16 = −8.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_medium_23.mp4",
+        "poster": "media/images/fixed_medium_23-frame.png",
+        "figure": "media/images/fixed_medium_23.png"
+      }
+    },
+    {
+      "id": "fixed_medium_24",
+      "type": "true_false",
+      "prompt": "Forgetting /2^n treats fixed-point as an integer by mistake.",
+      "answer": true,
+      "explain": "Sat ≠ wrap; scale is mandatory.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_medium_24.mp4",
+        "poster": "media/images/fixed_medium_24-frame.png",
+        "figure": "media/images/fixed_medium_24.png"
+      }
+    },
+    {
+      "id": "fixed_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Q with n=4: raw 8 decodes to…",
+      "choices": [
+        "8",
+        "0.5",
+        "4.0",
+        "16"
+      ],
+      "answer": 1,
+      "explain": "8 / 2^4 = 0.5.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_medium_25.mp4",
+        "poster": "media/images/fixed_medium_25-frame.png",
+        "figure": "media/images/fixed_medium_25.png"
+      }
+    },
+    {
+      "id": "fixed_medium_26",
+      "type": "multiple_choice",
+      "prompt": "To encode, multiply the real by…",
+      "choices": [
+        "2^m",
+        "2^n (then round)",
+        "10^n only",
+        "m−n"
+      ],
+      "answer": 1,
+      "explain": "raw ≈ round(real × 2^n).",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_medium_26.mp4",
+        "poster": "media/images/fixed_medium_26-frame.png",
+        "figure": "media/images/fixed_medium_26.png"
+      }
+    },
+    {
+      "id": "fixed_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Most-negative Q4.4 raw (−128) as real is…",
+      "choices": [
+        "−1",
+        "−8",
+        "−16",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "−128 / 16 = −8.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_medium_27.mp4",
+        "poster": "media/images/fixed_medium_27-frame.png",
+        "figure": "media/images/fixed_medium_27.png"
+      }
+    },
+    {
+      "id": "fixed_medium_28",
+      "type": "true_false",
+      "prompt": "Forgetting /2^n treats fixed-point as an integer by mistake.",
+      "answer": true,
+      "explain": "Sat ≠ wrap; scale is mandatory.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_medium_28.mp4",
+        "poster": "media/images/fixed_medium_28-frame.png",
+        "figure": "media/images/fixed_medium_28.png"
+      }
+    },
+    {
+      "id": "fixed_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Q with n=3: raw 8 decodes to…",
+      "choices": [
+        "8",
+        "1.0",
+        "4.0",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "8 / 2^3 = 1.0.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_medium_29.mp4",
+        "poster": "media/images/fixed_medium_29-frame.png",
+        "figure": "media/images/fixed_medium_29.png"
+      }
+    },
+    {
+      "id": "fixed_medium_30",
+      "type": "multiple_choice",
+      "prompt": "To encode, multiply the real by…",
+      "choices": [
+        "2^m",
+        "2^n (then round)",
+        "10^n only",
+        "m−n"
+      ],
+      "answer": 1,
+      "explain": "raw ≈ round(real × 2^n).",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_medium_30.mp4",
+        "poster": "media/images/fixed_medium_30-frame.png",
+        "figure": "media/images/fixed_medium_30.png"
+      }
+    },
+    {
+      "id": "fixed_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Multiplying two Q formats: fractional bits…",
+      "choices": [
+        "Stay max(a,b)",
+        "Add: a+b (before renormalizing)",
+        "Become zero",
+        "Become m+n"
+      ],
+      "answer": 1,
+      "explain": "Fraction widths add; then you shift/round to the target Q.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter-1.5",
+        "label": "Starter 1.5",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_hard_01.mp4",
+        "poster": "media/images/fixed_hard_01-frame.png",
+        "figure": "media/images/fixed_hard_01.png"
+      }
+    },
+    {
+      "id": "fixed_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Encode −1.25 into Q4.4. Closest raw (two’s) is…",
+      "choices": [
+        "−20",
+        "−16",
+        "−8",
+        "20"
+      ],
+      "answer": 0,
+      "explain": "−1.25 × 16 = −20.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_hard_02.mp4",
+        "poster": "media/images/fixed_hard_02-frame.png",
+        "figure": "media/images/fixed_hard_02.png"
+      }
+    },
+    {
+      "id": "fixed_hard_03",
+      "type": "true_false",
+      "prompt": "Fixed-point needs an overflow policy just like integer adders.",
+      "answer": true,
+      "explain": "Changing n reinterpretation changes the real; document Q and sat/wrap.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_hard_03.mp4",
+        "poster": "media/images/fixed_hard_03-frame.png",
+        "figure": "media/images/fixed_hard_03.png"
+      }
+    },
+    {
+      "id": "fixed_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Which mistake mis-scales fixed-point?",
+      "choices": [
+        "Always correct reals",
+        "Wrong magnitude by ~2^n",
+        "Removes need for n",
+        "Converts to Gray"
+      ],
+      "answer": 1,
+      "explain": "Must divide/multiply by 2^n for real meaning.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter-1.5",
+        "label": "Starter 1.5",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_hard_04.mp4",
+        "poster": "media/images/fixed_hard_04-frame.png",
+        "figure": "media/images/fixed_hard_04.png"
+      }
+    },
+    {
+      "id": "fixed_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Multiplying two Q formats: fractional bits…",
+      "choices": [
+        "Stay max(a,b)",
+        "Add: a+b (before renormalizing)",
+        "Become zero",
+        "Become m+n"
+      ],
+      "answer": 1,
+      "explain": "Fraction widths add; then you shift/round to the target Q.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter-1.5",
+        "label": "Starter 1.5",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_hard_05.mp4",
+        "poster": "media/images/fixed_hard_05-frame.png",
+        "figure": "media/images/fixed_hard_05.png"
+      }
+    },
+    {
+      "id": "fixed_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Encode −1.25 into Q4.4. Closest raw (two’s) is…",
+      "choices": [
+        "−20",
+        "−16",
+        "−8",
+        "20"
+      ],
+      "answer": 0,
+      "explain": "−1.25 × 16 = −20.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_hard_06.mp4",
+        "poster": "media/images/fixed_hard_06-frame.png",
+        "figure": "media/images/fixed_hard_06.png"
+      }
+    },
+    {
+      "id": "fixed_hard_07",
+      "type": "true_false",
+      "prompt": "Fixed-point needs an overflow policy just like integer adders.",
+      "answer": true,
+      "explain": "Changing n reinterpretation changes the real; document Q and sat/wrap.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_hard_07.mp4",
+        "poster": "media/images/fixed_hard_07-frame.png",
+        "figure": "media/images/fixed_hard_07.png"
+      }
+    },
+    {
+      "id": "fixed_hard_08",
+      "type": "multiple_choice",
+      "prompt": "Which mistake mis-scales fixed-point?",
+      "choices": [
+        "Always correct reals",
+        "Wrong magnitude by ~2^n",
+        "Removes need for n",
+        "Converts to Gray"
+      ],
+      "answer": 1,
+      "explain": "Must divide/multiply by 2^n for real meaning.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter-1.5",
+        "label": "Starter 1.5",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_hard_08.mp4",
+        "poster": "media/images/fixed_hard_08-frame.png",
+        "figure": "media/images/fixed_hard_08.png"
+      }
+    },
+    {
+      "id": "fixed_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Multiplying two Q formats: fractional bits…",
+      "choices": [
+        "Stay max(a,b)",
+        "Add: a+b (before renormalizing)",
+        "Become zero",
+        "Become m+n"
+      ],
+      "answer": 1,
+      "explain": "Fraction widths add; then you shift/round to the target Q.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter-1.5",
+        "label": "Starter 1.5",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_hard_09.mp4",
+        "poster": "media/images/fixed_hard_09-frame.png",
+        "figure": "media/images/fixed_hard_09.png"
+      }
+    },
+    {
+      "id": "fixed_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Encode −1.25 into Q4.4. Closest raw (two’s) is…",
+      "choices": [
+        "−20",
+        "−16",
+        "−8",
+        "20"
+      ],
+      "answer": 0,
+      "explain": "−1.25 × 16 = −20.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_hard_10.mp4",
+        "poster": "media/images/fixed_hard_10-frame.png",
+        "figure": "media/images/fixed_hard_10.png"
+      }
+    },
+    {
+      "id": "fixed_hard_11",
+      "type": "true_false",
+      "prompt": "Fixed-point needs an overflow policy just like integer adders.",
+      "answer": true,
+      "explain": "Changing n reinterpretation changes the real; document Q and sat/wrap.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_hard_11.mp4",
+        "poster": "media/images/fixed_hard_11-frame.png",
+        "figure": "media/images/fixed_hard_11.png"
+      }
+    },
+    {
+      "id": "fixed_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Which mistake mis-scales fixed-point?",
+      "choices": [
+        "Always correct reals",
+        "Wrong magnitude by ~2^n",
+        "Removes need for n",
+        "Converts to Gray"
+      ],
+      "answer": 1,
+      "explain": "Must divide/multiply by 2^n for real meaning.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter-1.5",
+        "label": "Starter 1.5",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_hard_12.mp4",
+        "poster": "media/images/fixed_hard_12-frame.png",
+        "figure": "media/images/fixed_hard_12.png"
+      }
+    },
+    {
+      "id": "fixed_hard_13",
+      "type": "multiple_choice",
+      "prompt": "Multiplying two Q formats: fractional bits…",
+      "choices": [
+        "Stay max(a,b)",
+        "Add: a+b (before renormalizing)",
+        "Become zero",
+        "Become m+n"
+      ],
+      "answer": 1,
+      "explain": "Fraction widths add; then you shift/round to the target Q.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter-1.5",
+        "label": "Starter 1.5",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_hard_13.mp4",
+        "poster": "media/images/fixed_hard_13-frame.png",
+        "figure": "media/images/fixed_hard_13.png"
+      }
+    },
+    {
+      "id": "fixed_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Encode −1.25 into Q4.4. Closest raw (two’s) is…",
+      "choices": [
+        "−20",
+        "−16",
+        "−8",
+        "20"
+      ],
+      "answer": 0,
+      "explain": "−1.25 × 16 = −20.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_hard_14.mp4",
+        "poster": "media/images/fixed_hard_14-frame.png",
+        "figure": "media/images/fixed_hard_14.png"
+      }
+    },
+    {
+      "id": "fixed_hard_15",
+      "type": "true_false",
+      "prompt": "Fixed-point needs an overflow policy just like integer adders.",
+      "answer": true,
+      "explain": "Changing n reinterpretation changes the real; document Q and sat/wrap.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_hard_15.mp4",
+        "poster": "media/images/fixed_hard_15-frame.png",
+        "figure": "media/images/fixed_hard_15.png"
+      }
+    },
+    {
+      "id": "fixed_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Which mistake mis-scales fixed-point?",
+      "choices": [
+        "Always correct reals",
+        "Wrong magnitude by ~2^n",
+        "Removes need for n",
+        "Converts to Gray"
+      ],
+      "answer": 1,
+      "explain": "Must divide/multiply by 2^n for real meaning.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter-1.5",
+        "label": "Starter 1.5",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_hard_16.mp4",
+        "poster": "media/images/fixed_hard_16-frame.png",
+        "figure": "media/images/fixed_hard_16.png"
+      }
+    },
+    {
+      "id": "fixed_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Multiplying two Q formats: fractional bits…",
+      "choices": [
+        "Stay max(a,b)",
+        "Add: a+b (before renormalizing)",
+        "Become zero",
+        "Become m+n"
+      ],
+      "answer": 1,
+      "explain": "Fraction widths add; then you shift/round to the target Q.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter-1.5",
+        "label": "Starter 1.5",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_hard_17.mp4",
+        "poster": "media/images/fixed_hard_17-frame.png",
+        "figure": "media/images/fixed_hard_17.png"
+      }
+    },
+    {
+      "id": "fixed_hard_18",
+      "type": "multiple_choice",
+      "prompt": "Encode −1.25 into Q4.4. Closest raw (two’s) is…",
+      "choices": [
+        "−20",
+        "−16",
+        "−8",
+        "20"
+      ],
+      "answer": 0,
+      "explain": "−1.25 × 16 = −20.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_hard_18.mp4",
+        "poster": "media/images/fixed_hard_18-frame.png",
+        "figure": "media/images/fixed_hard_18.png"
+      }
+    },
+    {
+      "id": "fixed_hard_19",
+      "type": "true_false",
+      "prompt": "Fixed-point needs an overflow policy just like integer adders.",
+      "answer": true,
+      "explain": "Changing n reinterpretation changes the real; document Q and sat/wrap.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_hard_19.mp4",
+        "poster": "media/images/fixed_hard_19-frame.png",
+        "figure": "media/images/fixed_hard_19.png"
+      }
+    },
+    {
+      "id": "fixed_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Which mistake mis-scales fixed-point?",
+      "choices": [
+        "Always correct reals",
+        "Wrong magnitude by ~2^n",
+        "Removes need for n",
+        "Converts to Gray"
+      ],
+      "answer": 1,
+      "explain": "Must divide/multiply by 2^n for real meaning.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter-1.5",
+        "label": "Starter 1.5",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_hard_20.mp4",
+        "poster": "media/images/fixed_hard_20-frame.png",
+        "figure": "media/images/fixed_hard_20.png"
+      }
+    },
+    {
+      "id": "fixed_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Multiplying two Q formats: fractional bits…",
+      "choices": [
+        "Stay max(a,b)",
+        "Add: a+b (before renormalizing)",
+        "Become zero",
+        "Become m+n"
+      ],
+      "answer": 1,
+      "explain": "Fraction widths add; then you shift/round to the target Q.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter-1.5",
+        "label": "Starter 1.5",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_hard_21.mp4",
+        "poster": "media/images/fixed_hard_21-frame.png",
+        "figure": "media/images/fixed_hard_21.png"
+      }
+    },
+    {
+      "id": "fixed_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Encode −1.25 into Q4.4. Closest raw (two’s) is…",
+      "choices": [
+        "−20",
+        "−16",
+        "−8",
+        "20"
+      ],
+      "answer": 0,
+      "explain": "−1.25 × 16 = −20.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_hard_22.mp4",
+        "poster": "media/images/fixed_hard_22-frame.png",
+        "figure": "media/images/fixed_hard_22.png"
+      }
+    },
+    {
+      "id": "fixed_hard_23",
+      "type": "true_false",
+      "prompt": "Fixed-point needs an overflow policy just like integer adders.",
+      "answer": true,
+      "explain": "Changing n reinterpretation changes the real; document Q and sat/wrap.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_hard_23.mp4",
+        "poster": "media/images/fixed_hard_23-frame.png",
+        "figure": "media/images/fixed_hard_23.png"
+      }
+    },
+    {
+      "id": "fixed_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Which mistake mis-scales fixed-point?",
+      "choices": [
+        "Always correct reals",
+        "Wrong magnitude by ~2^n",
+        "Removes need for n",
+        "Converts to Gray"
+      ],
+      "answer": 1,
+      "explain": "Must divide/multiply by 2^n for real meaning.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter-1.5",
+        "label": "Starter 1.5",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_hard_24.mp4",
+        "poster": "media/images/fixed_hard_24-frame.png",
+        "figure": "media/images/fixed_hard_24.png"
+      }
+    },
+    {
+      "id": "fixed_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Multiplying two Q formats: fractional bits…",
+      "choices": [
+        "Stay max(a,b)",
+        "Add: a+b (before renormalizing)",
+        "Become zero",
+        "Become m+n"
+      ],
+      "answer": 1,
+      "explain": "Fraction widths add; then you shift/round to the target Q.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter-1.5",
+        "label": "Starter 1.5",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_hard_25.mp4",
+        "poster": "media/images/fixed_hard_25-frame.png",
+        "figure": "media/images/fixed_hard_25.png"
+      }
+    },
+    {
+      "id": "fixed_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Encode −1.25 into Q4.4. Closest raw (two’s) is…",
+      "choices": [
+        "−20",
+        "−16",
+        "−8",
+        "20"
+      ],
+      "answer": 0,
+      "explain": "−1.25 × 16 = −20.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_hard_26.mp4",
+        "poster": "media/images/fixed_hard_26-frame.png",
+        "figure": "media/images/fixed_hard_26.png"
+      }
+    },
+    {
+      "id": "fixed_hard_27",
+      "type": "true_false",
+      "prompt": "Fixed-point needs an overflow policy just like integer adders.",
+      "answer": true,
+      "explain": "Changing n reinterpretation changes the real; document Q and sat/wrap.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_hard_27.mp4",
+        "poster": "media/images/fixed_hard_27-frame.png",
+        "figure": "media/images/fixed_hard_27.png"
+      }
+    },
+    {
+      "id": "fixed_hard_28",
+      "type": "multiple_choice",
+      "prompt": "Which mistake mis-scales fixed-point?",
+      "choices": [
+        "Always correct reals",
+        "Wrong magnitude by ~2^n",
+        "Removes need for n",
+        "Converts to Gray"
+      ],
+      "answer": 1,
+      "explain": "Must divide/multiply by 2^n for real meaning.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter-1.5",
+        "label": "Starter 1.5",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_hard_28.mp4",
+        "poster": "media/images/fixed_hard_28-frame.png",
+        "figure": "media/images/fixed_hard_28.png"
+      }
+    },
+    {
+      "id": "fixed_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Multiplying two Q formats: fractional bits…",
+      "choices": [
+        "Stay max(a,b)",
+        "Add: a+b (before renormalizing)",
+        "Become zero",
+        "Become m+n"
+      ],
+      "answer": 1,
+      "explain": "Fraction widths add; then you shift/round to the target Q.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter-1.5",
+        "label": "Starter 1.5",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_hard_29.mp4",
+        "poster": "media/images/fixed_hard_29-frame.png",
+        "figure": "media/images/fixed_hard_29.png"
+      }
+    },
+    {
+      "id": "fixed_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Encode −1.25 into Q4.4. Closest raw (two’s) is…",
+      "choices": [
+        "−20",
+        "−16",
+        "−8",
+        "20"
+      ],
+      "answer": 0,
+      "explain": "−1.25 × 16 = −20.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "fixed-point",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#fp-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/fixed_hard_30.mp4",
+        "poster": "media/images/fixed_hard_30-frame.png",
+        "figure": "media/images/fixed_hard_30.png"
+      }
+    }
+  ]
+}

@@ -1,0 +1,2580 @@
+{
+  "module": "module23-barrel-shifter",
+  "title": "Barrel shifter",
+  "items": [
+    {
+      "id": "barrel_easy_01",
+      "type": "multiple_choice",
+      "prompt": "An 8-bit barrel shifter needs how many mux stages?",
+      "choices": [
+        "7",
+        "3",
+        "8",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "⌈log₂8⌉ = 3 power-of-two stages.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_easy_01.mp4",
+        "poster": "media/images/barrel_easy_01-frame.png",
+        "figure": "media/images/barrel_easy_01.png"
+      }
+    },
+    {
+      "id": "barrel_easy_02",
+      "type": "multiple_choice",
+      "prompt": "11010010 << 3 equals…",
+      "choices": [
+        "0x90",
+        "0xD2",
+        "0x68",
+        "0xA4"
+      ],
+      "answer": 0,
+      "explain": "11010010 << 3 = 10010000 = 0x90.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_easy_02.mp4",
+        "poster": "media/images/barrel_easy_02-frame.png",
+        "figure": "media/images/barrel_easy_02.png"
+      }
+    },
+    {
+      "id": "barrel_easy_03",
+      "type": "multiple_choice",
+      "prompt": "Which power-of-two enables for amt=3?",
+      "choices": [
+        "×1 and ×2",
+        "×1 only",
+        "×4 only",
+        "×1, ×2, and ×4"
+      ],
+      "answer": 0,
+      "explain": "3 = 1+2 → stages 1 and 2.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_easy_03.mp4",
+        "poster": "media/images/barrel_easy_03-frame.png",
+        "figure": "media/images/barrel_easy_03.png"
+      }
+    },
+    {
+      "id": "barrel_easy_04",
+      "type": "true_false",
+      "prompt": "SRA and SRL always fill vacated bits with zeros.",
+      "answer": false,
+      "explain": "SRA sign-fills; SRL zero-fills.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "sra",
+        "label": "SRA preset",
+        "steps": [
+          {
+            "click": "#btn-sra"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_easy_04.mp4",
+        "poster": "media/images/barrel_easy_04-frame.png",
+        "figure": "media/images/barrel_easy_04.png"
+      }
+    },
+    {
+      "id": "barrel_easy_05",
+      "type": "multiple_choice",
+      "prompt": "An 8-bit barrel shifter needs how many mux stages?",
+      "choices": [
+        "7",
+        "3",
+        "8",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "⌈log₂8⌉ = 3 power-of-two stages.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_easy_05.mp4",
+        "poster": "media/images/barrel_easy_05-frame.png",
+        "figure": "media/images/barrel_easy_05.png"
+      }
+    },
+    {
+      "id": "barrel_easy_06",
+      "type": "multiple_choice",
+      "prompt": "11010010 << 3 equals…",
+      "choices": [
+        "0x90",
+        "0xD2",
+        "0x68",
+        "0xA4"
+      ],
+      "answer": 0,
+      "explain": "11010010 << 3 = 10010000 = 0x90.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_easy_06.mp4",
+        "poster": "media/images/barrel_easy_06-frame.png",
+        "figure": "media/images/barrel_easy_06.png"
+      }
+    },
+    {
+      "id": "barrel_easy_07",
+      "type": "multiple_choice",
+      "prompt": "Which power-of-two enables for amt=3?",
+      "choices": [
+        "×1 and ×2",
+        "×1 only",
+        "×4 only",
+        "×1, ×2, and ×4"
+      ],
+      "answer": 0,
+      "explain": "3 = 1+2 → stages 1 and 2.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_easy_07.mp4",
+        "poster": "media/images/barrel_easy_07-frame.png",
+        "figure": "media/images/barrel_easy_07.png"
+      }
+    },
+    {
+      "id": "barrel_easy_08",
+      "type": "true_false",
+      "prompt": "SRA and SRL always fill vacated bits with zeros.",
+      "answer": false,
+      "explain": "SRA sign-fills; SRL zero-fills.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "sra",
+        "label": "SRA preset",
+        "steps": [
+          {
+            "click": "#btn-sra"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_easy_08.mp4",
+        "poster": "media/images/barrel_easy_08-frame.png",
+        "figure": "media/images/barrel_easy_08.png"
+      }
+    },
+    {
+      "id": "barrel_easy_09",
+      "type": "multiple_choice",
+      "prompt": "An 8-bit barrel shifter needs how many mux stages?",
+      "choices": [
+        "7",
+        "3",
+        "8",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "⌈log₂8⌉ = 3 power-of-two stages.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_easy_09.mp4",
+        "poster": "media/images/barrel_easy_09-frame.png",
+        "figure": "media/images/barrel_easy_09.png"
+      }
+    },
+    {
+      "id": "barrel_easy_10",
+      "type": "multiple_choice",
+      "prompt": "11010010 << 3 equals…",
+      "choices": [
+        "0x90",
+        "0xD2",
+        "0x68",
+        "0xA4"
+      ],
+      "answer": 0,
+      "explain": "11010010 << 3 = 10010000 = 0x90.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_easy_10.mp4",
+        "poster": "media/images/barrel_easy_10-frame.png",
+        "figure": "media/images/barrel_easy_10.png"
+      }
+    },
+    {
+      "id": "barrel_easy_11",
+      "type": "multiple_choice",
+      "prompt": "Which power-of-two enables for amt=3?",
+      "choices": [
+        "×1 and ×2",
+        "×1 only",
+        "×4 only",
+        "×1, ×2, and ×4"
+      ],
+      "answer": 0,
+      "explain": "3 = 1+2 → stages 1 and 2.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_easy_11.mp4",
+        "poster": "media/images/barrel_easy_11-frame.png",
+        "figure": "media/images/barrel_easy_11.png"
+      }
+    },
+    {
+      "id": "barrel_easy_12",
+      "type": "true_false",
+      "prompt": "SRA and SRL always fill vacated bits with zeros.",
+      "answer": false,
+      "explain": "SRA sign-fills; SRL zero-fills.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "sra",
+        "label": "SRA preset",
+        "steps": [
+          {
+            "click": "#btn-sra"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_easy_12.mp4",
+        "poster": "media/images/barrel_easy_12-frame.png",
+        "figure": "media/images/barrel_easy_12.png"
+      }
+    },
+    {
+      "id": "barrel_easy_13",
+      "type": "multiple_choice",
+      "prompt": "An 8-bit barrel shifter needs how many mux stages?",
+      "choices": [
+        "7",
+        "3",
+        "8",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "⌈log₂8⌉ = 3 power-of-two stages.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_easy_13.mp4",
+        "poster": "media/images/barrel_easy_13-frame.png",
+        "figure": "media/images/barrel_easy_13.png"
+      }
+    },
+    {
+      "id": "barrel_easy_14",
+      "type": "multiple_choice",
+      "prompt": "11010010 << 3 equals…",
+      "choices": [
+        "0x90",
+        "0xD2",
+        "0x68",
+        "0xA4"
+      ],
+      "answer": 0,
+      "explain": "11010010 << 3 = 10010000 = 0x90.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_easy_14.mp4",
+        "poster": "media/images/barrel_easy_14-frame.png",
+        "figure": "media/images/barrel_easy_14.png"
+      }
+    },
+    {
+      "id": "barrel_easy_15",
+      "type": "multiple_choice",
+      "prompt": "Which power-of-two enables for amt=3?",
+      "choices": [
+        "×1 and ×2",
+        "×1 only",
+        "×4 only",
+        "×1, ×2, and ×4"
+      ],
+      "answer": 0,
+      "explain": "3 = 1+2 → stages 1 and 2.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_easy_15.mp4",
+        "poster": "media/images/barrel_easy_15-frame.png",
+        "figure": "media/images/barrel_easy_15.png"
+      }
+    },
+    {
+      "id": "barrel_easy_16",
+      "type": "true_false",
+      "prompt": "SRA and SRL always fill vacated bits with zeros.",
+      "answer": false,
+      "explain": "SRA sign-fills; SRL zero-fills.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "sra",
+        "label": "SRA preset",
+        "steps": [
+          {
+            "click": "#btn-sra"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_easy_16.mp4",
+        "poster": "media/images/barrel_easy_16-frame.png",
+        "figure": "media/images/barrel_easy_16.png"
+      }
+    },
+    {
+      "id": "barrel_easy_17",
+      "type": "multiple_choice",
+      "prompt": "An 8-bit barrel shifter needs how many mux stages?",
+      "choices": [
+        "7",
+        "3",
+        "8",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "⌈log₂8⌉ = 3 power-of-two stages.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_easy_17.mp4",
+        "poster": "media/images/barrel_easy_17-frame.png",
+        "figure": "media/images/barrel_easy_17.png"
+      }
+    },
+    {
+      "id": "barrel_easy_18",
+      "type": "multiple_choice",
+      "prompt": "11010010 << 3 equals…",
+      "choices": [
+        "0x90",
+        "0xD2",
+        "0x68",
+        "0xA4"
+      ],
+      "answer": 0,
+      "explain": "11010010 << 3 = 10010000 = 0x90.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_easy_18.mp4",
+        "poster": "media/images/barrel_easy_18-frame.png",
+        "figure": "media/images/barrel_easy_18.png"
+      }
+    },
+    {
+      "id": "barrel_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Which power-of-two enables for amt=3?",
+      "choices": [
+        "×1 and ×2",
+        "×1 only",
+        "×4 only",
+        "×1, ×2, and ×4"
+      ],
+      "answer": 0,
+      "explain": "3 = 1+2 → stages 1 and 2.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_easy_19.mp4",
+        "poster": "media/images/barrel_easy_19-frame.png",
+        "figure": "media/images/barrel_easy_19.png"
+      }
+    },
+    {
+      "id": "barrel_easy_20",
+      "type": "true_false",
+      "prompt": "SRA and SRL always fill vacated bits with zeros.",
+      "answer": false,
+      "explain": "SRA sign-fills; SRL zero-fills.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "sra",
+        "label": "SRA preset",
+        "steps": [
+          {
+            "click": "#btn-sra"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_easy_20.mp4",
+        "poster": "media/images/barrel_easy_20-frame.png",
+        "figure": "media/images/barrel_easy_20.png"
+      }
+    },
+    {
+      "id": "barrel_easy_21",
+      "type": "multiple_choice",
+      "prompt": "An 8-bit barrel shifter needs how many mux stages?",
+      "choices": [
+        "7",
+        "3",
+        "8",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "⌈log₂8⌉ = 3 power-of-two stages.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_easy_21.mp4",
+        "poster": "media/images/barrel_easy_21-frame.png",
+        "figure": "media/images/barrel_easy_21.png"
+      }
+    },
+    {
+      "id": "barrel_easy_22",
+      "type": "multiple_choice",
+      "prompt": "11010010 << 3 equals…",
+      "choices": [
+        "0x90",
+        "0xD2",
+        "0x68",
+        "0xA4"
+      ],
+      "answer": 0,
+      "explain": "11010010 << 3 = 10010000 = 0x90.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_easy_22.mp4",
+        "poster": "media/images/barrel_easy_22-frame.png",
+        "figure": "media/images/barrel_easy_22.png"
+      }
+    },
+    {
+      "id": "barrel_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Which power-of-two enables for amt=3?",
+      "choices": [
+        "×1 and ×2",
+        "×1 only",
+        "×4 only",
+        "×1, ×2, and ×4"
+      ],
+      "answer": 0,
+      "explain": "3 = 1+2 → stages 1 and 2.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_easy_23.mp4",
+        "poster": "media/images/barrel_easy_23-frame.png",
+        "figure": "media/images/barrel_easy_23.png"
+      }
+    },
+    {
+      "id": "barrel_easy_24",
+      "type": "true_false",
+      "prompt": "SRA and SRL always fill vacated bits with zeros.",
+      "answer": false,
+      "explain": "SRA sign-fills; SRL zero-fills.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "sra",
+        "label": "SRA preset",
+        "steps": [
+          {
+            "click": "#btn-sra"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_easy_24.mp4",
+        "poster": "media/images/barrel_easy_24-frame.png",
+        "figure": "media/images/barrel_easy_24.png"
+      }
+    },
+    {
+      "id": "barrel_easy_25",
+      "type": "multiple_choice",
+      "prompt": "An 8-bit barrel shifter needs how many mux stages?",
+      "choices": [
+        "7",
+        "3",
+        "8",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "⌈log₂8⌉ = 3 power-of-two stages.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_easy_25.mp4",
+        "poster": "media/images/barrel_easy_25-frame.png",
+        "figure": "media/images/barrel_easy_25.png"
+      }
+    },
+    {
+      "id": "barrel_easy_26",
+      "type": "multiple_choice",
+      "prompt": "11010010 << 3 equals…",
+      "choices": [
+        "0x90",
+        "0xD2",
+        "0x68",
+        "0xA4"
+      ],
+      "answer": 0,
+      "explain": "11010010 << 3 = 10010000 = 0x90.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_easy_26.mp4",
+        "poster": "media/images/barrel_easy_26-frame.png",
+        "figure": "media/images/barrel_easy_26.png"
+      }
+    },
+    {
+      "id": "barrel_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Which power-of-two enables for amt=3?",
+      "choices": [
+        "×1 and ×2",
+        "×1 only",
+        "×4 only",
+        "×1, ×2, and ×4"
+      ],
+      "answer": 0,
+      "explain": "3 = 1+2 → stages 1 and 2.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_easy_27.mp4",
+        "poster": "media/images/barrel_easy_27-frame.png",
+        "figure": "media/images/barrel_easy_27.png"
+      }
+    },
+    {
+      "id": "barrel_easy_28",
+      "type": "true_false",
+      "prompt": "SRA and SRL always fill vacated bits with zeros.",
+      "answer": false,
+      "explain": "SRA sign-fills; SRL zero-fills.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "sra",
+        "label": "SRA preset",
+        "steps": [
+          {
+            "click": "#btn-sra"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_easy_28.mp4",
+        "poster": "media/images/barrel_easy_28-frame.png",
+        "figure": "media/images/barrel_easy_28.png"
+      }
+    },
+    {
+      "id": "barrel_easy_29",
+      "type": "multiple_choice",
+      "prompt": "An 8-bit barrel shifter needs how many mux stages?",
+      "choices": [
+        "7",
+        "3",
+        "8",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "⌈log₂8⌉ = 3 power-of-two stages.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_easy_29.mp4",
+        "poster": "media/images/barrel_easy_29-frame.png",
+        "figure": "media/images/barrel_easy_29.png"
+      }
+    },
+    {
+      "id": "barrel_easy_30",
+      "type": "multiple_choice",
+      "prompt": "11010010 << 3 equals…",
+      "choices": [
+        "0x90",
+        "0xD2",
+        "0x68",
+        "0xA4"
+      ],
+      "answer": 0,
+      "explain": "11010010 << 3 = 10010000 = 0x90.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_easy_30.mp4",
+        "poster": "media/images/barrel_easy_30-frame.png",
+        "figure": "media/images/barrel_easy_30.png"
+      }
+    },
+    {
+      "id": "barrel_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Amount 5 enables which stages?",
+      "choices": [
+        "×1 and ×4",
+        "×2 only",
+        "×1 and ×2",
+        "×8 only"
+      ],
+      "answer": 0,
+      "explain": "5 = 4+1 → stages ×1 and ×4.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_medium_01.mp4",
+        "poster": "media/images/barrel_medium_01-frame.png",
+        "figure": "media/images/barrel_medium_01.png"
+      }
+    },
+    {
+      "id": "barrel_medium_02",
+      "type": "multiple_choice",
+      "prompt": "ROL vs logical left…",
+      "choices": [
+        "wraps bits with no fill loss",
+        "always zero-fills",
+        "only shifts by 1",
+        "ignores amount bits"
+      ],
+      "answer": 0,
+      "explain": "Rotate wraps; SLL shifts in zeros.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "rol",
+        "label": "ROL preset",
+        "steps": [
+          {
+            "click": "#btn-rol"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_medium_02.mp4",
+        "poster": "media/images/barrel_medium_02-frame.png",
+        "figure": "media/images/barrel_medium_02.png"
+      }
+    },
+    {
+      "id": "barrel_medium_03",
+      "type": "multiple_choice",
+      "prompt": "Barrel timing is dominated by…",
+      "choices": [
+        "three mux delays, not the shift distance in serial steps",
+        "exactly N−1 always",
+        "only wire OR",
+        "a single AND gate"
+      ],
+      "answer": 0,
+      "explain": "log-depth mux stages beat serial shifting.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_medium_03.mp4",
+        "poster": "media/images/barrel_medium_03-frame.png",
+        "figure": "media/images/barrel_medium_03.png"
+      }
+    },
+    {
+      "id": "barrel_medium_04",
+      "type": "true_false",
+      "prompt": "A barrel always needs seven stages for any 8-bit shift amount.",
+      "answer": false,
+      "explain": "Three stages cover amounts 0–7.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_medium_04.mp4",
+        "poster": "media/images/barrel_medium_04-frame.png",
+        "figure": "media/images/barrel_medium_04.png"
+      }
+    },
+    {
+      "id": "barrel_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Amount 5 enables which stages?",
+      "choices": [
+        "×1 and ×4",
+        "×2 only",
+        "×1 and ×2",
+        "×8 only"
+      ],
+      "answer": 0,
+      "explain": "5 = 4+1 → stages ×1 and ×4.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_medium_05.mp4",
+        "poster": "media/images/barrel_medium_05-frame.png",
+        "figure": "media/images/barrel_medium_05.png"
+      }
+    },
+    {
+      "id": "barrel_medium_06",
+      "type": "multiple_choice",
+      "prompt": "ROL vs logical left…",
+      "choices": [
+        "wraps bits with no fill loss",
+        "always zero-fills",
+        "only shifts by 1",
+        "ignores amount bits"
+      ],
+      "answer": 0,
+      "explain": "Rotate wraps; SLL shifts in zeros.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "rol",
+        "label": "ROL preset",
+        "steps": [
+          {
+            "click": "#btn-rol"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_medium_06.mp4",
+        "poster": "media/images/barrel_medium_06-frame.png",
+        "figure": "media/images/barrel_medium_06.png"
+      }
+    },
+    {
+      "id": "barrel_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Barrel timing is dominated by…",
+      "choices": [
+        "three mux delays, not the shift distance in serial steps",
+        "exactly N−1 always",
+        "only wire OR",
+        "a single AND gate"
+      ],
+      "answer": 0,
+      "explain": "log-depth mux stages beat serial shifting.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_medium_07.mp4",
+        "poster": "media/images/barrel_medium_07-frame.png",
+        "figure": "media/images/barrel_medium_07.png"
+      }
+    },
+    {
+      "id": "barrel_medium_08",
+      "type": "true_false",
+      "prompt": "A barrel always needs seven stages for any 8-bit shift amount.",
+      "answer": false,
+      "explain": "Three stages cover amounts 0–7.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_medium_08.mp4",
+        "poster": "media/images/barrel_medium_08-frame.png",
+        "figure": "media/images/barrel_medium_08.png"
+      }
+    },
+    {
+      "id": "barrel_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Amount 5 enables which stages?",
+      "choices": [
+        "×1 and ×4",
+        "×2 only",
+        "×1 and ×2",
+        "×8 only"
+      ],
+      "answer": 0,
+      "explain": "5 = 4+1 → stages ×1 and ×4.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_medium_09.mp4",
+        "poster": "media/images/barrel_medium_09-frame.png",
+        "figure": "media/images/barrel_medium_09.png"
+      }
+    },
+    {
+      "id": "barrel_medium_10",
+      "type": "multiple_choice",
+      "prompt": "ROL vs logical left…",
+      "choices": [
+        "wraps bits with no fill loss",
+        "always zero-fills",
+        "only shifts by 1",
+        "ignores amount bits"
+      ],
+      "answer": 0,
+      "explain": "Rotate wraps; SLL shifts in zeros.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "rol",
+        "label": "ROL preset",
+        "steps": [
+          {
+            "click": "#btn-rol"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_medium_10.mp4",
+        "poster": "media/images/barrel_medium_10-frame.png",
+        "figure": "media/images/barrel_medium_10.png"
+      }
+    },
+    {
+      "id": "barrel_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Barrel timing is dominated by…",
+      "choices": [
+        "three mux delays, not the shift distance in serial steps",
+        "exactly N−1 always",
+        "only wire OR",
+        "a single AND gate"
+      ],
+      "answer": 0,
+      "explain": "log-depth mux stages beat serial shifting.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_medium_11.mp4",
+        "poster": "media/images/barrel_medium_11-frame.png",
+        "figure": "media/images/barrel_medium_11.png"
+      }
+    },
+    {
+      "id": "barrel_medium_12",
+      "type": "true_false",
+      "prompt": "A barrel always needs seven stages for any 8-bit shift amount.",
+      "answer": false,
+      "explain": "Three stages cover amounts 0–7.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_medium_12.mp4",
+        "poster": "media/images/barrel_medium_12-frame.png",
+        "figure": "media/images/barrel_medium_12.png"
+      }
+    },
+    {
+      "id": "barrel_medium_13",
+      "type": "multiple_choice",
+      "prompt": "Amount 5 enables which stages?",
+      "choices": [
+        "×1 and ×4",
+        "×2 only",
+        "×1 and ×2",
+        "×8 only"
+      ],
+      "answer": 0,
+      "explain": "5 = 4+1 → stages ×1 and ×4.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_medium_13.mp4",
+        "poster": "media/images/barrel_medium_13-frame.png",
+        "figure": "media/images/barrel_medium_13.png"
+      }
+    },
+    {
+      "id": "barrel_medium_14",
+      "type": "multiple_choice",
+      "prompt": "ROL vs logical left…",
+      "choices": [
+        "wraps bits with no fill loss",
+        "always zero-fills",
+        "only shifts by 1",
+        "ignores amount bits"
+      ],
+      "answer": 0,
+      "explain": "Rotate wraps; SLL shifts in zeros.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "rol",
+        "label": "ROL preset",
+        "steps": [
+          {
+            "click": "#btn-rol"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_medium_14.mp4",
+        "poster": "media/images/barrel_medium_14-frame.png",
+        "figure": "media/images/barrel_medium_14.png"
+      }
+    },
+    {
+      "id": "barrel_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Barrel timing is dominated by…",
+      "choices": [
+        "three mux delays, not the shift distance in serial steps",
+        "exactly N−1 always",
+        "only wire OR",
+        "a single AND gate"
+      ],
+      "answer": 0,
+      "explain": "log-depth mux stages beat serial shifting.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_medium_15.mp4",
+        "poster": "media/images/barrel_medium_15-frame.png",
+        "figure": "media/images/barrel_medium_15.png"
+      }
+    },
+    {
+      "id": "barrel_medium_16",
+      "type": "true_false",
+      "prompt": "A barrel always needs seven stages for any 8-bit shift amount.",
+      "answer": false,
+      "explain": "Three stages cover amounts 0–7.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_medium_16.mp4",
+        "poster": "media/images/barrel_medium_16-frame.png",
+        "figure": "media/images/barrel_medium_16.png"
+      }
+    },
+    {
+      "id": "barrel_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Amount 5 enables which stages?",
+      "choices": [
+        "×1 and ×4",
+        "×2 only",
+        "×1 and ×2",
+        "×8 only"
+      ],
+      "answer": 0,
+      "explain": "5 = 4+1 → stages ×1 and ×4.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_medium_17.mp4",
+        "poster": "media/images/barrel_medium_17-frame.png",
+        "figure": "media/images/barrel_medium_17.png"
+      }
+    },
+    {
+      "id": "barrel_medium_18",
+      "type": "multiple_choice",
+      "prompt": "ROL vs logical left…",
+      "choices": [
+        "wraps bits with no fill loss",
+        "always zero-fills",
+        "only shifts by 1",
+        "ignores amount bits"
+      ],
+      "answer": 0,
+      "explain": "Rotate wraps; SLL shifts in zeros.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "rol",
+        "label": "ROL preset",
+        "steps": [
+          {
+            "click": "#btn-rol"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_medium_18.mp4",
+        "poster": "media/images/barrel_medium_18-frame.png",
+        "figure": "media/images/barrel_medium_18.png"
+      }
+    },
+    {
+      "id": "barrel_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Barrel timing is dominated by…",
+      "choices": [
+        "three mux delays, not the shift distance in serial steps",
+        "exactly N−1 always",
+        "only wire OR",
+        "a single AND gate"
+      ],
+      "answer": 0,
+      "explain": "log-depth mux stages beat serial shifting.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_medium_19.mp4",
+        "poster": "media/images/barrel_medium_19-frame.png",
+        "figure": "media/images/barrel_medium_19.png"
+      }
+    },
+    {
+      "id": "barrel_medium_20",
+      "type": "true_false",
+      "prompt": "A barrel always needs seven stages for any 8-bit shift amount.",
+      "answer": false,
+      "explain": "Three stages cover amounts 0–7.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_medium_20.mp4",
+        "poster": "media/images/barrel_medium_20-frame.png",
+        "figure": "media/images/barrel_medium_20.png"
+      }
+    },
+    {
+      "id": "barrel_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Amount 5 enables which stages?",
+      "choices": [
+        "×1 and ×4",
+        "×2 only",
+        "×1 and ×2",
+        "×8 only"
+      ],
+      "answer": 0,
+      "explain": "5 = 4+1 → stages ×1 and ×4.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_medium_21.mp4",
+        "poster": "media/images/barrel_medium_21-frame.png",
+        "figure": "media/images/barrel_medium_21.png"
+      }
+    },
+    {
+      "id": "barrel_medium_22",
+      "type": "multiple_choice",
+      "prompt": "ROL vs logical left…",
+      "choices": [
+        "wraps bits with no fill loss",
+        "always zero-fills",
+        "only shifts by 1",
+        "ignores amount bits"
+      ],
+      "answer": 0,
+      "explain": "Rotate wraps; SLL shifts in zeros.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "rol",
+        "label": "ROL preset",
+        "steps": [
+          {
+            "click": "#btn-rol"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_medium_22.mp4",
+        "poster": "media/images/barrel_medium_22-frame.png",
+        "figure": "media/images/barrel_medium_22.png"
+      }
+    },
+    {
+      "id": "barrel_medium_23",
+      "type": "multiple_choice",
+      "prompt": "Barrel timing is dominated by…",
+      "choices": [
+        "three mux delays, not the shift distance in serial steps",
+        "exactly N−1 always",
+        "only wire OR",
+        "a single AND gate"
+      ],
+      "answer": 0,
+      "explain": "log-depth mux stages beat serial shifting.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_medium_23.mp4",
+        "poster": "media/images/barrel_medium_23-frame.png",
+        "figure": "media/images/barrel_medium_23.png"
+      }
+    },
+    {
+      "id": "barrel_medium_24",
+      "type": "true_false",
+      "prompt": "A barrel always needs seven stages for any 8-bit shift amount.",
+      "answer": false,
+      "explain": "Three stages cover amounts 0–7.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_medium_24.mp4",
+        "poster": "media/images/barrel_medium_24-frame.png",
+        "figure": "media/images/barrel_medium_24.png"
+      }
+    },
+    {
+      "id": "barrel_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Amount 5 enables which stages?",
+      "choices": [
+        "×1 and ×4",
+        "×2 only",
+        "×1 and ×2",
+        "×8 only"
+      ],
+      "answer": 0,
+      "explain": "5 = 4+1 → stages ×1 and ×4.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_medium_25.mp4",
+        "poster": "media/images/barrel_medium_25-frame.png",
+        "figure": "media/images/barrel_medium_25.png"
+      }
+    },
+    {
+      "id": "barrel_medium_26",
+      "type": "multiple_choice",
+      "prompt": "ROL vs logical left…",
+      "choices": [
+        "wraps bits with no fill loss",
+        "always zero-fills",
+        "only shifts by 1",
+        "ignores amount bits"
+      ],
+      "answer": 0,
+      "explain": "Rotate wraps; SLL shifts in zeros.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "rol",
+        "label": "ROL preset",
+        "steps": [
+          {
+            "click": "#btn-rol"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_medium_26.mp4",
+        "poster": "media/images/barrel_medium_26-frame.png",
+        "figure": "media/images/barrel_medium_26.png"
+      }
+    },
+    {
+      "id": "barrel_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Barrel timing is dominated by…",
+      "choices": [
+        "three mux delays, not the shift distance in serial steps",
+        "exactly N−1 always",
+        "only wire OR",
+        "a single AND gate"
+      ],
+      "answer": 0,
+      "explain": "log-depth mux stages beat serial shifting.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_medium_27.mp4",
+        "poster": "media/images/barrel_medium_27-frame.png",
+        "figure": "media/images/barrel_medium_27.png"
+      }
+    },
+    {
+      "id": "barrel_medium_28",
+      "type": "true_false",
+      "prompt": "A barrel always needs seven stages for any 8-bit shift amount.",
+      "answer": false,
+      "explain": "Three stages cover amounts 0–7.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_medium_28.mp4",
+        "poster": "media/images/barrel_medium_28-frame.png",
+        "figure": "media/images/barrel_medium_28.png"
+      }
+    },
+    {
+      "id": "barrel_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Amount 5 enables which stages?",
+      "choices": [
+        "×1 and ×4",
+        "×2 only",
+        "×1 and ×2",
+        "×8 only"
+      ],
+      "answer": 0,
+      "explain": "5 = 4+1 → stages ×1 and ×4.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_medium_29.mp4",
+        "poster": "media/images/barrel_medium_29-frame.png",
+        "figure": "media/images/barrel_medium_29.png"
+      }
+    },
+    {
+      "id": "barrel_medium_30",
+      "type": "multiple_choice",
+      "prompt": "ROL vs logical left…",
+      "choices": [
+        "wraps bits with no fill loss",
+        "always zero-fills",
+        "only shifts by 1",
+        "ignores amount bits"
+      ],
+      "answer": 0,
+      "explain": "Rotate wraps; SLL shifts in zeros.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "rol",
+        "label": "ROL preset",
+        "steps": [
+          {
+            "click": "#btn-rol"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_medium_30.mp4",
+        "poster": "media/images/barrel_medium_30-frame.png",
+        "figure": "media/images/barrel_medium_30.png"
+      }
+    },
+    {
+      "id": "barrel_hard_01",
+      "type": "multiple_choice",
+      "prompt": "0x80 SRL by 1 → ?",
+      "choices": [
+        "0x40",
+        "0xC0",
+        "0x00",
+        "0x81"
+      ],
+      "answer": 0,
+      "explain": "Zero fills from the left → 0x40.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_hard_01.mp4",
+        "poster": "media/images/barrel_hard_01-frame.png",
+        "figure": "media/images/barrel_hard_01.png"
+      }
+    },
+    {
+      "id": "barrel_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Sign-extending right shift of 0x80…",
+      "choices": [
+        "0x40",
+        "0xC0",
+        "0x00",
+        "0x01"
+      ],
+      "answer": 1,
+      "explain": "Sign bit 1 fills → 0xC0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_hard_02.mp4",
+        "poster": "media/images/barrel_hard_02-frame.png",
+        "figure": "media/images/barrel_hard_02.png"
+      }
+    },
+    {
+      "id": "barrel_hard_03",
+      "type": "multiple_choice",
+      "prompt": "First stage toward SLL3 on 0xD2 yields…",
+      "choices": [
+        "0xA4",
+        "0x90",
+        "0x69",
+        "0xD2"
+      ],
+      "answer": 0,
+      "explain": "11010010<<1 = 10100100 = 0xA4.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_hard_03.mp4",
+        "poster": "media/images/barrel_hard_03-frame.png",
+        "figure": "media/images/barrel_hard_03.png"
+      }
+    },
+    {
+      "id": "barrel_hard_04",
+      "type": "true_false",
+      "prompt": "Amount bit for ×4 is unused when shifting by 7.",
+      "answer": false,
+      "explain": "7=4+2+1 uses all three stages.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_hard_04.mp4",
+        "poster": "media/images/barrel_hard_04-frame.png",
+        "figure": "media/images/barrel_hard_04.png"
+      }
+    },
+    {
+      "id": "barrel_hard_05",
+      "type": "multiple_choice",
+      "prompt": "0x80 SRL by 1 → ?",
+      "choices": [
+        "0x40",
+        "0xC0",
+        "0x00",
+        "0x81"
+      ],
+      "answer": 0,
+      "explain": "Zero fills from the left → 0x40.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_hard_05.mp4",
+        "poster": "media/images/barrel_hard_05-frame.png",
+        "figure": "media/images/barrel_hard_05.png"
+      }
+    },
+    {
+      "id": "barrel_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Sign-extending right shift of 0x80…",
+      "choices": [
+        "0x40",
+        "0xC0",
+        "0x00",
+        "0x01"
+      ],
+      "answer": 1,
+      "explain": "Sign bit 1 fills → 0xC0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_hard_06.mp4",
+        "poster": "media/images/barrel_hard_06-frame.png",
+        "figure": "media/images/barrel_hard_06.png"
+      }
+    },
+    {
+      "id": "barrel_hard_07",
+      "type": "multiple_choice",
+      "prompt": "First stage toward SLL3 on 0xD2 yields…",
+      "choices": [
+        "0xA4",
+        "0x90",
+        "0x69",
+        "0xD2"
+      ],
+      "answer": 0,
+      "explain": "11010010<<1 = 10100100 = 0xA4.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_hard_07.mp4",
+        "poster": "media/images/barrel_hard_07-frame.png",
+        "figure": "media/images/barrel_hard_07.png"
+      }
+    },
+    {
+      "id": "barrel_hard_08",
+      "type": "true_false",
+      "prompt": "Amount bit for ×4 is unused when shifting by 7.",
+      "answer": false,
+      "explain": "7=4+2+1 uses all three stages.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_hard_08.mp4",
+        "poster": "media/images/barrel_hard_08-frame.png",
+        "figure": "media/images/barrel_hard_08.png"
+      }
+    },
+    {
+      "id": "barrel_hard_09",
+      "type": "multiple_choice",
+      "prompt": "0x80 SRL by 1 → ?",
+      "choices": [
+        "0x40",
+        "0xC0",
+        "0x00",
+        "0x81"
+      ],
+      "answer": 0,
+      "explain": "Zero fills from the left → 0x40.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_hard_09.mp4",
+        "poster": "media/images/barrel_hard_09-frame.png",
+        "figure": "media/images/barrel_hard_09.png"
+      }
+    },
+    {
+      "id": "barrel_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Sign-extending right shift of 0x80…",
+      "choices": [
+        "0x40",
+        "0xC0",
+        "0x00",
+        "0x01"
+      ],
+      "answer": 1,
+      "explain": "Sign bit 1 fills → 0xC0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_hard_10.mp4",
+        "poster": "media/images/barrel_hard_10-frame.png",
+        "figure": "media/images/barrel_hard_10.png"
+      }
+    },
+    {
+      "id": "barrel_hard_11",
+      "type": "multiple_choice",
+      "prompt": "First stage toward SLL3 on 0xD2 yields…",
+      "choices": [
+        "0xA4",
+        "0x90",
+        "0x69",
+        "0xD2"
+      ],
+      "answer": 0,
+      "explain": "11010010<<1 = 10100100 = 0xA4.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_hard_11.mp4",
+        "poster": "media/images/barrel_hard_11-frame.png",
+        "figure": "media/images/barrel_hard_11.png"
+      }
+    },
+    {
+      "id": "barrel_hard_12",
+      "type": "true_false",
+      "prompt": "Amount bit for ×4 is unused when shifting by 7.",
+      "answer": false,
+      "explain": "7=4+2+1 uses all three stages.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_hard_12.mp4",
+        "poster": "media/images/barrel_hard_12-frame.png",
+        "figure": "media/images/barrel_hard_12.png"
+      }
+    },
+    {
+      "id": "barrel_hard_13",
+      "type": "multiple_choice",
+      "prompt": "0x80 SRL by 1 → ?",
+      "choices": [
+        "0x40",
+        "0xC0",
+        "0x00",
+        "0x81"
+      ],
+      "answer": 0,
+      "explain": "Zero fills from the left → 0x40.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_hard_13.mp4",
+        "poster": "media/images/barrel_hard_13-frame.png",
+        "figure": "media/images/barrel_hard_13.png"
+      }
+    },
+    {
+      "id": "barrel_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Sign-extending right shift of 0x80…",
+      "choices": [
+        "0x40",
+        "0xC0",
+        "0x00",
+        "0x01"
+      ],
+      "answer": 1,
+      "explain": "Sign bit 1 fills → 0xC0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_hard_14.mp4",
+        "poster": "media/images/barrel_hard_14-frame.png",
+        "figure": "media/images/barrel_hard_14.png"
+      }
+    },
+    {
+      "id": "barrel_hard_15",
+      "type": "multiple_choice",
+      "prompt": "First stage toward SLL3 on 0xD2 yields…",
+      "choices": [
+        "0xA4",
+        "0x90",
+        "0x69",
+        "0xD2"
+      ],
+      "answer": 0,
+      "explain": "11010010<<1 = 10100100 = 0xA4.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_hard_15.mp4",
+        "poster": "media/images/barrel_hard_15-frame.png",
+        "figure": "media/images/barrel_hard_15.png"
+      }
+    },
+    {
+      "id": "barrel_hard_16",
+      "type": "true_false",
+      "prompt": "Amount bit for ×4 is unused when shifting by 7.",
+      "answer": false,
+      "explain": "7=4+2+1 uses all three stages.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_hard_16.mp4",
+        "poster": "media/images/barrel_hard_16-frame.png",
+        "figure": "media/images/barrel_hard_16.png"
+      }
+    },
+    {
+      "id": "barrel_hard_17",
+      "type": "multiple_choice",
+      "prompt": "0x80 SRL by 1 → ?",
+      "choices": [
+        "0x40",
+        "0xC0",
+        "0x00",
+        "0x81"
+      ],
+      "answer": 0,
+      "explain": "Zero fills from the left → 0x40.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_hard_17.mp4",
+        "poster": "media/images/barrel_hard_17-frame.png",
+        "figure": "media/images/barrel_hard_17.png"
+      }
+    },
+    {
+      "id": "barrel_hard_18",
+      "type": "multiple_choice",
+      "prompt": "Sign-extending right shift of 0x80…",
+      "choices": [
+        "0x40",
+        "0xC0",
+        "0x00",
+        "0x01"
+      ],
+      "answer": 1,
+      "explain": "Sign bit 1 fills → 0xC0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_hard_18.mp4",
+        "poster": "media/images/barrel_hard_18-frame.png",
+        "figure": "media/images/barrel_hard_18.png"
+      }
+    },
+    {
+      "id": "barrel_hard_19",
+      "type": "multiple_choice",
+      "prompt": "First stage toward SLL3 on 0xD2 yields…",
+      "choices": [
+        "0xA4",
+        "0x90",
+        "0x69",
+        "0xD2"
+      ],
+      "answer": 0,
+      "explain": "11010010<<1 = 10100100 = 0xA4.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_hard_19.mp4",
+        "poster": "media/images/barrel_hard_19-frame.png",
+        "figure": "media/images/barrel_hard_19.png"
+      }
+    },
+    {
+      "id": "barrel_hard_20",
+      "type": "true_false",
+      "prompt": "Amount bit for ×4 is unused when shifting by 7.",
+      "answer": false,
+      "explain": "7=4+2+1 uses all three stages.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_hard_20.mp4",
+        "poster": "media/images/barrel_hard_20-frame.png",
+        "figure": "media/images/barrel_hard_20.png"
+      }
+    },
+    {
+      "id": "barrel_hard_21",
+      "type": "multiple_choice",
+      "prompt": "0x80 SRL by 1 → ?",
+      "choices": [
+        "0x40",
+        "0xC0",
+        "0x00",
+        "0x81"
+      ],
+      "answer": 0,
+      "explain": "Zero fills from the left → 0x40.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_hard_21.mp4",
+        "poster": "media/images/barrel_hard_21-frame.png",
+        "figure": "media/images/barrel_hard_21.png"
+      }
+    },
+    {
+      "id": "barrel_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Sign-extending right shift of 0x80…",
+      "choices": [
+        "0x40",
+        "0xC0",
+        "0x00",
+        "0x01"
+      ],
+      "answer": 1,
+      "explain": "Sign bit 1 fills → 0xC0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_hard_22.mp4",
+        "poster": "media/images/barrel_hard_22-frame.png",
+        "figure": "media/images/barrel_hard_22.png"
+      }
+    },
+    {
+      "id": "barrel_hard_23",
+      "type": "multiple_choice",
+      "prompt": "First stage toward SLL3 on 0xD2 yields…",
+      "choices": [
+        "0xA4",
+        "0x90",
+        "0x69",
+        "0xD2"
+      ],
+      "answer": 0,
+      "explain": "11010010<<1 = 10100100 = 0xA4.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_hard_23.mp4",
+        "poster": "media/images/barrel_hard_23-frame.png",
+        "figure": "media/images/barrel_hard_23.png"
+      }
+    },
+    {
+      "id": "barrel_hard_24",
+      "type": "true_false",
+      "prompt": "Amount bit for ×4 is unused when shifting by 7.",
+      "answer": false,
+      "explain": "7=4+2+1 uses all three stages.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_hard_24.mp4",
+        "poster": "media/images/barrel_hard_24-frame.png",
+        "figure": "media/images/barrel_hard_24.png"
+      }
+    },
+    {
+      "id": "barrel_hard_25",
+      "type": "multiple_choice",
+      "prompt": "0x80 SRL by 1 → ?",
+      "choices": [
+        "0x40",
+        "0xC0",
+        "0x00",
+        "0x81"
+      ],
+      "answer": 0,
+      "explain": "Zero fills from the left → 0x40.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_hard_25.mp4",
+        "poster": "media/images/barrel_hard_25-frame.png",
+        "figure": "media/images/barrel_hard_25.png"
+      }
+    },
+    {
+      "id": "barrel_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Sign-extending right shift of 0x80…",
+      "choices": [
+        "0x40",
+        "0xC0",
+        "0x00",
+        "0x01"
+      ],
+      "answer": 1,
+      "explain": "Sign bit 1 fills → 0xC0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_hard_26.mp4",
+        "poster": "media/images/barrel_hard_26-frame.png",
+        "figure": "media/images/barrel_hard_26.png"
+      }
+    },
+    {
+      "id": "barrel_hard_27",
+      "type": "multiple_choice",
+      "prompt": "First stage toward SLL3 on 0xD2 yields…",
+      "choices": [
+        "0xA4",
+        "0x90",
+        "0x69",
+        "0xD2"
+      ],
+      "answer": 0,
+      "explain": "11010010<<1 = 10100100 = 0xA4.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_hard_27.mp4",
+        "poster": "media/images/barrel_hard_27-frame.png",
+        "figure": "media/images/barrel_hard_27.png"
+      }
+    },
+    {
+      "id": "barrel_hard_28",
+      "type": "true_false",
+      "prompt": "Amount bit for ×4 is unused when shifting by 7.",
+      "answer": false,
+      "explain": "7=4+2+1 uses all three stages.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_hard_28.mp4",
+        "poster": "media/images/barrel_hard_28-frame.png",
+        "figure": "media/images/barrel_hard_28.png"
+      }
+    },
+    {
+      "id": "barrel_hard_29",
+      "type": "multiple_choice",
+      "prompt": "0x80 SRL by 1 → ?",
+      "choices": [
+        "0x40",
+        "0xC0",
+        "0x00",
+        "0x81"
+      ],
+      "answer": 0,
+      "explain": "Zero fills from the left → 0x40.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_hard_29.mp4",
+        "poster": "media/images/barrel_hard_29-frame.png",
+        "figure": "media/images/barrel_hard_29.png"
+      }
+    },
+    {
+      "id": "barrel_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Sign-extending right shift of 0x80…",
+      "choices": [
+        "0x40",
+        "0xC0",
+        "0x00",
+        "0x01"
+      ],
+      "answer": 1,
+      "explain": "Sign bit 1 fills → 0xC0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "barrel-shifter",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#bs-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/barrel_hard_30.mp4",
+        "poster": "media/images/barrel_hard_30-frame.png",
+        "figure": "media/images/barrel_hard_30.png"
+      }
+    }
+  ]
+}

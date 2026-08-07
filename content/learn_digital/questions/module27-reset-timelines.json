@@ -1,0 +1,2580 @@
+{
+  "module": "module27-reset-timelines",
+  "title": "Reset timelines",
+  "items": [
+    {
+      "id": "reset_easy_01",
+      "type": "multiple_choice",
+      "prompt": "Synchronous reset is typically…",
+      "choices": [
+        "Only on the clock edge",
+        "With no clock in the sensitivity list",
+        "The same as $finish",
+        "In analog continuous time only"
+      ],
+      "answer": 0,
+      "explain": "if (!rst_n) inside @(posedge clk).",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_easy_01.mp4",
+        "poster": "media/images/reset_easy_01-frame.png",
+        "figure": "media/images/reset_easy_01.png"
+      }
+    },
+    {
+      "id": "reset_easy_02",
+      "type": "multiple_choice",
+      "prompt": "Mid-cycle active-low reset: async vs sync?",
+      "choices": [
+        "Async can clear immediately; sync waits for posedge",
+        "Both always ignore reset",
+        "Sync always clears first",
+        "The clock stops forever"
+      ],
+      "answer": 0,
+      "explain": "Async clears now; sync waits for the edge.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_easy_02.mp4",
+        "poster": "media/images/reset_easy_02-frame.png",
+        "figure": "media/images/reset_easy_02.png"
+      }
+    },
+    {
+      "id": "reset_easy_03",
+      "type": "multiple_choice",
+      "prompt": "Active-low reset asserts when…",
+      "choices": [
+        "Active-low reset — clear when rst_n is 0",
+        "Reset never asserts",
+        "Reset is LVDS only",
+        "The net must stay undriven Z"
+      ],
+      "answer": 0,
+      "explain": "n = negative / active-low.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_easy_03.mp4",
+        "poster": "media/images/reset_easy_03-frame.png",
+        "figure": "media/images/reset_easy_03.png"
+      }
+    },
+    {
+      "id": "reset_easy_04",
+      "type": "true_false",
+      "prompt": "Both styles clear when rst_n is low at a posedge.",
+      "answer": true,
+      "explain": "Mid-cycle: async clears; sync waits. At posedge with rst_n low, both clear.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_easy_04.mp4",
+        "poster": "media/images/reset_easy_04-frame.png",
+        "figure": "media/images/reset_easy_04.png"
+      }
+    },
+    {
+      "id": "reset_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Synchronous reset is typically…",
+      "choices": [
+        "Only on the clock edge",
+        "With no clock in the sensitivity list",
+        "The same as $finish",
+        "In analog continuous time only"
+      ],
+      "answer": 0,
+      "explain": "if (!rst_n) inside @(posedge clk).",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_easy_05.mp4",
+        "poster": "media/images/reset_easy_05-frame.png",
+        "figure": "media/images/reset_easy_05.png"
+      }
+    },
+    {
+      "id": "reset_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Mid-cycle active-low reset: async vs sync?",
+      "choices": [
+        "Async can clear immediately; sync waits for posedge",
+        "Both always ignore reset",
+        "Sync always clears first",
+        "The clock stops forever"
+      ],
+      "answer": 0,
+      "explain": "Async clears now; sync waits for the edge.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_easy_06.mp4",
+        "poster": "media/images/reset_easy_06-frame.png",
+        "figure": "media/images/reset_easy_06.png"
+      }
+    },
+    {
+      "id": "reset_easy_07",
+      "type": "multiple_choice",
+      "prompt": "Active-low reset asserts when…",
+      "choices": [
+        "Active-low reset — clear when rst_n is 0",
+        "Reset never asserts",
+        "Reset is LVDS only",
+        "The net must stay undriven Z"
+      ],
+      "answer": 0,
+      "explain": "n = negative / active-low.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_easy_07.mp4",
+        "poster": "media/images/reset_easy_07-frame.png",
+        "figure": "media/images/reset_easy_07.png"
+      }
+    },
+    {
+      "id": "reset_easy_08",
+      "type": "true_false",
+      "prompt": "Both styles clear when rst_n is low at a posedge.",
+      "answer": true,
+      "explain": "Mid-cycle: async clears; sync waits. At posedge with rst_n low, both clear.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_easy_08.mp4",
+        "poster": "media/images/reset_easy_08-frame.png",
+        "figure": "media/images/reset_easy_08.png"
+      }
+    },
+    {
+      "id": "reset_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Synchronous reset is typically…",
+      "choices": [
+        "Only on the clock edge",
+        "With no clock in the sensitivity list",
+        "The same as $finish",
+        "In analog continuous time only"
+      ],
+      "answer": 0,
+      "explain": "if (!rst_n) inside @(posedge clk).",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_easy_09.mp4",
+        "poster": "media/images/reset_easy_09-frame.png",
+        "figure": "media/images/reset_easy_09.png"
+      }
+    },
+    {
+      "id": "reset_easy_10",
+      "type": "multiple_choice",
+      "prompt": "Mid-cycle active-low reset: async vs sync?",
+      "choices": [
+        "Async can clear immediately; sync waits for posedge",
+        "Both always ignore reset",
+        "Sync always clears first",
+        "The clock stops forever"
+      ],
+      "answer": 0,
+      "explain": "Async clears now; sync waits for the edge.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_easy_10.mp4",
+        "poster": "media/images/reset_easy_10-frame.png",
+        "figure": "media/images/reset_easy_10.png"
+      }
+    },
+    {
+      "id": "reset_easy_11",
+      "type": "multiple_choice",
+      "prompt": "Active-low reset asserts when…",
+      "choices": [
+        "Active-low reset — clear when rst_n is 0",
+        "Reset never asserts",
+        "Reset is LVDS only",
+        "The net must stay undriven Z"
+      ],
+      "answer": 0,
+      "explain": "n = negative / active-low.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_easy_11.mp4",
+        "poster": "media/images/reset_easy_11-frame.png",
+        "figure": "media/images/reset_easy_11.png"
+      }
+    },
+    {
+      "id": "reset_easy_12",
+      "type": "true_false",
+      "prompt": "Both styles clear when rst_n is low at a posedge.",
+      "answer": true,
+      "explain": "Mid-cycle: async clears; sync waits. At posedge with rst_n low, both clear.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_easy_12.mp4",
+        "poster": "media/images/reset_easy_12-frame.png",
+        "figure": "media/images/reset_easy_12.png"
+      }
+    },
+    {
+      "id": "reset_easy_13",
+      "type": "multiple_choice",
+      "prompt": "Synchronous reset is typically…",
+      "choices": [
+        "Only on the clock edge",
+        "With no clock in the sensitivity list",
+        "The same as $finish",
+        "In analog continuous time only"
+      ],
+      "answer": 0,
+      "explain": "if (!rst_n) inside @(posedge clk).",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_easy_13.mp4",
+        "poster": "media/images/reset_easy_13-frame.png",
+        "figure": "media/images/reset_easy_13.png"
+      }
+    },
+    {
+      "id": "reset_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Mid-cycle active-low reset: async vs sync?",
+      "choices": [
+        "Async can clear immediately; sync waits for posedge",
+        "Both always ignore reset",
+        "Sync always clears first",
+        "The clock stops forever"
+      ],
+      "answer": 0,
+      "explain": "Async clears now; sync waits for the edge.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_easy_14.mp4",
+        "poster": "media/images/reset_easy_14-frame.png",
+        "figure": "media/images/reset_easy_14.png"
+      }
+    },
+    {
+      "id": "reset_easy_15",
+      "type": "multiple_choice",
+      "prompt": "Active-low reset asserts when…",
+      "choices": [
+        "Active-low reset — clear when rst_n is 0",
+        "Reset never asserts",
+        "Reset is LVDS only",
+        "The net must stay undriven Z"
+      ],
+      "answer": 0,
+      "explain": "n = negative / active-low.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_easy_15.mp4",
+        "poster": "media/images/reset_easy_15-frame.png",
+        "figure": "media/images/reset_easy_15.png"
+      }
+    },
+    {
+      "id": "reset_easy_16",
+      "type": "true_false",
+      "prompt": "Both styles clear when rst_n is low at a posedge.",
+      "answer": true,
+      "explain": "Mid-cycle: async clears; sync waits. At posedge with rst_n low, both clear.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_easy_16.mp4",
+        "poster": "media/images/reset_easy_16-frame.png",
+        "figure": "media/images/reset_easy_16.png"
+      }
+    },
+    {
+      "id": "reset_easy_17",
+      "type": "multiple_choice",
+      "prompt": "Synchronous reset is typically…",
+      "choices": [
+        "Only on the clock edge",
+        "With no clock in the sensitivity list",
+        "The same as $finish",
+        "In analog continuous time only"
+      ],
+      "answer": 0,
+      "explain": "if (!rst_n) inside @(posedge clk).",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_easy_17.mp4",
+        "poster": "media/images/reset_easy_17-frame.png",
+        "figure": "media/images/reset_easy_17.png"
+      }
+    },
+    {
+      "id": "reset_easy_18",
+      "type": "multiple_choice",
+      "prompt": "Mid-cycle active-low reset: async vs sync?",
+      "choices": [
+        "Async can clear immediately; sync waits for posedge",
+        "Both always ignore reset",
+        "Sync always clears first",
+        "The clock stops forever"
+      ],
+      "answer": 0,
+      "explain": "Async clears now; sync waits for the edge.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_easy_18.mp4",
+        "poster": "media/images/reset_easy_18-frame.png",
+        "figure": "media/images/reset_easy_18.png"
+      }
+    },
+    {
+      "id": "reset_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Active-low reset asserts when…",
+      "choices": [
+        "Active-low reset — clear when rst_n is 0",
+        "Reset never asserts",
+        "Reset is LVDS only",
+        "The net must stay undriven Z"
+      ],
+      "answer": 0,
+      "explain": "n = negative / active-low.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_easy_19.mp4",
+        "poster": "media/images/reset_easy_19-frame.png",
+        "figure": "media/images/reset_easy_19.png"
+      }
+    },
+    {
+      "id": "reset_easy_20",
+      "type": "true_false",
+      "prompt": "Both styles clear when rst_n is low at a posedge.",
+      "answer": true,
+      "explain": "Mid-cycle: async clears; sync waits. At posedge with rst_n low, both clear.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_easy_20.mp4",
+        "poster": "media/images/reset_easy_20-frame.png",
+        "figure": "media/images/reset_easy_20.png"
+      }
+    },
+    {
+      "id": "reset_easy_21",
+      "type": "multiple_choice",
+      "prompt": "Synchronous reset is typically…",
+      "choices": [
+        "Only on the clock edge",
+        "With no clock in the sensitivity list",
+        "The same as $finish",
+        "In analog continuous time only"
+      ],
+      "answer": 0,
+      "explain": "if (!rst_n) inside @(posedge clk).",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_easy_21.mp4",
+        "poster": "media/images/reset_easy_21-frame.png",
+        "figure": "media/images/reset_easy_21.png"
+      }
+    },
+    {
+      "id": "reset_easy_22",
+      "type": "multiple_choice",
+      "prompt": "Mid-cycle active-low reset: async vs sync?",
+      "choices": [
+        "Async can clear immediately; sync waits for posedge",
+        "Both always ignore reset",
+        "Sync always clears first",
+        "The clock stops forever"
+      ],
+      "answer": 0,
+      "explain": "Async clears now; sync waits for the edge.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_easy_22.mp4",
+        "poster": "media/images/reset_easy_22-frame.png",
+        "figure": "media/images/reset_easy_22.png"
+      }
+    },
+    {
+      "id": "reset_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Active-low reset asserts when…",
+      "choices": [
+        "Active-low reset — clear when rst_n is 0",
+        "Reset never asserts",
+        "Reset is LVDS only",
+        "The net must stay undriven Z"
+      ],
+      "answer": 0,
+      "explain": "n = negative / active-low.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_easy_23.mp4",
+        "poster": "media/images/reset_easy_23-frame.png",
+        "figure": "media/images/reset_easy_23.png"
+      }
+    },
+    {
+      "id": "reset_easy_24",
+      "type": "true_false",
+      "prompt": "Both styles clear when rst_n is low at a posedge.",
+      "answer": true,
+      "explain": "Mid-cycle: async clears; sync waits. At posedge with rst_n low, both clear.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_easy_24.mp4",
+        "poster": "media/images/reset_easy_24-frame.png",
+        "figure": "media/images/reset_easy_24.png"
+      }
+    },
+    {
+      "id": "reset_easy_25",
+      "type": "multiple_choice",
+      "prompt": "Synchronous reset is typically…",
+      "choices": [
+        "Only on the clock edge",
+        "With no clock in the sensitivity list",
+        "The same as $finish",
+        "In analog continuous time only"
+      ],
+      "answer": 0,
+      "explain": "if (!rst_n) inside @(posedge clk).",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_easy_25.mp4",
+        "poster": "media/images/reset_easy_25-frame.png",
+        "figure": "media/images/reset_easy_25.png"
+      }
+    },
+    {
+      "id": "reset_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Mid-cycle active-low reset: async vs sync?",
+      "choices": [
+        "Async can clear immediately; sync waits for posedge",
+        "Both always ignore reset",
+        "Sync always clears first",
+        "The clock stops forever"
+      ],
+      "answer": 0,
+      "explain": "Async clears now; sync waits for the edge.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_easy_26.mp4",
+        "poster": "media/images/reset_easy_26-frame.png",
+        "figure": "media/images/reset_easy_26.png"
+      }
+    },
+    {
+      "id": "reset_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Active-low reset asserts when…",
+      "choices": [
+        "Active-low reset — clear when rst_n is 0",
+        "Reset never asserts",
+        "Reset is LVDS only",
+        "The net must stay undriven Z"
+      ],
+      "answer": 0,
+      "explain": "n = negative / active-low.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_easy_27.mp4",
+        "poster": "media/images/reset_easy_27-frame.png",
+        "figure": "media/images/reset_easy_27.png"
+      }
+    },
+    {
+      "id": "reset_easy_28",
+      "type": "true_false",
+      "prompt": "Both styles clear when rst_n is low at a posedge.",
+      "answer": true,
+      "explain": "Mid-cycle: async clears; sync waits. At posedge with rst_n low, both clear.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_easy_28.mp4",
+        "poster": "media/images/reset_easy_28-frame.png",
+        "figure": "media/images/reset_easy_28.png"
+      }
+    },
+    {
+      "id": "reset_easy_29",
+      "type": "multiple_choice",
+      "prompt": "Synchronous reset is typically…",
+      "choices": [
+        "Only on the clock edge",
+        "With no clock in the sensitivity list",
+        "The same as $finish",
+        "In analog continuous time only"
+      ],
+      "answer": 0,
+      "explain": "if (!rst_n) inside @(posedge clk).",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_easy_29.mp4",
+        "poster": "media/images/reset_easy_29-frame.png",
+        "figure": "media/images/reset_easy_29.png"
+      }
+    },
+    {
+      "id": "reset_easy_30",
+      "type": "multiple_choice",
+      "prompt": "Mid-cycle active-low reset: async vs sync?",
+      "choices": [
+        "Async can clear immediately; sync waits for posedge",
+        "Both always ignore reset",
+        "Sync always clears first",
+        "The clock stops forever"
+      ],
+      "answer": 0,
+      "explain": "Async clears now; sync waits for the edge.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_easy_30.mp4",
+        "poster": "media/images/reset_easy_30-frame.png",
+        "figure": "media/images/reset_easy_30.png"
+      }
+    },
+    {
+      "id": "reset_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Asynchronous reset sensitivity typically includes…",
+      "choices": [
+        "negedge rst_n (active-low)",
+        "Only posedge of data",
+        "UART framing edges",
+        "Nothing — async never lists rst"
+      ],
+      "answer": 0,
+      "explain": "Async reset reacts to rst_n edges between clocks.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_medium_01.mp4",
+        "poster": "media/images/reset_medium_01-frame.png",
+        "figure": "media/images/reset_medium_01.png"
+      }
+    },
+    {
+      "id": "reset_medium_02",
+      "type": "multiple_choice",
+      "prompt": "If sync reset deasserts before the sampling edge…",
+      "choices": [
+        "Ignored by sync reset if gone before the edge",
+        "Always captured by sync reset",
+        "Required for async FIFO depth",
+        "Impossible in HDL"
+      ],
+      "answer": 0,
+      "explain": "Sync samples only at the edge.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_medium_02.mp4",
+        "poster": "media/images/reset_medium_02-frame.png",
+        "figure": "media/images/reset_medium_02.png"
+      }
+    },
+    {
+      "id": "reset_medium_03",
+      "type": "multiple_choice",
+      "prompt": "Post-reset data entry needs…",
+      "choices": [
+        "A later clock edge (for sync paths)",
+        "Immediately with no edge",
+        "Only package bonding",
+        "Never again"
+      ],
+      "answer": 0,
+      "explain": "Release then capture on a subsequent edge.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_medium_03.mp4",
+        "poster": "media/images/reset_medium_03-frame.png",
+        "figure": "media/images/reset_medium_03.png"
+      }
+    },
+    {
+      "id": "reset_medium_04",
+      "type": "true_false",
+      "prompt": "Recovery/removal timing matters when releasing async reset near a clock edge.",
+      "answer": true,
+      "explain": "Active-low asserts at 0; styles diverge mid-cycle; recovery matters on release.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_medium_04.mp4",
+        "poster": "media/images/reset_medium_04-frame.png",
+        "figure": "media/images/reset_medium_04.png"
+      }
+    },
+    {
+      "id": "reset_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Asynchronous reset sensitivity typically includes…",
+      "choices": [
+        "negedge rst_n (active-low)",
+        "Only posedge of data",
+        "UART framing edges",
+        "Nothing — async never lists rst"
+      ],
+      "answer": 0,
+      "explain": "Async reset reacts to rst_n edges between clocks.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_medium_05.mp4",
+        "poster": "media/images/reset_medium_05-frame.png",
+        "figure": "media/images/reset_medium_05.png"
+      }
+    },
+    {
+      "id": "reset_medium_06",
+      "type": "multiple_choice",
+      "prompt": "If sync reset deasserts before the sampling edge…",
+      "choices": [
+        "Ignored by sync reset if gone before the edge",
+        "Always captured by sync reset",
+        "Required for async FIFO depth",
+        "Impossible in HDL"
+      ],
+      "answer": 0,
+      "explain": "Sync samples only at the edge.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_medium_06.mp4",
+        "poster": "media/images/reset_medium_06-frame.png",
+        "figure": "media/images/reset_medium_06.png"
+      }
+    },
+    {
+      "id": "reset_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Post-reset data entry needs…",
+      "choices": [
+        "A later clock edge (for sync paths)",
+        "Immediately with no edge",
+        "Only package bonding",
+        "Never again"
+      ],
+      "answer": 0,
+      "explain": "Release then capture on a subsequent edge.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_medium_07.mp4",
+        "poster": "media/images/reset_medium_07-frame.png",
+        "figure": "media/images/reset_medium_07.png"
+      }
+    },
+    {
+      "id": "reset_medium_08",
+      "type": "true_false",
+      "prompt": "Recovery/removal timing matters when releasing async reset near a clock edge.",
+      "answer": true,
+      "explain": "Active-low asserts at 0; styles diverge mid-cycle; recovery matters on release.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_medium_08.mp4",
+        "poster": "media/images/reset_medium_08-frame.png",
+        "figure": "media/images/reset_medium_08.png"
+      }
+    },
+    {
+      "id": "reset_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Asynchronous reset sensitivity typically includes…",
+      "choices": [
+        "negedge rst_n (active-low)",
+        "Only posedge of data",
+        "UART framing edges",
+        "Nothing — async never lists rst"
+      ],
+      "answer": 0,
+      "explain": "Async reset reacts to rst_n edges between clocks.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_medium_09.mp4",
+        "poster": "media/images/reset_medium_09-frame.png",
+        "figure": "media/images/reset_medium_09.png"
+      }
+    },
+    {
+      "id": "reset_medium_10",
+      "type": "multiple_choice",
+      "prompt": "If sync reset deasserts before the sampling edge…",
+      "choices": [
+        "Ignored by sync reset if gone before the edge",
+        "Always captured by sync reset",
+        "Required for async FIFO depth",
+        "Impossible in HDL"
+      ],
+      "answer": 0,
+      "explain": "Sync samples only at the edge.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_medium_10.mp4",
+        "poster": "media/images/reset_medium_10-frame.png",
+        "figure": "media/images/reset_medium_10.png"
+      }
+    },
+    {
+      "id": "reset_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Post-reset data entry needs…",
+      "choices": [
+        "A later clock edge (for sync paths)",
+        "Immediately with no edge",
+        "Only package bonding",
+        "Never again"
+      ],
+      "answer": 0,
+      "explain": "Release then capture on a subsequent edge.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_medium_11.mp4",
+        "poster": "media/images/reset_medium_11-frame.png",
+        "figure": "media/images/reset_medium_11.png"
+      }
+    },
+    {
+      "id": "reset_medium_12",
+      "type": "true_false",
+      "prompt": "Recovery/removal timing matters when releasing async reset near a clock edge.",
+      "answer": true,
+      "explain": "Active-low asserts at 0; styles diverge mid-cycle; recovery matters on release.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_medium_12.mp4",
+        "poster": "media/images/reset_medium_12-frame.png",
+        "figure": "media/images/reset_medium_12.png"
+      }
+    },
+    {
+      "id": "reset_medium_13",
+      "type": "multiple_choice",
+      "prompt": "Asynchronous reset sensitivity typically includes…",
+      "choices": [
+        "negedge rst_n (active-low)",
+        "Only posedge of data",
+        "UART framing edges",
+        "Nothing — async never lists rst"
+      ],
+      "answer": 0,
+      "explain": "Async reset reacts to rst_n edges between clocks.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_medium_13.mp4",
+        "poster": "media/images/reset_medium_13-frame.png",
+        "figure": "media/images/reset_medium_13.png"
+      }
+    },
+    {
+      "id": "reset_medium_14",
+      "type": "multiple_choice",
+      "prompt": "If sync reset deasserts before the sampling edge…",
+      "choices": [
+        "Ignored by sync reset if gone before the edge",
+        "Always captured by sync reset",
+        "Required for async FIFO depth",
+        "Impossible in HDL"
+      ],
+      "answer": 0,
+      "explain": "Sync samples only at the edge.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_medium_14.mp4",
+        "poster": "media/images/reset_medium_14-frame.png",
+        "figure": "media/images/reset_medium_14.png"
+      }
+    },
+    {
+      "id": "reset_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Post-reset data entry needs…",
+      "choices": [
+        "A later clock edge (for sync paths)",
+        "Immediately with no edge",
+        "Only package bonding",
+        "Never again"
+      ],
+      "answer": 0,
+      "explain": "Release then capture on a subsequent edge.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_medium_15.mp4",
+        "poster": "media/images/reset_medium_15-frame.png",
+        "figure": "media/images/reset_medium_15.png"
+      }
+    },
+    {
+      "id": "reset_medium_16",
+      "type": "true_false",
+      "prompt": "Recovery/removal timing matters when releasing async reset near a clock edge.",
+      "answer": true,
+      "explain": "Active-low asserts at 0; styles diverge mid-cycle; recovery matters on release.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_medium_16.mp4",
+        "poster": "media/images/reset_medium_16-frame.png",
+        "figure": "media/images/reset_medium_16.png"
+      }
+    },
+    {
+      "id": "reset_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Asynchronous reset sensitivity typically includes…",
+      "choices": [
+        "negedge rst_n (active-low)",
+        "Only posedge of data",
+        "UART framing edges",
+        "Nothing — async never lists rst"
+      ],
+      "answer": 0,
+      "explain": "Async reset reacts to rst_n edges between clocks.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_medium_17.mp4",
+        "poster": "media/images/reset_medium_17-frame.png",
+        "figure": "media/images/reset_medium_17.png"
+      }
+    },
+    {
+      "id": "reset_medium_18",
+      "type": "multiple_choice",
+      "prompt": "If sync reset deasserts before the sampling edge…",
+      "choices": [
+        "Ignored by sync reset if gone before the edge",
+        "Always captured by sync reset",
+        "Required for async FIFO depth",
+        "Impossible in HDL"
+      ],
+      "answer": 0,
+      "explain": "Sync samples only at the edge.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_medium_18.mp4",
+        "poster": "media/images/reset_medium_18-frame.png",
+        "figure": "media/images/reset_medium_18.png"
+      }
+    },
+    {
+      "id": "reset_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Post-reset data entry needs…",
+      "choices": [
+        "A later clock edge (for sync paths)",
+        "Immediately with no edge",
+        "Only package bonding",
+        "Never again"
+      ],
+      "answer": 0,
+      "explain": "Release then capture on a subsequent edge.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_medium_19.mp4",
+        "poster": "media/images/reset_medium_19-frame.png",
+        "figure": "media/images/reset_medium_19.png"
+      }
+    },
+    {
+      "id": "reset_medium_20",
+      "type": "true_false",
+      "prompt": "Recovery/removal timing matters when releasing async reset near a clock edge.",
+      "answer": true,
+      "explain": "Active-low asserts at 0; styles diverge mid-cycle; recovery matters on release.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_medium_20.mp4",
+        "poster": "media/images/reset_medium_20-frame.png",
+        "figure": "media/images/reset_medium_20.png"
+      }
+    },
+    {
+      "id": "reset_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Asynchronous reset sensitivity typically includes…",
+      "choices": [
+        "negedge rst_n (active-low)",
+        "Only posedge of data",
+        "UART framing edges",
+        "Nothing — async never lists rst"
+      ],
+      "answer": 0,
+      "explain": "Async reset reacts to rst_n edges between clocks.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_medium_21.mp4",
+        "poster": "media/images/reset_medium_21-frame.png",
+        "figure": "media/images/reset_medium_21.png"
+      }
+    },
+    {
+      "id": "reset_medium_22",
+      "type": "multiple_choice",
+      "prompt": "If sync reset deasserts before the sampling edge…",
+      "choices": [
+        "Ignored by sync reset if gone before the edge",
+        "Always captured by sync reset",
+        "Required for async FIFO depth",
+        "Impossible in HDL"
+      ],
+      "answer": 0,
+      "explain": "Sync samples only at the edge.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_medium_22.mp4",
+        "poster": "media/images/reset_medium_22-frame.png",
+        "figure": "media/images/reset_medium_22.png"
+      }
+    },
+    {
+      "id": "reset_medium_23",
+      "type": "multiple_choice",
+      "prompt": "Post-reset data entry needs…",
+      "choices": [
+        "A later clock edge (for sync paths)",
+        "Immediately with no edge",
+        "Only package bonding",
+        "Never again"
+      ],
+      "answer": 0,
+      "explain": "Release then capture on a subsequent edge.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_medium_23.mp4",
+        "poster": "media/images/reset_medium_23-frame.png",
+        "figure": "media/images/reset_medium_23.png"
+      }
+    },
+    {
+      "id": "reset_medium_24",
+      "type": "true_false",
+      "prompt": "Recovery/removal timing matters when releasing async reset near a clock edge.",
+      "answer": true,
+      "explain": "Active-low asserts at 0; styles diverge mid-cycle; recovery matters on release.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_medium_24.mp4",
+        "poster": "media/images/reset_medium_24-frame.png",
+        "figure": "media/images/reset_medium_24.png"
+      }
+    },
+    {
+      "id": "reset_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Asynchronous reset sensitivity typically includes…",
+      "choices": [
+        "negedge rst_n (active-low)",
+        "Only posedge of data",
+        "UART framing edges",
+        "Nothing — async never lists rst"
+      ],
+      "answer": 0,
+      "explain": "Async reset reacts to rst_n edges between clocks.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_medium_25.mp4",
+        "poster": "media/images/reset_medium_25-frame.png",
+        "figure": "media/images/reset_medium_25.png"
+      }
+    },
+    {
+      "id": "reset_medium_26",
+      "type": "multiple_choice",
+      "prompt": "If sync reset deasserts before the sampling edge…",
+      "choices": [
+        "Ignored by sync reset if gone before the edge",
+        "Always captured by sync reset",
+        "Required for async FIFO depth",
+        "Impossible in HDL"
+      ],
+      "answer": 0,
+      "explain": "Sync samples only at the edge.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_medium_26.mp4",
+        "poster": "media/images/reset_medium_26-frame.png",
+        "figure": "media/images/reset_medium_26.png"
+      }
+    },
+    {
+      "id": "reset_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Post-reset data entry needs…",
+      "choices": [
+        "A later clock edge (for sync paths)",
+        "Immediately with no edge",
+        "Only package bonding",
+        "Never again"
+      ],
+      "answer": 0,
+      "explain": "Release then capture on a subsequent edge.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_medium_27.mp4",
+        "poster": "media/images/reset_medium_27-frame.png",
+        "figure": "media/images/reset_medium_27.png"
+      }
+    },
+    {
+      "id": "reset_medium_28",
+      "type": "true_false",
+      "prompt": "Recovery/removal timing matters when releasing async reset near a clock edge.",
+      "answer": true,
+      "explain": "Active-low asserts at 0; styles diverge mid-cycle; recovery matters on release.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_medium_28.mp4",
+        "poster": "media/images/reset_medium_28-frame.png",
+        "figure": "media/images/reset_medium_28.png"
+      }
+    },
+    {
+      "id": "reset_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Asynchronous reset sensitivity typically includes…",
+      "choices": [
+        "negedge rst_n (active-low)",
+        "Only posedge of data",
+        "UART framing edges",
+        "Nothing — async never lists rst"
+      ],
+      "answer": 0,
+      "explain": "Async reset reacts to rst_n edges between clocks.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_medium_29.mp4",
+        "poster": "media/images/reset_medium_29-frame.png",
+        "figure": "media/images/reset_medium_29.png"
+      }
+    },
+    {
+      "id": "reset_medium_30",
+      "type": "multiple_choice",
+      "prompt": "If sync reset deasserts before the sampling edge…",
+      "choices": [
+        "Ignored by sync reset if gone before the edge",
+        "Always captured by sync reset",
+        "Required for async FIFO depth",
+        "Impossible in HDL"
+      ],
+      "answer": 0,
+      "explain": "Sync samples only at the edge.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_medium_30.mp4",
+        "poster": "media/images/reset_medium_30-frame.png",
+        "figure": "media/images/reset_medium_30.png"
+      }
+    },
+    {
+      "id": "reset_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Releasing async reset too close to a clock edge risks…",
+      "choices": [
+        "Recovery/removal timing violations",
+        "Automatic Gray encoding",
+        "Baud-rate doubling",
+        "Removing the need for clocks"
+      ],
+      "answer": 0,
+      "explain": "Need recovery time between reset release and the clock edge.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_hard_01.mp4",
+        "poster": "media/images/reset_hard_01-frame.png",
+        "figure": "media/images/reset_hard_01.png"
+      }
+    },
+    {
+      "id": "reset_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Reset literacy labs omit which production concerns?",
+      "choices": [
+        "Reset trees, CDC, and recovery checks",
+        "Only ASCII fonts",
+        "Deleting STA",
+        "Never using sync reset"
+      ],
+      "answer": 0,
+      "explain": "Trees, CDC, and recovery/removal still apply.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_hard_02.mp4",
+        "poster": "media/images/reset_hard_02-frame.png",
+        "figure": "media/images/reset_hard_02.png"
+      }
+    },
+    {
+      "id": "reset_hard_03",
+      "type": "multiple_choice",
+      "prompt": "Sync reset idiom is closest to…",
+      "choices": [
+        "always @(posedge clk) if (!rst_n) q<=0; else q<=d;",
+        "always @(*) q = ~rst_n;",
+        "assign clk = rst_n & d;",
+        "always @(negedge d) q<=1;"
+      ],
+      "answer": 0,
+      "explain": "Reset sampled inside the clocked block.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_hard_03.mp4",
+        "poster": "media/images/reset_hard_03-frame.png",
+        "figure": "media/images/reset_hard_03.png"
+      }
+    },
+    {
+      "id": "reset_hard_04",
+      "type": "true_false",
+      "prompt": "Both FFs clear when rst_n is low at the shared posedge.",
+      "answer": true,
+      "explain": "Async mid-cycle clear is real; naming is polarity, not undriven.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_hard_04.mp4",
+        "poster": "media/images/reset_hard_04-frame.png",
+        "figure": "media/images/reset_hard_04.png"
+      }
+    },
+    {
+      "id": "reset_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Releasing async reset too close to a clock edge risks…",
+      "choices": [
+        "Recovery/removal timing violations",
+        "Automatic Gray encoding",
+        "Baud-rate doubling",
+        "Removing the need for clocks"
+      ],
+      "answer": 0,
+      "explain": "Need recovery time between reset release and the clock edge.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_hard_05.mp4",
+        "poster": "media/images/reset_hard_05-frame.png",
+        "figure": "media/images/reset_hard_05.png"
+      }
+    },
+    {
+      "id": "reset_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Reset literacy labs omit which production concerns?",
+      "choices": [
+        "Reset trees, CDC, and recovery checks",
+        "Only ASCII fonts",
+        "Deleting STA",
+        "Never using sync reset"
+      ],
+      "answer": 0,
+      "explain": "Trees, CDC, and recovery/removal still apply.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_hard_06.mp4",
+        "poster": "media/images/reset_hard_06-frame.png",
+        "figure": "media/images/reset_hard_06.png"
+      }
+    },
+    {
+      "id": "reset_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Sync reset idiom is closest to…",
+      "choices": [
+        "always @(posedge clk) if (!rst_n) q<=0; else q<=d;",
+        "always @(*) q = ~rst_n;",
+        "assign clk = rst_n & d;",
+        "always @(negedge d) q<=1;"
+      ],
+      "answer": 0,
+      "explain": "Reset sampled inside the clocked block.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_hard_07.mp4",
+        "poster": "media/images/reset_hard_07-frame.png",
+        "figure": "media/images/reset_hard_07.png"
+      }
+    },
+    {
+      "id": "reset_hard_08",
+      "type": "true_false",
+      "prompt": "Both FFs clear when rst_n is low at the shared posedge.",
+      "answer": true,
+      "explain": "Async mid-cycle clear is real; naming is polarity, not undriven.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_hard_08.mp4",
+        "poster": "media/images/reset_hard_08-frame.png",
+        "figure": "media/images/reset_hard_08.png"
+      }
+    },
+    {
+      "id": "reset_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Releasing async reset too close to a clock edge risks…",
+      "choices": [
+        "Recovery/removal timing violations",
+        "Automatic Gray encoding",
+        "Baud-rate doubling",
+        "Removing the need for clocks"
+      ],
+      "answer": 0,
+      "explain": "Need recovery time between reset release and the clock edge.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_hard_09.mp4",
+        "poster": "media/images/reset_hard_09-frame.png",
+        "figure": "media/images/reset_hard_09.png"
+      }
+    },
+    {
+      "id": "reset_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Reset literacy labs omit which production concerns?",
+      "choices": [
+        "Reset trees, CDC, and recovery checks",
+        "Only ASCII fonts",
+        "Deleting STA",
+        "Never using sync reset"
+      ],
+      "answer": 0,
+      "explain": "Trees, CDC, and recovery/removal still apply.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_hard_10.mp4",
+        "poster": "media/images/reset_hard_10-frame.png",
+        "figure": "media/images/reset_hard_10.png"
+      }
+    },
+    {
+      "id": "reset_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Sync reset idiom is closest to…",
+      "choices": [
+        "always @(posedge clk) if (!rst_n) q<=0; else q<=d;",
+        "always @(*) q = ~rst_n;",
+        "assign clk = rst_n & d;",
+        "always @(negedge d) q<=1;"
+      ],
+      "answer": 0,
+      "explain": "Reset sampled inside the clocked block.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_hard_11.mp4",
+        "poster": "media/images/reset_hard_11-frame.png",
+        "figure": "media/images/reset_hard_11.png"
+      }
+    },
+    {
+      "id": "reset_hard_12",
+      "type": "true_false",
+      "prompt": "Both FFs clear when rst_n is low at the shared posedge.",
+      "answer": true,
+      "explain": "Async mid-cycle clear is real; naming is polarity, not undriven.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_hard_12.mp4",
+        "poster": "media/images/reset_hard_12-frame.png",
+        "figure": "media/images/reset_hard_12.png"
+      }
+    },
+    {
+      "id": "reset_hard_13",
+      "type": "multiple_choice",
+      "prompt": "Releasing async reset too close to a clock edge risks…",
+      "choices": [
+        "Recovery/removal timing violations",
+        "Automatic Gray encoding",
+        "Baud-rate doubling",
+        "Removing the need for clocks"
+      ],
+      "answer": 0,
+      "explain": "Need recovery time between reset release and the clock edge.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_hard_13.mp4",
+        "poster": "media/images/reset_hard_13-frame.png",
+        "figure": "media/images/reset_hard_13.png"
+      }
+    },
+    {
+      "id": "reset_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Reset literacy labs omit which production concerns?",
+      "choices": [
+        "Reset trees, CDC, and recovery checks",
+        "Only ASCII fonts",
+        "Deleting STA",
+        "Never using sync reset"
+      ],
+      "answer": 0,
+      "explain": "Trees, CDC, and recovery/removal still apply.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_hard_14.mp4",
+        "poster": "media/images/reset_hard_14-frame.png",
+        "figure": "media/images/reset_hard_14.png"
+      }
+    },
+    {
+      "id": "reset_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Sync reset idiom is closest to…",
+      "choices": [
+        "always @(posedge clk) if (!rst_n) q<=0; else q<=d;",
+        "always @(*) q = ~rst_n;",
+        "assign clk = rst_n & d;",
+        "always @(negedge d) q<=1;"
+      ],
+      "answer": 0,
+      "explain": "Reset sampled inside the clocked block.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_hard_15.mp4",
+        "poster": "media/images/reset_hard_15-frame.png",
+        "figure": "media/images/reset_hard_15.png"
+      }
+    },
+    {
+      "id": "reset_hard_16",
+      "type": "true_false",
+      "prompt": "Both FFs clear when rst_n is low at the shared posedge.",
+      "answer": true,
+      "explain": "Async mid-cycle clear is real; naming is polarity, not undriven.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_hard_16.mp4",
+        "poster": "media/images/reset_hard_16-frame.png",
+        "figure": "media/images/reset_hard_16.png"
+      }
+    },
+    {
+      "id": "reset_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Releasing async reset too close to a clock edge risks…",
+      "choices": [
+        "Recovery/removal timing violations",
+        "Automatic Gray encoding",
+        "Baud-rate doubling",
+        "Removing the need for clocks"
+      ],
+      "answer": 0,
+      "explain": "Need recovery time between reset release and the clock edge.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_hard_17.mp4",
+        "poster": "media/images/reset_hard_17-frame.png",
+        "figure": "media/images/reset_hard_17.png"
+      }
+    },
+    {
+      "id": "reset_hard_18",
+      "type": "multiple_choice",
+      "prompt": "Reset literacy labs omit which production concerns?",
+      "choices": [
+        "Reset trees, CDC, and recovery checks",
+        "Only ASCII fonts",
+        "Deleting STA",
+        "Never using sync reset"
+      ],
+      "answer": 0,
+      "explain": "Trees, CDC, and recovery/removal still apply.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_hard_18.mp4",
+        "poster": "media/images/reset_hard_18-frame.png",
+        "figure": "media/images/reset_hard_18.png"
+      }
+    },
+    {
+      "id": "reset_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Sync reset idiom is closest to…",
+      "choices": [
+        "always @(posedge clk) if (!rst_n) q<=0; else q<=d;",
+        "always @(*) q = ~rst_n;",
+        "assign clk = rst_n & d;",
+        "always @(negedge d) q<=1;"
+      ],
+      "answer": 0,
+      "explain": "Reset sampled inside the clocked block.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_hard_19.mp4",
+        "poster": "media/images/reset_hard_19-frame.png",
+        "figure": "media/images/reset_hard_19.png"
+      }
+    },
+    {
+      "id": "reset_hard_20",
+      "type": "true_false",
+      "prompt": "Both FFs clear when rst_n is low at the shared posedge.",
+      "answer": true,
+      "explain": "Async mid-cycle clear is real; naming is polarity, not undriven.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_hard_20.mp4",
+        "poster": "media/images/reset_hard_20-frame.png",
+        "figure": "media/images/reset_hard_20.png"
+      }
+    },
+    {
+      "id": "reset_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Releasing async reset too close to a clock edge risks…",
+      "choices": [
+        "Recovery/removal timing violations",
+        "Automatic Gray encoding",
+        "Baud-rate doubling",
+        "Removing the need for clocks"
+      ],
+      "answer": 0,
+      "explain": "Need recovery time between reset release and the clock edge.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_hard_21.mp4",
+        "poster": "media/images/reset_hard_21-frame.png",
+        "figure": "media/images/reset_hard_21.png"
+      }
+    },
+    {
+      "id": "reset_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Reset literacy labs omit which production concerns?",
+      "choices": [
+        "Reset trees, CDC, and recovery checks",
+        "Only ASCII fonts",
+        "Deleting STA",
+        "Never using sync reset"
+      ],
+      "answer": 0,
+      "explain": "Trees, CDC, and recovery/removal still apply.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_hard_22.mp4",
+        "poster": "media/images/reset_hard_22-frame.png",
+        "figure": "media/images/reset_hard_22.png"
+      }
+    },
+    {
+      "id": "reset_hard_23",
+      "type": "multiple_choice",
+      "prompt": "Sync reset idiom is closest to…",
+      "choices": [
+        "always @(posedge clk) if (!rst_n) q<=0; else q<=d;",
+        "always @(*) q = ~rst_n;",
+        "assign clk = rst_n & d;",
+        "always @(negedge d) q<=1;"
+      ],
+      "answer": 0,
+      "explain": "Reset sampled inside the clocked block.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_hard_23.mp4",
+        "poster": "media/images/reset_hard_23-frame.png",
+        "figure": "media/images/reset_hard_23.png"
+      }
+    },
+    {
+      "id": "reset_hard_24",
+      "type": "true_false",
+      "prompt": "Both FFs clear when rst_n is low at the shared posedge.",
+      "answer": true,
+      "explain": "Async mid-cycle clear is real; naming is polarity, not undriven.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_hard_24.mp4",
+        "poster": "media/images/reset_hard_24-frame.png",
+        "figure": "media/images/reset_hard_24.png"
+      }
+    },
+    {
+      "id": "reset_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Releasing async reset too close to a clock edge risks…",
+      "choices": [
+        "Recovery/removal timing violations",
+        "Automatic Gray encoding",
+        "Baud-rate doubling",
+        "Removing the need for clocks"
+      ],
+      "answer": 0,
+      "explain": "Need recovery time between reset release and the clock edge.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_hard_25.mp4",
+        "poster": "media/images/reset_hard_25-frame.png",
+        "figure": "media/images/reset_hard_25.png"
+      }
+    },
+    {
+      "id": "reset_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Reset literacy labs omit which production concerns?",
+      "choices": [
+        "Reset trees, CDC, and recovery checks",
+        "Only ASCII fonts",
+        "Deleting STA",
+        "Never using sync reset"
+      ],
+      "answer": 0,
+      "explain": "Trees, CDC, and recovery/removal still apply.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_hard_26.mp4",
+        "poster": "media/images/reset_hard_26-frame.png",
+        "figure": "media/images/reset_hard_26.png"
+      }
+    },
+    {
+      "id": "reset_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Sync reset idiom is closest to…",
+      "choices": [
+        "always @(posedge clk) if (!rst_n) q<=0; else q<=d;",
+        "always @(*) q = ~rst_n;",
+        "assign clk = rst_n & d;",
+        "always @(negedge d) q<=1;"
+      ],
+      "answer": 0,
+      "explain": "Reset sampled inside the clocked block.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_hard_27.mp4",
+        "poster": "media/images/reset_hard_27-frame.png",
+        "figure": "media/images/reset_hard_27.png"
+      }
+    },
+    {
+      "id": "reset_hard_28",
+      "type": "true_false",
+      "prompt": "Both FFs clear when rst_n is low at the shared posedge.",
+      "answer": true,
+      "explain": "Async mid-cycle clear is real; naming is polarity, not undriven.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_hard_28.mp4",
+        "poster": "media/images/reset_hard_28-frame.png",
+        "figure": "media/images/reset_hard_28.png"
+      }
+    },
+    {
+      "id": "reset_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Releasing async reset too close to a clock edge risks…",
+      "choices": [
+        "Recovery/removal timing violations",
+        "Automatic Gray encoding",
+        "Baud-rate doubling",
+        "Removing the need for clocks"
+      ],
+      "answer": 0,
+      "explain": "Need recovery time between reset release and the clock edge.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_hard_29.mp4",
+        "poster": "media/images/reset_hard_29-frame.png",
+        "figure": "media/images/reset_hard_29.png"
+      }
+    },
+    {
+      "id": "reset_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Reset literacy labs omit which production concerns?",
+      "choices": [
+        "Reset trees, CDC, and recovery checks",
+        "Only ASCII fonts",
+        "Deleting STA",
+        "Never using sync reset"
+      ],
+      "answer": 0,
+      "explain": "Trees, CDC, and recovery/removal still apply.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "reset-timelines",
+        "key": "starter",
+        "label": "Starter",
+        "steps": [
+          {
+            "click": "#rt-starter"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/reset_hard_30.mp4",
+        "poster": "media/images/reset_hard_30-frame.png",
+        "figure": "media/images/reset_hard_30.png"
+      }
+    }
+  ]
+}

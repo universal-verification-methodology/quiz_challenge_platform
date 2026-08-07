@@ -1,0 +1,2850 @@
+{
+  "module": "module07-parity-checksum",
+  "title": "Parity / checksum",
+  "items": [
+    {
+      "id": "parity_easy_01",
+      "type": "multiple_choice",
+      "prompt": "Even parity bit is commonly equal to…",
+      "choices": [
+        "OR of all bits",
+        "Reduction XOR of data bits",
+        "AND of all bits",
+        "Bit count divided by 8"
+      ],
+      "answer": 1,
+      "explain": "Even parity bit is the XOR of the data bits.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_easy_01.mp4",
+        "poster": "media/images/parity_easy_01-frame.png",
+        "figure": "media/images/parity_easy_01.png"
+      }
+    },
+    {
+      "id": "parity_easy_02",
+      "type": "multiple_choice",
+      "prompt": "Parity’s job versus ECC correction…",
+      "choices": [
+        "Yes, always",
+        "Yes, for two-bit errors",
+        "No — it detects (many) flips",
+        "Only in odd mode"
+      ],
+      "answer": 2,
+      "explain": "Parity detects many single-bit errors; it does not correct them.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_easy_02.mp4",
+        "poster": "media/images/parity_easy_02-frame.png",
+        "figure": "media/images/parity_easy_02.png"
+      }
+    },
+    {
+      "id": "parity_easy_03",
+      "type": "multiple_choice",
+      "prompt": "Successful XOR checksum fold result is…",
+      "choices": [
+        "0xFF",
+        "0",
+        "Equal to the last byte",
+        "Odd"
+      ],
+      "answer": 1,
+      "explain": "XOR fold to zero means the check matched.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "checksum",
+        "label": "XOR checksum",
+        "steps": [
+          {
+            "click": "#btn-cs"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_easy_03.mp4",
+        "poster": "media/images/parity_easy_03-frame.png",
+        "figure": "media/images/parity_easy_03.png"
+      }
+    },
+    {
+      "id": "parity_easy_04",
+      "type": "true_false",
+      "prompt": "Odd parity forces an odd number of 1s including the parity bit.",
+      "answer": true,
+      "explain": "Single flips fail parity; some multi-bit errors can sneak through.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "odd",
+        "label": "Odd parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "input[name=mode][value=odd]"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_easy_04.mp4",
+        "poster": "media/images/parity_easy_04-frame.png",
+        "figure": "media/images/parity_easy_04.png"
+      }
+    },
+    {
+      "id": "parity_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Even parity bit is commonly equal to…",
+      "choices": [
+        "OR of all bits",
+        "Reduction XOR of data bits",
+        "AND of all bits",
+        "Bit count divided by 8"
+      ],
+      "answer": 1,
+      "explain": "Even parity bit is the XOR of the data bits.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_easy_05.mp4",
+        "poster": "media/images/parity_easy_05-frame.png",
+        "figure": "media/images/parity_easy_05.png"
+      }
+    },
+    {
+      "id": "parity_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Parity’s job versus ECC correction…",
+      "choices": [
+        "Yes, always",
+        "Yes, for two-bit errors",
+        "No — it detects (many) flips",
+        "Only in odd mode"
+      ],
+      "answer": 2,
+      "explain": "Parity detects many single-bit errors; it does not correct them.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_easy_06.mp4",
+        "poster": "media/images/parity_easy_06-frame.png",
+        "figure": "media/images/parity_easy_06.png"
+      }
+    },
+    {
+      "id": "parity_easy_07",
+      "type": "multiple_choice",
+      "prompt": "Successful XOR checksum fold result is…",
+      "choices": [
+        "0xFF",
+        "0",
+        "Equal to the last byte",
+        "Odd"
+      ],
+      "answer": 1,
+      "explain": "XOR fold to zero means the check matched.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "checksum",
+        "label": "XOR checksum",
+        "steps": [
+          {
+            "click": "#btn-cs"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_easy_07.mp4",
+        "poster": "media/images/parity_easy_07-frame.png",
+        "figure": "media/images/parity_easy_07.png"
+      }
+    },
+    {
+      "id": "parity_easy_08",
+      "type": "true_false",
+      "prompt": "Odd parity forces an odd number of 1s including the parity bit.",
+      "answer": true,
+      "explain": "Single flips fail parity; some multi-bit errors can sneak through.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "odd",
+        "label": "Odd parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "input[name=mode][value=odd]"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_easy_08.mp4",
+        "poster": "media/images/parity_easy_08-frame.png",
+        "figure": "media/images/parity_easy_08.png"
+      }
+    },
+    {
+      "id": "parity_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Even parity bit is commonly equal to…",
+      "choices": [
+        "OR of all bits",
+        "Reduction XOR of data bits",
+        "AND of all bits",
+        "Bit count divided by 8"
+      ],
+      "answer": 1,
+      "explain": "Even parity bit is the XOR of the data bits.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_easy_09.mp4",
+        "poster": "media/images/parity_easy_09-frame.png",
+        "figure": "media/images/parity_easy_09.png"
+      }
+    },
+    {
+      "id": "parity_easy_10",
+      "type": "multiple_choice",
+      "prompt": "Parity’s job versus ECC correction…",
+      "choices": [
+        "Yes, always",
+        "Yes, for two-bit errors",
+        "No — it detects (many) flips",
+        "Only in odd mode"
+      ],
+      "answer": 2,
+      "explain": "Parity detects many single-bit errors; it does not correct them.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_easy_10.mp4",
+        "poster": "media/images/parity_easy_10-frame.png",
+        "figure": "media/images/parity_easy_10.png"
+      }
+    },
+    {
+      "id": "parity_easy_11",
+      "type": "multiple_choice",
+      "prompt": "Successful XOR checksum fold result is…",
+      "choices": [
+        "0xFF",
+        "0",
+        "Equal to the last byte",
+        "Odd"
+      ],
+      "answer": 1,
+      "explain": "XOR fold to zero means the check matched.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "checksum",
+        "label": "XOR checksum",
+        "steps": [
+          {
+            "click": "#btn-cs"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_easy_11.mp4",
+        "poster": "media/images/parity_easy_11-frame.png",
+        "figure": "media/images/parity_easy_11.png"
+      }
+    },
+    {
+      "id": "parity_easy_12",
+      "type": "true_false",
+      "prompt": "Odd parity forces an odd number of 1s including the parity bit.",
+      "answer": true,
+      "explain": "Single flips fail parity; some multi-bit errors can sneak through.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "odd",
+        "label": "Odd parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "input[name=mode][value=odd]"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_easy_12.mp4",
+        "poster": "media/images/parity_easy_12-frame.png",
+        "figure": "media/images/parity_easy_12.png"
+      }
+    },
+    {
+      "id": "parity_easy_13",
+      "type": "multiple_choice",
+      "prompt": "Even parity bit is commonly equal to…",
+      "choices": [
+        "OR of all bits",
+        "Reduction XOR of data bits",
+        "AND of all bits",
+        "Bit count divided by 8"
+      ],
+      "answer": 1,
+      "explain": "Even parity bit is the XOR of the data bits.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_easy_13.mp4",
+        "poster": "media/images/parity_easy_13-frame.png",
+        "figure": "media/images/parity_easy_13.png"
+      }
+    },
+    {
+      "id": "parity_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Parity’s job versus ECC correction…",
+      "choices": [
+        "Yes, always",
+        "Yes, for two-bit errors",
+        "No — it detects (many) flips",
+        "Only in odd mode"
+      ],
+      "answer": 2,
+      "explain": "Parity detects many single-bit errors; it does not correct them.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_easy_14.mp4",
+        "poster": "media/images/parity_easy_14-frame.png",
+        "figure": "media/images/parity_easy_14.png"
+      }
+    },
+    {
+      "id": "parity_easy_15",
+      "type": "multiple_choice",
+      "prompt": "Successful XOR checksum fold result is…",
+      "choices": [
+        "0xFF",
+        "0",
+        "Equal to the last byte",
+        "Odd"
+      ],
+      "answer": 1,
+      "explain": "XOR fold to zero means the check matched.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "checksum",
+        "label": "XOR checksum",
+        "steps": [
+          {
+            "click": "#btn-cs"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_easy_15.mp4",
+        "poster": "media/images/parity_easy_15-frame.png",
+        "figure": "media/images/parity_easy_15.png"
+      }
+    },
+    {
+      "id": "parity_easy_16",
+      "type": "true_false",
+      "prompt": "Odd parity forces an odd number of 1s including the parity bit.",
+      "answer": true,
+      "explain": "Single flips fail parity; some multi-bit errors can sneak through.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "odd",
+        "label": "Odd parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "input[name=mode][value=odd]"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_easy_16.mp4",
+        "poster": "media/images/parity_easy_16-frame.png",
+        "figure": "media/images/parity_easy_16.png"
+      }
+    },
+    {
+      "id": "parity_easy_17",
+      "type": "multiple_choice",
+      "prompt": "Even parity bit is commonly equal to…",
+      "choices": [
+        "OR of all bits",
+        "Reduction XOR of data bits",
+        "AND of all bits",
+        "Bit count divided by 8"
+      ],
+      "answer": 1,
+      "explain": "Even parity bit is the XOR of the data bits.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_easy_17.mp4",
+        "poster": "media/images/parity_easy_17-frame.png",
+        "figure": "media/images/parity_easy_17.png"
+      }
+    },
+    {
+      "id": "parity_easy_18",
+      "type": "multiple_choice",
+      "prompt": "Parity’s job versus ECC correction…",
+      "choices": [
+        "Yes, always",
+        "Yes, for two-bit errors",
+        "No — it detects (many) flips",
+        "Only in odd mode"
+      ],
+      "answer": 2,
+      "explain": "Parity detects many single-bit errors; it does not correct them.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_easy_18.mp4",
+        "poster": "media/images/parity_easy_18-frame.png",
+        "figure": "media/images/parity_easy_18.png"
+      }
+    },
+    {
+      "id": "parity_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Successful XOR checksum fold result is…",
+      "choices": [
+        "0xFF",
+        "0",
+        "Equal to the last byte",
+        "Odd"
+      ],
+      "answer": 1,
+      "explain": "XOR fold to zero means the check matched.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "checksum",
+        "label": "XOR checksum",
+        "steps": [
+          {
+            "click": "#btn-cs"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_easy_19.mp4",
+        "poster": "media/images/parity_easy_19-frame.png",
+        "figure": "media/images/parity_easy_19.png"
+      }
+    },
+    {
+      "id": "parity_easy_20",
+      "type": "true_false",
+      "prompt": "Odd parity forces an odd number of 1s including the parity bit.",
+      "answer": true,
+      "explain": "Single flips fail parity; some multi-bit errors can sneak through.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "odd",
+        "label": "Odd parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "input[name=mode][value=odd]"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_easy_20.mp4",
+        "poster": "media/images/parity_easy_20-frame.png",
+        "figure": "media/images/parity_easy_20.png"
+      }
+    },
+    {
+      "id": "parity_easy_21",
+      "type": "multiple_choice",
+      "prompt": "Even parity bit is commonly equal to…",
+      "choices": [
+        "OR of all bits",
+        "Reduction XOR of data bits",
+        "AND of all bits",
+        "Bit count divided by 8"
+      ],
+      "answer": 1,
+      "explain": "Even parity bit is the XOR of the data bits.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_easy_21.mp4",
+        "poster": "media/images/parity_easy_21-frame.png",
+        "figure": "media/images/parity_easy_21.png"
+      }
+    },
+    {
+      "id": "parity_easy_22",
+      "type": "multiple_choice",
+      "prompt": "Parity’s job versus ECC correction…",
+      "choices": [
+        "Yes, always",
+        "Yes, for two-bit errors",
+        "No — it detects (many) flips",
+        "Only in odd mode"
+      ],
+      "answer": 2,
+      "explain": "Parity detects many single-bit errors; it does not correct them.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_easy_22.mp4",
+        "poster": "media/images/parity_easy_22-frame.png",
+        "figure": "media/images/parity_easy_22.png"
+      }
+    },
+    {
+      "id": "parity_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Successful XOR checksum fold result is…",
+      "choices": [
+        "0xFF",
+        "0",
+        "Equal to the last byte",
+        "Odd"
+      ],
+      "answer": 1,
+      "explain": "XOR fold to zero means the check matched.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "checksum",
+        "label": "XOR checksum",
+        "steps": [
+          {
+            "click": "#btn-cs"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_easy_23.mp4",
+        "poster": "media/images/parity_easy_23-frame.png",
+        "figure": "media/images/parity_easy_23.png"
+      }
+    },
+    {
+      "id": "parity_easy_24",
+      "type": "true_false",
+      "prompt": "Odd parity forces an odd number of 1s including the parity bit.",
+      "answer": true,
+      "explain": "Single flips fail parity; some multi-bit errors can sneak through.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "odd",
+        "label": "Odd parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "input[name=mode][value=odd]"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_easy_24.mp4",
+        "poster": "media/images/parity_easy_24-frame.png",
+        "figure": "media/images/parity_easy_24.png"
+      }
+    },
+    {
+      "id": "parity_easy_25",
+      "type": "multiple_choice",
+      "prompt": "Even parity bit is commonly equal to…",
+      "choices": [
+        "OR of all bits",
+        "Reduction XOR of data bits",
+        "AND of all bits",
+        "Bit count divided by 8"
+      ],
+      "answer": 1,
+      "explain": "Even parity bit is the XOR of the data bits.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_easy_25.mp4",
+        "poster": "media/images/parity_easy_25-frame.png",
+        "figure": "media/images/parity_easy_25.png"
+      }
+    },
+    {
+      "id": "parity_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Parity’s job versus ECC correction…",
+      "choices": [
+        "Yes, always",
+        "Yes, for two-bit errors",
+        "No — it detects (many) flips",
+        "Only in odd mode"
+      ],
+      "answer": 2,
+      "explain": "Parity detects many single-bit errors; it does not correct them.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_easy_26.mp4",
+        "poster": "media/images/parity_easy_26-frame.png",
+        "figure": "media/images/parity_easy_26.png"
+      }
+    },
+    {
+      "id": "parity_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Successful XOR checksum fold result is…",
+      "choices": [
+        "0xFF",
+        "0",
+        "Equal to the last byte",
+        "Odd"
+      ],
+      "answer": 1,
+      "explain": "XOR fold to zero means the check matched.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "checksum",
+        "label": "XOR checksum",
+        "steps": [
+          {
+            "click": "#btn-cs"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_easy_27.mp4",
+        "poster": "media/images/parity_easy_27-frame.png",
+        "figure": "media/images/parity_easy_27.png"
+      }
+    },
+    {
+      "id": "parity_easy_28",
+      "type": "true_false",
+      "prompt": "Odd parity forces an odd number of 1s including the parity bit.",
+      "answer": true,
+      "explain": "Single flips fail parity; some multi-bit errors can sneak through.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "odd",
+        "label": "Odd parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "input[name=mode][value=odd]"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_easy_28.mp4",
+        "poster": "media/images/parity_easy_28-frame.png",
+        "figure": "media/images/parity_easy_28.png"
+      }
+    },
+    {
+      "id": "parity_easy_29",
+      "type": "multiple_choice",
+      "prompt": "Even parity bit is commonly equal to…",
+      "choices": [
+        "OR of all bits",
+        "Reduction XOR of data bits",
+        "AND of all bits",
+        "Bit count divided by 8"
+      ],
+      "answer": 1,
+      "explain": "Even parity bit is the XOR of the data bits.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_easy_29.mp4",
+        "poster": "media/images/parity_easy_29-frame.png",
+        "figure": "media/images/parity_easy_29.png"
+      }
+    },
+    {
+      "id": "parity_easy_30",
+      "type": "multiple_choice",
+      "prompt": "Parity’s job versus ECC correction…",
+      "choices": [
+        "Yes, always",
+        "Yes, for two-bit errors",
+        "No — it detects (many) flips",
+        "Only in odd mode"
+      ],
+      "answer": 2,
+      "explain": "Parity detects many single-bit errors; it does not correct them.",
+      "difficulty": "easy",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_easy_30.mp4",
+        "poster": "media/images/parity_easy_30-frame.png",
+        "figure": "media/images/parity_easy_30.png"
+      }
+    },
+    {
+      "id": "parity_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Even parity bit for data 0b1010 is…",
+      "choices": [
+        "0",
+        "1",
+        "X",
+        "2"
+      ],
+      "answer": 0,
+      "explain": "XOR of bits = 0 for even parity.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_medium_01.mp4",
+        "poster": "media/images/parity_medium_01-frame.png",
+        "figure": "media/images/parity_medium_01.png"
+      }
+    },
+    {
+      "id": "parity_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Odd parity bit for data 0b1110 is…",
+      "choices": [
+        "0",
+        "1",
+        "Same as even always",
+        "N/A"
+      ],
+      "answer": 0,
+      "explain": "Odd parity is the complement of even parity for the same data.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "odd",
+        "label": "Odd parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "input[name=mode][value=odd]"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_medium_02.mp4",
+        "poster": "media/images/parity_medium_02-frame.png",
+        "figure": "media/images/parity_medium_02.png"
+      }
+    },
+    {
+      "id": "parity_medium_03",
+      "type": "true_false",
+      "prompt": "Checksums stronger than parity can still miss some corruptions.",
+      "answer": true,
+      "explain": "Even numbers of flips can cancel; simple checks are not crypto.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "checksum",
+        "label": "XOR checksum",
+        "steps": [
+          {
+            "click": "#btn-cs"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_medium_03.mp4",
+        "poster": "media/images/parity_medium_03-frame.png",
+        "figure": "media/images/parity_medium_03.png"
+      }
+    },
+    {
+      "id": "parity_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Which extra bit helps detect line errors?",
+      "choices": [
+        "A parity bit option",
+        "A K-map",
+        "An FSM encoding",
+        "Endian swap only"
+      ],
+      "answer": 0,
+      "explain": "Many UARTs optionally append parity.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "flip-fail",
+        "label": "Flip fails",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-attach"
+          },
+          {
+            "click": "#btn-flip0"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_medium_04.mp4",
+        "poster": "media/images/parity_medium_04-frame.png",
+        "figure": "media/images/parity_medium_04.png"
+      }
+    },
+    {
+      "id": "parity_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Even parity bit for data 0b0101 is…",
+      "choices": [
+        "0",
+        "1",
+        "X",
+        "2"
+      ],
+      "answer": 0,
+      "explain": "XOR of bits = 0 for even parity.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_medium_05.mp4",
+        "poster": "media/images/parity_medium_05-frame.png",
+        "figure": "media/images/parity_medium_05.png"
+      }
+    },
+    {
+      "id": "parity_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Odd parity bit for data 0b1000 is…",
+      "choices": [
+        "0",
+        "1",
+        "Same as even always",
+        "N/A"
+      ],
+      "answer": 0,
+      "explain": "Odd parity is the complement of even parity for the same data.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "odd",
+        "label": "Odd parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "input[name=mode][value=odd]"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_medium_06.mp4",
+        "poster": "media/images/parity_medium_06-frame.png",
+        "figure": "media/images/parity_medium_06.png"
+      }
+    },
+    {
+      "id": "parity_medium_07",
+      "type": "true_false",
+      "prompt": "Checksums stronger than parity can still miss some corruptions.",
+      "answer": true,
+      "explain": "Even numbers of flips can cancel; simple checks are not crypto.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "checksum",
+        "label": "XOR checksum",
+        "steps": [
+          {
+            "click": "#btn-cs"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_medium_07.mp4",
+        "poster": "media/images/parity_medium_07-frame.png",
+        "figure": "media/images/parity_medium_07.png"
+      }
+    },
+    {
+      "id": "parity_medium_08",
+      "type": "multiple_choice",
+      "prompt": "Which extra bit helps detect line errors?",
+      "choices": [
+        "A parity bit option",
+        "A K-map",
+        "An FSM encoding",
+        "Endian swap only"
+      ],
+      "answer": 0,
+      "explain": "Many UARTs optionally append parity.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "flip-fail",
+        "label": "Flip fails",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-attach"
+          },
+          {
+            "click": "#btn-flip0"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_medium_08.mp4",
+        "poster": "media/images/parity_medium_08-frame.png",
+        "figure": "media/images/parity_medium_08.png"
+      }
+    },
+    {
+      "id": "parity_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Even parity bit for data 0b1010 is…",
+      "choices": [
+        "0",
+        "1",
+        "X",
+        "2"
+      ],
+      "answer": 0,
+      "explain": "XOR of bits = 0 for even parity.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_medium_09.mp4",
+        "poster": "media/images/parity_medium_09-frame.png",
+        "figure": "media/images/parity_medium_09.png"
+      }
+    },
+    {
+      "id": "parity_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Odd parity bit for data 0b1110 is…",
+      "choices": [
+        "0",
+        "1",
+        "Same as even always",
+        "N/A"
+      ],
+      "answer": 0,
+      "explain": "Odd parity is the complement of even parity for the same data.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "odd",
+        "label": "Odd parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "input[name=mode][value=odd]"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_medium_10.mp4",
+        "poster": "media/images/parity_medium_10-frame.png",
+        "figure": "media/images/parity_medium_10.png"
+      }
+    },
+    {
+      "id": "parity_medium_11",
+      "type": "true_false",
+      "prompt": "Checksums stronger than parity can still miss some corruptions.",
+      "answer": true,
+      "explain": "Even numbers of flips can cancel; simple checks are not crypto.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "checksum",
+        "label": "XOR checksum",
+        "steps": [
+          {
+            "click": "#btn-cs"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_medium_11.mp4",
+        "poster": "media/images/parity_medium_11-frame.png",
+        "figure": "media/images/parity_medium_11.png"
+      }
+    },
+    {
+      "id": "parity_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Which extra bit helps detect line errors?",
+      "choices": [
+        "A parity bit option",
+        "A K-map",
+        "An FSM encoding",
+        "Endian swap only"
+      ],
+      "answer": 0,
+      "explain": "Many UARTs optionally append parity.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "flip-fail",
+        "label": "Flip fails",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-attach"
+          },
+          {
+            "click": "#btn-flip0"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_medium_12.mp4",
+        "poster": "media/images/parity_medium_12-frame.png",
+        "figure": "media/images/parity_medium_12.png"
+      }
+    },
+    {
+      "id": "parity_medium_13",
+      "type": "multiple_choice",
+      "prompt": "Even parity bit for data 0b0101 is…",
+      "choices": [
+        "0",
+        "1",
+        "X",
+        "2"
+      ],
+      "answer": 0,
+      "explain": "XOR of bits = 0 for even parity.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_medium_13.mp4",
+        "poster": "media/images/parity_medium_13-frame.png",
+        "figure": "media/images/parity_medium_13.png"
+      }
+    },
+    {
+      "id": "parity_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Odd parity bit for data 0b1000 is…",
+      "choices": [
+        "0",
+        "1",
+        "Same as even always",
+        "N/A"
+      ],
+      "answer": 0,
+      "explain": "Odd parity is the complement of even parity for the same data.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "odd",
+        "label": "Odd parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "input[name=mode][value=odd]"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_medium_14.mp4",
+        "poster": "media/images/parity_medium_14-frame.png",
+        "figure": "media/images/parity_medium_14.png"
+      }
+    },
+    {
+      "id": "parity_medium_15",
+      "type": "true_false",
+      "prompt": "Checksums stronger than parity can still miss some corruptions.",
+      "answer": true,
+      "explain": "Even numbers of flips can cancel; simple checks are not crypto.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "checksum",
+        "label": "XOR checksum",
+        "steps": [
+          {
+            "click": "#btn-cs"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_medium_15.mp4",
+        "poster": "media/images/parity_medium_15-frame.png",
+        "figure": "media/images/parity_medium_15.png"
+      }
+    },
+    {
+      "id": "parity_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Which extra bit helps detect line errors?",
+      "choices": [
+        "A parity bit option",
+        "A K-map",
+        "An FSM encoding",
+        "Endian swap only"
+      ],
+      "answer": 0,
+      "explain": "Many UARTs optionally append parity.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "flip-fail",
+        "label": "Flip fails",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-attach"
+          },
+          {
+            "click": "#btn-flip0"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_medium_16.mp4",
+        "poster": "media/images/parity_medium_16-frame.png",
+        "figure": "media/images/parity_medium_16.png"
+      }
+    },
+    {
+      "id": "parity_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Even parity bit for data 0b1010 is…",
+      "choices": [
+        "0",
+        "1",
+        "X",
+        "2"
+      ],
+      "answer": 0,
+      "explain": "XOR of bits = 0 for even parity.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_medium_17.mp4",
+        "poster": "media/images/parity_medium_17-frame.png",
+        "figure": "media/images/parity_medium_17.png"
+      }
+    },
+    {
+      "id": "parity_medium_18",
+      "type": "multiple_choice",
+      "prompt": "Odd parity bit for data 0b1110 is…",
+      "choices": [
+        "0",
+        "1",
+        "Same as even always",
+        "N/A"
+      ],
+      "answer": 0,
+      "explain": "Odd parity is the complement of even parity for the same data.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "odd",
+        "label": "Odd parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "input[name=mode][value=odd]"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_medium_18.mp4",
+        "poster": "media/images/parity_medium_18-frame.png",
+        "figure": "media/images/parity_medium_18.png"
+      }
+    },
+    {
+      "id": "parity_medium_19",
+      "type": "true_false",
+      "prompt": "Checksums stronger than parity can still miss some corruptions.",
+      "answer": true,
+      "explain": "Even numbers of flips can cancel; simple checks are not crypto.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "checksum",
+        "label": "XOR checksum",
+        "steps": [
+          {
+            "click": "#btn-cs"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_medium_19.mp4",
+        "poster": "media/images/parity_medium_19-frame.png",
+        "figure": "media/images/parity_medium_19.png"
+      }
+    },
+    {
+      "id": "parity_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Which extra bit helps detect line errors?",
+      "choices": [
+        "A parity bit option",
+        "A K-map",
+        "An FSM encoding",
+        "Endian swap only"
+      ],
+      "answer": 0,
+      "explain": "Many UARTs optionally append parity.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "flip-fail",
+        "label": "Flip fails",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-attach"
+          },
+          {
+            "click": "#btn-flip0"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_medium_20.mp4",
+        "poster": "media/images/parity_medium_20-frame.png",
+        "figure": "media/images/parity_medium_20.png"
+      }
+    },
+    {
+      "id": "parity_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Even parity bit for data 0b0101 is…",
+      "choices": [
+        "0",
+        "1",
+        "X",
+        "2"
+      ],
+      "answer": 0,
+      "explain": "XOR of bits = 0 for even parity.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_medium_21.mp4",
+        "poster": "media/images/parity_medium_21-frame.png",
+        "figure": "media/images/parity_medium_21.png"
+      }
+    },
+    {
+      "id": "parity_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Odd parity bit for data 0b1000 is…",
+      "choices": [
+        "0",
+        "1",
+        "Same as even always",
+        "N/A"
+      ],
+      "answer": 0,
+      "explain": "Odd parity is the complement of even parity for the same data.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "odd",
+        "label": "Odd parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "input[name=mode][value=odd]"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_medium_22.mp4",
+        "poster": "media/images/parity_medium_22-frame.png",
+        "figure": "media/images/parity_medium_22.png"
+      }
+    },
+    {
+      "id": "parity_medium_23",
+      "type": "true_false",
+      "prompt": "Checksums stronger than parity can still miss some corruptions.",
+      "answer": true,
+      "explain": "Even numbers of flips can cancel; simple checks are not crypto.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "checksum",
+        "label": "XOR checksum",
+        "steps": [
+          {
+            "click": "#btn-cs"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_medium_23.mp4",
+        "poster": "media/images/parity_medium_23-frame.png",
+        "figure": "media/images/parity_medium_23.png"
+      }
+    },
+    {
+      "id": "parity_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Which extra bit helps detect line errors?",
+      "choices": [
+        "A parity bit option",
+        "A K-map",
+        "An FSM encoding",
+        "Endian swap only"
+      ],
+      "answer": 0,
+      "explain": "Many UARTs optionally append parity.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "flip-fail",
+        "label": "Flip fails",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-attach"
+          },
+          {
+            "click": "#btn-flip0"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_medium_24.mp4",
+        "poster": "media/images/parity_medium_24-frame.png",
+        "figure": "media/images/parity_medium_24.png"
+      }
+    },
+    {
+      "id": "parity_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Even parity bit for data 0b1010 is…",
+      "choices": [
+        "0",
+        "1",
+        "X",
+        "2"
+      ],
+      "answer": 0,
+      "explain": "XOR of bits = 0 for even parity.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_medium_25.mp4",
+        "poster": "media/images/parity_medium_25-frame.png",
+        "figure": "media/images/parity_medium_25.png"
+      }
+    },
+    {
+      "id": "parity_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Odd parity bit for data 0b1110 is…",
+      "choices": [
+        "0",
+        "1",
+        "Same as even always",
+        "N/A"
+      ],
+      "answer": 0,
+      "explain": "Odd parity is the complement of even parity for the same data.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "odd",
+        "label": "Odd parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "input[name=mode][value=odd]"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_medium_26.mp4",
+        "poster": "media/images/parity_medium_26-frame.png",
+        "figure": "media/images/parity_medium_26.png"
+      }
+    },
+    {
+      "id": "parity_medium_27",
+      "type": "true_false",
+      "prompt": "Checksums stronger than parity can still miss some corruptions.",
+      "answer": true,
+      "explain": "Even numbers of flips can cancel; simple checks are not crypto.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "checksum",
+        "label": "XOR checksum",
+        "steps": [
+          {
+            "click": "#btn-cs"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_medium_27.mp4",
+        "poster": "media/images/parity_medium_27-frame.png",
+        "figure": "media/images/parity_medium_27.png"
+      }
+    },
+    {
+      "id": "parity_medium_28",
+      "type": "multiple_choice",
+      "prompt": "Which extra bit helps detect line errors?",
+      "choices": [
+        "A parity bit option",
+        "A K-map",
+        "An FSM encoding",
+        "Endian swap only"
+      ],
+      "answer": 0,
+      "explain": "Many UARTs optionally append parity.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "flip-fail",
+        "label": "Flip fails",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-attach"
+          },
+          {
+            "click": "#btn-flip0"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_medium_28.mp4",
+        "poster": "media/images/parity_medium_28-frame.png",
+        "figure": "media/images/parity_medium_28.png"
+      }
+    },
+    {
+      "id": "parity_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Even parity bit for data 0b0101 is…",
+      "choices": [
+        "0",
+        "1",
+        "X",
+        "2"
+      ],
+      "answer": 0,
+      "explain": "XOR of bits = 0 for even parity.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_medium_29.mp4",
+        "poster": "media/images/parity_medium_29-frame.png",
+        "figure": "media/images/parity_medium_29.png"
+      }
+    },
+    {
+      "id": "parity_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Odd parity bit for data 0b1000 is…",
+      "choices": [
+        "0",
+        "1",
+        "Same as even always",
+        "N/A"
+      ],
+      "answer": 0,
+      "explain": "Odd parity is the complement of even parity for the same data.",
+      "difficulty": "medium",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "odd",
+        "label": "Odd parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "input[name=mode][value=odd]"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_medium_30.mp4",
+        "poster": "media/images/parity_medium_30-frame.png",
+        "figure": "media/images/parity_medium_30.png"
+      }
+    },
+    {
+      "id": "parity_hard_01",
+      "type": "multiple_choice",
+      "prompt": "If even parity over data||P is checked, a correct frame has…",
+      "choices": [
+        "1",
+        "0",
+        "0xFF",
+        "MSB only"
+      ],
+      "answer": 1,
+      "explain": "Whole codeword has even ones → XOR is 0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_hard_01.mp4",
+        "poster": "media/images/parity_hard_01-frame.png",
+        "figure": "media/images/parity_hard_01.png"
+      }
+    },
+    {
+      "id": "parity_hard_02",
+      "type": "multiple_choice",
+      "prompt": "XOR checksum for bytes 0x01, 0x02 should be…",
+      "choices": [
+        "0x00",
+        "0x03",
+        "0xFF",
+        "0x12"
+      ],
+      "answer": 1,
+      "explain": "0x01 ^ 0x02 = 0x03; that checksum folds to 0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "checksum",
+        "label": "XOR checksum",
+        "steps": [
+          {
+            "click": "#btn-cs"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_hard_02.mp4",
+        "poster": "media/images/parity_hard_02-frame.png",
+        "figure": "media/images/parity_hard_02.png"
+      }
+    },
+    {
+      "id": "parity_hard_03",
+      "type": "true_false",
+      "prompt": "Memory DIMMs may use ECC beyond simple parity.",
+      "answer": true,
+      "explain": "Parity detects; ECC syndromes correct/locate; XOR may not pinpoint.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_hard_03.mp4",
+        "poster": "media/images/parity_hard_03-frame.png",
+        "figure": "media/images/parity_hard_03.png"
+      }
+    },
+    {
+      "id": "parity_hard_04",
+      "type": "multiple_choice",
+      "prompt": "2D parity schemes increase…",
+      "choices": [
+        "Clock frequency only",
+        "Error detection coverage / occasional location",
+        "ASCII glyph count",
+        "Endian conversion"
+      ],
+      "answer": 1,
+      "explain": "Extra parity dimensions catch more patterns and can hint at location.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_hard_04.mp4",
+        "poster": "media/images/parity_hard_04-frame.png",
+        "figure": "media/images/parity_hard_04.png"
+      }
+    },
+    {
+      "id": "parity_hard_05",
+      "type": "multiple_choice",
+      "prompt": "If even parity over data||P is checked, a correct frame has…",
+      "choices": [
+        "1",
+        "0",
+        "0xFF",
+        "MSB only"
+      ],
+      "answer": 1,
+      "explain": "Whole codeword has even ones → XOR is 0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_hard_05.mp4",
+        "poster": "media/images/parity_hard_05-frame.png",
+        "figure": "media/images/parity_hard_05.png"
+      }
+    },
+    {
+      "id": "parity_hard_06",
+      "type": "multiple_choice",
+      "prompt": "XOR checksum for bytes 0x01, 0x02 should be…",
+      "choices": [
+        "0x00",
+        "0x03",
+        "0xFF",
+        "0x12"
+      ],
+      "answer": 1,
+      "explain": "0x01 ^ 0x02 = 0x03; that checksum folds to 0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "checksum",
+        "label": "XOR checksum",
+        "steps": [
+          {
+            "click": "#btn-cs"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_hard_06.mp4",
+        "poster": "media/images/parity_hard_06-frame.png",
+        "figure": "media/images/parity_hard_06.png"
+      }
+    },
+    {
+      "id": "parity_hard_07",
+      "type": "true_false",
+      "prompt": "Memory DIMMs may use ECC beyond simple parity.",
+      "answer": true,
+      "explain": "Parity detects; ECC syndromes correct/locate; XOR may not pinpoint.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_hard_07.mp4",
+        "poster": "media/images/parity_hard_07-frame.png",
+        "figure": "media/images/parity_hard_07.png"
+      }
+    },
+    {
+      "id": "parity_hard_08",
+      "type": "multiple_choice",
+      "prompt": "2D parity schemes increase…",
+      "choices": [
+        "Clock frequency only",
+        "Error detection coverage / occasional location",
+        "ASCII glyph count",
+        "Endian conversion"
+      ],
+      "answer": 1,
+      "explain": "Extra parity dimensions catch more patterns and can hint at location.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_hard_08.mp4",
+        "poster": "media/images/parity_hard_08-frame.png",
+        "figure": "media/images/parity_hard_08.png"
+      }
+    },
+    {
+      "id": "parity_hard_09",
+      "type": "multiple_choice",
+      "prompt": "If even parity over data||P is checked, a correct frame has…",
+      "choices": [
+        "1",
+        "0",
+        "0xFF",
+        "MSB only"
+      ],
+      "answer": 1,
+      "explain": "Whole codeword has even ones → XOR is 0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_hard_09.mp4",
+        "poster": "media/images/parity_hard_09-frame.png",
+        "figure": "media/images/parity_hard_09.png"
+      }
+    },
+    {
+      "id": "parity_hard_10",
+      "type": "multiple_choice",
+      "prompt": "XOR checksum for bytes 0x01, 0x02 should be…",
+      "choices": [
+        "0x00",
+        "0x03",
+        "0xFF",
+        "0x12"
+      ],
+      "answer": 1,
+      "explain": "0x01 ^ 0x02 = 0x03; that checksum folds to 0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "checksum",
+        "label": "XOR checksum",
+        "steps": [
+          {
+            "click": "#btn-cs"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_hard_10.mp4",
+        "poster": "media/images/parity_hard_10-frame.png",
+        "figure": "media/images/parity_hard_10.png"
+      }
+    },
+    {
+      "id": "parity_hard_11",
+      "type": "true_false",
+      "prompt": "Memory DIMMs may use ECC beyond simple parity.",
+      "answer": true,
+      "explain": "Parity detects; ECC syndromes correct/locate; XOR may not pinpoint.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_hard_11.mp4",
+        "poster": "media/images/parity_hard_11-frame.png",
+        "figure": "media/images/parity_hard_11.png"
+      }
+    },
+    {
+      "id": "parity_hard_12",
+      "type": "multiple_choice",
+      "prompt": "2D parity schemes increase…",
+      "choices": [
+        "Clock frequency only",
+        "Error detection coverage / occasional location",
+        "ASCII glyph count",
+        "Endian conversion"
+      ],
+      "answer": 1,
+      "explain": "Extra parity dimensions catch more patterns and can hint at location.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_hard_12.mp4",
+        "poster": "media/images/parity_hard_12-frame.png",
+        "figure": "media/images/parity_hard_12.png"
+      }
+    },
+    {
+      "id": "parity_hard_13",
+      "type": "multiple_choice",
+      "prompt": "If even parity over data||P is checked, a correct frame has…",
+      "choices": [
+        "1",
+        "0",
+        "0xFF",
+        "MSB only"
+      ],
+      "answer": 1,
+      "explain": "Whole codeword has even ones → XOR is 0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_hard_13.mp4",
+        "poster": "media/images/parity_hard_13-frame.png",
+        "figure": "media/images/parity_hard_13.png"
+      }
+    },
+    {
+      "id": "parity_hard_14",
+      "type": "multiple_choice",
+      "prompt": "XOR checksum for bytes 0x01, 0x02 should be…",
+      "choices": [
+        "0x00",
+        "0x03",
+        "0xFF",
+        "0x12"
+      ],
+      "answer": 1,
+      "explain": "0x01 ^ 0x02 = 0x03; that checksum folds to 0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "checksum",
+        "label": "XOR checksum",
+        "steps": [
+          {
+            "click": "#btn-cs"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_hard_14.mp4",
+        "poster": "media/images/parity_hard_14-frame.png",
+        "figure": "media/images/parity_hard_14.png"
+      }
+    },
+    {
+      "id": "parity_hard_15",
+      "type": "true_false",
+      "prompt": "Memory DIMMs may use ECC beyond simple parity.",
+      "answer": true,
+      "explain": "Parity detects; ECC syndromes correct/locate; XOR may not pinpoint.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_hard_15.mp4",
+        "poster": "media/images/parity_hard_15-frame.png",
+        "figure": "media/images/parity_hard_15.png"
+      }
+    },
+    {
+      "id": "parity_hard_16",
+      "type": "multiple_choice",
+      "prompt": "2D parity schemes increase…",
+      "choices": [
+        "Clock frequency only",
+        "Error detection coverage / occasional location",
+        "ASCII glyph count",
+        "Endian conversion"
+      ],
+      "answer": 1,
+      "explain": "Extra parity dimensions catch more patterns and can hint at location.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_hard_16.mp4",
+        "poster": "media/images/parity_hard_16-frame.png",
+        "figure": "media/images/parity_hard_16.png"
+      }
+    },
+    {
+      "id": "parity_hard_17",
+      "type": "multiple_choice",
+      "prompt": "If even parity over data||P is checked, a correct frame has…",
+      "choices": [
+        "1",
+        "0",
+        "0xFF",
+        "MSB only"
+      ],
+      "answer": 1,
+      "explain": "Whole codeword has even ones → XOR is 0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_hard_17.mp4",
+        "poster": "media/images/parity_hard_17-frame.png",
+        "figure": "media/images/parity_hard_17.png"
+      }
+    },
+    {
+      "id": "parity_hard_18",
+      "type": "multiple_choice",
+      "prompt": "XOR checksum for bytes 0x01, 0x02 should be…",
+      "choices": [
+        "0x00",
+        "0x03",
+        "0xFF",
+        "0x12"
+      ],
+      "answer": 1,
+      "explain": "0x01 ^ 0x02 = 0x03; that checksum folds to 0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "checksum",
+        "label": "XOR checksum",
+        "steps": [
+          {
+            "click": "#btn-cs"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_hard_18.mp4",
+        "poster": "media/images/parity_hard_18-frame.png",
+        "figure": "media/images/parity_hard_18.png"
+      }
+    },
+    {
+      "id": "parity_hard_19",
+      "type": "true_false",
+      "prompt": "Memory DIMMs may use ECC beyond simple parity.",
+      "answer": true,
+      "explain": "Parity detects; ECC syndromes correct/locate; XOR may not pinpoint.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_hard_19.mp4",
+        "poster": "media/images/parity_hard_19-frame.png",
+        "figure": "media/images/parity_hard_19.png"
+      }
+    },
+    {
+      "id": "parity_hard_20",
+      "type": "multiple_choice",
+      "prompt": "2D parity schemes increase…",
+      "choices": [
+        "Clock frequency only",
+        "Error detection coverage / occasional location",
+        "ASCII glyph count",
+        "Endian conversion"
+      ],
+      "answer": 1,
+      "explain": "Extra parity dimensions catch more patterns and can hint at location.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_hard_20.mp4",
+        "poster": "media/images/parity_hard_20-frame.png",
+        "figure": "media/images/parity_hard_20.png"
+      }
+    },
+    {
+      "id": "parity_hard_21",
+      "type": "multiple_choice",
+      "prompt": "If even parity over data||P is checked, a correct frame has…",
+      "choices": [
+        "1",
+        "0",
+        "0xFF",
+        "MSB only"
+      ],
+      "answer": 1,
+      "explain": "Whole codeword has even ones → XOR is 0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_hard_21.mp4",
+        "poster": "media/images/parity_hard_21-frame.png",
+        "figure": "media/images/parity_hard_21.png"
+      }
+    },
+    {
+      "id": "parity_hard_22",
+      "type": "multiple_choice",
+      "prompt": "XOR checksum for bytes 0x01, 0x02 should be…",
+      "choices": [
+        "0x00",
+        "0x03",
+        "0xFF",
+        "0x12"
+      ],
+      "answer": 1,
+      "explain": "0x01 ^ 0x02 = 0x03; that checksum folds to 0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "checksum",
+        "label": "XOR checksum",
+        "steps": [
+          {
+            "click": "#btn-cs"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_hard_22.mp4",
+        "poster": "media/images/parity_hard_22-frame.png",
+        "figure": "media/images/parity_hard_22.png"
+      }
+    },
+    {
+      "id": "parity_hard_23",
+      "type": "true_false",
+      "prompt": "Memory DIMMs may use ECC beyond simple parity.",
+      "answer": true,
+      "explain": "Parity detects; ECC syndromes correct/locate; XOR may not pinpoint.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_hard_23.mp4",
+        "poster": "media/images/parity_hard_23-frame.png",
+        "figure": "media/images/parity_hard_23.png"
+      }
+    },
+    {
+      "id": "parity_hard_24",
+      "type": "multiple_choice",
+      "prompt": "2D parity schemes increase…",
+      "choices": [
+        "Clock frequency only",
+        "Error detection coverage / occasional location",
+        "ASCII glyph count",
+        "Endian conversion"
+      ],
+      "answer": 1,
+      "explain": "Extra parity dimensions catch more patterns and can hint at location.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_hard_24.mp4",
+        "poster": "media/images/parity_hard_24-frame.png",
+        "figure": "media/images/parity_hard_24.png"
+      }
+    },
+    {
+      "id": "parity_hard_25",
+      "type": "multiple_choice",
+      "prompt": "If even parity over data||P is checked, a correct frame has…",
+      "choices": [
+        "1",
+        "0",
+        "0xFF",
+        "MSB only"
+      ],
+      "answer": 1,
+      "explain": "Whole codeword has even ones → XOR is 0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_hard_25.mp4",
+        "poster": "media/images/parity_hard_25-frame.png",
+        "figure": "media/images/parity_hard_25.png"
+      }
+    },
+    {
+      "id": "parity_hard_26",
+      "type": "multiple_choice",
+      "prompt": "XOR checksum for bytes 0x01, 0x02 should be…",
+      "choices": [
+        "0x00",
+        "0x03",
+        "0xFF",
+        "0x12"
+      ],
+      "answer": 1,
+      "explain": "0x01 ^ 0x02 = 0x03; that checksum folds to 0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "checksum",
+        "label": "XOR checksum",
+        "steps": [
+          {
+            "click": "#btn-cs"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_hard_26.mp4",
+        "poster": "media/images/parity_hard_26-frame.png",
+        "figure": "media/images/parity_hard_26.png"
+      }
+    },
+    {
+      "id": "parity_hard_27",
+      "type": "true_false",
+      "prompt": "Memory DIMMs may use ECC beyond simple parity.",
+      "answer": true,
+      "explain": "Parity detects; ECC syndromes correct/locate; XOR may not pinpoint.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_hard_27.mp4",
+        "poster": "media/images/parity_hard_27-frame.png",
+        "figure": "media/images/parity_hard_27.png"
+      }
+    },
+    {
+      "id": "parity_hard_28",
+      "type": "multiple_choice",
+      "prompt": "2D parity schemes increase…",
+      "choices": [
+        "Clock frequency only",
+        "Error detection coverage / occasional location",
+        "ASCII glyph count",
+        "Endian conversion"
+      ],
+      "answer": 1,
+      "explain": "Extra parity dimensions catch more patterns and can hint at location.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_hard_28.mp4",
+        "poster": "media/images/parity_hard_28-frame.png",
+        "figure": "media/images/parity_hard_28.png"
+      }
+    },
+    {
+      "id": "parity_hard_29",
+      "type": "multiple_choice",
+      "prompt": "If even parity over data||P is checked, a correct frame has…",
+      "choices": [
+        "1",
+        "0",
+        "0xFF",
+        "MSB only"
+      ],
+      "answer": 1,
+      "explain": "Whole codeword has even ones → XOR is 0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "even",
+        "label": "Even parity",
+        "steps": [
+          {
+            "click": "#px-starter"
+          },
+          {
+            "click": "#btn-compute-p"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_hard_29.mp4",
+        "poster": "media/images/parity_hard_29-frame.png",
+        "figure": "media/images/parity_hard_29.png"
+      }
+    },
+    {
+      "id": "parity_hard_30",
+      "type": "multiple_choice",
+      "prompt": "XOR checksum for bytes 0x01, 0x02 should be…",
+      "choices": [
+        "0x00",
+        "0x03",
+        "0xFF",
+        "0x12"
+      ],
+      "answer": 1,
+      "explain": "0x01 ^ 0x02 = 0x03; that checksum folds to 0.",
+      "difficulty": "hard",
+      "tool_capture": {
+        "tool": "parity-checksum",
+        "key": "checksum",
+        "label": "XOR checksum",
+        "steps": [
+          {
+            "click": "#btn-cs"
+          }
+        ]
+      },
+      "media": {
+        "type": "video",
+        "src": "media/videos/parity_hard_30.mp4",
+        "poster": "media/images/parity_hard_30-frame.png",
+        "figure": "media/images/parity_hard_30.png"
+      }
+    }
+  ]
+}

@@ -20,6 +20,21 @@
         "src": "media/videos/radix_easy_01.mp4",
         "poster": "media/images/radix_easy_01-frame.png",
         "figure": "media/images/radix_easy_01.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "hex-digit-A",
+        "label": "Width 4 · hex A",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "A"
+          }
+        ]
       }
     },
     {
@@ -34,7 +49,33 @@
       ],
       "answer": 1,
       "explain": "n bits encode 2^n patterns.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_easy_02.mp4",
+        "poster": "media/images/radix_easy_02-frame.png",
+        "figure": "media/images/radix_easy_02.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "width-5",
+        "label": "Width 5",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-width-custom",
+            "value": "5",
+            "enter": true
+          },
+          {
+            "fill": "#rc-udec",
+            "value": "0"
+          }
+        ]
+      }
     },
     {
       "id": "radix_easy_03",
@@ -42,7 +83,28 @@
       "prompt": "Writing 5 as 0b101 or 0x5 does not change the value.",
       "answer": true,
       "explain": "Same quantity, different radix spelling.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_easy_03.mp4",
+        "poster": "media/images/radix_easy_03-frame.png",
+        "figure": "media/images/radix_easy_03.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "same-5",
+        "label": "Width 8 · 5",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-udec",
+            "value": "5"
+          }
+        ]
+      }
     },
     {
       "id": "radix_easy_04",
@@ -56,7 +118,28 @@
       ],
       "answer": 1,
       "explain": "16 = 2^4, so one hex digit is 4 bits.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_easy_04.mp4",
+        "poster": "media/images/radix_easy_04-frame.png",
+        "figure": "media/images/radix_easy_04.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "nibble-group",
+        "label": "Width 4 nibble",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "A"
+          }
+        ]
+      }
     },
     {
       "id": "radix_easy_05",
@@ -70,7 +153,28 @@
       ],
       "answer": 1,
       "explain": "E16 = 1410.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_easy_05.mp4",
+        "poster": "media/images/radix_easy_05-frame.png",
+        "figure": "media/images/radix_easy_05.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "hex-digit-E",
+        "label": "Width 4 · hex E",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "E"
+          }
+        ]
+      }
     },
     {
       "id": "radix_easy_06",
@@ -84,7 +188,28 @@
       ],
       "answer": 1,
       "explain": "n bits encode 2^n patterns.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_easy_06.mp4",
+        "poster": "media/images/radix_easy_06-frame.png",
+        "figure": "media/images/radix_easy_06.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "width-4",
+        "label": "Width 4",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-udec",
+            "value": "0"
+          }
+        ]
+      }
     },
     {
       "id": "radix_easy_07",
@@ -92,7 +217,28 @@
       "prompt": "Writing 5 as 0b101 or 0x5 does not change the value.",
       "answer": true,
       "explain": "Same quantity, different radix spelling.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_easy_07.mp4",
+        "poster": "media/images/radix_easy_07-frame.png",
+        "figure": "media/images/radix_easy_07.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "same-5",
+        "label": "Width 8 · 5",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-udec",
+            "value": "5"
+          }
+        ]
+      }
     },
     {
       "id": "radix_easy_08",
@@ -106,7 +252,28 @@
       ],
       "answer": 1,
       "explain": "16 = 2^4, so one hex digit is 4 bits.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_easy_08.mp4",
+        "poster": "media/images/radix_easy_08-frame.png",
+        "figure": "media/images/radix_easy_08.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "nibble-group",
+        "label": "Width 4 nibble",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "A"
+          }
+        ]
+      }
     },
     {
       "id": "radix_easy_09",
@@ -120,7 +287,28 @@
       ],
       "answer": 1,
       "explain": "C16 = 1210.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_easy_09.mp4",
+        "poster": "media/images/radix_easy_09-frame.png",
+        "figure": "media/images/radix_easy_09.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "hex-digit-C",
+        "label": "Width 4 · hex C",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "C"
+          }
+        ]
+      }
     },
     {
       "id": "radix_easy_10",
@@ -134,7 +322,33 @@
       ],
       "answer": 1,
       "explain": "n bits encode 2^n patterns.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_easy_10.mp4",
+        "poster": "media/images/radix_easy_10-frame.png",
+        "figure": "media/images/radix_easy_10.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "width-3",
+        "label": "Width 3",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-width-custom",
+            "value": "3",
+            "enter": true
+          },
+          {
+            "fill": "#rc-udec",
+            "value": "0"
+          }
+        ]
+      }
     },
     {
       "id": "radix_easy_11",
@@ -142,7 +356,28 @@
       "prompt": "Writing 5 as 0b101 or 0x5 does not change the value.",
       "answer": true,
       "explain": "Same quantity, different radix spelling.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_easy_11.mp4",
+        "poster": "media/images/radix_easy_11-frame.png",
+        "figure": "media/images/radix_easy_11.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "same-5",
+        "label": "Width 8 · 5",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-udec",
+            "value": "5"
+          }
+        ]
+      }
     },
     {
       "id": "radix_easy_12",
@@ -156,7 +391,28 @@
       ],
       "answer": 1,
       "explain": "16 = 2^4, so one hex digit is 4 bits.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_easy_12.mp4",
+        "poster": "media/images/radix_easy_12-frame.png",
+        "figure": "media/images/radix_easy_12.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "nibble-group",
+        "label": "Width 4 nibble",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "A"
+          }
+        ]
+      }
     },
     {
       "id": "radix_easy_13",
@@ -170,7 +426,28 @@
       ],
       "answer": 1,
       "explain": "A16 = 1010.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_easy_13.mp4",
+        "poster": "media/images/radix_easy_13-frame.png",
+        "figure": "media/images/radix_easy_13.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "hex-digit-A",
+        "label": "Width 4 · hex A",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "A"
+          }
+        ]
+      }
     },
     {
       "id": "radix_easy_14",
@@ -184,7 +461,33 @@
       ],
       "answer": 1,
       "explain": "n bits encode 2^n patterns.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_easy_14.mp4",
+        "poster": "media/images/radix_easy_14-frame.png",
+        "figure": "media/images/radix_easy_14.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "width-7",
+        "label": "Width 7",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-width-custom",
+            "value": "7",
+            "enter": true
+          },
+          {
+            "fill": "#rc-udec",
+            "value": "0"
+          }
+        ]
+      }
     },
     {
       "id": "radix_easy_15",
@@ -192,7 +495,28 @@
       "prompt": "Writing 5 as 0b101 or 0x5 does not change the value.",
       "answer": true,
       "explain": "Same quantity, different radix spelling.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_easy_15.mp4",
+        "poster": "media/images/radix_easy_15-frame.png",
+        "figure": "media/images/radix_easy_15.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "same-5",
+        "label": "Width 8 · 5",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-udec",
+            "value": "5"
+          }
+        ]
+      }
     },
     {
       "id": "radix_easy_16",
@@ -206,7 +530,28 @@
       ],
       "answer": 1,
       "explain": "16 = 2^4, so one hex digit is 4 bits.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_easy_16.mp4",
+        "poster": "media/images/radix_easy_16-frame.png",
+        "figure": "media/images/radix_easy_16.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "nibble-group",
+        "label": "Width 4 nibble",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "A"
+          }
+        ]
+      }
     },
     {
       "id": "radix_easy_17",
@@ -220,7 +565,28 @@
       ],
       "answer": 1,
       "explain": "E16 = 1410.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_easy_17.mp4",
+        "poster": "media/images/radix_easy_17-frame.png",
+        "figure": "media/images/radix_easy_17.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "hex-digit-E",
+        "label": "Width 4 · hex E",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "E"
+          }
+        ]
+      }
     },
     {
       "id": "radix_easy_18",
@@ -234,7 +600,33 @@
       ],
       "answer": 1,
       "explain": "n bits encode 2^n patterns.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_easy_18.mp4",
+        "poster": "media/images/radix_easy_18-frame.png",
+        "figure": "media/images/radix_easy_18.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "width-6",
+        "label": "Width 6",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-width-custom",
+            "value": "6",
+            "enter": true
+          },
+          {
+            "fill": "#rc-udec",
+            "value": "0"
+          }
+        ]
+      }
     },
     {
       "id": "radix_easy_19",
@@ -242,7 +634,28 @@
       "prompt": "Writing 5 as 0b101 or 0x5 does not change the value.",
       "answer": true,
       "explain": "Same quantity, different radix spelling.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_easy_19.mp4",
+        "poster": "media/images/radix_easy_19-frame.png",
+        "figure": "media/images/radix_easy_19.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "same-5",
+        "label": "Width 8 · 5",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-udec",
+            "value": "5"
+          }
+        ]
+      }
     },
     {
       "id": "radix_easy_20",
@@ -256,7 +669,28 @@
       ],
       "answer": 1,
       "explain": "16 = 2^4, so one hex digit is 4 bits.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_easy_20.mp4",
+        "poster": "media/images/radix_easy_20-frame.png",
+        "figure": "media/images/radix_easy_20.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "nibble-group",
+        "label": "Width 4 nibble",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "A"
+          }
+        ]
+      }
     },
     {
       "id": "radix_easy_21",
@@ -270,7 +704,28 @@
       ],
       "answer": 1,
       "explain": "C16 = 1210.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_easy_21.mp4",
+        "poster": "media/images/radix_easy_21-frame.png",
+        "figure": "media/images/radix_easy_21.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "hex-digit-C",
+        "label": "Width 4 · hex C",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "C"
+          }
+        ]
+      }
     },
     {
       "id": "radix_easy_22",
@@ -284,7 +739,33 @@
       ],
       "answer": 1,
       "explain": "n bits encode 2^n patterns.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_easy_22.mp4",
+        "poster": "media/images/radix_easy_22-frame.png",
+        "figure": "media/images/radix_easy_22.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "width-5",
+        "label": "Width 5",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-width-custom",
+            "value": "5",
+            "enter": true
+          },
+          {
+            "fill": "#rc-udec",
+            "value": "0"
+          }
+        ]
+      }
     },
     {
       "id": "radix_easy_23",
@@ -292,7 +773,28 @@
       "prompt": "Writing 5 as 0b101 or 0x5 does not change the value.",
       "answer": true,
       "explain": "Same quantity, different radix spelling.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_easy_23.mp4",
+        "poster": "media/images/radix_easy_23-frame.png",
+        "figure": "media/images/radix_easy_23.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "same-5",
+        "label": "Width 8 · 5",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-udec",
+            "value": "5"
+          }
+        ]
+      }
     },
     {
       "id": "radix_easy_24",
@@ -306,7 +808,28 @@
       ],
       "answer": 1,
       "explain": "16 = 2^4, so one hex digit is 4 bits.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_easy_24.mp4",
+        "poster": "media/images/radix_easy_24-frame.png",
+        "figure": "media/images/radix_easy_24.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "nibble-group",
+        "label": "Width 4 nibble",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "A"
+          }
+        ]
+      }
     },
     {
       "id": "radix_easy_25",
@@ -320,7 +843,28 @@
       ],
       "answer": 1,
       "explain": "A16 = 1010.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_easy_25.mp4",
+        "poster": "media/images/radix_easy_25-frame.png",
+        "figure": "media/images/radix_easy_25.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "hex-digit-A",
+        "label": "Width 4 · hex A",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "A"
+          }
+        ]
+      }
     },
     {
       "id": "radix_easy_26",
@@ -334,7 +878,28 @@
       ],
       "answer": 1,
       "explain": "n bits encode 2^n patterns.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_easy_26.mp4",
+        "poster": "media/images/radix_easy_26-frame.png",
+        "figure": "media/images/radix_easy_26.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "width-4",
+        "label": "Width 4",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-udec",
+            "value": "0"
+          }
+        ]
+      }
     },
     {
       "id": "radix_easy_27",
@@ -342,7 +907,28 @@
       "prompt": "Writing 5 as 0b101 or 0x5 does not change the value.",
       "answer": true,
       "explain": "Same quantity, different radix spelling.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_easy_27.mp4",
+        "poster": "media/images/radix_easy_27-frame.png",
+        "figure": "media/images/radix_easy_27.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "same-5",
+        "label": "Width 8 · 5",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-udec",
+            "value": "5"
+          }
+        ]
+      }
     },
     {
       "id": "radix_easy_28",
@@ -356,7 +942,28 @@
       ],
       "answer": 1,
       "explain": "16 = 2^4, so one hex digit is 4 bits.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_easy_28.mp4",
+        "poster": "media/images/radix_easy_28-frame.png",
+        "figure": "media/images/radix_easy_28.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "nibble-group",
+        "label": "Width 4 nibble",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "A"
+          }
+        ]
+      }
     },
     {
       "id": "radix_easy_29",
@@ -370,7 +977,28 @@
       ],
       "answer": 1,
       "explain": "E16 = 1410.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_easy_29.mp4",
+        "poster": "media/images/radix_easy_29-frame.png",
+        "figure": "media/images/radix_easy_29.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "hex-digit-E",
+        "label": "Width 4 · hex E",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "E"
+          }
+        ]
+      }
     },
     {
       "id": "radix_easy_30",
@@ -384,7 +1012,33 @@
       ],
       "answer": 1,
       "explain": "n bits encode 2^n patterns.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_easy_30.mp4",
+        "poster": "media/images/radix_easy_30-frame.png",
+        "figure": "media/images/radix_easy_30.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "width-3",
+        "label": "Width 3",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-width-custom",
+            "value": "3",
+            "enter": true
+          },
+          {
+            "fill": "#rc-udec",
+            "value": "0"
+          }
+        ]
+      }
     },
     {
       "id": "radix_medium_01",
@@ -398,7 +1052,28 @@
       ],
       "answer": 1,
       "explain": "Unsigned all-ones at 8 bits is 255 / 0xFF.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_medium_01.mp4",
+        "poster": "media/images/radix_medium_01-frame.png",
+        "figure": "media/images/radix_medium_01.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "signed-ff",
+        "label": "Width 8 · 0xFF signed",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "FF"
+          }
+        ]
+      }
     },
     {
       "id": "radix_medium_02",
@@ -412,7 +1087,28 @@
       ],
       "answer": 1,
       "explain": "Convert the decimal to binary at the stated width.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_medium_02.mp4",
+        "poster": "media/images/radix_medium_02-frame.png",
+        "figure": "media/images/radix_medium_02.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "udec-3-w4",
+        "label": "Width 4 · decimal 3",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-udec",
+            "value": "3"
+          }
+        ]
+      }
     },
     {
       "id": "radix_medium_03",
@@ -426,7 +1122,28 @@
       ],
       "answer": 1,
       "explain": "8+2 = 10.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_medium_03.mp4",
+        "poster": "media/images/radix_medium_03-frame.png",
+        "figure": "media/images/radix_medium_03.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "bin-1010",
+        "label": "0b1010",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-bin",
+            "value": "1010"
+          }
+        ]
+      }
     },
     {
       "id": "radix_medium_04",
@@ -434,7 +1151,28 @@
       "prompt": "The same hex text can map to different bit budgets at different widths.",
       "answer": true,
       "explain": "Width is part of the value’s interpretation.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_medium_04.mp4",
+        "poster": "media/images/radix_medium_04-frame.png",
+        "figure": "media/images/radix_medium_04.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "hex-ff",
+        "label": "Width 8 · 0xFF unsigned",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "FF"
+          }
+        ]
+      }
     },
     {
       "id": "radix_medium_05",
@@ -448,7 +1186,28 @@
       ],
       "answer": 1,
       "explain": "Unsigned all-ones at 8 bits is 255 / 0xFF.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_medium_05.mp4",
+        "poster": "media/images/radix_medium_05-frame.png",
+        "figure": "media/images/radix_medium_05.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "signed-ff",
+        "label": "Width 8 · 0xFF signed",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "FF"
+          }
+        ]
+      }
     },
     {
       "id": "radix_medium_06",
@@ -462,7 +1221,28 @@
       ],
       "answer": 1,
       "explain": "Convert the decimal to binary at the stated width.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_medium_06.mp4",
+        "poster": "media/images/radix_medium_06-frame.png",
+        "figure": "media/images/radix_medium_06.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "udec-7-w4",
+        "label": "Width 4 · decimal 7",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-udec",
+            "value": "7"
+          }
+        ]
+      }
     },
     {
       "id": "radix_medium_07",
@@ -476,7 +1256,28 @@
       ],
       "answer": 1,
       "explain": "8+2 = 10.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_medium_07.mp4",
+        "poster": "media/images/radix_medium_07-frame.png",
+        "figure": "media/images/radix_medium_07.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "bin-1010",
+        "label": "0b1010",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-bin",
+            "value": "1010"
+          }
+        ]
+      }
     },
     {
       "id": "radix_medium_08",
@@ -484,7 +1285,28 @@
       "prompt": "The same hex text can map to different bit budgets at different widths.",
       "answer": true,
       "explain": "Width is part of the value’s interpretation.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_medium_08.mp4",
+        "poster": "media/images/radix_medium_08-frame.png",
+        "figure": "media/images/radix_medium_08.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "hex-ff",
+        "label": "Width 8 · 0xFF unsigned",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "FF"
+          }
+        ]
+      }
     },
     {
       "id": "radix_medium_09",
@@ -498,7 +1320,28 @@
       ],
       "answer": 1,
       "explain": "Unsigned all-ones at 8 bits is 255 / 0xFF.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_medium_09.mp4",
+        "poster": "media/images/radix_medium_09-frame.png",
+        "figure": "media/images/radix_medium_09.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "signed-ff",
+        "label": "Width 8 · 0xFF signed",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "FF"
+          }
+        ]
+      }
     },
     {
       "id": "radix_medium_10",
@@ -512,7 +1355,28 @@
       ],
       "answer": 1,
       "explain": "Convert the decimal to binary at the stated width.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_medium_10.mp4",
+        "poster": "media/images/radix_medium_10-frame.png",
+        "figure": "media/images/radix_medium_10.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "udec-3-w4",
+        "label": "Width 4 · decimal 3",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-udec",
+            "value": "3"
+          }
+        ]
+      }
     },
     {
       "id": "radix_medium_11",
@@ -526,7 +1390,28 @@
       ],
       "answer": 1,
       "explain": "8+2 = 10.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_medium_11.mp4",
+        "poster": "media/images/radix_medium_11-frame.png",
+        "figure": "media/images/radix_medium_11.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "bin-1010",
+        "label": "0b1010",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-bin",
+            "value": "1010"
+          }
+        ]
+      }
     },
     {
       "id": "radix_medium_12",
@@ -534,7 +1419,28 @@
       "prompt": "The same hex text can map to different bit budgets at different widths.",
       "answer": true,
       "explain": "Width is part of the value’s interpretation.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_medium_12.mp4",
+        "poster": "media/images/radix_medium_12-frame.png",
+        "figure": "media/images/radix_medium_12.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "hex-ff",
+        "label": "Width 8 · 0xFF unsigned",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "FF"
+          }
+        ]
+      }
     },
     {
       "id": "radix_medium_13",
@@ -548,7 +1454,28 @@
       ],
       "answer": 1,
       "explain": "Unsigned all-ones at 8 bits is 255 / 0xFF.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_medium_13.mp4",
+        "poster": "media/images/radix_medium_13-frame.png",
+        "figure": "media/images/radix_medium_13.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "signed-ff",
+        "label": "Width 8 · 0xFF signed",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "FF"
+          }
+        ]
+      }
     },
     {
       "id": "radix_medium_14",
@@ -562,7 +1489,28 @@
       ],
       "answer": 1,
       "explain": "Convert the decimal to binary at the stated width.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_medium_14.mp4",
+        "poster": "media/images/radix_medium_14-frame.png",
+        "figure": "media/images/radix_medium_14.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "udec-7-w4",
+        "label": "Width 4 · decimal 7",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-udec",
+            "value": "7"
+          }
+        ]
+      }
     },
     {
       "id": "radix_medium_15",
@@ -576,7 +1524,28 @@
       ],
       "answer": 1,
       "explain": "8+2 = 10.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_medium_15.mp4",
+        "poster": "media/images/radix_medium_15-frame.png",
+        "figure": "media/images/radix_medium_15.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "bin-1010",
+        "label": "0b1010",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-bin",
+            "value": "1010"
+          }
+        ]
+      }
     },
     {
       "id": "radix_medium_16",
@@ -584,7 +1553,28 @@
       "prompt": "The same hex text can map to different bit budgets at different widths.",
       "answer": true,
       "explain": "Width is part of the value’s interpretation.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_medium_16.mp4",
+        "poster": "media/images/radix_medium_16-frame.png",
+        "figure": "media/images/radix_medium_16.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "hex-ff",
+        "label": "Width 8 · 0xFF unsigned",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "FF"
+          }
+        ]
+      }
     },
     {
       "id": "radix_medium_17",
@@ -598,7 +1588,28 @@
       ],
       "answer": 1,
       "explain": "Unsigned all-ones at 8 bits is 255 / 0xFF.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_medium_17.mp4",
+        "poster": "media/images/radix_medium_17-frame.png",
+        "figure": "media/images/radix_medium_17.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "signed-ff",
+        "label": "Width 8 · 0xFF signed",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "FF"
+          }
+        ]
+      }
     },
     {
       "id": "radix_medium_18",
@@ -612,7 +1623,28 @@
       ],
       "answer": 1,
       "explain": "Convert the decimal to binary at the stated width.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_medium_18.mp4",
+        "poster": "media/images/radix_medium_18-frame.png",
+        "figure": "media/images/radix_medium_18.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "udec-3-w4",
+        "label": "Width 4 · decimal 3",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-udec",
+            "value": "3"
+          }
+        ]
+      }
     },
     {
       "id": "radix_medium_19",
@@ -626,7 +1658,28 @@
       ],
       "answer": 1,
       "explain": "8+2 = 10.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_medium_19.mp4",
+        "poster": "media/images/radix_medium_19-frame.png",
+        "figure": "media/images/radix_medium_19.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "bin-1010",
+        "label": "0b1010",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-bin",
+            "value": "1010"
+          }
+        ]
+      }
     },
     {
       "id": "radix_medium_20",
@@ -634,7 +1687,28 @@
       "prompt": "The same hex text can map to different bit budgets at different widths.",
       "answer": true,
       "explain": "Width is part of the value’s interpretation.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_medium_20.mp4",
+        "poster": "media/images/radix_medium_20-frame.png",
+        "figure": "media/images/radix_medium_20.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "hex-ff",
+        "label": "Width 8 · 0xFF unsigned",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "FF"
+          }
+        ]
+      }
     },
     {
       "id": "radix_medium_21",
@@ -648,7 +1722,28 @@
       ],
       "answer": 1,
       "explain": "Unsigned all-ones at 8 bits is 255 / 0xFF.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_medium_21.mp4",
+        "poster": "media/images/radix_medium_21-frame.png",
+        "figure": "media/images/radix_medium_21.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "signed-ff",
+        "label": "Width 8 · 0xFF signed",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "FF"
+          }
+        ]
+      }
     },
     {
       "id": "radix_medium_22",
@@ -662,7 +1757,28 @@
       ],
       "answer": 1,
       "explain": "Convert the decimal to binary at the stated width.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_medium_22.mp4",
+        "poster": "media/images/radix_medium_22-frame.png",
+        "figure": "media/images/radix_medium_22.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "udec-7-w4",
+        "label": "Width 4 · decimal 7",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-udec",
+            "value": "7"
+          }
+        ]
+      }
     },
     {
       "id": "radix_medium_23",
@@ -676,7 +1792,28 @@
       ],
       "answer": 1,
       "explain": "8+2 = 10.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_medium_23.mp4",
+        "poster": "media/images/radix_medium_23-frame.png",
+        "figure": "media/images/radix_medium_23.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "bin-1010",
+        "label": "0b1010",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-bin",
+            "value": "1010"
+          }
+        ]
+      }
     },
     {
       "id": "radix_medium_24",
@@ -684,7 +1821,28 @@
       "prompt": "The same hex text can map to different bit budgets at different widths.",
       "answer": true,
       "explain": "Width is part of the value’s interpretation.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_medium_24.mp4",
+        "poster": "media/images/radix_medium_24-frame.png",
+        "figure": "media/images/radix_medium_24.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "hex-ff",
+        "label": "Width 8 · 0xFF unsigned",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "FF"
+          }
+        ]
+      }
     },
     {
       "id": "radix_medium_25",
@@ -698,7 +1856,28 @@
       ],
       "answer": 1,
       "explain": "Unsigned all-ones at 8 bits is 255 / 0xFF.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_medium_25.mp4",
+        "poster": "media/images/radix_medium_25-frame.png",
+        "figure": "media/images/radix_medium_25.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "signed-ff",
+        "label": "Width 8 · 0xFF signed",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "FF"
+          }
+        ]
+      }
     },
     {
       "id": "radix_medium_26",
@@ -712,7 +1891,28 @@
       ],
       "answer": 1,
       "explain": "Convert the decimal to binary at the stated width.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_medium_26.mp4",
+        "poster": "media/images/radix_medium_26-frame.png",
+        "figure": "media/images/radix_medium_26.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "udec-3-w4",
+        "label": "Width 4 · decimal 3",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-udec",
+            "value": "3"
+          }
+        ]
+      }
     },
     {
       "id": "radix_medium_27",
@@ -726,7 +1926,28 @@
       ],
       "answer": 1,
       "explain": "8+2 = 10.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_medium_27.mp4",
+        "poster": "media/images/radix_medium_27-frame.png",
+        "figure": "media/images/radix_medium_27.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "bin-1010",
+        "label": "0b1010",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-bin",
+            "value": "1010"
+          }
+        ]
+      }
     },
     {
       "id": "radix_medium_28",
@@ -734,7 +1955,28 @@
       "prompt": "The same hex text can map to different bit budgets at different widths.",
       "answer": true,
       "explain": "Width is part of the value’s interpretation.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_medium_28.mp4",
+        "poster": "media/images/radix_medium_28-frame.png",
+        "figure": "media/images/radix_medium_28.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "hex-ff",
+        "label": "Width 8 · 0xFF unsigned",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "FF"
+          }
+        ]
+      }
     },
     {
       "id": "radix_medium_29",
@@ -748,7 +1990,28 @@
       ],
       "answer": 1,
       "explain": "Unsigned all-ones at 8 bits is 255 / 0xFF.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_medium_29.mp4",
+        "poster": "media/images/radix_medium_29-frame.png",
+        "figure": "media/images/radix_medium_29.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "signed-ff",
+        "label": "Width 8 · 0xFF signed",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "FF"
+          }
+        ]
+      }
     },
     {
       "id": "radix_medium_30",
@@ -762,7 +2025,28 @@
       ],
       "answer": 1,
       "explain": "Convert the decimal to binary at the stated width.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_medium_30.mp4",
+        "poster": "media/images/radix_medium_30-frame.png",
+        "figure": "media/images/radix_medium_30.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "udec-7-w4",
+        "label": "Width 4 · decimal 7",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-udec",
+            "value": "7"
+          }
+        ]
+      }
     },
     {
       "id": "radix_hard_01",
@@ -776,7 +2060,28 @@
       ],
       "answer": 1,
       "explain": "Signed all-ones is -1.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_hard_01.mp4",
+        "poster": "media/images/radix_hard_01-frame.png",
+        "figure": "media/images/radix_hard_01.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "signed-ff",
+        "label": "Width 8 · 0xFF signed",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "FF"
+          }
+        ]
+      }
     },
     {
       "id": "radix_hard_02",
@@ -790,7 +2095,23 @@
       ],
       "answer": 1,
       "explain": "Same bits, different spellings.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_hard_02.mp4",
+        "poster": "media/images/radix_hard_02-frame.png",
+        "figure": "media/images/radix_hard_02.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "same-spellings-2a",
+        "label": "Starter 42 / 0x2A",
+        "steps": [
+          {
+            "click": "#rc-starter"
+          }
+        ]
+      }
     },
     {
       "id": "radix_hard_03",
@@ -804,7 +2125,28 @@
       ],
       "answer": 1,
       "explain": "Negative two’s-complement fills 1s when widening.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_hard_03.mp4",
+        "poster": "media/images/radix_hard_03-frame.png",
+        "figure": "media/images/radix_hard_03.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "sext-nibble",
+        "label": "Width 4 all-ones then compare",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-bin",
+            "value": "1111"
+          }
+        ]
+      }
     },
     {
       "id": "radix_hard_04",
@@ -812,7 +2154,28 @@
       "prompt": "Identical bits may mean different integers under different types.",
       "answer": true,
       "explain": "Interpretation depends on the type/radix view.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_hard_04.mp4",
+        "poster": "media/images/radix_hard_04-frame.png",
+        "figure": "media/images/radix_hard_04.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "hex-ff",
+        "label": "Width 8 · 0xFF unsigned",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "FF"
+          }
+        ]
+      }
     },
     {
       "id": "radix_hard_05",
@@ -826,7 +2189,28 @@
       ],
       "answer": 1,
       "explain": "Signed all-ones is -1.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_hard_05.mp4",
+        "poster": "media/images/radix_hard_05-frame.png",
+        "figure": "media/images/radix_hard_05.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "signed-ff",
+        "label": "Width 8 · 0xFF signed",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "FF"
+          }
+        ]
+      }
     },
     {
       "id": "radix_hard_06",
@@ -840,7 +2224,23 @@
       ],
       "answer": 1,
       "explain": "Same bits, different spellings.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_hard_06.mp4",
+        "poster": "media/images/radix_hard_06-frame.png",
+        "figure": "media/images/radix_hard_06.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "same-spellings-2a",
+        "label": "Starter 42 / 0x2A",
+        "steps": [
+          {
+            "click": "#rc-starter"
+          }
+        ]
+      }
     },
     {
       "id": "radix_hard_07",
@@ -854,7 +2254,28 @@
       ],
       "answer": 1,
       "explain": "Negative two’s-complement fills 1s when widening.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_hard_07.mp4",
+        "poster": "media/images/radix_hard_07-frame.png",
+        "figure": "media/images/radix_hard_07.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "sext-nibble",
+        "label": "Width 4 all-ones then compare",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-bin",
+            "value": "1111"
+          }
+        ]
+      }
     },
     {
       "id": "radix_hard_08",
@@ -862,7 +2283,28 @@
       "prompt": "Identical bits may mean different integers under different types.",
       "answer": true,
       "explain": "Interpretation depends on the type/radix view.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_hard_08.mp4",
+        "poster": "media/images/radix_hard_08-frame.png",
+        "figure": "media/images/radix_hard_08.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "hex-ff",
+        "label": "Width 8 · 0xFF unsigned",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "FF"
+          }
+        ]
+      }
     },
     {
       "id": "radix_hard_09",
@@ -876,7 +2318,28 @@
       ],
       "answer": 1,
       "explain": "Signed all-ones is -1.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_hard_09.mp4",
+        "poster": "media/images/radix_hard_09-frame.png",
+        "figure": "media/images/radix_hard_09.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "signed-ff",
+        "label": "Width 8 · 0xFF signed",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "FF"
+          }
+        ]
+      }
     },
     {
       "id": "radix_hard_10",
@@ -890,7 +2353,23 @@
       ],
       "answer": 1,
       "explain": "Same bits, different spellings.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_hard_10.mp4",
+        "poster": "media/images/radix_hard_10-frame.png",
+        "figure": "media/images/radix_hard_10.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "same-spellings-2a",
+        "label": "Starter 42 / 0x2A",
+        "steps": [
+          {
+            "click": "#rc-starter"
+          }
+        ]
+      }
     },
     {
       "id": "radix_hard_11",
@@ -904,7 +2383,28 @@
       ],
       "answer": 1,
       "explain": "Negative two’s-complement fills 1s when widening.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_hard_11.mp4",
+        "poster": "media/images/radix_hard_11-frame.png",
+        "figure": "media/images/radix_hard_11.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "sext-nibble",
+        "label": "Width 4 all-ones then compare",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-bin",
+            "value": "1111"
+          }
+        ]
+      }
     },
     {
       "id": "radix_hard_12",
@@ -912,7 +2412,28 @@
       "prompt": "Identical bits may mean different integers under different types.",
       "answer": true,
       "explain": "Interpretation depends on the type/radix view.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_hard_12.mp4",
+        "poster": "media/images/radix_hard_12-frame.png",
+        "figure": "media/images/radix_hard_12.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "hex-ff",
+        "label": "Width 8 · 0xFF unsigned",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "FF"
+          }
+        ]
+      }
     },
     {
       "id": "radix_hard_13",
@@ -926,7 +2447,28 @@
       ],
       "answer": 1,
       "explain": "Signed all-ones is -1.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_hard_13.mp4",
+        "poster": "media/images/radix_hard_13-frame.png",
+        "figure": "media/images/radix_hard_13.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "signed-ff",
+        "label": "Width 8 · 0xFF signed",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "FF"
+          }
+        ]
+      }
     },
     {
       "id": "radix_hard_14",
@@ -940,7 +2482,23 @@
       ],
       "answer": 1,
       "explain": "Same bits, different spellings.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_hard_14.mp4",
+        "poster": "media/images/radix_hard_14-frame.png",
+        "figure": "media/images/radix_hard_14.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "same-spellings-2a",
+        "label": "Starter 42 / 0x2A",
+        "steps": [
+          {
+            "click": "#rc-starter"
+          }
+        ]
+      }
     },
     {
       "id": "radix_hard_15",
@@ -954,7 +2512,28 @@
       ],
       "answer": 1,
       "explain": "Negative two’s-complement fills 1s when widening.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_hard_15.mp4",
+        "poster": "media/images/radix_hard_15-frame.png",
+        "figure": "media/images/radix_hard_15.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "sext-nibble",
+        "label": "Width 4 all-ones then compare",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-bin",
+            "value": "1111"
+          }
+        ]
+      }
     },
     {
       "id": "radix_hard_16",
@@ -962,7 +2541,28 @@
       "prompt": "Identical bits may mean different integers under different types.",
       "answer": true,
       "explain": "Interpretation depends on the type/radix view.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_hard_16.mp4",
+        "poster": "media/images/radix_hard_16-frame.png",
+        "figure": "media/images/radix_hard_16.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "hex-ff",
+        "label": "Width 8 · 0xFF unsigned",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "FF"
+          }
+        ]
+      }
     },
     {
       "id": "radix_hard_17",
@@ -976,7 +2576,28 @@
       ],
       "answer": 1,
       "explain": "Signed all-ones is -1.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_hard_17.mp4",
+        "poster": "media/images/radix_hard_17-frame.png",
+        "figure": "media/images/radix_hard_17.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "signed-ff",
+        "label": "Width 8 · 0xFF signed",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "FF"
+          }
+        ]
+      }
     },
     {
       "id": "radix_hard_18",
@@ -990,7 +2611,23 @@
       ],
       "answer": 1,
       "explain": "Same bits, different spellings.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_hard_18.mp4",
+        "poster": "media/images/radix_hard_18-frame.png",
+        "figure": "media/images/radix_hard_18.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "same-spellings-2a",
+        "label": "Starter 42 / 0x2A",
+        "steps": [
+          {
+            "click": "#rc-starter"
+          }
+        ]
+      }
     },
     {
       "id": "radix_hard_19",
@@ -1004,7 +2641,28 @@
       ],
       "answer": 1,
       "explain": "Negative two’s-complement fills 1s when widening.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_hard_19.mp4",
+        "poster": "media/images/radix_hard_19-frame.png",
+        "figure": "media/images/radix_hard_19.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "sext-nibble",
+        "label": "Width 4 all-ones then compare",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-bin",
+            "value": "1111"
+          }
+        ]
+      }
     },
     {
       "id": "radix_hard_20",
@@ -1012,7 +2670,28 @@
       "prompt": "Identical bits may mean different integers under different types.",
       "answer": true,
       "explain": "Interpretation depends on the type/radix view.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_hard_20.mp4",
+        "poster": "media/images/radix_hard_20-frame.png",
+        "figure": "media/images/radix_hard_20.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "hex-ff",
+        "label": "Width 8 · 0xFF unsigned",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "FF"
+          }
+        ]
+      }
     },
     {
       "id": "radix_hard_21",
@@ -1026,7 +2705,28 @@
       ],
       "answer": 1,
       "explain": "Signed all-ones is -1.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_hard_21.mp4",
+        "poster": "media/images/radix_hard_21-frame.png",
+        "figure": "media/images/radix_hard_21.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "signed-ff",
+        "label": "Width 8 · 0xFF signed",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "FF"
+          }
+        ]
+      }
     },
     {
       "id": "radix_hard_22",
@@ -1040,7 +2740,23 @@
       ],
       "answer": 1,
       "explain": "Same bits, different spellings.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_hard_22.mp4",
+        "poster": "media/images/radix_hard_22-frame.png",
+        "figure": "media/images/radix_hard_22.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "same-spellings-2a",
+        "label": "Starter 42 / 0x2A",
+        "steps": [
+          {
+            "click": "#rc-starter"
+          }
+        ]
+      }
     },
     {
       "id": "radix_hard_23",
@@ -1054,7 +2770,28 @@
       ],
       "answer": 1,
       "explain": "Negative two’s-complement fills 1s when widening.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_hard_23.mp4",
+        "poster": "media/images/radix_hard_23-frame.png",
+        "figure": "media/images/radix_hard_23.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "sext-nibble",
+        "label": "Width 4 all-ones then compare",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-bin",
+            "value": "1111"
+          }
+        ]
+      }
     },
     {
       "id": "radix_hard_24",
@@ -1062,7 +2799,28 @@
       "prompt": "Identical bits may mean different integers under different types.",
       "answer": true,
       "explain": "Interpretation depends on the type/radix view.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_hard_24.mp4",
+        "poster": "media/images/radix_hard_24-frame.png",
+        "figure": "media/images/radix_hard_24.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "hex-ff",
+        "label": "Width 8 · 0xFF unsigned",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "FF"
+          }
+        ]
+      }
     },
     {
       "id": "radix_hard_25",
@@ -1076,7 +2834,28 @@
       ],
       "answer": 1,
       "explain": "Signed all-ones is -1.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_hard_25.mp4",
+        "poster": "media/images/radix_hard_25-frame.png",
+        "figure": "media/images/radix_hard_25.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "signed-ff",
+        "label": "Width 8 · 0xFF signed",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "FF"
+          }
+        ]
+      }
     },
     {
       "id": "radix_hard_26",
@@ -1090,7 +2869,23 @@
       ],
       "answer": 1,
       "explain": "Same bits, different spellings.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_hard_26.mp4",
+        "poster": "media/images/radix_hard_26-frame.png",
+        "figure": "media/images/radix_hard_26.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "same-spellings-2a",
+        "label": "Starter 42 / 0x2A",
+        "steps": [
+          {
+            "click": "#rc-starter"
+          }
+        ]
+      }
     },
     {
       "id": "radix_hard_27",
@@ -1104,7 +2899,28 @@
       ],
       "answer": 1,
       "explain": "Negative two’s-complement fills 1s when widening.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_hard_27.mp4",
+        "poster": "media/images/radix_hard_27-frame.png",
+        "figure": "media/images/radix_hard_27.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "sext-nibble",
+        "label": "Width 4 all-ones then compare",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "4"
+          },
+          {
+            "fill": "#rc-bin",
+            "value": "1111"
+          }
+        ]
+      }
     },
     {
       "id": "radix_hard_28",
@@ -1112,7 +2928,28 @@
       "prompt": "Identical bits may mean different integers under different types.",
       "answer": true,
       "explain": "Interpretation depends on the type/radix view.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_hard_28.mp4",
+        "poster": "media/images/radix_hard_28-frame.png",
+        "figure": "media/images/radix_hard_28.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "hex-ff",
+        "label": "Width 8 · 0xFF unsigned",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "FF"
+          }
+        ]
+      }
     },
     {
       "id": "radix_hard_29",
@@ -1126,7 +2963,28 @@
       ],
       "answer": 1,
       "explain": "Signed all-ones is -1.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_hard_29.mp4",
+        "poster": "media/images/radix_hard_29-frame.png",
+        "figure": "media/images/radix_hard_29.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "signed-ff",
+        "label": "Width 8 · 0xFF signed",
+        "steps": [
+          {
+            "select": "#rc-width",
+            "value": "8"
+          },
+          {
+            "fill": "#rc-hex",
+            "value": "FF"
+          }
+        ]
+      }
     },
     {
       "id": "radix_hard_30",
@@ -1140,7 +2998,23 @@
       ],
       "answer": 1,
       "explain": "Same bits, different spellings.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/radix_hard_30.mp4",
+        "poster": "media/images/radix_hard_30-frame.png",
+        "figure": "media/images/radix_hard_30.png"
+      },
+      "tool_capture": {
+        "tool": "radix-converter",
+        "key": "same-spellings-2a",
+        "label": "Starter 42 / 0x2A",
+        "steps": [
+          {
+            "click": "#rc-starter"
+          }
+        ]
+      }
     }
   ]
 }
