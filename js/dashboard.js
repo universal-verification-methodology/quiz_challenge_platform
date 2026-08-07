@@ -52,6 +52,17 @@
     return u.toString();
   }
 
+  /** Always three slots: easy / medium / hard (never cleared/max). */
+  function formatClearedEMH(row) {
+    const counts = row && row.cleared_by_difficulty;
+    if (Array.isArray(counts) && counts.length) {
+      return [0, 1, 2].map((i) => Number(counts[i]) || 0).join("/");
+    }
+    const label = row && row.cleared_label != null ? String(row.cleared_label) : "";
+    if (label.split("/").length === 3) return label;
+    return "—/—/—";
+  }
+
   function sortValue(row, key) {
     if (key === "cleared_levels") {
       const cleared = Number(row.cleared_levels) || 0;
@@ -138,12 +149,7 @@
         row.total_attempts +
         "</td>" +
         "<td class=\"num\" title=\"easy / medium / hard levels cleared\">" +
-        escapeHtml(
-          row.cleared_label ||
-            (row.cleared_by_difficulty && row.cleared_by_difficulty.length
-              ? row.cleared_by_difficulty.join("/")
-              : row.cleared_levels + "/" + row.max_levels)
-        ) +
+        escapeHtml(formatClearedEMH(row)) +
         "</td>" +
         "<td class=\"num\">" +
         fmtMs(row.median_ms) +

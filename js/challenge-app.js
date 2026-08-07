@@ -1,6 +1,6 @@
 /**
  * Challenge controller — variable length; 1 correct per difficulty (max 10).
- * Short Quest: ?test=1|?short=1 → 1 random module, easy+medium (see content.profiles.test).
+ * Short Quest: ?test=1|?short=1 → 1 random module, easy→medium→hard (see content.profiles.test).
  * Full Quest: all course modules.
  */
 (function () {

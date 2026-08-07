@@ -33,6 +33,9 @@ function maskName(name) {
   });
 }
 
+/** Always report easy/medium/hard for the dashboard Cleared E/M/H column. */
+const DISPLAY_DIFFICULTIES = ["easy", "medium", "hard"];
+
 function countCleared(levelState) {
   let n = 0;
   for (const mid of Object.keys(levelState || {})) {
@@ -49,7 +52,7 @@ function clearedByDifficulty(levelState, difficulties) {
   const diffs =
     Array.isArray(difficulties) && difficulties.length
       ? difficulties
-      : ["easy", "medium", "hard"];
+      : DISPLAY_DIFFICULTIES;
   const counts = diffs.map(() => 0);
   for (const mid of Object.keys(levelState || {})) {
     const mod = levelState[mid] || {};
@@ -62,7 +65,8 @@ function clearedByDifficulty(levelState, difficulties) {
 
 function formatClearedBreakdown(counts) {
   if (!Array.isArray(counts) || !counts.length) return "";
-  return counts.join("/");
+  const padded = DISPLAY_DIFFICULTIES.map((_, i) => Number(counts[i]) || 0);
+  return padded.join("/");
 }
 
 function resolveModuleTitle(payload) {
@@ -147,10 +151,8 @@ function publicRow(payload, meta) {
   const timeouts = countTimeouts(attempts);
   const med = medianMs(attempts);
   const accuracy = Number(summary.accuracy) || 0;
-  const diffs =
-    (quest.difficulties && quest.difficulties.length && quest.difficulties) ||
-    ["easy", "medium", "hard"];
-  const clearedCounts = clearedByDifficulty(levelState, diffs);
+  // Always E/M/H for the public board column (zeros if a ladder was not played).
+  const clearedCounts = clearedByDifficulty(levelState, DISPLAY_DIFFICULTIES);
   const emailKey = String(identity.email || "")
     .trim()
     .toLowerCase();

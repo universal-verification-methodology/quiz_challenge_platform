@@ -11,6 +11,9 @@
     });
   }
 
+  /** Always report easy/medium/hard for the dashboard Cleared E/M/H column. */
+  const DISPLAY_DIFFICULTIES = ["easy", "medium", "hard"];
+
   function countCleared(levelState) {
     let n = 0;
     Object.keys(levelState || {}).forEach((mid) => {
@@ -22,12 +25,12 @@
     return n;
   }
 
-  /** Cleared counts per difficulty ladder: [easy, medium, hard]. */
+  /** Cleared counts per difficulty ladder (defaults to easy / medium / hard). */
   function clearedByDifficulty(levelState, difficulties) {
     const diffs =
       Array.isArray(difficulties) && difficulties.length
         ? difficulties
-        : ["easy", "medium", "hard"];
+        : DISPLAY_DIFFICULTIES;
     const counts = diffs.map(() => 0);
     Object.keys(levelState || {}).forEach((mid) => {
       const mod = levelState[mid] || {};
@@ -40,7 +43,11 @@
 
   function formatClearedBreakdown(counts) {
     if (!Array.isArray(counts) || !counts.length) return "";
-    return counts.join("/");
+    // Pad/truncate to E/M/H so the board never shows "2/3" total ratios.
+    const padded = DISPLAY_DIFFICULTIES.map((_, i) =>
+      Number(counts[i]) || 0
+    );
+    return padded.join("/");
   }
 
   function countModulesTouched(levelState, modules) {
@@ -124,10 +131,8 @@
     const timeouts = countTimeouts(attempts);
     const med = medianMs(attempts);
     const accuracy = Number(summary.accuracy) || 0;
-    const diffs =
-      (quest.difficulties && quest.difficulties.length && quest.difficulties) ||
-      ["easy", "medium", "hard"];
-    const clearedCounts = clearedByDifficulty(levelState, diffs);
+    // Always E/M/H for the public board column (zeros if a ladder was not played).
+    const clearedCounts = clearedByDifficulty(levelState, DISPLAY_DIFFICULTIES);
     const score = compositeScore({
       cleared_levels: cleared,
       max_levels: maxLevels,
