@@ -1,7 +1,7 @@
 {
   "id": "learn_digital",
   "title": "Digital Foundations Quest",
-  "version": 4,
+  "version": 9,
   "source_course": "learn_digital",
   "ux": {
     "reveal_modules_during_quiz": false,
@@ -22,7 +22,11 @@
   },
   "progress": {
     "unit": "module",
-    "difficulties": ["easy", "medium", "hard"],
+    "difficulties": [
+      "easy",
+      "medium",
+      "hard"
+    ],
     "need_correct_per_difficulty": 1,
     "max_attempts_per_difficulty": 10,
     "bank_multiplier": 3,
@@ -30,10 +34,16 @@
   },
   "profiles": {
     "test": {
-      "title": "Digital Foundations Quest (test)",
-      "module_ids": ["module01-radix-converter", "module13-kmap"],
-      "difficulties": ["easy", "medium"],
-      "max_attempts_per_difficulty": 3
+      "title": "Digital Foundations Quest (Short)",
+      "module_count": 1,
+      "difficulties": [
+        "easy",
+        "medium",
+        "hard"
+      ],
+      "need_correct_per_difficulty": 2,
+      "max_attempts_per_difficulty": 6,
+      "prefer_video_stems": true
     }
   },
   "media_policy": {
@@ -47,23 +57,440 @@
       "title": "Radix & bit width",
       "toolId": "radix-converter",
       "questions": "questions/module01-radix-converter.json",
-      "source_quiz": "module01-radix-converter/quiz.json"
+      "source_quiz": "module01-radix-converter/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module02-twos-complement",
+      "order": 2,
+      "title": "Two's complement",
+      "toolId": "twos-complement",
+      "questions": "questions/module02-twos-complement.json",
+      "source_quiz": "module02-twos-complement/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module03-overflow-wrap",
+      "order": 3,
+      "title": "Overflow / wrap",
+      "toolId": "overflow-wrap",
+      "questions": "questions/module03-overflow-wrap.json",
+      "source_quiz": "module03-overflow-wrap/quiz.json",
+      "video_stems": false
+    },
+    {
+      "id": "module04-ascii-hex",
+      "order": 4,
+      "title": "ASCII / hex",
+      "toolId": "ascii-hex",
+      "questions": "questions/module04-ascii-hex.json",
+      "source_quiz": "module04-ascii-hex/quiz.json",
+      "video_stems": false
+    },
+    {
+      "id": "module05-gray-code",
+      "order": 5,
+      "title": "Gray code",
+      "toolId": "gray-code",
+      "questions": "questions/module05-gray-code.json",
+      "source_quiz": "module05-gray-code/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module06-bcd-lab",
+      "order": 6,
+      "title": "BCD",
+      "toolId": "bcd-lab",
+      "questions": "questions/module06-bcd-lab.json",
+      "source_quiz": "module06-bcd-lab/quiz.json",
+      "video_stems": false
+    },
+    {
+      "id": "module07-parity-checksum",
+      "order": 7,
+      "title": "Parity / checksum",
+      "toolId": "parity-checksum",
+      "questions": "questions/module07-parity-checksum.json",
+      "source_quiz": "module07-parity-checksum/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module08-fixed-point",
+      "order": 8,
+      "title": "Fixed-point Qm.n",
+      "toolId": "fixed-point",
+      "questions": "questions/module08-fixed-point.json",
+      "source_quiz": "module08-fixed-point/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module09-bit-fields",
+      "order": 9,
+      "title": "Bit-fields",
+      "toolId": "bit-fields",
+      "questions": "questions/module09-bit-fields.json",
+      "source_quiz": "module09-bit-fields/quiz.json",
+      "video_stems": false
+    },
+    {
+      "id": "module10-endian-lab",
+      "order": 10,
+      "title": "Endian packing",
+      "toolId": "endian-lab",
+      "questions": "questions/module10-endian-lab.json",
+      "source_quiz": "module10-endian-lab/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module11-truth-table",
+      "order": 11,
+      "title": "Truth tables",
+      "toolId": "truth-table",
+      "questions": "questions/module11-truth-table.json",
+      "source_quiz": "module11-truth-table/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module12-boolean-laws",
+      "order": 12,
+      "title": "Boolean laws",
+      "toolId": "boolean-laws",
+      "questions": "questions/module12-boolean-laws.json",
+      "source_quiz": "module12-boolean-laws/quiz.json",
+      "video_stems": false
     },
     {
       "id": "module13-kmap",
-      "order": 2,
+      "order": 13,
       "title": "K-maps",
       "toolId": "kmap",
       "questions": "questions/module13-kmap.json",
-      "source_quiz": "module13-kmap/quiz.json"
+      "source_quiz": "module13-kmap/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module14-sop-pos",
+      "order": 14,
+      "title": "SOP / POS",
+      "toolId": "sop-pos",
+      "questions": "questions/module14-sop-pos.json",
+      "source_quiz": "module14-sop-pos/quiz.json",
+      "video_stems": false
+    },
+    {
+      "id": "module15-dont-care-lab",
+      "order": 15,
+      "title": "Don't-care minimization",
+      "toolId": "dont-care-lab",
+      "questions": "questions/module15-dont-care-lab.json",
+      "source_quiz": "module15-dont-care-lab/quiz.json",
+      "video_stems": false
+    },
+    {
+      "id": "module16-logic-hazards",
+      "order": 16,
+      "title": "Logic hazards",
+      "toolId": "logic-hazards",
+      "questions": "questions/module16-logic-hazards.json",
+      "source_quiz": "module16-logic-hazards/quiz.json",
+      "video_stems": false
+    },
+    {
+      "id": "module17-gate-composer",
+      "order": 17,
+      "title": "Gate composer",
+      "toolId": "gate-composer",
+      "questions": "questions/module17-gate-composer.json",
+      "source_quiz": "module17-gate-composer/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module18-mux-decoder",
+      "order": 18,
+      "title": "Mux / decoder / encoder",
+      "toolId": "mux-decoder",
+      "questions": "questions/module18-mux-decoder.json",
+      "source_quiz": "module18-mux-decoder/quiz.json",
+      "video_stems": false
+    },
+    {
+      "id": "module19-priority-compare",
+      "order": 19,
+      "title": "Priority & compare",
+      "toolId": "priority-compare",
+      "questions": "questions/module19-priority-compare.json",
+      "source_quiz": "module19-priority-compare/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module20-half-full-adder",
+      "order": 20,
+      "title": "Half / full adder",
+      "toolId": "half-full-adder",
+      "questions": "questions/module20-half-full-adder.json",
+      "source_quiz": "module20-half-full-adder/quiz.json",
+      "video_stems": false
+    },
+    {
+      "id": "module21-xor-parity-tree",
+      "order": 21,
+      "title": "XOR parity tree",
+      "toolId": "xor-parity-tree",
+      "questions": "questions/module21-xor-parity-tree.json",
+      "source_quiz": "module21-xor-parity-tree/quiz.json",
+      "video_stems": false
+    },
+    {
+      "id": "module22-tri-state-bus",
+      "order": 22,
+      "title": "Tri-state / bus",
+      "toolId": "tri-state-bus",
+      "questions": "questions/module22-tri-state-bus.json",
+      "source_quiz": "module22-tri-state-bus/quiz.json",
+      "video_stems": false
+    },
+    {
+      "id": "module23-barrel-shifter",
+      "order": 23,
+      "title": "Barrel shifter",
+      "toolId": "barrel-shifter",
+      "questions": "questions/module23-barrel-shifter.json",
+      "source_quiz": "module23-barrel-shifter/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module24-seven-segment",
+      "order": 24,
+      "title": "Seven-segment",
+      "toolId": "seven-segment",
+      "questions": "questions/module24-seven-segment.json",
+      "source_quiz": "module24-seven-segment/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module25-clock-stepper",
+      "order": 25,
+      "title": "Clock-edge stepper",
+      "toolId": "clock-stepper",
+      "questions": "questions/module25-clock-stepper.json",
+      "source_quiz": "module25-clock-stepper/quiz.json",
+      "video_stems": true
     },
     {
       "id": "module26-setup-hold",
-      "order": 3,
+      "order": 26,
       "title": "Setup / hold",
       "toolId": "setup-hold",
       "questions": "questions/module26-setup-hold.json",
-      "source_quiz": "module26-setup-hold/quiz.json"
+      "source_quiz": "module26-setup-hold/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module27-reset-timelines",
+      "order": 27,
+      "title": "Reset timelines",
+      "toolId": "reset-timelines",
+      "questions": "questions/module27-reset-timelines.json",
+      "source_quiz": "module27-reset-timelines/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module28-clock-enable",
+      "order": 28,
+      "title": "Clock enable",
+      "toolId": "clock-enable",
+      "questions": "questions/module28-clock-enable.json",
+      "source_quiz": "module28-clock-enable/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module29-cdc-sync",
+      "order": 29,
+      "title": "CDC / 2-FF sync",
+      "toolId": "cdc-sync",
+      "questions": "questions/module29-cdc-sync.json",
+      "source_quiz": "module29-cdc-sync/quiz.json",
+      "video_stems": false
+    },
+    {
+      "id": "module30-fsm-lab",
+      "order": 30,
+      "title": "FSM designer",
+      "toolId": "fsm-lab",
+      "questions": "questions/module30-fsm-lab.json",
+      "source_quiz": "module30-fsm-lab/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module31-state-encoding",
+      "order": 31,
+      "title": "State encoding",
+      "toolId": "state-encoding",
+      "questions": "questions/module31-state-encoding.json",
+      "source_quiz": "module31-state-encoding/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module32-seq-detector",
+      "order": 32,
+      "title": "Sequence detector",
+      "toolId": "seq-detector",
+      "questions": "questions/module32-seq-detector.json",
+      "source_quiz": "module32-seq-detector/quiz.json",
+      "video_stems": false
+    },
+    {
+      "id": "module33-ring-johnson",
+      "order": 33,
+      "title": "Ring / Johnson",
+      "toolId": "ring-johnson",
+      "questions": "questions/module33-ring-johnson.json",
+      "source_quiz": "module33-ring-johnson/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module34-lfsr-lab",
+      "order": 34,
+      "title": "LFSR / PRBS",
+      "toolId": "lfsr-lab",
+      "questions": "questions/module34-lfsr-lab.json",
+      "source_quiz": "module34-lfsr-lab/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module35-ripple-carry-adder-animator",
+      "order": 35,
+      "title": "Ripple-carry adder",
+      "toolId": "ripple-carry-adder-animator",
+      "questions": "questions/module35-ripple-carry-adder-animator.json",
+      "source_quiz": "module35-ripple-carry-adder-animator/quiz.json",
+      "video_stems": false
+    },
+    {
+      "id": "module36-carry-look-ahead-adder-propagate-and-generate",
+      "order": 36,
+      "title": "Carry-lookahead G/P",
+      "toolId": "carry-look-ahead-adder-propagate-and-generate",
+      "questions": "questions/module36-carry-look-ahead-adder-propagate-and-generate.json",
+      "source_quiz": "module36-carry-look-ahead-adder-propagate-and-generate/quiz.json",
+      "video_stems": false
+    },
+    {
+      "id": "module37-array-mult",
+      "order": 37,
+      "title": "Array multiplier",
+      "toolId": "array-mult",
+      "questions": "questions/module37-array-mult.json",
+      "source_quiz": "module37-array-mult/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module38-alu-explorer",
+      "order": 38,
+      "title": "ALU explorer",
+      "toolId": "alu-explorer",
+      "questions": "questions/module38-alu-explorer.json",
+      "source_quiz": "module38-alu-explorer/quiz.json",
+      "video_stems": false
+    },
+    {
+      "id": "module39-carry-select-adder",
+      "order": 39,
+      "title": "Carry-select adder",
+      "toolId": "carry-select-adder",
+      "questions": "questions/module39-carry-select-adder.json",
+      "source_quiz": "module39-carry-select-adder/quiz.json",
+      "video_stems": false
+    },
+    {
+      "id": "module40-booth-encode",
+      "order": 40,
+      "title": "Booth encode",
+      "toolId": "booth-encode",
+      "questions": "questions/module40-booth-encode.json",
+      "source_quiz": "module40-booth-encode/quiz.json",
+      "video_stems": false
+    },
+    {
+      "id": "module41-signed-arith",
+      "order": 41,
+      "title": "Signed arithmetic",
+      "toolId": "signed-arith",
+      "questions": "questions/module41-signed-arith.json",
+      "source_quiz": "module41-signed-arith/quiz.json",
+      "video_stems": false
+    },
+    {
+      "id": "module42-mem-map",
+      "order": 42,
+      "title": "RAM / ROM map",
+      "toolId": "mem-map",
+      "questions": "questions/module42-mem-map.json",
+      "source_quiz": "module42-mem-map/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module43-fifo-lab",
+      "order": 43,
+      "title": "FIFO pointers",
+      "toolId": "fifo-lab",
+      "questions": "questions/module43-fifo-lab.json",
+      "source_quiz": "module43-fifo-lab/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module44-cache-walk",
+      "order": 44,
+      "title": "Cache walk",
+      "toolId": "cache-walk",
+      "questions": "questions/module44-cache-walk.json",
+      "source_quiz": "module44-cache-walk/quiz.json",
+      "video_stems": false
+    },
+    {
+      "id": "module45-dual-port-ram",
+      "order": 45,
+      "title": "Dual-port RAM",
+      "toolId": "dual-port-ram",
+      "questions": "questions/module45-dual-port-ram.json",
+      "source_quiz": "module45-dual-port-ram/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module46-byte-enable-mem",
+      "order": 46,
+      "title": "Byte-enable memory",
+      "toolId": "byte-enable-mem",
+      "questions": "questions/module46-byte-enable-mem.json",
+      "source_quiz": "module46-byte-enable-mem/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module47-async-fifo",
+      "order": 47,
+      "title": "Async FIFO (Gray)",
+      "toolId": "async-fifo",
+      "questions": "questions/module47-async-fifo.json",
+      "source_quiz": "module47-async-fifo/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module48-handshake",
+      "order": 48,
+      "title": "Handshake (valid/ready)",
+      "toolId": "handshake",
+      "questions": "questions/module48-handshake.json",
+      "source_quiz": "module48-handshake/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module49-block-diagram",
+      "order": 49,
+      "title": "Block-diagram integrator",
+      "toolId": "block-diagram",
+      "questions": "questions/module49-block-diagram.json",
+      "source_quiz": "module49-block-diagram/quiz.json",
+      "video_stems": true
     }
   ]
 }

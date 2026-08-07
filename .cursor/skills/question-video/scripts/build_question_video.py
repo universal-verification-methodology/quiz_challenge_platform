@@ -74,7 +74,7 @@ def speech_for_item(item: dict, *, has_figure: bool) -> str:
     typ = str(item.get("type") or "multiple_choice")
     parts: list[str] = []
     if has_figure:
-        parts.append("Look at the figure on the slide.")
+        parts.append("Look at the browser lab figure on the slide.")
     if typ in ("true_false", "tf"):
         parts.append(f"True or false. {prompt}")
     elif typ in ("short_answer", "short"):
@@ -122,26 +122,71 @@ def _wrap(draw: ImageDraw.ImageDraw, text: str, font: ImageFont.ImageFont, max_w
     return lines
 
 
-def resolve_authored_figure(course: Path, item: dict, figure_arg: Path | None) -> Path | None:
-    """Return an author-supplied figure. Never reuse *-frame.png (full slide poster)."""
+def module_tool_id(course: Path, module_id: str) -> str | None:
+    manifest = course / "content.json"
+    if not manifest.is_file():
+        return None
+    data = json.loads(manifest.read_text(encoding="utf-8"))
+    for mod in data.get("modules") or []:
+        if mod.get("id") == module_id:
+            tid = mod.get("toolId")
+            return str(tid) if tid else None
+    return None
+
+
+def resolve_authored_figure(
+    course: Path,
+    item: dict,
+    figure_arg: Path | None,
+    *,
+    module_id: str = "",
+    prefer_tool: bool = True,
+) -> Path | None:
+    """Return figure path for the stem.
+
+    Priority (unique question state first):
+      1. Explicit --figure
+      2. Per-item media/images/<id>.(png|jpg|svg) — instrument state for that item
+      3. media.figure / media.src when it is a still (not *-frame.png, not shared tools/)
+      4. Shared tools/<toolId>.png only as last resort when prefer_tool
+
+    Never reuse *-frame.png (composed stem slides).
+    """
     if figure_arg and figure_arg.is_file():
         return figure_arg
     item_id = str(item.get("id") or "item")
+
     for cand in (
         course / "media" / "images" / f"{item_id}.png",
         course / "media" / "images" / f"{item_id}.jpg",
         course / "media" / "images" / f"{item_id}.svg",
     ):
         if cand.is_file():
-            return cand
+            return cand.resolve()
+
     media = item.get("media") or {}
-    if str(media.get("type") or "") == "image":
-        src = media.get("src")
-        if src:
-            p = course / src
-            # Guard against accidental poster reuse
-            if p.is_file() and not p.name.endswith("-frame.png"):
-                return p
+    for key in ("figure", "src"):
+        raw = media.get(key)
+        if not isinstance(raw, str) or not raw.strip():
+            continue
+        p = Path(raw.strip())
+        if not p.is_absolute():
+            p = course / p
+        if (
+            p.is_file()
+            and p.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp", ".svg"}
+            and not p.name.endswith("-frame.png")
+            and "/tools/" not in p.as_posix()
+        ):
+            return p.resolve()
+
+    if prefer_tool:
+        tool_id = module_tool_id(course, module_id) if module_id else None
+        if tool_id:
+            tool_fig = course / "media" / "images" / "tools" / f"{tool_id}.png"
+            if tool_fig.is_file():
+                return tool_fig.resolve()
+
     return None
 
 
@@ -411,19 +456,19 @@ def render_slide_frame(
     *,
     module_name: str | None = None,
 ) -> Path:
-    """Light PPT-style slide: module name + challenge stem branding, figure, question only."""
+    """Light PPT-style slide: module name + org brand, figure, question only."""
     img = Image.new("RGB", (W, H), COLOR_BG)
     draw = ImageDraw.Draw(img)
     title_f = _font(40, bold=True)
-    brand_f = _font(28, bold=True)
+    brand_f = _font(22, bold=True)
     body_f = _font(34)
 
     name = (module_name or module_id).strip() or module_id
-    # Header: module name (left) + challenge stem (right) — no difficulty
+    # Header: module name (left) + GitHub org (right) — no difficulty
     draw.text((MARGIN, 48), name, fill=COLOR_TITLE, font=title_f)
-    brand = "challenge stem"
+    brand = "universal-verification-methodology"
     brand_w = draw.textlength(brand, font=brand_f)
-    draw.text((W - MARGIN - brand_w, 56), brand, fill=COLOR_FOOTER, font=brand_f)
+    draw.text((W - MARGIN - brand_w, 58), brand, fill=COLOR_FOOTER, font=brand_f)
 
     # Figure panel — dominant visual
     fig = Image.open(figure).convert("RGB")
@@ -523,6 +568,9 @@ def build_one(
     write_media: bool,
     dry_run: bool,
     force_figure: bool,
+    reuse_audio: bool,
+    prefer_tool: bool,
+    skip_existing: bool = False,
 ) -> Path:
     item_id = str(item.get("id") or "item")
     work = course / "media" / "_work" / item_id
@@ -530,10 +578,30 @@ def build_one(
     images = course / "media" / "images"
     work.mkdir(parents=True, exist_ok=True)
 
+    out_mp4 = videos / f"{item_id}.mp4"
+    if skip_existing and out_mp4.is_file() and out_mp4.stat().st_size > 1000:
+        if write_media:
+            patch_media(
+                item,
+                f"media/videos/{item_id}.mp4",
+                f"media/images/{item_id}-frame.png",
+                f"media/images/{item_id}.png",
+            )
+        print(f"skip-existing {item_id}")
+        return out_mp4
+
     figure_path = images / f"{item_id}.png"
-    authored = resolve_authored_figure(course, item, figure_arg)
+    authored = resolve_authored_figure(
+        course,
+        item,
+        figure_arg,
+        module_id=module_id,
+        prefer_tool=prefer_tool and not force_figure,
+    )
     if authored and not force_figure:
+        # Keep a per-item copy when using shared tool capture (stable media/images/<id>.png).
         if authored.resolve() != figure_path.resolve():
+            figure_path.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(authored, figure_path)
     else:
         generate_related_figure(item, module_id, figure_path)
@@ -543,7 +611,6 @@ def build_one(
     frame_path = work / "frame.png"
     poster_path = images / f"{item_id}-frame.png"
     audio_path = work / "audio.mp3"
-    out_mp4 = videos / f"{item_id}.mp4"
 
     speech_path.write_text(speech + "\n", encoding="utf-8")
     render_slide_frame(
@@ -559,7 +626,10 @@ def build_one(
         print(f"DRY-RUN {item_id}: figure={figure_path.name} frame={frame_path}")
         return frame_path
 
-    run_tts(speech_path, audio_path, voice)
+    if reuse_audio and audio_path.is_file():
+        print(f"reuse-audio {item_id}")
+    else:
+        run_tts(speech_path, audio_path, voice)
     run_ffmpeg(frame_path, audio_path, out_mp4)
 
     if write_media:
@@ -584,6 +654,17 @@ def main() -> int:
     ap.add_argument("--list", action="store_true")
     ap.add_argument("--figure", type=Path, help="Author figure override (not *-frame.png)")
     ap.add_argument("--force-figure", action="store_true", help="Regenerate related figure even if images/<id>.png exists")
+    ap.add_argument("--reuse-audio", action="store_true", help="Reuse _work/<id>/audio.mp3 when present (skip TTS)")
+    ap.add_argument(
+        "--skip-existing",
+        action="store_true",
+        help="Skip items that already have media/videos/<id>.mp4",
+    )
+    ap.add_argument(
+        "--no-tool-figure",
+        action="store_true",
+        help="Do not prefer media/images/tools/<toolId>.png from digital_learning",
+    )
     ap.add_argument("--voice", default=VOICE_DEFAULT)
     ap.add_argument("--write-media", action="store_true")
     ap.add_argument("--dry-run", action="store_true")
@@ -627,6 +708,9 @@ def main() -> int:
             write_media=args.write_media,
             dry_run=args.dry_run,
             force_figure=args.force_figure,
+            reuse_audio=args.reuse_audio,
+            prefer_tool=not args.no_tool_figure,
+            skip_existing=args.skip_existing,
         )
 
     if args.write_media and not args.dry_run:

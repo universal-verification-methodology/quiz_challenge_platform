@@ -1,6 +1,6 @@
 /**
  * Per-attempt session log + localStorage persistence.
- * Full and test modes use separate keys so they never mix.
+ * Full and Short Quest modes use separate keys so they never mix.
  */
 (function (global) {
   const KEYS = {

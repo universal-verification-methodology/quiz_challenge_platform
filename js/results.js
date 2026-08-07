@@ -4,6 +4,40 @@
 (function (global) {
   function buildPayload(session, identity, site) {
     const agg = global.QCSession.aggregates(session);
+    const quest = {
+      course_id: session.course_id,
+      title: session.title,
+      mode: session.mode || "full",
+      session_id: session.session_id,
+      started_at: session.started_at,
+      completed_at: session.completed_at,
+    };
+    if (session.mode === "test") {
+      const modTitle =
+        session.short_module_title ||
+        (agg.modules.length === 1
+          ? agg.modules[0].title
+          : agg.modules.map((m) => m.title).filter(Boolean).join(", ")) ||
+        "";
+      const modId =
+        session.short_module_id ||
+        (agg.modules.length === 1
+          ? agg.modules[0].module_id
+          : agg.modules.map((m) => m.module_id).filter(Boolean).join(",")) ||
+        "";
+      const difficulties = session.short_difficulties || ["easy", "medium", "hard"];
+      const moduleCount = session.short_module_count || Math.max(1, agg.modules.length || 1);
+      quest.module_id = modId;
+      quest.module_title = modTitle;
+      quest.module_count = moduleCount;
+      quest.difficulties = difficulties.slice();
+      quest.need_correct_per_difficulty =
+        session.short_need_correct != null ? session.short_need_correct : 2;
+      quest.max_levels =
+        session.short_max_levels != null
+          ? session.short_max_levels
+          : moduleCount * difficulties.length;
+    }
     const payload = {
       schema: "quiz_challenge_result_v1",
       submitted_at: new Date().toISOString(),
@@ -13,14 +47,7 @@
         testimony: identity.testimony || "",
         consent: !!identity.consent,
       },
-      quest: {
-        course_id: session.course_id,
-        title: session.title,
-        mode: session.mode || "full",
-        session_id: session.session_id,
-        started_at: session.started_at,
-        completed_at: session.completed_at,
-      },
+      quest: quest,
       summary: {
         accuracy: agg.accuracy,
         total_attempts: agg.total_attempts,

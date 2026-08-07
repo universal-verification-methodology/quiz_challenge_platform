@@ -22,6 +22,27 @@
     return n;
   }
 
+  /** Cleared counts per difficulty ladder: [easy, medium, hard]. */
+  function clearedByDifficulty(levelState, difficulties) {
+    const diffs =
+      Array.isArray(difficulties) && difficulties.length
+        ? difficulties
+        : ["easy", "medium", "hard"];
+    const counts = diffs.map(() => 0);
+    Object.keys(levelState || {}).forEach((mid) => {
+      const mod = levelState[mid] || {};
+      diffs.forEach((d, i) => {
+        if (mod[d] && mod[d].cleared) counts[i] += 1;
+      });
+    });
+    return counts;
+  }
+
+  function formatClearedBreakdown(counts) {
+    if (!Array.isArray(counts) || !counts.length) return "";
+    return counts.join("/");
+  }
+
   function countModulesTouched(levelState, modules) {
     if (Array.isArray(modules) && modules.length) {
       return modules.filter((m) => (m.attempts || 0) > 0 || (m.correct || 0) > 0).length;
@@ -29,11 +50,30 @@
     return Object.keys(levelState || {}).length;
   }
 
+  function resolveModuleTitle(payload) {
+    const quest = (payload && payload.quest) || {};
+    if (quest.module_title) return String(quest.module_title);
+    const modules = (payload && payload.modules) || [];
+    if (modules.length === 1 && modules[0].title) return String(modules[0].title);
+    if (modules.length > 1) {
+      const titles = modules.map((m) => m && m.title).filter(Boolean);
+      if (titles.length) return titles.join(", ");
+    }
+    const attempts = (payload && payload.attempts) || [];
+    if (attempts[0] && attempts[0].module_title) return String(attempts[0].module_title);
+    return "";
+  }
+
   function inferMaxLevels(payload) {
     const quest = (payload && payload.quest) || {};
     const bench = (payload && payload.benchmark) || {};
     if (bench.max_levels != null) return Number(bench.max_levels);
-    if (quest.mode === "test") return 4;
+    if (quest.max_levels != null) return Number(quest.max_levels);
+    if (quest.mode === "test") {
+      const nMods = Number(quest.module_count) || 1;
+      const diffs = Array.isArray(quest.difficulties) ? quest.difficulties.length : 3;
+      return nMods * diffs;
+    }
     const ls = payload.level_state || {};
     let slots = 0;
     Object.keys(ls).forEach((mid) => {
@@ -84,6 +124,10 @@
     const timeouts = countTimeouts(attempts);
     const med = medianMs(attempts);
     const accuracy = Number(summary.accuracy) || 0;
+    const diffs =
+      (quest.difficulties && quest.difficulties.length && quest.difficulties) ||
+      ["easy", "medium", "hard"];
+    const clearedCounts = clearedByDifficulty(levelState, diffs);
     const score = compositeScore({
       cleared_levels: cleared,
       max_levels: maxLevels,
@@ -101,11 +145,22 @@
       wrong_count: Number(summary.wrong_count) || 0,
       cleared_levels: cleared,
       max_levels: maxLevels,
+      cleared_by_difficulty: clearedCounts,
+      cleared_label: formatClearedBreakdown(clearedCounts),
       modules_touched: countModulesTouched(levelState, payload.modules),
       median_ms: med,
       total_ms: Number(summary.total_ms) || 0,
       timeouts,
       mode: quest.mode || "full",
+      module_title: quest.mode === "test" ? resolveModuleTitle(payload) : "",
+      module_id:
+        quest.mode === "test"
+          ? String(
+              quest.module_id ||
+                (payload.modules && payload.modules[0] && payload.modules[0].module_id) ||
+                ""
+            )
+          : "",
       course_id: quest.course_id || "",
       completed_at: quest.completed_at || payload.submitted_at || "",
       session_id: quest.session_id || "",
@@ -136,7 +191,10 @@
   global.QCBenchmark = {
     maskName,
     countCleared,
+    clearedByDifficulty,
+    formatClearedBreakdown,
     inferMaxLevels,
+    resolveModuleTitle,
     medianMs,
     countTimeouts,
     compositeScore,

@@ -32,7 +32,7 @@ GET {results.endpoint}/leaderboard?mode=full|test
         │
         ▼
 Worker reads GitHub Issues (labels quest-result + full-mode|test-mode)
-        │
+        │  (UI: Full Quest / Short Quest; API mode value remains full|test)
         ▼
 Public rows only: masked name, score, accuracy, attempts, cleared levels,
 median time/q, timeouts, percentile, date — never email

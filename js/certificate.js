@@ -108,25 +108,27 @@
     lead.textContent =
       "Enter your name and email" +
       (requireTestimony
-        ? ", and a short testimony (you can leave it blank — we'll generate a positive one automatically),"
+        ? ", and an optional testimonial (blank is fine — we'll generate a positive one),"
         : "") +
-      " to download a certificate. With your consent we can also send your quest summary to the project maintainers (via a secure server → GitHub).";
+      " to unlock your certificate. With consent we can also archive your quest summary for the course.";
     root.appendChild(lead);
 
     const form = document.createElement("form");
-    form.className = "cert-form";
+    form.className = "cert-form cert-form-grid";
     // Disable native browser validation bubbles; we handle fallback generation in JS.
     form.setAttribute("novalidate", "");
     form.innerHTML =
-      '<label>Full name<input name="name" type="text" autocomplete="name" maxlength="120" /></label>' +
-      '<label>Email<input name="email" type="email" autocomplete="email" maxlength="200" /></label>' +
-      '<label>Testimony / feedback<textarea name="testimony" rows="4" maxlength="2000" placeholder="What did you learn? What was hard or enjoyable?"' +
+      '<div class="cert-row">' +
+      '<label>Full name<input name="name" type="text" autocomplete="name" maxlength="120" placeholder="Your name" /></label>' +
+      '<label>Email address<input name="email" type="email" autocomplete="email" maxlength="200" placeholder="you@example.com" /></label>' +
+      "</div>" +
+      '<label>Testimonial (optional)<textarea name="testimony" rows="3" maxlength="2000" placeholder="What did you learn? What was hard or enjoyable?"' +
       // We do NOT require the user to type testimony; if blank and requireTestimony=true,
       // we generate a positive substitute in code.
       "></textarea></label>" +
-      '<label class="check"><input name="consent" type="checkbox" /> I agree that my name, email, testimony, and quiz summary may be stored for certificates and course improvement.</label>' +
+      '<label class="check"><input name="consent" type="checkbox" /> I agree that the information provided is correct and may be used to issue my certificate and improve the course.</label>' +
       '<div class="actions">' +
-      '<button type="submit" class="btn primary">Submit &amp; download certificate</button>' +
+      '<button type="submit" class="btn primary">Claim certificate</button>' +
       '</div>' +
       '<p class="note" id="cert-status" hidden></p>';
 
@@ -190,11 +192,20 @@
       (site && site.certificate && site.certificate.course_label) ||
       session.title ||
       "Quest";
+    const shortModule =
+      session.mode === "test"
+        ? session.short_module_title ||
+          (agg.modules[0] && agg.modules[0].title) ||
+          ""
+        : "";
+    const questLabel = shortModule ? "Short Quest - " + shortModule : course;
     return {
       issuer,
       endorsementName,
       endorsementUrl,
-      course,
+      course: questLabel,
+      questMode: session.mode || "full",
+      moduleTitle: shortModule,
       identity,
       session,
       agg,
@@ -221,7 +232,15 @@
   }
 
   function escapePdfText(s) {
+    // Type1 Helvetica is WinAnsi — UTF-8 multi-byte chars (—, ·, …) become mojibake like "â".
     return String(s || "")
+      .replace(/[\u2014\u2013\u2212]/g, "-")
+      .replace(/[\u2022\u00B7\u2027\u22C5]/g, "-")
+      .replace(/[\u2018\u2019\u2032]/g, "'")
+      .replace(/[\u201C\u201D]/g, '"')
+      .replace(/\u2026/g, "...")
+      .replace(/\u00D7/g, "x")
+      .replace(/[^\x09\x0A\x0D\x20-\x7E]/g, "")
       .replace(/\\/g, "\\\\")
       .replace(/\(/g, "\\(")
       .replace(/\)/g, "\\)");
@@ -323,7 +342,7 @@
 
   function truncateText(s, n) {
     s = String(s || "");
-    return s.length > n ? s.slice(0, n - 1) + "…" : s;
+    return s.length > n ? s.slice(0, n - 1) + "..." : s;
   }
 
   function fillRect(ops, x, y, w, h, color) {
@@ -515,11 +534,11 @@
       "F1",
       9,
       (attempt.timed_out ? "Timed out" : attempt.correct ? "Correct" : "Wrong") +
-        " · " +
+        " - " +
         fmtMsPdf(attempt.duration_ms) +
         (attempt.timed_out
           ? ""
-          : " · chose: " + truncateText(chosen, 40)),
+          : " - chose: " + truncateText(chosen, 40)),
       PDF_COLORS.muted
     );
     if (!attempt.correct) {
@@ -588,7 +607,7 @@
 
     fillRect(ops, 0, 0, pageW, pageH, PDF_COLORS.white);
     pushTextOp(ops, marginX, y, "F2", 22, "Quiz Analysis", PDF_COLORS.accent);
-    pushTextOp(ops, marginX, y - 24, "F1", 10, data.course + " · " + data.date, PDF_COLORS.muted);
+    pushTextOp(ops, marginX, y - 24, "F1", 10, data.course + " - " + data.date, PDF_COLORS.muted);
     y -= 56;
 
     beginSection("Quest summary", 70);

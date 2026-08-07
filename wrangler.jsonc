@@ -5,6 +5,17 @@
   "workers_dev": true,
   "assets": {
     "directory": ".",
-    "not_found_handling": "404-page"
+    "not_found_handling": "404-page",
+    "exclude": [
+      "node_modules/**",
+      "**/node_modules/**",
+      "backend/**",
+      ".git/**",
+      ".wrangler/**",
+      ".cursor/**",
+      "scripts/**",
+      "paper/**",
+      "content/learn_digital/media/_work/**"
+    ]
   }
 }

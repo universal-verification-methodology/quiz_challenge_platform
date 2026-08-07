@@ -1,6 +1,7 @@
 /**
  * Challenge controller — variable length; 1 correct per difficulty (max 10).
- * Test mode: ?test=1 → 2 modules, 2 difficulties (see content.profiles.test).
+ * Short Quest: ?test=1|?short=1 → 1 random module, easy+medium (see content.profiles.test).
+ * Full Quest: all course modules.
  */
 (function () {
   const CONTENT_BASE = "content/learn_digital";
@@ -18,37 +19,119 @@
     status: document.getElementById("status-line"),
   };
 
-  const TEST_FALLBACK = {
-    title: "Digital Foundations Quest (test)",
-    module_ids: ["module01-radix-converter", "module13-kmap"],
-    difficulties: ["easy", "medium"],
-    max_attempts_per_difficulty: 3,
+  const SHORT_FALLBACK = {
+    title: "Digital Foundations Quest (Short)",
+    module_count: 1,
+    difficulties: ["easy", "medium", "hard"],
+    need_correct_per_difficulty: 2,
+    max_attempts_per_difficulty: 6,
   };
 
-  function applyProfile(raw, profileName) {
+  function attachShortQuestMeta(session, profileContent) {
+    if (session.mode !== "test") return;
+    const mods = profileContent.modules || [];
+    const difficulties =
+      (profileContent.progress && profileContent.progress.difficulties) ||
+      SHORT_FALLBACK.difficulties;
+    session.short_module_count = mods.length;
+    session.short_difficulties = difficulties.slice();
+    session.short_need_correct =
+      profileContent.progress && profileContent.progress.need_correct_per_difficulty != null
+        ? Number(profileContent.progress.need_correct_per_difficulty)
+        : SHORT_FALLBACK.need_correct_per_difficulty;
+    session.short_max_levels = mods.length * difficulties.length;
+    if (mods.length === 1) {
+      session.short_module_id = mods[0].id;
+      session.short_module_title = mods[0].title;
+    } else if (mods.length > 1) {
+      session.short_module_id = mods.map((m) => m.id).join(",");
+      session.short_module_title = mods.map((m) => m.title).filter(Boolean).join(", ");
+    }
+  }
+
+  function shuffleIds(ids) {
+    const a = ids.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const t = a[i];
+      a[i] = a[j];
+      a[j] = t;
+    }
+    return a;
+  }
+
+  function pickModuleIds(modules, count, lockedIds, preferVideoStems) {
+    let pool = modules || [];
+    if (preferVideoStems) {
+      const withVideo = pool.filter((m) => m && m.video_stems);
+      if (withVideo.length) pool = withVideo;
+    }
+    const all = pool.map((m) => m.id);
+    if (Array.isArray(lockedIds) && lockedIds.length) {
+      const allow = {};
+      all.forEach((id) => {
+        allow[id] = true;
+      });
+      // Locked session may predate video preference; keep lock if still in full course.
+      const fullAllow = {};
+      (modules || []).forEach((m) => {
+        fullAllow[m.id] = true;
+      });
+      const keptPreferred = lockedIds.filter((id) => allow[id]);
+      if (keptPreferred.length) return keptPreferred;
+      const keptAny = lockedIds.filter((id) => fullAllow[id]);
+      if (keptAny.length) return keptAny;
+    }
+    const n = Math.max(1, Math.min(Number(count) || 3, all.length));
+    return shuffleIds(all).slice(0, n);
+  }
+
+  function applyProfile(raw, profileName, opts) {
     const c = JSON.parse(JSON.stringify(raw));
     c.mode = profileName || "full";
     if (!profileName || profileName === "full") {
       return c;
     }
 
-    // Prefer content.profiles.test; always fall back so ?test=1 cannot silently run full quest.
+    // Prefer content.profiles.test; always fall back so short quest cannot silently run full.
     const p = Object.assign(
       {},
-      TEST_FALLBACK,
+      SHORT_FALLBACK,
       (c.profiles && c.profiles[profileName]) || {}
     );
 
     c.title = p.title || c.title;
+
+    const preferVideo = !!p.prefer_video_stems;
+    let selectedIds = null;
     if (Array.isArray(p.module_ids) && p.module_ids.length) {
+      selectedIds = pickModuleIds(
+        c.modules,
+        p.module_ids.length,
+        p.module_ids,
+        preferVideo
+      );
+    } else {
+      const count = p.module_count != null ? Number(p.module_count) : 1;
+      selectedIds = pickModuleIds(
+        c.modules,
+        count,
+        opts && opts.module_ids,
+        preferVideo
+      );
+    }
+
+    if (selectedIds && selectedIds.length) {
       const allow = {};
-      p.module_ids.forEach((id, i) => {
+      selectedIds.forEach((id, i) => {
         allow[id] = i + 1;
       });
       c.modules = (c.modules || [])
         .filter((m) => allow[m.id] != null)
         .map((m) => Object.assign({}, m, { order: allow[m.id] }));
+      c.selected_module_ids = selectedIds.slice();
     }
+
     if (!c.progress) c.progress = {};
     if (Array.isArray(p.difficulties) && p.difficulties.length) {
       c.progress.difficulties = p.difficulties.slice();
@@ -59,8 +142,8 @@
     if (p.need_correct_per_difficulty != null) {
       c.progress.need_correct_per_difficulty = Number(p.need_correct_per_difficulty);
     }
-    // Invalidate stale full-quest sessions when opening test.
-    c.version = String(c.version || "0") + "-test";
+    // Invalidate stale full-quest sessions when opening short quest.
+    c.version = String(c.version || "0") + "-short";
     return c;
   }
 
@@ -91,7 +174,11 @@
   }
 
   function reportUrl() {
-    return mode === "test" ? "report.html?test=1" : "report.html";
+    return mode === "test" ? "report.html?short=1" : "report.html";
+  }
+
+  function shortQuestQuery() {
+    return "short=1";
   }
 
   async function showCurrent() {
@@ -235,14 +322,18 @@
     });
   }
 
+  function isShortParam(params) {
+    return params.get("short") === "1" || params.get("test") === "1";
+  }
+
   async function init() {
     const params = new URLSearchParams(location.search);
-    mode = params.get("test") === "1" ? "test" : "full";
+    mode = isShortParam(params) ? "test" : "full";
     QCSession.setMode(mode);
 
+    let raw;
     try {
-      const raw = await loadJson(CONTENT_BASE + "/content.json?v=5");
-      content = applyProfile(raw, mode === "test" ? "test" : "full");
+      raw = await loadJson(CONTENT_BASE + "/content.json?v=10");
     } catch (err) {
       if (els.status) {
         els.status.hidden = false;
@@ -253,25 +344,74 @@
       return;
     }
 
-    // Safety: test mode must never keep the full module list.
-    if (mode === "test" && content.modules && content.modules.length > 2) {
-      content = applyProfile(
-        Object.assign({}, content, {
-          modules: content.modules,
-          profiles: { test: TEST_FALLBACK },
-        }),
-        "test"
+    if (params.get("restart") === "1") QCSession.clear();
+
+    // Lock short-quest module set from an in-progress session so resume stays stable.
+    let lockedIds = null;
+    if (mode === "test") {
+      const existing = QCSession.load();
+      if (
+        existing &&
+        existing.mode === "test" &&
+        !existing.completed_at &&
+        Array.isArray(existing.selected_module_ids) &&
+        existing.selected_module_ids.length
+      ) {
+        lockedIds = existing.selected_module_ids;
+      } else if (
+        existing &&
+        existing.mode === "test" &&
+        !existing.completed_at &&
+        Array.isArray(existing.module_order) &&
+        existing.module_order.length
+      ) {
+        lockedIds = existing.module_order;
+      }
+    }
+
+    content = applyProfile(raw, mode === "test" ? "test" : "full", {
+      module_ids: lockedIds,
+    });
+
+    // Safety: short quest must not keep more modules than the profile allows.
+    if (mode === "test") {
+      const p = Object.assign(
+        {},
+        SHORT_FALLBACK,
+        (raw.profiles && raw.profiles.test) || {}
       );
+      const maxN =
+        Array.isArray(p.module_ids) && p.module_ids.length
+          ? p.module_ids.length
+          : Number(p.module_count) || 1;
+      if (content.modules && content.modules.length > maxN) {
+        content = applyProfile(raw, "test", {
+          module_ids: pickModuleIds(
+            raw.modules,
+            maxN,
+            null,
+            !!p.prefer_video_stems
+          ),
+        });
+      }
     }
 
     els.title.textContent = content.title || "Challenge";
     const eyebrow = document.querySelector(".eyebrow");
-    if (eyebrow && mode === "test") eyebrow.textContent = "Test mode · shortened quest";
+    if (eyebrow && mode === "test") {
+      const mod = (content.modules || [])[0];
+      eyebrow.textContent = mod
+        ? "Short Quest · " + mod.title
+        : "Short Quest · 1 random module";
+      if (mod) els.title.textContent = mod.title;
+    }
 
     const restartLink = document.getElementById("restart-link");
     if (restartLink) {
       restartLink.href =
-        mode === "test" ? "challenge.html?test=1&restart=1" : "challenge.html?restart=1";
+        mode === "test"
+          ? "challenge.html?" + shortQuestQuery() + "&restart=1"
+          : "challenge.html?restart=1";
     }
 
     const stemId = params.get("stem");
@@ -281,8 +421,6 @@
       await showStemPreview(stemId);
       return;
     }
-
-    if (params.get("restart") === "1") QCSession.clear();
 
     session = QCSession.load();
     const allowedIds = (content.modules || []).map((m) => m.id);
@@ -317,16 +455,27 @@
       session.content_version = content.version;
       session.mode = mode;
       session.level_state = {};
+      if (content.selected_module_ids) {
+        session.selected_module_ids = content.selected_module_ids.slice();
+      }
+      attachShortQuestMeta(session, content);
       QCSession.save(session);
     } else if (!session.module_order || !session.module_order.length) {
       session.module_order = QCProgress.buildModuleOrder(content);
       session.mode = mode;
+      if (content.selected_module_ids && !session.selected_module_ids) {
+        session.selected_module_ids = content.selected_module_ids.slice();
+      }
+      attachShortQuestMeta(session, content);
+      QCSession.save(session);
+    } else if (mode === "test" && !session.short_module_title) {
+      attachShortQuestMeta(session, content);
       QCSession.save(session);
     }
 
     console.info(
       "[challenge]",
-      mode,
+      mode === "test" ? "short" : "full",
       "modules",
       (content.modules || []).map((m) => m.id),
       "diffs",

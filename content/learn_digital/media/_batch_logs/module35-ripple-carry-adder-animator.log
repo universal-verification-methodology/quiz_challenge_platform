@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "D:\proj\designs\quiz_challenge_platform\.cursor\skills\question-video\scripts\build_question_video.py", line 724, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "D:\proj\designs\quiz_challenge_platform\.cursor\skills\question-video\scripts\build_question_video.py", line 702, in main
+    build_one(
+  File "D:\proj\designs\quiz_challenge_platform\.cursor\skills\question-video\scripts\build_question_video.py", line 632, in build_one
+    run_tts(speech_path, audio_path, voice)
+  File "D:\proj\designs\quiz_challenge_platform\.cursor\skills\question-video\scripts\build_question_video.py", line 512, in run_tts
+    subprocess.run(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['edge-tts', '--voice', 'en-US-JennyNeural', '--file', 'D:\\proj\\designs\\quiz_challenge_platform\\content\\learn_digital\\media\\_work\\rca_easy_01\\speech.txt', '--write-media', 'D:\\proj\\designs\\quiz_challenge_platform\\content\\learn_digital\\media\\_work\\rca_easy_01\\audio.mp3']' returned non-zero exit status 3221225477.

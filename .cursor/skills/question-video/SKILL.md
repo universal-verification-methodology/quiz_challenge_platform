@@ -61,12 +61,13 @@ Keep `prompt` / `choices` / `answer` / `explain` in JSON for grading and the
 ## Design principles
 
 1. **Match module-slides PPT/PDF/video look** — light slide, Calibri-like sans, title `#1A1A2E`, body `#333`, panel `#F4F4F4` (see `digital_learning` `pptx_theme.py`).
-2. **Question text only on the frame** — no answer choices burned in (choices are spoken, selected in the player).
-3. **Always include a related figure** — authored `media/images/<item_id>.png` or auto-generated from the prompt/module (hex nibble, bit-width, K-map, timing sketch, …). Never reuse `*-frame.png` as the figure.
-4. **Narrate the question, never the answer** — no correct choice, no `explain`.
-5. **Short** — target **15–45 s**; hard cap ~60 s.
-6. **Friction, not DRM** — deny easy copy-paste; screenshots still possible.
-
+2. **Prefer real DDV browser tools** — figures should come from `digital_learning` Track B labs (`radix-converter`, `kmap`, `setup-hold`) via `media/images/tools/<toolId>.png`, not only synthetic posters.
+3. **eda_learning stem discipline** — one visual idea per frame; metrics/UI on the figure; speech = question + choices only; pitfalls as distractors; never put the answer on the stem (see `eda_learning` module-slides / STA walkthroughs).
+4. **Question text only on the slide chrome** — prompt under the figure; choices stay in the player (and in TTS), not as a burned-in key list.
+5. **Brand** — module title left; `universal-verification-methodology` right (no difficulty).
+6. **Narrate the question, never the answer** — no correct choice, no `explain`.
+7. **Short** — target **15–45 s**; hard cap ~60 s.
+8. **Friction, not DRM** — deny easy copy-paste; screenshots still possible.
 
 ## Prerequisites
 
@@ -75,20 +76,52 @@ pip install -r .cursor/skills/question-video/scripts/requirements.txt
 # ffmpeg on PATH (Windows: winget/choco; WSL: sudo apt install ffmpeg)
 ```
 
-Optional figure: place `media/images/<item_id>.png` (or pass `--figure`) before build.
+Sibling repos (typical Windows paths):
+
+- `d:/proj/designs/digital_learning` — tools + `assets/lab-starter.png` + capture script
+- `d:/proj/designs/eda_learning` — pedagogy reference (one idea / frame, shared goldens, no reveal-on-stem)
 
 ## Workflow
 
 ```
 Question-Video Progress:
-- [ ] 1. Pick course pack + module bank (default content/learn_digital)
-- [ ] 2. Inventory items (ids, difficulties, existing media)
-- [ ] 3. Resolve authored figure or auto-generate related concept figure
-- [ ] 4. Write speech.txt (question + choices labels only; no answer)
-- [ ] 5. Build frame + TTS + MP4 via build_question_video.py
-- [ ] 6. Patch bank JSON media fields
-- [ ] 7. Spot-check 1–2 videos; report paths + remaining items
+- [ ] 1. Sync tool figures from digital_learning (sync_tool_figures.py)
+- [ ] 2. Pick course pack + module bank (default content/learn_digital)
+- [ ] 3. Inventory items (ids, difficulties, existing media)
+- [ ] 4. Bind + capture per-question tool states (not one shared tools/*.png)
+- [ ] 5. Resolve figure: item png (state) → media.figure → tools/<toolId>.png fallback
+- [ ] 6. Write speech.txt (question + choices only; no answer)
+- [ ] 7. Build frame + TTS/reuse-audio + MP4
+- [ ] 8. Patch bank JSON media fields
+- [ ] 9. Spot-check against live tools URL
 ```
+
+### Step 0: Sync DDV tool UI figures
+
+```bash
+# Fast: copy courses/learn_digital/module*/assets/lab-starter.png
+python .cursor/skills/question-video/scripts/sync_tool_figures.py \
+  --course content/learn_digital \
+  --mode copy
+
+# Shared fallback only (one starter UI per tool):
+python .cursor/skills/question-video/scripts/sync_tool_figures.py \
+  --mode capture --only kmap
+# kmap → Karnaugh map + Minimal SOP only (.tool-layout.split-wide)
+```
+
+Writes `content/learn_digital/media/images/tools/{radix-converter,kmap,setup-hold}.png`.
+
+**Preferred (unique stems):** bind each item to a challenge/preset, then capture:
+
+```bash
+python .cursor/skills/question-video/scripts/bind_tool_states.py
+python .cursor/skills/question-video/scripts/capture_item_figures.py
+# → media/images/tools/states/<tool>__<key>.png
+# → media/images/<item_id>.png (copied per item)
+```
+
+Crop selectors (digital_learning): `#rc-root`, `.tool-layout.split-wide`, `#sh-root`.
 
 ### Step 1–2: Inventory
 
@@ -99,28 +132,26 @@ python .cursor/skills/question-video/scripts/build_question_video.py \
   --list
 ```
 
-### Step 3: Figures
+### Step 3: Figures (priority order)
 
 | Source | When |
 |--------|------|
-| `media/images/<item_id>.png` | Author-supplied circuit/schematic (preferred) |
+| `media/images/<item_id>.png` | **Default** — instrument state linked to that question family |
+| `media.figure` (still, not `tools/` / `*-frame`) | Explicit bank path |
+| `media/images/tools/<toolId>.png` | Shared fallback only |
 | `--figure PATH` | One-off override |
-| Auto-generate | Script builds a **related concept figure** from the prompt/module (default) |
 | `*-frame.png` | **Full slide poster only — never use as figure input** |
 
-Do **not** put the correct answer on the figure.
-
-Regenerate figures:
+Do **not** put the correct answer on the figure. Borrow eda_learning: helpers/UI OK; stem must not be a “reveal golden.”
 
 ```bash
 python .cursor/skills/question-video/scripts/build_question_video.py \
   --course content/learn_digital \
   --module module01-radix-converter \
   --item radix_easy_01 \
-  --force-figure \
+  --reuse-audio \
   --dry-run
 ```
-
 
 ### Step 4: Speech rules
 
@@ -156,7 +187,17 @@ python .cursor/skills/question-video/scripts/build_question_video.py \
   --write-media
 ```
 
+Batch several modules:
+
+```bash
+python .cursor/skills/question-video/scripts/batch_build_modules.py \
+  --modules module02-twos-complement module03-overflow-wrap \
+  --reuse-audio   # only after audio already exists
+```
+
 `--write-media` patches the bank JSON. Omit it to only generate files.
+
+Binders exist for **module01–module26** (prompt → tool challenge/preset). Modules 27+ still need binders.
 
 ### Step 7: Packaging report
 

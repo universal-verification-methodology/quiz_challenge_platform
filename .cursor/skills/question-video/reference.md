@@ -49,7 +49,7 @@ Light slide (not dark “Challenge stem” chrome):
 
 ```
 ┌─────────────────────────────────────────────┐
-│  Radix & bit width          challenge stem  │  module title + brand (no difficulty)
+│  Radix & bit width   universal-verification-methodology  │  module title + GitHub org (no difficulty)
 │                                             │
 │     ┌───────────────────────────────┐       │
 │     │  related figure (dominant)    │       │
@@ -70,22 +70,18 @@ Assets:
 Choices are **spoken** and answered in the player — not printed on the slide (harder to screenshot-OCR a full key list with the figure).
 
 
-## Alignment with digital_learning module-slides
+## digital_learning tools + eda_learning pedagogy
 
-| module-slides | question-video |
-|---------------|----------------|
-| Unit: module teaching clip | Unit: one quiz item |
-| `transcript.md` + PPTX slides | Generated `speech.txt` + single stem frame |
-| 3–10 minute target | 15–45 second target |
-| Teaches concepts | States the question only |
-| `video.mp4` in module root | `media/videos/<item_id>.mp4` in content pack |
-| edge-tts + ffmpeg | Same tools via `build_question_video.py` |
+| Source | What we reuse |
+|--------|----------------|
+| `digital_learning/platform/tools/{radix-converter,kmap,setup-hold}/` | Live browser labs (`#rc-root`, `#kmap-root`, `#sh-root`) |
+| `.../module*/assets/lab-starter.png` | Canonical Track B still → `media/images/tools/<toolId>.png` |
+| Live site | https://universal-verification-methodology.github.io/learning/tools/ |
+| `eda_learning` module-slides / STA | One idea per frame; speech ≠ metrics dump; no reveal-golden on stem; pitfall distractors |
 
-Sibling path (typical): `d:/proj/designs/digital_learning/.cursor/skills/module-slides/`.
+Sync helper: `scripts/sync_tool_figures.py`.
 
-## DDV platform
-
-Live learning site: https://universal-verification-methodology.github.io/learning/
+Also link tool CTAs from the report later (eda_learning pattern: video → quiz → open lab). Live tools: https://universal-verification-methodology.github.io/learning/tools/
 
 Keep `module` ids aligned with course modules (e.g. `module01-radix-converter`) so
 challenge packs merge cleanly with DDV labs later.

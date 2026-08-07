@@ -1,5 +1,5 @@
 /**
- * Post-quest report renderer (v0: summary table + attempt path text/SVG).
+ * Post-quest analytical report — dashboard layout (summary cards, modules, attempt path).
  */
 (function (global) {
   function fmtMs(ms) {
@@ -14,73 +14,277 @@
     return Math.round((n || 0) * 100) + "%";
   }
 
+  function escape(s) {
+    const d = document.createElement("div");
+    d.textContent = s == null ? "" : String(s);
+    return d.innerHTML;
+  }
+
+  function fmtCompleted(iso) {
+    try {
+      return new Date(iso || Date.now()).toLocaleString(undefined, {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+        hour: "numeric",
+        minute: "2-digit",
+      });
+    } catch (_) {
+      return String(iso || "");
+    }
+  }
+
+  function countTimeouts(session) {
+    return (session.attempts || []).filter((a) => a && a.timed_out).length;
+  }
+
   function render(root, session) {
     if (!root || !session) return;
     const agg = global.QCSession.aggregates(session);
-    root.innerHTML = "";
-
-    const summary = document.createElement("section");
-    summary.className = "report-summary";
-    summary.innerHTML =
-      "<h2>Quest summary</h2>" +
-      "<ul class=\"stat-list\">" +
-      "<li><span>Accuracy</span><strong>" +
-      pct(agg.accuracy) +
-      "</strong></li>" +
-      "<li><span>Attempts</span><strong>" +
-      agg.total_attempts +
-      "</strong></li>" +
-      "<li><span>Correct</span><strong>" +
-      agg.correct_count +
-      "</strong></li>" +
-      "<li><span>Wrong</span><strong>" +
-      agg.wrong_count +
-      "</strong></li>" +
-      "<li><span>Total time</span><strong>" +
-      fmtMs(agg.total_ms) +
-      "</strong></li>" +
-      "</ul>";
-    root.appendChild(summary);
-
+    const timeouts = countTimeouts(session);
     const insights = buildTimeInsights(session);
-    const timeSec = document.createElement("section");
-    timeSec.innerHTML =
-      "<h2>Time analytics</h2>" +
-      "<ul class=\"stat-list\">" +
-      "<li><span>Average / attempt</span><strong>" + fmtMs(insights.avgMs) + "</strong></li>" +
-      "<li><span>Fastest</span><strong>" + (insights.fastest ? fmtMs(insights.fastest.duration_ms) : "-") + "</strong></li>" +
-      "<li><span>Slowest</span><strong>" + (insights.slowest ? fmtMs(insights.slowest.duration_ms) : "-") + "</strong></li>" +
-      "</ul>";
-    root.appendChild(timeSec);
+    root.innerHTML = "";
+    root.className = "report-dash";
 
-    const modSec = document.createElement("section");
-    modSec.innerHTML = "<h2>By module</h2>";
+    root.appendChild(renderHeader(session));
+    root.appendChild(renderStatCards(agg, timeouts));
+    root.appendChild(renderMainGrid(session, agg));
+    root.appendChild(renderTimeInsights(insights));
+    root.appendChild(renderLevelTable(agg));
+    root.appendChild(renderAttemptDetails(session));
+  }
+
+  function renderHeader(session) {
+    const header = document.createElement("header");
+    header.className = "report-dash-header";
+
+    const left = document.createElement("div");
+    left.className = "report-dash-heading";
+
+    const h = document.createElement("h1");
+    h.className = "report-dash-title";
+    h.textContent = "Quest Report";
+    left.appendChild(h);
+
+    const sub = document.createElement("p");
+    sub.className = "report-dash-sub";
+    const title =
+      session.title ||
+      (session.mode === "test"
+        ? session.short_module_title
+          ? "Short Quest · " + session.short_module_title
+          : "Short Quest"
+        : "Digital Foundations Quest");
+    const when = fmtCompleted(session.completed_at || session.started_at);
+    sub.innerHTML =
+      "<span class=\"report-quest-name\">" +
+      escape(title) +
+      "</span>" +
+      '<span class="report-completed"><span class="report-check" aria-hidden="true">✓</span> Completed ' +
+      escape(when) +
+      "</span>";
+    left.appendChild(sub);
+    header.appendChild(left);
+
+    const tools = document.createElement("div");
+    tools.className = "report-dash-tools no-print";
+    tools.innerHTML =
+      '<button type="button" class="btn ghost" id="report-print-btn">Print report</button>' +
+      '<button type="button" class="btn ghost" id="report-pdf-btn">Download PDF</button>';
+    header.appendChild(tools);
+
+    tools.querySelector("#report-print-btn").addEventListener("click", () => {
+      window.print();
+    });
+    tools.querySelector("#report-pdf-btn").addEventListener("click", () => {
+      // Browser print dialog → "Save as PDF"
+      window.print();
+    });
+
+    return header;
+  }
+
+  function renderStatCards(agg, timeouts) {
+    const grid = document.createElement("section");
+    grid.className = "report-stat-cards";
+    grid.setAttribute("aria-label", "Quest summary");
+
+    const cards = [
+      {
+        key: "accuracy",
+        label: "Accuracy",
+        value: pct(agg.accuracy),
+        hint: agg.correct_count + " / " + agg.total_attempts + " correct",
+      },
+      {
+        key: "attempts",
+        label: "Attempts",
+        value: String(agg.total_attempts),
+        hint: "Total questions attempted",
+      },
+      {
+        key: "time",
+        label: "Time",
+        value: fmtMs(agg.total_ms),
+        hint: "Total time taken",
+      },
+      {
+        key: "timeouts",
+        label: "Timeouts",
+        value: String(timeouts),
+        hint: "Questions timed out",
+      },
+    ];
+
+    cards.forEach((c) => {
+      const article = document.createElement("article");
+      article.className = "report-stat-card report-stat-" + c.key;
+      article.innerHTML =
+        '<p class="report-stat-label">' +
+        escape(c.label) +
+        "</p>" +
+        '<p class="report-stat-value">' +
+        escape(c.value) +
+        "</p>" +
+        '<p class="report-stat-hint">' +
+        escape(c.hint) +
+        "</p>";
+      grid.appendChild(article);
+    });
+
+    return grid;
+  }
+
+  function renderMainGrid(session, agg) {
+    const grid = document.createElement("section");
+    grid.className = "report-main-grid";
+
+    const mods = document.createElement("div");
+    mods.className = "report-panel";
+    mods.innerHTML = "<h2>Module breakdown</h2>";
+    mods.appendChild(renderModuleTable(agg.modules || []));
+    const note = document.createElement("p");
+    note.className = "report-formula note";
+    note.textContent = "Accuracy = (Correct / Attempts) × 100";
+    mods.appendChild(note);
+    grid.appendChild(mods);
+
+    const path = document.createElement("div");
+    path.className = "report-panel report-path-panel";
+    path.innerHTML =
+      "<h2>Attempt path</h2>" +
+      '<ul class="path-legend" aria-hidden="true">' +
+      '<li><span class="dot ok"></span> Correct</li>' +
+      '<li><span class="dot err"></span> Incorrect</li>' +
+      '<li><span class="dot to"></span> Timeout</li>' +
+      "</ul>";
+    path.appendChild(renderPathSvg(session.attempts || []));
+    grid.appendChild(path);
+
+    return grid;
+  }
+
+  function renderModuleTable(modules) {
+    const wrap = document.createElement("div");
+    wrap.className = "report-table-wrap";
     const table = document.createElement("table");
-    table.className = "report-table";
+    table.className = "report-table report-module-table";
     table.innerHTML =
-      "<thead><tr><th>Module</th><th>Correct</th><th>Wrong</th><th>Time</th></tr></thead>";
+      "<thead><tr>" +
+      "<th>Module</th><th>Accuracy</th><th>Attempts</th><th>Correct</th><th>Time</th>" +
+      "</tr></thead>";
     const tbody = document.createElement("tbody");
-    agg.modules.forEach((m) => {
+
+    let totA = 0;
+    let totC = 0;
+    let totMs = 0;
+
+    modules.forEach((m) => {
+      const attempts = m.attempts || m.correct + m.wrong || 0;
+      const correct = m.correct || 0;
+      const acc = attempts ? correct / attempts : 0;
+      totA += attempts;
+      totC += correct;
+      totMs += m.time_ms || 0;
+
       const tr = document.createElement("tr");
       tr.innerHTML =
         "<td>" +
         escape(m.title || m.module_id) +
+        '</td><td class="acc-cell">' +
+        '<div class="acc-bar" role="img" aria-label="' +
+        pct(acc) +
+        '">' +
+        '<span class="acc-fill" style="width:' +
+        Math.round(acc * 100) +
+        '%"></span>' +
+        '<span class="acc-pct">' +
+        pct(acc) +
+        "</span></div></td><td>" +
+        attempts +
         "</td><td>" +
-        m.correct +
-        "</td><td>" +
-        m.wrong +
+        correct +
+        " / " +
+        attempts +
         "</td><td>" +
         fmtMs(m.time_ms) +
         "</td>";
       tbody.appendChild(tr);
     });
-    table.appendChild(tbody);
-    modSec.appendChild(table);
-    modSec.appendChild(renderModuleTimeBars(agg.modules || []));
-    root.appendChild(modSec);
 
-    const lvlSec = document.createElement("section");
-    lvlSec.innerHTML = "<h2>By difficulty level</h2>";
+    const overallAcc = totA ? totC / totA : 0;
+    const foot = document.createElement("tr");
+    foot.className = "report-overall-row";
+    foot.innerHTML =
+      "<td><strong>Overall</strong></td>" +
+      '<td class="acc-cell"><div class="acc-bar"><span class="acc-fill" style="width:' +
+      Math.round(overallAcc * 100) +
+      '%"></span><span class="acc-pct">' +
+      pct(overallAcc) +
+      "</span></div></td>" +
+      "<td><strong>" +
+      totA +
+      "</strong></td>" +
+      "<td><strong>" +
+      totC +
+      " / " +
+      totA +
+      "</strong></td>" +
+      "<td><strong>" +
+      fmtMs(totMs) +
+      "</strong></td>";
+    tbody.appendChild(foot);
+
+    table.appendChild(tbody);
+    wrap.appendChild(table);
+    return wrap;
+  }
+
+  function renderTimeInsights(insights) {
+    const sec = document.createElement("section");
+    sec.className = "report-panel report-secondary";
+    sec.innerHTML =
+      "<h2>Time analytics</h2>" +
+      '<ul class="stat-list compact">' +
+      "<li><span>Average / attempt</span><strong>" +
+      fmtMs(insights.avgMs) +
+      "</strong></li>" +
+      "<li><span>Fastest</span><strong>" +
+      (insights.fastest ? fmtMs(insights.fastest.duration_ms) : "—") +
+      "</strong></li>" +
+      "<li><span>Slowest</span><strong>" +
+      (insights.slowest ? fmtMs(insights.slowest.duration_ms) : "—") +
+      "</strong></li>" +
+      "</ul>";
+    return sec;
+  }
+
+  function renderLevelTable(agg) {
+    const sec = document.createElement("section");
+    sec.className = "report-panel report-secondary";
+    sec.innerHTML = "<h2>By difficulty level</h2>";
+    const wrap = document.createElement("div");
+    wrap.className = "report-table-wrap";
     const lt = document.createElement("table");
     lt.className = "report-table";
     lt.innerHTML =
@@ -102,24 +306,30 @@
         L.correct +
         "</td><td>" +
         L.attempts +
-        "</td><td>" +
+        '</td><td><span class="status-pill status-' +
+        status.replace(/\s+/g, "-") +
+        '">' +
         status +
-        "</td><td>" +
+        "</span></td><td>" +
         fmtMs(L.time_ms) +
         "</td>";
       lbody.appendChild(tr);
     });
     lt.appendChild(lbody);
-    lvlSec.appendChild(lt);
-    root.appendChild(lvlSec);
+    wrap.appendChild(lt);
+    sec.appendChild(wrap);
+    return sec;
+  }
 
+  function renderAttemptDetails(session) {
     const detail = document.createElement("section");
+    detail.className = "report-panel report-secondary";
     detail.innerHTML = "<h2>Each attempt</h2>";
     const list = document.createElement("ol");
     list.className = "attempt-list";
     (session.attempts || []).forEach((a) => {
       const li = document.createElement("li");
-      li.className = a.correct ? "ok" : "err";
+      li.className = a.timed_out ? "timeout" : a.correct ? "ok" : "err";
       const chosen = a.timed_out
         ? "Timed out"
         : a.choices && typeof a.selected === "number"
@@ -132,7 +342,7 @@
           ? a.choices[a.correct_answer]
           : String(a.correct_answer);
       li.innerHTML =
-        "<div class=\"attempt-head\">" +
+        '<div class="attempt-head">' +
         "<strong>" +
         escape(a.module_title || a.module_id) +
         "</strong> · " +
@@ -142,7 +352,7 @@
         " · try #" +
         a.attempt_index +
         "</div>" +
-        "<p class=\"prompt-sm\">" +
+        '<p class="prompt-sm">' +
         escape(a.prompt) +
         "</p>" +
         "<p>" +
@@ -151,16 +361,11 @@
           : "You chose: <em>" + escape(chosen) + "</em>") +
         (a.correct ? "" : " · Correct: <em>" + escape(correctLabel) + "</em>") +
         "</p>" +
-        (a.explain ? "<p class=\"explain\">" + escape(a.explain) + "</p>" : "");
+        (a.explain ? '<p class="explain">' + escape(a.explain) + "</p>" : "");
       list.appendChild(li);
     });
     detail.appendChild(list);
-    root.appendChild(detail);
-
-    const path = document.createElement("section");
-    path.innerHTML = "<h2>Progress path</h2>";
-    path.appendChild(renderPathSvg(session.attempts || []));
-    root.appendChild(path);
+    return detail;
   }
 
   function buildTimeInsights(session) {
@@ -178,97 +383,86 @@
     return { avgMs: total / attempts.length, fastest, slowest };
   }
 
-  function renderModuleTimeBars(modules) {
-    const sec = document.createElement("div");
-    sec.className = "time-bars";
-    if (!modules.length) return sec;
-    const maxMs = Math.max.apply(
-      null,
-      modules.map((m) => m.time_ms || 0)
-    ) || 1;
-
-    const title = document.createElement("p");
-    title.className = "note";
-    title.textContent = "Time spent by module";
-    sec.appendChild(title);
-
-    modules.forEach((m) => {
-      const row = document.createElement("div");
-      row.className = "bar-row";
-      const label = document.createElement("div");
-      label.className = "bar-label";
-      label.textContent = m.title || m.module_id;
-      const track = document.createElement("div");
-      track.className = "bar-track";
-      const fill = document.createElement("div");
-      fill.className = "bar-fill";
-      fill.style.width = Math.max(4, Math.round(((m.time_ms || 0) / maxMs) * 100)) + "%";
-      fill.textContent = fmtMs(m.time_ms || 0);
-      track.appendChild(fill);
-      row.appendChild(label);
-      row.appendChild(track);
-      sec.appendChild(row);
-    });
-    return sec;
-  }
-
-  function escape(s) {
-    const d = document.createElement("div");
-    d.textContent = s == null ? "" : String(s);
-    return d.innerHTML;
-  }
-
+  /**
+   * Vertical attempt path: Y = question index, X = outcome (correct / wrong / timeout).
+   */
   function renderPathSvg(attempts) {
     const wrap = document.createElement("div");
-    wrap.className = "path-wrap";
+    wrap.className = "path-wrap path-wrap-vertical";
     if (!attempts.length) {
       wrap.textContent = "No attempts recorded.";
       return wrap;
     }
 
-    const w = Math.max(640, attempts.length * 120);
-    const h = 120;
+    const n = attempts.length;
+    const top = 28;
+    const bottom = 28;
+    const left = 44;
+    const right = 16;
+    const rowH = Math.max(22, Math.min(36, Math.floor(420 / Math.max(n, 1))));
+    const h = top + bottom + n * rowH;
+    const w = 220;
+    const xCorrect = left + 28;
+    const xWrong = left + 88;
+    const xTimeout = left + 148;
+
     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     svg.setAttribute("viewBox", "0 0 " + w + " " + h);
     svg.setAttribute("width", "100%");
     svg.setAttribute("role", "img");
     svg.setAttribute("aria-label", "Attempt path diagram");
 
+    function outcomeX(a) {
+      if (a.timed_out) return xTimeout;
+      return a.correct ? xCorrect : xWrong;
+    }
+
+    function outcomeClass(a) {
+      if (a.timed_out) return "path-node to";
+      return a.correct ? "path-node ok" : "path-node err";
+    }
+
+    // Axis labels
+    ["C", "X", "T"].forEach((lab, i) => {
+      const tx = document.createElementNS("http://www.w3.org/2000/svg", "text");
+      tx.setAttribute("x", String([xCorrect, xWrong, xTimeout][i]));
+      tx.setAttribute("y", "16");
+      tx.setAttribute("text-anchor", "middle");
+      tx.setAttribute("class", "path-axis-label");
+      tx.textContent = lab;
+      svg.appendChild(tx);
+    });
+
+    let prev = null;
     attempts.forEach((a, i) => {
-      const x = 40 + i * 120;
-      const y = 50;
-      if (i > 0) {
+      const y = top + i * rowH + rowH / 2;
+      const x = outcomeX(a);
+
+      const qLab = document.createElementNS("http://www.w3.org/2000/svg", "text");
+      qLab.setAttribute("x", "8");
+      qLab.setAttribute("y", String(y + 4));
+      qLab.setAttribute("class", "path-q-label");
+      qLab.textContent = String(i + 1);
+      svg.appendChild(qLab);
+
+      if (prev) {
         const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-        line.setAttribute("x1", String(x - 120 + 28));
-        line.setAttribute("y1", String(y));
-        line.setAttribute("x2", String(x - 28));
+        line.setAttribute("x1", String(prev.x));
+        line.setAttribute("y1", String(prev.y));
+        line.setAttribute("x2", String(x));
         line.setAttribute("y2", String(y));
         line.setAttribute("class", "path-edge");
         svg.appendChild(line);
       }
+
       const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
       circle.setAttribute("cx", String(x));
       circle.setAttribute("cy", String(y));
-      circle.setAttribute("r", "18");
-      circle.setAttribute("class", a.correct ? "path-node ok" : "path-node err");
+      circle.setAttribute("r", "9");
+      circle.setAttribute("class", outcomeClass(a));
       svg.appendChild(circle);
 
-      const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
-      label.setAttribute("x", String(x));
-      label.setAttribute("y", String(y + 5));
-      label.setAttribute("text-anchor", "middle");
-      label.setAttribute("class", "path-node-label");
-      label.textContent = a.correct ? "✓" : "✗";
-      svg.appendChild(label);
-
-      const cap = document.createElementNS("http://www.w3.org/2000/svg", "text");
-      cap.setAttribute("x", String(x));
-      cap.setAttribute("y", String(y + 40));
-      cap.setAttribute("text-anchor", "middle");
-      cap.setAttribute("class", "path-caption");
-      const shortId = (a.module_id || "").replace(/^module\d+-/, "").slice(0, 10);
-      cap.textContent = shortId + " " + Math.round((a.duration_ms || 0) / 1000) + "s";
-      svg.appendChild(cap);
+      prev = { x, y };
     });
 
     wrap.appendChild(svg);

@@ -21,11 +21,13 @@ wrangler secret put GITHUB_TOKEN
 When the terminal prompts **“Enter a secret value”**, paste the token **there** (in your own terminal), press Enter.  
 You should not see the token committed to any file.
 
-Then deploy:
+Then deploy **only the results worker** (not the static site):
 
 ```bash
-wrangler deploy
+wrangler deploy --config wrangler.toml
 ```
+
+Use `--config wrangler.toml` so Wrangler does not pick up the parent [`../wrangler.jsonc`](../wrangler.jsonc), which bundles the whole site as static assets (and will fail on `node_modules`).
 
 Copy the printed `https://….workers.dev` URL into [`../config/site.json`](../config/site.json):
 
@@ -46,7 +48,12 @@ Copy the printed `https://….workers.dev` URL into [`../config/site.json`](../c
 6. Also add plain text vars: `GITHUB_OWNER`, `GITHUB_REPO`
 7. Deploy, then put the worker URL in `config/site.json` as above
 
-## What I can do for you
+## Deploy targets
+
+| What | Where | Command |
+|------|--------|---------|
+| **Results API** (leaderboard, GitHub) | `backend/` | `wrangler deploy --config wrangler.toml` |
+| **Static site** (HTML/JS/content) | repo root | `wrangler deploy` (uses `wrangler.jsonc`; excludes `node_modules` via `.assetsignore`) |
 
 - Edit `GITHUB_OWNER` / `GITHUB_REPO` in `wrangler.toml` if you tell me the repo name  
 - Wire `site.json` once you give me the **worker URL** (not the token)

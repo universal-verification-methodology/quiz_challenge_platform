@@ -6,41 +6,44 @@
     <title>Report · Digital Foundations Quest</title>
     <link rel="stylesheet" href="css/challenge.css" />
   </head>
-  <body>
-    <header class="site-header">
+  <body class="page-report">
+    <header class="site-header no-print">
       <a class="brand" href="index.html">Challenge Platform</a>
       <nav class="nav-links">
         <a href="index.html">Home</a>
+        <a href="challenge.html?restart=1">Full Quest</a>
+        <a href="challenge.html?short=1&amp;restart=1">Short Quest</a>
         <a href="dashboard.html">Leaderboard</a>
-        <a id="new-quest-link" href="challenge.html?restart=1">New quest</a>
       </nav>
     </header>
 
-    <main>
-      <p class="eyebrow">Analytical report</p>
-      <h1>Your results</h1>
+    <main class="report-main">
       <p class="note" id="report-empty" hidden>
         No session found. <a id="empty-start-link" href="challenge.html?restart=1">Start a quest</a> first.
       </p>
       <div id="report-root"></div>
-      <section class="panel" id="cert-root" hidden></section>
-      <div class="actions" id="report-actions" hidden>
+      <section class="panel cert-panel-wrap no-print" id="cert-root" hidden></section>
+      <div class="actions no-print" id="report-actions" hidden>
         <a class="btn primary" id="try-again-link" href="challenge.html?restart=1">Try again</a>
         <a class="btn ghost" href="index.html">Home</a>
+        <a class="btn ghost" href="dashboard.html">Leaderboard</a>
       </div>
     </main>
 
-    <footer class="site-footer">Certificate unlocks after you share name, email, and (optional) testimony</footer>
+    <footer class="site-footer no-print">
+      Certificate unlocks after you share name, email, and (optional) testimony
+    </footer>
 
     <script src="js/session-log.js?v=6"></script>
-    <script src="js/benchmark.js?v=1"></script>
-    <script src="js/report.js?v=7"></script>
-    <script src="js/results.js?v=6"></script>
-    <script src="js/certificate.js?v=15"></script>
+    <script src="js/benchmark.js?v=3"></script>
+    <script src="js/report.js?v=8"></script>
+    <script src="js/results.js?v=8"></script>
+    <script src="js/certificate.js?v=18"></script>
     <script>
       (function () {
         const params = new URLSearchParams(location.search);
-        let mode = params.get("test") === "1" ? "test" : "full";
+        let mode =
+          params.get("short") === "1" || params.get("test") === "1" ? "test" : "full";
 
         function hasAttempts(s) {
           return s && s.attempts && s.attempts.length;
@@ -74,7 +77,7 @@
         const session = loaded.session;
         mode = loaded.mode;
 
-        const qs = mode === "test" ? "?test=1&restart=1" : "?restart=1";
+        const qs = mode === "test" ? "?short=1&restart=1" : "?restart=1";
         const startHref = "challenge.html" + qs;
         ["new-quest-link", "empty-start-link", "try-again-link"].forEach((id) => {
           const el = document.getElementById(id);
@@ -91,11 +94,6 @@
           QCSession.clear();
           empty.hidden = false;
           return;
-        }
-
-        if (mode === "test") {
-          const eye = document.querySelector(".eyebrow");
-          if (eye) eye.textContent = "Analytical report · test mode";
         }
 
         QCReport.render(root, session);

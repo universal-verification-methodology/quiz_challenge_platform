@@ -44,11 +44,51 @@ function countCleared(levelState) {
   return n;
 }
 
+/** Cleared counts per difficulty: [easy, medium, hard] across modules. */
+function clearedByDifficulty(levelState, difficulties) {
+  const diffs =
+    Array.isArray(difficulties) && difficulties.length
+      ? difficulties
+      : ["easy", "medium", "hard"];
+  const counts = diffs.map(() => 0);
+  for (const mid of Object.keys(levelState || {})) {
+    const mod = levelState[mid] || {};
+    diffs.forEach((d, i) => {
+      if (mod[d] && mod[d].cleared) counts[i] += 1;
+    });
+  }
+  return counts;
+}
+
+function formatClearedBreakdown(counts) {
+  if (!Array.isArray(counts) || !counts.length) return "";
+  return counts.join("/");
+}
+
+function resolveModuleTitle(payload) {
+  const quest = (payload && payload.quest) || {};
+  if (quest.module_title) return String(quest.module_title);
+  const modules = (payload && payload.modules) || [];
+  if (modules.length === 1 && modules[0].title) return String(modules[0].title);
+  if (modules.length > 1) {
+    const titles = modules.map((m) => m && m.title).filter(Boolean);
+    if (titles.length) return titles.join(", ");
+  }
+  const attempts = (payload && payload.attempts) || [];
+  if (attempts[0] && attempts[0].module_title) return String(attempts[0].module_title);
+  return "";
+}
+
 function inferMaxLevels(payload) {
   const quest = (payload && payload.quest) || {};
   const bench = (payload && payload.benchmark) || {};
   if (bench.max_levels != null) return Number(bench.max_levels);
-  if (quest.mode === "test") return 4;
+  if (quest.max_levels != null) return Number(quest.max_levels);
+  if (quest.mode === "test") {
+    const nMods = Number(quest.module_count) || 1;
+    const diffs = Array.isArray(quest.difficulties) ? quest.difficulties.length : 3;
+    return nMods * diffs;
+  }
   const ls = payload.level_state || {};
   let slots = 0;
   for (const mid of Object.keys(ls)) slots += Object.keys(ls[mid] || {}).length;
@@ -107,6 +147,10 @@ function publicRow(payload, meta) {
   const timeouts = countTimeouts(attempts);
   const med = medianMs(attempts);
   const accuracy = Number(summary.accuracy) || 0;
+  const diffs =
+    (quest.difficulties && quest.difficulties.length && quest.difficulties) ||
+    ["easy", "medium", "hard"];
+  const clearedCounts = clearedByDifficulty(levelState, diffs);
   const emailKey = String(identity.email || "")
     .trim()
     .toLowerCase();
@@ -126,11 +170,18 @@ function publicRow(payload, meta) {
     wrong_count: Number(summary.wrong_count) || 0,
     cleared_levels: cleared,
     max_levels: maxLevels,
+    cleared_by_difficulty: clearedCounts,
+    cleared_label: formatClearedBreakdown(clearedCounts),
     modules_touched: Object.keys(levelState).length,
     median_ms: med,
     total_ms: Number(summary.total_ms) || 0,
     timeouts,
     mode: quest.mode || "full",
+    module_title: quest.mode === "test" ? resolveModuleTitle(payload) : "",
+    module_id:
+      quest.mode === "test"
+        ? String(quest.module_id || (payload.modules && payload.modules[0] && payload.modules[0].module_id) || "")
+        : "",
     course_id: quest.course_id || "",
     completed_at: quest.completed_at || payload.submitted_at || meta.created_at || "",
     session_id: quest.session_id || "",
@@ -183,9 +234,15 @@ async function buildLeaderboard(env, mode) {
     if (questMode !== want) continue;
 
     const row = publicRow(payload, { created_at: issue.created_at });
-    const key =
+    // Full quest: best run per person. Short quest: best run per person per module
+    // so different topic runs (e.g. Cache walk vs Seven-segment) all appear.
+    const person =
       row._email_key ||
       (row.session_id ? "sid:" + row.session_id : "issue:" + issue.number);
+    const key =
+      want === "test"
+        ? person + "::" + (row.module_id || row.module_title || "unknown")
+        : person;
     const prev = bestByKey.get(key);
     if (!prev || row.score > prev.score) {
       bestByKey.set(key, row);
@@ -223,7 +280,9 @@ async function buildLeaderboard(env, mode) {
     generated_at: new Date().toISOString(),
     count: rows.length,
     scoring:
-      "1000×(cleared/max_levels) + 100×accuracy − 5×timeouts − min(40, median_s)",
+      want === "test"
+        ? "1000×(cleared/max_levels) + 100×accuracy − 5×timeouts − min(40, median_s). Best run per person per module."
+        : "1000×(cleared/max_levels) + 100×accuracy − 5×timeouts − min(40, median_s). Best run per person.",
     rows,
   };
 }
@@ -254,7 +313,11 @@ async function handlePost(request, env) {
   const email = String(payload.identity.email || "").slice(0, 200);
   const accuracy = payload.summary ? Math.round((payload.summary.accuracy || 0) * 100) : 0;
   const mode = (payload.quest && payload.quest.mode) || "full";
-  const title = `[quest-result] ${maskName(name)} — ${accuracy}% (${mode})`;
+  const modTitle =
+    mode === "test" && payload.quest && payload.quest.module_title
+      ? ` · ${payload.quest.module_title}`
+      : "";
+  const title = `[quest-result] ${maskName(name)} — ${accuracy}% (${mode}${modTitle})`;
 
   const body = [
     "## Identity",

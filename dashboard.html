@@ -11,7 +11,8 @@
       <a class="brand" href="index.html">Challenge Platform</a>
       <nav class="nav-links">
         <a href="index.html">Home</a>
-        <a href="challenge.html?restart=1">Start quest</a>
+        <a href="challenge.html?restart=1">Full Quest</a>
+        <a href="challenge.html?short=1&amp;restart=1">Short Quest</a>
         <a href="dashboard.html" aria-current="page">Leaderboard</a>
       </nav>
     </header>
@@ -19,15 +20,11 @@
     <main class="dashboard-main">
       <p class="eyebrow">Public ranking</p>
       <h1>Leaderboard</h1>
-      <p class="lede dashboard-lede">
-        Names are masked (first letter of each word kept). Ranking uses a composite score so
-        variable-length quests stay comparable. Full and test modes are separate boards.
-      </p>
 
       <div class="dashboard-toolbar">
         <div class="mode-tabs" role="tablist" aria-label="Quest mode">
-          <button type="button" class="mode-tab active" data-mode="full">Full quest</button>
-          <button type="button" class="mode-tab" data-mode="test">Test mode</button>
+          <button type="button" class="mode-tab active" data-mode="full">Full Quest</button>
+          <button type="button" class="mode-tab" data-mode="test">Short Quest</button>
         </div>
         <p class="note" id="board-meta">Loading…</p>
       </div>
@@ -37,21 +34,50 @@
           <table class="board-table" id="board-table">
             <thead>
               <tr>
-                <th scope="col">Rank</th>
-                <th scope="col">Player</th>
-                <th scope="col">Score</th>
-                <th scope="col">Accuracy</th>
-                <th scope="col">Attempts</th>
-                <th scope="col">Cleared</th>
-                <th scope="col">Median / q</th>
-                <th scope="col">Timeouts</th>
-                <th scope="col">Percentile</th>
-                <th scope="col">Date</th>
+                <th scope="col" data-sort="rank" data-default-dir="asc" aria-sort="none">
+                  <button type="button" class="sort-btn">Rank</button>
+                </th>
+                <th scope="col" data-sort="display_name" data-default-dir="asc" aria-sort="none">
+                  <button type="button" class="sort-btn">Player</button>
+                </th>
+                <th scope="col" data-sort="module_title" data-default-dir="asc" aria-sort="none">
+                  <button type="button" class="sort-btn">Module</button>
+                </th>
+                <th scope="col" data-sort="score" data-default-dir="desc" aria-sort="descending">
+                  <button type="button" class="sort-btn">Score</button>
+                </th>
+                <th scope="col" data-sort="accuracy_pct" data-default-dir="desc" aria-sort="none">
+                  <button type="button" class="sort-btn">Accuracy</button>
+                </th>
+                <th scope="col" data-sort="total_attempts" data-default-dir="desc" aria-sort="none">
+                  <button type="button" class="sort-btn">Questions</button>
+                </th>
+                <th
+                  scope="col"
+                  data-sort="cleared_levels"
+                  data-default-dir="desc"
+                  aria-sort="none"
+                  title="Levels cleared: easy / medium / hard"
+                >
+                  <button type="button" class="sort-btn">Cleared E/M/H</button>
+                </th>
+                <th scope="col" data-sort="median_ms" data-default-dir="asc" aria-sort="none">
+                  <button type="button" class="sort-btn">Median / q</button>
+                </th>
+                <th scope="col" data-sort="timeouts" data-default-dir="asc" aria-sort="none">
+                  <button type="button" class="sort-btn">Timeouts</button>
+                </th>
+                <th scope="col" data-sort="top_pct" data-default-dir="asc" aria-sort="none">
+                  <button type="button" class="sort-btn">Percentile</button>
+                </th>
+                <th scope="col" data-sort="completed_at" data-default-dir="desc" aria-sort="none">
+                  <button type="button" class="sort-btn">Date</button>
+                </th>
               </tr>
             </thead>
             <tbody id="board-body">
               <tr>
-                <td colspan="10" class="board-empty">Loading rankings…</td>
+                <td colspan="11" class="board-empty">Loading rankings…</td>
               </tr>
             </tbody>
           </table>
@@ -61,10 +87,10 @@
     </main>
 
     <footer class="site-footer">
-      Best full (or test) run per person · email never shown on this page
+      Best Full Quest run per person · Short Quest: best per person per module · email never shown
     </footer>
 
-    <script src="js/benchmark.js?v=1"></script>
-    <script src="js/dashboard.js?v=1"></script>
+    <script src="js/benchmark.js?v=4"></script>
+    <script src="js/dashboard.js?v=4"></script>
   </body>
 </html>

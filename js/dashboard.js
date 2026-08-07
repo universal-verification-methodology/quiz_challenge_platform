@@ -5,8 +5,12 @@
   const bodyEl = document.getElementById("board-body");
   const metaEl = document.getElementById("board-meta");
   const scoringEl = document.getElementById("scoring-note");
+  const tableEl = document.getElementById("board-table");
   const tabs = document.querySelectorAll(".mode-tab");
   let mode = "full";
+  let cachedRows = [];
+  let sortKey = "score";
+  let sortDir = "desc";
 
   function fmtDate(iso) {
     if (!iso) return "—";
@@ -48,16 +52,70 @@
     return u.toString();
   }
 
+  function sortValue(row, key) {
+    if (key === "cleared_levels") {
+      const cleared = Number(row.cleared_levels) || 0;
+      const max = Number(row.max_levels) || 0;
+      return cleared + cleared / Math.max(max, 1);
+    }
+    if (key === "display_name") {
+      return String(row.display_name || "").toLowerCase();
+    }
+    if (key === "module_title") {
+      return String(row.module_title || "").toLowerCase();
+    }
+    if (key === "completed_at") {
+      const t = Date.parse(row.completed_at || "");
+      return Number.isFinite(t) ? t : 0;
+    }
+    const n = Number(row[key]);
+    return Number.isFinite(n) ? n : 0;
+  }
+
+  function sortedRows(rows) {
+    const list = rows.slice();
+    const dir = sortDir === "asc" ? 1 : -1;
+    list.sort((a, b) => {
+      const av = sortValue(a, sortKey);
+      const bv = sortValue(b, sortKey);
+      if (typeof av === "string" || typeof bv === "string") {
+        const cmp = String(av).localeCompare(String(bv), undefined, {
+          sensitivity: "base",
+          numeric: true,
+        });
+        if (cmp !== 0) return cmp * dir;
+      } else if (av !== bv) {
+        return (av < bv ? -1 : 1) * dir;
+      }
+      // Stable-ish fallback: keep official rank order.
+      return (Number(a.rank) || 0) - (Number(b.rank) || 0);
+    });
+    return list;
+  }
+
+  function updateSortHeaders() {
+    if (!tableEl) return;
+    tableEl.querySelectorAll("th[data-sort]").forEach((th) => {
+      const key = th.getAttribute("data-sort");
+      if (key === sortKey) {
+        th.setAttribute("aria-sort", sortDir === "asc" ? "ascending" : "descending");
+      } else {
+        th.setAttribute("aria-sort", "none");
+      }
+    });
+  }
+
   function renderRows(rows) {
     bodyEl.innerHTML = "";
     if (!rows || !rows.length) {
       const tr = document.createElement("tr");
       tr.innerHTML =
-        '<td colspan="10" class="board-empty">No published results yet for this mode. Complete a quest and claim a certificate with consent to appear here.</td>';
+        '<td colspan="11" class="board-empty">No published results yet for this mode. Complete a quest and claim a certificate with consent to appear here.</td>';
       bodyEl.appendChild(tr);
       return;
     }
-    rows.forEach((row) => {
+    const ordered = sortedRows(rows);
+    ordered.forEach((row) => {
       const tr = document.createElement("tr");
       if (row.rank <= 3) tr.className = "top-" + row.rank;
       tr.innerHTML =
@@ -66,6 +124,9 @@
         "</td>" +
         "<td class=\"player\">" +
         escapeHtml(row.display_name) +
+        "</td>" +
+        "<td class=\"module\">" +
+        escapeHtml(row.module_title || (mode === "test" ? "—" : "All modules")) +
         "</td>" +
         "<td class=\"num score\">" +
         row.score +
@@ -76,10 +137,13 @@
         "<td class=\"num\">" +
         row.total_attempts +
         "</td>" +
-        "<td class=\"num\">" +
-        row.cleared_levels +
-        "/" +
-        row.max_levels +
+        "<td class=\"num\" title=\"easy / medium / hard levels cleared\">" +
+        escapeHtml(
+          row.cleared_label ||
+            (row.cleared_by_difficulty && row.cleared_by_difficulty.length
+              ? row.cleared_by_difficulty.join("/")
+              : row.cleared_levels + "/" + row.max_levels)
+        ) +
         "</td>" +
         "<td class=\"num\">" +
         fmtMs(row.median_ms) +
@@ -103,16 +167,27 @@
     return d.innerHTML;
   }
 
+  function applySort(key, defaultDir) {
+    if (sortKey === key) {
+      sortDir = sortDir === "asc" ? "desc" : "asc";
+    } else {
+      sortKey = key;
+      sortDir = defaultDir === "asc" ? "asc" : "desc";
+    }
+    updateSortHeaders();
+    renderRows(cachedRows);
+  }
+
   async function loadBoard() {
     metaEl.textContent = "Loading…";
     bodyEl.innerHTML =
-      '<tr><td colspan="10" class="board-empty">Loading rankings…</td></tr>';
+      '<tr><td colspan="11" class="board-empty">Loading rankings…</td></tr>';
     const site = await loadSite();
     const url = leaderboardUrl(site, mode);
     if (!url) {
       metaEl.textContent = "Leaderboard endpoint not configured.";
       bodyEl.innerHTML =
-        '<tr><td colspan="10" class="board-empty">Set results.endpoint in config/site.json and redeploy the worker.</td></tr>';
+        '<tr><td colspan="11" class="board-empty">Set results.endpoint in config/site.json and redeploy the worker.</td></tr>';
       return;
     }
     try {
@@ -126,7 +201,7 @@
         " player" +
         (data.count === 1 ? "" : "s") +
         " · " +
-        (mode === "test" ? "test mode" : "full quest") +
+        (mode === "test" ? "short quest" : "full quest") +
         " · updated " +
         fmtDate(data.generated_at);
       if (scoringEl) {
@@ -134,24 +209,44 @@
           "Score: " +
           (data.scoring ||
             "1000×(cleared/max) + 100×accuracy − 5×timeouts − median time penalty") +
-          ". Best run per person.";
+          ". Best Full Quest run per person; Short Quest keeps best run per person per module. Cleared is easy/medium/hard.";
       }
-      renderRows(data.rows || []);
+      cachedRows = data.rows || [];
+      updateSortHeaders();
+      renderRows(cachedRows);
     } catch (err) {
       console.error(err);
+      cachedRows = [];
       metaEl.textContent = "Could not load leaderboard.";
       bodyEl.innerHTML =
-        '<tr><td colspan="10" class="board-empty">Failed to reach the results server. Redeploy the worker with GET /leaderboard support, then refresh.</td></tr>';
+        '<tr><td colspan="11" class="board-empty">Failed to reach the results server. Redeploy the worker with GET /leaderboard support, then refresh.</td></tr>';
     }
+  }
+
+  if (tableEl) {
+    tableEl.querySelectorAll("th[data-sort]").forEach((th) => {
+      const btn = th.querySelector(".sort-btn");
+      if (!btn) return;
+      btn.addEventListener("click", () => {
+        applySort(
+          th.getAttribute("data-sort"),
+          th.getAttribute("data-default-dir") || "desc"
+        );
+      });
+    });
   }
 
   tabs.forEach((btn) => {
     btn.addEventListener("click", () => {
       mode = btn.getAttribute("data-mode") === "test" ? "test" : "full";
       tabs.forEach((b) => b.classList.toggle("active", b === btn));
+      // Reset to official ranking when switching boards.
+      sortKey = "score";
+      sortDir = "desc";
       loadBoard();
     });
   });
 
+  updateSortHeaders();
   loadBoard();
 })();
