@@ -148,7 +148,7 @@
         "<td class=\"num\">" +
         row.total_attempts +
         "</td>" +
-        "<td class=\"num\" title=\"easy / medium / hard levels cleared\">" +
+        "<td class=\"num\" title=\"easy / medium / hard levels correct\">" +
         escapeHtml(formatClearedEMH(row)) +
         "</td>" +
         "<td class=\"num\">" +
@@ -214,8 +214,8 @@
         scoringEl.textContent =
           "Score: " +
           (data.scoring ||
-            "1000×(cleared/max) + 100×accuracy − 5×timeouts − median time penalty") +
-          ". Best Full Quest run per person; Short Quest keeps best run per person per module. Cleared is easy/medium/hard.";
+            "1000×(correct/max) + 100×accuracy − 5×timeouts − median time penalty") +
+          ". Best Full Quest run per person; Short Quest keeps best run per person per module. Correct is easy/medium/hard.";
       }
       cachedRows = data.rows || [];
       updateSortHeaders();

@@ -11,7 +11,7 @@
     });
   }
 
-  /** Always report easy/medium/hard for the dashboard Cleared E/M/H column. */
+  /** Always report easy/medium/hard for the dashboard Correct E/M/H column. */
   const DISPLAY_DIFFICULTIES = ["easy", "medium", "hard"];
 
   function countCleared(levelState) {

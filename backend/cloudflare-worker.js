@@ -33,7 +33,7 @@ function maskName(name) {
   });
 }
 
-/** Always report easy/medium/hard for the dashboard Cleared E/M/H column. */
+/** Always report easy/medium/hard for the dashboard Correct E/M/H column. */
 const DISPLAY_DIFFICULTIES = ["easy", "medium", "hard"];
 
 function countCleared(levelState) {
@@ -283,8 +283,8 @@ async function buildLeaderboard(env, mode) {
     count: rows.length,
     scoring:
       want === "test"
-        ? "1000×(cleared/max_levels) + 100×accuracy − 5×timeouts − min(40, median_s). Best run per person per module."
-        : "1000×(cleared/max_levels) + 100×accuracy − 5×timeouts − min(40, median_s). Best run per person.",
+        ? "1000×(correct/max_levels) + 100×accuracy − 5×timeouts − min(40, median_s). Best run per person per module."
+        : "1000×(correct/max_levels) + 100×accuracy − 5×timeouts − min(40, median_s). Best run per person.",
     rows,
   };
 }

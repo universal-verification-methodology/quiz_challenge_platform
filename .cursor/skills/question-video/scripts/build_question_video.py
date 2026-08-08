@@ -16,6 +16,7 @@ import re
 import shutil
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 try:
@@ -506,13 +507,35 @@ def which_or_die(name: str, hint: str) -> str:
     return path
 
 
-def run_tts(speech_path: Path, audio_path: Path, voice: str) -> None:
+def run_tts(speech_path: Path, audio_path: Path, voice: str, *, retries: int = 5) -> None:
     which_or_die("edge-tts", "pip install edge-tts")
     audio_path.parent.mkdir(parents=True, exist_ok=True)
-    subprocess.run(
-        ["edge-tts", "--voice", voice, "--file", str(speech_path), "--write-media", str(audio_path)],
-        check=True,
-    )
+    last: Exception | None = None
+    for attempt in range(1, retries + 1):
+        try:
+            subprocess.run(
+                [
+                    "edge-tts",
+                    "--voice",
+                    voice,
+                    "--file",
+                    str(speech_path),
+                    "--write-media",
+                    str(audio_path),
+                ],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            if audio_path.is_file() and audio_path.stat().st_size > 200:
+                return
+            raise RuntimeError(f"edge-tts produced empty audio: {audio_path}")
+        except Exception as exc:  # noqa: BLE001 — retry transient TTS / network
+            last = exc
+            wait = min(60, 2 ** attempt)
+            print(f"TTS retry {attempt}/{retries} in {wait}s: {exc}", flush=True)
+            time.sleep(wait)
+    raise SystemExit(f"edge-tts failed after {retries} retries: {last}")
 
 
 def run_ffmpeg(frame: Path, audio: Path, out_mp4: Path, fps: int = 30) -> None:
