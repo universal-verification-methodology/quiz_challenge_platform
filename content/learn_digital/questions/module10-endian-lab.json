@@ -14,29 +14,7 @@
       ],
       "answer": 1,
       "explain": "LE stores LSB at +0.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_easy_01.mp4",
-        "poster": "media/images/endian_easy_01-frame.png",
-        "figure": "media/images/endian_easy_01.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "endian_easy_02",
@@ -50,29 +28,7 @@
       ],
       "answer": 3,
       "explain": "LE: 78 56 34 12.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_easy_02.mp4",
-        "poster": "media/images/endian_easy_02-frame.png",
-        "figure": "media/images/endian_easy_02.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "endian_easy_03",
@@ -86,29 +42,7 @@
       ],
       "answer": 1,
       "explain": "Network order is big-endian by convention.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-be",
-        "label": "Unpack BE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=be]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_easy_03.mp4",
-        "poster": "media/images/endian_easy_03-frame.png",
-        "figure": "media/images/endian_easy_03.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "endian_easy_04",
@@ -116,929 +50,7 @@
       "prompt": "Host endian always matches network order.",
       "answer": false,
       "explain": "Value unchanged; only byte placement differs. Host ≠ wire often.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-be",
-        "label": "Unpack BE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=be]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_easy_04.mp4",
-        "poster": "media/images/endian_easy_04-frame.png",
-        "figure": "media/images/endian_easy_04.png"
-      }
-    },
-    {
-      "id": "endian_easy_05",
-      "type": "multiple_choice",
-      "prompt": "Little-endian stores at the lowest address the…",
-      "choices": [
-        "MSB",
-        "LSB",
-        "sign bit only",
-        "middle byte"
-      ],
-      "answer": 1,
-      "explain": "LE stores LSB at +0.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_easy_05.mp4",
-        "poster": "media/images/endian_easy_05-frame.png",
-        "figure": "media/images/endian_easy_05.png"
-      }
-    },
-    {
-      "id": "endian_easy_06",
-      "type": "multiple_choice",
-      "prompt": "LE unpack of 0x12345678: first byte is…",
-      "choices": [
-        "0x12",
-        "0x34",
-        "0x56",
-        "0x78"
-      ],
-      "answer": 3,
-      "explain": "LE: 78 56 34 12.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_easy_06.mp4",
-        "poster": "media/images/endian_easy_06-frame.png",
-        "figure": "media/images/endian_easy_06.png"
-      }
-    },
-    {
-      "id": "endian_easy_07",
-      "type": "multiple_choice",
-      "prompt": "Big-endian on the network means…",
-      "choices": [
-        "little-endian",
-        "big-endian",
-        "host-dependent only",
-        "random"
-      ],
-      "answer": 1,
-      "explain": "Network order is big-endian by convention.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-be",
-        "label": "Unpack BE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=be]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_easy_07.mp4",
-        "poster": "media/images/endian_easy_07-frame.png",
-        "figure": "media/images/endian_easy_07.png"
-      }
-    },
-    {
-      "id": "endian_easy_08",
-      "type": "true_false",
-      "prompt": "Host endian always matches network order.",
-      "answer": false,
-      "explain": "Value unchanged; only byte placement differs. Host ≠ wire often.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-be",
-        "label": "Unpack BE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=be]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_easy_08.mp4",
-        "poster": "media/images/endian_easy_08-frame.png",
-        "figure": "media/images/endian_easy_08.png"
-      }
-    },
-    {
-      "id": "endian_easy_09",
-      "type": "multiple_choice",
-      "prompt": "Little-endian stores at the lowest address the…",
-      "choices": [
-        "MSB",
-        "LSB",
-        "sign bit only",
-        "middle byte"
-      ],
-      "answer": 1,
-      "explain": "LE stores LSB at +0.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_easy_09.mp4",
-        "poster": "media/images/endian_easy_09-frame.png",
-        "figure": "media/images/endian_easy_09.png"
-      }
-    },
-    {
-      "id": "endian_easy_10",
-      "type": "multiple_choice",
-      "prompt": "LE unpack of 0x12345678: first byte is…",
-      "choices": [
-        "0x12",
-        "0x34",
-        "0x56",
-        "0x78"
-      ],
-      "answer": 3,
-      "explain": "LE: 78 56 34 12.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_easy_10.mp4",
-        "poster": "media/images/endian_easy_10-frame.png",
-        "figure": "media/images/endian_easy_10.png"
-      }
-    },
-    {
-      "id": "endian_easy_11",
-      "type": "multiple_choice",
-      "prompt": "Big-endian on the network means…",
-      "choices": [
-        "little-endian",
-        "big-endian",
-        "host-dependent only",
-        "random"
-      ],
-      "answer": 1,
-      "explain": "Network order is big-endian by convention.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-be",
-        "label": "Unpack BE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=be]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_easy_11.mp4",
-        "poster": "media/images/endian_easy_11-frame.png",
-        "figure": "media/images/endian_easy_11.png"
-      }
-    },
-    {
-      "id": "endian_easy_12",
-      "type": "true_false",
-      "prompt": "Host endian always matches network order.",
-      "answer": false,
-      "explain": "Value unchanged; only byte placement differs. Host ≠ wire often.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-be",
-        "label": "Unpack BE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=be]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_easy_12.mp4",
-        "poster": "media/images/endian_easy_12-frame.png",
-        "figure": "media/images/endian_easy_12.png"
-      }
-    },
-    {
-      "id": "endian_easy_13",
-      "type": "multiple_choice",
-      "prompt": "Little-endian stores at the lowest address the…",
-      "choices": [
-        "MSB",
-        "LSB",
-        "sign bit only",
-        "middle byte"
-      ],
-      "answer": 1,
-      "explain": "LE stores LSB at +0.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_easy_13.mp4",
-        "poster": "media/images/endian_easy_13-frame.png",
-        "figure": "media/images/endian_easy_13.png"
-      }
-    },
-    {
-      "id": "endian_easy_14",
-      "type": "multiple_choice",
-      "prompt": "LE unpack of 0x12345678: first byte is…",
-      "choices": [
-        "0x12",
-        "0x34",
-        "0x56",
-        "0x78"
-      ],
-      "answer": 3,
-      "explain": "LE: 78 56 34 12.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_easy_14.mp4",
-        "poster": "media/images/endian_easy_14-frame.png",
-        "figure": "media/images/endian_easy_14.png"
-      }
-    },
-    {
-      "id": "endian_easy_15",
-      "type": "multiple_choice",
-      "prompt": "Big-endian on the network means…",
-      "choices": [
-        "little-endian",
-        "big-endian",
-        "host-dependent only",
-        "random"
-      ],
-      "answer": 1,
-      "explain": "Network order is big-endian by convention.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-be",
-        "label": "Unpack BE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=be]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_easy_15.mp4",
-        "poster": "media/images/endian_easy_15-frame.png",
-        "figure": "media/images/endian_easy_15.png"
-      }
-    },
-    {
-      "id": "endian_easy_16",
-      "type": "true_false",
-      "prompt": "Host endian always matches network order.",
-      "answer": false,
-      "explain": "Value unchanged; only byte placement differs. Host ≠ wire often.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-be",
-        "label": "Unpack BE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=be]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_easy_16.mp4",
-        "poster": "media/images/endian_easy_16-frame.png",
-        "figure": "media/images/endian_easy_16.png"
-      }
-    },
-    {
-      "id": "endian_easy_17",
-      "type": "multiple_choice",
-      "prompt": "Little-endian stores at the lowest address the…",
-      "choices": [
-        "MSB",
-        "LSB",
-        "sign bit only",
-        "middle byte"
-      ],
-      "answer": 1,
-      "explain": "LE stores LSB at +0.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_easy_17.mp4",
-        "poster": "media/images/endian_easy_17-frame.png",
-        "figure": "media/images/endian_easy_17.png"
-      }
-    },
-    {
-      "id": "endian_easy_18",
-      "type": "multiple_choice",
-      "prompt": "LE unpack of 0x12345678: first byte is…",
-      "choices": [
-        "0x12",
-        "0x34",
-        "0x56",
-        "0x78"
-      ],
-      "answer": 3,
-      "explain": "LE: 78 56 34 12.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_easy_18.mp4",
-        "poster": "media/images/endian_easy_18-frame.png",
-        "figure": "media/images/endian_easy_18.png"
-      }
-    },
-    {
-      "id": "endian_easy_19",
-      "type": "multiple_choice",
-      "prompt": "Big-endian on the network means…",
-      "choices": [
-        "little-endian",
-        "big-endian",
-        "host-dependent only",
-        "random"
-      ],
-      "answer": 1,
-      "explain": "Network order is big-endian by convention.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-be",
-        "label": "Unpack BE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=be]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_easy_19.mp4",
-        "poster": "media/images/endian_easy_19-frame.png",
-        "figure": "media/images/endian_easy_19.png"
-      }
-    },
-    {
-      "id": "endian_easy_20",
-      "type": "true_false",
-      "prompt": "Host endian always matches network order.",
-      "answer": false,
-      "explain": "Value unchanged; only byte placement differs. Host ≠ wire often.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-be",
-        "label": "Unpack BE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=be]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_easy_20.mp4",
-        "poster": "media/images/endian_easy_20-frame.png",
-        "figure": "media/images/endian_easy_20.png"
-      }
-    },
-    {
-      "id": "endian_easy_21",
-      "type": "multiple_choice",
-      "prompt": "Little-endian stores at the lowest address the…",
-      "choices": [
-        "MSB",
-        "LSB",
-        "sign bit only",
-        "middle byte"
-      ],
-      "answer": 1,
-      "explain": "LE stores LSB at +0.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_easy_21.mp4",
-        "poster": "media/images/endian_easy_21-frame.png",
-        "figure": "media/images/endian_easy_21.png"
-      }
-    },
-    {
-      "id": "endian_easy_22",
-      "type": "multiple_choice",
-      "prompt": "LE unpack of 0x12345678: first byte is…",
-      "choices": [
-        "0x12",
-        "0x34",
-        "0x56",
-        "0x78"
-      ],
-      "answer": 3,
-      "explain": "LE: 78 56 34 12.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_easy_22.mp4",
-        "poster": "media/images/endian_easy_22-frame.png",
-        "figure": "media/images/endian_easy_22.png"
-      }
-    },
-    {
-      "id": "endian_easy_23",
-      "type": "multiple_choice",
-      "prompt": "Big-endian on the network means…",
-      "choices": [
-        "little-endian",
-        "big-endian",
-        "host-dependent only",
-        "random"
-      ],
-      "answer": 1,
-      "explain": "Network order is big-endian by convention.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-be",
-        "label": "Unpack BE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=be]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_easy_23.mp4",
-        "poster": "media/images/endian_easy_23-frame.png",
-        "figure": "media/images/endian_easy_23.png"
-      }
-    },
-    {
-      "id": "endian_easy_24",
-      "type": "true_false",
-      "prompt": "Host endian always matches network order.",
-      "answer": false,
-      "explain": "Value unchanged; only byte placement differs. Host ≠ wire often.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-be",
-        "label": "Unpack BE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=be]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_easy_24.mp4",
-        "poster": "media/images/endian_easy_24-frame.png",
-        "figure": "media/images/endian_easy_24.png"
-      }
-    },
-    {
-      "id": "endian_easy_25",
-      "type": "multiple_choice",
-      "prompt": "Little-endian stores at the lowest address the…",
-      "choices": [
-        "MSB",
-        "LSB",
-        "sign bit only",
-        "middle byte"
-      ],
-      "answer": 1,
-      "explain": "LE stores LSB at +0.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_easy_25.mp4",
-        "poster": "media/images/endian_easy_25-frame.png",
-        "figure": "media/images/endian_easy_25.png"
-      }
-    },
-    {
-      "id": "endian_easy_26",
-      "type": "multiple_choice",
-      "prompt": "LE unpack of 0x12345678: first byte is…",
-      "choices": [
-        "0x12",
-        "0x34",
-        "0x56",
-        "0x78"
-      ],
-      "answer": 3,
-      "explain": "LE: 78 56 34 12.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_easy_26.mp4",
-        "poster": "media/images/endian_easy_26-frame.png",
-        "figure": "media/images/endian_easy_26.png"
-      }
-    },
-    {
-      "id": "endian_easy_27",
-      "type": "multiple_choice",
-      "prompt": "Big-endian on the network means…",
-      "choices": [
-        "little-endian",
-        "big-endian",
-        "host-dependent only",
-        "random"
-      ],
-      "answer": 1,
-      "explain": "Network order is big-endian by convention.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-be",
-        "label": "Unpack BE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=be]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_easy_27.mp4",
-        "poster": "media/images/endian_easy_27-frame.png",
-        "figure": "media/images/endian_easy_27.png"
-      }
-    },
-    {
-      "id": "endian_easy_28",
-      "type": "true_false",
-      "prompt": "Host endian always matches network order.",
-      "answer": false,
-      "explain": "Value unchanged; only byte placement differs. Host ≠ wire often.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-be",
-        "label": "Unpack BE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=be]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_easy_28.mp4",
-        "poster": "media/images/endian_easy_28-frame.png",
-        "figure": "media/images/endian_easy_28.png"
-      }
-    },
-    {
-      "id": "endian_easy_29",
-      "type": "multiple_choice",
-      "prompt": "Little-endian stores at the lowest address the…",
-      "choices": [
-        "MSB",
-        "LSB",
-        "sign bit only",
-        "middle byte"
-      ],
-      "answer": 1,
-      "explain": "LE stores LSB at +0.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_easy_29.mp4",
-        "poster": "media/images/endian_easy_29-frame.png",
-        "figure": "media/images/endian_easy_29.png"
-      }
-    },
-    {
-      "id": "endian_easy_30",
-      "type": "multiple_choice",
-      "prompt": "LE unpack of 0x12345678: first byte is…",
-      "choices": [
-        "0x12",
-        "0x34",
-        "0x56",
-        "0x78"
-      ],
-      "answer": 3,
-      "explain": "LE: 78 56 34 12.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_easy_30.mp4",
-        "poster": "media/images/endian_easy_30-frame.png",
-        "figure": "media/images/endian_easy_30.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "endian_medium_01",
@@ -1052,29 +64,7 @@
       ],
       "answer": 1,
       "explain": "LE LSB = 0x78.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_medium_01.mp4",
-        "poster": "media/images/endian_medium_01-frame.png",
-        "figure": "media/images/endian_medium_01.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "endian_medium_02",
@@ -1088,29 +78,7 @@
       ],
       "answer": 1,
       "explain": "BE MSB = 0xAA.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-be",
-        "label": "Unpack BE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=be]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_medium_02.mp4",
-        "poster": "media/images/endian_medium_02-frame.png",
-        "figure": "media/images/endian_medium_02.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "endian_medium_03",
@@ -1124,26 +92,7 @@
       ],
       "answer": 1,
       "explain": "78 56 34 12 as a word is 0x78563412.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "swap",
-        "label": "Byte-swap",
-        "steps": [
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-swap"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_medium_03.mp4",
-        "poster": "media/images/endian_medium_03-frame.png",
-        "figure": "media/images/endian_medium_03.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "endian_medium_04",
@@ -1151,29 +100,7 @@
       "prompt": "Mixing LE and BE across a bus without conversion corrupts multi-byte fields.",
       "answer": true,
       "explain": "Byte order ≠ bit order; conversion is mandatory at boundaries.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_medium_04.mp4",
-        "poster": "media/images/endian_medium_04-frame.png",
-        "figure": "media/images/endian_medium_04.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "endian_medium_05",
@@ -1187,29 +114,7 @@
       ],
       "answer": 1,
       "explain": "LE LSB = 0x04.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_medium_05.mp4",
-        "poster": "media/images/endian_medium_05-frame.png",
-        "figure": "media/images/endian_medium_05.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "endian_medium_06",
@@ -1223,131 +128,24 @@
       ],
       "answer": 1,
       "explain": "BE MSB = 0x11.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-be",
-        "label": "Unpack BE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=be]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_medium_06.mp4",
-        "poster": "media/images/endian_medium_06-frame.png",
-        "figure": "media/images/endian_medium_06.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "endian_medium_07",
       "type": "multiple_choice",
-      "prompt": "Endian swap word 0x12345678 →…",
+      "prompt": "For 0x0000FFFF little-endian, byte at +0 is…",
       "choices": [
-        "0x12345678",
-        "0x78563412",
-        "0x21436587",
-        "0x00000000"
+        "0x00",
+        "0xFF",
+        "0x00",
+        "0xFF"
       ],
       "answer": 1,
-      "explain": "78 56 34 12 as a word is 0x78563412.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "swap",
-        "label": "Byte-swap",
-        "steps": [
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-swap"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_medium_07.mp4",
-        "poster": "media/images/endian_medium_07-frame.png",
-        "figure": "media/images/endian_medium_07.png"
-      }
+      "explain": "LE LSB = 0xFF.",
+      "difficulty": "medium"
     },
     {
       "id": "endian_medium_08",
-      "type": "true_false",
-      "prompt": "Mixing LE and BE across a bus without conversion corrupts multi-byte fields.",
-      "answer": true,
-      "explain": "Byte order ≠ bit order; conversion is mandatory at boundaries.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_medium_08.mp4",
-        "poster": "media/images/endian_medium_08-frame.png",
-        "figure": "media/images/endian_medium_08.png"
-      }
-    },
-    {
-      "id": "endian_medium_09",
-      "type": "multiple_choice",
-      "prompt": "For 0x0000FFFF little-endian, byte at +0 is…",
-      "choices": [
-        "0x00",
-        "0xFF",
-        "0x00",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "LE LSB = 0xFF.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_medium_09.mp4",
-        "poster": "media/images/endian_medium_09-frame.png",
-        "figure": "media/images/endian_medium_09.png"
-      }
-    },
-    {
-      "id": "endian_medium_10",
       "type": "multiple_choice",
       "prompt": "For 0xDEADBEEF big-endian, byte at +0 is…",
       "choices": [
@@ -1358,704 +156,7 @@
       ],
       "answer": 1,
       "explain": "BE MSB = 0xDE.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-be",
-        "label": "Unpack BE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=be]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_medium_10.mp4",
-        "poster": "media/images/endian_medium_10-frame.png",
-        "figure": "media/images/endian_medium_10.png"
-      }
-    },
-    {
-      "id": "endian_medium_11",
-      "type": "multiple_choice",
-      "prompt": "Endian swap word 0x12345678 →…",
-      "choices": [
-        "0x12345678",
-        "0x78563412",
-        "0x21436587",
-        "0x00000000"
-      ],
-      "answer": 1,
-      "explain": "78 56 34 12 as a word is 0x78563412.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "swap",
-        "label": "Byte-swap",
-        "steps": [
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-swap"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_medium_11.mp4",
-        "poster": "media/images/endian_medium_11-frame.png",
-        "figure": "media/images/endian_medium_11.png"
-      }
-    },
-    {
-      "id": "endian_medium_12",
-      "type": "true_false",
-      "prompt": "Mixing LE and BE across a bus without conversion corrupts multi-byte fields.",
-      "answer": true,
-      "explain": "Byte order ≠ bit order; conversion is mandatory at boundaries.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_medium_12.mp4",
-        "poster": "media/images/endian_medium_12-frame.png",
-        "figure": "media/images/endian_medium_12.png"
-      }
-    },
-    {
-      "id": "endian_medium_13",
-      "type": "multiple_choice",
-      "prompt": "For 0x12345678 little-endian, byte at +0 is…",
-      "choices": [
-        "0x12",
-        "0x78",
-        "0x00",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "LE LSB = 0x78.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_medium_13.mp4",
-        "poster": "media/images/endian_medium_13-frame.png",
-        "figure": "media/images/endian_medium_13.png"
-      }
-    },
-    {
-      "id": "endian_medium_14",
-      "type": "multiple_choice",
-      "prompt": "For 0xAABBCCDD big-endian, byte at +0 is…",
-      "choices": [
-        "0xDD",
-        "0xAA",
-        "0x56",
-        "0x00"
-      ],
-      "answer": 1,
-      "explain": "BE MSB = 0xAA.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-be",
-        "label": "Unpack BE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=be]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_medium_14.mp4",
-        "poster": "media/images/endian_medium_14-frame.png",
-        "figure": "media/images/endian_medium_14.png"
-      }
-    },
-    {
-      "id": "endian_medium_15",
-      "type": "multiple_choice",
-      "prompt": "Endian swap word 0x12345678 →…",
-      "choices": [
-        "0x12345678",
-        "0x78563412",
-        "0x21436587",
-        "0x00000000"
-      ],
-      "answer": 1,
-      "explain": "78 56 34 12 as a word is 0x78563412.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "swap",
-        "label": "Byte-swap",
-        "steps": [
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-swap"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_medium_15.mp4",
-        "poster": "media/images/endian_medium_15-frame.png",
-        "figure": "media/images/endian_medium_15.png"
-      }
-    },
-    {
-      "id": "endian_medium_16",
-      "type": "true_false",
-      "prompt": "Mixing LE and BE across a bus without conversion corrupts multi-byte fields.",
-      "answer": true,
-      "explain": "Byte order ≠ bit order; conversion is mandatory at boundaries.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_medium_16.mp4",
-        "poster": "media/images/endian_medium_16-frame.png",
-        "figure": "media/images/endian_medium_16.png"
-      }
-    },
-    {
-      "id": "endian_medium_17",
-      "type": "multiple_choice",
-      "prompt": "For 0x01020304 little-endian, byte at +0 is…",
-      "choices": [
-        "0x01",
-        "0x04",
-        "0x00",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "LE LSB = 0x04.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_medium_17.mp4",
-        "poster": "media/images/endian_medium_17-frame.png",
-        "figure": "media/images/endian_medium_17.png"
-      }
-    },
-    {
-      "id": "endian_medium_18",
-      "type": "multiple_choice",
-      "prompt": "For 0x11223344 big-endian, byte at +0 is…",
-      "choices": [
-        "0x44",
-        "0x11",
-        "0x56",
-        "0x00"
-      ],
-      "answer": 1,
-      "explain": "BE MSB = 0x11.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-be",
-        "label": "Unpack BE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=be]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_medium_18.mp4",
-        "poster": "media/images/endian_medium_18-frame.png",
-        "figure": "media/images/endian_medium_18.png"
-      }
-    },
-    {
-      "id": "endian_medium_19",
-      "type": "multiple_choice",
-      "prompt": "Endian swap word 0x12345678 →…",
-      "choices": [
-        "0x12345678",
-        "0x78563412",
-        "0x21436587",
-        "0x00000000"
-      ],
-      "answer": 1,
-      "explain": "78 56 34 12 as a word is 0x78563412.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "swap",
-        "label": "Byte-swap",
-        "steps": [
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-swap"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_medium_19.mp4",
-        "poster": "media/images/endian_medium_19-frame.png",
-        "figure": "media/images/endian_medium_19.png"
-      }
-    },
-    {
-      "id": "endian_medium_20",
-      "type": "true_false",
-      "prompt": "Mixing LE and BE across a bus without conversion corrupts multi-byte fields.",
-      "answer": true,
-      "explain": "Byte order ≠ bit order; conversion is mandatory at boundaries.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_medium_20.mp4",
-        "poster": "media/images/endian_medium_20-frame.png",
-        "figure": "media/images/endian_medium_20.png"
-      }
-    },
-    {
-      "id": "endian_medium_21",
-      "type": "multiple_choice",
-      "prompt": "For 0x0000FFFF little-endian, byte at +0 is…",
-      "choices": [
-        "0x00",
-        "0xFF",
-        "0x00",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "LE LSB = 0xFF.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_medium_21.mp4",
-        "poster": "media/images/endian_medium_21-frame.png",
-        "figure": "media/images/endian_medium_21.png"
-      }
-    },
-    {
-      "id": "endian_medium_22",
-      "type": "multiple_choice",
-      "prompt": "For 0xDEADBEEF big-endian, byte at +0 is…",
-      "choices": [
-        "0xEF",
-        "0xDE",
-        "0x56",
-        "0x00"
-      ],
-      "answer": 1,
-      "explain": "BE MSB = 0xDE.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-be",
-        "label": "Unpack BE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=be]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_medium_22.mp4",
-        "poster": "media/images/endian_medium_22-frame.png",
-        "figure": "media/images/endian_medium_22.png"
-      }
-    },
-    {
-      "id": "endian_medium_23",
-      "type": "multiple_choice",
-      "prompt": "Endian swap word 0x12345678 →…",
-      "choices": [
-        "0x12345678",
-        "0x78563412",
-        "0x21436587",
-        "0x00000000"
-      ],
-      "answer": 1,
-      "explain": "78 56 34 12 as a word is 0x78563412.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "swap",
-        "label": "Byte-swap",
-        "steps": [
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-swap"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_medium_23.mp4",
-        "poster": "media/images/endian_medium_23-frame.png",
-        "figure": "media/images/endian_medium_23.png"
-      }
-    },
-    {
-      "id": "endian_medium_24",
-      "type": "true_false",
-      "prompt": "Mixing LE and BE across a bus without conversion corrupts multi-byte fields.",
-      "answer": true,
-      "explain": "Byte order ≠ bit order; conversion is mandatory at boundaries.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_medium_24.mp4",
-        "poster": "media/images/endian_medium_24-frame.png",
-        "figure": "media/images/endian_medium_24.png"
-      }
-    },
-    {
-      "id": "endian_medium_25",
-      "type": "multiple_choice",
-      "prompt": "For 0x12345678 little-endian, byte at +0 is…",
-      "choices": [
-        "0x12",
-        "0x78",
-        "0x00",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "LE LSB = 0x78.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_medium_25.mp4",
-        "poster": "media/images/endian_medium_25-frame.png",
-        "figure": "media/images/endian_medium_25.png"
-      }
-    },
-    {
-      "id": "endian_medium_26",
-      "type": "multiple_choice",
-      "prompt": "For 0xAABBCCDD big-endian, byte at +0 is…",
-      "choices": [
-        "0xDD",
-        "0xAA",
-        "0x56",
-        "0x00"
-      ],
-      "answer": 1,
-      "explain": "BE MSB = 0xAA.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-be",
-        "label": "Unpack BE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=be]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_medium_26.mp4",
-        "poster": "media/images/endian_medium_26-frame.png",
-        "figure": "media/images/endian_medium_26.png"
-      }
-    },
-    {
-      "id": "endian_medium_27",
-      "type": "multiple_choice",
-      "prompt": "Endian swap word 0x12345678 →…",
-      "choices": [
-        "0x12345678",
-        "0x78563412",
-        "0x21436587",
-        "0x00000000"
-      ],
-      "answer": 1,
-      "explain": "78 56 34 12 as a word is 0x78563412.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "swap",
-        "label": "Byte-swap",
-        "steps": [
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-swap"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_medium_27.mp4",
-        "poster": "media/images/endian_medium_27-frame.png",
-        "figure": "media/images/endian_medium_27.png"
-      }
-    },
-    {
-      "id": "endian_medium_28",
-      "type": "true_false",
-      "prompt": "Mixing LE and BE across a bus without conversion corrupts multi-byte fields.",
-      "answer": true,
-      "explain": "Byte order ≠ bit order; conversion is mandatory at boundaries.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_medium_28.mp4",
-        "poster": "media/images/endian_medium_28-frame.png",
-        "figure": "media/images/endian_medium_28.png"
-      }
-    },
-    {
-      "id": "endian_medium_29",
-      "type": "multiple_choice",
-      "prompt": "For 0x01020304 little-endian, byte at +0 is…",
-      "choices": [
-        "0x01",
-        "0x04",
-        "0x00",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "LE LSB = 0x04.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_medium_29.mp4",
-        "poster": "media/images/endian_medium_29-frame.png",
-        "figure": "media/images/endian_medium_29.png"
-      }
-    },
-    {
-      "id": "endian_medium_30",
-      "type": "multiple_choice",
-      "prompt": "For 0x11223344 big-endian, byte at +0 is…",
-      "choices": [
-        "0x44",
-        "0x11",
-        "0x56",
-        "0x00"
-      ],
-      "answer": 1,
-      "explain": "BE MSB = 0x11.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-be",
-        "label": "Unpack BE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=be]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_medium_30.mp4",
-        "poster": "media/images/endian_medium_30-frame.png",
-        "figure": "media/images/endian_medium_30.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "endian_hard_01",
@@ -2069,29 +170,7 @@
       ],
       "answer": 1,
       "explain": "Explicit policy + conversion prevents silent corruption.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-be",
-        "label": "Unpack BE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=be]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_hard_01.mp4",
-        "poster": "media/images/endian_hard_01-frame.png",
-        "figure": "media/images/endian_hard_01.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "endian_hard_02",
@@ -2105,29 +184,7 @@
       ],
       "answer": 1,
       "explain": "Bytes are reinterpreted → wrong integer.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_hard_02.mp4",
-        "poster": "media/images/endian_hard_02-frame.png",
-        "figure": "media/images/endian_hard_02.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "endian_hard_03",
@@ -2135,23 +192,7 @@
       "prompt": "Endianness never matters for 16- and 32-bit register fields.",
       "answer": false,
       "explain": "Multi-byte fields always have an endian story.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#en-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_hard_03.mp4",
-        "poster": "media/images/endian_hard_03-frame.png",
-        "figure": "media/images/endian_hard_03.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "endian_hard_04",
@@ -2165,261 +206,25 @@
       ],
       "answer": 1,
       "explain": "LE order ends at the MSB 0xDE.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_hard_04.mp4",
-        "poster": "media/images/endian_hard_04-frame.png",
-        "figure": "media/images/endian_hard_04.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "endian_hard_05",
       "type": "multiple_choice",
-      "prompt": "DMA / register / frame endian policy must be…",
+      "prompt": "LE bytes of 0xAABBCCDD from +0 to +3 start with 0xDD and end with…",
       "choices": [
-        "Left implicit always",
-        "Specified per interface and converted as needed",
-        "Randomized each boot",
-        "Only relevant to ASCII"
+        "0xDD",
+        "0xAA",
+        "0x00",
+        "0xFF"
       ],
       "answer": 1,
-      "explain": "Explicit policy + conversion prevents silent corruption.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-be",
-        "label": "Unpack BE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=be]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_hard_05.mp4",
-        "poster": "media/images/endian_hard_05-frame.png",
-        "figure": "media/images/endian_hard_05.png"
-      }
+      "explain": "LE order ends at the MSB 0xAA.",
+      "difficulty": "hard"
     },
     {
       "id": "endian_hard_06",
       "type": "multiple_choice",
-      "prompt": "Casting wire BE bytes as host LE int causes…",
-      "choices": [
-        "Correct value always",
-        "Scrambled numeric value (byte-reversed interpretation)",
-        "Only parity errors",
-        "Automatic Gray coding"
-      ],
-      "answer": 1,
-      "explain": "Bytes are reinterpreted → wrong integer.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_hard_06.mp4",
-        "poster": "media/images/endian_hard_06-frame.png",
-        "figure": "media/images/endian_hard_06.png"
-      }
-    },
-    {
-      "id": "endian_hard_07",
-      "type": "true_false",
-      "prompt": "Endianness never matters for 16- and 32-bit register fields.",
-      "answer": false,
-      "explain": "Multi-byte fields always have an endian story.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#en-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_hard_07.mp4",
-        "poster": "media/images/endian_hard_07-frame.png",
-        "figure": "media/images/endian_hard_07.png"
-      }
-    },
-    {
-      "id": "endian_hard_08",
-      "type": "multiple_choice",
-      "prompt": "LE bytes of 0xAABBCCDD from +0 to +3 start with 0xDD and end with…",
-      "choices": [
-        "0xDD",
-        "0xAA",
-        "0x00",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "LE order ends at the MSB 0xAA.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_hard_08.mp4",
-        "poster": "media/images/endian_hard_08-frame.png",
-        "figure": "media/images/endian_hard_08.png"
-      }
-    },
-    {
-      "id": "endian_hard_09",
-      "type": "multiple_choice",
-      "prompt": "DMA / register / frame endian policy must be…",
-      "choices": [
-        "Left implicit always",
-        "Specified per interface and converted as needed",
-        "Randomized each boot",
-        "Only relevant to ASCII"
-      ],
-      "answer": 1,
-      "explain": "Explicit policy + conversion prevents silent corruption.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-be",
-        "label": "Unpack BE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=be]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_hard_09.mp4",
-        "poster": "media/images/endian_hard_09-frame.png",
-        "figure": "media/images/endian_hard_09.png"
-      }
-    },
-    {
-      "id": "endian_hard_10",
-      "type": "multiple_choice",
-      "prompt": "Casting wire BE bytes as host LE int causes…",
-      "choices": [
-        "Correct value always",
-        "Scrambled numeric value (byte-reversed interpretation)",
-        "Only parity errors",
-        "Automatic Gray coding"
-      ],
-      "answer": 1,
-      "explain": "Bytes are reinterpreted → wrong integer.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_hard_10.mp4",
-        "poster": "media/images/endian_hard_10-frame.png",
-        "figure": "media/images/endian_hard_10.png"
-      }
-    },
-    {
-      "id": "endian_hard_11",
-      "type": "true_false",
-      "prompt": "Endianness never matters for 16- and 32-bit register fields.",
-      "answer": false,
-      "explain": "Multi-byte fields always have an endian story.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#en-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_hard_11.mp4",
-        "poster": "media/images/endian_hard_11-frame.png",
-        "figure": "media/images/endian_hard_11.png"
-      }
-    },
-    {
-      "id": "endian_hard_12",
-      "type": "multiple_choice",
       "prompt": "LE bytes of 0x11223344 from +0 to +3 start with 0x44 and end with…",
       "choices": [
         "0x44",
@@ -2429,629 +234,1015 @@
       ],
       "answer": 1,
       "explain": "LE order ends at the MSB 0x11.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_hard_12.mp4",
-        "poster": "media/images/endian_hard_12-frame.png",
-        "figure": "media/images/endian_hard_12.png"
-      }
+      "difficulty": "hard"
     },
     {
-      "id": "endian_hard_13",
       "type": "multiple_choice",
-      "prompt": "DMA / register / frame endian policy must be…",
+      "prompt": "Big-endian first byte of 0x01020304 is…",
       "choices": [
-        "Left implicit always",
-        "Specified per interface and converted as needed",
-        "Randomized each boot",
-        "Only relevant to ASCII"
+        "0x04",
+        "0x01",
+        "0x02",
+        "0x00"
       ],
       "answer": 1,
-      "explain": "Explicit policy + conversion prevents silent corruption.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-be",
-        "label": "Unpack BE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=be]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_hard_13.mp4",
-        "poster": "media/images/endian_hard_13-frame.png",
-        "figure": "media/images/endian_hard_13.png"
-      }
+      "explain": "BE stores MSB first → 0x01.",
+      "difficulty": "easy",
+      "id": "endian_easy_05"
     },
     {
-      "id": "endian_hard_14",
       "type": "multiple_choice",
-      "prompt": "Casting wire BE bytes as host LE int causes…",
+      "prompt": "Little-endian first byte of 0x01020304 is…",
       "choices": [
-        "Correct value always",
-        "Scrambled numeric value (byte-reversed interpretation)",
-        "Only parity errors",
-        "Automatic Gray coding"
-      ],
-      "answer": 1,
-      "explain": "Bytes are reinterpreted → wrong integer.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_hard_14.mp4",
-        "poster": "media/images/endian_hard_14-frame.png",
-        "figure": "media/images/endian_hard_14.png"
-      }
-    },
-    {
-      "id": "endian_hard_15",
-      "type": "true_false",
-      "prompt": "Endianness never matters for 16- and 32-bit register fields.",
-      "answer": false,
-      "explain": "Multi-byte fields always have an endian story.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#en-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_hard_15.mp4",
-        "poster": "media/images/endian_hard_15-frame.png",
-        "figure": "media/images/endian_hard_15.png"
-      }
-    },
-    {
-      "id": "endian_hard_16",
-      "type": "multiple_choice",
-      "prompt": "LE bytes of 0xDEADBEEF from +0 to +3 start with 0xEF and end with…",
-      "choices": [
-        "0xEF",
-        "0xDE",
-        "0x00",
+        "0x01",
+        "0x04",
+        "0x03",
         "0xFF"
       ],
       "answer": 1,
-      "explain": "LE order ends at the MSB 0xDE.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_hard_16.mp4",
-        "poster": "media/images/endian_hard_16-frame.png",
-        "figure": "media/images/endian_hard_16.png"
-      }
+      "explain": "LE stores LSB first → 0x04.",
+      "difficulty": "easy",
+      "id": "endian_easy_06"
     },
     {
-      "id": "endian_hard_17",
       "type": "multiple_choice",
-      "prompt": "DMA / register / frame endian policy must be…",
-      "choices": [
-        "Left implicit always",
-        "Specified per interface and converted as needed",
-        "Randomized each boot",
-        "Only relevant to ASCII"
-      ],
-      "answer": 1,
-      "explain": "Explicit policy + conversion prevents silent corruption.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-be",
-        "label": "Unpack BE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=be]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_hard_17.mp4",
-        "poster": "media/images/endian_hard_17-frame.png",
-        "figure": "media/images/endian_hard_17.png"
-      }
-    },
-    {
-      "id": "endian_hard_18",
-      "type": "multiple_choice",
-      "prompt": "Casting wire BE bytes as host LE int causes…",
-      "choices": [
-        "Correct value always",
-        "Scrambled numeric value (byte-reversed interpretation)",
-        "Only parity errors",
-        "Automatic Gray coding"
-      ],
-      "answer": 1,
-      "explain": "Bytes are reinterpreted → wrong integer.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_hard_18.mp4",
-        "poster": "media/images/endian_hard_18-frame.png",
-        "figure": "media/images/endian_hard_18.png"
-      }
-    },
-    {
-      "id": "endian_hard_19",
-      "type": "true_false",
-      "prompt": "Endianness never matters for 16- and 32-bit register fields.",
-      "answer": false,
-      "explain": "Multi-byte fields always have an endian story.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#en-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_hard_19.mp4",
-        "poster": "media/images/endian_hard_19-frame.png",
-        "figure": "media/images/endian_hard_19.png"
-      }
-    },
-    {
-      "id": "endian_hard_20",
-      "type": "multiple_choice",
-      "prompt": "LE bytes of 0xAABBCCDD from +0 to +3 start with 0xDD and end with…",
+      "prompt": "Big-endian first byte of 0xAABBCCDD is…",
       "choices": [
         "0xDD",
         "0xAA",
-        "0x00",
+        "0xBB",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "BE stores MSB first → 0xAA.",
+      "difficulty": "easy",
+      "id": "endian_easy_07"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Little-endian first byte of 0xAABBCCDD is…",
+      "choices": [
+        "0xAA",
+        "0xDD",
+        "0xCC",
         "0xFF"
       ],
       "answer": 1,
-      "explain": "LE order ends at the MSB 0xAA.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_hard_20.mp4",
-        "poster": "media/images/endian_hard_20-frame.png",
-        "figure": "media/images/endian_hard_20.png"
-      }
+      "explain": "LE stores LSB first → 0xDD.",
+      "difficulty": "easy",
+      "id": "endian_easy_08"
     },
     {
-      "id": "endian_hard_21",
       "type": "multiple_choice",
-      "prompt": "DMA / register / frame endian policy must be…",
-      "choices": [
-        "Left implicit always",
-        "Specified per interface and converted as needed",
-        "Randomized each boot",
-        "Only relevant to ASCII"
-      ],
-      "answer": 1,
-      "explain": "Explicit policy + conversion prevents silent corruption.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-be",
-        "label": "Unpack BE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=be]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_hard_21.mp4",
-        "poster": "media/images/endian_hard_21-frame.png",
-        "figure": "media/images/endian_hard_21.png"
-      }
-    },
-    {
-      "id": "endian_hard_22",
-      "type": "multiple_choice",
-      "prompt": "Casting wire BE bytes as host LE int causes…",
-      "choices": [
-        "Correct value always",
-        "Scrambled numeric value (byte-reversed interpretation)",
-        "Only parity errors",
-        "Automatic Gray coding"
-      ],
-      "answer": 1,
-      "explain": "Bytes are reinterpreted → wrong integer.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_hard_22.mp4",
-        "poster": "media/images/endian_hard_22-frame.png",
-        "figure": "media/images/endian_hard_22.png"
-      }
-    },
-    {
-      "id": "endian_hard_23",
-      "type": "true_false",
-      "prompt": "Endianness never matters for 16- and 32-bit register fields.",
-      "answer": false,
-      "explain": "Multi-byte fields always have an endian story.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#en-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_hard_23.mp4",
-        "poster": "media/images/endian_hard_23-frame.png",
-        "figure": "media/images/endian_hard_23.png"
-      }
-    },
-    {
-      "id": "endian_hard_24",
-      "type": "multiple_choice",
-      "prompt": "LE bytes of 0x11223344 from +0 to +3 start with 0x44 and end with…",
+      "prompt": "Big-endian first byte of 0x11223344 is…",
       "choices": [
         "0x44",
         "0x11",
-        "0x00",
+        "0x22",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "BE stores MSB first → 0x11.",
+      "difficulty": "easy",
+      "id": "endian_easy_09"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Little-endian first byte of 0x11223344 is…",
+      "choices": [
+        "0x11",
+        "0x44",
+        "0x33",
         "0xFF"
       ],
       "answer": 1,
-      "explain": "LE order ends at the MSB 0x11.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_hard_24.mp4",
-        "poster": "media/images/endian_hard_24-frame.png",
-        "figure": "media/images/endian_hard_24.png"
-      }
+      "explain": "LE stores LSB first → 0x44.",
+      "difficulty": "easy",
+      "id": "endian_easy_10"
     },
     {
-      "id": "endian_hard_25",
       "type": "multiple_choice",
-      "prompt": "DMA / register / frame endian policy must be…",
-      "choices": [
-        "Left implicit always",
-        "Specified per interface and converted as needed",
-        "Randomized each boot",
-        "Only relevant to ASCII"
-      ],
-      "answer": 1,
-      "explain": "Explicit policy + conversion prevents silent corruption.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-be",
-        "label": "Unpack BE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=be]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_hard_25.mp4",
-        "poster": "media/images/endian_hard_25-frame.png",
-        "figure": "media/images/endian_hard_25.png"
-      }
-    },
-    {
-      "id": "endian_hard_26",
-      "type": "multiple_choice",
-      "prompt": "Casting wire BE bytes as host LE int causes…",
-      "choices": [
-        "Correct value always",
-        "Scrambled numeric value (byte-reversed interpretation)",
-        "Only parity errors",
-        "Automatic Gray coding"
-      ],
-      "answer": 1,
-      "explain": "Bytes are reinterpreted → wrong integer.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_hard_26.mp4",
-        "poster": "media/images/endian_hard_26-frame.png",
-        "figure": "media/images/endian_hard_26.png"
-      }
-    },
-    {
-      "id": "endian_hard_27",
-      "type": "true_false",
-      "prompt": "Endianness never matters for 16- and 32-bit register fields.",
-      "answer": false,
-      "explain": "Multi-byte fields always have an endian story.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#en-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_hard_27.mp4",
-        "poster": "media/images/endian_hard_27-frame.png",
-        "figure": "media/images/endian_hard_27.png"
-      }
-    },
-    {
-      "id": "endian_hard_28",
-      "type": "multiple_choice",
-      "prompt": "LE bytes of 0xDEADBEEF from +0 to +3 start with 0xEF and end with…",
+      "prompt": "Big-endian first byte of 0xDEADBEEF is…",
       "choices": [
         "0xEF",
         "0xDE",
-        "0x00",
+        "0xAD",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "BE stores MSB first → 0xDE.",
+      "difficulty": "easy",
+      "id": "endian_easy_11"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Little-endian first byte of 0xDEADBEEF is…",
+      "choices": [
+        "0xDE",
+        "0xEF",
+        "0xBE",
         "0xFF"
       ],
       "answer": 1,
-      "explain": "LE order ends at the MSB 0xDE.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_hard_28.mp4",
-        "poster": "media/images/endian_hard_28-frame.png",
-        "figure": "media/images/endian_hard_28.png"
-      }
+      "explain": "LE stores LSB first → 0xEF.",
+      "difficulty": "easy",
+      "id": "endian_easy_12"
     },
     {
-      "id": "endian_hard_29",
       "type": "multiple_choice",
-      "prompt": "DMA / register / frame endian policy must be…",
+      "prompt": "Big-endian first byte of 0x0000FFFF is…",
       "choices": [
-        "Left implicit always",
-        "Specified per interface and converted as needed",
-        "Randomized each boot",
-        "Only relevant to ASCII"
+        "0xFF",
+        "0x00",
+        "0x00",
+        "0x00"
       ],
       "answer": 1,
-      "explain": "Explicit policy + conversion prevents silent corruption.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-be",
-        "label": "Unpack BE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=be]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_hard_29.mp4",
-        "poster": "media/images/endian_hard_29-frame.png",
-        "figure": "media/images/endian_hard_29.png"
-      }
+      "explain": "BE stores MSB first → 0x00.",
+      "difficulty": "easy",
+      "id": "endian_easy_13"
     },
     {
-      "id": "endian_hard_30",
       "type": "multiple_choice",
-      "prompt": "Casting wire BE bytes as host LE int causes…",
+      "prompt": "Little-endian first byte of 0x0000FFFF is…",
       "choices": [
-        "Correct value always",
-        "Scrambled numeric value (byte-reversed interpretation)",
-        "Only parity errors",
-        "Automatic Gray coding"
+        "0x00",
+        "0xFF",
+        "0xFF",
+        "0xFF"
       ],
       "answer": 1,
-      "explain": "Bytes are reinterpreted → wrong integer.",
+      "explain": "LE stores LSB first → 0xFF.",
+      "difficulty": "easy",
+      "id": "endian_easy_14"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Big-endian first byte of 0xA5A5A5A5 is…",
+      "choices": [
+        "0xA5",
+        "0xA5",
+        "0xA5",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "BE stores MSB first → 0xA5.",
+      "difficulty": "easy",
+      "id": "endian_easy_15"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Little-endian first byte of 0xA5A5A5A5 is…",
+      "choices": [
+        "0xA5",
+        "0xA5",
+        "0xA5",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "LE stores LSB first → 0xA5.",
+      "difficulty": "easy",
+      "id": "endian_easy_16"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hex digit 0 equals which decimal value?",
+      "choices": [
+        "1",
+        "0",
+        "5",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "0₁₆ = 0₁₀.",
+      "difficulty": "easy",
+      "id": "endian_easy_17"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Decimal 0 as one hex digit is…",
+      "choices": [
+        "1",
+        "0",
+        "5",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "0₁₀ = 0₁₆.",
+      "difficulty": "easy",
+      "id": "endian_easy_18"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hex digit 1 equals which decimal value?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "1₁₆ = 1₁₀.",
+      "difficulty": "easy",
+      "id": "endian_easy_19"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Decimal 1 as one hex digit is…",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "1₁₀ = 1₁₆.",
+      "difficulty": "easy",
+      "id": "endian_easy_20"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hex digit 2 equals which decimal value?",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "7"
+      ],
+      "answer": 1,
+      "explain": "2₁₆ = 2₁₀.",
+      "difficulty": "easy",
+      "id": "endian_easy_21"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Decimal 2 as one hex digit is…",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "7"
+      ],
+      "answer": 1,
+      "explain": "2₁₀ = 2₁₆.",
+      "difficulty": "easy",
+      "id": "endian_easy_22"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hex digit 3 equals which decimal value?",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "3₁₆ = 3₁₀.",
+      "difficulty": "easy",
+      "id": "endian_easy_23"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Decimal 3 as one hex digit is…",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "3₁₀ = 3₁₆.",
+      "difficulty": "easy",
+      "id": "endian_easy_24"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hex digit 4 equals which decimal value?",
+      "choices": [
+        "3",
+        "4",
+        "5",
+        "9"
+      ],
+      "answer": 1,
+      "explain": "4₁₆ = 4₁₀.",
+      "difficulty": "easy",
+      "id": "endian_easy_25"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Decimal 4 as one hex digit is…",
+      "choices": [
+        "3",
+        "4",
+        "5",
+        "9"
+      ],
+      "answer": 1,
+      "explain": "4₁₀ = 4₁₆.",
+      "difficulty": "easy",
+      "id": "endian_easy_26"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hex digit 5 equals which decimal value?",
+      "choices": [
+        "4",
+        "5",
+        "6",
+        "10"
+      ],
+      "answer": 1,
+      "explain": "5₁₆ = 5₁₀.",
+      "difficulty": "easy",
+      "id": "endian_easy_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Decimal 5 as one hex digit is…",
+      "choices": [
+        "4",
+        "5",
+        "6",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "5₁₀ = 5₁₆.",
+      "difficulty": "easy",
+      "id": "endian_easy_28"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hex digit 6 equals which decimal value?",
+      "choices": [
+        "5",
+        "6",
+        "7",
+        "11"
+      ],
+      "answer": 1,
+      "explain": "6₁₆ = 6₁₀.",
+      "difficulty": "easy",
+      "id": "endian_easy_29"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Decimal 6 as one hex digit is…",
+      "choices": [
+        "5",
+        "6",
+        "7",
+        "B"
+      ],
+      "answer": 1,
+      "explain": "6₁₀ = 6₁₆.",
+      "difficulty": "easy",
+      "id": "endian_easy_30"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Big-endian first byte of 0x01020304 is…",
+      "choices": [
+        "0x04",
+        "0x01",
+        "0x02",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "BE stores MSB first → 0x01.",
+      "difficulty": "medium",
+      "id": "endian_medium_09"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Little-endian first byte of 0x01020304 is…",
+      "choices": [
+        "0x01",
+        "0x04",
+        "0x03",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "LE stores LSB first → 0x04.",
+      "difficulty": "medium",
+      "id": "endian_medium_10"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Big-endian first byte of 0xAABBCCDD is…",
+      "choices": [
+        "0xDD",
+        "0xAA",
+        "0xBB",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "BE stores MSB first → 0xAA.",
+      "difficulty": "medium",
+      "id": "endian_medium_11"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Little-endian first byte of 0xAABBCCDD is…",
+      "choices": [
+        "0xAA",
+        "0xDD",
+        "0xCC",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "LE stores LSB first → 0xDD.",
+      "difficulty": "medium",
+      "id": "endian_medium_12"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Big-endian first byte of 0x11223344 is…",
+      "choices": [
+        "0x44",
+        "0x11",
+        "0x22",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "BE stores MSB first → 0x11.",
+      "difficulty": "medium",
+      "id": "endian_medium_13"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Little-endian first byte of 0x11223344 is…",
+      "choices": [
+        "0x11",
+        "0x44",
+        "0x33",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "LE stores LSB first → 0x44.",
+      "difficulty": "medium",
+      "id": "endian_medium_14"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Big-endian first byte of 0xDEADBEEF is…",
+      "choices": [
+        "0xEF",
+        "0xDE",
+        "0xAD",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "BE stores MSB first → 0xDE.",
+      "difficulty": "medium",
+      "id": "endian_medium_15"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Little-endian first byte of 0xDEADBEEF is…",
+      "choices": [
+        "0xDE",
+        "0xEF",
+        "0xBE",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "LE stores LSB first → 0xEF.",
+      "difficulty": "medium",
+      "id": "endian_medium_16"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Big-endian first byte of 0x0000FFFF is…",
+      "choices": [
+        "0xFF",
+        "0x00",
+        "0x00",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "BE stores MSB first → 0x00.",
+      "difficulty": "medium",
+      "id": "endian_medium_17"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Little-endian first byte of 0x0000FFFF is…",
+      "choices": [
+        "0x00",
+        "0xFF",
+        "0xFF",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "LE stores LSB first → 0xFF.",
+      "difficulty": "medium",
+      "id": "endian_medium_18"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Big-endian first byte of 0xA5A5A5A5 is…",
+      "choices": [
+        "0xA5",
+        "0xA5",
+        "0xA5",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "BE stores MSB first → 0xA5.",
+      "difficulty": "medium",
+      "id": "endian_medium_19"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Little-endian first byte of 0xA5A5A5A5 is…",
+      "choices": [
+        "0xA5",
+        "0xA5",
+        "0xA5",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "LE stores LSB first → 0xA5.",
+      "difficulty": "medium",
+      "id": "endian_medium_20"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hex digit 0 equals which decimal value?",
+      "choices": [
+        "1",
+        "0",
+        "5",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "0₁₆ = 0₁₀.",
+      "difficulty": "medium",
+      "id": "endian_medium_21"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Decimal 0 as one hex digit is…",
+      "choices": [
+        "1",
+        "0",
+        "5",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "0₁₀ = 0₁₆.",
+      "difficulty": "medium",
+      "id": "endian_medium_22"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hex digit 1 equals which decimal value?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "1₁₆ = 1₁₀.",
+      "difficulty": "medium",
+      "id": "endian_medium_23"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Decimal 1 as one hex digit is…",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "1₁₀ = 1₁₆.",
+      "difficulty": "medium",
+      "id": "endian_medium_24"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hex digit 2 equals which decimal value?",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "7"
+      ],
+      "answer": 1,
+      "explain": "2₁₆ = 2₁₀.",
+      "difficulty": "medium",
+      "id": "endian_medium_25"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Decimal 2 as one hex digit is…",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "7"
+      ],
+      "answer": 1,
+      "explain": "2₁₀ = 2₁₆.",
+      "difficulty": "medium",
+      "id": "endian_medium_26"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hex digit 3 equals which decimal value?",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "3₁₆ = 3₁₀.",
+      "difficulty": "medium",
+      "id": "endian_medium_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Decimal 3 as one hex digit is…",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "3₁₀ = 3₁₆.",
+      "difficulty": "medium",
+      "id": "endian_medium_28"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hex digit 4 equals which decimal value?",
+      "choices": [
+        "3",
+        "4",
+        "5",
+        "9"
+      ],
+      "answer": 1,
+      "explain": "4₁₆ = 4₁₀.",
+      "difficulty": "medium",
+      "id": "endian_medium_29"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Decimal 4 as one hex digit is…",
+      "choices": [
+        "3",
+        "4",
+        "5",
+        "9"
+      ],
+      "answer": 1,
+      "explain": "4₁₀ = 4₁₆.",
+      "difficulty": "medium",
+      "id": "endian_medium_30"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Big-endian first byte of 0x01020304 is…",
+      "choices": [
+        "0x04",
+        "0x01",
+        "0x02",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "BE stores MSB first → 0x01.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "endian-lab",
-        "key": "unpack-le",
-        "label": "Unpack LE",
-        "steps": [
-          {
-            "click": "input[name=endian][value=le]"
-          },
-          {
-            "click": "#en-starter"
-          },
-          {
-            "click": "#btn-unpack"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/endian_hard_30.mp4",
-        "poster": "media/images/endian_hard_30-frame.png",
-        "figure": "media/images/endian_hard_30.png"
-      }
+      "id": "endian_hard_07"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Little-endian first byte of 0x01020304 is…",
+      "choices": [
+        "0x01",
+        "0x04",
+        "0x03",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "LE stores LSB first → 0x04.",
+      "difficulty": "hard",
+      "id": "endian_hard_08"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Big-endian first byte of 0xAABBCCDD is…",
+      "choices": [
+        "0xDD",
+        "0xAA",
+        "0xBB",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "BE stores MSB first → 0xAA.",
+      "difficulty": "hard",
+      "id": "endian_hard_09"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Little-endian first byte of 0xAABBCCDD is…",
+      "choices": [
+        "0xAA",
+        "0xDD",
+        "0xCC",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "LE stores LSB first → 0xDD.",
+      "difficulty": "hard",
+      "id": "endian_hard_10"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Big-endian first byte of 0x11223344 is…",
+      "choices": [
+        "0x44",
+        "0x11",
+        "0x22",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "BE stores MSB first → 0x11.",
+      "difficulty": "hard",
+      "id": "endian_hard_11"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Little-endian first byte of 0x11223344 is…",
+      "choices": [
+        "0x11",
+        "0x44",
+        "0x33",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "LE stores LSB first → 0x44.",
+      "difficulty": "hard",
+      "id": "endian_hard_12"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Big-endian first byte of 0xDEADBEEF is…",
+      "choices": [
+        "0xEF",
+        "0xDE",
+        "0xAD",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "BE stores MSB first → 0xDE.",
+      "difficulty": "hard",
+      "id": "endian_hard_13"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Little-endian first byte of 0xDEADBEEF is…",
+      "choices": [
+        "0xDE",
+        "0xEF",
+        "0xBE",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "LE stores LSB first → 0xEF.",
+      "difficulty": "hard",
+      "id": "endian_hard_14"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Big-endian first byte of 0x0000FFFF is…",
+      "choices": [
+        "0xFF",
+        "0x00",
+        "0x00",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "BE stores MSB first → 0x00.",
+      "difficulty": "hard",
+      "id": "endian_hard_15"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Little-endian first byte of 0x0000FFFF is…",
+      "choices": [
+        "0x00",
+        "0xFF",
+        "0xFF",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "LE stores LSB first → 0xFF.",
+      "difficulty": "hard",
+      "id": "endian_hard_16"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Big-endian first byte of 0xA5A5A5A5 is…",
+      "choices": [
+        "0xA5",
+        "0xA5",
+        "0xA5",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "BE stores MSB first → 0xA5.",
+      "difficulty": "hard",
+      "id": "endian_hard_17"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Little-endian first byte of 0xA5A5A5A5 is…",
+      "choices": [
+        "0xA5",
+        "0xA5",
+        "0xA5",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "LE stores LSB first → 0xA5.",
+      "difficulty": "hard",
+      "id": "endian_hard_18"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hex digit 0 equals which decimal value?",
+      "choices": [
+        "1",
+        "0",
+        "5",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "0₁₆ = 0₁₀.",
+      "difficulty": "hard",
+      "id": "endian_hard_19"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Decimal 0 as one hex digit is…",
+      "choices": [
+        "1",
+        "0",
+        "5",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "0₁₀ = 0₁₆.",
+      "difficulty": "hard",
+      "id": "endian_hard_20"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hex digit 1 equals which decimal value?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "1₁₆ = 1₁₀.",
+      "difficulty": "hard",
+      "id": "endian_hard_21"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Decimal 1 as one hex digit is…",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "1₁₀ = 1₁₆.",
+      "difficulty": "hard",
+      "id": "endian_hard_22"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hex digit 2 equals which decimal value?",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "7"
+      ],
+      "answer": 1,
+      "explain": "2₁₆ = 2₁₀.",
+      "difficulty": "hard",
+      "id": "endian_hard_23"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Decimal 2 as one hex digit is…",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "7"
+      ],
+      "answer": 1,
+      "explain": "2₁₀ = 2₁₆.",
+      "difficulty": "hard",
+      "id": "endian_hard_24"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hex digit 3 equals which decimal value?",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "3₁₆ = 3₁₀.",
+      "difficulty": "hard",
+      "id": "endian_hard_25"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Decimal 3 as one hex digit is…",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "3₁₀ = 3₁₆.",
+      "difficulty": "hard",
+      "id": "endian_hard_26"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hex digit 4 equals which decimal value?",
+      "choices": [
+        "3",
+        "4",
+        "5",
+        "9"
+      ],
+      "answer": 1,
+      "explain": "4₁₆ = 4₁₀.",
+      "difficulty": "hard",
+      "id": "endian_hard_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Decimal 4 as one hex digit is…",
+      "choices": [
+        "3",
+        "4",
+        "5",
+        "9"
+      ],
+      "answer": 1,
+      "explain": "4₁₀ = 4₁₆.",
+      "difficulty": "hard",
+      "id": "endian_hard_28"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hex digit 5 equals which decimal value?",
+      "choices": [
+        "4",
+        "5",
+        "6",
+        "10"
+      ],
+      "answer": 1,
+      "explain": "5₁₆ = 5₁₀.",
+      "difficulty": "hard",
+      "id": "endian_hard_29"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Decimal 5 as one hex digit is…",
+      "choices": [
+        "4",
+        "5",
+        "6",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "5₁₀ = 5₁₆.",
+      "difficulty": "hard",
+      "id": "endian_hard_30"
     }
   ]
 }

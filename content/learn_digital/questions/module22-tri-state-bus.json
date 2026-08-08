@@ -14,20 +14,7 @@
       ],
       "answer": 0,
       "explain": "High impedance — not driving the net.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_easy_01.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "tristate_easy_02",
@@ -41,20 +28,7 @@
       ],
       "answer": 2,
       "explain": "Fighting drivers → unknown/contention.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_easy_02.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "tristate_easy_03",
@@ -68,20 +42,7 @@
       ],
       "answer": 0,
       "explain": "At most one active driver (or float).",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_easy_03.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "tristate_easy_04",
@@ -89,686 +50,7 @@
       "prompt": "Two opposite drivers still guarantee a valid 0/1.",
       "answer": false,
       "explain": "Opposite drive → contention X.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_easy_04.png"
-      }
-    },
-    {
-      "id": "tristate_easy_05",
-      "type": "multiple_choice",
-      "prompt": "Enable off — driver disconnected — bus level is…",
-      "choices": [
-        "Z (high-Z)",
-        "always 0",
-        "always 1",
-        "X"
-      ],
-      "answer": 0,
-      "explain": "High impedance — not driving the net.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_easy_05.png"
-      }
-    },
-    {
-      "id": "tristate_easy_06",
-      "type": "multiple_choice",
-      "prompt": "Fighting opposite values cause…",
-      "choices": [
-        "1",
-        "0",
-        "X (contention)",
-        "Z"
-      ],
-      "answer": 2,
-      "explain": "Fighting drivers → unknown/contention.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_easy_06.png"
-      }
-    },
-    {
-      "id": "tristate_easy_07",
-      "type": "multiple_choice",
-      "prompt": "One-hot OE means…",
-      "choices": [
-        "0 or 1",
-        "exactly 2",
-        "any number",
-        "always 3"
-      ],
-      "answer": 0,
-      "explain": "At most one active driver (or float).",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_easy_07.png"
-      }
-    },
-    {
-      "id": "tristate_easy_08",
-      "type": "true_false",
-      "prompt": "Two opposite drivers still guarantee a valid 0/1.",
-      "answer": false,
-      "explain": "Opposite drive → contention X.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_easy_08.png"
-      }
-    },
-    {
-      "id": "tristate_easy_09",
-      "type": "multiple_choice",
-      "prompt": "Enable off — driver disconnected — bus level is…",
-      "choices": [
-        "Z (high-Z)",
-        "always 0",
-        "always 1",
-        "X"
-      ],
-      "answer": 0,
-      "explain": "High impedance — not driving the net.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_easy_09.png"
-      }
-    },
-    {
-      "id": "tristate_easy_10",
-      "type": "multiple_choice",
-      "prompt": "Fighting opposite values cause…",
-      "choices": [
-        "1",
-        "0",
-        "X (contention)",
-        "Z"
-      ],
-      "answer": 2,
-      "explain": "Fighting drivers → unknown/contention.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_easy_10.png"
-      }
-    },
-    {
-      "id": "tristate_easy_11",
-      "type": "multiple_choice",
-      "prompt": "One-hot OE means…",
-      "choices": [
-        "0 or 1",
-        "exactly 2",
-        "any number",
-        "always 3"
-      ],
-      "answer": 0,
-      "explain": "At most one active driver (or float).",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_easy_11.png"
-      }
-    },
-    {
-      "id": "tristate_easy_12",
-      "type": "true_false",
-      "prompt": "Two opposite drivers still guarantee a valid 0/1.",
-      "answer": false,
-      "explain": "Opposite drive → contention X.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_easy_12.png"
-      }
-    },
-    {
-      "id": "tristate_easy_13",
-      "type": "multiple_choice",
-      "prompt": "Enable off — driver disconnected — bus level is…",
-      "choices": [
-        "Z (high-Z)",
-        "always 0",
-        "always 1",
-        "X"
-      ],
-      "answer": 0,
-      "explain": "High impedance — not driving the net.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_easy_13.png"
-      }
-    },
-    {
-      "id": "tristate_easy_14",
-      "type": "multiple_choice",
-      "prompt": "Fighting opposite values cause…",
-      "choices": [
-        "1",
-        "0",
-        "X (contention)",
-        "Z"
-      ],
-      "answer": 2,
-      "explain": "Fighting drivers → unknown/contention.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_easy_14.png"
-      }
-    },
-    {
-      "id": "tristate_easy_15",
-      "type": "multiple_choice",
-      "prompt": "One-hot OE means…",
-      "choices": [
-        "0 or 1",
-        "exactly 2",
-        "any number",
-        "always 3"
-      ],
-      "answer": 0,
-      "explain": "At most one active driver (or float).",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_easy_15.png"
-      }
-    },
-    {
-      "id": "tristate_easy_16",
-      "type": "true_false",
-      "prompt": "Two opposite drivers still guarantee a valid 0/1.",
-      "answer": false,
-      "explain": "Opposite drive → contention X.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_easy_16.png"
-      }
-    },
-    {
-      "id": "tristate_easy_17",
-      "type": "multiple_choice",
-      "prompt": "Enable off — driver disconnected — bus level is…",
-      "choices": [
-        "Z (high-Z)",
-        "always 0",
-        "always 1",
-        "X"
-      ],
-      "answer": 0,
-      "explain": "High impedance — not driving the net.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_easy_17.png"
-      }
-    },
-    {
-      "id": "tristate_easy_18",
-      "type": "multiple_choice",
-      "prompt": "Fighting opposite values cause…",
-      "choices": [
-        "1",
-        "0",
-        "X (contention)",
-        "Z"
-      ],
-      "answer": 2,
-      "explain": "Fighting drivers → unknown/contention.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_easy_18.png"
-      }
-    },
-    {
-      "id": "tristate_easy_19",
-      "type": "multiple_choice",
-      "prompt": "One-hot OE means…",
-      "choices": [
-        "0 or 1",
-        "exactly 2",
-        "any number",
-        "always 3"
-      ],
-      "answer": 0,
-      "explain": "At most one active driver (or float).",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_easy_19.png"
-      }
-    },
-    {
-      "id": "tristate_easy_20",
-      "type": "true_false",
-      "prompt": "Two opposite drivers still guarantee a valid 0/1.",
-      "answer": false,
-      "explain": "Opposite drive → contention X.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_easy_20.png"
-      }
-    },
-    {
-      "id": "tristate_easy_21",
-      "type": "multiple_choice",
-      "prompt": "Enable off — driver disconnected — bus level is…",
-      "choices": [
-        "Z (high-Z)",
-        "always 0",
-        "always 1",
-        "X"
-      ],
-      "answer": 0,
-      "explain": "High impedance — not driving the net.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_easy_21.png"
-      }
-    },
-    {
-      "id": "tristate_easy_22",
-      "type": "multiple_choice",
-      "prompt": "Fighting opposite values cause…",
-      "choices": [
-        "1",
-        "0",
-        "X (contention)",
-        "Z"
-      ],
-      "answer": 2,
-      "explain": "Fighting drivers → unknown/contention.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_easy_22.png"
-      }
-    },
-    {
-      "id": "tristate_easy_23",
-      "type": "multiple_choice",
-      "prompt": "One-hot OE means…",
-      "choices": [
-        "0 or 1",
-        "exactly 2",
-        "any number",
-        "always 3"
-      ],
-      "answer": 0,
-      "explain": "At most one active driver (or float).",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_easy_23.png"
-      }
-    },
-    {
-      "id": "tristate_easy_24",
-      "type": "true_false",
-      "prompt": "Two opposite drivers still guarantee a valid 0/1.",
-      "answer": false,
-      "explain": "Opposite drive → contention X.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_easy_24.png"
-      }
-    },
-    {
-      "id": "tristate_easy_25",
-      "type": "multiple_choice",
-      "prompt": "Enable off — driver disconnected — bus level is…",
-      "choices": [
-        "Z (high-Z)",
-        "always 0",
-        "always 1",
-        "X"
-      ],
-      "answer": 0,
-      "explain": "High impedance — not driving the net.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_easy_25.png"
-      }
-    },
-    {
-      "id": "tristate_easy_26",
-      "type": "multiple_choice",
-      "prompt": "Fighting opposite values cause…",
-      "choices": [
-        "1",
-        "0",
-        "X (contention)",
-        "Z"
-      ],
-      "answer": 2,
-      "explain": "Fighting drivers → unknown/contention.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_easy_26.png"
-      }
-    },
-    {
-      "id": "tristate_easy_27",
-      "type": "multiple_choice",
-      "prompt": "One-hot OE means…",
-      "choices": [
-        "0 or 1",
-        "exactly 2",
-        "any number",
-        "always 3"
-      ],
-      "answer": 0,
-      "explain": "At most one active driver (or float).",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_easy_27.png"
-      }
-    },
-    {
-      "id": "tristate_easy_28",
-      "type": "true_false",
-      "prompt": "Two opposite drivers still guarantee a valid 0/1.",
-      "answer": false,
-      "explain": "Opposite drive → contention X.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_easy_28.png"
-      }
-    },
-    {
-      "id": "tristate_easy_29",
-      "type": "multiple_choice",
-      "prompt": "Enable off — driver disconnected — bus level is…",
-      "choices": [
-        "Z (high-Z)",
-        "always 0",
-        "always 1",
-        "X"
-      ],
-      "answer": 0,
-      "explain": "High impedance — not driving the net.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_easy_29.png"
-      }
-    },
-    {
-      "id": "tristate_easy_30",
-      "type": "multiple_choice",
-      "prompt": "Fighting opposite values cause…",
-      "choices": [
-        "1",
-        "0",
-        "X (contention)",
-        "Z"
-      ],
-      "answer": 2,
-      "explain": "Fighting drivers → unknown/contention.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_easy_30.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "tristate_medium_01",
@@ -782,20 +64,7 @@
       ],
       "answer": 1,
       "explain": "Pull-up defines idle as 1.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_medium_01.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "tristate_medium_02",
@@ -809,20 +78,7 @@
       ],
       "answer": 0,
       "explain": "Overlapping enables is unsafe even if values match.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_medium_02.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "tristate_medium_03",
@@ -836,20 +92,7 @@
       ],
       "answer": 0,
       "explain": "Muxes often replace on-chip tri-state.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_medium_03.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "tristate_medium_04",
@@ -857,686 +100,7 @@
       "prompt": "Any number of drivers may be enabled if the board is short.",
       "answer": false,
       "explain": "Keep ≤1 driver; pulls define idle.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_medium_04.png"
-      }
-    },
-    {
-      "id": "tristate_medium_05",
-      "type": "multiple_choice",
-      "prompt": "All enables low with pull-up on → bus is…",
-      "choices": [
-        "0",
-        "1",
-        "X",
-        "always Z forever"
-      ],
-      "answer": 1,
-      "explain": "Pull-up defines idle as 1.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_medium_05.png"
-      }
-    },
-    {
-      "id": "tristate_medium_06",
-      "type": "multiple_choice",
-      "prompt": "Agreeing multi-drive is still…",
-      "choices": [
-        "unsafe practice — violates one-driver discipline",
-        "required for speed",
-        "identical to high-Z",
-        "how pull-downs work"
-      ],
-      "answer": 0,
-      "explain": "Overlapping enables is unsafe even if values match.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_medium_06.png"
-      }
-    },
-    {
-      "id": "tristate_medium_07",
-      "type": "multiple_choice",
-      "prompt": "Which alternative avoids shared tri-state rails inside FPGAs?",
-      "choices": [
-        "muxes",
-        "more contention",
-        "always analog pads",
-        "removing OE entirely forever"
-      ],
-      "answer": 0,
-      "explain": "Muxes often replace on-chip tri-state.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_medium_07.png"
-      }
-    },
-    {
-      "id": "tristate_medium_08",
-      "type": "true_false",
-      "prompt": "Any number of drivers may be enabled if the board is short.",
-      "answer": false,
-      "explain": "Keep ≤1 driver; pulls define idle.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_medium_08.png"
-      }
-    },
-    {
-      "id": "tristate_medium_09",
-      "type": "multiple_choice",
-      "prompt": "All enables low with pull-up on → bus is…",
-      "choices": [
-        "0",
-        "1",
-        "X",
-        "always Z forever"
-      ],
-      "answer": 1,
-      "explain": "Pull-up defines idle as 1.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_medium_09.png"
-      }
-    },
-    {
-      "id": "tristate_medium_10",
-      "type": "multiple_choice",
-      "prompt": "Agreeing multi-drive is still…",
-      "choices": [
-        "unsafe practice — violates one-driver discipline",
-        "required for speed",
-        "identical to high-Z",
-        "how pull-downs work"
-      ],
-      "answer": 0,
-      "explain": "Overlapping enables is unsafe even if values match.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_medium_10.png"
-      }
-    },
-    {
-      "id": "tristate_medium_11",
-      "type": "multiple_choice",
-      "prompt": "Which alternative avoids shared tri-state rails inside FPGAs?",
-      "choices": [
-        "muxes",
-        "more contention",
-        "always analog pads",
-        "removing OE entirely forever"
-      ],
-      "answer": 0,
-      "explain": "Muxes often replace on-chip tri-state.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_medium_11.png"
-      }
-    },
-    {
-      "id": "tristate_medium_12",
-      "type": "true_false",
-      "prompt": "Any number of drivers may be enabled if the board is short.",
-      "answer": false,
-      "explain": "Keep ≤1 driver; pulls define idle.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_medium_12.png"
-      }
-    },
-    {
-      "id": "tristate_medium_13",
-      "type": "multiple_choice",
-      "prompt": "All enables low with pull-up on → bus is…",
-      "choices": [
-        "0",
-        "1",
-        "X",
-        "always Z forever"
-      ],
-      "answer": 1,
-      "explain": "Pull-up defines idle as 1.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_medium_13.png"
-      }
-    },
-    {
-      "id": "tristate_medium_14",
-      "type": "multiple_choice",
-      "prompt": "Agreeing multi-drive is still…",
-      "choices": [
-        "unsafe practice — violates one-driver discipline",
-        "required for speed",
-        "identical to high-Z",
-        "how pull-downs work"
-      ],
-      "answer": 0,
-      "explain": "Overlapping enables is unsafe even if values match.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_medium_14.png"
-      }
-    },
-    {
-      "id": "tristate_medium_15",
-      "type": "multiple_choice",
-      "prompt": "Which alternative avoids shared tri-state rails inside FPGAs?",
-      "choices": [
-        "muxes",
-        "more contention",
-        "always analog pads",
-        "removing OE entirely forever"
-      ],
-      "answer": 0,
-      "explain": "Muxes often replace on-chip tri-state.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_medium_15.png"
-      }
-    },
-    {
-      "id": "tristate_medium_16",
-      "type": "true_false",
-      "prompt": "Any number of drivers may be enabled if the board is short.",
-      "answer": false,
-      "explain": "Keep ≤1 driver; pulls define idle.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_medium_16.png"
-      }
-    },
-    {
-      "id": "tristate_medium_17",
-      "type": "multiple_choice",
-      "prompt": "All enables low with pull-up on → bus is…",
-      "choices": [
-        "0",
-        "1",
-        "X",
-        "always Z forever"
-      ],
-      "answer": 1,
-      "explain": "Pull-up defines idle as 1.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_medium_17.png"
-      }
-    },
-    {
-      "id": "tristate_medium_18",
-      "type": "multiple_choice",
-      "prompt": "Agreeing multi-drive is still…",
-      "choices": [
-        "unsafe practice — violates one-driver discipline",
-        "required for speed",
-        "identical to high-Z",
-        "how pull-downs work"
-      ],
-      "answer": 0,
-      "explain": "Overlapping enables is unsafe even if values match.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_medium_18.png"
-      }
-    },
-    {
-      "id": "tristate_medium_19",
-      "type": "multiple_choice",
-      "prompt": "Which alternative avoids shared tri-state rails inside FPGAs?",
-      "choices": [
-        "muxes",
-        "more contention",
-        "always analog pads",
-        "removing OE entirely forever"
-      ],
-      "answer": 0,
-      "explain": "Muxes often replace on-chip tri-state.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_medium_19.png"
-      }
-    },
-    {
-      "id": "tristate_medium_20",
-      "type": "true_false",
-      "prompt": "Any number of drivers may be enabled if the board is short.",
-      "answer": false,
-      "explain": "Keep ≤1 driver; pulls define idle.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_medium_20.png"
-      }
-    },
-    {
-      "id": "tristate_medium_21",
-      "type": "multiple_choice",
-      "prompt": "All enables low with pull-up on → bus is…",
-      "choices": [
-        "0",
-        "1",
-        "X",
-        "always Z forever"
-      ],
-      "answer": 1,
-      "explain": "Pull-up defines idle as 1.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_medium_21.png"
-      }
-    },
-    {
-      "id": "tristate_medium_22",
-      "type": "multiple_choice",
-      "prompt": "Agreeing multi-drive is still…",
-      "choices": [
-        "unsafe practice — violates one-driver discipline",
-        "required for speed",
-        "identical to high-Z",
-        "how pull-downs work"
-      ],
-      "answer": 0,
-      "explain": "Overlapping enables is unsafe even if values match.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_medium_22.png"
-      }
-    },
-    {
-      "id": "tristate_medium_23",
-      "type": "multiple_choice",
-      "prompt": "Which alternative avoids shared tri-state rails inside FPGAs?",
-      "choices": [
-        "muxes",
-        "more contention",
-        "always analog pads",
-        "removing OE entirely forever"
-      ],
-      "answer": 0,
-      "explain": "Muxes often replace on-chip tri-state.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_medium_23.png"
-      }
-    },
-    {
-      "id": "tristate_medium_24",
-      "type": "true_false",
-      "prompt": "Any number of drivers may be enabled if the board is short.",
-      "answer": false,
-      "explain": "Keep ≤1 driver; pulls define idle.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_medium_24.png"
-      }
-    },
-    {
-      "id": "tristate_medium_25",
-      "type": "multiple_choice",
-      "prompt": "All enables low with pull-up on → bus is…",
-      "choices": [
-        "0",
-        "1",
-        "X",
-        "always Z forever"
-      ],
-      "answer": 1,
-      "explain": "Pull-up defines idle as 1.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_medium_25.png"
-      }
-    },
-    {
-      "id": "tristate_medium_26",
-      "type": "multiple_choice",
-      "prompt": "Agreeing multi-drive is still…",
-      "choices": [
-        "unsafe practice — violates one-driver discipline",
-        "required for speed",
-        "identical to high-Z",
-        "how pull-downs work"
-      ],
-      "answer": 0,
-      "explain": "Overlapping enables is unsafe even if values match.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_medium_26.png"
-      }
-    },
-    {
-      "id": "tristate_medium_27",
-      "type": "multiple_choice",
-      "prompt": "Which alternative avoids shared tri-state rails inside FPGAs?",
-      "choices": [
-        "muxes",
-        "more contention",
-        "always analog pads",
-        "removing OE entirely forever"
-      ],
-      "answer": 0,
-      "explain": "Muxes often replace on-chip tri-state.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_medium_27.png"
-      }
-    },
-    {
-      "id": "tristate_medium_28",
-      "type": "true_false",
-      "prompt": "Any number of drivers may be enabled if the board is short.",
-      "answer": false,
-      "explain": "Keep ≤1 driver; pulls define idle.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_medium_28.png"
-      }
-    },
-    {
-      "id": "tristate_medium_29",
-      "type": "multiple_choice",
-      "prompt": "All enables low with pull-up on → bus is…",
-      "choices": [
-        "0",
-        "1",
-        "X",
-        "always Z forever"
-      ],
-      "answer": 1,
-      "explain": "Pull-up defines idle as 1.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_medium_29.png"
-      }
-    },
-    {
-      "id": "tristate_medium_30",
-      "type": "multiple_choice",
-      "prompt": "Agreeing multi-drive is still…",
-      "choices": [
-        "unsafe practice — violates one-driver discipline",
-        "required for speed",
-        "identical to high-Z",
-        "how pull-downs work"
-      ],
-      "answer": 0,
-      "explain": "Overlapping enables is unsafe even if values match.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_medium_30.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "tristate_hard_01",
@@ -1550,20 +114,7 @@
       ],
       "answer": 0,
       "explain": "Weak feedback holds the last value.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_hard_01.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "tristate_hard_02",
@@ -1577,20 +128,7 @@
       ],
       "answer": 0,
       "explain": "Overlapping OE windows fight the bus.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_hard_02.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "tristate_hard_03",
@@ -1604,20 +142,7 @@
       ],
       "answer": 0,
       "explain": "One driver determines the level.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_hard_03.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "tristate_hard_04",
@@ -1625,686 +150,919 @@
       "prompt": "Contention X is a recommended steady-state operating mode.",
       "answer": false,
       "explain": "Contention is a fault, not a mode.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "contention",
-        "label": "Contention",
-        "steps": [
-          {
-            "click": "#btn-fight"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_hard_04.png"
-      }
+      "difficulty": "hard"
     },
     {
-      "id": "tristate_hard_05",
-      "type": "multiple_choice",
-      "prompt": "Bus holders / weak keepers primarily…",
-      "choices": [
-        "retain the last driven level weakly when undriven",
-        "force permanent contention",
-        "replace clocks",
-        "decode seven-segment glyphs"
-      ],
-      "answer": 0,
-      "explain": "Weak feedback holds the last value.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_hard_05.png"
-      }
+      "type": "true_false",
+      "prompt": "Valid/ready handshake transfers when both are high in the same cycle.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "tristate_easy_05"
     },
     {
-      "id": "tristate_hard_06",
-      "type": "multiple_choice",
-      "prompt": "Enable overlap during handoff can…",
-      "choices": [
-        "momentary dual-drive contention",
-        "only improving setup margin always",
-        "removing the need for resets",
-        "converting Z to XOR"
-      ],
-      "answer": 0,
-      "explain": "Overlapping OE windows fight the bus.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_hard_06.png"
-      }
+      "type": "true_false",
+      "prompt": "A master may drop valid before ready acknowledges freely always.",
+      "answer": false,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "tristate_easy_06"
     },
     {
-      "id": "tristate_hard_07",
+      "type": "true_false",
+      "prompt": "Ready may depend on valid in the same cycle (combinational) carefully.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "tristate_easy_07"
+    },
+    {
+      "type": "true_false",
+      "prompt": "AXI-style fire is valid && ready.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "tristate_easy_08"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Tri-state buses need exactly one driver when not floating intentionally.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "tristate_easy_09"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Multiple drivers asserting opposite values is bus contention.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "tristate_easy_10"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Async FIFO write and read clocks may be unrelated.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "tristate_easy_11"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Gray code helps multi-bit CDC of pointers.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "tristate_easy_12"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Single FF sync is enough for multi-bit buses.",
+      "answer": false,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "tristate_easy_13"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Backpressure is expressed by deasserting ready.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "tristate_easy_14"
+    },
+    {
       "type": "multiple_choice",
-      "prompt": "Clean drive-0 case yields…",
+      "prompt": "With valid fixed high, how many beats transfer in 1 cycles if ready is always high?",
       "choices": [
         "0",
         "1",
-        "X",
-        "Z"
+        "2",
+        "0"
       ],
-      "answer": 0,
-      "explain": "One driver determines the level.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_hard_07.png"
-      }
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "tristate_easy_15"
     },
     {
-      "id": "tristate_hard_08",
-      "type": "true_false",
-      "prompt": "Contention X is a recommended steady-state operating mode.",
-      "answer": false,
-      "explain": "Contention is a fault, not a mode.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "contention",
-        "label": "Contention",
-        "steps": [
-          {
-            "click": "#btn-fight"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_hard_08.png"
-      }
-    },
-    {
-      "id": "tristate_hard_09",
       "type": "multiple_choice",
-      "prompt": "Bus holders / weak keepers primarily…",
+      "prompt": "With valid fixed high, how many beats transfer in 2 cycles if ready is always high?",
       "choices": [
-        "retain the last driven level weakly when undriven",
-        "force permanent contention",
-        "replace clocks",
-        "decode seven-segment glyphs"
+        "1",
+        "2",
+        "4",
+        "0"
       ],
-      "answer": 0,
-      "explain": "Weak feedback holds the last value.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_hard_09.png"
-      }
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "tristate_easy_16"
     },
     {
-      "id": "tristate_hard_10",
       "type": "multiple_choice",
-      "prompt": "Enable overlap during handoff can…",
+      "prompt": "With valid fixed high, how many beats transfer in 3 cycles if ready is always high?",
       "choices": [
-        "momentary dual-drive contention",
-        "only improving setup margin always",
-        "removing the need for resets",
-        "converting Z to XOR"
+        "2",
+        "3",
+        "6",
+        "0"
       ],
-      "answer": 0,
-      "explain": "Overlapping OE windows fight the bus.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_hard_10.png"
-      }
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "tristate_easy_17"
     },
     {
-      "id": "tristate_hard_11",
       "type": "multiple_choice",
-      "prompt": "Clean drive-0 case yields…",
+      "prompt": "With valid fixed high, how many beats transfer in 4 cycles if ready is always high?",
+      "choices": [
+        "3",
+        "4",
+        "8",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "tristate_easy_18"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 5 cycles if ready is always high?",
+      "choices": [
+        "4",
+        "5",
+        "10",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "tristate_easy_19"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 6 cycles if ready is always high?",
+      "choices": [
+        "5",
+        "6",
+        "12",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "tristate_easy_20"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 7 cycles if ready is always high?",
+      "choices": [
+        "6",
+        "7",
+        "14",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "tristate_easy_21"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 8 cycles if ready is always high?",
+      "choices": [
+        "7",
+        "8",
+        "16",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "tristate_easy_22"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A 1-to-2 decoder has how many select lines?",
+      "choices": [
+        "2",
+        "1",
+        "2",
+        "2"
+      ],
+      "answer": 1,
+      "explain": "1 selects address 2 ones-hot lines.",
+      "difficulty": "easy",
+      "id": "tristate_easy_23"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A mux with 2 data inputs needs how many select bits?",
       "choices": [
         "0",
         "1",
-        "X",
-        "Z"
+        "2",
+        "3"
       ],
-      "answer": 0,
-      "explain": "One driver determines the level.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_hard_11.png"
-      }
+      "answer": 1,
+      "explain": "log2(2) = 1.",
+      "difficulty": "easy",
+      "id": "tristate_easy_24"
     },
     {
-      "id": "tristate_hard_12",
+      "type": "multiple_choice",
+      "prompt": "A 2-to-4 decoder has how many select lines?",
+      "choices": [
+        "4",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "2 selects address 4 ones-hot lines.",
+      "difficulty": "easy",
+      "id": "tristate_easy_25"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A mux with 4 data inputs needs how many select bits?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "log2(4) = 2.",
+      "difficulty": "easy",
+      "id": "tristate_easy_26"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A 3-to-8 decoder has how many select lines?",
+      "choices": [
+        "8",
+        "3",
+        "4",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "3 selects address 8 ones-hot lines.",
+      "difficulty": "easy",
+      "id": "tristate_easy_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A mux with 8 data inputs needs how many select bits?",
+      "choices": [
+        "2",
+        "3",
+        "8",
+        "5"
+      ],
+      "answer": 1,
+      "explain": "log2(8) = 3.",
+      "difficulty": "easy",
+      "id": "tristate_easy_28"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A 4-to-16 decoder has how many select lines?",
+      "choices": [
+        "16",
+        "4",
+        "5",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "4 selects address 16 ones-hot lines.",
+      "difficulty": "easy",
+      "id": "tristate_easy_29"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A mux with 16 data inputs needs how many select bits?",
+      "choices": [
+        "3",
+        "4",
+        "16",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "log2(16) = 4.",
+      "difficulty": "easy",
+      "id": "tristate_easy_30"
+    },
+    {
       "type": "true_false",
-      "prompt": "Contention X is a recommended steady-state operating mode.",
+      "prompt": "Valid/ready handshake transfers when both are high in the same cycle.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "tristate_medium_05"
+    },
+    {
+      "type": "true_false",
+      "prompt": "A master may drop valid before ready acknowledges freely always.",
       "answer": false,
-      "explain": "Contention is a fault, not a mode.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "contention",
-        "label": "Contention",
-        "steps": [
-          {
-            "click": "#btn-fight"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_hard_12.png"
-      }
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "tristate_medium_06"
     },
     {
-      "id": "tristate_hard_13",
-      "type": "multiple_choice",
-      "prompt": "Bus holders / weak keepers primarily…",
-      "choices": [
-        "retain the last driven level weakly when undriven",
-        "force permanent contention",
-        "replace clocks",
-        "decode seven-segment glyphs"
-      ],
-      "answer": 0,
-      "explain": "Weak feedback holds the last value.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_hard_13.png"
-      }
+      "type": "true_false",
+      "prompt": "Ready may depend on valid in the same cycle (combinational) carefully.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "tristate_medium_07"
     },
     {
-      "id": "tristate_hard_14",
-      "type": "multiple_choice",
-      "prompt": "Enable overlap during handoff can…",
-      "choices": [
-        "momentary dual-drive contention",
-        "only improving setup margin always",
-        "removing the need for resets",
-        "converting Z to XOR"
-      ],
-      "answer": 0,
-      "explain": "Overlapping OE windows fight the bus.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_hard_14.png"
-      }
+      "type": "true_false",
+      "prompt": "AXI-style fire is valid && ready.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "tristate_medium_08"
     },
     {
-      "id": "tristate_hard_15",
+      "type": "true_false",
+      "prompt": "Tri-state buses need exactly one driver when not floating intentionally.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "tristate_medium_09"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Multiple drivers asserting opposite values is bus contention.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "tristate_medium_10"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Async FIFO write and read clocks may be unrelated.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "tristate_medium_11"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Gray code helps multi-bit CDC of pointers.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "tristate_medium_12"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Single FF sync is enough for multi-bit buses.",
+      "answer": false,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "tristate_medium_13"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Backpressure is expressed by deasserting ready.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "tristate_medium_14"
+    },
+    {
       "type": "multiple_choice",
-      "prompt": "Clean drive-0 case yields…",
+      "prompt": "With valid fixed high, how many beats transfer in 1 cycles if ready is always high?",
       "choices": [
         "0",
         "1",
-        "X",
-        "Z"
+        "2",
+        "0"
       ],
-      "answer": 0,
-      "explain": "One driver determines the level.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_hard_15.png"
-      }
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "tristate_medium_15"
     },
     {
-      "id": "tristate_hard_16",
-      "type": "true_false",
-      "prompt": "Contention X is a recommended steady-state operating mode.",
-      "answer": false,
-      "explain": "Contention is a fault, not a mode.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "contention",
-        "label": "Contention",
-        "steps": [
-          {
-            "click": "#btn-fight"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_hard_16.png"
-      }
-    },
-    {
-      "id": "tristate_hard_17",
       "type": "multiple_choice",
-      "prompt": "Bus holders / weak keepers primarily…",
+      "prompt": "With valid fixed high, how many beats transfer in 2 cycles if ready is always high?",
       "choices": [
-        "retain the last driven level weakly when undriven",
-        "force permanent contention",
-        "replace clocks",
-        "decode seven-segment glyphs"
+        "1",
+        "2",
+        "4",
+        "0"
       ],
-      "answer": 0,
-      "explain": "Weak feedback holds the last value.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_hard_17.png"
-      }
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "tristate_medium_16"
     },
     {
-      "id": "tristate_hard_18",
       "type": "multiple_choice",
-      "prompt": "Enable overlap during handoff can…",
+      "prompt": "With valid fixed high, how many beats transfer in 3 cycles if ready is always high?",
       "choices": [
-        "momentary dual-drive contention",
-        "only improving setup margin always",
-        "removing the need for resets",
-        "converting Z to XOR"
+        "2",
+        "3",
+        "6",
+        "0"
       ],
-      "answer": 0,
-      "explain": "Overlapping OE windows fight the bus.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_hard_18.png"
-      }
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "tristate_medium_17"
     },
     {
-      "id": "tristate_hard_19",
       "type": "multiple_choice",
-      "prompt": "Clean drive-0 case yields…",
+      "prompt": "With valid fixed high, how many beats transfer in 4 cycles if ready is always high?",
+      "choices": [
+        "3",
+        "4",
+        "8",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "tristate_medium_18"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 5 cycles if ready is always high?",
+      "choices": [
+        "4",
+        "5",
+        "10",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "tristate_medium_19"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 6 cycles if ready is always high?",
+      "choices": [
+        "5",
+        "6",
+        "12",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "tristate_medium_20"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 7 cycles if ready is always high?",
+      "choices": [
+        "6",
+        "7",
+        "14",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "tristate_medium_21"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 8 cycles if ready is always high?",
+      "choices": [
+        "7",
+        "8",
+        "16",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "tristate_medium_22"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A 1-to-2 decoder has how many select lines?",
+      "choices": [
+        "2",
+        "1",
+        "2",
+        "2"
+      ],
+      "answer": 1,
+      "explain": "1 selects address 2 ones-hot lines.",
+      "difficulty": "medium",
+      "id": "tristate_medium_23"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A mux with 2 data inputs needs how many select bits?",
       "choices": [
         "0",
         "1",
-        "X",
-        "Z"
+        "2",
+        "3"
       ],
-      "answer": 0,
-      "explain": "One driver determines the level.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_hard_19.png"
-      }
+      "answer": 1,
+      "explain": "log2(2) = 1.",
+      "difficulty": "medium",
+      "id": "tristate_medium_24"
     },
     {
-      "id": "tristate_hard_20",
+      "type": "multiple_choice",
+      "prompt": "A 2-to-4 decoder has how many select lines?",
+      "choices": [
+        "4",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "2 selects address 4 ones-hot lines.",
+      "difficulty": "medium",
+      "id": "tristate_medium_25"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A mux with 4 data inputs needs how many select bits?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "log2(4) = 2.",
+      "difficulty": "medium",
+      "id": "tristate_medium_26"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A 3-to-8 decoder has how many select lines?",
+      "choices": [
+        "8",
+        "3",
+        "4",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "3 selects address 8 ones-hot lines.",
+      "difficulty": "medium",
+      "id": "tristate_medium_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A mux with 8 data inputs needs how many select bits?",
+      "choices": [
+        "2",
+        "3",
+        "8",
+        "5"
+      ],
+      "answer": 1,
+      "explain": "log2(8) = 3.",
+      "difficulty": "medium",
+      "id": "tristate_medium_28"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A 4-to-16 decoder has how many select lines?",
+      "choices": [
+        "16",
+        "4",
+        "5",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "4 selects address 16 ones-hot lines.",
+      "difficulty": "medium",
+      "id": "tristate_medium_29"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A mux with 16 data inputs needs how many select bits?",
+      "choices": [
+        "3",
+        "4",
+        "16",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "log2(16) = 4.",
+      "difficulty": "medium",
+      "id": "tristate_medium_30"
+    },
+    {
       "type": "true_false",
-      "prompt": "Contention X is a recommended steady-state operating mode.",
+      "prompt": "Valid/ready handshake transfers when both are high in the same cycle.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "hard",
+      "id": "tristate_hard_05"
+    },
+    {
+      "type": "true_false",
+      "prompt": "A master may drop valid before ready acknowledges freely always.",
       "answer": false,
-      "explain": "Contention is a fault, not a mode.",
+      "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "contention",
-        "label": "Contention",
-        "steps": [
-          {
-            "click": "#btn-fight"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_hard_20.png"
-      }
+      "id": "tristate_hard_06"
     },
     {
-      "id": "tristate_hard_21",
-      "type": "multiple_choice",
-      "prompt": "Bus holders / weak keepers primarily…",
-      "choices": [
-        "retain the last driven level weakly when undriven",
-        "force permanent contention",
-        "replace clocks",
-        "decode seven-segment glyphs"
-      ],
-      "answer": 0,
-      "explain": "Weak feedback holds the last value.",
+      "type": "true_false",
+      "prompt": "Ready may depend on valid in the same cycle (combinational) carefully.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_hard_21.png"
-      }
+      "id": "tristate_hard_07"
     },
     {
-      "id": "tristate_hard_22",
-      "type": "multiple_choice",
-      "prompt": "Enable overlap during handoff can…",
-      "choices": [
-        "momentary dual-drive contention",
-        "only improving setup margin always",
-        "removing the need for resets",
-        "converting Z to XOR"
-      ],
-      "answer": 0,
-      "explain": "Overlapping OE windows fight the bus.",
+      "type": "true_false",
+      "prompt": "AXI-style fire is valid && ready.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_hard_22.png"
-      }
+      "id": "tristate_hard_08"
     },
     {
-      "id": "tristate_hard_23",
+      "type": "true_false",
+      "prompt": "Tri-state buses need exactly one driver when not floating intentionally.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "hard",
+      "id": "tristate_hard_09"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Multiple drivers asserting opposite values is bus contention.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "hard",
+      "id": "tristate_hard_10"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Async FIFO write and read clocks may be unrelated.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "hard",
+      "id": "tristate_hard_11"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Gray code helps multi-bit CDC of pointers.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "hard",
+      "id": "tristate_hard_12"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Single FF sync is enough for multi-bit buses.",
+      "answer": false,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "hard",
+      "id": "tristate_hard_13"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Backpressure is expressed by deasserting ready.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "hard",
+      "id": "tristate_hard_14"
+    },
+    {
       "type": "multiple_choice",
-      "prompt": "Clean drive-0 case yields…",
+      "prompt": "With valid fixed high, how many beats transfer in 1 cycles if ready is always high?",
       "choices": [
         "0",
         "1",
-        "X",
-        "Z"
+        "2",
+        "0"
       ],
-      "answer": 0,
-      "explain": "One driver determines the level.",
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_hard_23.png"
-      }
+      "id": "tristate_hard_15"
     },
     {
-      "id": "tristate_hard_24",
-      "type": "true_false",
-      "prompt": "Contention X is a recommended steady-state operating mode.",
-      "answer": false,
-      "explain": "Contention is a fault, not a mode.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "contention",
-        "label": "Contention",
-        "steps": [
-          {
-            "click": "#btn-fight"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_hard_24.png"
-      }
-    },
-    {
-      "id": "tristate_hard_25",
       "type": "multiple_choice",
-      "prompt": "Bus holders / weak keepers primarily…",
+      "prompt": "With valid fixed high, how many beats transfer in 2 cycles if ready is always high?",
       "choices": [
-        "retain the last driven level weakly when undriven",
-        "force permanent contention",
-        "replace clocks",
-        "decode seven-segment glyphs"
+        "1",
+        "2",
+        "4",
+        "0"
       ],
-      "answer": 0,
-      "explain": "Weak feedback holds the last value.",
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_hard_25.png"
-      }
+      "id": "tristate_hard_16"
     },
     {
-      "id": "tristate_hard_26",
       "type": "multiple_choice",
-      "prompt": "Enable overlap during handoff can…",
+      "prompt": "With valid fixed high, how many beats transfer in 3 cycles if ready is always high?",
       "choices": [
-        "momentary dual-drive contention",
-        "only improving setup margin always",
-        "removing the need for resets",
-        "converting Z to XOR"
+        "2",
+        "3",
+        "6",
+        "0"
       ],
-      "answer": 0,
-      "explain": "Overlapping OE windows fight the bus.",
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_hard_26.png"
-      }
+      "id": "tristate_hard_17"
     },
     {
-      "id": "tristate_hard_27",
       "type": "multiple_choice",
-      "prompt": "Clean drive-0 case yields…",
+      "prompt": "With valid fixed high, how many beats transfer in 4 cycles if ready is always high?",
+      "choices": [
+        "3",
+        "4",
+        "8",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "hard",
+      "id": "tristate_hard_18"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 5 cycles if ready is always high?",
+      "choices": [
+        "4",
+        "5",
+        "10",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "hard",
+      "id": "tristate_hard_19"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 6 cycles if ready is always high?",
+      "choices": [
+        "5",
+        "6",
+        "12",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "hard",
+      "id": "tristate_hard_20"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 7 cycles if ready is always high?",
+      "choices": [
+        "6",
+        "7",
+        "14",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "hard",
+      "id": "tristate_hard_21"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 8 cycles if ready is always high?",
+      "choices": [
+        "7",
+        "8",
+        "16",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "hard",
+      "id": "tristate_hard_22"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A 1-to-2 decoder has how many select lines?",
+      "choices": [
+        "2",
+        "1",
+        "2",
+        "2"
+      ],
+      "answer": 1,
+      "explain": "1 selects address 2 ones-hot lines.",
+      "difficulty": "hard",
+      "id": "tristate_hard_23"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A mux with 2 data inputs needs how many select bits?",
       "choices": [
         "0",
         "1",
-        "X",
-        "Z"
+        "2",
+        "3"
       ],
-      "answer": 0,
-      "explain": "One driver determines the level.",
+      "answer": 1,
+      "explain": "log2(2) = 1.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_hard_27.png"
-      }
+      "id": "tristate_hard_24"
     },
     {
-      "id": "tristate_hard_28",
-      "type": "true_false",
-      "prompt": "Contention X is a recommended steady-state operating mode.",
-      "answer": false,
-      "explain": "Contention is a fault, not a mode.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "contention",
-        "label": "Contention",
-        "steps": [
-          {
-            "click": "#btn-fight"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_hard_28.png"
-      }
-    },
-    {
-      "id": "tristate_hard_29",
       "type": "multiple_choice",
-      "prompt": "Bus holders / weak keepers primarily…",
+      "prompt": "A 2-to-4 decoder has how many select lines?",
       "choices": [
-        "retain the last driven level weakly when undriven",
-        "force permanent contention",
-        "replace clocks",
-        "decode seven-segment glyphs"
+        "4",
+        "2",
+        "3",
+        "4"
       ],
-      "answer": 0,
-      "explain": "Weak feedback holds the last value.",
+      "answer": 1,
+      "explain": "2 selects address 4 ones-hot lines.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_hard_29.png"
-      }
+      "id": "tristate_hard_25"
     },
     {
-      "id": "tristate_hard_30",
       "type": "multiple_choice",
-      "prompt": "Enable overlap during handoff can…",
+      "prompt": "A mux with 4 data inputs needs how many select bits?",
       "choices": [
-        "momentary dual-drive contention",
-        "only improving setup margin always",
-        "removing the need for resets",
-        "converting Z to XOR"
+        "1",
+        "2",
+        "4",
+        "4"
       ],
-      "answer": 0,
-      "explain": "Overlapping OE windows fight the bus.",
+      "answer": 1,
+      "explain": "log2(4) = 2.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "tri-state-bus",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ts-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/tristate_hard_30.png"
-      }
+      "id": "tristate_hard_26"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A 3-to-8 decoder has how many select lines?",
+      "choices": [
+        "8",
+        "3",
+        "4",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "3 selects address 8 ones-hot lines.",
+      "difficulty": "hard",
+      "id": "tristate_hard_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A mux with 8 data inputs needs how many select bits?",
+      "choices": [
+        "2",
+        "3",
+        "8",
+        "5"
+      ],
+      "answer": 1,
+      "explain": "log2(8) = 3.",
+      "difficulty": "hard",
+      "id": "tristate_hard_28"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A 4-to-16 decoder has how many select lines?",
+      "choices": [
+        "16",
+        "4",
+        "5",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "4 selects address 16 ones-hot lines.",
+      "difficulty": "hard",
+      "id": "tristate_hard_29"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A mux with 16 data inputs needs how many select bits?",
+      "choices": [
+        "3",
+        "4",
+        "16",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "log2(16) = 4.",
+      "difficulty": "hard",
+      "id": "tristate_hard_30"
     }
   ]
 }

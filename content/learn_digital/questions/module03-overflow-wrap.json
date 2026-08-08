@@ -14,35 +14,7 @@
       ],
       "answer": 1,
       "explain": "17 mod 16 = 1.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "u-14-plus-3",
-        "label": "Unsigned 14+3 @4",
-        "steps": [
-          {
-            "click": "input[name=mode][value=unsigned]"
-          },
-          {
-            "select": "#w-sel",
-            "value": "4"
-          },
-          {
-            "fill": "#a-in",
-            "value": "14"
-          },
-          {
-            "fill": "#b-in",
-            "value": "3"
-          },
-          {
-            "click": "#btn-add"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_easy_01.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "overflow_easy_02",
@@ -50,20 +22,7 @@
       "prompt": "Unsigned carry and signed overflow are identical flags.",
       "answer": false,
       "explain": "Carry tracks unsigned out-of-range; overflow tracks signed.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "quiz-flags",
-        "label": "Quiz: flags",
-        "steps": [
-          {
-            "challenge": "Quiz: flags"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_easy_02.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "overflow_easy_03",
@@ -77,20 +36,7 @@
       ],
       "answer": 1,
       "explain": "Sat clamps; ordinary fixed-width add usually wraps.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ow-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_easy_03.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "overflow_easy_04",
@@ -104,785 +50,7 @@
       ],
       "answer": 1,
       "explain": "Counters commonly count modulo 2^w.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "demo-unsigned",
-        "label": "Demo unsigned",
-        "steps": [
-          {
-            "click": "#btn-demo-u"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_easy_04.png"
-      }
-    },
-    {
-      "id": "overflow_easy_05",
-      "type": "multiple_choice",
-      "prompt": "At width 4, unsigned 14+3 stores which wrapped result?",
-      "choices": [
-        "17",
-        "1",
-        "15",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "17 mod 16 = 1.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "u-14-plus-3",
-        "label": "Unsigned 14+3 @4",
-        "steps": [
-          {
-            "click": "input[name=mode][value=unsigned]"
-          },
-          {
-            "select": "#w-sel",
-            "value": "4"
-          },
-          {
-            "fill": "#a-in",
-            "value": "14"
-          },
-          {
-            "fill": "#b-in",
-            "value": "3"
-          },
-          {
-            "click": "#btn-add"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_easy_05.png"
-      }
-    },
-    {
-      "id": "overflow_easy_06",
-      "type": "true_false",
-      "prompt": "Unsigned carry and signed overflow are identical flags.",
-      "answer": false,
-      "explain": "Carry tracks unsigned out-of-range; overflow tracks signed.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "quiz-flags",
-        "label": "Quiz: flags",
-        "steps": [
-          {
-            "challenge": "Quiz: flags"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_easy_06.png"
-      }
-    },
-    {
-      "id": "overflow_easy_07",
-      "type": "multiple_choice",
-      "prompt": "Clamping to min/max instead of modulo is…",
-      "choices": [
-        "They are identical behaviors",
-        "Saturation clamps to min/max; wrap uses modular bits",
-        "Wrap only happens in floating point",
-        "Saturation ignores width"
-      ],
-      "answer": 1,
-      "explain": "Sat clamps; ordinary fixed-width add usually wraps.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ow-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_easy_07.png"
-      }
-    },
-    {
-      "id": "overflow_easy_08",
-      "type": "multiple_choice",
-      "prompt": "Intentional wrap at full scale is common for…",
-      "choices": [
-        "Never wrapping",
-        "Intentional wrap at the width",
-        "Floating-point add",
-        "Removing the MSB"
-      ],
-      "answer": 1,
-      "explain": "Counters commonly count modulo 2^w.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "demo-unsigned",
-        "label": "Demo unsigned",
-        "steps": [
-          {
-            "click": "#btn-demo-u"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_easy_08.png"
-      }
-    },
-    {
-      "id": "overflow_easy_09",
-      "type": "multiple_choice",
-      "prompt": "At width 4, unsigned 14+3 stores which wrapped result?",
-      "choices": [
-        "17",
-        "1",
-        "15",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "17 mod 16 = 1.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "u-14-plus-3",
-        "label": "Unsigned 14+3 @4",
-        "steps": [
-          {
-            "click": "input[name=mode][value=unsigned]"
-          },
-          {
-            "select": "#w-sel",
-            "value": "4"
-          },
-          {
-            "fill": "#a-in",
-            "value": "14"
-          },
-          {
-            "fill": "#b-in",
-            "value": "3"
-          },
-          {
-            "click": "#btn-add"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_easy_09.png"
-      }
-    },
-    {
-      "id": "overflow_easy_10",
-      "type": "true_false",
-      "prompt": "Unsigned carry and signed overflow are identical flags.",
-      "answer": false,
-      "explain": "Carry tracks unsigned out-of-range; overflow tracks signed.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "quiz-flags",
-        "label": "Quiz: flags",
-        "steps": [
-          {
-            "challenge": "Quiz: flags"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_easy_10.png"
-      }
-    },
-    {
-      "id": "overflow_easy_11",
-      "type": "multiple_choice",
-      "prompt": "Clamping to min/max instead of modulo is…",
-      "choices": [
-        "They are identical behaviors",
-        "Saturation clamps to min/max; wrap uses modular bits",
-        "Wrap only happens in floating point",
-        "Saturation ignores width"
-      ],
-      "answer": 1,
-      "explain": "Sat clamps; ordinary fixed-width add usually wraps.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ow-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_easy_11.png"
-      }
-    },
-    {
-      "id": "overflow_easy_12",
-      "type": "multiple_choice",
-      "prompt": "Intentional wrap at full scale is common for…",
-      "choices": [
-        "Never wrapping",
-        "Intentional wrap at the width",
-        "Floating-point add",
-        "Removing the MSB"
-      ],
-      "answer": 1,
-      "explain": "Counters commonly count modulo 2^w.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "demo-unsigned",
-        "label": "Demo unsigned",
-        "steps": [
-          {
-            "click": "#btn-demo-u"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_easy_12.png"
-      }
-    },
-    {
-      "id": "overflow_easy_13",
-      "type": "multiple_choice",
-      "prompt": "At width 4, unsigned 14+3 stores which wrapped result?",
-      "choices": [
-        "17",
-        "1",
-        "15",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "17 mod 16 = 1.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "u-14-plus-3",
-        "label": "Unsigned 14+3 @4",
-        "steps": [
-          {
-            "click": "input[name=mode][value=unsigned]"
-          },
-          {
-            "select": "#w-sel",
-            "value": "4"
-          },
-          {
-            "fill": "#a-in",
-            "value": "14"
-          },
-          {
-            "fill": "#b-in",
-            "value": "3"
-          },
-          {
-            "click": "#btn-add"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_easy_13.png"
-      }
-    },
-    {
-      "id": "overflow_easy_14",
-      "type": "true_false",
-      "prompt": "Unsigned carry and signed overflow are identical flags.",
-      "answer": false,
-      "explain": "Carry tracks unsigned out-of-range; overflow tracks signed.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "quiz-flags",
-        "label": "Quiz: flags",
-        "steps": [
-          {
-            "challenge": "Quiz: flags"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_easy_14.png"
-      }
-    },
-    {
-      "id": "overflow_easy_15",
-      "type": "multiple_choice",
-      "prompt": "Clamping to min/max instead of modulo is…",
-      "choices": [
-        "They are identical behaviors",
-        "Saturation clamps to min/max; wrap uses modular bits",
-        "Wrap only happens in floating point",
-        "Saturation ignores width"
-      ],
-      "answer": 1,
-      "explain": "Sat clamps; ordinary fixed-width add usually wraps.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ow-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_easy_15.png"
-      }
-    },
-    {
-      "id": "overflow_easy_16",
-      "type": "multiple_choice",
-      "prompt": "Intentional wrap at full scale is common for…",
-      "choices": [
-        "Never wrapping",
-        "Intentional wrap at the width",
-        "Floating-point add",
-        "Removing the MSB"
-      ],
-      "answer": 1,
-      "explain": "Counters commonly count modulo 2^w.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "demo-unsigned",
-        "label": "Demo unsigned",
-        "steps": [
-          {
-            "click": "#btn-demo-u"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_easy_16.png"
-      }
-    },
-    {
-      "id": "overflow_easy_17",
-      "type": "multiple_choice",
-      "prompt": "At width 4, unsigned 14+3 stores which wrapped result?",
-      "choices": [
-        "17",
-        "1",
-        "15",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "17 mod 16 = 1.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "u-14-plus-3",
-        "label": "Unsigned 14+3 @4",
-        "steps": [
-          {
-            "click": "input[name=mode][value=unsigned]"
-          },
-          {
-            "select": "#w-sel",
-            "value": "4"
-          },
-          {
-            "fill": "#a-in",
-            "value": "14"
-          },
-          {
-            "fill": "#b-in",
-            "value": "3"
-          },
-          {
-            "click": "#btn-add"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_easy_17.png"
-      }
-    },
-    {
-      "id": "overflow_easy_18",
-      "type": "true_false",
-      "prompt": "Unsigned carry and signed overflow are identical flags.",
-      "answer": false,
-      "explain": "Carry tracks unsigned out-of-range; overflow tracks signed.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "quiz-flags",
-        "label": "Quiz: flags",
-        "steps": [
-          {
-            "challenge": "Quiz: flags"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_easy_18.png"
-      }
-    },
-    {
-      "id": "overflow_easy_19",
-      "type": "multiple_choice",
-      "prompt": "Clamping to min/max instead of modulo is…",
-      "choices": [
-        "They are identical behaviors",
-        "Saturation clamps to min/max; wrap uses modular bits",
-        "Wrap only happens in floating point",
-        "Saturation ignores width"
-      ],
-      "answer": 1,
-      "explain": "Sat clamps; ordinary fixed-width add usually wraps.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ow-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_easy_19.png"
-      }
-    },
-    {
-      "id": "overflow_easy_20",
-      "type": "multiple_choice",
-      "prompt": "Intentional wrap at full scale is common for…",
-      "choices": [
-        "Never wrapping",
-        "Intentional wrap at the width",
-        "Floating-point add",
-        "Removing the MSB"
-      ],
-      "answer": 1,
-      "explain": "Counters commonly count modulo 2^w.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "demo-unsigned",
-        "label": "Demo unsigned",
-        "steps": [
-          {
-            "click": "#btn-demo-u"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_easy_20.png"
-      }
-    },
-    {
-      "id": "overflow_easy_21",
-      "type": "multiple_choice",
-      "prompt": "At width 4, unsigned 14+3 stores which wrapped result?",
-      "choices": [
-        "17",
-        "1",
-        "15",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "17 mod 16 = 1.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "u-14-plus-3",
-        "label": "Unsigned 14+3 @4",
-        "steps": [
-          {
-            "click": "input[name=mode][value=unsigned]"
-          },
-          {
-            "select": "#w-sel",
-            "value": "4"
-          },
-          {
-            "fill": "#a-in",
-            "value": "14"
-          },
-          {
-            "fill": "#b-in",
-            "value": "3"
-          },
-          {
-            "click": "#btn-add"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_easy_21.png"
-      }
-    },
-    {
-      "id": "overflow_easy_22",
-      "type": "true_false",
-      "prompt": "Unsigned carry and signed overflow are identical flags.",
-      "answer": false,
-      "explain": "Carry tracks unsigned out-of-range; overflow tracks signed.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "quiz-flags",
-        "label": "Quiz: flags",
-        "steps": [
-          {
-            "challenge": "Quiz: flags"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_easy_22.png"
-      }
-    },
-    {
-      "id": "overflow_easy_23",
-      "type": "multiple_choice",
-      "prompt": "Clamping to min/max instead of modulo is…",
-      "choices": [
-        "They are identical behaviors",
-        "Saturation clamps to min/max; wrap uses modular bits",
-        "Wrap only happens in floating point",
-        "Saturation ignores width"
-      ],
-      "answer": 1,
-      "explain": "Sat clamps; ordinary fixed-width add usually wraps.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ow-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_easy_23.png"
-      }
-    },
-    {
-      "id": "overflow_easy_24",
-      "type": "multiple_choice",
-      "prompt": "Intentional wrap at full scale is common for…",
-      "choices": [
-        "Never wrapping",
-        "Intentional wrap at the width",
-        "Floating-point add",
-        "Removing the MSB"
-      ],
-      "answer": 1,
-      "explain": "Counters commonly count modulo 2^w.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "demo-unsigned",
-        "label": "Demo unsigned",
-        "steps": [
-          {
-            "click": "#btn-demo-u"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_easy_24.png"
-      }
-    },
-    {
-      "id": "overflow_easy_25",
-      "type": "multiple_choice",
-      "prompt": "At width 4, unsigned 14+3 stores which wrapped result?",
-      "choices": [
-        "17",
-        "1",
-        "15",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "17 mod 16 = 1.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "u-14-plus-3",
-        "label": "Unsigned 14+3 @4",
-        "steps": [
-          {
-            "click": "input[name=mode][value=unsigned]"
-          },
-          {
-            "select": "#w-sel",
-            "value": "4"
-          },
-          {
-            "fill": "#a-in",
-            "value": "14"
-          },
-          {
-            "fill": "#b-in",
-            "value": "3"
-          },
-          {
-            "click": "#btn-add"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_easy_25.png"
-      }
-    },
-    {
-      "id": "overflow_easy_26",
-      "type": "true_false",
-      "prompt": "Unsigned carry and signed overflow are identical flags.",
-      "answer": false,
-      "explain": "Carry tracks unsigned out-of-range; overflow tracks signed.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "quiz-flags",
-        "label": "Quiz: flags",
-        "steps": [
-          {
-            "challenge": "Quiz: flags"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_easy_26.png"
-      }
-    },
-    {
-      "id": "overflow_easy_27",
-      "type": "multiple_choice",
-      "prompt": "Clamping to min/max instead of modulo is…",
-      "choices": [
-        "They are identical behaviors",
-        "Saturation clamps to min/max; wrap uses modular bits",
-        "Wrap only happens in floating point",
-        "Saturation ignores width"
-      ],
-      "answer": 1,
-      "explain": "Sat clamps; ordinary fixed-width add usually wraps.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ow-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_easy_27.png"
-      }
-    },
-    {
-      "id": "overflow_easy_28",
-      "type": "multiple_choice",
-      "prompt": "Intentional wrap at full scale is common for…",
-      "choices": [
-        "Never wrapping",
-        "Intentional wrap at the width",
-        "Floating-point add",
-        "Removing the MSB"
-      ],
-      "answer": 1,
-      "explain": "Counters commonly count modulo 2^w.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "demo-unsigned",
-        "label": "Demo unsigned",
-        "steps": [
-          {
-            "click": "#btn-demo-u"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_easy_28.png"
-      }
-    },
-    {
-      "id": "overflow_easy_29",
-      "type": "multiple_choice",
-      "prompt": "At width 4, unsigned 14+3 stores which wrapped result?",
-      "choices": [
-        "17",
-        "1",
-        "15",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "17 mod 16 = 1.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "u-14-plus-3",
-        "label": "Unsigned 14+3 @4",
-        "steps": [
-          {
-            "click": "input[name=mode][value=unsigned]"
-          },
-          {
-            "select": "#w-sel",
-            "value": "4"
-          },
-          {
-            "fill": "#a-in",
-            "value": "14"
-          },
-          {
-            "fill": "#b-in",
-            "value": "3"
-          },
-          {
-            "click": "#btn-add"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_easy_29.png"
-      }
-    },
-    {
-      "id": "overflow_easy_30",
-      "type": "true_false",
-      "prompt": "Unsigned carry and signed overflow are identical flags.",
-      "answer": false,
-      "explain": "Carry tracks unsigned out-of-range; overflow tracks signed.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "quiz-flags",
-        "label": "Quiz: flags",
-        "steps": [
-          {
-            "challenge": "Quiz: flags"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_easy_30.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "overflow_medium_01",
@@ -896,35 +64,7 @@
       ],
       "answer": 1,
       "explain": "14+3=17; mod 16 → 1.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "u-14-plus-3",
-        "label": "Unsigned 14+3 @4",
-        "steps": [
-          {
-            "click": "input[name=mode][value=unsigned]"
-          },
-          {
-            "select": "#w-sel",
-            "value": "4"
-          },
-          {
-            "fill": "#a-in",
-            "value": "14"
-          },
-          {
-            "fill": "#b-in",
-            "value": "3"
-          },
-          {
-            "click": "#btn-add"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_medium_01.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "overflow_medium_02",
@@ -938,35 +78,7 @@
       ],
       "answer": 1,
       "explain": "8 is out of range; pattern 1000 means −8.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "s-7-plus-1",
-        "label": "Signed 7+1 @4",
-        "steps": [
-          {
-            "click": "input[name=mode][value=signed]"
-          },
-          {
-            "select": "#w-sel",
-            "value": "4"
-          },
-          {
-            "fill": "#a-in",
-            "value": "7"
-          },
-          {
-            "fill": "#b-in",
-            "value": "1"
-          },
-          {
-            "click": "#btn-add"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_medium_02.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "overflow_medium_03",
@@ -974,20 +86,7 @@
       "prompt": "Checking only the carry flag proves there was no signed overflow.",
       "answer": false,
       "explain": "Signed overflow ≠ carry; width bounds the stored result.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "quiz-flags",
-        "label": "Quiz: flags",
-        "steps": [
-          {
-            "challenge": "Quiz: flags"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_medium_03.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "overflow_medium_04",
@@ -1001,20 +100,7 @@
       ],
       "answer": 1,
       "explain": "Default is modular wrap unless you build saturation.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ow-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_medium_04.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "overflow_medium_05",
@@ -1028,114 +114,11 @@
       ],
       "answer": 1,
       "explain": "250+10=260; mod 256 → 4.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "demo-unsigned",
-        "label": "Demo unsigned",
-        "steps": [
-          {
-            "click": "#btn-demo-u"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_medium_05.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "overflow_medium_06",
       "type": "multiple_choice",
-      "prompt": "Four-bit signed 0111 + 0001 yields…",
-      "choices": [
-        "+8",
-        "−8",
-        "0",
-        "+7"
-      ],
-      "answer": 1,
-      "explain": "8 is out of range; pattern 1000 means −8.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "s-7-plus-1",
-        "label": "Signed 7+1 @4",
-        "steps": [
-          {
-            "click": "input[name=mode][value=signed]"
-          },
-          {
-            "select": "#w-sel",
-            "value": "4"
-          },
-          {
-            "fill": "#a-in",
-            "value": "7"
-          },
-          {
-            "fill": "#b-in",
-            "value": "1"
-          },
-          {
-            "click": "#btn-add"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_medium_06.png"
-      }
-    },
-    {
-      "id": "overflow_medium_07",
-      "type": "true_false",
-      "prompt": "Checking only the carry flag proves there was no signed overflow.",
-      "answer": false,
-      "explain": "Signed overflow ≠ carry; width bounds the stored result.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "quiz-flags",
-        "label": "Quiz: flags",
-        "steps": [
-          {
-            "challenge": "Quiz: flags"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_medium_07.png"
-      }
-    },
-    {
-      "id": "overflow_medium_08",
-      "type": "multiple_choice",
-      "prompt": "If you do not build clamp logic, overflow tends to…",
-      "choices": [
-        "Saturate to max",
-        "Wrap modulo 2^w",
-        "Grow unlimited bits",
-        "Trap to software always"
-      ],
-      "answer": 1,
-      "explain": "Default is modular wrap unless you build saturation.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ow-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_medium_08.png"
-      }
-    },
-    {
-      "id": "overflow_medium_09",
-      "type": "multiple_choice",
       "prompt": "At width 4, unsigned 12+5 wraps to…",
       "choices": [
         "17",
@@ -1145,680 +128,7 @@
       ],
       "answer": 1,
       "explain": "12+5=17; mod 16 → 1.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "demo-unsigned",
-        "label": "Demo unsigned",
-        "steps": [
-          {
-            "click": "#btn-demo-u"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_medium_09.png"
-      }
-    },
-    {
-      "id": "overflow_medium_10",
-      "type": "multiple_choice",
-      "prompt": "Four-bit signed 0111 + 0001 yields…",
-      "choices": [
-        "+8",
-        "−8",
-        "0",
-        "+7"
-      ],
-      "answer": 1,
-      "explain": "8 is out of range; pattern 1000 means −8.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "s-7-plus-1",
-        "label": "Signed 7+1 @4",
-        "steps": [
-          {
-            "click": "input[name=mode][value=signed]"
-          },
-          {
-            "select": "#w-sel",
-            "value": "4"
-          },
-          {
-            "fill": "#a-in",
-            "value": "7"
-          },
-          {
-            "fill": "#b-in",
-            "value": "1"
-          },
-          {
-            "click": "#btn-add"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_medium_10.png"
-      }
-    },
-    {
-      "id": "overflow_medium_11",
-      "type": "true_false",
-      "prompt": "Checking only the carry flag proves there was no signed overflow.",
-      "answer": false,
-      "explain": "Signed overflow ≠ carry; width bounds the stored result.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "quiz-flags",
-        "label": "Quiz: flags",
-        "steps": [
-          {
-            "challenge": "Quiz: flags"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_medium_11.png"
-      }
-    },
-    {
-      "id": "overflow_medium_12",
-      "type": "multiple_choice",
-      "prompt": "If you do not build clamp logic, overflow tends to…",
-      "choices": [
-        "Saturate to max",
-        "Wrap modulo 2^w",
-        "Grow unlimited bits",
-        "Trap to software always"
-      ],
-      "answer": 1,
-      "explain": "Default is modular wrap unless you build saturation.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ow-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_medium_12.png"
-      }
-    },
-    {
-      "id": "overflow_medium_13",
-      "type": "multiple_choice",
-      "prompt": "At width 4, unsigned 14+3 wraps to…",
-      "choices": [
-        "17",
-        "1",
-        "15",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "14+3=17; mod 16 → 1.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "u-14-plus-3",
-        "label": "Unsigned 14+3 @4",
-        "steps": [
-          {
-            "click": "input[name=mode][value=unsigned]"
-          },
-          {
-            "select": "#w-sel",
-            "value": "4"
-          },
-          {
-            "fill": "#a-in",
-            "value": "14"
-          },
-          {
-            "fill": "#b-in",
-            "value": "3"
-          },
-          {
-            "click": "#btn-add"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_medium_13.png"
-      }
-    },
-    {
-      "id": "overflow_medium_14",
-      "type": "multiple_choice",
-      "prompt": "Four-bit signed 0111 + 0001 yields…",
-      "choices": [
-        "+8",
-        "−8",
-        "0",
-        "+7"
-      ],
-      "answer": 1,
-      "explain": "8 is out of range; pattern 1000 means −8.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "s-7-plus-1",
-        "label": "Signed 7+1 @4",
-        "steps": [
-          {
-            "click": "input[name=mode][value=signed]"
-          },
-          {
-            "select": "#w-sel",
-            "value": "4"
-          },
-          {
-            "fill": "#a-in",
-            "value": "7"
-          },
-          {
-            "fill": "#b-in",
-            "value": "1"
-          },
-          {
-            "click": "#btn-add"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_medium_14.png"
-      }
-    },
-    {
-      "id": "overflow_medium_15",
-      "type": "true_false",
-      "prompt": "Checking only the carry flag proves there was no signed overflow.",
-      "answer": false,
-      "explain": "Signed overflow ≠ carry; width bounds the stored result.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "quiz-flags",
-        "label": "Quiz: flags",
-        "steps": [
-          {
-            "challenge": "Quiz: flags"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_medium_15.png"
-      }
-    },
-    {
-      "id": "overflow_medium_16",
-      "type": "multiple_choice",
-      "prompt": "If you do not build clamp logic, overflow tends to…",
-      "choices": [
-        "Saturate to max",
-        "Wrap modulo 2^w",
-        "Grow unlimited bits",
-        "Trap to software always"
-      ],
-      "answer": 1,
-      "explain": "Default is modular wrap unless you build saturation.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ow-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_medium_16.png"
-      }
-    },
-    {
-      "id": "overflow_medium_17",
-      "type": "multiple_choice",
-      "prompt": "At width 8, unsigned 250+10 wraps to…",
-      "choices": [
-        "260",
-        "4",
-        "255",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "250+10=260; mod 256 → 4.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "demo-unsigned",
-        "label": "Demo unsigned",
-        "steps": [
-          {
-            "click": "#btn-demo-u"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_medium_17.png"
-      }
-    },
-    {
-      "id": "overflow_medium_18",
-      "type": "multiple_choice",
-      "prompt": "Four-bit signed 0111 + 0001 yields…",
-      "choices": [
-        "+8",
-        "−8",
-        "0",
-        "+7"
-      ],
-      "answer": 1,
-      "explain": "8 is out of range; pattern 1000 means −8.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "s-7-plus-1",
-        "label": "Signed 7+1 @4",
-        "steps": [
-          {
-            "click": "input[name=mode][value=signed]"
-          },
-          {
-            "select": "#w-sel",
-            "value": "4"
-          },
-          {
-            "fill": "#a-in",
-            "value": "7"
-          },
-          {
-            "fill": "#b-in",
-            "value": "1"
-          },
-          {
-            "click": "#btn-add"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_medium_18.png"
-      }
-    },
-    {
-      "id": "overflow_medium_19",
-      "type": "true_false",
-      "prompt": "Checking only the carry flag proves there was no signed overflow.",
-      "answer": false,
-      "explain": "Signed overflow ≠ carry; width bounds the stored result.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "quiz-flags",
-        "label": "Quiz: flags",
-        "steps": [
-          {
-            "challenge": "Quiz: flags"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_medium_19.png"
-      }
-    },
-    {
-      "id": "overflow_medium_20",
-      "type": "multiple_choice",
-      "prompt": "If you do not build clamp logic, overflow tends to…",
-      "choices": [
-        "Saturate to max",
-        "Wrap modulo 2^w",
-        "Grow unlimited bits",
-        "Trap to software always"
-      ],
-      "answer": 1,
-      "explain": "Default is modular wrap unless you build saturation.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ow-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_medium_20.png"
-      }
-    },
-    {
-      "id": "overflow_medium_21",
-      "type": "multiple_choice",
-      "prompt": "At width 4, unsigned 12+5 wraps to…",
-      "choices": [
-        "17",
-        "1",
-        "15",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "12+5=17; mod 16 → 1.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "demo-unsigned",
-        "label": "Demo unsigned",
-        "steps": [
-          {
-            "click": "#btn-demo-u"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_medium_21.png"
-      }
-    },
-    {
-      "id": "overflow_medium_22",
-      "type": "multiple_choice",
-      "prompt": "Four-bit signed 0111 + 0001 yields…",
-      "choices": [
-        "+8",
-        "−8",
-        "0",
-        "+7"
-      ],
-      "answer": 1,
-      "explain": "8 is out of range; pattern 1000 means −8.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "s-7-plus-1",
-        "label": "Signed 7+1 @4",
-        "steps": [
-          {
-            "click": "input[name=mode][value=signed]"
-          },
-          {
-            "select": "#w-sel",
-            "value": "4"
-          },
-          {
-            "fill": "#a-in",
-            "value": "7"
-          },
-          {
-            "fill": "#b-in",
-            "value": "1"
-          },
-          {
-            "click": "#btn-add"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_medium_22.png"
-      }
-    },
-    {
-      "id": "overflow_medium_23",
-      "type": "true_false",
-      "prompt": "Checking only the carry flag proves there was no signed overflow.",
-      "answer": false,
-      "explain": "Signed overflow ≠ carry; width bounds the stored result.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "quiz-flags",
-        "label": "Quiz: flags",
-        "steps": [
-          {
-            "challenge": "Quiz: flags"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_medium_23.png"
-      }
-    },
-    {
-      "id": "overflow_medium_24",
-      "type": "multiple_choice",
-      "prompt": "If you do not build clamp logic, overflow tends to…",
-      "choices": [
-        "Saturate to max",
-        "Wrap modulo 2^w",
-        "Grow unlimited bits",
-        "Trap to software always"
-      ],
-      "answer": 1,
-      "explain": "Default is modular wrap unless you build saturation.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ow-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_medium_24.png"
-      }
-    },
-    {
-      "id": "overflow_medium_25",
-      "type": "multiple_choice",
-      "prompt": "At width 4, unsigned 14+3 wraps to…",
-      "choices": [
-        "17",
-        "1",
-        "15",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "14+3=17; mod 16 → 1.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "u-14-plus-3",
-        "label": "Unsigned 14+3 @4",
-        "steps": [
-          {
-            "click": "input[name=mode][value=unsigned]"
-          },
-          {
-            "select": "#w-sel",
-            "value": "4"
-          },
-          {
-            "fill": "#a-in",
-            "value": "14"
-          },
-          {
-            "fill": "#b-in",
-            "value": "3"
-          },
-          {
-            "click": "#btn-add"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_medium_25.png"
-      }
-    },
-    {
-      "id": "overflow_medium_26",
-      "type": "multiple_choice",
-      "prompt": "Four-bit signed 0111 + 0001 yields…",
-      "choices": [
-        "+8",
-        "−8",
-        "0",
-        "+7"
-      ],
-      "answer": 1,
-      "explain": "8 is out of range; pattern 1000 means −8.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "s-7-plus-1",
-        "label": "Signed 7+1 @4",
-        "steps": [
-          {
-            "click": "input[name=mode][value=signed]"
-          },
-          {
-            "select": "#w-sel",
-            "value": "4"
-          },
-          {
-            "fill": "#a-in",
-            "value": "7"
-          },
-          {
-            "fill": "#b-in",
-            "value": "1"
-          },
-          {
-            "click": "#btn-add"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_medium_26.png"
-      }
-    },
-    {
-      "id": "overflow_medium_27",
-      "type": "true_false",
-      "prompt": "Checking only the carry flag proves there was no signed overflow.",
-      "answer": false,
-      "explain": "Signed overflow ≠ carry; width bounds the stored result.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "quiz-flags",
-        "label": "Quiz: flags",
-        "steps": [
-          {
-            "challenge": "Quiz: flags"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_medium_27.png"
-      }
-    },
-    {
-      "id": "overflow_medium_28",
-      "type": "multiple_choice",
-      "prompt": "If you do not build clamp logic, overflow tends to…",
-      "choices": [
-        "Saturate to max",
-        "Wrap modulo 2^w",
-        "Grow unlimited bits",
-        "Trap to software always"
-      ],
-      "answer": 1,
-      "explain": "Default is modular wrap unless you build saturation.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ow-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_medium_28.png"
-      }
-    },
-    {
-      "id": "overflow_medium_29",
-      "type": "multiple_choice",
-      "prompt": "At width 8, unsigned 250+10 wraps to…",
-      "choices": [
-        "260",
-        "4",
-        "255",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "250+10=260; mod 256 → 4.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "demo-unsigned",
-        "label": "Demo unsigned",
-        "steps": [
-          {
-            "click": "#btn-demo-u"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_medium_29.png"
-      }
-    },
-    {
-      "id": "overflow_medium_30",
-      "type": "multiple_choice",
-      "prompt": "Four-bit signed 0111 + 0001 yields…",
-      "choices": [
-        "+8",
-        "−8",
-        "0",
-        "+7"
-      ],
-      "answer": 1,
-      "explain": "8 is out of range; pattern 1000 means −8.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "s-7-plus-1",
-        "label": "Signed 7+1 @4",
-        "steps": [
-          {
-            "click": "input[name=mode][value=signed]"
-          },
-          {
-            "select": "#w-sel",
-            "value": "4"
-          },
-          {
-            "fill": "#a-in",
-            "value": "7"
-          },
-          {
-            "fill": "#b-in",
-            "value": "1"
-          },
-          {
-            "click": "#btn-add"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/overflow_medium_30.mp4",
-        "poster": "media/images/overflow_medium_30-frame.png",
-        "figure": "media/images/overflow_medium_30.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "overflow_hard_01",
@@ -1832,20 +142,7 @@
       ],
       "answer": 1,
       "explain": "XOR of carry-in and carry-out of the MSB flags signed overflow.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "demo-signed",
-        "label": "Demo signed",
-        "steps": [
-          {
-            "click": "#btn-demo-s"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_hard_01.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "overflow_hard_02",
@@ -1859,20 +156,7 @@
       ],
       "answer": 1,
       "explain": "Modular: −1 ≡ 255 mod 256.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "demo-unsigned",
-        "label": "Demo unsigned",
-        "steps": [
-          {
-            "click": "#btn-demo-u"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_hard_02.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "overflow_hard_03",
@@ -1880,20 +164,7 @@
       "prompt": "You must know width when verifying an adder result.",
       "answer": true,
       "explain": "Sat ≠ wrap; stored bits are modulo the width.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ow-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_hard_03.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "overflow_hard_04",
@@ -1907,704 +178,1071 @@
       ],
       "answer": 1,
       "explain": "Disagreeing overflow policies corrupt multi-block datapaths.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ow-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/overflow_hard_04.mp4",
-        "poster": "media/images/overflow_hard_04-frame.png",
-        "figure": "media/images/overflow_hard_04.png"
-      }
+      "difficulty": "hard"
     },
     {
-      "id": "overflow_hard_05",
       "type": "multiple_choice",
-      "prompt": "Signed overflow for add is often detected when…",
+      "prompt": "Unsigned wrap add at width 4: 3+5 yields…",
       "choices": [
-        "Carry into MSB equals carry out of MSB (no overflow)",
-        "Carry into MSB differs from carry out of MSB",
-        "Any carry out of LSB",
-        "Result equals zero"
+        "8",
+        "8",
+        "8",
+        "0"
       ],
       "answer": 1,
-      "explain": "XOR of carry-in and carry-out of the MSB flags signed overflow.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "demo-signed",
-        "label": "Demo signed",
-        "steps": [
-          {
-            "click": "#btn-demo-s"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_hard_05.png"
-      }
+      "explain": "Mod 16 → 8.",
+      "difficulty": "easy",
+      "id": "overflow_easy_05"
     },
     {
-      "id": "overflow_hard_06",
       "type": "multiple_choice",
-      "prompt": "Eight-bit unsigned decrement past zero yields…",
+      "prompt": "Unsigned wrap add at width 4: 7+1 yields…",
       "choices": [
-        "−1",
-        "0xFF (255)",
-        "0x80",
-        "0x01"
+        "8",
+        "8",
+        "8",
+        "0"
       ],
       "answer": 1,
-      "explain": "Modular: −1 ≡ 255 mod 256.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "demo-unsigned",
-        "label": "Demo unsigned",
-        "steps": [
-          {
-            "click": "#btn-demo-u"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_hard_06.png"
-      }
+      "explain": "Mod 16 → 8.",
+      "difficulty": "easy",
+      "id": "overflow_easy_06"
     },
     {
-      "id": "overflow_hard_07",
-      "type": "true_false",
-      "prompt": "You must know width when verifying an adder result.",
-      "answer": true,
-      "explain": "Sat ≠ wrap; stored bits are modulo the width.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ow-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/overflow_hard_07.mp4",
-        "poster": "media/images/overflow_hard_07-frame.png",
-        "figure": "media/images/overflow_hard_07.png"
-      }
-    },
-    {
-      "id": "overflow_hard_08",
       "type": "multiple_choice",
-      "prompt": "Pick the best reason overflow policy matters.",
+      "prompt": "Unsigned wrap add at width 4: 9+9 yields…",
       "choices": [
-        "Faster synthesis always",
-        "Silent numeric disagreement / hard-to-find bugs",
-        "Removes the need for width",
-        "Only affects ASCII dumps"
+        "18",
+        "2",
+        "15",
+        "2"
       ],
       "answer": 1,
-      "explain": "Disagreeing overflow policies corrupt multi-block datapaths.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ow-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_hard_08.png"
-      }
+      "explain": "Mod 16 → 2.",
+      "difficulty": "easy",
+      "id": "overflow_easy_07"
     },
     {
-      "id": "overflow_hard_09",
       "type": "multiple_choice",
-      "prompt": "Signed overflow for add is often detected when…",
+      "prompt": "Unsigned wrap add at width 4: 15+2 yields…",
       "choices": [
-        "Carry into MSB equals carry out of MSB (no overflow)",
-        "Carry into MSB differs from carry out of MSB",
-        "Any carry out of LSB",
-        "Result equals zero"
+        "17",
+        "1",
+        "15",
+        "1"
       ],
       "answer": 1,
-      "explain": "XOR of carry-in and carry-out of the MSB flags signed overflow.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "demo-signed",
-        "label": "Demo signed",
-        "steps": [
-          {
-            "click": "#btn-demo-s"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_hard_09.png"
-      }
+      "explain": "Mod 16 → 1.",
+      "difficulty": "easy",
+      "id": "overflow_easy_08"
     },
     {
-      "id": "overflow_hard_10",
       "type": "multiple_choice",
-      "prompt": "Eight-bit unsigned decrement past zero yields…",
+      "prompt": "Unsigned wrap add at width 4: 15+1 yields…",
       "choices": [
-        "−1",
-        "0xFF (255)",
-        "0x80",
-        "0x01"
+        "16",
+        "0",
+        "15",
+        "0"
       ],
       "answer": 1,
-      "explain": "Modular: −1 ≡ 255 mod 256.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "demo-unsigned",
-        "label": "Demo unsigned",
-        "steps": [
-          {
-            "click": "#btn-demo-u"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_hard_10.png"
-      }
+      "explain": "Mod 16 → 0.",
+      "difficulty": "easy",
+      "id": "overflow_easy_09"
     },
     {
-      "id": "overflow_hard_11",
-      "type": "true_false",
-      "prompt": "You must know width when verifying an adder result.",
-      "answer": true,
-      "explain": "Sat ≠ wrap; stored bits are modulo the width.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ow-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_hard_11.png"
-      }
-    },
-    {
-      "id": "overflow_hard_12",
       "type": "multiple_choice",
-      "prompt": "Pick the best reason overflow policy matters.",
+      "prompt": "Unsigned wrap add at width 4: 8+8 yields…",
       "choices": [
-        "Faster synthesis always",
-        "Silent numeric disagreement / hard-to-find bugs",
-        "Removes the need for width",
-        "Only affects ASCII dumps"
+        "16",
+        "0",
+        "15",
+        "0"
       ],
       "answer": 1,
-      "explain": "Disagreeing overflow policies corrupt multi-block datapaths.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ow-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/overflow_hard_12.mp4",
-        "poster": "media/images/overflow_hard_12-frame.png",
-        "figure": "media/images/overflow_hard_12.png"
-      }
+      "explain": "Mod 16 → 0.",
+      "difficulty": "easy",
+      "id": "overflow_easy_10"
     },
     {
-      "id": "overflow_hard_13",
       "type": "multiple_choice",
-      "prompt": "Signed overflow for add is often detected when…",
+      "prompt": "Unsigned wrap add at width 5: 3+5 yields…",
       "choices": [
-        "Carry into MSB equals carry out of MSB (no overflow)",
-        "Carry into MSB differs from carry out of MSB",
-        "Any carry out of LSB",
-        "Result equals zero"
+        "8",
+        "8",
+        "8",
+        "8"
       ],
       "answer": 1,
-      "explain": "XOR of carry-in and carry-out of the MSB flags signed overflow.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "demo-signed",
-        "label": "Demo signed",
-        "steps": [
-          {
-            "click": "#btn-demo-s"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_hard_13.png"
-      }
+      "explain": "Mod 32 → 8.",
+      "difficulty": "easy",
+      "id": "overflow_easy_11"
     },
     {
-      "id": "overflow_hard_14",
       "type": "multiple_choice",
-      "prompt": "Eight-bit unsigned decrement past zero yields…",
+      "prompt": "Unsigned wrap add at width 5: 7+1 yields…",
       "choices": [
-        "−1",
-        "0xFF (255)",
-        "0x80",
-        "0x01"
+        "8",
+        "8",
+        "8",
+        "8"
       ],
       "answer": 1,
-      "explain": "Modular: −1 ≡ 255 mod 256.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "demo-unsigned",
-        "label": "Demo unsigned",
-        "steps": [
-          {
-            "click": "#btn-demo-u"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_hard_14.png"
-      }
+      "explain": "Mod 32 → 8.",
+      "difficulty": "easy",
+      "id": "overflow_easy_12"
     },
     {
-      "id": "overflow_hard_15",
-      "type": "true_false",
-      "prompt": "You must know width when verifying an adder result.",
-      "answer": true,
-      "explain": "Sat ≠ wrap; stored bits are modulo the width.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ow-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_hard_15.png"
-      }
-    },
-    {
-      "id": "overflow_hard_16",
       "type": "multiple_choice",
-      "prompt": "Pick the best reason overflow policy matters.",
+      "prompt": "Unsigned wrap add at width 5: 9+9 yields…",
       "choices": [
-        "Faster synthesis always",
-        "Silent numeric disagreement / hard-to-find bugs",
-        "Removes the need for width",
-        "Only affects ASCII dumps"
+        "18",
+        "18",
+        "18",
+        "2"
       ],
       "answer": 1,
-      "explain": "Disagreeing overflow policies corrupt multi-block datapaths.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ow-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_hard_16.png"
-      }
+      "explain": "Mod 32 → 18.",
+      "difficulty": "easy",
+      "id": "overflow_easy_13"
     },
     {
-      "id": "overflow_hard_17",
       "type": "multiple_choice",
-      "prompt": "Signed overflow for add is often detected when…",
+      "prompt": "Unsigned wrap add at width 5: 15+2 yields…",
       "choices": [
-        "Carry into MSB equals carry out of MSB (no overflow)",
-        "Carry into MSB differs from carry out of MSB",
-        "Any carry out of LSB",
-        "Result equals zero"
+        "17",
+        "17",
+        "17",
+        "1"
       ],
       "answer": 1,
-      "explain": "XOR of carry-in and carry-out of the MSB flags signed overflow.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "demo-signed",
-        "label": "Demo signed",
-        "steps": [
-          {
-            "click": "#btn-demo-s"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_hard_17.png"
-      }
+      "explain": "Mod 32 → 17.",
+      "difficulty": "easy",
+      "id": "overflow_easy_14"
     },
     {
-      "id": "overflow_hard_18",
       "type": "multiple_choice",
-      "prompt": "Eight-bit unsigned decrement past zero yields…",
+      "prompt": "Unsigned wrap add at width 5: 31+1 yields…",
       "choices": [
-        "−1",
-        "0xFF (255)",
-        "0x80",
-        "0x01"
+        "32",
+        "0",
+        "31",
+        "0"
       ],
       "answer": 1,
-      "explain": "Modular: −1 ≡ 255 mod 256.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "demo-unsigned",
-        "label": "Demo unsigned",
-        "steps": [
-          {
-            "click": "#btn-demo-u"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/overflow_hard_18.mp4",
-        "poster": "media/images/overflow_hard_18-frame.png",
-        "figure": "media/images/overflow_hard_18.png"
-      }
+      "explain": "Mod 32 → 0.",
+      "difficulty": "easy",
+      "id": "overflow_easy_15"
     },
     {
-      "id": "overflow_hard_19",
-      "type": "true_false",
-      "prompt": "You must know width when verifying an adder result.",
-      "answer": true,
-      "explain": "Sat ≠ wrap; stored bits are modulo the width.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ow-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_hard_19.png"
-      }
-    },
-    {
-      "id": "overflow_hard_20",
       "type": "multiple_choice",
-      "prompt": "Pick the best reason overflow policy matters.",
+      "prompt": "Unsigned wrap add at width 5: 16+16 yields…",
       "choices": [
-        "Faster synthesis always",
-        "Silent numeric disagreement / hard-to-find bugs",
-        "Removes the need for width",
-        "Only affects ASCII dumps"
+        "32",
+        "0",
+        "31",
+        "0"
       ],
       "answer": 1,
-      "explain": "Disagreeing overflow policies corrupt multi-block datapaths.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ow-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_hard_20.png"
-      }
+      "explain": "Mod 32 → 0.",
+      "difficulty": "easy",
+      "id": "overflow_easy_16"
     },
     {
-      "id": "overflow_hard_21",
       "type": "multiple_choice",
-      "prompt": "Signed overflow for add is often detected when…",
+      "prompt": "Unsigned wrap add at width 6: 3+5 yields…",
       "choices": [
-        "Carry into MSB equals carry out of MSB (no overflow)",
-        "Carry into MSB differs from carry out of MSB",
-        "Any carry out of LSB",
-        "Result equals zero"
+        "8",
+        "8",
+        "8",
+        "8"
       ],
       "answer": 1,
-      "explain": "XOR of carry-in and carry-out of the MSB flags signed overflow.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "demo-signed",
-        "label": "Demo signed",
-        "steps": [
-          {
-            "click": "#btn-demo-s"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_hard_21.png"
-      }
+      "explain": "Mod 64 → 8.",
+      "difficulty": "easy",
+      "id": "overflow_easy_17"
     },
     {
-      "id": "overflow_hard_22",
       "type": "multiple_choice",
-      "prompt": "Eight-bit unsigned decrement past zero yields…",
+      "prompt": "Unsigned wrap add at width 6: 7+1 yields…",
       "choices": [
-        "−1",
-        "0xFF (255)",
-        "0x80",
-        "0x01"
+        "8",
+        "8",
+        "8",
+        "8"
       ],
       "answer": 1,
-      "explain": "Modular: −1 ≡ 255 mod 256.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "demo-unsigned",
-        "label": "Demo unsigned",
-        "steps": [
-          {
-            "click": "#btn-demo-u"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_hard_22.png"
-      }
+      "explain": "Mod 64 → 8.",
+      "difficulty": "easy",
+      "id": "overflow_easy_18"
     },
     {
-      "id": "overflow_hard_23",
-      "type": "true_false",
-      "prompt": "You must know width when verifying an adder result.",
-      "answer": true,
-      "explain": "Sat ≠ wrap; stored bits are modulo the width.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ow-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_hard_23.png"
-      }
-    },
-    {
-      "id": "overflow_hard_24",
       "type": "multiple_choice",
-      "prompt": "Pick the best reason overflow policy matters.",
+      "prompt": "Unsigned wrap add at width 6: 9+9 yields…",
       "choices": [
-        "Faster synthesis always",
-        "Silent numeric disagreement / hard-to-find bugs",
-        "Removes the need for width",
-        "Only affects ASCII dumps"
+        "18",
+        "18",
+        "18",
+        "18"
       ],
       "answer": 1,
-      "explain": "Disagreeing overflow policies corrupt multi-block datapaths.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ow-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/overflow_hard_24.mp4",
-        "poster": "media/images/overflow_hard_24-frame.png",
-        "figure": "media/images/overflow_hard_24.png"
-      }
+      "explain": "Mod 64 → 18.",
+      "difficulty": "easy",
+      "id": "overflow_easy_19"
     },
     {
-      "id": "overflow_hard_25",
       "type": "multiple_choice",
-      "prompt": "Signed overflow for add is often detected when…",
+      "prompt": "Unsigned wrap add at width 6: 15+2 yields…",
       "choices": [
-        "Carry into MSB equals carry out of MSB (no overflow)",
-        "Carry into MSB differs from carry out of MSB",
-        "Any carry out of LSB",
-        "Result equals zero"
+        "17",
+        "17",
+        "17",
+        "17"
       ],
       "answer": 1,
-      "explain": "XOR of carry-in and carry-out of the MSB flags signed overflow.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "demo-signed",
-        "label": "Demo signed",
-        "steps": [
-          {
-            "click": "#btn-demo-s"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_hard_25.png"
-      }
+      "explain": "Mod 64 → 17.",
+      "difficulty": "easy",
+      "id": "overflow_easy_20"
     },
     {
-      "id": "overflow_hard_26",
       "type": "multiple_choice",
-      "prompt": "Eight-bit unsigned decrement past zero yields…",
+      "prompt": "Unsigned wrap add at width 6: 63+1 yields…",
       "choices": [
-        "−1",
-        "0xFF (255)",
-        "0x80",
-        "0x01"
+        "64",
+        "0",
+        "63",
+        "0"
       ],
       "answer": 1,
-      "explain": "Modular: −1 ≡ 255 mod 256.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "demo-unsigned",
-        "label": "Demo unsigned",
-        "steps": [
-          {
-            "click": "#btn-demo-u"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_hard_26.png"
-      }
+      "explain": "Mod 64 → 0.",
+      "difficulty": "easy",
+      "id": "overflow_easy_21"
     },
     {
-      "id": "overflow_hard_27",
-      "type": "true_false",
-      "prompt": "You must know width when verifying an adder result.",
-      "answer": true,
-      "explain": "Sat ≠ wrap; stored bits are modulo the width.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ow-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_hard_27.png"
-      }
-    },
-    {
-      "id": "overflow_hard_28",
       "type": "multiple_choice",
-      "prompt": "Pick the best reason overflow policy matters.",
+      "prompt": "Unsigned wrap add at width 6: 32+32 yields…",
       "choices": [
-        "Faster synthesis always",
-        "Silent numeric disagreement / hard-to-find bugs",
-        "Removes the need for width",
-        "Only affects ASCII dumps"
+        "64",
+        "0",
+        "63",
+        "0"
       ],
       "answer": 1,
-      "explain": "Disagreeing overflow policies corrupt multi-block datapaths.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#ow-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_hard_28.png"
-      }
+      "explain": "Mod 64 → 0.",
+      "difficulty": "easy",
+      "id": "overflow_easy_22"
     },
     {
-      "id": "overflow_hard_29",
       "type": "multiple_choice",
-      "prompt": "Signed overflow for add is often detected when…",
+      "prompt": "Unsigned wrap add at width 7: 3+5 yields…",
       "choices": [
-        "Carry into MSB equals carry out of MSB (no overflow)",
-        "Carry into MSB differs from carry out of MSB",
-        "Any carry out of LSB",
-        "Result equals zero"
+        "8",
+        "8",
+        "8",
+        "8"
       ],
       "answer": 1,
-      "explain": "XOR of carry-in and carry-out of the MSB flags signed overflow.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "demo-signed",
-        "label": "Demo signed",
-        "steps": [
-          {
-            "click": "#btn-demo-s"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/overflow_hard_29.mp4",
-        "poster": "media/images/overflow_hard_29-frame.png",
-        "figure": "media/images/overflow_hard_29.png"
-      }
+      "explain": "Mod 128 → 8.",
+      "difficulty": "easy",
+      "id": "overflow_easy_23"
     },
     {
-      "id": "overflow_hard_30",
       "type": "multiple_choice",
-      "prompt": "Eight-bit unsigned decrement past zero yields…",
+      "prompt": "Unsigned wrap add at width 7: 7+1 yields…",
       "choices": [
-        "−1",
-        "0xFF (255)",
-        "0x80",
-        "0x01"
+        "8",
+        "8",
+        "8",
+        "8"
       ],
       "answer": 1,
-      "explain": "Modular: −1 ≡ 255 mod 256.",
+      "explain": "Mod 128 → 8.",
+      "difficulty": "easy",
+      "id": "overflow_easy_24"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 7: 9+9 yields…",
+      "choices": [
+        "18",
+        "18",
+        "18",
+        "18"
+      ],
+      "answer": 1,
+      "explain": "Mod 128 → 18.",
+      "difficulty": "easy",
+      "id": "overflow_easy_25"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 7: 15+2 yields…",
+      "choices": [
+        "17",
+        "17",
+        "17",
+        "17"
+      ],
+      "answer": 1,
+      "explain": "Mod 128 → 17.",
+      "difficulty": "easy",
+      "id": "overflow_easy_26"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 7: 127+1 yields…",
+      "choices": [
+        "128",
+        "0",
+        "127",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 128 → 0.",
+      "difficulty": "easy",
+      "id": "overflow_easy_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 7: 64+64 yields…",
+      "choices": [
+        "128",
+        "0",
+        "127",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 128 → 0.",
+      "difficulty": "easy",
+      "id": "overflow_easy_28"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 8: 3+5 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Mod 256 → 8.",
+      "difficulty": "easy",
+      "id": "overflow_easy_29"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 8: 7+1 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Mod 256 → 8.",
+      "difficulty": "easy",
+      "id": "overflow_easy_30"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 4: 3+5 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 16 → 8.",
+      "difficulty": "medium",
+      "id": "overflow_medium_07"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 4: 7+1 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 16 → 8.",
+      "difficulty": "medium",
+      "id": "overflow_medium_08"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 4: 9+9 yields…",
+      "choices": [
+        "18",
+        "2",
+        "15",
+        "2"
+      ],
+      "answer": 1,
+      "explain": "Mod 16 → 2.",
+      "difficulty": "medium",
+      "id": "overflow_medium_09"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 4: 15+2 yields…",
+      "choices": [
+        "17",
+        "1",
+        "15",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "Mod 16 → 1.",
+      "difficulty": "medium",
+      "id": "overflow_medium_10"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 4: 15+1 yields…",
+      "choices": [
+        "16",
+        "0",
+        "15",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 16 → 0.",
+      "difficulty": "medium",
+      "id": "overflow_medium_11"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 4: 8+8 yields…",
+      "choices": [
+        "16",
+        "0",
+        "15",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 16 → 0.",
+      "difficulty": "medium",
+      "id": "overflow_medium_12"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 5: 3+5 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Mod 32 → 8.",
+      "difficulty": "medium",
+      "id": "overflow_medium_13"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 5: 7+1 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Mod 32 → 8.",
+      "difficulty": "medium",
+      "id": "overflow_medium_14"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 5: 9+9 yields…",
+      "choices": [
+        "18",
+        "18",
+        "18",
+        "2"
+      ],
+      "answer": 1,
+      "explain": "Mod 32 → 18.",
+      "difficulty": "medium",
+      "id": "overflow_medium_15"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 5: 15+2 yields…",
+      "choices": [
+        "17",
+        "17",
+        "17",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "Mod 32 → 17.",
+      "difficulty": "medium",
+      "id": "overflow_medium_16"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 5: 31+1 yields…",
+      "choices": [
+        "32",
+        "0",
+        "31",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 32 → 0.",
+      "difficulty": "medium",
+      "id": "overflow_medium_17"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 5: 16+16 yields…",
+      "choices": [
+        "32",
+        "0",
+        "31",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 32 → 0.",
+      "difficulty": "medium",
+      "id": "overflow_medium_18"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 6: 3+5 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Mod 64 → 8.",
+      "difficulty": "medium",
+      "id": "overflow_medium_19"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 6: 7+1 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Mod 64 → 8.",
+      "difficulty": "medium",
+      "id": "overflow_medium_20"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 6: 9+9 yields…",
+      "choices": [
+        "18",
+        "18",
+        "18",
+        "18"
+      ],
+      "answer": 1,
+      "explain": "Mod 64 → 18.",
+      "difficulty": "medium",
+      "id": "overflow_medium_21"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 6: 15+2 yields…",
+      "choices": [
+        "17",
+        "17",
+        "17",
+        "17"
+      ],
+      "answer": 1,
+      "explain": "Mod 64 → 17.",
+      "difficulty": "medium",
+      "id": "overflow_medium_22"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 6: 63+1 yields…",
+      "choices": [
+        "64",
+        "0",
+        "63",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 64 → 0.",
+      "difficulty": "medium",
+      "id": "overflow_medium_23"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 6: 32+32 yields…",
+      "choices": [
+        "64",
+        "0",
+        "63",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 64 → 0.",
+      "difficulty": "medium",
+      "id": "overflow_medium_24"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 7: 3+5 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Mod 128 → 8.",
+      "difficulty": "medium",
+      "id": "overflow_medium_25"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 7: 7+1 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Mod 128 → 8.",
+      "difficulty": "medium",
+      "id": "overflow_medium_26"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 7: 9+9 yields…",
+      "choices": [
+        "18",
+        "18",
+        "18",
+        "18"
+      ],
+      "answer": 1,
+      "explain": "Mod 128 → 18.",
+      "difficulty": "medium",
+      "id": "overflow_medium_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 7: 15+2 yields…",
+      "choices": [
+        "17",
+        "17",
+        "17",
+        "17"
+      ],
+      "answer": 1,
+      "explain": "Mod 128 → 17.",
+      "difficulty": "medium",
+      "id": "overflow_medium_28"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 7: 127+1 yields…",
+      "choices": [
+        "128",
+        "0",
+        "127",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 128 → 0.",
+      "difficulty": "medium",
+      "id": "overflow_medium_29"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 7: 64+64 yields…",
+      "choices": [
+        "128",
+        "0",
+        "127",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 128 → 0.",
+      "difficulty": "medium",
+      "id": "overflow_medium_30"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 4: 3+5 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 16 → 8.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "overflow-wrap",
-        "key": "demo-unsigned",
-        "label": "Demo unsigned",
-        "steps": [
-          {
-            "click": "#btn-demo-u"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/overflow_hard_30.png"
-      }
+      "id": "overflow_hard_05"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 4: 7+1 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 16 → 8.",
+      "difficulty": "hard",
+      "id": "overflow_hard_06"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 4: 9+9 yields…",
+      "choices": [
+        "18",
+        "2",
+        "15",
+        "2"
+      ],
+      "answer": 1,
+      "explain": "Mod 16 → 2.",
+      "difficulty": "hard",
+      "id": "overflow_hard_07"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 4: 15+2 yields…",
+      "choices": [
+        "17",
+        "1",
+        "15",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "Mod 16 → 1.",
+      "difficulty": "hard",
+      "id": "overflow_hard_08"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 4: 15+1 yields…",
+      "choices": [
+        "16",
+        "0",
+        "15",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 16 → 0.",
+      "difficulty": "hard",
+      "id": "overflow_hard_09"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 4: 8+8 yields…",
+      "choices": [
+        "16",
+        "0",
+        "15",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 16 → 0.",
+      "difficulty": "hard",
+      "id": "overflow_hard_10"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 5: 3+5 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Mod 32 → 8.",
+      "difficulty": "hard",
+      "id": "overflow_hard_11"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 5: 7+1 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Mod 32 → 8.",
+      "difficulty": "hard",
+      "id": "overflow_hard_12"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 5: 9+9 yields…",
+      "choices": [
+        "18",
+        "18",
+        "18",
+        "2"
+      ],
+      "answer": 1,
+      "explain": "Mod 32 → 18.",
+      "difficulty": "hard",
+      "id": "overflow_hard_13"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 5: 15+2 yields…",
+      "choices": [
+        "17",
+        "17",
+        "17",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "Mod 32 → 17.",
+      "difficulty": "hard",
+      "id": "overflow_hard_14"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 5: 31+1 yields…",
+      "choices": [
+        "32",
+        "0",
+        "31",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 32 → 0.",
+      "difficulty": "hard",
+      "id": "overflow_hard_15"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 5: 16+16 yields…",
+      "choices": [
+        "32",
+        "0",
+        "31",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 32 → 0.",
+      "difficulty": "hard",
+      "id": "overflow_hard_16"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 6: 3+5 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Mod 64 → 8.",
+      "difficulty": "hard",
+      "id": "overflow_hard_17"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 6: 7+1 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Mod 64 → 8.",
+      "difficulty": "hard",
+      "id": "overflow_hard_18"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 6: 9+9 yields…",
+      "choices": [
+        "18",
+        "18",
+        "18",
+        "18"
+      ],
+      "answer": 1,
+      "explain": "Mod 64 → 18.",
+      "difficulty": "hard",
+      "id": "overflow_hard_19"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 6: 15+2 yields…",
+      "choices": [
+        "17",
+        "17",
+        "17",
+        "17"
+      ],
+      "answer": 1,
+      "explain": "Mod 64 → 17.",
+      "difficulty": "hard",
+      "id": "overflow_hard_20"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 6: 63+1 yields…",
+      "choices": [
+        "64",
+        "0",
+        "63",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 64 → 0.",
+      "difficulty": "hard",
+      "id": "overflow_hard_21"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 6: 32+32 yields…",
+      "choices": [
+        "64",
+        "0",
+        "63",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 64 → 0.",
+      "difficulty": "hard",
+      "id": "overflow_hard_22"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 7: 3+5 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Mod 128 → 8.",
+      "difficulty": "hard",
+      "id": "overflow_hard_23"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 7: 7+1 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Mod 128 → 8.",
+      "difficulty": "hard",
+      "id": "overflow_hard_24"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 7: 9+9 yields…",
+      "choices": [
+        "18",
+        "18",
+        "18",
+        "18"
+      ],
+      "answer": 1,
+      "explain": "Mod 128 → 18.",
+      "difficulty": "hard",
+      "id": "overflow_hard_25"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 7: 15+2 yields…",
+      "choices": [
+        "17",
+        "17",
+        "17",
+        "17"
+      ],
+      "answer": 1,
+      "explain": "Mod 128 → 17.",
+      "difficulty": "hard",
+      "id": "overflow_hard_26"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 7: 127+1 yields…",
+      "choices": [
+        "128",
+        "0",
+        "127",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 128 → 0.",
+      "difficulty": "hard",
+      "id": "overflow_hard_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 7: 64+64 yields…",
+      "choices": [
+        "128",
+        "0",
+        "127",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 128 → 0.",
+      "difficulty": "hard",
+      "id": "overflow_hard_28"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 8: 3+5 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Mod 256 → 8.",
+      "difficulty": "hard",
+      "id": "overflow_hard_29"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 8: 7+1 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Mod 256 → 8.",
+      "difficulty": "hard",
+      "id": "overflow_hard_30"
     }
   ]
 }

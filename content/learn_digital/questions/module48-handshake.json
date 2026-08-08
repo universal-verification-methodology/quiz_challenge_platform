@@ -14,23 +14,7 @@
       ],
       "answer": 0,
       "explain": "fire = valid && ready.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_easy_01.mp4",
-        "poster": "media/images/handshake_easy_01-frame.png",
-        "figure": "media/images/handshake_easy_01.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "handshake_easy_02",
@@ -44,23 +28,7 @@
       ],
       "answer": 0,
       "explain": "Both assert preset.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_easy_02.mp4",
-        "poster": "media/images/handshake_easy_02-frame.png",
-        "figure": "media/images/handshake_easy_02.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "handshake_easy_03",
@@ -74,23 +42,7 @@
       ],
       "answer": 0,
       "explain": "Backpressure stability rule.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_easy_03.mp4",
-        "poster": "media/images/handshake_easy_03-frame.png",
-        "figure": "media/images/handshake_easy_03.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "handshake_easy_04",
@@ -98,767 +50,7 @@
       "prompt": "A transfer needs only ready without valid.",
       "answer": false,
       "explain": "Both must be high.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_easy_04.mp4",
-        "poster": "media/images/handshake_easy_04-frame.png",
-        "figure": "media/images/handshake_easy_04.png"
-      }
-    },
-    {
-      "id": "handshake_easy_05",
-      "type": "multiple_choice",
-      "prompt": "A beat transfers when…",
-      "choices": [
-        "valid and ready are both 1 in the same cycle",
-        "only valid is 1",
-        "only ready is 1",
-        "the clock stops"
-      ],
-      "answer": 0,
-      "explain": "fire = valid && ready.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_easy_05.mp4",
-        "poster": "media/images/handshake_easy_05-frame.png",
-        "figure": "media/images/handshake_easy_05.png"
-      }
-    },
-    {
-      "id": "handshake_easy_06",
-      "type": "multiple_choice",
-      "prompt": "Initial teaching beat shows…",
-      "choices": [
-        "valid=ready=1, data 0xA5 — one transfer",
-        "no signals asserted",
-        "ready only, no valid",
-        "three back-to-back beats"
-      ],
-      "answer": 0,
-      "explain": "Both assert preset.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_easy_06.mp4",
-        "poster": "media/images/handshake_easy_06-frame.png",
-        "figure": "media/images/handshake_easy_06.png"
-      }
-    },
-    {
-      "id": "handshake_easy_07",
-      "type": "multiple_choice",
-      "prompt": "When sink is not ready…",
-      "choices": [
-        "holds valid and data stable until ready rises",
-        "drops valid immediately every cycle",
-        "loses the beat forever",
-        "drives high-Z on the bus"
-      ],
-      "answer": 0,
-      "explain": "Backpressure stability rule.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_easy_07.mp4",
-        "poster": "media/images/handshake_easy_07-frame.png",
-        "figure": "media/images/handshake_easy_07.png"
-      }
-    },
-    {
-      "id": "handshake_easy_08",
-      "type": "true_false",
-      "prompt": "A transfer needs only ready without valid.",
-      "answer": false,
-      "explain": "Both must be high.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_easy_08.mp4",
-        "poster": "media/images/handshake_easy_08-frame.png",
-        "figure": "media/images/handshake_easy_08.png"
-      }
-    },
-    {
-      "id": "handshake_easy_09",
-      "type": "multiple_choice",
-      "prompt": "A beat transfers when…",
-      "choices": [
-        "valid and ready are both 1 in the same cycle",
-        "only valid is 1",
-        "only ready is 1",
-        "the clock stops"
-      ],
-      "answer": 0,
-      "explain": "fire = valid && ready.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_easy_09.mp4",
-        "poster": "media/images/handshake_easy_09-frame.png",
-        "figure": "media/images/handshake_easy_09.png"
-      }
-    },
-    {
-      "id": "handshake_easy_10",
-      "type": "multiple_choice",
-      "prompt": "Initial teaching beat shows…",
-      "choices": [
-        "valid=ready=1, data 0xA5 — one transfer",
-        "no signals asserted",
-        "ready only, no valid",
-        "three back-to-back beats"
-      ],
-      "answer": 0,
-      "explain": "Both assert preset.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_easy_10.mp4",
-        "poster": "media/images/handshake_easy_10-frame.png",
-        "figure": "media/images/handshake_easy_10.png"
-      }
-    },
-    {
-      "id": "handshake_easy_11",
-      "type": "multiple_choice",
-      "prompt": "When sink is not ready…",
-      "choices": [
-        "holds valid and data stable until ready rises",
-        "drops valid immediately every cycle",
-        "loses the beat forever",
-        "drives high-Z on the bus"
-      ],
-      "answer": 0,
-      "explain": "Backpressure stability rule.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_easy_11.mp4",
-        "poster": "media/images/handshake_easy_11-frame.png",
-        "figure": "media/images/handshake_easy_11.png"
-      }
-    },
-    {
-      "id": "handshake_easy_12",
-      "type": "true_false",
-      "prompt": "A transfer needs only ready without valid.",
-      "answer": false,
-      "explain": "Both must be high.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_easy_12.mp4",
-        "poster": "media/images/handshake_easy_12-frame.png",
-        "figure": "media/images/handshake_easy_12.png"
-      }
-    },
-    {
-      "id": "handshake_easy_13",
-      "type": "multiple_choice",
-      "prompt": "A beat transfers when…",
-      "choices": [
-        "valid and ready are both 1 in the same cycle",
-        "only valid is 1",
-        "only ready is 1",
-        "the clock stops"
-      ],
-      "answer": 0,
-      "explain": "fire = valid && ready.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_easy_13.mp4",
-        "poster": "media/images/handshake_easy_13-frame.png",
-        "figure": "media/images/handshake_easy_13.png"
-      }
-    },
-    {
-      "id": "handshake_easy_14",
-      "type": "multiple_choice",
-      "prompt": "Initial teaching beat shows…",
-      "choices": [
-        "valid=ready=1, data 0xA5 — one transfer",
-        "no signals asserted",
-        "ready only, no valid",
-        "three back-to-back beats"
-      ],
-      "answer": 0,
-      "explain": "Both assert preset.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_easy_14.mp4",
-        "poster": "media/images/handshake_easy_14-frame.png",
-        "figure": "media/images/handshake_easy_14.png"
-      }
-    },
-    {
-      "id": "handshake_easy_15",
-      "type": "multiple_choice",
-      "prompt": "When sink is not ready…",
-      "choices": [
-        "holds valid and data stable until ready rises",
-        "drops valid immediately every cycle",
-        "loses the beat forever",
-        "drives high-Z on the bus"
-      ],
-      "answer": 0,
-      "explain": "Backpressure stability rule.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_easy_15.mp4",
-        "poster": "media/images/handshake_easy_15-frame.png",
-        "figure": "media/images/handshake_easy_15.png"
-      }
-    },
-    {
-      "id": "handshake_easy_16",
-      "type": "true_false",
-      "prompt": "A transfer needs only ready without valid.",
-      "answer": false,
-      "explain": "Both must be high.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_easy_16.mp4",
-        "poster": "media/images/handshake_easy_16-frame.png",
-        "figure": "media/images/handshake_easy_16.png"
-      }
-    },
-    {
-      "id": "handshake_easy_17",
-      "type": "multiple_choice",
-      "prompt": "A beat transfers when…",
-      "choices": [
-        "valid and ready are both 1 in the same cycle",
-        "only valid is 1",
-        "only ready is 1",
-        "the clock stops"
-      ],
-      "answer": 0,
-      "explain": "fire = valid && ready.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_easy_17.mp4",
-        "poster": "media/images/handshake_easy_17-frame.png",
-        "figure": "media/images/handshake_easy_17.png"
-      }
-    },
-    {
-      "id": "handshake_easy_18",
-      "type": "multiple_choice",
-      "prompt": "Initial teaching beat shows…",
-      "choices": [
-        "valid=ready=1, data 0xA5 — one transfer",
-        "no signals asserted",
-        "ready only, no valid",
-        "three back-to-back beats"
-      ],
-      "answer": 0,
-      "explain": "Both assert preset.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_easy_18.mp4",
-        "poster": "media/images/handshake_easy_18-frame.png",
-        "figure": "media/images/handshake_easy_18.png"
-      }
-    },
-    {
-      "id": "handshake_easy_19",
-      "type": "multiple_choice",
-      "prompt": "When sink is not ready…",
-      "choices": [
-        "holds valid and data stable until ready rises",
-        "drops valid immediately every cycle",
-        "loses the beat forever",
-        "drives high-Z on the bus"
-      ],
-      "answer": 0,
-      "explain": "Backpressure stability rule.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_easy_19.mp4",
-        "poster": "media/images/handshake_easy_19-frame.png",
-        "figure": "media/images/handshake_easy_19.png"
-      }
-    },
-    {
-      "id": "handshake_easy_20",
-      "type": "true_false",
-      "prompt": "A transfer needs only ready without valid.",
-      "answer": false,
-      "explain": "Both must be high.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_easy_20.mp4",
-        "poster": "media/images/handshake_easy_20-frame.png",
-        "figure": "media/images/handshake_easy_20.png"
-      }
-    },
-    {
-      "id": "handshake_easy_21",
-      "type": "multiple_choice",
-      "prompt": "A beat transfers when…",
-      "choices": [
-        "valid and ready are both 1 in the same cycle",
-        "only valid is 1",
-        "only ready is 1",
-        "the clock stops"
-      ],
-      "answer": 0,
-      "explain": "fire = valid && ready.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_easy_21.mp4",
-        "poster": "media/images/handshake_easy_21-frame.png",
-        "figure": "media/images/handshake_easy_21.png"
-      }
-    },
-    {
-      "id": "handshake_easy_22",
-      "type": "multiple_choice",
-      "prompt": "Initial teaching beat shows…",
-      "choices": [
-        "valid=ready=1, data 0xA5 — one transfer",
-        "no signals asserted",
-        "ready only, no valid",
-        "three back-to-back beats"
-      ],
-      "answer": 0,
-      "explain": "Both assert preset.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_easy_22.mp4",
-        "poster": "media/images/handshake_easy_22-frame.png",
-        "figure": "media/images/handshake_easy_22.png"
-      }
-    },
-    {
-      "id": "handshake_easy_23",
-      "type": "multiple_choice",
-      "prompt": "When sink is not ready…",
-      "choices": [
-        "holds valid and data stable until ready rises",
-        "drops valid immediately every cycle",
-        "loses the beat forever",
-        "drives high-Z on the bus"
-      ],
-      "answer": 0,
-      "explain": "Backpressure stability rule.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_easy_23.mp4",
-        "poster": "media/images/handshake_easy_23-frame.png",
-        "figure": "media/images/handshake_easy_23.png"
-      }
-    },
-    {
-      "id": "handshake_easy_24",
-      "type": "true_false",
-      "prompt": "A transfer needs only ready without valid.",
-      "answer": false,
-      "explain": "Both must be high.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_easy_24.mp4",
-        "poster": "media/images/handshake_easy_24-frame.png",
-        "figure": "media/images/handshake_easy_24.png"
-      }
-    },
-    {
-      "id": "handshake_easy_25",
-      "type": "multiple_choice",
-      "prompt": "A beat transfers when…",
-      "choices": [
-        "valid and ready are both 1 in the same cycle",
-        "only valid is 1",
-        "only ready is 1",
-        "the clock stops"
-      ],
-      "answer": 0,
-      "explain": "fire = valid && ready.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_easy_25.mp4",
-        "poster": "media/images/handshake_easy_25-frame.png",
-        "figure": "media/images/handshake_easy_25.png"
-      }
-    },
-    {
-      "id": "handshake_easy_26",
-      "type": "multiple_choice",
-      "prompt": "Initial teaching beat shows…",
-      "choices": [
-        "valid=ready=1, data 0xA5 — one transfer",
-        "no signals asserted",
-        "ready only, no valid",
-        "three back-to-back beats"
-      ],
-      "answer": 0,
-      "explain": "Both assert preset.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_easy_26.mp4",
-        "poster": "media/images/handshake_easy_26-frame.png",
-        "figure": "media/images/handshake_easy_26.png"
-      }
-    },
-    {
-      "id": "handshake_easy_27",
-      "type": "multiple_choice",
-      "prompt": "When sink is not ready…",
-      "choices": [
-        "holds valid and data stable until ready rises",
-        "drops valid immediately every cycle",
-        "loses the beat forever",
-        "drives high-Z on the bus"
-      ],
-      "answer": 0,
-      "explain": "Backpressure stability rule.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_easy_27.mp4",
-        "poster": "media/images/handshake_easy_27-frame.png",
-        "figure": "media/images/handshake_easy_27.png"
-      }
-    },
-    {
-      "id": "handshake_easy_28",
-      "type": "true_false",
-      "prompt": "A transfer needs only ready without valid.",
-      "answer": false,
-      "explain": "Both must be high.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_easy_28.mp4",
-        "poster": "media/images/handshake_easy_28-frame.png",
-        "figure": "media/images/handshake_easy_28.png"
-      }
-    },
-    {
-      "id": "handshake_easy_29",
-      "type": "multiple_choice",
-      "prompt": "A beat transfers when…",
-      "choices": [
-        "valid and ready are both 1 in the same cycle",
-        "only valid is 1",
-        "only ready is 1",
-        "the clock stops"
-      ],
-      "answer": 0,
-      "explain": "fire = valid && ready.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_easy_29.mp4",
-        "poster": "media/images/handshake_easy_29-frame.png",
-        "figure": "media/images/handshake_easy_29.png"
-      }
-    },
-    {
-      "id": "handshake_easy_30",
-      "type": "multiple_choice",
-      "prompt": "Initial teaching beat shows…",
-      "choices": [
-        "valid=ready=1, data 0xA5 — one transfer",
-        "no signals asserted",
-        "ready only, no valid",
-        "three back-to-back beats"
-      ],
-      "answer": 0,
-      "explain": "Both assert preset.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_easy_30.mp4",
-        "poster": "media/images/handshake_easy_30-frame.png",
-        "figure": "media/images/handshake_easy_30.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "handshake_medium_01",
@@ -872,23 +64,7 @@
       ],
       "answer": 0,
       "explain": "Not every cycle transfers.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_medium_01.mp4",
-        "poster": "media/images/handshake_medium_01-frame.png",
-        "figure": "media/images/handshake_medium_01.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "handshake_medium_02",
@@ -902,23 +78,7 @@
       ],
       "answer": 0,
       "explain": "Protocol variants constrain ready timing.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_medium_02.mp4",
-        "poster": "media/images/handshake_medium_02-frame.png",
-        "figure": "media/images/handshake_medium_02.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "handshake_medium_03",
@@ -932,23 +92,7 @@
       ],
       "answer": 0,
       "explain": "Common ready/valid plumbing.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_medium_03.mp4",
-        "poster": "media/images/handshake_medium_03-frame.png",
-        "figure": "media/images/handshake_medium_03.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "handshake_medium_04",
@@ -956,767 +100,7 @@
       "prompt": "fire can be 1 when valid=0.",
       "answer": false,
       "explain": "fire requires both.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_medium_04.mp4",
-        "poster": "media/images/handshake_medium_04-frame.png",
-        "figure": "media/images/handshake_medium_04.png"
-      }
-    },
-    {
-      "id": "handshake_medium_05",
-      "type": "multiple_choice",
-      "prompt": "Bubble cycle means…",
-      "choices": [
-        "No beat — valid or ready (or both) deasserted",
-        "Always a transfer",
-        "Reset only",
-        "Memory full always"
-      ],
-      "answer": 0,
-      "explain": "Not every cycle transfers.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_medium_05.mp4",
-        "poster": "media/images/handshake_medium_05-frame.png",
-        "figure": "media/images/handshake_medium_05.png"
-      }
-    },
-    {
-      "id": "handshake_medium_06",
-      "type": "multiple_choice",
-      "prompt": "Combinational ready paths risk…",
-      "choices": [
-        "Depend on valid (with care) or be registered — know the rule set",
-        "Ignore valid forever",
-        "Stop the clock",
-        "Replace data"
-      ],
-      "answer": 0,
-      "explain": "Protocol variants constrain ready timing.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_medium_06.mp4",
-        "poster": "media/images/handshake_medium_06-frame.png",
-        "figure": "media/images/handshake_medium_06.png"
-      }
-    },
-    {
-      "id": "handshake_medium_07",
-      "type": "multiple_choice",
-      "prompt": "Why insert a skid stage?",
-      "choices": [
-        "Break ready combinational loops / absorb one beat",
-        "Remove all data",
-        "Force full always",
-        "Disable valid"
-      ],
-      "answer": 0,
-      "explain": "Common ready/valid plumbing.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_medium_07.mp4",
-        "poster": "media/images/handshake_medium_07-frame.png",
-        "figure": "media/images/handshake_medium_07.png"
-      }
-    },
-    {
-      "id": "handshake_medium_08",
-      "type": "true_false",
-      "prompt": "fire can be 1 when valid=0.",
-      "answer": false,
-      "explain": "fire requires both.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_medium_08.mp4",
-        "poster": "media/images/handshake_medium_08-frame.png",
-        "figure": "media/images/handshake_medium_08.png"
-      }
-    },
-    {
-      "id": "handshake_medium_09",
-      "type": "multiple_choice",
-      "prompt": "Bubble cycle means…",
-      "choices": [
-        "No beat — valid or ready (or both) deasserted",
-        "Always a transfer",
-        "Reset only",
-        "Memory full always"
-      ],
-      "answer": 0,
-      "explain": "Not every cycle transfers.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_medium_09.mp4",
-        "poster": "media/images/handshake_medium_09-frame.png",
-        "figure": "media/images/handshake_medium_09.png"
-      }
-    },
-    {
-      "id": "handshake_medium_10",
-      "type": "multiple_choice",
-      "prompt": "Combinational ready paths risk…",
-      "choices": [
-        "Depend on valid (with care) or be registered — know the rule set",
-        "Ignore valid forever",
-        "Stop the clock",
-        "Replace data"
-      ],
-      "answer": 0,
-      "explain": "Protocol variants constrain ready timing.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_medium_10.mp4",
-        "poster": "media/images/handshake_medium_10-frame.png",
-        "figure": "media/images/handshake_medium_10.png"
-      }
-    },
-    {
-      "id": "handshake_medium_11",
-      "type": "multiple_choice",
-      "prompt": "Why insert a skid stage?",
-      "choices": [
-        "Break ready combinational loops / absorb one beat",
-        "Remove all data",
-        "Force full always",
-        "Disable valid"
-      ],
-      "answer": 0,
-      "explain": "Common ready/valid plumbing.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_medium_11.mp4",
-        "poster": "media/images/handshake_medium_11-frame.png",
-        "figure": "media/images/handshake_medium_11.png"
-      }
-    },
-    {
-      "id": "handshake_medium_12",
-      "type": "true_false",
-      "prompt": "fire can be 1 when valid=0.",
-      "answer": false,
-      "explain": "fire requires both.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_medium_12.mp4",
-        "poster": "media/images/handshake_medium_12-frame.png",
-        "figure": "media/images/handshake_medium_12.png"
-      }
-    },
-    {
-      "id": "handshake_medium_13",
-      "type": "multiple_choice",
-      "prompt": "Bubble cycle means…",
-      "choices": [
-        "No beat — valid or ready (or both) deasserted",
-        "Always a transfer",
-        "Reset only",
-        "Memory full always"
-      ],
-      "answer": 0,
-      "explain": "Not every cycle transfers.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_medium_13.mp4",
-        "poster": "media/images/handshake_medium_13-frame.png",
-        "figure": "media/images/handshake_medium_13.png"
-      }
-    },
-    {
-      "id": "handshake_medium_14",
-      "type": "multiple_choice",
-      "prompt": "Combinational ready paths risk…",
-      "choices": [
-        "Depend on valid (with care) or be registered — know the rule set",
-        "Ignore valid forever",
-        "Stop the clock",
-        "Replace data"
-      ],
-      "answer": 0,
-      "explain": "Protocol variants constrain ready timing.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_medium_14.mp4",
-        "poster": "media/images/handshake_medium_14-frame.png",
-        "figure": "media/images/handshake_medium_14.png"
-      }
-    },
-    {
-      "id": "handshake_medium_15",
-      "type": "multiple_choice",
-      "prompt": "Why insert a skid stage?",
-      "choices": [
-        "Break ready combinational loops / absorb one beat",
-        "Remove all data",
-        "Force full always",
-        "Disable valid"
-      ],
-      "answer": 0,
-      "explain": "Common ready/valid plumbing.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_medium_15.mp4",
-        "poster": "media/images/handshake_medium_15-frame.png",
-        "figure": "media/images/handshake_medium_15.png"
-      }
-    },
-    {
-      "id": "handshake_medium_16",
-      "type": "true_false",
-      "prompt": "fire can be 1 when valid=0.",
-      "answer": false,
-      "explain": "fire requires both.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_medium_16.mp4",
-        "poster": "media/images/handshake_medium_16-frame.png",
-        "figure": "media/images/handshake_medium_16.png"
-      }
-    },
-    {
-      "id": "handshake_medium_17",
-      "type": "multiple_choice",
-      "prompt": "Bubble cycle means…",
-      "choices": [
-        "No beat — valid or ready (or both) deasserted",
-        "Always a transfer",
-        "Reset only",
-        "Memory full always"
-      ],
-      "answer": 0,
-      "explain": "Not every cycle transfers.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_medium_17.mp4",
-        "poster": "media/images/handshake_medium_17-frame.png",
-        "figure": "media/images/handshake_medium_17.png"
-      }
-    },
-    {
-      "id": "handshake_medium_18",
-      "type": "multiple_choice",
-      "prompt": "Combinational ready paths risk…",
-      "choices": [
-        "Depend on valid (with care) or be registered — know the rule set",
-        "Ignore valid forever",
-        "Stop the clock",
-        "Replace data"
-      ],
-      "answer": 0,
-      "explain": "Protocol variants constrain ready timing.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_medium_18.mp4",
-        "poster": "media/images/handshake_medium_18-frame.png",
-        "figure": "media/images/handshake_medium_18.png"
-      }
-    },
-    {
-      "id": "handshake_medium_19",
-      "type": "multiple_choice",
-      "prompt": "Why insert a skid stage?",
-      "choices": [
-        "Break ready combinational loops / absorb one beat",
-        "Remove all data",
-        "Force full always",
-        "Disable valid"
-      ],
-      "answer": 0,
-      "explain": "Common ready/valid plumbing.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_medium_19.mp4",
-        "poster": "media/images/handshake_medium_19-frame.png",
-        "figure": "media/images/handshake_medium_19.png"
-      }
-    },
-    {
-      "id": "handshake_medium_20",
-      "type": "true_false",
-      "prompt": "fire can be 1 when valid=0.",
-      "answer": false,
-      "explain": "fire requires both.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_medium_20.mp4",
-        "poster": "media/images/handshake_medium_20-frame.png",
-        "figure": "media/images/handshake_medium_20.png"
-      }
-    },
-    {
-      "id": "handshake_medium_21",
-      "type": "multiple_choice",
-      "prompt": "Bubble cycle means…",
-      "choices": [
-        "No beat — valid or ready (or both) deasserted",
-        "Always a transfer",
-        "Reset only",
-        "Memory full always"
-      ],
-      "answer": 0,
-      "explain": "Not every cycle transfers.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_medium_21.mp4",
-        "poster": "media/images/handshake_medium_21-frame.png",
-        "figure": "media/images/handshake_medium_21.png"
-      }
-    },
-    {
-      "id": "handshake_medium_22",
-      "type": "multiple_choice",
-      "prompt": "Combinational ready paths risk…",
-      "choices": [
-        "Depend on valid (with care) or be registered — know the rule set",
-        "Ignore valid forever",
-        "Stop the clock",
-        "Replace data"
-      ],
-      "answer": 0,
-      "explain": "Protocol variants constrain ready timing.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_medium_22.mp4",
-        "poster": "media/images/handshake_medium_22-frame.png",
-        "figure": "media/images/handshake_medium_22.png"
-      }
-    },
-    {
-      "id": "handshake_medium_23",
-      "type": "multiple_choice",
-      "prompt": "Why insert a skid stage?",
-      "choices": [
-        "Break ready combinational loops / absorb one beat",
-        "Remove all data",
-        "Force full always",
-        "Disable valid"
-      ],
-      "answer": 0,
-      "explain": "Common ready/valid plumbing.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_medium_23.mp4",
-        "poster": "media/images/handshake_medium_23-frame.png",
-        "figure": "media/images/handshake_medium_23.png"
-      }
-    },
-    {
-      "id": "handshake_medium_24",
-      "type": "true_false",
-      "prompt": "fire can be 1 when valid=0.",
-      "answer": false,
-      "explain": "fire requires both.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_medium_24.mp4",
-        "poster": "media/images/handshake_medium_24-frame.png",
-        "figure": "media/images/handshake_medium_24.png"
-      }
-    },
-    {
-      "id": "handshake_medium_25",
-      "type": "multiple_choice",
-      "prompt": "Bubble cycle means…",
-      "choices": [
-        "No beat — valid or ready (or both) deasserted",
-        "Always a transfer",
-        "Reset only",
-        "Memory full always"
-      ],
-      "answer": 0,
-      "explain": "Not every cycle transfers.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_medium_25.mp4",
-        "poster": "media/images/handshake_medium_25-frame.png",
-        "figure": "media/images/handshake_medium_25.png"
-      }
-    },
-    {
-      "id": "handshake_medium_26",
-      "type": "multiple_choice",
-      "prompt": "Combinational ready paths risk…",
-      "choices": [
-        "Depend on valid (with care) or be registered — know the rule set",
-        "Ignore valid forever",
-        "Stop the clock",
-        "Replace data"
-      ],
-      "answer": 0,
-      "explain": "Protocol variants constrain ready timing.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_medium_26.mp4",
-        "poster": "media/images/handshake_medium_26-frame.png",
-        "figure": "media/images/handshake_medium_26.png"
-      }
-    },
-    {
-      "id": "handshake_medium_27",
-      "type": "multiple_choice",
-      "prompt": "Why insert a skid stage?",
-      "choices": [
-        "Break ready combinational loops / absorb one beat",
-        "Remove all data",
-        "Force full always",
-        "Disable valid"
-      ],
-      "answer": 0,
-      "explain": "Common ready/valid plumbing.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_medium_27.mp4",
-        "poster": "media/images/handshake_medium_27-frame.png",
-        "figure": "media/images/handshake_medium_27.png"
-      }
-    },
-    {
-      "id": "handshake_medium_28",
-      "type": "true_false",
-      "prompt": "fire can be 1 when valid=0.",
-      "answer": false,
-      "explain": "fire requires both.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_medium_28.mp4",
-        "poster": "media/images/handshake_medium_28-frame.png",
-        "figure": "media/images/handshake_medium_28.png"
-      }
-    },
-    {
-      "id": "handshake_medium_29",
-      "type": "multiple_choice",
-      "prompt": "Bubble cycle means…",
-      "choices": [
-        "No beat — valid or ready (or both) deasserted",
-        "Always a transfer",
-        "Reset only",
-        "Memory full always"
-      ],
-      "answer": 0,
-      "explain": "Not every cycle transfers.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_medium_29.mp4",
-        "poster": "media/images/handshake_medium_29-frame.png",
-        "figure": "media/images/handshake_medium_29.png"
-      }
-    },
-    {
-      "id": "handshake_medium_30",
-      "type": "multiple_choice",
-      "prompt": "Combinational ready paths risk…",
-      "choices": [
-        "Depend on valid (with care) or be registered — know the rule set",
-        "Ignore valid forever",
-        "Stop the clock",
-        "Replace data"
-      ],
-      "answer": 0,
-      "explain": "Protocol variants constrain ready timing.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_medium_30.mp4",
-        "poster": "media/images/handshake_medium_30-frame.png",
-        "figure": "media/images/handshake_medium_30.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "handshake_hard_01",
@@ -1730,23 +114,7 @@
       ],
       "answer": 0,
       "explain": "Hold until accepted.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_hard_01.mp4",
-        "poster": "media/images/handshake_hard_01-frame.png",
-        "figure": "media/images/handshake_hard_01.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "handshake_hard_02",
@@ -1760,23 +128,7 @@
       ],
       "answer": 0,
       "explain": "fire each cycle.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_hard_02.mp4",
-        "poster": "media/images/handshake_hard_02-frame.png",
-        "figure": "media/images/handshake_hard_02.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "handshake_hard_03",
@@ -1790,23 +142,7 @@
       ],
       "answer": 0,
       "explain": "Both sides must speak the same protocol.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_hard_03.mp4",
-        "poster": "media/images/handshake_hard_03-frame.png",
-        "figure": "media/images/handshake_hard_03.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "handshake_hard_04",
@@ -1814,767 +150,847 @@
       "prompt": "Handshake replaces the need for clocks.",
       "answer": false,
       "explain": "Still synchronous to a clock usually.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_hard_04.mp4",
-        "poster": "media/images/handshake_hard_04-frame.png",
-        "figure": "media/images/handshake_hard_04.png"
-      }
+      "difficulty": "hard"
     },
     {
-      "id": "handshake_hard_05",
-      "type": "multiple_choice",
-      "prompt": "Registered-output source that must not drop a beat under backpressure…",
-      "choices": [
-        "Keep valid/data until fire",
-        "Toggle data each cycle anyway",
-        "Clear valid immediately always",
-        "Ignore ready"
-      ],
-      "answer": 0,
-      "explain": "Hold until accepted.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_hard_05.mp4",
-        "poster": "media/images/handshake_hard_05-frame.png",
-        "figure": "media/images/handshake_hard_05.png"
-      }
-    },
-    {
-      "id": "handshake_hard_06",
-      "type": "multiple_choice",
-      "prompt": "Sustained full rate requires…",
-      "choices": [
-        "valid and ready both stay high every cycle",
-        "valid only half the time always",
-        "ready always 0",
-        "No clock"
-      ],
-      "answer": 0,
-      "explain": "fire each cycle.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_hard_06.mp4",
-        "poster": "media/images/handshake_hard_06-frame.png",
-        "figure": "media/images/handshake_hard_06.png"
-      }
-    },
-    {
-      "id": "handshake_hard_07",
-      "type": "multiple_choice",
-      "prompt": "Deadlock can occur if…",
-      "choices": [
-        "No fires / deadlock or lost beats",
-        "Faster addition",
-        "Automatic Gray coding",
-        "Bigger caches"
-      ],
-      "answer": 0,
-      "explain": "Both sides must speak the same protocol.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_hard_07.mp4",
-        "poster": "media/images/handshake_hard_07-frame.png",
-        "figure": "media/images/handshake_hard_07.png"
-      }
-    },
-    {
-      "id": "handshake_hard_08",
       "type": "true_false",
-      "prompt": "Handshake replaces the need for clocks.",
-      "answer": false,
-      "explain": "Still synchronous to a clock usually.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_hard_08.mp4",
-        "poster": "media/images/handshake_hard_08-frame.png",
-        "figure": "media/images/handshake_hard_08.png"
-      }
+      "prompt": "Valid/ready handshake transfers when both are high in the same cycle.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "handshake_easy_05"
     },
     {
-      "id": "handshake_hard_09",
-      "type": "multiple_choice",
-      "prompt": "Registered-output source that must not drop a beat under backpressure…",
-      "choices": [
-        "Keep valid/data until fire",
-        "Toggle data each cycle anyway",
-        "Clear valid immediately always",
-        "Ignore ready"
-      ],
-      "answer": 0,
-      "explain": "Hold until accepted.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_hard_09.mp4",
-        "poster": "media/images/handshake_hard_09-frame.png",
-        "figure": "media/images/handshake_hard_09.png"
-      }
-    },
-    {
-      "id": "handshake_hard_10",
-      "type": "multiple_choice",
-      "prompt": "Sustained full rate requires…",
-      "choices": [
-        "valid and ready both stay high every cycle",
-        "valid only half the time always",
-        "ready always 0",
-        "No clock"
-      ],
-      "answer": 0,
-      "explain": "fire each cycle.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_hard_10.mp4",
-        "poster": "media/images/handshake_hard_10-frame.png",
-        "figure": "media/images/handshake_hard_10.png"
-      }
-    },
-    {
-      "id": "handshake_hard_11",
-      "type": "multiple_choice",
-      "prompt": "Deadlock can occur if…",
-      "choices": [
-        "No fires / deadlock or lost beats",
-        "Faster addition",
-        "Automatic Gray coding",
-        "Bigger caches"
-      ],
-      "answer": 0,
-      "explain": "Both sides must speak the same protocol.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_hard_11.mp4",
-        "poster": "media/images/handshake_hard_11-frame.png",
-        "figure": "media/images/handshake_hard_11.png"
-      }
-    },
-    {
-      "id": "handshake_hard_12",
       "type": "true_false",
-      "prompt": "Handshake replaces the need for clocks.",
+      "prompt": "A master may drop valid before ready acknowledges freely always.",
       "answer": false,
-      "explain": "Still synchronous to a clock usually.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_hard_12.mp4",
-        "poster": "media/images/handshake_hard_12-frame.png",
-        "figure": "media/images/handshake_hard_12.png"
-      }
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "handshake_easy_06"
     },
     {
-      "id": "handshake_hard_13",
-      "type": "multiple_choice",
-      "prompt": "Registered-output source that must not drop a beat under backpressure…",
-      "choices": [
-        "Keep valid/data until fire",
-        "Toggle data each cycle anyway",
-        "Clear valid immediately always",
-        "Ignore ready"
-      ],
-      "answer": 0,
-      "explain": "Hold until accepted.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_hard_13.mp4",
-        "poster": "media/images/handshake_hard_13-frame.png",
-        "figure": "media/images/handshake_hard_13.png"
-      }
-    },
-    {
-      "id": "handshake_hard_14",
-      "type": "multiple_choice",
-      "prompt": "Sustained full rate requires…",
-      "choices": [
-        "valid and ready both stay high every cycle",
-        "valid only half the time always",
-        "ready always 0",
-        "No clock"
-      ],
-      "answer": 0,
-      "explain": "fire each cycle.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_hard_14.mp4",
-        "poster": "media/images/handshake_hard_14-frame.png",
-        "figure": "media/images/handshake_hard_14.png"
-      }
-    },
-    {
-      "id": "handshake_hard_15",
-      "type": "multiple_choice",
-      "prompt": "Deadlock can occur if…",
-      "choices": [
-        "No fires / deadlock or lost beats",
-        "Faster addition",
-        "Automatic Gray coding",
-        "Bigger caches"
-      ],
-      "answer": 0,
-      "explain": "Both sides must speak the same protocol.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_hard_15.mp4",
-        "poster": "media/images/handshake_hard_15-frame.png",
-        "figure": "media/images/handshake_hard_15.png"
-      }
-    },
-    {
-      "id": "handshake_hard_16",
       "type": "true_false",
-      "prompt": "Handshake replaces the need for clocks.",
-      "answer": false,
-      "explain": "Still synchronous to a clock usually.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_hard_16.mp4",
-        "poster": "media/images/handshake_hard_16-frame.png",
-        "figure": "media/images/handshake_hard_16.png"
-      }
+      "prompt": "Ready may depend on valid in the same cycle (combinational) carefully.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "handshake_easy_07"
     },
     {
-      "id": "handshake_hard_17",
-      "type": "multiple_choice",
-      "prompt": "Registered-output source that must not drop a beat under backpressure…",
-      "choices": [
-        "Keep valid/data until fire",
-        "Toggle data each cycle anyway",
-        "Clear valid immediately always",
-        "Ignore ready"
-      ],
-      "answer": 0,
-      "explain": "Hold until accepted.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_hard_17.mp4",
-        "poster": "media/images/handshake_hard_17-frame.png",
-        "figure": "media/images/handshake_hard_17.png"
-      }
-    },
-    {
-      "id": "handshake_hard_18",
-      "type": "multiple_choice",
-      "prompt": "Sustained full rate requires…",
-      "choices": [
-        "valid and ready both stay high every cycle",
-        "valid only half the time always",
-        "ready always 0",
-        "No clock"
-      ],
-      "answer": 0,
-      "explain": "fire each cycle.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_hard_18.mp4",
-        "poster": "media/images/handshake_hard_18-frame.png",
-        "figure": "media/images/handshake_hard_18.png"
-      }
-    },
-    {
-      "id": "handshake_hard_19",
-      "type": "multiple_choice",
-      "prompt": "Deadlock can occur if…",
-      "choices": [
-        "No fires / deadlock or lost beats",
-        "Faster addition",
-        "Automatic Gray coding",
-        "Bigger caches"
-      ],
-      "answer": 0,
-      "explain": "Both sides must speak the same protocol.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_hard_19.mp4",
-        "poster": "media/images/handshake_hard_19-frame.png",
-        "figure": "media/images/handshake_hard_19.png"
-      }
-    },
-    {
-      "id": "handshake_hard_20",
       "type": "true_false",
-      "prompt": "Handshake replaces the need for clocks.",
-      "answer": false,
-      "explain": "Still synchronous to a clock usually.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_hard_20.mp4",
-        "poster": "media/images/handshake_hard_20-frame.png",
-        "figure": "media/images/handshake_hard_20.png"
-      }
+      "prompt": "AXI-style fire is valid && ready.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "handshake_easy_08"
     },
     {
-      "id": "handshake_hard_21",
-      "type": "multiple_choice",
-      "prompt": "Registered-output source that must not drop a beat under backpressure…",
-      "choices": [
-        "Keep valid/data until fire",
-        "Toggle data each cycle anyway",
-        "Clear valid immediately always",
-        "Ignore ready"
-      ],
-      "answer": 0,
-      "explain": "Hold until accepted.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_hard_21.mp4",
-        "poster": "media/images/handshake_hard_21-frame.png",
-        "figure": "media/images/handshake_hard_21.png"
-      }
-    },
-    {
-      "id": "handshake_hard_22",
-      "type": "multiple_choice",
-      "prompt": "Sustained full rate requires…",
-      "choices": [
-        "valid and ready both stay high every cycle",
-        "valid only half the time always",
-        "ready always 0",
-        "No clock"
-      ],
-      "answer": 0,
-      "explain": "fire each cycle.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_hard_22.mp4",
-        "poster": "media/images/handshake_hard_22-frame.png",
-        "figure": "media/images/handshake_hard_22.png"
-      }
-    },
-    {
-      "id": "handshake_hard_23",
-      "type": "multiple_choice",
-      "prompt": "Deadlock can occur if…",
-      "choices": [
-        "No fires / deadlock or lost beats",
-        "Faster addition",
-        "Automatic Gray coding",
-        "Bigger caches"
-      ],
-      "answer": 0,
-      "explain": "Both sides must speak the same protocol.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_hard_23.mp4",
-        "poster": "media/images/handshake_hard_23-frame.png",
-        "figure": "media/images/handshake_hard_23.png"
-      }
-    },
-    {
-      "id": "handshake_hard_24",
       "type": "true_false",
-      "prompt": "Handshake replaces the need for clocks.",
-      "answer": false,
-      "explain": "Still synchronous to a clock usually.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_hard_24.mp4",
-        "poster": "media/images/handshake_hard_24-frame.png",
-        "figure": "media/images/handshake_hard_24.png"
-      }
+      "prompt": "Tri-state buses need exactly one driver when not floating intentionally.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "handshake_easy_09"
     },
     {
-      "id": "handshake_hard_25",
-      "type": "multiple_choice",
-      "prompt": "Registered-output source that must not drop a beat under backpressure…",
-      "choices": [
-        "Keep valid/data until fire",
-        "Toggle data each cycle anyway",
-        "Clear valid immediately always",
-        "Ignore ready"
-      ],
-      "answer": 0,
-      "explain": "Hold until accepted.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_hard_25.mp4",
-        "poster": "media/images/handshake_hard_25-frame.png",
-        "figure": "media/images/handshake_hard_25.png"
-      }
-    },
-    {
-      "id": "handshake_hard_26",
-      "type": "multiple_choice",
-      "prompt": "Sustained full rate requires…",
-      "choices": [
-        "valid and ready both stay high every cycle",
-        "valid only half the time always",
-        "ready always 0",
-        "No clock"
-      ],
-      "answer": 0,
-      "explain": "fire each cycle.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_hard_26.mp4",
-        "poster": "media/images/handshake_hard_26-frame.png",
-        "figure": "media/images/handshake_hard_26.png"
-      }
-    },
-    {
-      "id": "handshake_hard_27",
-      "type": "multiple_choice",
-      "prompt": "Deadlock can occur if…",
-      "choices": [
-        "No fires / deadlock or lost beats",
-        "Faster addition",
-        "Automatic Gray coding",
-        "Bigger caches"
-      ],
-      "answer": 0,
-      "explain": "Both sides must speak the same protocol.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_hard_27.mp4",
-        "poster": "media/images/handshake_hard_27-frame.png",
-        "figure": "media/images/handshake_hard_27.png"
-      }
-    },
-    {
-      "id": "handshake_hard_28",
       "type": "true_false",
-      "prompt": "Handshake replaces the need for clocks.",
+      "prompt": "Multiple drivers asserting opposite values is bus contention.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "handshake_easy_10"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Async FIFO write and read clocks may be unrelated.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "handshake_easy_11"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Gray code helps multi-bit CDC of pointers.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "handshake_easy_12"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Single FF sync is enough for multi-bit buses.",
       "answer": false,
-      "explain": "Still synchronous to a clock usually.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_hard_28.mp4",
-        "poster": "media/images/handshake_hard_28-frame.png",
-        "figure": "media/images/handshake_hard_28.png"
-      }
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "handshake_easy_13"
     },
     {
-      "id": "handshake_hard_29",
-      "type": "multiple_choice",
-      "prompt": "Registered-output source that must not drop a beat under backpressure…",
-      "choices": [
-        "Keep valid/data until fire",
-        "Toggle data each cycle anyway",
-        "Clear valid immediately always",
-        "Ignore ready"
-      ],
-      "answer": 0,
-      "explain": "Hold until accepted.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_hard_29.mp4",
-        "poster": "media/images/handshake_hard_29-frame.png",
-        "figure": "media/images/handshake_hard_29.png"
-      }
+      "type": "true_false",
+      "prompt": "Backpressure is expressed by deasserting ready.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "handshake_easy_14"
     },
     {
-      "id": "handshake_hard_30",
       "type": "multiple_choice",
-      "prompt": "Sustained full rate requires…",
+      "prompt": "With valid fixed high, how many beats transfer in 1 cycles if ready is always high?",
       "choices": [
-        "valid and ready both stay high every cycle",
-        "valid only half the time always",
-        "ready always 0",
-        "No clock"
+        "0",
+        "1",
+        "2",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "handshake_easy_15"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 2 cycles if ready is always high?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "handshake_easy_16"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 3 cycles if ready is always high?",
+      "choices": [
+        "2",
+        "3",
+        "6",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "handshake_easy_17"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 4 cycles if ready is always high?",
+      "choices": [
+        "3",
+        "4",
+        "8",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "handshake_easy_18"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 5 cycles if ready is always high?",
+      "choices": [
+        "4",
+        "5",
+        "10",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "handshake_easy_19"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 6 cycles if ready is always high?",
+      "choices": [
+        "5",
+        "6",
+        "12",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "handshake_easy_20"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 7 cycles if ready is always high?",
+      "choices": [
+        "6",
+        "7",
+        "14",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "handshake_easy_21"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 8 cycles if ready is always high?",
+      "choices": [
+        "7",
+        "8",
+        "16",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "handshake_easy_22"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Setup time is a requirement before the active clock edge.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "handshake_easy_23"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Setup time is a requirement before the active clock edge?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
       ],
       "answer": 0,
-      "explain": "fire each cycle.",
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "handshake_easy_24"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Hold time is a requirement after the active clock edge.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "handshake_easy_25"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hold time is a requirement after the active clock edge?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "handshake_easy_26"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Contamination delay is a min path delay from clk to Q.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "handshake_easy_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Contamination delay is a min path delay from clk to Q?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "handshake_easy_28"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Clock-to-Q max is used in setup checks.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "handshake_easy_29"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Clock-to-Q max is used in setup checks?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "handshake_easy_30"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Valid/ready handshake transfers when both are high in the same cycle.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "handshake_medium_05"
+    },
+    {
+      "type": "true_false",
+      "prompt": "A master may drop valid before ready acknowledges freely always.",
+      "answer": false,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "handshake_medium_06"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Ready may depend on valid in the same cycle (combinational) carefully.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "handshake_medium_07"
+    },
+    {
+      "type": "true_false",
+      "prompt": "AXI-style fire is valid && ready.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "handshake_medium_08"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Tri-state buses need exactly one driver when not floating intentionally.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "handshake_medium_09"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Multiple drivers asserting opposite values is bus contention.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "handshake_medium_10"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Async FIFO write and read clocks may be unrelated.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "handshake_medium_11"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Gray code helps multi-bit CDC of pointers.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "handshake_medium_12"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Single FF sync is enough for multi-bit buses.",
+      "answer": false,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "handshake_medium_13"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Backpressure is expressed by deasserting ready.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "handshake_medium_14"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 1 cycles if ready is always high?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "handshake_medium_15"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 2 cycles if ready is always high?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "handshake_medium_16"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 3 cycles if ready is always high?",
+      "choices": [
+        "2",
+        "3",
+        "6",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "handshake_medium_17"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 4 cycles if ready is always high?",
+      "choices": [
+        "3",
+        "4",
+        "8",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "handshake_medium_18"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 5 cycles if ready is always high?",
+      "choices": [
+        "4",
+        "5",
+        "10",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "handshake_medium_19"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 6 cycles if ready is always high?",
+      "choices": [
+        "5",
+        "6",
+        "12",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "handshake_medium_20"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 7 cycles if ready is always high?",
+      "choices": [
+        "6",
+        "7",
+        "14",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "handshake_medium_21"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 8 cycles if ready is always high?",
+      "choices": [
+        "7",
+        "8",
+        "16",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "handshake_medium_22"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Setup time is a requirement before the active clock edge.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "handshake_medium_23"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Setup time is a requirement before the active clock edge?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "handshake_medium_24"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Hold time is a requirement after the active clock edge.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "handshake_medium_25"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hold time is a requirement after the active clock edge?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "handshake_medium_26"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Contamination delay is a min path delay from clk to Q.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "handshake_medium_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Contamination delay is a min path delay from clk to Q?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "handshake_medium_28"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Clock-to-Q max is used in setup checks.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "handshake_medium_29"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Clock-to-Q max is used in setup checks?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "handshake_medium_30"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Valid/ready handshake transfers when both are high in the same cycle.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "handshake",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/handshake_hard_30.mp4",
-        "poster": "media/images/handshake_hard_30-frame.png",
-        "figure": "media/images/handshake_hard_30.png"
-      }
+      "id": "handshake_hard_05"
+    },
+    {
+      "type": "true_false",
+      "prompt": "A master may drop valid before ready acknowledges freely always.",
+      "answer": false,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "hard",
+      "id": "handshake_hard_06"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Ready may depend on valid in the same cycle (combinational) carefully.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "hard",
+      "id": "handshake_hard_07"
+    },
+    {
+      "type": "true_false",
+      "prompt": "AXI-style fire is valid && ready.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "hard",
+      "id": "handshake_hard_08"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Tri-state buses need exactly one driver when not floating intentionally.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "hard",
+      "id": "handshake_hard_09"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Multiple drivers asserting opposite values is bus contention.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "hard",
+      "id": "handshake_hard_10"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Async FIFO write and read clocks may be unrelated.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "hard",
+      "id": "handshake_hard_11"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Gray code helps multi-bit CDC of pointers.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "hard",
+      "id": "handshake_hard_12"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Single FF sync is enough for multi-bit buses.",
+      "answer": false,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "hard",
+      "id": "handshake_hard_13"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Backpressure is expressed by deasserting ready.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "hard",
+      "id": "handshake_hard_14"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 1 cycles if ready is always high?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "hard",
+      "id": "handshake_hard_15"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 2 cycles if ready is always high?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "hard",
+      "id": "handshake_hard_16"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 3 cycles if ready is always high?",
+      "choices": [
+        "2",
+        "3",
+        "6",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "hard",
+      "id": "handshake_hard_17"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 4 cycles if ready is always high?",
+      "choices": [
+        "3",
+        "4",
+        "8",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "hard",
+      "id": "handshake_hard_18"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 5 cycles if ready is always high?",
+      "choices": [
+        "4",
+        "5",
+        "10",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "hard",
+      "id": "handshake_hard_19"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 6 cycles if ready is always high?",
+      "choices": [
+        "5",
+        "6",
+        "12",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "hard",
+      "id": "handshake_hard_20"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 7 cycles if ready is always high?",
+      "choices": [
+        "6",
+        "7",
+        "14",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "hard",
+      "id": "handshake_hard_21"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 8 cycles if ready is always high?",
+      "choices": [
+        "7",
+        "8",
+        "16",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "hard",
+      "id": "handshake_hard_22"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Setup time is a requirement before the active clock edge.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "hard",
+      "id": "handshake_hard_23"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Setup time is a requirement before the active clock edge?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "hard",
+      "id": "handshake_hard_24"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Hold time is a requirement after the active clock edge.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "hard",
+      "id": "handshake_hard_25"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hold time is a requirement after the active clock edge?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "hard",
+      "id": "handshake_hard_26"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Contamination delay is a min path delay from clk to Q.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "hard",
+      "id": "handshake_hard_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Contamination delay is a min path delay from clk to Q?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "hard",
+      "id": "handshake_hard_28"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Clock-to-Q max is used in setup checks.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "hard",
+      "id": "handshake_hard_29"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Clock-to-Q max is used in setup checks?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "hard",
+      "id": "handshake_hard_30"
     }
   ]
 }

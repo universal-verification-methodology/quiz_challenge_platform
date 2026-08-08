@@ -73,8 +73,65 @@
         timeouts: row.timeouts,
         display_name: row.display_name,
       };
+      // Mirror into summary so GitHub/leaderboard can omit the attempts array.
+      payload.summary.median_ms = row.median_ms;
+      payload.summary.timeouts = row.timeouts;
+    } else {
+      const attempts = payload.attempts || [];
+      const xs = attempts
+        .map((a) => Number(a.duration_ms) || 0)
+        .filter((n) => n >= 0)
+        .sort((a, b) => a - b);
+      let med = 0;
+      if (xs.length) {
+        const mid = Math.floor(xs.length / 2);
+        med = xs.length % 2 ? xs[mid] : Math.round((xs[mid - 1] + xs[mid]) / 2);
+      }
+      payload.summary.median_ms = med;
+      payload.summary.timeouts = attempts.filter((a) => a && a.timed_out).length;
     }
     return payload;
+  }
+
+  /**
+   * Drop per-attempt detail before POSTing to GitHub Issues (65KB body limit).
+   * Full quests can exceed that with hundreds of attempts; leaderboard only needs
+   * summary + level_state + benchmark aggregates.
+   */
+  function slimLevelState(levelState) {
+    const out = {};
+    Object.keys(levelState || {}).forEach((mid) => {
+      const mod = levelState[mid] || {};
+      out[mid] = {};
+      Object.keys(mod).forEach((d) => {
+        const st = mod[d] || {};
+        out[mid][d] = {
+          correct: Number(st.correct) || 0,
+          attempts: Number(st.attempts) || 0,
+          cleared: !!st.cleared,
+          exhausted: !!st.exhausted,
+        };
+      });
+    });
+    return out;
+  }
+
+  function slimForSubmit(payload) {
+    if (!payload || typeof payload !== "object") return payload;
+    const slim = Object.assign({}, payload);
+    // Per-attempt rows blow past GitHub's ~65KB issue body on Full Quest.
+    slim.attempts = [];
+    slim.attempts_omitted = Number(
+      (payload.summary && payload.summary.total_attempts) ||
+        (payload.attempts && payload.attempts.length) ||
+        0
+    );
+    slim.level_state = slimLevelState(payload.level_state);
+    if (slim.summary && payload.benchmark) {
+      if (slim.summary.median_ms == null) slim.summary.median_ms = payload.benchmark.median_ms;
+      if (slim.summary.timeouts == null) slim.summary.timeouts = payload.benchmark.timeouts;
+    }
+    return slim;
   }
 
   function downloadJson(payload, filename) {
@@ -138,6 +195,7 @@
 
   global.QCResults = {
     buildPayload,
+    slimForSubmit,
     downloadJson,
     submit,
     storeLocalCopy,

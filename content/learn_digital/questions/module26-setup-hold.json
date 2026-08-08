@@ -117,750 +117,6 @@
       }
     },
     {
-      "id": "timing_easy_05",
-      "type": "multiple_choice",
-      "prompt": "Setup time (tsu) requires D stable...",
-      "choices": [
-        "for at least tsu before the capturing edge",
-        "only after the edge",
-        "only during reset",
-        "never"
-      ],
-      "answer": 0,
-      "explain": "Data must settle before the edge.",
-      "difficulty": "easy",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_easy_05.mp4",
-        "poster": "media/images/timing_easy_05-frame.png",
-        "figure": "media/images/timing_easy_05.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean-setup",
-        "label": "Clean · setup window",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_easy_06",
-      "type": "multiple_choice",
-      "prompt": "After the capturing edge, D must not change for...",
-      "choices": [
-        "for at least th after the capturing edge",
-        "only before power-up",
-        "the whole period always",
-        "only on negedge forever"
-      ],
-      "answer": 0,
-      "explain": "No early change after the edge.",
-      "difficulty": "easy",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_easy_06.mp4",
-        "poster": "media/images/timing_easy_06-frame.png",
-        "figure": "media/images/timing_easy_06.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean",
-        "label": "Clean pass",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_easy_07",
-      "type": "true_false",
-      "prompt": "A FF updates Q based on D at the triggering clock edge.",
-      "answer": true,
-      "explain": "Edge-triggered sequential element samples on the clock edge; latches are level-sensitive.",
-      "difficulty": "easy",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_easy_07.mp4",
-        "poster": "media/images/timing_easy_07-frame.png",
-        "figure": "media/images/timing_easy_07.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean-tcq",
-        "label": "Clean · tcq",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_easy_08",
-      "type": "multiple_choice",
-      "prompt": "Which delay starts at the capturing edge and ends when Q is valid?",
-      "choices": [
-        "delay from capturing edge until Q updates",
-        "the same as setup",
-        "an area report",
-        "baud period"
-      ],
-      "answer": 0,
-      "explain": "Output propagation after the edge.",
-      "difficulty": "easy",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_easy_08.mp4",
-        "poster": "media/images/timing_easy_08-frame.png",
-        "figure": "media/images/timing_easy_08.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean-tcq",
-        "label": "Clean · tcq",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_easy_09",
-      "type": "multiple_choice",
-      "prompt": "Setup time (tsu) requires D stable...",
-      "choices": [
-        "for at least tsu before the capturing edge",
-        "only after the edge",
-        "only during reset",
-        "never"
-      ],
-      "answer": 0,
-      "explain": "Data must settle before the edge.",
-      "difficulty": "easy",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_easy_09.mp4",
-        "poster": "media/images/timing_easy_09-frame.png",
-        "figure": "media/images/timing_easy_09.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean-setup",
-        "label": "Clean · setup window",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_easy_10",
-      "type": "multiple_choice",
-      "prompt": "After the capturing edge, D must not change for...",
-      "choices": [
-        "for at least th after the capturing edge",
-        "only before power-up",
-        "the whole period always",
-        "only on negedge forever"
-      ],
-      "answer": 0,
-      "explain": "No early change after the edge.",
-      "difficulty": "easy",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_easy_10.mp4",
-        "poster": "media/images/timing_easy_10-frame.png",
-        "figure": "media/images/timing_easy_10.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean",
-        "label": "Clean pass",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_easy_11",
-      "type": "true_false",
-      "prompt": "A FF updates Q based on D at the triggering clock edge.",
-      "answer": true,
-      "explain": "Edge-triggered sequential element samples on the clock edge; latches are level-sensitive.",
-      "difficulty": "easy",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_easy_11.mp4",
-        "poster": "media/images/timing_easy_11-frame.png",
-        "figure": "media/images/timing_easy_11.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean-tcq",
-        "label": "Clean · tcq",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_easy_12",
-      "type": "multiple_choice",
-      "prompt": "Which delay starts at the capturing edge and ends when Q is valid?",
-      "choices": [
-        "delay from capturing edge until Q updates",
-        "the same as setup",
-        "an area report",
-        "baud period"
-      ],
-      "answer": 0,
-      "explain": "Output propagation after the edge.",
-      "difficulty": "easy",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_easy_12.mp4",
-        "poster": "media/images/timing_easy_12-frame.png",
-        "figure": "media/images/timing_easy_12.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean-tcq",
-        "label": "Clean · tcq",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_easy_13",
-      "type": "multiple_choice",
-      "prompt": "Setup time (tsu) requires D stable...",
-      "choices": [
-        "for at least tsu before the capturing edge",
-        "only after the edge",
-        "only during reset",
-        "never"
-      ],
-      "answer": 0,
-      "explain": "Data must settle before the edge.",
-      "difficulty": "easy",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_easy_13.mp4",
-        "poster": "media/images/timing_easy_13-frame.png",
-        "figure": "media/images/timing_easy_13.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean-setup",
-        "label": "Clean · setup window",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_easy_14",
-      "type": "multiple_choice",
-      "prompt": "After the capturing edge, D must not change for...",
-      "choices": [
-        "for at least th after the capturing edge",
-        "only before power-up",
-        "the whole period always",
-        "only on negedge forever"
-      ],
-      "answer": 0,
-      "explain": "No early change after the edge.",
-      "difficulty": "easy",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_easy_14.mp4",
-        "poster": "media/images/timing_easy_14-frame.png",
-        "figure": "media/images/timing_easy_14.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean",
-        "label": "Clean pass",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_easy_15",
-      "type": "true_false",
-      "prompt": "A FF updates Q based on D at the triggering clock edge.",
-      "answer": true,
-      "explain": "Edge-triggered sequential element samples on the clock edge; latches are level-sensitive.",
-      "difficulty": "easy",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_easy_15.mp4",
-        "poster": "media/images/timing_easy_15-frame.png",
-        "figure": "media/images/timing_easy_15.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean-tcq",
-        "label": "Clean · tcq",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_easy_16",
-      "type": "multiple_choice",
-      "prompt": "Which delay starts at the capturing edge and ends when Q is valid?",
-      "choices": [
-        "delay from capturing edge until Q updates",
-        "the same as setup",
-        "an area report",
-        "baud period"
-      ],
-      "answer": 0,
-      "explain": "Output propagation after the edge.",
-      "difficulty": "easy",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_easy_16.mp4",
-        "poster": "media/images/timing_easy_16-frame.png",
-        "figure": "media/images/timing_easy_16.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean-tcq",
-        "label": "Clean · tcq",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_easy_17",
-      "type": "multiple_choice",
-      "prompt": "Setup time (tsu) requires D stable...",
-      "choices": [
-        "for at least tsu before the capturing edge",
-        "only after the edge",
-        "only during reset",
-        "never"
-      ],
-      "answer": 0,
-      "explain": "Data must settle before the edge.",
-      "difficulty": "easy",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_easy_17.mp4",
-        "poster": "media/images/timing_easy_17-frame.png",
-        "figure": "media/images/timing_easy_17.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean-setup",
-        "label": "Clean · setup window",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_easy_18",
-      "type": "multiple_choice",
-      "prompt": "After the capturing edge, D must not change for...",
-      "choices": [
-        "for at least th after the capturing edge",
-        "only before power-up",
-        "the whole period always",
-        "only on negedge forever"
-      ],
-      "answer": 0,
-      "explain": "No early change after the edge.",
-      "difficulty": "easy",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_easy_18.mp4",
-        "poster": "media/images/timing_easy_18-frame.png",
-        "figure": "media/images/timing_easy_18.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean",
-        "label": "Clean pass",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_easy_19",
-      "type": "true_false",
-      "prompt": "A FF updates Q based on D at the triggering clock edge.",
-      "answer": true,
-      "explain": "Edge-triggered sequential element samples on the clock edge; latches are level-sensitive.",
-      "difficulty": "easy",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_easy_19.mp4",
-        "poster": "media/images/timing_easy_19-frame.png",
-        "figure": "media/images/timing_easy_19.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean-tcq",
-        "label": "Clean · tcq",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_easy_20",
-      "type": "multiple_choice",
-      "prompt": "Which delay starts at the capturing edge and ends when Q is valid?",
-      "choices": [
-        "delay from capturing edge until Q updates",
-        "the same as setup",
-        "an area report",
-        "baud period"
-      ],
-      "answer": 0,
-      "explain": "Output propagation after the edge.",
-      "difficulty": "easy",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_easy_20.mp4",
-        "poster": "media/images/timing_easy_20-frame.png",
-        "figure": "media/images/timing_easy_20.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean-tcq",
-        "label": "Clean · tcq",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_easy_21",
-      "type": "multiple_choice",
-      "prompt": "Setup time (tsu) requires D stable...",
-      "choices": [
-        "for at least tsu before the capturing edge",
-        "only after the edge",
-        "only during reset",
-        "never"
-      ],
-      "answer": 0,
-      "explain": "Data must settle before the edge.",
-      "difficulty": "easy",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_easy_21.mp4",
-        "poster": "media/images/timing_easy_21-frame.png",
-        "figure": "media/images/timing_easy_21.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean-setup",
-        "label": "Clean · setup window",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_easy_22",
-      "type": "multiple_choice",
-      "prompt": "After the capturing edge, D must not change for...",
-      "choices": [
-        "for at least th after the capturing edge",
-        "only before power-up",
-        "the whole period always",
-        "only on negedge forever"
-      ],
-      "answer": 0,
-      "explain": "No early change after the edge.",
-      "difficulty": "easy",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_easy_22.mp4",
-        "poster": "media/images/timing_easy_22-frame.png",
-        "figure": "media/images/timing_easy_22.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean",
-        "label": "Clean pass",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_easy_23",
-      "type": "true_false",
-      "prompt": "A FF updates Q based on D at the triggering clock edge.",
-      "answer": true,
-      "explain": "Edge-triggered sequential element samples on the clock edge; latches are level-sensitive.",
-      "difficulty": "easy",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_easy_23.mp4",
-        "poster": "media/images/timing_easy_23-frame.png",
-        "figure": "media/images/timing_easy_23.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean-tcq",
-        "label": "Clean · tcq",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_easy_24",
-      "type": "multiple_choice",
-      "prompt": "Which delay starts at the capturing edge and ends when Q is valid?",
-      "choices": [
-        "delay from capturing edge until Q updates",
-        "the same as setup",
-        "an area report",
-        "baud period"
-      ],
-      "answer": 0,
-      "explain": "Output propagation after the edge.",
-      "difficulty": "easy",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_easy_24.mp4",
-        "poster": "media/images/timing_easy_24-frame.png",
-        "figure": "media/images/timing_easy_24.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean-tcq",
-        "label": "Clean · tcq",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_easy_25",
-      "type": "multiple_choice",
-      "prompt": "Setup time (tsu) requires D stable...",
-      "choices": [
-        "for at least tsu before the capturing edge",
-        "only after the edge",
-        "only during reset",
-        "never"
-      ],
-      "answer": 0,
-      "explain": "Data must settle before the edge.",
-      "difficulty": "easy",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_easy_25.mp4",
-        "poster": "media/images/timing_easy_25-frame.png",
-        "figure": "media/images/timing_easy_25.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean-setup",
-        "label": "Clean · setup window",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_easy_26",
-      "type": "multiple_choice",
-      "prompt": "After the capturing edge, D must not change for...",
-      "choices": [
-        "for at least th after the capturing edge",
-        "only before power-up",
-        "the whole period always",
-        "only on negedge forever"
-      ],
-      "answer": 0,
-      "explain": "No early change after the edge.",
-      "difficulty": "easy",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_easy_26.mp4",
-        "poster": "media/images/timing_easy_26-frame.png",
-        "figure": "media/images/timing_easy_26.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean",
-        "label": "Clean pass",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_easy_27",
-      "type": "true_false",
-      "prompt": "A FF updates Q based on D at the triggering clock edge.",
-      "answer": true,
-      "explain": "Edge-triggered sequential element samples on the clock edge; latches are level-sensitive.",
-      "difficulty": "easy",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_easy_27.mp4",
-        "poster": "media/images/timing_easy_27-frame.png",
-        "figure": "media/images/timing_easy_27.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean-tcq",
-        "label": "Clean · tcq",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_easy_28",
-      "type": "multiple_choice",
-      "prompt": "Which delay starts at the capturing edge and ends when Q is valid?",
-      "choices": [
-        "delay from capturing edge until Q updates",
-        "the same as setup",
-        "an area report",
-        "baud period"
-      ],
-      "answer": 0,
-      "explain": "Output propagation after the edge.",
-      "difficulty": "easy",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_easy_28.mp4",
-        "poster": "media/images/timing_easy_28-frame.png",
-        "figure": "media/images/timing_easy_28.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean-tcq",
-        "label": "Clean · tcq",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_easy_29",
-      "type": "multiple_choice",
-      "prompt": "Setup time (tsu) requires D stable...",
-      "choices": [
-        "for at least tsu before the capturing edge",
-        "only after the edge",
-        "only during reset",
-        "never"
-      ],
-      "answer": 0,
-      "explain": "Data must settle before the edge.",
-      "difficulty": "easy",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_easy_29.mp4",
-        "poster": "media/images/timing_easy_29-frame.png",
-        "figure": "media/images/timing_easy_29.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean-setup",
-        "label": "Clean · setup window",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_easy_30",
-      "type": "multiple_choice",
-      "prompt": "After the capturing edge, D must not change for...",
-      "choices": [
-        "for at least th after the capturing edge",
-        "only before power-up",
-        "the whole period always",
-        "only on negedge forever"
-      ],
-      "answer": 0,
-      "explain": "No early change after the edge.",
-      "difficulty": "easy",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_easy_30.mp4",
-        "poster": "media/images/timing_easy_30-frame.png",
-        "figure": "media/images/timing_easy_30.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean",
-        "label": "Clean pass",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
       "id": "timing_medium_01",
       "type": "multiple_choice",
       "prompt": "A setup violation means D changed...",
@@ -970,750 +226,6 @@
         "steps": [
           {
             "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_medium_05",
-      "type": "multiple_choice",
-      "prompt": "A setup violation means D changed...",
-      "choices": [
-        "too close before the edge",
-        "only after reset",
-        "in another clock domain always OK",
-        "never matters"
-      ],
-      "answer": 0,
-      "explain": "Insufficient setup margin.",
-      "difficulty": "medium",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_medium_05.mp4",
-        "poster": "media/images/timing_medium_05-frame.png",
-        "figure": "media/images/timing_medium_05.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "setup_fail",
-        "label": "Setup violation",
-        "steps": [
-          {
-            "click": "[data-preset='setup_fail']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_medium_06",
-      "type": "multiple_choice",
-      "prompt": "A common hold fix on a short path is...",
-      "choices": [
-        "adding delay on the data path",
-        "removing all clocks",
-        "widening the datapath randomly",
-        "disabling reset forever"
-      ],
-      "answer": 0,
-      "explain": "Slow the data so it doesn’t change too soon after the edge.",
-      "difficulty": "medium",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_medium_06.mp4",
-        "poster": "media/images/timing_medium_06-frame.png",
-        "figure": "media/images/timing_medium_06.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "hold_fail",
-        "label": "Hold violation",
-        "steps": [
-          {
-            "click": "[data-preset='hold_fail']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_medium_07",
-      "type": "true_false",
-      "prompt": "A faster clock tightens setup timing budgets.",
-      "answer": true,
-      "explain": "Setup relates to period; hold is largely period-independent.",
-      "difficulty": "medium",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_medium_07.mp4",
-        "poster": "media/images/timing_medium_07-frame.png",
-        "figure": "media/images/timing_medium_07.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean-setup",
-        "label": "Clean · setup window",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_medium_08",
-      "type": "multiple_choice",
-      "prompt": "tsu pairs most naturally with...",
-      "choices": [
-        "tsu and th",
-        "R and C only",
-        "UART framing only",
-        "K-map quads"
-      ],
-      "answer": 0,
-      "explain": "Setup and hold frame the capture window.",
-      "difficulty": "medium",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_medium_08.mp4",
-        "poster": "media/images/timing_medium_08-frame.png",
-        "figure": "media/images/timing_medium_08.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean-setup",
-        "label": "Clean · setup window",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_medium_09",
-      "type": "multiple_choice",
-      "prompt": "A setup violation means D changed...",
-      "choices": [
-        "too close before the edge",
-        "only after reset",
-        "in another clock domain always OK",
-        "never matters"
-      ],
-      "answer": 0,
-      "explain": "Insufficient setup margin.",
-      "difficulty": "medium",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_medium_09.mp4",
-        "poster": "media/images/timing_medium_09-frame.png",
-        "figure": "media/images/timing_medium_09.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "setup_fail",
-        "label": "Setup violation",
-        "steps": [
-          {
-            "click": "[data-preset='setup_fail']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_medium_10",
-      "type": "multiple_choice",
-      "prompt": "A common hold fix on a short path is...",
-      "choices": [
-        "adding delay on the data path",
-        "removing all clocks",
-        "widening the datapath randomly",
-        "disabling reset forever"
-      ],
-      "answer": 0,
-      "explain": "Slow the data so it doesn’t change too soon after the edge.",
-      "difficulty": "medium",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_medium_10.mp4",
-        "poster": "media/images/timing_medium_10-frame.png",
-        "figure": "media/images/timing_medium_10.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "hold_fail",
-        "label": "Hold violation",
-        "steps": [
-          {
-            "click": "[data-preset='hold_fail']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_medium_11",
-      "type": "true_false",
-      "prompt": "A faster clock tightens setup timing budgets.",
-      "answer": true,
-      "explain": "Setup relates to period; hold is largely period-independent.",
-      "difficulty": "medium",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_medium_11.mp4",
-        "poster": "media/images/timing_medium_11-frame.png",
-        "figure": "media/images/timing_medium_11.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean-setup",
-        "label": "Clean · setup window",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_medium_12",
-      "type": "multiple_choice",
-      "prompt": "tsu pairs most naturally with...",
-      "choices": [
-        "tsu and th",
-        "R and C only",
-        "UART framing only",
-        "K-map quads"
-      ],
-      "answer": 0,
-      "explain": "Setup and hold frame the capture window.",
-      "difficulty": "medium",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_medium_12.mp4",
-        "poster": "media/images/timing_medium_12-frame.png",
-        "figure": "media/images/timing_medium_12.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean-setup",
-        "label": "Clean · setup window",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_medium_13",
-      "type": "multiple_choice",
-      "prompt": "A setup violation means D changed...",
-      "choices": [
-        "too close before the edge",
-        "only after reset",
-        "in another clock domain always OK",
-        "never matters"
-      ],
-      "answer": 0,
-      "explain": "Insufficient setup margin.",
-      "difficulty": "medium",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_medium_13.mp4",
-        "poster": "media/images/timing_medium_13-frame.png",
-        "figure": "media/images/timing_medium_13.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "setup_fail",
-        "label": "Setup violation",
-        "steps": [
-          {
-            "click": "[data-preset='setup_fail']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_medium_14",
-      "type": "multiple_choice",
-      "prompt": "A common hold fix on a short path is...",
-      "choices": [
-        "adding delay on the data path",
-        "removing all clocks",
-        "widening the datapath randomly",
-        "disabling reset forever"
-      ],
-      "answer": 0,
-      "explain": "Slow the data so it doesn’t change too soon after the edge.",
-      "difficulty": "medium",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_medium_14.mp4",
-        "poster": "media/images/timing_medium_14-frame.png",
-        "figure": "media/images/timing_medium_14.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "hold_fail",
-        "label": "Hold violation",
-        "steps": [
-          {
-            "click": "[data-preset='hold_fail']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_medium_15",
-      "type": "true_false",
-      "prompt": "A faster clock tightens setup timing budgets.",
-      "answer": true,
-      "explain": "Setup relates to period; hold is largely period-independent.",
-      "difficulty": "medium",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_medium_15.mp4",
-        "poster": "media/images/timing_medium_15-frame.png",
-        "figure": "media/images/timing_medium_15.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean-setup",
-        "label": "Clean · setup window",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_medium_16",
-      "type": "multiple_choice",
-      "prompt": "tsu pairs most naturally with...",
-      "choices": [
-        "tsu and th",
-        "R and C only",
-        "UART framing only",
-        "K-map quads"
-      ],
-      "answer": 0,
-      "explain": "Setup and hold frame the capture window.",
-      "difficulty": "medium",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_medium_16.mp4",
-        "poster": "media/images/timing_medium_16-frame.png",
-        "figure": "media/images/timing_medium_16.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean-setup",
-        "label": "Clean · setup window",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_medium_17",
-      "type": "multiple_choice",
-      "prompt": "A setup violation means D changed...",
-      "choices": [
-        "too close before the edge",
-        "only after reset",
-        "in another clock domain always OK",
-        "never matters"
-      ],
-      "answer": 0,
-      "explain": "Insufficient setup margin.",
-      "difficulty": "medium",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_medium_17.mp4",
-        "poster": "media/images/timing_medium_17-frame.png",
-        "figure": "media/images/timing_medium_17.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "setup_fail",
-        "label": "Setup violation",
-        "steps": [
-          {
-            "click": "[data-preset='setup_fail']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_medium_18",
-      "type": "multiple_choice",
-      "prompt": "A common hold fix on a short path is...",
-      "choices": [
-        "adding delay on the data path",
-        "removing all clocks",
-        "widening the datapath randomly",
-        "disabling reset forever"
-      ],
-      "answer": 0,
-      "explain": "Slow the data so it doesn’t change too soon after the edge.",
-      "difficulty": "medium",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_medium_18.mp4",
-        "poster": "media/images/timing_medium_18-frame.png",
-        "figure": "media/images/timing_medium_18.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "hold_fail",
-        "label": "Hold violation",
-        "steps": [
-          {
-            "click": "[data-preset='hold_fail']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_medium_19",
-      "type": "true_false",
-      "prompt": "A faster clock tightens setup timing budgets.",
-      "answer": true,
-      "explain": "Setup relates to period; hold is largely period-independent.",
-      "difficulty": "medium",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_medium_19.mp4",
-        "poster": "media/images/timing_medium_19-frame.png",
-        "figure": "media/images/timing_medium_19.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean-setup",
-        "label": "Clean · setup window",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_medium_20",
-      "type": "multiple_choice",
-      "prompt": "tsu pairs most naturally with...",
-      "choices": [
-        "tsu and th",
-        "R and C only",
-        "UART framing only",
-        "K-map quads"
-      ],
-      "answer": 0,
-      "explain": "Setup and hold frame the capture window.",
-      "difficulty": "medium",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_medium_20.mp4",
-        "poster": "media/images/timing_medium_20-frame.png",
-        "figure": "media/images/timing_medium_20.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean-setup",
-        "label": "Clean · setup window",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_medium_21",
-      "type": "multiple_choice",
-      "prompt": "A setup violation means D changed...",
-      "choices": [
-        "too close before the edge",
-        "only after reset",
-        "in another clock domain always OK",
-        "never matters"
-      ],
-      "answer": 0,
-      "explain": "Insufficient setup margin.",
-      "difficulty": "medium",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_medium_21.mp4",
-        "poster": "media/images/timing_medium_21-frame.png",
-        "figure": "media/images/timing_medium_21.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "setup_fail",
-        "label": "Setup violation",
-        "steps": [
-          {
-            "click": "[data-preset='setup_fail']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_medium_22",
-      "type": "multiple_choice",
-      "prompt": "A common hold fix on a short path is...",
-      "choices": [
-        "adding delay on the data path",
-        "removing all clocks",
-        "widening the datapath randomly",
-        "disabling reset forever"
-      ],
-      "answer": 0,
-      "explain": "Slow the data so it doesn’t change too soon after the edge.",
-      "difficulty": "medium",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_medium_22.mp4",
-        "poster": "media/images/timing_medium_22-frame.png",
-        "figure": "media/images/timing_medium_22.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "hold_fail",
-        "label": "Hold violation",
-        "steps": [
-          {
-            "click": "[data-preset='hold_fail']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_medium_23",
-      "type": "true_false",
-      "prompt": "A faster clock tightens setup timing budgets.",
-      "answer": true,
-      "explain": "Setup relates to period; hold is largely period-independent.",
-      "difficulty": "medium",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_medium_23.mp4",
-        "poster": "media/images/timing_medium_23-frame.png",
-        "figure": "media/images/timing_medium_23.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean-setup",
-        "label": "Clean · setup window",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_medium_24",
-      "type": "multiple_choice",
-      "prompt": "tsu pairs most naturally with...",
-      "choices": [
-        "tsu and th",
-        "R and C only",
-        "UART framing only",
-        "K-map quads"
-      ],
-      "answer": 0,
-      "explain": "Setup and hold frame the capture window.",
-      "difficulty": "medium",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_medium_24.mp4",
-        "poster": "media/images/timing_medium_24-frame.png",
-        "figure": "media/images/timing_medium_24.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean-setup",
-        "label": "Clean · setup window",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_medium_25",
-      "type": "multiple_choice",
-      "prompt": "A setup violation means D changed...",
-      "choices": [
-        "too close before the edge",
-        "only after reset",
-        "in another clock domain always OK",
-        "never matters"
-      ],
-      "answer": 0,
-      "explain": "Insufficient setup margin.",
-      "difficulty": "medium",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_medium_25.mp4",
-        "poster": "media/images/timing_medium_25-frame.png",
-        "figure": "media/images/timing_medium_25.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "setup_fail",
-        "label": "Setup violation",
-        "steps": [
-          {
-            "click": "[data-preset='setup_fail']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_medium_26",
-      "type": "multiple_choice",
-      "prompt": "A common hold fix on a short path is...",
-      "choices": [
-        "adding delay on the data path",
-        "removing all clocks",
-        "widening the datapath randomly",
-        "disabling reset forever"
-      ],
-      "answer": 0,
-      "explain": "Slow the data so it doesn’t change too soon after the edge.",
-      "difficulty": "medium",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_medium_26.mp4",
-        "poster": "media/images/timing_medium_26-frame.png",
-        "figure": "media/images/timing_medium_26.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "hold_fail",
-        "label": "Hold violation",
-        "steps": [
-          {
-            "click": "[data-preset='hold_fail']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_medium_27",
-      "type": "true_false",
-      "prompt": "A faster clock tightens setup timing budgets.",
-      "answer": true,
-      "explain": "Setup relates to period; hold is largely period-independent.",
-      "difficulty": "medium",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_medium_27.mp4",
-        "poster": "media/images/timing_medium_27-frame.png",
-        "figure": "media/images/timing_medium_27.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean-setup",
-        "label": "Clean · setup window",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_medium_28",
-      "type": "multiple_choice",
-      "prompt": "tsu pairs most naturally with...",
-      "choices": [
-        "tsu and th",
-        "R and C only",
-        "UART framing only",
-        "K-map quads"
-      ],
-      "answer": 0,
-      "explain": "Setup and hold frame the capture window.",
-      "difficulty": "medium",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_medium_28.mp4",
-        "poster": "media/images/timing_medium_28-frame.png",
-        "figure": "media/images/timing_medium_28.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean-setup",
-        "label": "Clean · setup window",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_medium_29",
-      "type": "multiple_choice",
-      "prompt": "A setup violation means D changed...",
-      "choices": [
-        "too close before the edge",
-        "only after reset",
-        "in another clock domain always OK",
-        "never matters"
-      ],
-      "answer": 0,
-      "explain": "Insufficient setup margin.",
-      "difficulty": "medium",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_medium_29.mp4",
-        "poster": "media/images/timing_medium_29-frame.png",
-        "figure": "media/images/timing_medium_29.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "setup_fail",
-        "label": "Setup violation",
-        "steps": [
-          {
-            "click": "[data-preset='setup_fail']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_medium_30",
-      "type": "multiple_choice",
-      "prompt": "A common hold fix on a short path is...",
-      "choices": [
-        "adding delay on the data path",
-        "removing all clocks",
-        "widening the datapath randomly",
-        "disabling reset forever"
-      ],
-      "answer": 0,
-      "explain": "Slow the data so it doesn’t change too soon after the edge.",
-      "difficulty": "medium",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_medium_30.mp4",
-        "poster": "media/images/timing_medium_30-frame.png",
-        "figure": "media/images/timing_medium_30.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "hold_fail",
-        "label": "Hold violation",
-        "steps": [
-          {
-            "click": "[data-preset='hold_fail']"
           }
         ]
       }
@@ -1833,748 +345,862 @@
       }
     },
     {
-      "id": "timing_hard_05",
-      "type": "multiple_choice",
-      "prompt": "Useful skew can help which constraint?",
-      "choices": [
-        "Hold on some paths",
-        "Neither setup nor hold",
-        "Only area",
-        "Only power"
-      ],
-      "answer": 0,
-      "explain": "Late clock at capture can ease hold in some topologies (with care).",
-      "difficulty": "hard",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_hard_05.mp4",
-        "poster": "media/images/timing_hard_05-frame.png",
-        "figure": "media/images/timing_hard_05.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "tight",
-        "label": "Tight but legal",
-        "steps": [
-          {
-            "click": "[data-preset='tight']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_hard_06",
-      "type": "multiple_choice",
-      "prompt": "Short-path timing analysis targets...",
-      "choices": [
-        "Hold checks",
-        "Only DFT",
-        "Only lint",
-        "Hex conversion"
-      ],
-      "answer": 0,
-      "explain": "Hold is a short-path / min-delay problem.",
-      "difficulty": "hard",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_hard_06.mp4",
-        "poster": "media/images/timing_hard_06-frame.png",
-        "figure": "media/images/timing_hard_06.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean",
-        "label": "Clean pass",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_hard_07",
       "type": "true_false",
-      "prompt": "A chip can have setup fails and hold fails simultaneously.",
+      "prompt": "Setup time is a requirement before the active clock edge.",
       "answer": true,
-      "explain": "Long vs short paths; fixes often trade off.",
-      "difficulty": "hard",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_hard_07.mp4",
-        "poster": "media/images/timing_hard_07-frame.png",
-        "figure": "media/images/timing_hard_07.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "tight",
-        "label": "Tight but legal",
-        "steps": [
-          {
-            "click": "[data-preset='tight']"
-          }
-        ]
-      }
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "timing_easy_05"
     },
     {
-      "id": "timing_hard_08",
       "type": "multiple_choice",
-      "prompt": "What happens if uncertainty is omitted from timing analysis?",
+      "prompt": "Setup time is a requirement before the active clock edge?",
       "choices": [
-        "Overstates margin",
-        "Always improves hold",
-        "Removes the need for timing",
-        "Converts async to sync"
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
       ],
       "answer": 0,
-      "explain": "Jitter/uncertainty consumes margin.",
-      "difficulty": "hard",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_hard_08.mp4",
-        "poster": "media/images/timing_hard_08-frame.png",
-        "figure": "media/images/timing_hard_08.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean",
-        "label": "Clean pass",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "timing_easy_06"
     },
     {
-      "id": "timing_hard_09",
-      "type": "multiple_choice",
-      "prompt": "Useful skew can help which constraint?",
-      "choices": [
-        "Hold on some paths",
-        "Neither setup nor hold",
-        "Only area",
-        "Only power"
-      ],
-      "answer": 0,
-      "explain": "Late clock at capture can ease hold in some topologies (with care).",
-      "difficulty": "hard",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_hard_09.mp4",
-        "poster": "media/images/timing_hard_09-frame.png",
-        "figure": "media/images/timing_hard_09.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "tight",
-        "label": "Tight but legal",
-        "steps": [
-          {
-            "click": "[data-preset='tight']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_hard_10",
-      "type": "multiple_choice",
-      "prompt": "Short-path timing analysis targets...",
-      "choices": [
-        "Hold checks",
-        "Only DFT",
-        "Only lint",
-        "Hex conversion"
-      ],
-      "answer": 0,
-      "explain": "Hold is a short-path / min-delay problem.",
-      "difficulty": "hard",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_hard_10.mp4",
-        "poster": "media/images/timing_hard_10-frame.png",
-        "figure": "media/images/timing_hard_10.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean",
-        "label": "Clean pass",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_hard_11",
       "type": "true_false",
-      "prompt": "A chip can have setup fails and hold fails simultaneously.",
+      "prompt": "Hold time is a requirement after the active clock edge.",
       "answer": true,
-      "explain": "Long vs short paths; fixes often trade off.",
-      "difficulty": "hard",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_hard_11.mp4",
-        "poster": "media/images/timing_hard_11-frame.png",
-        "figure": "media/images/timing_hard_11.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "tight",
-        "label": "Tight but legal",
-        "steps": [
-          {
-            "click": "[data-preset='tight']"
-          }
-        ]
-      }
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "timing_easy_07"
     },
     {
-      "id": "timing_hard_12",
       "type": "multiple_choice",
-      "prompt": "What happens if uncertainty is omitted from timing analysis?",
+      "prompt": "Hold time is a requirement after the active clock edge?",
       "choices": [
-        "Overstates margin",
-        "Always improves hold",
-        "Removes the need for timing",
-        "Converts async to sync"
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
       ],
       "answer": 0,
-      "explain": "Jitter/uncertainty consumes margin.",
-      "difficulty": "hard",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_hard_12.mp4",
-        "poster": "media/images/timing_hard_12-frame.png",
-        "figure": "media/images/timing_hard_12.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean",
-        "label": "Clean pass",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "timing_easy_08"
     },
     {
-      "id": "timing_hard_13",
-      "type": "multiple_choice",
-      "prompt": "Useful skew can help which constraint?",
-      "choices": [
-        "Hold on some paths",
-        "Neither setup nor hold",
-        "Only area",
-        "Only power"
-      ],
-      "answer": 0,
-      "explain": "Late clock at capture can ease hold in some topologies (with care).",
-      "difficulty": "hard",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_hard_13.mp4",
-        "poster": "media/images/timing_hard_13-frame.png",
-        "figure": "media/images/timing_hard_13.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "tight",
-        "label": "Tight but legal",
-        "steps": [
-          {
-            "click": "[data-preset='tight']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_hard_14",
-      "type": "multiple_choice",
-      "prompt": "Short-path timing analysis targets...",
-      "choices": [
-        "Hold checks",
-        "Only DFT",
-        "Only lint",
-        "Hex conversion"
-      ],
-      "answer": 0,
-      "explain": "Hold is a short-path / min-delay problem.",
-      "difficulty": "hard",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_hard_14.mp4",
-        "poster": "media/images/timing_hard_14-frame.png",
-        "figure": "media/images/timing_hard_14.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean",
-        "label": "Clean pass",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_hard_15",
       "type": "true_false",
-      "prompt": "A chip can have setup fails and hold fails simultaneously.",
+      "prompt": "Contamination delay is a min path delay from clk to Q.",
       "answer": true,
-      "explain": "Long vs short paths; fixes often trade off.",
-      "difficulty": "hard",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_hard_15.mp4",
-        "poster": "media/images/timing_hard_15-frame.png",
-        "figure": "media/images/timing_hard_15.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "tight",
-        "label": "Tight but legal",
-        "steps": [
-          {
-            "click": "[data-preset='tight']"
-          }
-        ]
-      }
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "timing_easy_09"
     },
     {
-      "id": "timing_hard_16",
       "type": "multiple_choice",
-      "prompt": "What happens if uncertainty is omitted from timing analysis?",
+      "prompt": "Contamination delay is a min path delay from clk to Q?",
       "choices": [
-        "Overstates margin",
-        "Always improves hold",
-        "Removes the need for timing",
-        "Converts async to sync"
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
       ],
       "answer": 0,
-      "explain": "Jitter/uncertainty consumes margin.",
-      "difficulty": "hard",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_hard_16.mp4",
-        "poster": "media/images/timing_hard_16-frame.png",
-        "figure": "media/images/timing_hard_16.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean",
-        "label": "Clean pass",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "timing_easy_10"
     },
     {
-      "id": "timing_hard_17",
-      "type": "multiple_choice",
-      "prompt": "Useful skew can help which constraint?",
-      "choices": [
-        "Hold on some paths",
-        "Neither setup nor hold",
-        "Only area",
-        "Only power"
-      ],
-      "answer": 0,
-      "explain": "Late clock at capture can ease hold in some topologies (with care).",
-      "difficulty": "hard",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_hard_17.mp4",
-        "poster": "media/images/timing_hard_17-frame.png",
-        "figure": "media/images/timing_hard_17.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "tight",
-        "label": "Tight but legal",
-        "steps": [
-          {
-            "click": "[data-preset='tight']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_hard_18",
-      "type": "multiple_choice",
-      "prompt": "Short-path timing analysis targets...",
-      "choices": [
-        "Hold checks",
-        "Only DFT",
-        "Only lint",
-        "Hex conversion"
-      ],
-      "answer": 0,
-      "explain": "Hold is a short-path / min-delay problem.",
-      "difficulty": "hard",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_hard_18.mp4",
-        "poster": "media/images/timing_hard_18-frame.png",
-        "figure": "media/images/timing_hard_18.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean",
-        "label": "Clean pass",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_hard_19",
       "type": "true_false",
-      "prompt": "A chip can have setup fails and hold fails simultaneously.",
+      "prompt": "Clock-to-Q max is used in setup checks.",
       "answer": true,
-      "explain": "Long vs short paths; fixes often trade off.",
-      "difficulty": "hard",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_hard_19.mp4",
-        "poster": "media/images/timing_hard_19-frame.png",
-        "figure": "media/images/timing_hard_19.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "tight",
-        "label": "Tight but legal",
-        "steps": [
-          {
-            "click": "[data-preset='tight']"
-          }
-        ]
-      }
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "timing_easy_11"
     },
     {
-      "id": "timing_hard_20",
       "type": "multiple_choice",
-      "prompt": "What happens if uncertainty is omitted from timing analysis?",
+      "prompt": "Clock-to-Q max is used in setup checks?",
       "choices": [
-        "Overstates margin",
-        "Always improves hold",
-        "Removes the need for timing",
-        "Converts async to sync"
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
       ],
       "answer": 0,
-      "explain": "Jitter/uncertainty consumes margin.",
-      "difficulty": "hard",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_hard_20.mp4",
-        "poster": "media/images/timing_hard_20-frame.png",
-        "figure": "media/images/timing_hard_20.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean",
-        "label": "Clean pass",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "timing_easy_12"
     },
     {
-      "id": "timing_hard_21",
-      "type": "multiple_choice",
-      "prompt": "Useful skew can help which constraint?",
-      "choices": [
-        "Hold on some paths",
-        "Neither setup nor hold",
-        "Only area",
-        "Only power"
-      ],
-      "answer": 0,
-      "explain": "Late clock at capture can ease hold in some topologies (with care).",
-      "difficulty": "hard",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_hard_21.mp4",
-        "poster": "media/images/timing_hard_21-frame.png",
-        "figure": "media/images/timing_hard_21.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "tight",
-        "label": "Tight but legal",
-        "steps": [
-          {
-            "click": "[data-preset='tight']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_hard_22",
-      "type": "multiple_choice",
-      "prompt": "Short-path timing analysis targets...",
-      "choices": [
-        "Hold checks",
-        "Only DFT",
-        "Only lint",
-        "Hex conversion"
-      ],
-      "answer": 0,
-      "explain": "Hold is a short-path / min-delay problem.",
-      "difficulty": "hard",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_hard_22.mp4",
-        "poster": "media/images/timing_hard_22-frame.png",
-        "figure": "media/images/timing_hard_22.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean",
-        "label": "Clean pass",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_hard_23",
       "type": "true_false",
-      "prompt": "A chip can have setup fails and hold fails simultaneously.",
+      "prompt": "Hold checks use min delays / contamination.",
       "answer": true,
-      "explain": "Long vs short paths; fixes often trade off.",
-      "difficulty": "hard",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_hard_23.mp4",
-        "poster": "media/images/timing_hard_23-frame.png",
-        "figure": "media/images/timing_hard_23.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "tight",
-        "label": "Tight but legal",
-        "steps": [
-          {
-            "click": "[data-preset='tight']"
-          }
-        ]
-      }
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "timing_easy_13"
     },
     {
-      "id": "timing_hard_24",
       "type": "multiple_choice",
-      "prompt": "What happens if uncertainty is omitted from timing analysis?",
+      "prompt": "Hold checks use min delays / contamination?",
       "choices": [
-        "Overstates margin",
-        "Always improves hold",
-        "Removes the need for timing",
-        "Converts async to sync"
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
       ],
       "answer": 0,
-      "explain": "Jitter/uncertainty consumes margin.",
-      "difficulty": "hard",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_hard_24.mp4",
-        "poster": "media/images/timing_hard_24-frame.png",
-        "figure": "media/images/timing_hard_24.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean",
-        "label": "Clean pass",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "timing_easy_14"
     },
     {
-      "id": "timing_hard_25",
-      "type": "multiple_choice",
-      "prompt": "Useful skew can help which constraint?",
-      "choices": [
-        "Hold on some paths",
-        "Neither setup nor hold",
-        "Only area",
-        "Only power"
-      ],
-      "answer": 0,
-      "explain": "Late clock at capture can ease hold in some topologies (with care).",
-      "difficulty": "hard",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_hard_25.mp4",
-        "poster": "media/images/timing_hard_25-frame.png",
-        "figure": "media/images/timing_hard_25.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "tight",
-        "label": "Tight but legal",
-        "steps": [
-          {
-            "click": "[data-preset='tight']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_hard_26",
-      "type": "multiple_choice",
-      "prompt": "Short-path timing analysis targets...",
-      "choices": [
-        "Hold checks",
-        "Only DFT",
-        "Only lint",
-        "Hex conversion"
-      ],
-      "answer": 0,
-      "explain": "Hold is a short-path / min-delay problem.",
-      "difficulty": "hard",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_hard_26.mp4",
-        "poster": "media/images/timing_hard_26-frame.png",
-        "figure": "media/images/timing_hard_26.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean",
-        "label": "Clean pass",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
-    },
-    {
-      "id": "timing_hard_27",
       "type": "true_false",
-      "prompt": "A chip can have setup fails and hold fails simultaneously.",
+      "prompt": "A positive-edge FF samples D on the rising edge.",
       "answer": true,
-      "explain": "Long vs short paths; fixes often trade off.",
-      "difficulty": "hard",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_hard_27.mp4",
-        "poster": "media/images/timing_hard_27-frame.png",
-        "figure": "media/images/timing_hard_27.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "tight",
-        "label": "Tight but legal",
-        "steps": [
-          {
-            "click": "[data-preset='tight']"
-          }
-        ]
-      }
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "timing_easy_15"
     },
     {
-      "id": "timing_hard_28",
       "type": "multiple_choice",
-      "prompt": "What happens if uncertainty is omitted from timing analysis?",
+      "prompt": "A positive-edge FF samples D on the rising edge?",
       "choices": [
-        "Overstates margin",
-        "Always improves hold",
-        "Removes the need for timing",
-        "Converts async to sync"
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
       ],
       "answer": 0,
-      "explain": "Jitter/uncertainty consumes margin.",
-      "difficulty": "hard",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_hard_28.mp4",
-        "poster": "media/images/timing_hard_28-frame.png",
-        "figure": "media/images/timing_hard_28.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean",
-        "label": "Clean pass",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "timing_easy_16"
     },
     {
-      "id": "timing_hard_29",
-      "type": "multiple_choice",
-      "prompt": "Useful skew can help which constraint?",
-      "choices": [
-        "Hold on some paths",
-        "Neither setup nor hold",
-        "Only area",
-        "Only power"
-      ],
-      "answer": 0,
-      "explain": "Late clock at capture can ease hold in some topologies (with care).",
-      "difficulty": "hard",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_hard_29.mp4",
-        "poster": "media/images/timing_hard_29-frame.png",
-        "figure": "media/images/timing_hard_29.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "tight",
-        "label": "Tight but legal",
-        "steps": [
-          {
-            "click": "[data-preset='tight']"
-          }
-        ]
-      }
+      "type": "true_false",
+      "prompt": "Async reset can release without timing care.",
+      "answer": false,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "timing_easy_17"
     },
     {
-      "id": "timing_hard_30",
       "type": "multiple_choice",
-      "prompt": "Short-path timing analysis targets...",
+      "prompt": "Async reset can release without timing care?",
       "choices": [
-        "Hold checks",
-        "Only DFT",
-        "Only lint",
-        "Hex conversion"
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 1,
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "timing_easy_18"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Metastability can occur when setup/hold is violated.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "timing_easy_19"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Metastability can occur when setup/hold is violated?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
       ],
       "answer": 0,
-      "explain": "Hold is a short-path / min-delay problem.",
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "timing_easy_20"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Two-flop synchronizers remove all metastability risk forever.",
+      "answer": false,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "timing_easy_21"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Two-flop synchronizers remove all metastability risk forever?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 1,
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "timing_easy_22"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Clock skew can hurt or help a setup margin depending on direction.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "timing_easy_23"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Clock skew can hurt or help a setup margin depending on direction?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "timing_easy_24"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Gating a clock with a free AND is best practice.",
+      "answer": false,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "timing_easy_25"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Gating a clock with a free AND is best practice?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 1,
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "timing_easy_26"
+    },
+    {
+      "type": "true_false",
+      "prompt": "ICG cells are preferred for clock enables.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "timing_easy_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ICG cells are preferred for clock enables?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "timing_easy_28"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Reset recovery/removal are timing checks at reset release.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "timing_easy_29"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Reset recovery/removal are timing checks at reset release?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "timing_easy_30"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Setup time is a requirement before the active clock edge.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "timing_medium_05"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Setup time is a requirement before the active clock edge?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "timing_medium_06"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Hold time is a requirement after the active clock edge.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "timing_medium_07"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hold time is a requirement after the active clock edge?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "timing_medium_08"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Contamination delay is a min path delay from clk to Q.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "timing_medium_09"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Contamination delay is a min path delay from clk to Q?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "timing_medium_10"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Clock-to-Q max is used in setup checks.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "timing_medium_11"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Clock-to-Q max is used in setup checks?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "timing_medium_12"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Hold checks use min delays / contamination.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "timing_medium_13"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hold checks use min delays / contamination?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "timing_medium_14"
+    },
+    {
+      "type": "true_false",
+      "prompt": "A positive-edge FF samples D on the rising edge.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "timing_medium_15"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A positive-edge FF samples D on the rising edge?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "timing_medium_16"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Async reset can release without timing care.",
+      "answer": false,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "timing_medium_17"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Async reset can release without timing care?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 1,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "timing_medium_18"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Metastability can occur when setup/hold is violated.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "timing_medium_19"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Metastability can occur when setup/hold is violated?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "timing_medium_20"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Two-flop synchronizers remove all metastability risk forever.",
+      "answer": false,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "timing_medium_21"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Two-flop synchronizers remove all metastability risk forever?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 1,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "timing_medium_22"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Clock skew can hurt or help a setup margin depending on direction.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "timing_medium_23"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Clock skew can hurt or help a setup margin depending on direction?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "timing_medium_24"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Gating a clock with a free AND is best practice.",
+      "answer": false,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "timing_medium_25"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Gating a clock with a free AND is best practice?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 1,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "timing_medium_26"
+    },
+    {
+      "type": "true_false",
+      "prompt": "ICG cells are preferred for clock enables.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "timing_medium_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ICG cells are preferred for clock enables?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "timing_medium_28"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Reset recovery/removal are timing checks at reset release.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "timing_medium_29"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Reset recovery/removal are timing checks at reset release?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "timing_medium_30"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Setup time is a requirement before the active clock edge.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
       "difficulty": "hard",
-      "media": {
-        "type": "video",
-        "src": "media/videos/timing_hard_30.mp4",
-        "poster": "media/images/timing_hard_30-frame.png",
-        "figure": "media/images/timing_hard_30.png"
-      },
-      "tool_capture": {
-        "tool": "setup-hold",
-        "key": "clean",
-        "label": "Clean pass",
-        "steps": [
-          {
-            "click": "[data-preset='clean']"
-          }
-        ]
-      }
+      "id": "timing_hard_05"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Setup time is a requirement before the active clock edge?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "hard",
+      "id": "timing_hard_06"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Hold time is a requirement after the active clock edge.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "hard",
+      "id": "timing_hard_07"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hold time is a requirement after the active clock edge?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "hard",
+      "id": "timing_hard_08"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Contamination delay is a min path delay from clk to Q.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "hard",
+      "id": "timing_hard_09"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Contamination delay is a min path delay from clk to Q?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "hard",
+      "id": "timing_hard_10"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Clock-to-Q max is used in setup checks.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "hard",
+      "id": "timing_hard_11"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Clock-to-Q max is used in setup checks?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "hard",
+      "id": "timing_hard_12"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Hold checks use min delays / contamination.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "hard",
+      "id": "timing_hard_13"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hold checks use min delays / contamination?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "hard",
+      "id": "timing_hard_14"
+    },
+    {
+      "type": "true_false",
+      "prompt": "A positive-edge FF samples D on the rising edge.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "hard",
+      "id": "timing_hard_15"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A positive-edge FF samples D on the rising edge?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "hard",
+      "id": "timing_hard_16"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Async reset can release without timing care.",
+      "answer": false,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "hard",
+      "id": "timing_hard_17"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Async reset can release without timing care?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 1,
+      "explain": "See sequential timing notes.",
+      "difficulty": "hard",
+      "id": "timing_hard_18"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Metastability can occur when setup/hold is violated.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "hard",
+      "id": "timing_hard_19"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Metastability can occur when setup/hold is violated?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "hard",
+      "id": "timing_hard_20"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Two-flop synchronizers remove all metastability risk forever.",
+      "answer": false,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "hard",
+      "id": "timing_hard_21"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Two-flop synchronizers remove all metastability risk forever?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 1,
+      "explain": "See sequential timing notes.",
+      "difficulty": "hard",
+      "id": "timing_hard_22"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Clock skew can hurt or help a setup margin depending on direction.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "hard",
+      "id": "timing_hard_23"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Clock skew can hurt or help a setup margin depending on direction?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "hard",
+      "id": "timing_hard_24"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Gating a clock with a free AND is best practice.",
+      "answer": false,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "hard",
+      "id": "timing_hard_25"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Gating a clock with a free AND is best practice?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 1,
+      "explain": "See sequential timing notes.",
+      "difficulty": "hard",
+      "id": "timing_hard_26"
+    },
+    {
+      "type": "true_false",
+      "prompt": "ICG cells are preferred for clock enables.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "hard",
+      "id": "timing_hard_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ICG cells are preferred for clock enables?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "hard",
+      "id": "timing_hard_28"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Reset recovery/removal are timing checks at reset release.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "hard",
+      "id": "timing_hard_29"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Reset recovery/removal are timing checks at reset release?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "hard",
+      "id": "timing_hard_30"
     }
   ]
 }

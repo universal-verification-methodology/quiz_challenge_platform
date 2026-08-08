@@ -14,20 +14,7 @@
       ],
       "answer": 0,
       "explain": "Speculate then select on carry.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_easy_01.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "csa_easy_02",
@@ -41,20 +28,7 @@
       ],
       "answer": 0,
       "explain": "Dual parallel upper adds.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_easy_02.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "csa_easy_03",
@@ -68,20 +42,7 @@
       ],
       "answer": 0,
       "explain": "Real carry picks Cin=0 vs Cin=1 sum.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_easy_03.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "csa_easy_04",
@@ -89,686 +50,7 @@
       "prompt": "Starter idea: lower finishes, then mux picks upper.",
       "answer": true,
       "explain": "Two speculative uppers; mux on real carry.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_easy_04.png"
-      }
-    },
-    {
-      "id": "csa_easy_05",
-      "type": "multiple_choice",
-      "prompt": "An adder that muxes dual Cin paths is a…",
-      "choices": [
-        "Carry-select adder",
-        "Lookahead multiplier",
-        "Ring counter",
-        "ALU flag decoder"
-      ],
-      "answer": 0,
-      "explain": "Speculate then select on carry.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_easy_05.png"
-      }
-    },
-    {
-      "id": "csa_easy_06",
-      "type": "multiple_choice",
-      "prompt": "How many Cin hypotheses does the upper CSA block use?",
-      "choices": [
-        "2 (Cin=0 and Cin=1)",
-        "1",
-        "4",
-        "8"
-      ],
-      "answer": 0,
-      "explain": "Dual parallel upper adds.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_easy_06.png"
-      }
-    },
-    {
-      "id": "csa_easy_07",
-      "type": "multiple_choice",
-      "prompt": "What does the select signal choose?",
-      "choices": [
-        "Which upper speculative path the mux uses",
-        "The clock edge",
-        "ROM contents",
-        "Reset only"
-      ],
-      "answer": 0,
-      "explain": "Real carry picks Cin=0 vs Cin=1 sum.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_easy_07.png"
-      }
-    },
-    {
-      "id": "csa_easy_08",
-      "type": "true_false",
-      "prompt": "Starter idea: lower finishes, then mux picks upper.",
-      "answer": true,
-      "explain": "Two speculative uppers; mux on real carry.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_easy_08.png"
-      }
-    },
-    {
-      "id": "csa_easy_09",
-      "type": "multiple_choice",
-      "prompt": "An adder that muxes dual Cin paths is a…",
-      "choices": [
-        "Carry-select adder",
-        "Lookahead multiplier",
-        "Ring counter",
-        "ALU flag decoder"
-      ],
-      "answer": 0,
-      "explain": "Speculate then select on carry.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_easy_09.png"
-      }
-    },
-    {
-      "id": "csa_easy_10",
-      "type": "multiple_choice",
-      "prompt": "How many Cin hypotheses does the upper CSA block use?",
-      "choices": [
-        "2 (Cin=0 and Cin=1)",
-        "1",
-        "4",
-        "8"
-      ],
-      "answer": 0,
-      "explain": "Dual parallel upper adds.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_easy_10.png"
-      }
-    },
-    {
-      "id": "csa_easy_11",
-      "type": "multiple_choice",
-      "prompt": "What does the select signal choose?",
-      "choices": [
-        "Which upper speculative path the mux uses",
-        "The clock edge",
-        "ROM contents",
-        "Reset only"
-      ],
-      "answer": 0,
-      "explain": "Real carry picks Cin=0 vs Cin=1 sum.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_easy_11.png"
-      }
-    },
-    {
-      "id": "csa_easy_12",
-      "type": "true_false",
-      "prompt": "Starter idea: lower finishes, then mux picks upper.",
-      "answer": true,
-      "explain": "Two speculative uppers; mux on real carry.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_easy_12.png"
-      }
-    },
-    {
-      "id": "csa_easy_13",
-      "type": "multiple_choice",
-      "prompt": "An adder that muxes dual Cin paths is a…",
-      "choices": [
-        "Carry-select adder",
-        "Lookahead multiplier",
-        "Ring counter",
-        "ALU flag decoder"
-      ],
-      "answer": 0,
-      "explain": "Speculate then select on carry.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_easy_13.png"
-      }
-    },
-    {
-      "id": "csa_easy_14",
-      "type": "multiple_choice",
-      "prompt": "How many Cin hypotheses does the upper CSA block use?",
-      "choices": [
-        "2 (Cin=0 and Cin=1)",
-        "1",
-        "4",
-        "8"
-      ],
-      "answer": 0,
-      "explain": "Dual parallel upper adds.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_easy_14.png"
-      }
-    },
-    {
-      "id": "csa_easy_15",
-      "type": "multiple_choice",
-      "prompt": "What does the select signal choose?",
-      "choices": [
-        "Which upper speculative path the mux uses",
-        "The clock edge",
-        "ROM contents",
-        "Reset only"
-      ],
-      "answer": 0,
-      "explain": "Real carry picks Cin=0 vs Cin=1 sum.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_easy_15.png"
-      }
-    },
-    {
-      "id": "csa_easy_16",
-      "type": "true_false",
-      "prompt": "Starter idea: lower finishes, then mux picks upper.",
-      "answer": true,
-      "explain": "Two speculative uppers; mux on real carry.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_easy_16.png"
-      }
-    },
-    {
-      "id": "csa_easy_17",
-      "type": "multiple_choice",
-      "prompt": "An adder that muxes dual Cin paths is a…",
-      "choices": [
-        "Carry-select adder",
-        "Lookahead multiplier",
-        "Ring counter",
-        "ALU flag decoder"
-      ],
-      "answer": 0,
-      "explain": "Speculate then select on carry.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_easy_17.png"
-      }
-    },
-    {
-      "id": "csa_easy_18",
-      "type": "multiple_choice",
-      "prompt": "How many Cin hypotheses does the upper CSA block use?",
-      "choices": [
-        "2 (Cin=0 and Cin=1)",
-        "1",
-        "4",
-        "8"
-      ],
-      "answer": 0,
-      "explain": "Dual parallel upper adds.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_easy_18.png"
-      }
-    },
-    {
-      "id": "csa_easy_19",
-      "type": "multiple_choice",
-      "prompt": "What does the select signal choose?",
-      "choices": [
-        "Which upper speculative path the mux uses",
-        "The clock edge",
-        "ROM contents",
-        "Reset only"
-      ],
-      "answer": 0,
-      "explain": "Real carry picks Cin=0 vs Cin=1 sum.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_easy_19.png"
-      }
-    },
-    {
-      "id": "csa_easy_20",
-      "type": "true_false",
-      "prompt": "Starter idea: lower finishes, then mux picks upper.",
-      "answer": true,
-      "explain": "Two speculative uppers; mux on real carry.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_easy_20.png"
-      }
-    },
-    {
-      "id": "csa_easy_21",
-      "type": "multiple_choice",
-      "prompt": "An adder that muxes dual Cin paths is a…",
-      "choices": [
-        "Carry-select adder",
-        "Lookahead multiplier",
-        "Ring counter",
-        "ALU flag decoder"
-      ],
-      "answer": 0,
-      "explain": "Speculate then select on carry.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_easy_21.png"
-      }
-    },
-    {
-      "id": "csa_easy_22",
-      "type": "multiple_choice",
-      "prompt": "How many Cin hypotheses does the upper CSA block use?",
-      "choices": [
-        "2 (Cin=0 and Cin=1)",
-        "1",
-        "4",
-        "8"
-      ],
-      "answer": 0,
-      "explain": "Dual parallel upper adds.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_easy_22.png"
-      }
-    },
-    {
-      "id": "csa_easy_23",
-      "type": "multiple_choice",
-      "prompt": "What does the select signal choose?",
-      "choices": [
-        "Which upper speculative path the mux uses",
-        "The clock edge",
-        "ROM contents",
-        "Reset only"
-      ],
-      "answer": 0,
-      "explain": "Real carry picks Cin=0 vs Cin=1 sum.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_easy_23.png"
-      }
-    },
-    {
-      "id": "csa_easy_24",
-      "type": "true_false",
-      "prompt": "Starter idea: lower finishes, then mux picks upper.",
-      "answer": true,
-      "explain": "Two speculative uppers; mux on real carry.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_easy_24.png"
-      }
-    },
-    {
-      "id": "csa_easy_25",
-      "type": "multiple_choice",
-      "prompt": "An adder that muxes dual Cin paths is a…",
-      "choices": [
-        "Carry-select adder",
-        "Lookahead multiplier",
-        "Ring counter",
-        "ALU flag decoder"
-      ],
-      "answer": 0,
-      "explain": "Speculate then select on carry.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_easy_25.png"
-      }
-    },
-    {
-      "id": "csa_easy_26",
-      "type": "multiple_choice",
-      "prompt": "How many Cin hypotheses does the upper CSA block use?",
-      "choices": [
-        "2 (Cin=0 and Cin=1)",
-        "1",
-        "4",
-        "8"
-      ],
-      "answer": 0,
-      "explain": "Dual parallel upper adds.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_easy_26.png"
-      }
-    },
-    {
-      "id": "csa_easy_27",
-      "type": "multiple_choice",
-      "prompt": "What does the select signal choose?",
-      "choices": [
-        "Which upper speculative path the mux uses",
-        "The clock edge",
-        "ROM contents",
-        "Reset only"
-      ],
-      "answer": 0,
-      "explain": "Real carry picks Cin=0 vs Cin=1 sum.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_easy_27.png"
-      }
-    },
-    {
-      "id": "csa_easy_28",
-      "type": "true_false",
-      "prompt": "Starter idea: lower finishes, then mux picks upper.",
-      "answer": true,
-      "explain": "Two speculative uppers; mux on real carry.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_easy_28.png"
-      }
-    },
-    {
-      "id": "csa_easy_29",
-      "type": "multiple_choice",
-      "prompt": "An adder that muxes dual Cin paths is a…",
-      "choices": [
-        "Carry-select adder",
-        "Lookahead multiplier",
-        "Ring counter",
-        "ALU flag decoder"
-      ],
-      "answer": 0,
-      "explain": "Speculate then select on carry.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_easy_29.png"
-      }
-    },
-    {
-      "id": "csa_easy_30",
-      "type": "multiple_choice",
-      "prompt": "How many Cin hypotheses does the upper CSA block use?",
-      "choices": [
-        "2 (Cin=0 and Cin=1)",
-        "1",
-        "4",
-        "8"
-      ],
-      "answer": 0,
-      "explain": "Dual parallel upper adds.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_easy_30.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "csa_medium_01",
@@ -782,20 +64,7 @@
       ],
       "answer": 0,
       "explain": "165+60=225 → 0xE1.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_medium_01.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "csa_medium_02",
@@ -809,20 +78,7 @@
       ],
       "answer": 0,
       "explain": "Upper work overlaps; mux when carry ready.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_medium_02.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "csa_medium_03",
@@ -836,20 +92,7 @@
       ],
       "answer": 0,
       "explain": "Dual paths plus select muxes.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_medium_03.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "csa_medium_04",
@@ -857,686 +100,7 @@
       "prompt": "Block size choice trades area vs delay in CSA designs.",
       "answer": true,
       "explain": "CSA ≠ CLA; block sizing matters.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_medium_04.png"
-      }
-    },
-    {
-      "id": "csa_medium_05",
-      "type": "multiple_choice",
-      "prompt": "Starter A5+3C style CSA aims for sum…",
-      "choices": [
-        "0xE1",
-        "0xA5",
-        "0x3C",
-        "0xFF"
-      ],
-      "answer": 0,
-      "explain": "165+60=225 → 0xE1.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_medium_05.png"
-      }
-    },
-    {
-      "id": "csa_medium_06",
-      "type": "multiple_choice",
-      "prompt": "Main CSA benefit vs RCA is…",
-      "choices": [
-        "Shortens wait for upper bits once lower Cout arrives",
-        "Removes all adders",
-        "Uses zero multiplexers",
-        "Only works for 1-bit widths"
-      ],
-      "answer": 0,
-      "explain": "Upper work overlaps; mux when carry ready.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_medium_06.png"
-      }
-    },
-    {
-      "id": "csa_medium_07",
-      "type": "multiple_choice",
-      "prompt": "Extra hardware in CSA includes…",
-      "choices": [
-        "Roughly duplicate upper adder + muxes",
-        "No extra gates",
-        "Only a slower clock",
-        "Removing the lower adder"
-      ],
-      "answer": 0,
-      "explain": "Dual paths plus select muxes.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_medium_07.png"
-      }
-    },
-    {
-      "id": "csa_medium_08",
-      "type": "true_false",
-      "prompt": "Block size choice trades area vs delay in CSA designs.",
-      "answer": true,
-      "explain": "CSA ≠ CLA; block sizing matters.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_medium_08.png"
-      }
-    },
-    {
-      "id": "csa_medium_09",
-      "type": "multiple_choice",
-      "prompt": "Starter A5+3C style CSA aims for sum…",
-      "choices": [
-        "0xE1",
-        "0xA5",
-        "0x3C",
-        "0xFF"
-      ],
-      "answer": 0,
-      "explain": "165+60=225 → 0xE1.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_medium_09.png"
-      }
-    },
-    {
-      "id": "csa_medium_10",
-      "type": "multiple_choice",
-      "prompt": "Main CSA benefit vs RCA is…",
-      "choices": [
-        "Shortens wait for upper bits once lower Cout arrives",
-        "Removes all adders",
-        "Uses zero multiplexers",
-        "Only works for 1-bit widths"
-      ],
-      "answer": 0,
-      "explain": "Upper work overlaps; mux when carry ready.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_medium_10.png"
-      }
-    },
-    {
-      "id": "csa_medium_11",
-      "type": "multiple_choice",
-      "prompt": "Extra hardware in CSA includes…",
-      "choices": [
-        "Roughly duplicate upper adder + muxes",
-        "No extra gates",
-        "Only a slower clock",
-        "Removing the lower adder"
-      ],
-      "answer": 0,
-      "explain": "Dual paths plus select muxes.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_medium_11.png"
-      }
-    },
-    {
-      "id": "csa_medium_12",
-      "type": "true_false",
-      "prompt": "Block size choice trades area vs delay in CSA designs.",
-      "answer": true,
-      "explain": "CSA ≠ CLA; block sizing matters.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_medium_12.png"
-      }
-    },
-    {
-      "id": "csa_medium_13",
-      "type": "multiple_choice",
-      "prompt": "Starter A5+3C style CSA aims for sum…",
-      "choices": [
-        "0xE1",
-        "0xA5",
-        "0x3C",
-        "0xFF"
-      ],
-      "answer": 0,
-      "explain": "165+60=225 → 0xE1.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_medium_13.png"
-      }
-    },
-    {
-      "id": "csa_medium_14",
-      "type": "multiple_choice",
-      "prompt": "Main CSA benefit vs RCA is…",
-      "choices": [
-        "Shortens wait for upper bits once lower Cout arrives",
-        "Removes all adders",
-        "Uses zero multiplexers",
-        "Only works for 1-bit widths"
-      ],
-      "answer": 0,
-      "explain": "Upper work overlaps; mux when carry ready.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_medium_14.png"
-      }
-    },
-    {
-      "id": "csa_medium_15",
-      "type": "multiple_choice",
-      "prompt": "Extra hardware in CSA includes…",
-      "choices": [
-        "Roughly duplicate upper adder + muxes",
-        "No extra gates",
-        "Only a slower clock",
-        "Removing the lower adder"
-      ],
-      "answer": 0,
-      "explain": "Dual paths plus select muxes.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_medium_15.png"
-      }
-    },
-    {
-      "id": "csa_medium_16",
-      "type": "true_false",
-      "prompt": "Block size choice trades area vs delay in CSA designs.",
-      "answer": true,
-      "explain": "CSA ≠ CLA; block sizing matters.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_medium_16.png"
-      }
-    },
-    {
-      "id": "csa_medium_17",
-      "type": "multiple_choice",
-      "prompt": "Starter A5+3C style CSA aims for sum…",
-      "choices": [
-        "0xE1",
-        "0xA5",
-        "0x3C",
-        "0xFF"
-      ],
-      "answer": 0,
-      "explain": "165+60=225 → 0xE1.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_medium_17.png"
-      }
-    },
-    {
-      "id": "csa_medium_18",
-      "type": "multiple_choice",
-      "prompt": "Main CSA benefit vs RCA is…",
-      "choices": [
-        "Shortens wait for upper bits once lower Cout arrives",
-        "Removes all adders",
-        "Uses zero multiplexers",
-        "Only works for 1-bit widths"
-      ],
-      "answer": 0,
-      "explain": "Upper work overlaps; mux when carry ready.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_medium_18.png"
-      }
-    },
-    {
-      "id": "csa_medium_19",
-      "type": "multiple_choice",
-      "prompt": "Extra hardware in CSA includes…",
-      "choices": [
-        "Roughly duplicate upper adder + muxes",
-        "No extra gates",
-        "Only a slower clock",
-        "Removing the lower adder"
-      ],
-      "answer": 0,
-      "explain": "Dual paths plus select muxes.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_medium_19.png"
-      }
-    },
-    {
-      "id": "csa_medium_20",
-      "type": "true_false",
-      "prompt": "Block size choice trades area vs delay in CSA designs.",
-      "answer": true,
-      "explain": "CSA ≠ CLA; block sizing matters.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_medium_20.png"
-      }
-    },
-    {
-      "id": "csa_medium_21",
-      "type": "multiple_choice",
-      "prompt": "Starter A5+3C style CSA aims for sum…",
-      "choices": [
-        "0xE1",
-        "0xA5",
-        "0x3C",
-        "0xFF"
-      ],
-      "answer": 0,
-      "explain": "165+60=225 → 0xE1.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_medium_21.png"
-      }
-    },
-    {
-      "id": "csa_medium_22",
-      "type": "multiple_choice",
-      "prompt": "Main CSA benefit vs RCA is…",
-      "choices": [
-        "Shortens wait for upper bits once lower Cout arrives",
-        "Removes all adders",
-        "Uses zero multiplexers",
-        "Only works for 1-bit widths"
-      ],
-      "answer": 0,
-      "explain": "Upper work overlaps; mux when carry ready.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_medium_22.png"
-      }
-    },
-    {
-      "id": "csa_medium_23",
-      "type": "multiple_choice",
-      "prompt": "Extra hardware in CSA includes…",
-      "choices": [
-        "Roughly duplicate upper adder + muxes",
-        "No extra gates",
-        "Only a slower clock",
-        "Removing the lower adder"
-      ],
-      "answer": 0,
-      "explain": "Dual paths plus select muxes.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_medium_23.png"
-      }
-    },
-    {
-      "id": "csa_medium_24",
-      "type": "true_false",
-      "prompt": "Block size choice trades area vs delay in CSA designs.",
-      "answer": true,
-      "explain": "CSA ≠ CLA; block sizing matters.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_medium_24.png"
-      }
-    },
-    {
-      "id": "csa_medium_25",
-      "type": "multiple_choice",
-      "prompt": "Starter A5+3C style CSA aims for sum…",
-      "choices": [
-        "0xE1",
-        "0xA5",
-        "0x3C",
-        "0xFF"
-      ],
-      "answer": 0,
-      "explain": "165+60=225 → 0xE1.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_medium_25.png"
-      }
-    },
-    {
-      "id": "csa_medium_26",
-      "type": "multiple_choice",
-      "prompt": "Main CSA benefit vs RCA is…",
-      "choices": [
-        "Shortens wait for upper bits once lower Cout arrives",
-        "Removes all adders",
-        "Uses zero multiplexers",
-        "Only works for 1-bit widths"
-      ],
-      "answer": 0,
-      "explain": "Upper work overlaps; mux when carry ready.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_medium_26.png"
-      }
-    },
-    {
-      "id": "csa_medium_27",
-      "type": "multiple_choice",
-      "prompt": "Extra hardware in CSA includes…",
-      "choices": [
-        "Roughly duplicate upper adder + muxes",
-        "No extra gates",
-        "Only a slower clock",
-        "Removing the lower adder"
-      ],
-      "answer": 0,
-      "explain": "Dual paths plus select muxes.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_medium_27.png"
-      }
-    },
-    {
-      "id": "csa_medium_28",
-      "type": "true_false",
-      "prompt": "Block size choice trades area vs delay in CSA designs.",
-      "answer": true,
-      "explain": "CSA ≠ CLA; block sizing matters.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_medium_28.png"
-      }
-    },
-    {
-      "id": "csa_medium_29",
-      "type": "multiple_choice",
-      "prompt": "Starter A5+3C style CSA aims for sum…",
-      "choices": [
-        "0xE1",
-        "0xA5",
-        "0x3C",
-        "0xFF"
-      ],
-      "answer": 0,
-      "explain": "165+60=225 → 0xE1.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_medium_29.png"
-      }
-    },
-    {
-      "id": "csa_medium_30",
-      "type": "multiple_choice",
-      "prompt": "Main CSA benefit vs RCA is…",
-      "choices": [
-        "Shortens wait for upper bits once lower Cout arrives",
-        "Removes all adders",
-        "Uses zero multiplexers",
-        "Only works for 1-bit widths"
-      ],
-      "answer": 0,
-      "explain": "Upper work overlaps; mux when carry ready.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_medium_30.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "csa_hard_01",
@@ -1550,20 +114,7 @@
       ],
       "answer": 0,
       "explain": "Nested or multi-block select.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_hard_01.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "csa_hard_02",
@@ -1577,20 +128,7 @@
       ],
       "answer": 0,
       "explain": "Cin hypothesis changes the upper result.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_hard_02.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "csa_hard_03",
@@ -1604,20 +142,7 @@
       ],
       "answer": 0,
       "explain": "Overlap upper with lower; pay mux.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_hard_03.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "csa_hard_04",
@@ -1625,686 +150,1081 @@
       "prompt": "Carry-select removes the need for any carry at all.",
       "answer": false,
       "explain": "Select still depends on real carry.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_hard_04.png"
-      }
+      "difficulty": "hard"
     },
     {
-      "id": "csa_hard_05",
       "type": "multiple_choice",
-      "prompt": "Multi-level CSA cascades by…",
+      "prompt": "Full adder A=0 B=0 Cin=0: Sum is…",
       "choices": [
-        "Selecting among more blocks / nested select stages",
-        "Abandoning muxes entirely always",
-        "Using only software add",
-        "Forbidding speculation"
+        "0",
+        "1",
+        "Cout",
+        "X"
       ],
       "answer": 0,
-      "explain": "Nested or multi-block select.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_hard_05.png"
-      }
+      "explain": "Sum = A⊕B⊕Cin = 0.",
+      "difficulty": "easy",
+      "id": "csa_easy_05"
     },
     {
-      "id": "csa_hard_06",
       "type": "multiple_choice",
-      "prompt": "Useless speculation would mean…",
+      "prompt": "Full adder A=0 B=0 Cin=0: Cout is…",
       "choices": [
-        "Paths can differ — Cin changes upper sum/Cout",
-        "Cin never affects upper bits",
-        "Lower Cout is unused",
-        "Area is free"
+        "0",
+        "1",
+        "Sum",
+        "A"
       ],
       "answer": 0,
-      "explain": "Cin hypothesis changes the upper result.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_hard_06.png"
-      }
+      "explain": "Majority → Cout=0.",
+      "difficulty": "easy",
+      "id": "csa_easy_06"
     },
     {
-      "id": "csa_hard_07",
       "type": "multiple_choice",
-      "prompt": "Critical path often becomes…",
+      "prompt": "Full adder A=0 B=1 Cin=0: Sum is…",
       "choices": [
-        "max(lower delay, upper delay) + mux, not full N ripple",
-        "Always slower than RCA",
-        "Independent of block size",
-        "Equal to memory latency"
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "easy",
+      "id": "csa_easy_07"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=1 Cin=0: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
       ],
       "answer": 0,
-      "explain": "Overlap upper with lower; pay mux.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_hard_07.png"
-      }
+      "explain": "Majority → Cout=0.",
+      "difficulty": "easy",
+      "id": "csa_easy_08"
     },
     {
-      "id": "csa_hard_08",
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=0 Cin=0: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "easy",
+      "id": "csa_easy_09"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=0 Cin=0: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 0,
+      "explain": "Majority → Cout=0.",
+      "difficulty": "easy",
+      "id": "csa_easy_10"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=1 Cin=0: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 0,
+      "explain": "Sum = A⊕B⊕Cin = 0.",
+      "difficulty": "easy",
+      "id": "csa_easy_11"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=1 Cin=0: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "easy",
+      "id": "csa_easy_12"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=0 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "easy",
+      "id": "csa_easy_13"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=0 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 0,
+      "explain": "Majority → Cout=0.",
+      "difficulty": "easy",
+      "id": "csa_easy_14"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=1 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 0,
+      "explain": "Sum = A⊕B⊕Cin = 0.",
+      "difficulty": "easy",
+      "id": "csa_easy_15"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=1 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "easy",
+      "id": "csa_easy_16"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=0 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 0,
+      "explain": "Sum = A⊕B⊕Cin = 0.",
+      "difficulty": "easy",
+      "id": "csa_easy_17"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=0 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "easy",
+      "id": "csa_easy_18"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=1 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "easy",
+      "id": "csa_easy_19"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=1 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "easy",
+      "id": "csa_easy_20"
+    },
+    {
       "type": "true_false",
-      "prompt": "Carry-select removes the need for any carry at all.",
-      "answer": false,
-      "explain": "Select still depends on real carry.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_hard_08.png"
-      }
+      "prompt": "Half adder has no carry-in.",
+      "answer": true,
+      "explain": "HA = Sum/Cout from A,B only.",
+      "difficulty": "easy",
+      "id": "csa_easy_21"
     },
     {
-      "id": "csa_hard_09",
       "type": "multiple_choice",
-      "prompt": "Multi-level CSA cascades by…",
+      "prompt": "A 1-to-2 decoder has how many select lines?",
       "choices": [
-        "Selecting among more blocks / nested select stages",
-        "Abandoning muxes entirely always",
-        "Using only software add",
-        "Forbidding speculation"
+        "2",
+        "1",
+        "2",
+        "2"
+      ],
+      "answer": 1,
+      "explain": "1 selects address 2 ones-hot lines.",
+      "difficulty": "easy",
+      "id": "csa_easy_22"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A mux with 2 data inputs needs how many select bits?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": 1,
+      "explain": "log2(2) = 1.",
+      "difficulty": "easy",
+      "id": "csa_easy_23"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A 2-to-4 decoder has how many select lines?",
+      "choices": [
+        "4",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "2 selects address 4 ones-hot lines.",
+      "difficulty": "easy",
+      "id": "csa_easy_24"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A mux with 4 data inputs needs how many select bits?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "log2(4) = 2.",
+      "difficulty": "easy",
+      "id": "csa_easy_25"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A 3-to-8 decoder has how many select lines?",
+      "choices": [
+        "8",
+        "3",
+        "4",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "3 selects address 8 ones-hot lines.",
+      "difficulty": "easy",
+      "id": "csa_easy_26"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A mux with 8 data inputs needs how many select bits?",
+      "choices": [
+        "2",
+        "3",
+        "8",
+        "5"
+      ],
+      "answer": 1,
+      "explain": "log2(8) = 3.",
+      "difficulty": "easy",
+      "id": "csa_easy_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A 4-to-16 decoder has how many select lines?",
+      "choices": [
+        "16",
+        "4",
+        "5",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "4 selects address 16 ones-hot lines.",
+      "difficulty": "easy",
+      "id": "csa_easy_28"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A mux with 16 data inputs needs how many select bits?",
+      "choices": [
+        "3",
+        "4",
+        "16",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "log2(16) = 4.",
+      "difficulty": "easy",
+      "id": "csa_easy_29"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A 5-to-32 decoder has how many select lines?",
+      "choices": [
+        "32",
+        "5",
+        "6",
+        "10"
+      ],
+      "answer": 1,
+      "explain": "5 selects address 32 ones-hot lines.",
+      "difficulty": "easy",
+      "id": "csa_easy_30"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=0 Cin=0: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
       ],
       "answer": 0,
-      "explain": "Nested or multi-block select.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_hard_09.png"
-      }
+      "explain": "Sum = A⊕B⊕Cin = 0.",
+      "difficulty": "medium",
+      "id": "csa_medium_05"
     },
     {
-      "id": "csa_hard_10",
       "type": "multiple_choice",
-      "prompt": "Useless speculation would mean…",
+      "prompt": "Full adder A=0 B=0 Cin=0: Cout is…",
       "choices": [
-        "Paths can differ — Cin changes upper sum/Cout",
-        "Cin never affects upper bits",
-        "Lower Cout is unused",
-        "Area is free"
+        "0",
+        "1",
+        "Sum",
+        "A"
       ],
       "answer": 0,
-      "explain": "Cin hypothesis changes the upper result.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_hard_10.png"
-      }
+      "explain": "Majority → Cout=0.",
+      "difficulty": "medium",
+      "id": "csa_medium_06"
     },
     {
-      "id": "csa_hard_11",
       "type": "multiple_choice",
-      "prompt": "Critical path often becomes…",
+      "prompt": "Full adder A=0 B=1 Cin=0: Sum is…",
       "choices": [
-        "max(lower delay, upper delay) + mux, not full N ripple",
-        "Always slower than RCA",
-        "Independent of block size",
-        "Equal to memory latency"
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "medium",
+      "id": "csa_medium_07"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=1 Cin=0: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
       ],
       "answer": 0,
-      "explain": "Overlap upper with lower; pay mux.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_hard_11.png"
-      }
+      "explain": "Majority → Cout=0.",
+      "difficulty": "medium",
+      "id": "csa_medium_08"
     },
     {
-      "id": "csa_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=0 Cin=0: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "medium",
+      "id": "csa_medium_09"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=0 Cin=0: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 0,
+      "explain": "Majority → Cout=0.",
+      "difficulty": "medium",
+      "id": "csa_medium_10"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=1 Cin=0: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 0,
+      "explain": "Sum = A⊕B⊕Cin = 0.",
+      "difficulty": "medium",
+      "id": "csa_medium_11"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=1 Cin=0: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "medium",
+      "id": "csa_medium_12"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=0 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "medium",
+      "id": "csa_medium_13"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=0 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 0,
+      "explain": "Majority → Cout=0.",
+      "difficulty": "medium",
+      "id": "csa_medium_14"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=1 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 0,
+      "explain": "Sum = A⊕B⊕Cin = 0.",
+      "difficulty": "medium",
+      "id": "csa_medium_15"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=1 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "medium",
+      "id": "csa_medium_16"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=0 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 0,
+      "explain": "Sum = A⊕B⊕Cin = 0.",
+      "difficulty": "medium",
+      "id": "csa_medium_17"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=0 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "medium",
+      "id": "csa_medium_18"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=1 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "medium",
+      "id": "csa_medium_19"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=1 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "medium",
+      "id": "csa_medium_20"
+    },
+    {
       "type": "true_false",
-      "prompt": "Carry-select removes the need for any carry at all.",
-      "answer": false,
-      "explain": "Select still depends on real carry.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_hard_12.png"
-      }
+      "prompt": "Half adder has no carry-in.",
+      "answer": true,
+      "explain": "HA = Sum/Cout from A,B only.",
+      "difficulty": "medium",
+      "id": "csa_medium_21"
     },
     {
-      "id": "csa_hard_13",
       "type": "multiple_choice",
-      "prompt": "Multi-level CSA cascades by…",
+      "prompt": "A 1-to-2 decoder has how many select lines?",
       "choices": [
-        "Selecting among more blocks / nested select stages",
-        "Abandoning muxes entirely always",
-        "Using only software add",
-        "Forbidding speculation"
+        "2",
+        "1",
+        "2",
+        "2"
+      ],
+      "answer": 1,
+      "explain": "1 selects address 2 ones-hot lines.",
+      "difficulty": "medium",
+      "id": "csa_medium_22"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A mux with 2 data inputs needs how many select bits?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": 1,
+      "explain": "log2(2) = 1.",
+      "difficulty": "medium",
+      "id": "csa_medium_23"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A 2-to-4 decoder has how many select lines?",
+      "choices": [
+        "4",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "2 selects address 4 ones-hot lines.",
+      "difficulty": "medium",
+      "id": "csa_medium_24"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A mux with 4 data inputs needs how many select bits?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "log2(4) = 2.",
+      "difficulty": "medium",
+      "id": "csa_medium_25"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A 3-to-8 decoder has how many select lines?",
+      "choices": [
+        "8",
+        "3",
+        "4",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "3 selects address 8 ones-hot lines.",
+      "difficulty": "medium",
+      "id": "csa_medium_26"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A mux with 8 data inputs needs how many select bits?",
+      "choices": [
+        "2",
+        "3",
+        "8",
+        "5"
+      ],
+      "answer": 1,
+      "explain": "log2(8) = 3.",
+      "difficulty": "medium",
+      "id": "csa_medium_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A 4-to-16 decoder has how many select lines?",
+      "choices": [
+        "16",
+        "4",
+        "5",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "4 selects address 16 ones-hot lines.",
+      "difficulty": "medium",
+      "id": "csa_medium_28"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A mux with 16 data inputs needs how many select bits?",
+      "choices": [
+        "3",
+        "4",
+        "16",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "log2(16) = 4.",
+      "difficulty": "medium",
+      "id": "csa_medium_29"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "A 5-to-32 decoder has how many select lines?",
+      "choices": [
+        "32",
+        "5",
+        "6",
+        "10"
+      ],
+      "answer": 1,
+      "explain": "5 selects address 32 ones-hot lines.",
+      "difficulty": "medium",
+      "id": "csa_medium_30"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=0 Cin=0: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
       ],
       "answer": 0,
-      "explain": "Nested or multi-block select.",
+      "explain": "Sum = A⊕B⊕Cin = 0.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_hard_13.png"
-      }
+      "id": "csa_hard_05"
     },
     {
-      "id": "csa_hard_14",
       "type": "multiple_choice",
-      "prompt": "Useless speculation would mean…",
+      "prompt": "Full adder A=0 B=0 Cin=0: Cout is…",
       "choices": [
-        "Paths can differ — Cin changes upper sum/Cout",
-        "Cin never affects upper bits",
-        "Lower Cout is unused",
-        "Area is free"
+        "0",
+        "1",
+        "Sum",
+        "A"
       ],
       "answer": 0,
-      "explain": "Cin hypothesis changes the upper result.",
+      "explain": "Majority → Cout=0.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_hard_14.png"
-      }
+      "id": "csa_hard_06"
     },
     {
-      "id": "csa_hard_15",
       "type": "multiple_choice",
-      "prompt": "Critical path often becomes…",
+      "prompt": "Full adder A=0 B=1 Cin=0: Sum is…",
       "choices": [
-        "max(lower delay, upper delay) + mux, not full N ripple",
-        "Always slower than RCA",
-        "Independent of block size",
-        "Equal to memory latency"
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "hard",
+      "id": "csa_hard_07"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=1 Cin=0: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
       ],
       "answer": 0,
-      "explain": "Overlap upper with lower; pay mux.",
+      "explain": "Majority → Cout=0.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_hard_15.png"
-      }
+      "id": "csa_hard_08"
     },
     {
-      "id": "csa_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=0 Cin=0: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "hard",
+      "id": "csa_hard_09"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=0 Cin=0: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 0,
+      "explain": "Majority → Cout=0.",
+      "difficulty": "hard",
+      "id": "csa_hard_10"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=1 Cin=0: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 0,
+      "explain": "Sum = A⊕B⊕Cin = 0.",
+      "difficulty": "hard",
+      "id": "csa_hard_11"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=1 Cin=0: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "hard",
+      "id": "csa_hard_12"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=0 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "hard",
+      "id": "csa_hard_13"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=0 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 0,
+      "explain": "Majority → Cout=0.",
+      "difficulty": "hard",
+      "id": "csa_hard_14"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=1 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 0,
+      "explain": "Sum = A⊕B⊕Cin = 0.",
+      "difficulty": "hard",
+      "id": "csa_hard_15"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=1 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "hard",
+      "id": "csa_hard_16"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=0 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 0,
+      "explain": "Sum = A⊕B⊕Cin = 0.",
+      "difficulty": "hard",
+      "id": "csa_hard_17"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=0 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "hard",
+      "id": "csa_hard_18"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=1 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "hard",
+      "id": "csa_hard_19"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=1 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "hard",
+      "id": "csa_hard_20"
+    },
+    {
       "type": "true_false",
-      "prompt": "Carry-select removes the need for any carry at all.",
-      "answer": false,
-      "explain": "Select still depends on real carry.",
+      "prompt": "Half adder has no carry-in.",
+      "answer": true,
+      "explain": "HA = Sum/Cout from A,B only.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_hard_16.png"
-      }
+      "id": "csa_hard_21"
     },
     {
-      "id": "csa_hard_17",
       "type": "multiple_choice",
-      "prompt": "Multi-level CSA cascades by…",
+      "prompt": "A 1-to-2 decoder has how many select lines?",
       "choices": [
-        "Selecting among more blocks / nested select stages",
-        "Abandoning muxes entirely always",
-        "Using only software add",
-        "Forbidding speculation"
+        "2",
+        "1",
+        "2",
+        "2"
       ],
-      "answer": 0,
-      "explain": "Nested or multi-block select.",
+      "answer": 1,
+      "explain": "1 selects address 2 ones-hot lines.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_hard_17.png"
-      }
+      "id": "csa_hard_22"
     },
     {
-      "id": "csa_hard_18",
       "type": "multiple_choice",
-      "prompt": "Useless speculation would mean…",
+      "prompt": "A mux with 2 data inputs needs how many select bits?",
       "choices": [
-        "Paths can differ — Cin changes upper sum/Cout",
-        "Cin never affects upper bits",
-        "Lower Cout is unused",
-        "Area is free"
+        "0",
+        "1",
+        "2",
+        "3"
       ],
-      "answer": 0,
-      "explain": "Cin hypothesis changes the upper result.",
+      "answer": 1,
+      "explain": "log2(2) = 1.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_hard_18.png"
-      }
+      "id": "csa_hard_23"
     },
     {
-      "id": "csa_hard_19",
       "type": "multiple_choice",
-      "prompt": "Critical path often becomes…",
+      "prompt": "A 2-to-4 decoder has how many select lines?",
       "choices": [
-        "max(lower delay, upper delay) + mux, not full N ripple",
-        "Always slower than RCA",
-        "Independent of block size",
-        "Equal to memory latency"
+        "4",
+        "2",
+        "3",
+        "4"
       ],
-      "answer": 0,
-      "explain": "Overlap upper with lower; pay mux.",
+      "answer": 1,
+      "explain": "2 selects address 4 ones-hot lines.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_hard_19.png"
-      }
+      "id": "csa_hard_24"
     },
     {
-      "id": "csa_hard_20",
-      "type": "true_false",
-      "prompt": "Carry-select removes the need for any carry at all.",
-      "answer": false,
-      "explain": "Select still depends on real carry.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_hard_20.png"
-      }
-    },
-    {
-      "id": "csa_hard_21",
       "type": "multiple_choice",
-      "prompt": "Multi-level CSA cascades by…",
+      "prompt": "A mux with 4 data inputs needs how many select bits?",
       "choices": [
-        "Selecting among more blocks / nested select stages",
-        "Abandoning muxes entirely always",
-        "Using only software add",
-        "Forbidding speculation"
+        "1",
+        "2",
+        "4",
+        "4"
       ],
-      "answer": 0,
-      "explain": "Nested or multi-block select.",
+      "answer": 1,
+      "explain": "log2(4) = 2.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_hard_21.png"
-      }
+      "id": "csa_hard_25"
     },
     {
-      "id": "csa_hard_22",
       "type": "multiple_choice",
-      "prompt": "Useless speculation would mean…",
+      "prompt": "A 3-to-8 decoder has how many select lines?",
       "choices": [
-        "Paths can differ — Cin changes upper sum/Cout",
-        "Cin never affects upper bits",
-        "Lower Cout is unused",
-        "Area is free"
+        "8",
+        "3",
+        "4",
+        "6"
       ],
-      "answer": 0,
-      "explain": "Cin hypothesis changes the upper result.",
+      "answer": 1,
+      "explain": "3 selects address 8 ones-hot lines.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_hard_22.png"
-      }
+      "id": "csa_hard_26"
     },
     {
-      "id": "csa_hard_23",
       "type": "multiple_choice",
-      "prompt": "Critical path often becomes…",
+      "prompt": "A mux with 8 data inputs needs how many select bits?",
       "choices": [
-        "max(lower delay, upper delay) + mux, not full N ripple",
-        "Always slower than RCA",
-        "Independent of block size",
-        "Equal to memory latency"
+        "2",
+        "3",
+        "8",
+        "5"
       ],
-      "answer": 0,
-      "explain": "Overlap upper with lower; pay mux.",
+      "answer": 1,
+      "explain": "log2(8) = 3.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_hard_23.png"
-      }
+      "id": "csa_hard_27"
     },
     {
-      "id": "csa_hard_24",
-      "type": "true_false",
-      "prompt": "Carry-select removes the need for any carry at all.",
-      "answer": false,
-      "explain": "Select still depends on real carry.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_hard_24.png"
-      }
-    },
-    {
-      "id": "csa_hard_25",
       "type": "multiple_choice",
-      "prompt": "Multi-level CSA cascades by…",
+      "prompt": "A 4-to-16 decoder has how many select lines?",
       "choices": [
-        "Selecting among more blocks / nested select stages",
-        "Abandoning muxes entirely always",
-        "Using only software add",
-        "Forbidding speculation"
+        "16",
+        "4",
+        "5",
+        "8"
       ],
-      "answer": 0,
-      "explain": "Nested or multi-block select.",
+      "answer": 1,
+      "explain": "4 selects address 16 ones-hot lines.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_hard_25.png"
-      }
+      "id": "csa_hard_28"
     },
     {
-      "id": "csa_hard_26",
       "type": "multiple_choice",
-      "prompt": "Useless speculation would mean…",
+      "prompt": "A mux with 16 data inputs needs how many select bits?",
       "choices": [
-        "Paths can differ — Cin changes upper sum/Cout",
-        "Cin never affects upper bits",
-        "Lower Cout is unused",
-        "Area is free"
+        "3",
+        "4",
+        "16",
+        "6"
       ],
-      "answer": 0,
-      "explain": "Cin hypothesis changes the upper result.",
+      "answer": 1,
+      "explain": "log2(16) = 4.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_hard_26.png"
-      }
+      "id": "csa_hard_29"
     },
     {
-      "id": "csa_hard_27",
       "type": "multiple_choice",
-      "prompt": "Critical path often becomes…",
+      "prompt": "A 5-to-32 decoder has how many select lines?",
       "choices": [
-        "max(lower delay, upper delay) + mux, not full N ripple",
-        "Always slower than RCA",
-        "Independent of block size",
-        "Equal to memory latency"
+        "32",
+        "5",
+        "6",
+        "10"
       ],
-      "answer": 0,
-      "explain": "Overlap upper with lower; pay mux.",
+      "answer": 1,
+      "explain": "5 selects address 32 ones-hot lines.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_hard_27.png"
-      }
-    },
-    {
-      "id": "csa_hard_28",
-      "type": "true_false",
-      "prompt": "Carry-select removes the need for any carry at all.",
-      "answer": false,
-      "explain": "Select still depends on real carry.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_hard_28.png"
-      }
-    },
-    {
-      "id": "csa_hard_29",
-      "type": "multiple_choice",
-      "prompt": "Multi-level CSA cascades by…",
-      "choices": [
-        "Selecting among more blocks / nested select stages",
-        "Abandoning muxes entirely always",
-        "Using only software add",
-        "Forbidding speculation"
-      ],
-      "answer": 0,
-      "explain": "Nested or multi-block select.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_hard_29.png"
-      }
-    },
-    {
-      "id": "csa_hard_30",
-      "type": "multiple_choice",
-      "prompt": "Useless speculation would mean…",
-      "choices": [
-        "Paths can differ — Cin changes upper sum/Cout",
-        "Cin never affects upper bits",
-        "Lower Cout is unused",
-        "Area is free"
-      ],
-      "answer": 0,
-      "explain": "Cin hypothesis changes the upper result.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-select-adder",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#csa-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/csa_hard_30.png"
-      }
+      "id": "csa_hard_30"
     }
   ]
 }

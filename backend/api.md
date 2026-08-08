@@ -44,11 +44,13 @@ Scoring (higher is better):
 
 Best run per email is kept; names shown as `Yxxxxx Lx` (first letter of each word kept).
 
-Redeploy the worker after pulling these changes so `GET /leaderboard` exists.
-
 ## Payload
 
-See `schema: "quiz_challenge_result_v1"` built by `js/results.js` (identity + summary + attempts + optional `benchmark`).
+See `schema: "quiz_challenge_result_v1"` built by `js/results.js` (identity + summary + level_state + optional `benchmark`).
+
+**GitHub submit is slimmed:** the browser keeps a full local copy (including attempts) but POSTs `QCResults.slimForSubmit(payload)` — empty `attempts`, plus `summary.median_ms` / `summary.timeouts` and `benchmark` aggregates. Full Quest runs can exceed GitHub’s ~65KB issue body if every attempt is embedded; the leaderboard only needs those aggregates.
+
+Redeploy the worker after pulling these changes so compact issue bodies and aggregate fallbacks are live (`GET /leaderboard` + slim Full Quest posts).
 
 ## Without a worker
 

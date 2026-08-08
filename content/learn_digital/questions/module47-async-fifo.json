@@ -14,23 +14,7 @@
       ],
       "answer": 0,
       "explain": "Avoid multi-bit CDC glitches.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_easy_01.mp4",
-        "poster": "media/images/asyncfifo_easy_01-frame.png",
-        "figure": "media/images/asyncfifo_easy_01.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "asyncfifo_easy_02",
@@ -44,23 +28,7 @@
       ],
       "answer": 0,
       "explain": "Cold empty FIFO.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_easy_02.mp4",
-        "poster": "media/images/asyncfifo_easy_02-frame.png",
-        "figure": "media/images/asyncfifo_easy_02.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "asyncfifo_easy_03",
@@ -74,23 +42,7 @@
       ],
       "answer": 0,
       "explain": "Metastability hardening.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_easy_03.mp4",
-        "poster": "media/images/asyncfifo_easy_03-frame.png",
-        "figure": "media/images/asyncfifo_easy_03.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "asyncfifo_easy_04",
@@ -98,767 +50,7 @@
       "prompt": "Async FIFO needs no memory array.",
       "answer": false,
       "explain": "Still a dual-clock memory + pointers.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_easy_04.mp4",
-        "poster": "media/images/asyncfifo_easy_04-frame.png",
-        "figure": "media/images/asyncfifo_easy_04.png"
-      }
-    },
-    {
-      "id": "asyncfifo_easy_05",
-      "type": "multiple_choice",
-      "prompt": "Why use Gray-coded pointers for CDC in an async FIFO?",
-      "choices": [
-        "Only one bit changes per count—safer to synchronize",
-        "Gray is faster than binary always",
-        "Gray removes the need for memory",
-        "Binary pointers are illegal in Verilog"
-      ],
-      "answer": 0,
-      "explain": "Avoid multi-bit CDC glitches.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_easy_05.mp4",
-        "poster": "media/images/asyncfifo_easy_05-frame.png",
-        "figure": "media/images/asyncfifo_easy_05.png"
-      }
-    },
-    {
-      "id": "asyncfifo_easy_06",
-      "type": "multiple_choice",
-      "prompt": "Cold async FIFO begins…",
-      "choices": [
-        "empty=1 (no data to read)",
-        "full=1",
-        "Both full and empty",
-        "Depth zero"
-      ],
-      "answer": 0,
-      "explain": "Cold empty FIFO.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_easy_06.mp4",
-        "poster": "media/images/asyncfifo_easy_06-frame.png",
-        "figure": "media/images/asyncfifo_easy_06.png"
-      }
-    },
-    {
-      "id": "asyncfifo_easy_07",
-      "type": "multiple_choice",
-      "prompt": "How are Gray pointers synchronized?",
-      "choices": [
-        "Two flip-flop synchronizers (2FF)",
-        "A single XOR gate",
-        "Direct combinational wire",
-        "No synchronization"
-      ],
-      "answer": 0,
-      "explain": "Metastability hardening.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_easy_07.mp4",
-        "poster": "media/images/asyncfifo_easy_07-frame.png",
-        "figure": "media/images/asyncfifo_easy_07.png"
-      }
-    },
-    {
-      "id": "asyncfifo_easy_08",
-      "type": "true_false",
-      "prompt": "Async FIFO needs no memory array.",
-      "answer": false,
-      "explain": "Still a dual-clock memory + pointers.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_easy_08.mp4",
-        "poster": "media/images/asyncfifo_easy_08-frame.png",
-        "figure": "media/images/asyncfifo_easy_08.png"
-      }
-    },
-    {
-      "id": "asyncfifo_easy_09",
-      "type": "multiple_choice",
-      "prompt": "Why use Gray-coded pointers for CDC in an async FIFO?",
-      "choices": [
-        "Only one bit changes per count—safer to synchronize",
-        "Gray is faster than binary always",
-        "Gray removes the need for memory",
-        "Binary pointers are illegal in Verilog"
-      ],
-      "answer": 0,
-      "explain": "Avoid multi-bit CDC glitches.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_easy_09.mp4",
-        "poster": "media/images/asyncfifo_easy_09-frame.png",
-        "figure": "media/images/asyncfifo_easy_09.png"
-      }
-    },
-    {
-      "id": "asyncfifo_easy_10",
-      "type": "multiple_choice",
-      "prompt": "Cold async FIFO begins…",
-      "choices": [
-        "empty=1 (no data to read)",
-        "full=1",
-        "Both full and empty",
-        "Depth zero"
-      ],
-      "answer": 0,
-      "explain": "Cold empty FIFO.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_easy_10.mp4",
-        "poster": "media/images/asyncfifo_easy_10-frame.png",
-        "figure": "media/images/asyncfifo_easy_10.png"
-      }
-    },
-    {
-      "id": "asyncfifo_easy_11",
-      "type": "multiple_choice",
-      "prompt": "How are Gray pointers synchronized?",
-      "choices": [
-        "Two flip-flop synchronizers (2FF)",
-        "A single XOR gate",
-        "Direct combinational wire",
-        "No synchronization"
-      ],
-      "answer": 0,
-      "explain": "Metastability hardening.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_easy_11.mp4",
-        "poster": "media/images/asyncfifo_easy_11-frame.png",
-        "figure": "media/images/asyncfifo_easy_11.png"
-      }
-    },
-    {
-      "id": "asyncfifo_easy_12",
-      "type": "true_false",
-      "prompt": "Async FIFO needs no memory array.",
-      "answer": false,
-      "explain": "Still a dual-clock memory + pointers.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_easy_12.mp4",
-        "poster": "media/images/asyncfifo_easy_12-frame.png",
-        "figure": "media/images/asyncfifo_easy_12.png"
-      }
-    },
-    {
-      "id": "asyncfifo_easy_13",
-      "type": "multiple_choice",
-      "prompt": "Why use Gray-coded pointers for CDC in an async FIFO?",
-      "choices": [
-        "Only one bit changes per count—safer to synchronize",
-        "Gray is faster than binary always",
-        "Gray removes the need for memory",
-        "Binary pointers are illegal in Verilog"
-      ],
-      "answer": 0,
-      "explain": "Avoid multi-bit CDC glitches.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_easy_13.mp4",
-        "poster": "media/images/asyncfifo_easy_13-frame.png",
-        "figure": "media/images/asyncfifo_easy_13.png"
-      }
-    },
-    {
-      "id": "asyncfifo_easy_14",
-      "type": "multiple_choice",
-      "prompt": "Cold async FIFO begins…",
-      "choices": [
-        "empty=1 (no data to read)",
-        "full=1",
-        "Both full and empty",
-        "Depth zero"
-      ],
-      "answer": 0,
-      "explain": "Cold empty FIFO.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_easy_14.mp4",
-        "poster": "media/images/asyncfifo_easy_14-frame.png",
-        "figure": "media/images/asyncfifo_easy_14.png"
-      }
-    },
-    {
-      "id": "asyncfifo_easy_15",
-      "type": "multiple_choice",
-      "prompt": "How are Gray pointers synchronized?",
-      "choices": [
-        "Two flip-flop synchronizers (2FF)",
-        "A single XOR gate",
-        "Direct combinational wire",
-        "No synchronization"
-      ],
-      "answer": 0,
-      "explain": "Metastability hardening.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_easy_15.mp4",
-        "poster": "media/images/asyncfifo_easy_15-frame.png",
-        "figure": "media/images/asyncfifo_easy_15.png"
-      }
-    },
-    {
-      "id": "asyncfifo_easy_16",
-      "type": "true_false",
-      "prompt": "Async FIFO needs no memory array.",
-      "answer": false,
-      "explain": "Still a dual-clock memory + pointers.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_easy_16.mp4",
-        "poster": "media/images/asyncfifo_easy_16-frame.png",
-        "figure": "media/images/asyncfifo_easy_16.png"
-      }
-    },
-    {
-      "id": "asyncfifo_easy_17",
-      "type": "multiple_choice",
-      "prompt": "Why use Gray-coded pointers for CDC in an async FIFO?",
-      "choices": [
-        "Only one bit changes per count—safer to synchronize",
-        "Gray is faster than binary always",
-        "Gray removes the need for memory",
-        "Binary pointers are illegal in Verilog"
-      ],
-      "answer": 0,
-      "explain": "Avoid multi-bit CDC glitches.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_easy_17.mp4",
-        "poster": "media/images/asyncfifo_easy_17-frame.png",
-        "figure": "media/images/asyncfifo_easy_17.png"
-      }
-    },
-    {
-      "id": "asyncfifo_easy_18",
-      "type": "multiple_choice",
-      "prompt": "Cold async FIFO begins…",
-      "choices": [
-        "empty=1 (no data to read)",
-        "full=1",
-        "Both full and empty",
-        "Depth zero"
-      ],
-      "answer": 0,
-      "explain": "Cold empty FIFO.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_easy_18.mp4",
-        "poster": "media/images/asyncfifo_easy_18-frame.png",
-        "figure": "media/images/asyncfifo_easy_18.png"
-      }
-    },
-    {
-      "id": "asyncfifo_easy_19",
-      "type": "multiple_choice",
-      "prompt": "How are Gray pointers synchronized?",
-      "choices": [
-        "Two flip-flop synchronizers (2FF)",
-        "A single XOR gate",
-        "Direct combinational wire",
-        "No synchronization"
-      ],
-      "answer": 0,
-      "explain": "Metastability hardening.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_easy_19.mp4",
-        "poster": "media/images/asyncfifo_easy_19-frame.png",
-        "figure": "media/images/asyncfifo_easy_19.png"
-      }
-    },
-    {
-      "id": "asyncfifo_easy_20",
-      "type": "true_false",
-      "prompt": "Async FIFO needs no memory array.",
-      "answer": false,
-      "explain": "Still a dual-clock memory + pointers.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_easy_20.mp4",
-        "poster": "media/images/asyncfifo_easy_20-frame.png",
-        "figure": "media/images/asyncfifo_easy_20.png"
-      }
-    },
-    {
-      "id": "asyncfifo_easy_21",
-      "type": "multiple_choice",
-      "prompt": "Why use Gray-coded pointers for CDC in an async FIFO?",
-      "choices": [
-        "Only one bit changes per count—safer to synchronize",
-        "Gray is faster than binary always",
-        "Gray removes the need for memory",
-        "Binary pointers are illegal in Verilog"
-      ],
-      "answer": 0,
-      "explain": "Avoid multi-bit CDC glitches.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_easy_21.mp4",
-        "poster": "media/images/asyncfifo_easy_21-frame.png",
-        "figure": "media/images/asyncfifo_easy_21.png"
-      }
-    },
-    {
-      "id": "asyncfifo_easy_22",
-      "type": "multiple_choice",
-      "prompt": "Cold async FIFO begins…",
-      "choices": [
-        "empty=1 (no data to read)",
-        "full=1",
-        "Both full and empty",
-        "Depth zero"
-      ],
-      "answer": 0,
-      "explain": "Cold empty FIFO.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_easy_22.mp4",
-        "poster": "media/images/asyncfifo_easy_22-frame.png",
-        "figure": "media/images/asyncfifo_easy_22.png"
-      }
-    },
-    {
-      "id": "asyncfifo_easy_23",
-      "type": "multiple_choice",
-      "prompt": "How are Gray pointers synchronized?",
-      "choices": [
-        "Two flip-flop synchronizers (2FF)",
-        "A single XOR gate",
-        "Direct combinational wire",
-        "No synchronization"
-      ],
-      "answer": 0,
-      "explain": "Metastability hardening.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_easy_23.mp4",
-        "poster": "media/images/asyncfifo_easy_23-frame.png",
-        "figure": "media/images/asyncfifo_easy_23.png"
-      }
-    },
-    {
-      "id": "asyncfifo_easy_24",
-      "type": "true_false",
-      "prompt": "Async FIFO needs no memory array.",
-      "answer": false,
-      "explain": "Still a dual-clock memory + pointers.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_easy_24.mp4",
-        "poster": "media/images/asyncfifo_easy_24-frame.png",
-        "figure": "media/images/asyncfifo_easy_24.png"
-      }
-    },
-    {
-      "id": "asyncfifo_easy_25",
-      "type": "multiple_choice",
-      "prompt": "Why use Gray-coded pointers for CDC in an async FIFO?",
-      "choices": [
-        "Only one bit changes per count—safer to synchronize",
-        "Gray is faster than binary always",
-        "Gray removes the need for memory",
-        "Binary pointers are illegal in Verilog"
-      ],
-      "answer": 0,
-      "explain": "Avoid multi-bit CDC glitches.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_easy_25.mp4",
-        "poster": "media/images/asyncfifo_easy_25-frame.png",
-        "figure": "media/images/asyncfifo_easy_25.png"
-      }
-    },
-    {
-      "id": "asyncfifo_easy_26",
-      "type": "multiple_choice",
-      "prompt": "Cold async FIFO begins…",
-      "choices": [
-        "empty=1 (no data to read)",
-        "full=1",
-        "Both full and empty",
-        "Depth zero"
-      ],
-      "answer": 0,
-      "explain": "Cold empty FIFO.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_easy_26.mp4",
-        "poster": "media/images/asyncfifo_easy_26-frame.png",
-        "figure": "media/images/asyncfifo_easy_26.png"
-      }
-    },
-    {
-      "id": "asyncfifo_easy_27",
-      "type": "multiple_choice",
-      "prompt": "How are Gray pointers synchronized?",
-      "choices": [
-        "Two flip-flop synchronizers (2FF)",
-        "A single XOR gate",
-        "Direct combinational wire",
-        "No synchronization"
-      ],
-      "answer": 0,
-      "explain": "Metastability hardening.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_easy_27.mp4",
-        "poster": "media/images/asyncfifo_easy_27-frame.png",
-        "figure": "media/images/asyncfifo_easy_27.png"
-      }
-    },
-    {
-      "id": "asyncfifo_easy_28",
-      "type": "true_false",
-      "prompt": "Async FIFO needs no memory array.",
-      "answer": false,
-      "explain": "Still a dual-clock memory + pointers.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_easy_28.mp4",
-        "poster": "media/images/asyncfifo_easy_28-frame.png",
-        "figure": "media/images/asyncfifo_easy_28.png"
-      }
-    },
-    {
-      "id": "asyncfifo_easy_29",
-      "type": "multiple_choice",
-      "prompt": "Why use Gray-coded pointers for CDC in an async FIFO?",
-      "choices": [
-        "Only one bit changes per count—safer to synchronize",
-        "Gray is faster than binary always",
-        "Gray removes the need for memory",
-        "Binary pointers are illegal in Verilog"
-      ],
-      "answer": 0,
-      "explain": "Avoid multi-bit CDC glitches.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_easy_29.mp4",
-        "poster": "media/images/asyncfifo_easy_29-frame.png",
-        "figure": "media/images/asyncfifo_easy_29.png"
-      }
-    },
-    {
-      "id": "asyncfifo_easy_30",
-      "type": "multiple_choice",
-      "prompt": "Cold async FIFO begins…",
-      "choices": [
-        "empty=1 (no data to read)",
-        "full=1",
-        "Both full and empty",
-        "Depth zero"
-      ],
-      "answer": 0,
-      "explain": "Cold empty FIFO.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_easy_30.mp4",
-        "poster": "media/images/asyncfifo_easy_30-frame.png",
-        "figure": "media/images/asyncfifo_easy_30.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "asyncfifo_medium_01",
@@ -872,23 +64,7 @@
       ],
       "answer": 0,
       "explain": "Synced remote pointer + local pointer.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_medium_01.mp4",
-        "poster": "media/images/asyncfifo_medium_01-frame.png",
-        "figure": "media/images/asyncfifo_medium_01.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "asyncfifo_medium_02",
@@ -902,23 +78,7 @@
       ],
       "answer": 0,
       "explain": "Symmetric to full, other domain.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_medium_02.mp4",
-        "poster": "media/images/asyncfifo_medium_02-frame.png",
-        "figure": "media/images/asyncfifo_medium_02.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "asyncfifo_medium_03",
@@ -932,23 +92,7 @@
       ],
       "answer": 0,
       "explain": "Standard Gray encode.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_medium_03.mp4",
-        "poster": "media/images/asyncfifo_medium_03-frame.png",
-        "figure": "media/images/asyncfifo_medium_03.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "asyncfifo_medium_04",
@@ -956,767 +100,7 @@
       "prompt": "Gray pointers eliminate the need for 2FF synchronizers.",
       "answer": false,
       "explain": "Still synchronize Gray bits.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_medium_04.mp4",
-        "poster": "media/images/asyncfifo_medium_04-frame.png",
-        "figure": "media/images/asyncfifo_medium_04.png"
-      }
-    },
-    {
-      "id": "asyncfifo_medium_05",
-      "type": "multiple_choice",
-      "prompt": "Full is detected in the write domain using…",
-      "choices": [
-        "Local write pointer vs synchronized read pointer",
-        "Only rclk edges",
-        "Opcode decode",
-        "Byte enables"
-      ],
-      "answer": 0,
-      "explain": "Synced remote pointer + local pointer.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_medium_05.mp4",
-        "poster": "media/images/asyncfifo_medium_05-frame.png",
-        "figure": "media/images/asyncfifo_medium_05.png"
-      }
-    },
-    {
-      "id": "asyncfifo_medium_06",
-      "type": "multiple_choice",
-      "prompt": "Read-side empty compares…",
-      "choices": [
-        "Local read pointer vs synchronized write pointer",
-        "Only wclk",
-        "Cache tags",
-        "ALU Y"
-      ],
-      "answer": 0,
-      "explain": "Symmetric to full, other domain.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_medium_06.mp4",
-        "poster": "media/images/asyncfifo_medium_06-frame.png",
-        "figure": "media/images/asyncfifo_medium_06.png"
-      }
-    },
-    {
-      "id": "asyncfifo_medium_07",
-      "type": "multiple_choice",
-      "prompt": "How encode pointer for CDC?",
-      "choices": [
-        "XOR of bit with its neighbor (shift-xor)",
-        "Add one only",
-        "Multiply by 3",
-        "OR-reduction only"
-      ],
-      "answer": 0,
-      "explain": "Standard Gray encode.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_medium_07.mp4",
-        "poster": "media/images/asyncfifo_medium_07-frame.png",
-        "figure": "media/images/asyncfifo_medium_07.png"
-      }
-    },
-    {
-      "id": "asyncfifo_medium_08",
-      "type": "true_false",
-      "prompt": "Gray pointers eliminate the need for 2FF synchronizers.",
-      "answer": false,
-      "explain": "Still synchronize Gray bits.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_medium_08.mp4",
-        "poster": "media/images/asyncfifo_medium_08-frame.png",
-        "figure": "media/images/asyncfifo_medium_08.png"
-      }
-    },
-    {
-      "id": "asyncfifo_medium_09",
-      "type": "multiple_choice",
-      "prompt": "Full is detected in the write domain using…",
-      "choices": [
-        "Local write pointer vs synchronized read pointer",
-        "Only rclk edges",
-        "Opcode decode",
-        "Byte enables"
-      ],
-      "answer": 0,
-      "explain": "Synced remote pointer + local pointer.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_medium_09.mp4",
-        "poster": "media/images/asyncfifo_medium_09-frame.png",
-        "figure": "media/images/asyncfifo_medium_09.png"
-      }
-    },
-    {
-      "id": "asyncfifo_medium_10",
-      "type": "multiple_choice",
-      "prompt": "Read-side empty compares…",
-      "choices": [
-        "Local read pointer vs synchronized write pointer",
-        "Only wclk",
-        "Cache tags",
-        "ALU Y"
-      ],
-      "answer": 0,
-      "explain": "Symmetric to full, other domain.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_medium_10.mp4",
-        "poster": "media/images/asyncfifo_medium_10-frame.png",
-        "figure": "media/images/asyncfifo_medium_10.png"
-      }
-    },
-    {
-      "id": "asyncfifo_medium_11",
-      "type": "multiple_choice",
-      "prompt": "How encode pointer for CDC?",
-      "choices": [
-        "XOR of bit with its neighbor (shift-xor)",
-        "Add one only",
-        "Multiply by 3",
-        "OR-reduction only"
-      ],
-      "answer": 0,
-      "explain": "Standard Gray encode.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_medium_11.mp4",
-        "poster": "media/images/asyncfifo_medium_11-frame.png",
-        "figure": "media/images/asyncfifo_medium_11.png"
-      }
-    },
-    {
-      "id": "asyncfifo_medium_12",
-      "type": "true_false",
-      "prompt": "Gray pointers eliminate the need for 2FF synchronizers.",
-      "answer": false,
-      "explain": "Still synchronize Gray bits.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_medium_12.mp4",
-        "poster": "media/images/asyncfifo_medium_12-frame.png",
-        "figure": "media/images/asyncfifo_medium_12.png"
-      }
-    },
-    {
-      "id": "asyncfifo_medium_13",
-      "type": "multiple_choice",
-      "prompt": "Full is detected in the write domain using…",
-      "choices": [
-        "Local write pointer vs synchronized read pointer",
-        "Only rclk edges",
-        "Opcode decode",
-        "Byte enables"
-      ],
-      "answer": 0,
-      "explain": "Synced remote pointer + local pointer.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_medium_13.mp4",
-        "poster": "media/images/asyncfifo_medium_13-frame.png",
-        "figure": "media/images/asyncfifo_medium_13.png"
-      }
-    },
-    {
-      "id": "asyncfifo_medium_14",
-      "type": "multiple_choice",
-      "prompt": "Read-side empty compares…",
-      "choices": [
-        "Local read pointer vs synchronized write pointer",
-        "Only wclk",
-        "Cache tags",
-        "ALU Y"
-      ],
-      "answer": 0,
-      "explain": "Symmetric to full, other domain.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_medium_14.mp4",
-        "poster": "media/images/asyncfifo_medium_14-frame.png",
-        "figure": "media/images/asyncfifo_medium_14.png"
-      }
-    },
-    {
-      "id": "asyncfifo_medium_15",
-      "type": "multiple_choice",
-      "prompt": "How encode pointer for CDC?",
-      "choices": [
-        "XOR of bit with its neighbor (shift-xor)",
-        "Add one only",
-        "Multiply by 3",
-        "OR-reduction only"
-      ],
-      "answer": 0,
-      "explain": "Standard Gray encode.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_medium_15.mp4",
-        "poster": "media/images/asyncfifo_medium_15-frame.png",
-        "figure": "media/images/asyncfifo_medium_15.png"
-      }
-    },
-    {
-      "id": "asyncfifo_medium_16",
-      "type": "true_false",
-      "prompt": "Gray pointers eliminate the need for 2FF synchronizers.",
-      "answer": false,
-      "explain": "Still synchronize Gray bits.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_medium_16.mp4",
-        "poster": "media/images/asyncfifo_medium_16-frame.png",
-        "figure": "media/images/asyncfifo_medium_16.png"
-      }
-    },
-    {
-      "id": "asyncfifo_medium_17",
-      "type": "multiple_choice",
-      "prompt": "Full is detected in the write domain using…",
-      "choices": [
-        "Local write pointer vs synchronized read pointer",
-        "Only rclk edges",
-        "Opcode decode",
-        "Byte enables"
-      ],
-      "answer": 0,
-      "explain": "Synced remote pointer + local pointer.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_medium_17.mp4",
-        "poster": "media/images/asyncfifo_medium_17-frame.png",
-        "figure": "media/images/asyncfifo_medium_17.png"
-      }
-    },
-    {
-      "id": "asyncfifo_medium_18",
-      "type": "multiple_choice",
-      "prompt": "Read-side empty compares…",
-      "choices": [
-        "Local read pointer vs synchronized write pointer",
-        "Only wclk",
-        "Cache tags",
-        "ALU Y"
-      ],
-      "answer": 0,
-      "explain": "Symmetric to full, other domain.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_medium_18.mp4",
-        "poster": "media/images/asyncfifo_medium_18-frame.png",
-        "figure": "media/images/asyncfifo_medium_18.png"
-      }
-    },
-    {
-      "id": "asyncfifo_medium_19",
-      "type": "multiple_choice",
-      "prompt": "How encode pointer for CDC?",
-      "choices": [
-        "XOR of bit with its neighbor (shift-xor)",
-        "Add one only",
-        "Multiply by 3",
-        "OR-reduction only"
-      ],
-      "answer": 0,
-      "explain": "Standard Gray encode.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_medium_19.mp4",
-        "poster": "media/images/asyncfifo_medium_19-frame.png",
-        "figure": "media/images/asyncfifo_medium_19.png"
-      }
-    },
-    {
-      "id": "asyncfifo_medium_20",
-      "type": "true_false",
-      "prompt": "Gray pointers eliminate the need for 2FF synchronizers.",
-      "answer": false,
-      "explain": "Still synchronize Gray bits.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_medium_20.mp4",
-        "poster": "media/images/asyncfifo_medium_20-frame.png",
-        "figure": "media/images/asyncfifo_medium_20.png"
-      }
-    },
-    {
-      "id": "asyncfifo_medium_21",
-      "type": "multiple_choice",
-      "prompt": "Full is detected in the write domain using…",
-      "choices": [
-        "Local write pointer vs synchronized read pointer",
-        "Only rclk edges",
-        "Opcode decode",
-        "Byte enables"
-      ],
-      "answer": 0,
-      "explain": "Synced remote pointer + local pointer.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_medium_21.mp4",
-        "poster": "media/images/asyncfifo_medium_21-frame.png",
-        "figure": "media/images/asyncfifo_medium_21.png"
-      }
-    },
-    {
-      "id": "asyncfifo_medium_22",
-      "type": "multiple_choice",
-      "prompt": "Read-side empty compares…",
-      "choices": [
-        "Local read pointer vs synchronized write pointer",
-        "Only wclk",
-        "Cache tags",
-        "ALU Y"
-      ],
-      "answer": 0,
-      "explain": "Symmetric to full, other domain.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_medium_22.mp4",
-        "poster": "media/images/asyncfifo_medium_22-frame.png",
-        "figure": "media/images/asyncfifo_medium_22.png"
-      }
-    },
-    {
-      "id": "asyncfifo_medium_23",
-      "type": "multiple_choice",
-      "prompt": "How encode pointer for CDC?",
-      "choices": [
-        "XOR of bit with its neighbor (shift-xor)",
-        "Add one only",
-        "Multiply by 3",
-        "OR-reduction only"
-      ],
-      "answer": 0,
-      "explain": "Standard Gray encode.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_medium_23.mp4",
-        "poster": "media/images/asyncfifo_medium_23-frame.png",
-        "figure": "media/images/asyncfifo_medium_23.png"
-      }
-    },
-    {
-      "id": "asyncfifo_medium_24",
-      "type": "true_false",
-      "prompt": "Gray pointers eliminate the need for 2FF synchronizers.",
-      "answer": false,
-      "explain": "Still synchronize Gray bits.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_medium_24.mp4",
-        "poster": "media/images/asyncfifo_medium_24-frame.png",
-        "figure": "media/images/asyncfifo_medium_24.png"
-      }
-    },
-    {
-      "id": "asyncfifo_medium_25",
-      "type": "multiple_choice",
-      "prompt": "Full is detected in the write domain using…",
-      "choices": [
-        "Local write pointer vs synchronized read pointer",
-        "Only rclk edges",
-        "Opcode decode",
-        "Byte enables"
-      ],
-      "answer": 0,
-      "explain": "Synced remote pointer + local pointer.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_medium_25.mp4",
-        "poster": "media/images/asyncfifo_medium_25-frame.png",
-        "figure": "media/images/asyncfifo_medium_25.png"
-      }
-    },
-    {
-      "id": "asyncfifo_medium_26",
-      "type": "multiple_choice",
-      "prompt": "Read-side empty compares…",
-      "choices": [
-        "Local read pointer vs synchronized write pointer",
-        "Only wclk",
-        "Cache tags",
-        "ALU Y"
-      ],
-      "answer": 0,
-      "explain": "Symmetric to full, other domain.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_medium_26.mp4",
-        "poster": "media/images/asyncfifo_medium_26-frame.png",
-        "figure": "media/images/asyncfifo_medium_26.png"
-      }
-    },
-    {
-      "id": "asyncfifo_medium_27",
-      "type": "multiple_choice",
-      "prompt": "How encode pointer for CDC?",
-      "choices": [
-        "XOR of bit with its neighbor (shift-xor)",
-        "Add one only",
-        "Multiply by 3",
-        "OR-reduction only"
-      ],
-      "answer": 0,
-      "explain": "Standard Gray encode.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_medium_27.mp4",
-        "poster": "media/images/asyncfifo_medium_27-frame.png",
-        "figure": "media/images/asyncfifo_medium_27.png"
-      }
-    },
-    {
-      "id": "asyncfifo_medium_28",
-      "type": "true_false",
-      "prompt": "Gray pointers eliminate the need for 2FF synchronizers.",
-      "answer": false,
-      "explain": "Still synchronize Gray bits.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_medium_28.mp4",
-        "poster": "media/images/asyncfifo_medium_28-frame.png",
-        "figure": "media/images/asyncfifo_medium_28.png"
-      }
-    },
-    {
-      "id": "asyncfifo_medium_29",
-      "type": "multiple_choice",
-      "prompt": "Full is detected in the write domain using…",
-      "choices": [
-        "Local write pointer vs synchronized read pointer",
-        "Only rclk edges",
-        "Opcode decode",
-        "Byte enables"
-      ],
-      "answer": 0,
-      "explain": "Synced remote pointer + local pointer.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_medium_29.mp4",
-        "poster": "media/images/asyncfifo_medium_29-frame.png",
-        "figure": "media/images/asyncfifo_medium_29.png"
-      }
-    },
-    {
-      "id": "asyncfifo_medium_30",
-      "type": "multiple_choice",
-      "prompt": "Read-side empty compares…",
-      "choices": [
-        "Local read pointer vs synchronized write pointer",
-        "Only wclk",
-        "Cache tags",
-        "ALU Y"
-      ],
-      "answer": 0,
-      "explain": "Symmetric to full, other domain.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_medium_30.mp4",
-        "poster": "media/images/asyncfifo_medium_30-frame.png",
-        "figure": "media/images/asyncfifo_medium_30.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "asyncfifo_hard_01",
@@ -1730,23 +114,7 @@
       ],
       "answer": 0,
       "explain": "Classic n+1 pointer style.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_hard_01.mp4",
-        "poster": "media/images/asyncfifo_hard_01-frame.png",
-        "figure": "media/images/asyncfifo_hard_01.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "asyncfifo_hard_02",
@@ -1760,23 +128,7 @@
       ],
       "answer": 0,
       "explain": "Multi-bit binary tear / skew.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_hard_02.mp4",
-        "poster": "media/images/asyncfifo_hard_02-frame.png",
-        "figure": "media/images/asyncfifo_hard_02.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "asyncfifo_hard_03",
@@ -1790,23 +142,7 @@
       ],
       "answer": 0,
       "explain": "Each port in its domain.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_hard_03.mp4",
-        "poster": "media/images/asyncfifo_hard_03-frame.png",
-        "figure": "media/images/asyncfifo_hard_03.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "asyncfifo_hard_04",
@@ -1814,767 +150,1063 @@
       "prompt": "Gray coding alone fixes metastability without synchronizers.",
       "answer": false,
       "explain": "Gray reduces multi-bit risk; 2FF still needed.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_hard_04.mp4",
-        "poster": "media/images/asyncfifo_hard_04-frame.png",
-        "figure": "media/images/asyncfifo_hard_04.png"
-      }
+      "difficulty": "hard"
     },
     {
-      "id": "asyncfifo_hard_05",
       "type": "multiple_choice",
-      "prompt": "Pointer width often uses an extra MSB so that…",
+      "prompt": "Address width for depth 4 is…",
       "choices": [
-        "Full vs empty can be distinguished after wrap",
-        "Faster AND gates",
-        "Removing Gray code",
-        "Byte enables"
+        "1",
+        "2",
+        "4",
+        "4"
       ],
-      "answer": 0,
-      "explain": "Classic n+1 pointer style.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_hard_05.mp4",
-        "poster": "media/images/asyncfifo_hard_05-frame.png",
-        "figure": "media/images/asyncfifo_hard_05.png"
-      }
+      "answer": 1,
+      "explain": "ceil(log2(4)) = 2.",
+      "difficulty": "easy",
+      "id": "asyncfifo_easy_05"
     },
     {
-      "id": "asyncfifo_hard_06",
       "type": "multiple_choice",
-      "prompt": "Bad practice is…",
+      "prompt": "Address width for depth 8 is…",
       "choices": [
-        "Sending raw multi-bit binary pointers through one FF",
-        "Gray + 2FF per bit",
-        "Comparing in the correct domain",
-        "Asserting reset"
+        "2",
+        "3",
+        "8",
+        "6"
       ],
-      "answer": 0,
-      "explain": "Multi-bit binary tear / skew.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_hard_06.mp4",
-        "poster": "media/images/asyncfifo_hard_06-frame.png",
-        "figure": "media/images/asyncfifo_hard_06.png"
-      }
+      "answer": 1,
+      "explain": "ceil(log2(8)) = 3.",
+      "difficulty": "easy",
+      "id": "asyncfifo_easy_06"
     },
     {
-      "id": "asyncfifo_hard_07",
       "type": "multiple_choice",
-      "prompt": "Dual-clock FIFO RAM ports use…",
+      "prompt": "Address width for depth 16 is…",
       "choices": [
-        "wclk for writes, rclk for reads",
-        "Only wclk for both always",
-        "No clocks",
-        "Scan clock only"
+        "3",
+        "4",
+        "16",
+        "8"
       ],
-      "answer": 0,
-      "explain": "Each port in its domain.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_hard_07.mp4",
-        "poster": "media/images/asyncfifo_hard_07-frame.png",
-        "figure": "media/images/asyncfifo_hard_07.png"
-      }
+      "answer": 1,
+      "explain": "ceil(log2(16)) = 4.",
+      "difficulty": "easy",
+      "id": "asyncfifo_easy_07"
     },
     {
-      "id": "asyncfifo_hard_08",
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 32 is…",
+      "choices": [
+        "4",
+        "5",
+        "32",
+        "10"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(32)) = 5.",
+      "difficulty": "easy",
+      "id": "asyncfifo_easy_08"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 64 is…",
+      "choices": [
+        "5",
+        "6",
+        "64",
+        "12"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(64)) = 6.",
+      "difficulty": "easy",
+      "id": "asyncfifo_easy_09"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 8×8 memory in bits is…",
+      "choices": [
+        "16",
+        "64",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "8×8 = 64.",
+      "difficulty": "easy",
+      "id": "asyncfifo_easy_10"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 16×32 memory in bits is…",
+      "choices": [
+        "48",
+        "512",
+        "16",
+        "32"
+      ],
+      "answer": 1,
+      "explain": "16×32 = 512.",
+      "difficulty": "easy",
+      "id": "asyncfifo_easy_11"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 64×4 memory in bits is…",
+      "choices": [
+        "68",
+        "256",
+        "64",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "64×4 = 256.",
+      "difficulty": "easy",
+      "id": "asyncfifo_easy_12"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 256×16 memory in bits is…",
+      "choices": [
+        "272",
+        "4096",
+        "256",
+        "16"
+      ],
+      "answer": 1,
+      "explain": "256×16 = 4096.",
+      "difficulty": "easy",
+      "id": "asyncfifo_easy_13"
+    },
+    {
       "type": "true_false",
-      "prompt": "Gray coding alone fixes metastability without synchronizers.",
-      "answer": false,
-      "explain": "Gray reduces multi-bit risk; 2FF still needed.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_hard_08.mp4",
-        "poster": "media/images/asyncfifo_hard_08-frame.png",
-        "figure": "media/images/asyncfifo_hard_08.png"
-      }
+      "prompt": "FIFO empty and full must be generated carefully across domains for async FIFOs.",
+      "answer": true,
+      "explain": "Gray pointers.",
+      "difficulty": "easy",
+      "id": "asyncfifo_easy_14"
     },
     {
-      "id": "asyncfifo_hard_09",
-      "type": "multiple_choice",
-      "prompt": "Pointer width often uses an extra MSB so that…",
-      "choices": [
-        "Full vs empty can be distinguished after wrap",
-        "Faster AND gates",
-        "Removing Gray code",
-        "Byte enables"
-      ],
-      "answer": 0,
-      "explain": "Classic n+1 pointer style.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_hard_09.mp4",
-        "poster": "media/images/asyncfifo_hard_09-frame.png",
-        "figure": "media/images/asyncfifo_hard_09.png"
-      }
-    },
-    {
-      "id": "asyncfifo_hard_10",
-      "type": "multiple_choice",
-      "prompt": "Bad practice is…",
-      "choices": [
-        "Sending raw multi-bit binary pointers through one FF",
-        "Gray + 2FF per bit",
-        "Comparing in the correct domain",
-        "Asserting reset"
-      ],
-      "answer": 0,
-      "explain": "Multi-bit binary tear / skew.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_hard_10.mp4",
-        "poster": "media/images/asyncfifo_hard_10-frame.png",
-        "figure": "media/images/asyncfifo_hard_10.png"
-      }
-    },
-    {
-      "id": "asyncfifo_hard_11",
-      "type": "multiple_choice",
-      "prompt": "Dual-clock FIFO RAM ports use…",
-      "choices": [
-        "wclk for writes, rclk for reads",
-        "Only wclk for both always",
-        "No clocks",
-        "Scan clock only"
-      ],
-      "answer": 0,
-      "explain": "Each port in its domain.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_hard_11.mp4",
-        "poster": "media/images/asyncfifo_hard_11-frame.png",
-        "figure": "media/images/asyncfifo_hard_11.png"
-      }
-    },
-    {
-      "id": "asyncfifo_hard_12",
       "type": "true_false",
-      "prompt": "Gray coding alone fixes metastability without synchronizers.",
-      "answer": false,
-      "explain": "Gray reduces multi-bit risk; 2FF still needed.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_hard_12.mp4",
-        "poster": "media/images/asyncfifo_hard_12-frame.png",
-        "figure": "media/images/asyncfifo_hard_12.png"
-      }
+      "prompt": "Byte enables select which bytes of a word are written.",
+      "answer": true,
+      "explain": "Partial writes.",
+      "difficulty": "easy",
+      "id": "asyncfifo_easy_15"
     },
     {
-      "id": "asyncfifo_hard_13",
       "type": "multiple_choice",
-      "prompt": "Pointer width often uses an extra MSB so that…",
+      "prompt": "Binary 0000 converts to Gray as…",
       "choices": [
-        "Full vs empty can be distinguished after wrap",
-        "Faster AND gates",
-        "Removing Gray code",
-        "Byte enables"
+        "0000",
+        "0000",
+        "0001",
+        "0000"
       ],
-      "answer": 0,
-      "explain": "Classic n+1 pointer style.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_hard_13.mp4",
-        "poster": "media/images/asyncfifo_hard_13-frame.png",
-        "figure": "media/images/asyncfifo_hard_13.png"
-      }
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 0000.",
+      "difficulty": "easy",
+      "id": "asyncfifo_easy_16"
     },
     {
-      "id": "asyncfifo_hard_14",
       "type": "multiple_choice",
-      "prompt": "Bad practice is…",
+      "prompt": "Binary 0001 converts to Gray as…",
       "choices": [
-        "Sending raw multi-bit binary pointers through one FF",
-        "Gray + 2FF per bit",
-        "Comparing in the correct domain",
-        "Asserting reset"
+        "0001",
+        "0001",
+        "0000",
+        "0000"
       ],
-      "answer": 0,
-      "explain": "Multi-bit binary tear / skew.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_hard_14.mp4",
-        "poster": "media/images/asyncfifo_hard_14-frame.png",
-        "figure": "media/images/asyncfifo_hard_14.png"
-      }
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 0001.",
+      "difficulty": "easy",
+      "id": "asyncfifo_easy_17"
     },
     {
-      "id": "asyncfifo_hard_15",
       "type": "multiple_choice",
-      "prompt": "Dual-clock FIFO RAM ports use…",
+      "prompt": "Binary 0010 converts to Gray as…",
       "choices": [
-        "wclk for writes, rclk for reads",
-        "Only wclk for both always",
-        "No clocks",
-        "Scan clock only"
+        "0010",
+        "0011",
+        "0010",
+        "0001"
       ],
-      "answer": 0,
-      "explain": "Each port in its domain.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_hard_15.mp4",
-        "poster": "media/images/asyncfifo_hard_15-frame.png",
-        "figure": "media/images/asyncfifo_hard_15.png"
-      }
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 0011.",
+      "difficulty": "easy",
+      "id": "asyncfifo_easy_18"
     },
     {
-      "id": "asyncfifo_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Binary 0011 converts to Gray as…",
+      "choices": [
+        "0011",
+        "0010",
+        "0011",
+        "0001"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 0010.",
+      "difficulty": "easy",
+      "id": "asyncfifo_easy_19"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 0100 converts to Gray as…",
+      "choices": [
+        "0100",
+        "0110",
+        "0111",
+        "0010"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 0110.",
+      "difficulty": "easy",
+      "id": "asyncfifo_easy_20"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 0101 converts to Gray as…",
+      "choices": [
+        "0101",
+        "0111",
+        "0110",
+        "0010"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 0111.",
+      "difficulty": "easy",
+      "id": "asyncfifo_easy_21"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 0110 converts to Gray as…",
+      "choices": [
+        "0110",
+        "0101",
+        "0100",
+        "0011"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 0101.",
+      "difficulty": "easy",
+      "id": "asyncfifo_easy_22"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 0111 converts to Gray as…",
+      "choices": [
+        "0111",
+        "0100",
+        "0101",
+        "0011"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 0100.",
+      "difficulty": "easy",
+      "id": "asyncfifo_easy_23"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 1000 converts to Gray as…",
+      "choices": [
+        "1000",
+        "1100",
+        "1101",
+        "0100"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 1100.",
+      "difficulty": "easy",
+      "id": "asyncfifo_easy_24"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 1001 converts to Gray as…",
+      "choices": [
+        "1001",
+        "1101",
+        "1100",
+        "0100"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 1101.",
+      "difficulty": "easy",
+      "id": "asyncfifo_easy_25"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 1010 converts to Gray as…",
+      "choices": [
+        "1010",
+        "1111",
+        "1110",
+        "0101"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 1111.",
+      "difficulty": "easy",
+      "id": "asyncfifo_easy_26"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 1011 converts to Gray as…",
+      "choices": [
+        "1011",
+        "1110",
+        "1111",
+        "0101"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 1110.",
+      "difficulty": "easy",
+      "id": "asyncfifo_easy_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 1100 converts to Gray as…",
+      "choices": [
+        "1100",
+        "1010",
+        "1011",
+        "0110"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 1010.",
+      "difficulty": "easy",
+      "id": "asyncfifo_easy_28"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 1101 converts to Gray as…",
+      "choices": [
+        "1101",
+        "1011",
+        "1010",
+        "0110"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 1011.",
+      "difficulty": "easy",
+      "id": "asyncfifo_easy_29"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 1110 converts to Gray as…",
+      "choices": [
+        "1110",
+        "1001",
+        "1000",
+        "0111"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 1001.",
+      "difficulty": "easy",
+      "id": "asyncfifo_easy_30"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 4 is…",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(4)) = 2.",
+      "difficulty": "medium",
+      "id": "asyncfifo_medium_05"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 8 is…",
+      "choices": [
+        "2",
+        "3",
+        "8",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(8)) = 3.",
+      "difficulty": "medium",
+      "id": "asyncfifo_medium_06"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 16 is…",
+      "choices": [
+        "3",
+        "4",
+        "16",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(16)) = 4.",
+      "difficulty": "medium",
+      "id": "asyncfifo_medium_07"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 32 is…",
+      "choices": [
+        "4",
+        "5",
+        "32",
+        "10"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(32)) = 5.",
+      "difficulty": "medium",
+      "id": "asyncfifo_medium_08"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 64 is…",
+      "choices": [
+        "5",
+        "6",
+        "64",
+        "12"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(64)) = 6.",
+      "difficulty": "medium",
+      "id": "asyncfifo_medium_09"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 8×8 memory in bits is…",
+      "choices": [
+        "16",
+        "64",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "8×8 = 64.",
+      "difficulty": "medium",
+      "id": "asyncfifo_medium_10"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 16×32 memory in bits is…",
+      "choices": [
+        "48",
+        "512",
+        "16",
+        "32"
+      ],
+      "answer": 1,
+      "explain": "16×32 = 512.",
+      "difficulty": "medium",
+      "id": "asyncfifo_medium_11"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 64×4 memory in bits is…",
+      "choices": [
+        "68",
+        "256",
+        "64",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "64×4 = 256.",
+      "difficulty": "medium",
+      "id": "asyncfifo_medium_12"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 256×16 memory in bits is…",
+      "choices": [
+        "272",
+        "4096",
+        "256",
+        "16"
+      ],
+      "answer": 1,
+      "explain": "256×16 = 4096.",
+      "difficulty": "medium",
+      "id": "asyncfifo_medium_13"
+    },
+    {
       "type": "true_false",
-      "prompt": "Gray coding alone fixes metastability without synchronizers.",
-      "answer": false,
-      "explain": "Gray reduces multi-bit risk; 2FF still needed.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_hard_16.mp4",
-        "poster": "media/images/asyncfifo_hard_16-frame.png",
-        "figure": "media/images/asyncfifo_hard_16.png"
-      }
+      "prompt": "FIFO empty and full must be generated carefully across domains for async FIFOs.",
+      "answer": true,
+      "explain": "Gray pointers.",
+      "difficulty": "medium",
+      "id": "asyncfifo_medium_14"
     },
     {
-      "id": "asyncfifo_hard_17",
-      "type": "multiple_choice",
-      "prompt": "Pointer width often uses an extra MSB so that…",
-      "choices": [
-        "Full vs empty can be distinguished after wrap",
-        "Faster AND gates",
-        "Removing Gray code",
-        "Byte enables"
-      ],
-      "answer": 0,
-      "explain": "Classic n+1 pointer style.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_hard_17.mp4",
-        "poster": "media/images/asyncfifo_hard_17-frame.png",
-        "figure": "media/images/asyncfifo_hard_17.png"
-      }
-    },
-    {
-      "id": "asyncfifo_hard_18",
-      "type": "multiple_choice",
-      "prompt": "Bad practice is…",
-      "choices": [
-        "Sending raw multi-bit binary pointers through one FF",
-        "Gray + 2FF per bit",
-        "Comparing in the correct domain",
-        "Asserting reset"
-      ],
-      "answer": 0,
-      "explain": "Multi-bit binary tear / skew.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_hard_18.mp4",
-        "poster": "media/images/asyncfifo_hard_18-frame.png",
-        "figure": "media/images/asyncfifo_hard_18.png"
-      }
-    },
-    {
-      "id": "asyncfifo_hard_19",
-      "type": "multiple_choice",
-      "prompt": "Dual-clock FIFO RAM ports use…",
-      "choices": [
-        "wclk for writes, rclk for reads",
-        "Only wclk for both always",
-        "No clocks",
-        "Scan clock only"
-      ],
-      "answer": 0,
-      "explain": "Each port in its domain.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_hard_19.mp4",
-        "poster": "media/images/asyncfifo_hard_19-frame.png",
-        "figure": "media/images/asyncfifo_hard_19.png"
-      }
-    },
-    {
-      "id": "asyncfifo_hard_20",
       "type": "true_false",
-      "prompt": "Gray coding alone fixes metastability without synchronizers.",
-      "answer": false,
-      "explain": "Gray reduces multi-bit risk; 2FF still needed.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_hard_20.mp4",
-        "poster": "media/images/asyncfifo_hard_20-frame.png",
-        "figure": "media/images/asyncfifo_hard_20.png"
-      }
+      "prompt": "Byte enables select which bytes of a word are written.",
+      "answer": true,
+      "explain": "Partial writes.",
+      "difficulty": "medium",
+      "id": "asyncfifo_medium_15"
     },
     {
-      "id": "asyncfifo_hard_21",
       "type": "multiple_choice",
-      "prompt": "Pointer width often uses an extra MSB so that…",
+      "prompt": "Binary 0000 converts to Gray as…",
       "choices": [
-        "Full vs empty can be distinguished after wrap",
-        "Faster AND gates",
-        "Removing Gray code",
-        "Byte enables"
+        "0000",
+        "0000",
+        "0001",
+        "0000"
       ],
-      "answer": 0,
-      "explain": "Classic n+1 pointer style.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_hard_21.mp4",
-        "poster": "media/images/asyncfifo_hard_21-frame.png",
-        "figure": "media/images/asyncfifo_hard_21.png"
-      }
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 0000.",
+      "difficulty": "medium",
+      "id": "asyncfifo_medium_16"
     },
     {
-      "id": "asyncfifo_hard_22",
       "type": "multiple_choice",
-      "prompt": "Bad practice is…",
+      "prompt": "Binary 0001 converts to Gray as…",
       "choices": [
-        "Sending raw multi-bit binary pointers through one FF",
-        "Gray + 2FF per bit",
-        "Comparing in the correct domain",
-        "Asserting reset"
+        "0001",
+        "0001",
+        "0000",
+        "0000"
       ],
-      "answer": 0,
-      "explain": "Multi-bit binary tear / skew.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_hard_22.mp4",
-        "poster": "media/images/asyncfifo_hard_22-frame.png",
-        "figure": "media/images/asyncfifo_hard_22.png"
-      }
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 0001.",
+      "difficulty": "medium",
+      "id": "asyncfifo_medium_17"
     },
     {
-      "id": "asyncfifo_hard_23",
       "type": "multiple_choice",
-      "prompt": "Dual-clock FIFO RAM ports use…",
+      "prompt": "Binary 0010 converts to Gray as…",
       "choices": [
-        "wclk for writes, rclk for reads",
-        "Only wclk for both always",
-        "No clocks",
-        "Scan clock only"
+        "0010",
+        "0011",
+        "0010",
+        "0001"
       ],
-      "answer": 0,
-      "explain": "Each port in its domain.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_hard_23.mp4",
-        "poster": "media/images/asyncfifo_hard_23-frame.png",
-        "figure": "media/images/asyncfifo_hard_23.png"
-      }
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 0011.",
+      "difficulty": "medium",
+      "id": "asyncfifo_medium_18"
     },
     {
-      "id": "asyncfifo_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Binary 0011 converts to Gray as…",
+      "choices": [
+        "0011",
+        "0010",
+        "0011",
+        "0001"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 0010.",
+      "difficulty": "medium",
+      "id": "asyncfifo_medium_19"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 0100 converts to Gray as…",
+      "choices": [
+        "0100",
+        "0110",
+        "0111",
+        "0010"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 0110.",
+      "difficulty": "medium",
+      "id": "asyncfifo_medium_20"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 0101 converts to Gray as…",
+      "choices": [
+        "0101",
+        "0111",
+        "0110",
+        "0010"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 0111.",
+      "difficulty": "medium",
+      "id": "asyncfifo_medium_21"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 0110 converts to Gray as…",
+      "choices": [
+        "0110",
+        "0101",
+        "0100",
+        "0011"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 0101.",
+      "difficulty": "medium",
+      "id": "asyncfifo_medium_22"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 0111 converts to Gray as…",
+      "choices": [
+        "0111",
+        "0100",
+        "0101",
+        "0011"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 0100.",
+      "difficulty": "medium",
+      "id": "asyncfifo_medium_23"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 1000 converts to Gray as…",
+      "choices": [
+        "1000",
+        "1100",
+        "1101",
+        "0100"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 1100.",
+      "difficulty": "medium",
+      "id": "asyncfifo_medium_24"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 1001 converts to Gray as…",
+      "choices": [
+        "1001",
+        "1101",
+        "1100",
+        "0100"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 1101.",
+      "difficulty": "medium",
+      "id": "asyncfifo_medium_25"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 1010 converts to Gray as…",
+      "choices": [
+        "1010",
+        "1111",
+        "1110",
+        "0101"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 1111.",
+      "difficulty": "medium",
+      "id": "asyncfifo_medium_26"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 1011 converts to Gray as…",
+      "choices": [
+        "1011",
+        "1110",
+        "1111",
+        "0101"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 1110.",
+      "difficulty": "medium",
+      "id": "asyncfifo_medium_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 1100 converts to Gray as…",
+      "choices": [
+        "1100",
+        "1010",
+        "1011",
+        "0110"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 1010.",
+      "difficulty": "medium",
+      "id": "asyncfifo_medium_28"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 1101 converts to Gray as…",
+      "choices": [
+        "1101",
+        "1011",
+        "1010",
+        "0110"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 1011.",
+      "difficulty": "medium",
+      "id": "asyncfifo_medium_29"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 1110 converts to Gray as…",
+      "choices": [
+        "1110",
+        "1001",
+        "1000",
+        "0111"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 1001.",
+      "difficulty": "medium",
+      "id": "asyncfifo_medium_30"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 4 is…",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(4)) = 2.",
+      "difficulty": "hard",
+      "id": "asyncfifo_hard_05"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 8 is…",
+      "choices": [
+        "2",
+        "3",
+        "8",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(8)) = 3.",
+      "difficulty": "hard",
+      "id": "asyncfifo_hard_06"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 16 is…",
+      "choices": [
+        "3",
+        "4",
+        "16",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(16)) = 4.",
+      "difficulty": "hard",
+      "id": "asyncfifo_hard_07"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 32 is…",
+      "choices": [
+        "4",
+        "5",
+        "32",
+        "10"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(32)) = 5.",
+      "difficulty": "hard",
+      "id": "asyncfifo_hard_08"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 64 is…",
+      "choices": [
+        "5",
+        "6",
+        "64",
+        "12"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(64)) = 6.",
+      "difficulty": "hard",
+      "id": "asyncfifo_hard_09"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 8×8 memory in bits is…",
+      "choices": [
+        "16",
+        "64",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "8×8 = 64.",
+      "difficulty": "hard",
+      "id": "asyncfifo_hard_10"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 16×32 memory in bits is…",
+      "choices": [
+        "48",
+        "512",
+        "16",
+        "32"
+      ],
+      "answer": 1,
+      "explain": "16×32 = 512.",
+      "difficulty": "hard",
+      "id": "asyncfifo_hard_11"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 64×4 memory in bits is…",
+      "choices": [
+        "68",
+        "256",
+        "64",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "64×4 = 256.",
+      "difficulty": "hard",
+      "id": "asyncfifo_hard_12"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 256×16 memory in bits is…",
+      "choices": [
+        "272",
+        "4096",
+        "256",
+        "16"
+      ],
+      "answer": 1,
+      "explain": "256×16 = 4096.",
+      "difficulty": "hard",
+      "id": "asyncfifo_hard_13"
+    },
+    {
       "type": "true_false",
-      "prompt": "Gray coding alone fixes metastability without synchronizers.",
-      "answer": false,
-      "explain": "Gray reduces multi-bit risk; 2FF still needed.",
+      "prompt": "FIFO empty and full must be generated carefully across domains for async FIFOs.",
+      "answer": true,
+      "explain": "Gray pointers.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_hard_24.mp4",
-        "poster": "media/images/asyncfifo_hard_24-frame.png",
-        "figure": "media/images/asyncfifo_hard_24.png"
-      }
+      "id": "asyncfifo_hard_14"
     },
     {
-      "id": "asyncfifo_hard_25",
-      "type": "multiple_choice",
-      "prompt": "Pointer width often uses an extra MSB so that…",
-      "choices": [
-        "Full vs empty can be distinguished after wrap",
-        "Faster AND gates",
-        "Removing Gray code",
-        "Byte enables"
-      ],
-      "answer": 0,
-      "explain": "Classic n+1 pointer style.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_hard_25.mp4",
-        "poster": "media/images/asyncfifo_hard_25-frame.png",
-        "figure": "media/images/asyncfifo_hard_25.png"
-      }
-    },
-    {
-      "id": "asyncfifo_hard_26",
-      "type": "multiple_choice",
-      "prompt": "Bad practice is…",
-      "choices": [
-        "Sending raw multi-bit binary pointers through one FF",
-        "Gray + 2FF per bit",
-        "Comparing in the correct domain",
-        "Asserting reset"
-      ],
-      "answer": 0,
-      "explain": "Multi-bit binary tear / skew.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_hard_26.mp4",
-        "poster": "media/images/asyncfifo_hard_26-frame.png",
-        "figure": "media/images/asyncfifo_hard_26.png"
-      }
-    },
-    {
-      "id": "asyncfifo_hard_27",
-      "type": "multiple_choice",
-      "prompt": "Dual-clock FIFO RAM ports use…",
-      "choices": [
-        "wclk for writes, rclk for reads",
-        "Only wclk for both always",
-        "No clocks",
-        "Scan clock only"
-      ],
-      "answer": 0,
-      "explain": "Each port in its domain.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_hard_27.mp4",
-        "poster": "media/images/asyncfifo_hard_27-frame.png",
-        "figure": "media/images/asyncfifo_hard_27.png"
-      }
-    },
-    {
-      "id": "asyncfifo_hard_28",
       "type": "true_false",
-      "prompt": "Gray coding alone fixes metastability without synchronizers.",
-      "answer": false,
-      "explain": "Gray reduces multi-bit risk; 2FF still needed.",
+      "prompt": "Byte enables select which bytes of a word are written.",
+      "answer": true,
+      "explain": "Partial writes.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_hard_28.mp4",
-        "poster": "media/images/asyncfifo_hard_28-frame.png",
-        "figure": "media/images/asyncfifo_hard_28.png"
-      }
+      "id": "asyncfifo_hard_15"
     },
     {
-      "id": "asyncfifo_hard_29",
       "type": "multiple_choice",
-      "prompt": "Pointer width often uses an extra MSB so that…",
+      "prompt": "Binary 0000 converts to Gray as…",
       "choices": [
-        "Full vs empty can be distinguished after wrap",
-        "Faster AND gates",
-        "Removing Gray code",
-        "Byte enables"
+        "0000",
+        "0000",
+        "0001",
+        "0000"
       ],
-      "answer": 0,
-      "explain": "Classic n+1 pointer style.",
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 0000.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_hard_29.mp4",
-        "poster": "media/images/asyncfifo_hard_29-frame.png",
-        "figure": "media/images/asyncfifo_hard_29.png"
-      }
+      "id": "asyncfifo_hard_16"
     },
     {
-      "id": "asyncfifo_hard_30",
       "type": "multiple_choice",
-      "prompt": "Bad practice is…",
+      "prompt": "Binary 0001 converts to Gray as…",
       "choices": [
-        "Sending raw multi-bit binary pointers through one FF",
-        "Gray + 2FF per bit",
-        "Comparing in the correct domain",
-        "Asserting reset"
+        "0001",
+        "0001",
+        "0000",
+        "0000"
       ],
-      "answer": 0,
-      "explain": "Multi-bit binary tear / skew.",
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 0001.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "async-fifo",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#af-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/asyncfifo_hard_30.mp4",
-        "poster": "media/images/asyncfifo_hard_30-frame.png",
-        "figure": "media/images/asyncfifo_hard_30.png"
-      }
+      "id": "asyncfifo_hard_17"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 0010 converts to Gray as…",
+      "choices": [
+        "0010",
+        "0011",
+        "0010",
+        "0001"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 0011.",
+      "difficulty": "hard",
+      "id": "asyncfifo_hard_18"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 0011 converts to Gray as…",
+      "choices": [
+        "0011",
+        "0010",
+        "0011",
+        "0001"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 0010.",
+      "difficulty": "hard",
+      "id": "asyncfifo_hard_19"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 0100 converts to Gray as…",
+      "choices": [
+        "0100",
+        "0110",
+        "0111",
+        "0010"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 0110.",
+      "difficulty": "hard",
+      "id": "asyncfifo_hard_20"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 0101 converts to Gray as…",
+      "choices": [
+        "0101",
+        "0111",
+        "0110",
+        "0010"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 0111.",
+      "difficulty": "hard",
+      "id": "asyncfifo_hard_21"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 0110 converts to Gray as…",
+      "choices": [
+        "0110",
+        "0101",
+        "0100",
+        "0011"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 0101.",
+      "difficulty": "hard",
+      "id": "asyncfifo_hard_22"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 0111 converts to Gray as…",
+      "choices": [
+        "0111",
+        "0100",
+        "0101",
+        "0011"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 0100.",
+      "difficulty": "hard",
+      "id": "asyncfifo_hard_23"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 1000 converts to Gray as…",
+      "choices": [
+        "1000",
+        "1100",
+        "1101",
+        "0100"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 1100.",
+      "difficulty": "hard",
+      "id": "asyncfifo_hard_24"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 1001 converts to Gray as…",
+      "choices": [
+        "1001",
+        "1101",
+        "1100",
+        "0100"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 1101.",
+      "difficulty": "hard",
+      "id": "asyncfifo_hard_25"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 1010 converts to Gray as…",
+      "choices": [
+        "1010",
+        "1111",
+        "1110",
+        "0101"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 1111.",
+      "difficulty": "hard",
+      "id": "asyncfifo_hard_26"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 1011 converts to Gray as…",
+      "choices": [
+        "1011",
+        "1110",
+        "1111",
+        "0101"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 1110.",
+      "difficulty": "hard",
+      "id": "asyncfifo_hard_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 1100 converts to Gray as…",
+      "choices": [
+        "1100",
+        "1010",
+        "1011",
+        "0110"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 1010.",
+      "difficulty": "hard",
+      "id": "asyncfifo_hard_28"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 1101 converts to Gray as…",
+      "choices": [
+        "1101",
+        "1011",
+        "1010",
+        "0110"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 1011.",
+      "difficulty": "hard",
+      "id": "asyncfifo_hard_29"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Binary 1110 converts to Gray as…",
+      "choices": [
+        "1110",
+        "1001",
+        "1000",
+        "0111"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 1001.",
+      "difficulty": "hard",
+      "id": "asyncfifo_hard_30"
     }
   ]
 }

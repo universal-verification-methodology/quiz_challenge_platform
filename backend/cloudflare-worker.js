@@ -145,11 +145,31 @@ function publicRow(payload, meta) {
   const quest = (payload && payload.quest) || {};
   const identity = (payload && payload.identity) || {};
   const attempts = (payload && payload.attempts) || [];
+  const bench = (payload && payload.benchmark) || {};
   const levelState = payload.level_state || {};
   const cleared = countCleared(levelState);
   const maxLevels = inferMaxLevels(payload);
-  const timeouts = countTimeouts(attempts);
-  const med = medianMs(attempts);
+  // Prefer aggregates when attempts were omitted for GitHub size limits.
+  const timeouts =
+    attempts.length > 0
+      ? countTimeouts(attempts)
+      : Number(
+          summary.timeouts != null
+            ? summary.timeouts
+            : bench.timeouts != null
+              ? bench.timeouts
+              : 0
+        ) || 0;
+  const med =
+    attempts.length > 0
+      ? medianMs(attempts)
+      : Number(
+          summary.median_ms != null
+            ? summary.median_ms
+            : bench.median_ms != null
+              ? bench.median_ms
+              : 0
+        ) || 0;
   const accuracy = Number(summary.accuracy) || 0;
   // Always E/M/H for the public board column (zeros if a ladder was not played).
   const clearedCounts = clearedByDifficulty(levelState, DISPLAY_DIFFICULTIES);
@@ -321,6 +341,15 @@ async function handlePost(request, env) {
       : "";
   const title = `[quest-result] ${maskName(name)} — ${accuracy}% (${mode}${modTitle})`;
 
+  // Compact JSON — Full Quest used to exceed GitHub's ~65KB issue body when
+  // pretty-printing every attempt. Client now omits attempts; stay compact.
+  const boardRow =
+    payload.benchmark ||
+    (() => {
+      const r = publicRow(payload, {});
+      delete r._email_key;
+      return r;
+    })();
   const body = [
     "## Identity",
     `- Name: ${name}`,
@@ -332,26 +361,17 @@ async function handlePost(request, env) {
     "",
     "## Summary",
     "```json",
-    JSON.stringify(payload.summary || {}, null, 2),
+    JSON.stringify(payload.summary || {}),
     "```",
     "",
     "## Benchmark",
     "```json",
-    JSON.stringify(
-      payload.benchmark ||
-        (() => {
-          const r = publicRow(payload, {});
-          delete r._email_key;
-          return r;
-        })(),
-      null,
-      2
-    ),
+    JSON.stringify(boardRow),
     "```",
     "",
     "## Full payload",
     "```json",
-    JSON.stringify(payload, null, 2),
+    JSON.stringify(payload),
     "```",
   ].join("\n");
 

@@ -35,9 +35,9 @@
     </footer>
 
     <script src="js/session-log.js?v=6"></script>
-    <script src="js/benchmark.js?v=3"></script>
+    <script src="js/benchmark.js?v=4"></script>
     <script src="js/report.js?v=8"></script>
-    <script src="js/results.js?v=8"></script>
+    <script src="js/results.js?v=9"></script>
     <script src="js/certificate.js?v=18"></script>
     <script>
       (function () {
@@ -109,11 +109,16 @@
             onClaim: async (identity, statusEl) => {
               const payload = QCResults.buildPayload(session, identity, site);
               QCResults.storeLocalCopy(payload);
+              // Slim copy for GitHub Issues (~65KB body limit); keep full locally.
+              const submitPayload =
+                typeof QCResults.slimForSubmit === "function"
+                  ? QCResults.slimForSubmit(payload)
+                  : payload;
 
               let submitMsg = "";
               if (site.results && site.results.auto_submit !== false && site.results.endpoint) {
                 statusEl.textContent = "Sending results securely…";
-                const result = await QCResults.submit(payload, site);
+                const result = await QCResults.submit(submitPayload, site);
                 if (result.ok) {
                   submitMsg =
                     " Results saved" +

@@ -14,23 +14,7 @@
       ],
       "answer": 0,
       "explain": "ROM blocks runtime writes.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_easy_01.mp4",
-        "poster": "media/images/memmap_easy_01-frame.png",
-        "figure": "media/images/memmap_easy_01.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "memmap_easy_02",
@@ -44,23 +28,7 @@
       ],
       "answer": 0,
       "explain": "First byte of DE AD BE EF.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_easy_02.mp4",
-        "poster": "media/images/memmap_easy_02-frame.png",
-        "figure": "media/images/memmap_easy_02.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "memmap_easy_03",
@@ -74,23 +42,7 @@
       ],
       "answer": 0,
       "explain": "log₂(16) = 4.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_easy_03.mp4",
-        "poster": "media/images/memmap_easy_03-frame.png",
-        "figure": "media/images/memmap_easy_03.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "memmap_easy_04",
@@ -98,767 +50,7 @@
       "prompt": "ROM and RAM use different address math for the same DEPTH.",
       "answer": false,
       "explain": "Same map math; permission differs.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_easy_04.mp4",
-        "poster": "media/images/memmap_easy_04-frame.png",
-        "figure": "media/images/memmap_easy_04.png"
-      }
-    },
-    {
-      "id": "memmap_easy_05",
-      "type": "multiple_choice",
-      "prompt": "In this lab, ROM mode means…",
-      "choices": [
-        "Runtime writes are rejected; init via readmemh load",
-        "Reads are illegal",
-        "Addresses are decimal only",
-        "DEPTH must be 1"
-      ],
-      "answer": 0,
-      "explain": "ROM blocks runtime writes.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_easy_05.mp4",
-        "poster": "media/images/memmap_easy_05-frame.png",
-        "figure": "media/images/memmap_easy_05.png"
-      }
-    },
-    {
-      "id": "memmap_easy_06",
-      "type": "multiple_choice",
-      "prompt": "First byte of DE AD BE EF is…",
-      "choices": [
-        "0xDE",
-        "0xEF",
-        "0x00",
-        "0xAD"
-      ],
-      "answer": 0,
-      "explain": "First byte of DE AD BE EF.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_easy_06.mp4",
-        "poster": "media/images/memmap_easy_06-frame.png",
-        "figure": "media/images/memmap_easy_06.png"
-      }
-    },
-    {
-      "id": "memmap_easy_07",
-      "type": "multiple_choice",
-      "prompt": "DEPTH=16 ⇒ ADDR_W=…",
-      "choices": [
-        "4",
-        "8",
-        "16",
-        "2"
-      ],
-      "answer": 0,
-      "explain": "log₂(16) = 4.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_easy_07.mp4",
-        "poster": "media/images/memmap_easy_07-frame.png",
-        "figure": "media/images/memmap_easy_07.png"
-      }
-    },
-    {
-      "id": "memmap_easy_08",
-      "type": "true_false",
-      "prompt": "ROM and RAM use different address math for the same DEPTH.",
-      "answer": false,
-      "explain": "Same map math; permission differs.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_easy_08.mp4",
-        "poster": "media/images/memmap_easy_08-frame.png",
-        "figure": "media/images/memmap_easy_08.png"
-      }
-    },
-    {
-      "id": "memmap_easy_09",
-      "type": "multiple_choice",
-      "prompt": "In this lab, ROM mode means…",
-      "choices": [
-        "Runtime writes are rejected; init via readmemh load",
-        "Reads are illegal",
-        "Addresses are decimal only",
-        "DEPTH must be 1"
-      ],
-      "answer": 0,
-      "explain": "ROM blocks runtime writes.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_easy_09.mp4",
-        "poster": "media/images/memmap_easy_09-frame.png",
-        "figure": "media/images/memmap_easy_09.png"
-      }
-    },
-    {
-      "id": "memmap_easy_10",
-      "type": "multiple_choice",
-      "prompt": "First byte of DE AD BE EF is…",
-      "choices": [
-        "0xDE",
-        "0xEF",
-        "0x00",
-        "0xAD"
-      ],
-      "answer": 0,
-      "explain": "First byte of DE AD BE EF.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_easy_10.mp4",
-        "poster": "media/images/memmap_easy_10-frame.png",
-        "figure": "media/images/memmap_easy_10.png"
-      }
-    },
-    {
-      "id": "memmap_easy_11",
-      "type": "multiple_choice",
-      "prompt": "DEPTH=16 ⇒ ADDR_W=…",
-      "choices": [
-        "4",
-        "8",
-        "16",
-        "2"
-      ],
-      "answer": 0,
-      "explain": "log₂(16) = 4.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_easy_11.mp4",
-        "poster": "media/images/memmap_easy_11-frame.png",
-        "figure": "media/images/memmap_easy_11.png"
-      }
-    },
-    {
-      "id": "memmap_easy_12",
-      "type": "true_false",
-      "prompt": "ROM and RAM use different address math for the same DEPTH.",
-      "answer": false,
-      "explain": "Same map math; permission differs.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_easy_12.mp4",
-        "poster": "media/images/memmap_easy_12-frame.png",
-        "figure": "media/images/memmap_easy_12.png"
-      }
-    },
-    {
-      "id": "memmap_easy_13",
-      "type": "multiple_choice",
-      "prompt": "In this lab, ROM mode means…",
-      "choices": [
-        "Runtime writes are rejected; init via readmemh load",
-        "Reads are illegal",
-        "Addresses are decimal only",
-        "DEPTH must be 1"
-      ],
-      "answer": 0,
-      "explain": "ROM blocks runtime writes.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_easy_13.mp4",
-        "poster": "media/images/memmap_easy_13-frame.png",
-        "figure": "media/images/memmap_easy_13.png"
-      }
-    },
-    {
-      "id": "memmap_easy_14",
-      "type": "multiple_choice",
-      "prompt": "First byte of DE AD BE EF is…",
-      "choices": [
-        "0xDE",
-        "0xEF",
-        "0x00",
-        "0xAD"
-      ],
-      "answer": 0,
-      "explain": "First byte of DE AD BE EF.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_easy_14.mp4",
-        "poster": "media/images/memmap_easy_14-frame.png",
-        "figure": "media/images/memmap_easy_14.png"
-      }
-    },
-    {
-      "id": "memmap_easy_15",
-      "type": "multiple_choice",
-      "prompt": "DEPTH=16 ⇒ ADDR_W=…",
-      "choices": [
-        "4",
-        "8",
-        "16",
-        "2"
-      ],
-      "answer": 0,
-      "explain": "log₂(16) = 4.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_easy_15.mp4",
-        "poster": "media/images/memmap_easy_15-frame.png",
-        "figure": "media/images/memmap_easy_15.png"
-      }
-    },
-    {
-      "id": "memmap_easy_16",
-      "type": "true_false",
-      "prompt": "ROM and RAM use different address math for the same DEPTH.",
-      "answer": false,
-      "explain": "Same map math; permission differs.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_easy_16.mp4",
-        "poster": "media/images/memmap_easy_16-frame.png",
-        "figure": "media/images/memmap_easy_16.png"
-      }
-    },
-    {
-      "id": "memmap_easy_17",
-      "type": "multiple_choice",
-      "prompt": "In this lab, ROM mode means…",
-      "choices": [
-        "Runtime writes are rejected; init via readmemh load",
-        "Reads are illegal",
-        "Addresses are decimal only",
-        "DEPTH must be 1"
-      ],
-      "answer": 0,
-      "explain": "ROM blocks runtime writes.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_easy_17.mp4",
-        "poster": "media/images/memmap_easy_17-frame.png",
-        "figure": "media/images/memmap_easy_17.png"
-      }
-    },
-    {
-      "id": "memmap_easy_18",
-      "type": "multiple_choice",
-      "prompt": "First byte of DE AD BE EF is…",
-      "choices": [
-        "0xDE",
-        "0xEF",
-        "0x00",
-        "0xAD"
-      ],
-      "answer": 0,
-      "explain": "First byte of DE AD BE EF.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_easy_18.mp4",
-        "poster": "media/images/memmap_easy_18-frame.png",
-        "figure": "media/images/memmap_easy_18.png"
-      }
-    },
-    {
-      "id": "memmap_easy_19",
-      "type": "multiple_choice",
-      "prompt": "DEPTH=16 ⇒ ADDR_W=…",
-      "choices": [
-        "4",
-        "8",
-        "16",
-        "2"
-      ],
-      "answer": 0,
-      "explain": "log₂(16) = 4.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_easy_19.mp4",
-        "poster": "media/images/memmap_easy_19-frame.png",
-        "figure": "media/images/memmap_easy_19.png"
-      }
-    },
-    {
-      "id": "memmap_easy_20",
-      "type": "true_false",
-      "prompt": "ROM and RAM use different address math for the same DEPTH.",
-      "answer": false,
-      "explain": "Same map math; permission differs.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_easy_20.mp4",
-        "poster": "media/images/memmap_easy_20-frame.png",
-        "figure": "media/images/memmap_easy_20.png"
-      }
-    },
-    {
-      "id": "memmap_easy_21",
-      "type": "multiple_choice",
-      "prompt": "In this lab, ROM mode means…",
-      "choices": [
-        "Runtime writes are rejected; init via readmemh load",
-        "Reads are illegal",
-        "Addresses are decimal only",
-        "DEPTH must be 1"
-      ],
-      "answer": 0,
-      "explain": "ROM blocks runtime writes.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_easy_21.mp4",
-        "poster": "media/images/memmap_easy_21-frame.png",
-        "figure": "media/images/memmap_easy_21.png"
-      }
-    },
-    {
-      "id": "memmap_easy_22",
-      "type": "multiple_choice",
-      "prompt": "First byte of DE AD BE EF is…",
-      "choices": [
-        "0xDE",
-        "0xEF",
-        "0x00",
-        "0xAD"
-      ],
-      "answer": 0,
-      "explain": "First byte of DE AD BE EF.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_easy_22.mp4",
-        "poster": "media/images/memmap_easy_22-frame.png",
-        "figure": "media/images/memmap_easy_22.png"
-      }
-    },
-    {
-      "id": "memmap_easy_23",
-      "type": "multiple_choice",
-      "prompt": "DEPTH=16 ⇒ ADDR_W=…",
-      "choices": [
-        "4",
-        "8",
-        "16",
-        "2"
-      ],
-      "answer": 0,
-      "explain": "log₂(16) = 4.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_easy_23.mp4",
-        "poster": "media/images/memmap_easy_23-frame.png",
-        "figure": "media/images/memmap_easy_23.png"
-      }
-    },
-    {
-      "id": "memmap_easy_24",
-      "type": "true_false",
-      "prompt": "ROM and RAM use different address math for the same DEPTH.",
-      "answer": false,
-      "explain": "Same map math; permission differs.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_easy_24.mp4",
-        "poster": "media/images/memmap_easy_24-frame.png",
-        "figure": "media/images/memmap_easy_24.png"
-      }
-    },
-    {
-      "id": "memmap_easy_25",
-      "type": "multiple_choice",
-      "prompt": "In this lab, ROM mode means…",
-      "choices": [
-        "Runtime writes are rejected; init via readmemh load",
-        "Reads are illegal",
-        "Addresses are decimal only",
-        "DEPTH must be 1"
-      ],
-      "answer": 0,
-      "explain": "ROM blocks runtime writes.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_easy_25.mp4",
-        "poster": "media/images/memmap_easy_25-frame.png",
-        "figure": "media/images/memmap_easy_25.png"
-      }
-    },
-    {
-      "id": "memmap_easy_26",
-      "type": "multiple_choice",
-      "prompt": "First byte of DE AD BE EF is…",
-      "choices": [
-        "0xDE",
-        "0xEF",
-        "0x00",
-        "0xAD"
-      ],
-      "answer": 0,
-      "explain": "First byte of DE AD BE EF.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_easy_26.mp4",
-        "poster": "media/images/memmap_easy_26-frame.png",
-        "figure": "media/images/memmap_easy_26.png"
-      }
-    },
-    {
-      "id": "memmap_easy_27",
-      "type": "multiple_choice",
-      "prompt": "DEPTH=16 ⇒ ADDR_W=…",
-      "choices": [
-        "4",
-        "8",
-        "16",
-        "2"
-      ],
-      "answer": 0,
-      "explain": "log₂(16) = 4.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_easy_27.mp4",
-        "poster": "media/images/memmap_easy_27-frame.png",
-        "figure": "media/images/memmap_easy_27.png"
-      }
-    },
-    {
-      "id": "memmap_easy_28",
-      "type": "true_false",
-      "prompt": "ROM and RAM use different address math for the same DEPTH.",
-      "answer": false,
-      "explain": "Same map math; permission differs.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_easy_28.mp4",
-        "poster": "media/images/memmap_easy_28-frame.png",
-        "figure": "media/images/memmap_easy_28.png"
-      }
-    },
-    {
-      "id": "memmap_easy_29",
-      "type": "multiple_choice",
-      "prompt": "In this lab, ROM mode means…",
-      "choices": [
-        "Runtime writes are rejected; init via readmemh load",
-        "Reads are illegal",
-        "Addresses are decimal only",
-        "DEPTH must be 1"
-      ],
-      "answer": 0,
-      "explain": "ROM blocks runtime writes.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_easy_29.mp4",
-        "poster": "media/images/memmap_easy_29-frame.png",
-        "figure": "media/images/memmap_easy_29.png"
-      }
-    },
-    {
-      "id": "memmap_easy_30",
-      "type": "multiple_choice",
-      "prompt": "First byte of DE AD BE EF is…",
-      "choices": [
-        "0xDE",
-        "0xEF",
-        "0x00",
-        "0xAD"
-      ],
-      "answer": 0,
-      "explain": "First byte of DE AD BE EF.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_easy_30.mp4",
-        "poster": "media/images/memmap_easy_30-frame.png",
-        "figure": "media/images/memmap_easy_30.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "memmap_medium_01",
@@ -872,23 +64,7 @@
       ],
       "answer": 0,
       "explain": "ADDR_W = log₂(DEPTH).",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_medium_01.mp4",
-        "poster": "media/images/memmap_medium_01-frame.png",
-        "figure": "media/images/memmap_medium_01.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "memmap_medium_02",
@@ -902,23 +78,7 @@
       ],
       "answer": 0,
       "explain": "Teach map bounds.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_medium_02.mp4",
-        "poster": "media/images/memmap_medium_02-frame.png",
-        "figure": "media/images/memmap_medium_02.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "memmap_medium_03",
@@ -932,23 +92,7 @@
       ],
       "answer": 0,
       "explain": "Know the address granularity.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_medium_03.mp4",
-        "poster": "media/images/memmap_medium_03-frame.png",
-        "figure": "media/images/memmap_medium_03.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "memmap_medium_04",
@@ -956,23 +100,7 @@
       "prompt": "readmemh is required for every RAM write in hardware.",
       "answer": false,
       "explain": "Init image ≠ runtime store path.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_medium_04.mp4",
-        "poster": "media/images/memmap_medium_04-frame.png",
-        "figure": "media/images/memmap_medium_04.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "memmap_medium_05",
@@ -986,111 +114,11 @@
       ],
       "answer": 0,
       "explain": "ADDR_W = log₂(DEPTH).",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_medium_05.mp4",
-        "poster": "media/images/memmap_medium_05-frame.png",
-        "figure": "media/images/memmap_medium_05.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "memmap_medium_06",
       "type": "multiple_choice",
-      "prompt": "If addr ≥ DEPTH, a careful model…",
-      "choices": [
-        "Detected / rejected rather than silently wrapping unchecked",
-        "Always written as success",
-        "Converted to opcode",
-        "Ignored as a feature"
-      ],
-      "answer": 0,
-      "explain": "Teach map bounds.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_medium_06.mp4",
-        "poster": "media/images/memmap_medium_06-frame.png",
-        "figure": "media/images/memmap_medium_06.png"
-      }
-    },
-    {
-      "id": "memmap_medium_07",
-      "type": "multiple_choice",
-      "prompt": "Map bugs often come from…",
-      "choices": [
-        "Wrong location selection / misaligned views",
-        "Faster clocks",
-        "Automatic ECC",
-        "No need for DEPTH"
-      ],
-      "answer": 0,
-      "explain": "Know the address granularity.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_medium_07.mp4",
-        "poster": "media/images/memmap_medium_07-frame.png",
-        "figure": "media/images/memmap_medium_07.png"
-      }
-    },
-    {
-      "id": "memmap_medium_08",
-      "type": "true_false",
-      "prompt": "readmemh is required for every RAM write in hardware.",
-      "answer": false,
-      "explain": "Init image ≠ runtime store path.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_medium_08.mp4",
-        "poster": "media/images/memmap_medium_08-frame.png",
-        "figure": "media/images/memmap_medium_08.png"
-      }
-    },
-    {
-      "id": "memmap_medium_09",
-      "type": "multiple_choice",
       "prompt": "A 8-word memory needs how many address bits?",
       "choices": [
         "3",
@@ -1100,623 +128,7 @@
       ],
       "answer": 0,
       "explain": "ADDR_W = log₂(DEPTH).",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_medium_09.mp4",
-        "poster": "media/images/memmap_medium_09-frame.png",
-        "figure": "media/images/memmap_medium_09.png"
-      }
-    },
-    {
-      "id": "memmap_medium_10",
-      "type": "multiple_choice",
-      "prompt": "If addr ≥ DEPTH, a careful model…",
-      "choices": [
-        "Detected / rejected rather than silently wrapping unchecked",
-        "Always written as success",
-        "Converted to opcode",
-        "Ignored as a feature"
-      ],
-      "answer": 0,
-      "explain": "Teach map bounds.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_medium_10.mp4",
-        "poster": "media/images/memmap_medium_10-frame.png",
-        "figure": "media/images/memmap_medium_10.png"
-      }
-    },
-    {
-      "id": "memmap_medium_11",
-      "type": "multiple_choice",
-      "prompt": "Map bugs often come from…",
-      "choices": [
-        "Wrong location selection / misaligned views",
-        "Faster clocks",
-        "Automatic ECC",
-        "No need for DEPTH"
-      ],
-      "answer": 0,
-      "explain": "Know the address granularity.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_medium_11.mp4",
-        "poster": "media/images/memmap_medium_11-frame.png",
-        "figure": "media/images/memmap_medium_11.png"
-      }
-    },
-    {
-      "id": "memmap_medium_12",
-      "type": "true_false",
-      "prompt": "readmemh is required for every RAM write in hardware.",
-      "answer": false,
-      "explain": "Init image ≠ runtime store path.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_medium_12.mp4",
-        "poster": "media/images/memmap_medium_12-frame.png",
-        "figure": "media/images/memmap_medium_12.png"
-      }
-    },
-    {
-      "id": "memmap_medium_13",
-      "type": "multiple_choice",
-      "prompt": "A 16-word memory needs how many address bits?",
-      "choices": [
-        "4",
-        "16",
-        "8",
-        "8"
-      ],
-      "answer": 0,
-      "explain": "ADDR_W = log₂(DEPTH).",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_medium_13.mp4",
-        "poster": "media/images/memmap_medium_13-frame.png",
-        "figure": "media/images/memmap_medium_13.png"
-      }
-    },
-    {
-      "id": "memmap_medium_14",
-      "type": "multiple_choice",
-      "prompt": "If addr ≥ DEPTH, a careful model…",
-      "choices": [
-        "Detected / rejected rather than silently wrapping unchecked",
-        "Always written as success",
-        "Converted to opcode",
-        "Ignored as a feature"
-      ],
-      "answer": 0,
-      "explain": "Teach map bounds.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_medium_14.mp4",
-        "poster": "media/images/memmap_medium_14-frame.png",
-        "figure": "media/images/memmap_medium_14.png"
-      }
-    },
-    {
-      "id": "memmap_medium_15",
-      "type": "multiple_choice",
-      "prompt": "Map bugs often come from…",
-      "choices": [
-        "Wrong location selection / misaligned views",
-        "Faster clocks",
-        "Automatic ECC",
-        "No need for DEPTH"
-      ],
-      "answer": 0,
-      "explain": "Know the address granularity.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_medium_15.mp4",
-        "poster": "media/images/memmap_medium_15-frame.png",
-        "figure": "media/images/memmap_medium_15.png"
-      }
-    },
-    {
-      "id": "memmap_medium_16",
-      "type": "true_false",
-      "prompt": "readmemh is required for every RAM write in hardware.",
-      "answer": false,
-      "explain": "Init image ≠ runtime store path.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_medium_16.mp4",
-        "poster": "media/images/memmap_medium_16-frame.png",
-        "figure": "media/images/memmap_medium_16.png"
-      }
-    },
-    {
-      "id": "memmap_medium_17",
-      "type": "multiple_choice",
-      "prompt": "A 32-word memory needs how many address bits?",
-      "choices": [
-        "5",
-        "32",
-        "8",
-        "10"
-      ],
-      "answer": 0,
-      "explain": "ADDR_W = log₂(DEPTH).",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_medium_17.mp4",
-        "poster": "media/images/memmap_medium_17-frame.png",
-        "figure": "media/images/memmap_medium_17.png"
-      }
-    },
-    {
-      "id": "memmap_medium_18",
-      "type": "multiple_choice",
-      "prompt": "If addr ≥ DEPTH, a careful model…",
-      "choices": [
-        "Detected / rejected rather than silently wrapping unchecked",
-        "Always written as success",
-        "Converted to opcode",
-        "Ignored as a feature"
-      ],
-      "answer": 0,
-      "explain": "Teach map bounds.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_medium_18.mp4",
-        "poster": "media/images/memmap_medium_18-frame.png",
-        "figure": "media/images/memmap_medium_18.png"
-      }
-    },
-    {
-      "id": "memmap_medium_19",
-      "type": "multiple_choice",
-      "prompt": "Map bugs often come from…",
-      "choices": [
-        "Wrong location selection / misaligned views",
-        "Faster clocks",
-        "Automatic ECC",
-        "No need for DEPTH"
-      ],
-      "answer": 0,
-      "explain": "Know the address granularity.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_medium_19.mp4",
-        "poster": "media/images/memmap_medium_19-frame.png",
-        "figure": "media/images/memmap_medium_19.png"
-      }
-    },
-    {
-      "id": "memmap_medium_20",
-      "type": "true_false",
-      "prompt": "readmemh is required for every RAM write in hardware.",
-      "answer": false,
-      "explain": "Init image ≠ runtime store path.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_medium_20.mp4",
-        "poster": "media/images/memmap_medium_20-frame.png",
-        "figure": "media/images/memmap_medium_20.png"
-      }
-    },
-    {
-      "id": "memmap_medium_21",
-      "type": "multiple_choice",
-      "prompt": "A 8-word memory needs how many address bits?",
-      "choices": [
-        "3",
-        "8",
-        "8",
-        "6"
-      ],
-      "answer": 0,
-      "explain": "ADDR_W = log₂(DEPTH).",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_medium_21.mp4",
-        "poster": "media/images/memmap_medium_21-frame.png",
-        "figure": "media/images/memmap_medium_21.png"
-      }
-    },
-    {
-      "id": "memmap_medium_22",
-      "type": "multiple_choice",
-      "prompt": "If addr ≥ DEPTH, a careful model…",
-      "choices": [
-        "Detected / rejected rather than silently wrapping unchecked",
-        "Always written as success",
-        "Converted to opcode",
-        "Ignored as a feature"
-      ],
-      "answer": 0,
-      "explain": "Teach map bounds.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_medium_22.mp4",
-        "poster": "media/images/memmap_medium_22-frame.png",
-        "figure": "media/images/memmap_medium_22.png"
-      }
-    },
-    {
-      "id": "memmap_medium_23",
-      "type": "multiple_choice",
-      "prompt": "Map bugs often come from…",
-      "choices": [
-        "Wrong location selection / misaligned views",
-        "Faster clocks",
-        "Automatic ECC",
-        "No need for DEPTH"
-      ],
-      "answer": 0,
-      "explain": "Know the address granularity.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_medium_23.mp4",
-        "poster": "media/images/memmap_medium_23-frame.png",
-        "figure": "media/images/memmap_medium_23.png"
-      }
-    },
-    {
-      "id": "memmap_medium_24",
-      "type": "true_false",
-      "prompt": "readmemh is required for every RAM write in hardware.",
-      "answer": false,
-      "explain": "Init image ≠ runtime store path.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_medium_24.mp4",
-        "poster": "media/images/memmap_medium_24-frame.png",
-        "figure": "media/images/memmap_medium_24.png"
-      }
-    },
-    {
-      "id": "memmap_medium_25",
-      "type": "multiple_choice",
-      "prompt": "A 16-word memory needs how many address bits?",
-      "choices": [
-        "4",
-        "16",
-        "8",
-        "8"
-      ],
-      "answer": 0,
-      "explain": "ADDR_W = log₂(DEPTH).",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_medium_25.mp4",
-        "poster": "media/images/memmap_medium_25-frame.png",
-        "figure": "media/images/memmap_medium_25.png"
-      }
-    },
-    {
-      "id": "memmap_medium_26",
-      "type": "multiple_choice",
-      "prompt": "If addr ≥ DEPTH, a careful model…",
-      "choices": [
-        "Detected / rejected rather than silently wrapping unchecked",
-        "Always written as success",
-        "Converted to opcode",
-        "Ignored as a feature"
-      ],
-      "answer": 0,
-      "explain": "Teach map bounds.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_medium_26.mp4",
-        "poster": "media/images/memmap_medium_26-frame.png",
-        "figure": "media/images/memmap_medium_26.png"
-      }
-    },
-    {
-      "id": "memmap_medium_27",
-      "type": "multiple_choice",
-      "prompt": "Map bugs often come from…",
-      "choices": [
-        "Wrong location selection / misaligned views",
-        "Faster clocks",
-        "Automatic ECC",
-        "No need for DEPTH"
-      ],
-      "answer": 0,
-      "explain": "Know the address granularity.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_medium_27.mp4",
-        "poster": "media/images/memmap_medium_27-frame.png",
-        "figure": "media/images/memmap_medium_27.png"
-      }
-    },
-    {
-      "id": "memmap_medium_28",
-      "type": "true_false",
-      "prompt": "readmemh is required for every RAM write in hardware.",
-      "answer": false,
-      "explain": "Init image ≠ runtime store path.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_medium_28.mp4",
-        "poster": "media/images/memmap_medium_28-frame.png",
-        "figure": "media/images/memmap_medium_28.png"
-      }
-    },
-    {
-      "id": "memmap_medium_29",
-      "type": "multiple_choice",
-      "prompt": "A 32-word memory needs how many address bits?",
-      "choices": [
-        "5",
-        "32",
-        "8",
-        "10"
-      ],
-      "answer": 0,
-      "explain": "ADDR_W = log₂(DEPTH).",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_medium_29.mp4",
-        "poster": "media/images/memmap_medium_29-frame.png",
-        "figure": "media/images/memmap_medium_29.png"
-      }
-    },
-    {
-      "id": "memmap_medium_30",
-      "type": "multiple_choice",
-      "prompt": "If addr ≥ DEPTH, a careful model…",
-      "choices": [
-        "Detected / rejected rather than silently wrapping unchecked",
-        "Always written as success",
-        "Converted to opcode",
-        "Ignored as a feature"
-      ],
-      "answer": 0,
-      "explain": "Teach map bounds.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_medium_30.mp4",
-        "poster": "media/images/memmap_medium_30-frame.png",
-        "figure": "media/images/memmap_medium_30.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "memmap_hard_01",
@@ -1730,23 +142,7 @@
       ],
       "answer": 0,
       "explain": "Decode selects the target region.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_hard_01.mp4",
-        "poster": "media/images/memmap_hard_01-frame.png",
-        "figure": "media/images/memmap_hard_01.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "memmap_hard_02",
@@ -1760,23 +156,7 @@
       ],
       "answer": 0,
       "explain": "Endianness is a map/view concern.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_hard_02.mp4",
-        "poster": "media/images/memmap_hard_02-frame.png",
-        "figure": "media/images/memmap_hard_02.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "memmap_hard_03",
@@ -1790,23 +170,7 @@
       ],
       "answer": 0,
       "explain": "Product of depth and width.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_hard_03.mp4",
-        "poster": "media/images/memmap_hard_03-frame.png",
-        "figure": "media/images/memmap_hard_03.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "memmap_hard_04",
@@ -1814,767 +178,1035 @@
       "prompt": "Address bits below log₂(DEPTH) are never used in a dense array.",
       "answer": false,
       "explain": "Low bits index; statement 3 inverted is false.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_hard_04.mp4",
-        "poster": "media/images/memmap_hard_04-frame.png",
-        "figure": "media/images/memmap_hard_04.png"
-      }
+      "difficulty": "hard"
     },
     {
-      "id": "memmap_hard_05",
       "type": "multiple_choice",
-      "prompt": "Sparse map with base+offset decoding…",
+      "prompt": "Address width for depth 4 is…",
       "choices": [
-        "Comparing high bits / ranges to select a device",
-        "Only the LSB forever",
-        "Gray code only",
-        "Removing addresses"
+        "1",
+        "2",
+        "4",
+        "4"
       ],
-      "answer": 0,
-      "explain": "Decode selects the target region.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_hard_05.mp4",
-        "poster": "media/images/memmap_hard_05-frame.png",
-        "figure": "media/images/memmap_hard_05.png"
-      }
+      "answer": 1,
+      "explain": "ceil(log2(4)) = 2.",
+      "difficulty": "easy",
+      "id": "memmap_easy_05"
     },
     {
-      "id": "memmap_hard_06",
       "type": "multiple_choice",
-      "prompt": "Byte order on a mapped word changes…",
+      "prompt": "Address width for depth 8 is…",
       "choices": [
-        "Which byte appears at the low address",
-        "The clock frequency",
-        "Reset polarity only",
-        "ALU opcode"
+        "2",
+        "3",
+        "8",
+        "6"
       ],
-      "answer": 0,
-      "explain": "Endianness is a map/view concern.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_hard_06.mp4",
-        "poster": "media/images/memmap_hard_06-frame.png",
-        "figure": "media/images/memmap_hard_06.png"
-      }
+      "answer": 1,
+      "explain": "ceil(log2(8)) = 3.",
+      "difficulty": "easy",
+      "id": "memmap_easy_06"
     },
     {
-      "id": "memmap_hard_07",
       "type": "multiple_choice",
-      "prompt": "Mem size formula is…",
+      "prompt": "Address width for depth 16 is…",
       "choices": [
-        "DEPTH × WIDTH",
-        "DEPTH + WIDTH",
-        "DEPTH only",
-        "2^WIDTH"
+        "3",
+        "4",
+        "16",
+        "8"
       ],
-      "answer": 0,
-      "explain": "Product of depth and width.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_hard_07.mp4",
-        "poster": "media/images/memmap_hard_07-frame.png",
-        "figure": "media/images/memmap_hard_07.png"
-      }
+      "answer": 1,
+      "explain": "ceil(log2(16)) = 4.",
+      "difficulty": "easy",
+      "id": "memmap_easy_07"
     },
     {
-      "id": "memmap_hard_08",
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 32 is…",
+      "choices": [
+        "4",
+        "5",
+        "32",
+        "10"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(32)) = 5.",
+      "difficulty": "easy",
+      "id": "memmap_easy_08"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 64 is…",
+      "choices": [
+        "5",
+        "6",
+        "64",
+        "12"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(64)) = 6.",
+      "difficulty": "easy",
+      "id": "memmap_easy_09"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 8×8 memory in bits is…",
+      "choices": [
+        "16",
+        "64",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "8×8 = 64.",
+      "difficulty": "easy",
+      "id": "memmap_easy_10"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 16×32 memory in bits is…",
+      "choices": [
+        "48",
+        "512",
+        "16",
+        "32"
+      ],
+      "answer": 1,
+      "explain": "16×32 = 512.",
+      "difficulty": "easy",
+      "id": "memmap_easy_11"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 64×4 memory in bits is…",
+      "choices": [
+        "68",
+        "256",
+        "64",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "64×4 = 256.",
+      "difficulty": "easy",
+      "id": "memmap_easy_12"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 256×16 memory in bits is…",
+      "choices": [
+        "272",
+        "4096",
+        "256",
+        "16"
+      ],
+      "answer": 1,
+      "explain": "256×16 = 4096.",
+      "difficulty": "easy",
+      "id": "memmap_easy_13"
+    },
+    {
       "type": "true_false",
-      "prompt": "Address bits below log₂(DEPTH) are never used in a dense array.",
-      "answer": false,
-      "explain": "Low bits index; statement 3 inverted is false.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_hard_08.mp4",
-        "poster": "media/images/memmap_hard_08-frame.png",
-        "figure": "media/images/memmap_hard_08.png"
-      }
+      "prompt": "FIFO empty and full must be generated carefully across domains for async FIFOs.",
+      "answer": true,
+      "explain": "Gray pointers.",
+      "difficulty": "easy",
+      "id": "memmap_easy_14"
     },
     {
-      "id": "memmap_hard_09",
-      "type": "multiple_choice",
-      "prompt": "Sparse map with base+offset decoding…",
-      "choices": [
-        "Comparing high bits / ranges to select a device",
-        "Only the LSB forever",
-        "Gray code only",
-        "Removing addresses"
-      ],
-      "answer": 0,
-      "explain": "Decode selects the target region.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_hard_09.mp4",
-        "poster": "media/images/memmap_hard_09-frame.png",
-        "figure": "media/images/memmap_hard_09.png"
-      }
-    },
-    {
-      "id": "memmap_hard_10",
-      "type": "multiple_choice",
-      "prompt": "Byte order on a mapped word changes…",
-      "choices": [
-        "Which byte appears at the low address",
-        "The clock frequency",
-        "Reset polarity only",
-        "ALU opcode"
-      ],
-      "answer": 0,
-      "explain": "Endianness is a map/view concern.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_hard_10.mp4",
-        "poster": "media/images/memmap_hard_10-frame.png",
-        "figure": "media/images/memmap_hard_10.png"
-      }
-    },
-    {
-      "id": "memmap_hard_11",
-      "type": "multiple_choice",
-      "prompt": "Mem size formula is…",
-      "choices": [
-        "DEPTH × WIDTH",
-        "DEPTH + WIDTH",
-        "DEPTH only",
-        "2^WIDTH"
-      ],
-      "answer": 0,
-      "explain": "Product of depth and width.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_hard_11.mp4",
-        "poster": "media/images/memmap_hard_11-frame.png",
-        "figure": "media/images/memmap_hard_11.png"
-      }
-    },
-    {
-      "id": "memmap_hard_12",
       "type": "true_false",
-      "prompt": "Address bits below log₂(DEPTH) are never used in a dense array.",
-      "answer": false,
-      "explain": "Low bits index; statement 3 inverted is false.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_hard_12.mp4",
-        "poster": "media/images/memmap_hard_12-frame.png",
-        "figure": "media/images/memmap_hard_12.png"
-      }
+      "prompt": "Byte enables select which bytes of a word are written.",
+      "answer": true,
+      "explain": "Partial writes.",
+      "difficulty": "easy",
+      "id": "memmap_easy_15"
     },
     {
-      "id": "memmap_hard_13",
       "type": "multiple_choice",
-      "prompt": "Sparse map with base+offset decoding…",
+      "prompt": "How many distinct values can 1 bits represent?",
       "choices": [
-        "Comparing high bits / ranges to select a device",
-        "Only the LSB forever",
-        "Gray code only",
-        "Removing addresses"
+        "1",
+        "2",
+        "1",
+        "10"
       ],
-      "answer": 0,
-      "explain": "Decode selects the target region.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_hard_13.mp4",
-        "poster": "media/images/memmap_hard_13-frame.png",
-        "figure": "media/images/memmap_hard_13.png"
-      }
+      "answer": 1,
+      "explain": "1 bits encode 2^1 = 2 patterns.",
+      "difficulty": "easy",
+      "id": "memmap_easy_16"
     },
     {
-      "id": "memmap_hard_14",
       "type": "multiple_choice",
-      "prompt": "Byte order on a mapped word changes…",
+      "prompt": "How many distinct values can 2 bits represent?",
       "choices": [
-        "Which byte appears at the low address",
-        "The clock frequency",
-        "Reset polarity only",
-        "ALU opcode"
+        "2",
+        "4",
+        "2",
+        "20"
       ],
-      "answer": 0,
-      "explain": "Endianness is a map/view concern.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_hard_14.mp4",
-        "poster": "media/images/memmap_hard_14-frame.png",
-        "figure": "media/images/memmap_hard_14.png"
-      }
+      "answer": 1,
+      "explain": "2 bits encode 2^2 = 4 patterns.",
+      "difficulty": "easy",
+      "id": "memmap_easy_17"
     },
     {
-      "id": "memmap_hard_15",
       "type": "multiple_choice",
-      "prompt": "Mem size formula is…",
+      "prompt": "How many distinct values can 3 bits represent?",
       "choices": [
-        "DEPTH × WIDTH",
-        "DEPTH + WIDTH",
-        "DEPTH only",
-        "2^WIDTH"
+        "4",
+        "8",
+        "3",
+        "30"
       ],
-      "answer": 0,
-      "explain": "Product of depth and width.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_hard_15.mp4",
-        "poster": "media/images/memmap_hard_15-frame.png",
-        "figure": "media/images/memmap_hard_15.png"
-      }
+      "answer": 1,
+      "explain": "3 bits encode 2^3 = 8 patterns.",
+      "difficulty": "easy",
+      "id": "memmap_easy_18"
     },
     {
-      "id": "memmap_hard_16",
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 4 bits represent?",
+      "choices": [
+        "8",
+        "16",
+        "4",
+        "40"
+      ],
+      "answer": 1,
+      "explain": "4 bits encode 2^4 = 16 patterns.",
+      "difficulty": "easy",
+      "id": "memmap_easy_19"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 5 bits represent?",
+      "choices": [
+        "16",
+        "32",
+        "5",
+        "50"
+      ],
+      "answer": 1,
+      "explain": "5 bits encode 2^5 = 32 patterns.",
+      "difficulty": "easy",
+      "id": "memmap_easy_20"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 6 bits represent?",
+      "choices": [
+        "32",
+        "64",
+        "6",
+        "60"
+      ],
+      "answer": 1,
+      "explain": "6 bits encode 2^6 = 64 patterns.",
+      "difficulty": "easy",
+      "id": "memmap_easy_21"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 7 bits represent?",
+      "choices": [
+        "64",
+        "128",
+        "7",
+        "70"
+      ],
+      "answer": 1,
+      "explain": "7 bits encode 2^7 = 128 patterns.",
+      "difficulty": "easy",
+      "id": "memmap_easy_22"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 8 bits represent?",
+      "choices": [
+        "128",
+        "256",
+        "8",
+        "80"
+      ],
+      "answer": 1,
+      "explain": "8 bits encode 2^8 = 256 patterns.",
+      "difficulty": "easy",
+      "id": "memmap_easy_23"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 9 bits represent?",
+      "choices": [
+        "256",
+        "512",
+        "9",
+        "90"
+      ],
+      "answer": 1,
+      "explain": "9 bits encode 2^9 = 512 patterns.",
+      "difficulty": "easy",
+      "id": "memmap_easy_24"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 10 bits represent?",
+      "choices": [
+        "512",
+        "1024",
+        "10",
+        "100"
+      ],
+      "answer": 1,
+      "explain": "10 bits encode 2^10 = 1024 patterns.",
+      "difficulty": "easy",
+      "id": "memmap_easy_25"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 11 bits represent?",
+      "choices": [
+        "1024",
+        "2048",
+        "11",
+        "110"
+      ],
+      "answer": 1,
+      "explain": "11 bits encode 2^11 = 2048 patterns.",
+      "difficulty": "easy",
+      "id": "memmap_easy_26"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 12 bits represent?",
+      "choices": [
+        "2048",
+        "4096",
+        "12",
+        "120"
+      ],
+      "answer": 1,
+      "explain": "12 bits encode 2^12 = 4096 patterns.",
+      "difficulty": "easy",
+      "id": "memmap_easy_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 13 bits represent?",
+      "choices": [
+        "4096",
+        "8192",
+        "13",
+        "130"
+      ],
+      "answer": 1,
+      "explain": "13 bits encode 2^13 = 8192 patterns.",
+      "difficulty": "easy",
+      "id": "memmap_easy_28"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 14 bits represent?",
+      "choices": [
+        "8192",
+        "16384",
+        "14",
+        "140"
+      ],
+      "answer": 1,
+      "explain": "14 bits encode 2^14 = 16384 patterns.",
+      "difficulty": "easy",
+      "id": "memmap_easy_29"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 15 bits represent?",
+      "choices": [
+        "16384",
+        "32768",
+        "15",
+        "150"
+      ],
+      "answer": 1,
+      "explain": "15 bits encode 2^15 = 32768 patterns.",
+      "difficulty": "easy",
+      "id": "memmap_easy_30"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 4 is…",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(4)) = 2.",
+      "difficulty": "medium",
+      "id": "memmap_medium_07"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 8 is…",
+      "choices": [
+        "2",
+        "3",
+        "8",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(8)) = 3.",
+      "difficulty": "medium",
+      "id": "memmap_medium_08"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 16 is…",
+      "choices": [
+        "3",
+        "4",
+        "16",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(16)) = 4.",
+      "difficulty": "medium",
+      "id": "memmap_medium_09"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 32 is…",
+      "choices": [
+        "4",
+        "5",
+        "32",
+        "10"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(32)) = 5.",
+      "difficulty": "medium",
+      "id": "memmap_medium_10"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 64 is…",
+      "choices": [
+        "5",
+        "6",
+        "64",
+        "12"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(64)) = 6.",
+      "difficulty": "medium",
+      "id": "memmap_medium_11"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 8×8 memory in bits is…",
+      "choices": [
+        "16",
+        "64",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "8×8 = 64.",
+      "difficulty": "medium",
+      "id": "memmap_medium_12"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 16×32 memory in bits is…",
+      "choices": [
+        "48",
+        "512",
+        "16",
+        "32"
+      ],
+      "answer": 1,
+      "explain": "16×32 = 512.",
+      "difficulty": "medium",
+      "id": "memmap_medium_13"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 64×4 memory in bits is…",
+      "choices": [
+        "68",
+        "256",
+        "64",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "64×4 = 256.",
+      "difficulty": "medium",
+      "id": "memmap_medium_14"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 256×16 memory in bits is…",
+      "choices": [
+        "272",
+        "4096",
+        "256",
+        "16"
+      ],
+      "answer": 1,
+      "explain": "256×16 = 4096.",
+      "difficulty": "medium",
+      "id": "memmap_medium_15"
+    },
+    {
       "type": "true_false",
-      "prompt": "Address bits below log₂(DEPTH) are never used in a dense array.",
-      "answer": false,
-      "explain": "Low bits index; statement 3 inverted is false.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_hard_16.mp4",
-        "poster": "media/images/memmap_hard_16-frame.png",
-        "figure": "media/images/memmap_hard_16.png"
-      }
+      "prompt": "FIFO empty and full must be generated carefully across domains for async FIFOs.",
+      "answer": true,
+      "explain": "Gray pointers.",
+      "difficulty": "medium",
+      "id": "memmap_medium_16"
     },
     {
-      "id": "memmap_hard_17",
-      "type": "multiple_choice",
-      "prompt": "Sparse map with base+offset decoding…",
-      "choices": [
-        "Comparing high bits / ranges to select a device",
-        "Only the LSB forever",
-        "Gray code only",
-        "Removing addresses"
-      ],
-      "answer": 0,
-      "explain": "Decode selects the target region.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_hard_17.mp4",
-        "poster": "media/images/memmap_hard_17-frame.png",
-        "figure": "media/images/memmap_hard_17.png"
-      }
-    },
-    {
-      "id": "memmap_hard_18",
-      "type": "multiple_choice",
-      "prompt": "Byte order on a mapped word changes…",
-      "choices": [
-        "Which byte appears at the low address",
-        "The clock frequency",
-        "Reset polarity only",
-        "ALU opcode"
-      ],
-      "answer": 0,
-      "explain": "Endianness is a map/view concern.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_hard_18.mp4",
-        "poster": "media/images/memmap_hard_18-frame.png",
-        "figure": "media/images/memmap_hard_18.png"
-      }
-    },
-    {
-      "id": "memmap_hard_19",
-      "type": "multiple_choice",
-      "prompt": "Mem size formula is…",
-      "choices": [
-        "DEPTH × WIDTH",
-        "DEPTH + WIDTH",
-        "DEPTH only",
-        "2^WIDTH"
-      ],
-      "answer": 0,
-      "explain": "Product of depth and width.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_hard_19.mp4",
-        "poster": "media/images/memmap_hard_19-frame.png",
-        "figure": "media/images/memmap_hard_19.png"
-      }
-    },
-    {
-      "id": "memmap_hard_20",
       "type": "true_false",
-      "prompt": "Address bits below log₂(DEPTH) are never used in a dense array.",
-      "answer": false,
-      "explain": "Low bits index; statement 3 inverted is false.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_hard_20.mp4",
-        "poster": "media/images/memmap_hard_20-frame.png",
-        "figure": "media/images/memmap_hard_20.png"
-      }
+      "prompt": "Byte enables select which bytes of a word are written.",
+      "answer": true,
+      "explain": "Partial writes.",
+      "difficulty": "medium",
+      "id": "memmap_medium_17"
     },
     {
-      "id": "memmap_hard_21",
       "type": "multiple_choice",
-      "prompt": "Sparse map with base+offset decoding…",
+      "prompt": "How many distinct values can 1 bits represent?",
       "choices": [
-        "Comparing high bits / ranges to select a device",
-        "Only the LSB forever",
-        "Gray code only",
-        "Removing addresses"
+        "1",
+        "2",
+        "1",
+        "10"
       ],
-      "answer": 0,
-      "explain": "Decode selects the target region.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_hard_21.mp4",
-        "poster": "media/images/memmap_hard_21-frame.png",
-        "figure": "media/images/memmap_hard_21.png"
-      }
+      "answer": 1,
+      "explain": "1 bits encode 2^1 = 2 patterns.",
+      "difficulty": "medium",
+      "id": "memmap_medium_18"
     },
     {
-      "id": "memmap_hard_22",
       "type": "multiple_choice",
-      "prompt": "Byte order on a mapped word changes…",
+      "prompt": "How many distinct values can 2 bits represent?",
       "choices": [
-        "Which byte appears at the low address",
-        "The clock frequency",
-        "Reset polarity only",
-        "ALU opcode"
+        "2",
+        "4",
+        "2",
+        "20"
       ],
-      "answer": 0,
-      "explain": "Endianness is a map/view concern.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_hard_22.mp4",
-        "poster": "media/images/memmap_hard_22-frame.png",
-        "figure": "media/images/memmap_hard_22.png"
-      }
+      "answer": 1,
+      "explain": "2 bits encode 2^2 = 4 patterns.",
+      "difficulty": "medium",
+      "id": "memmap_medium_19"
     },
     {
-      "id": "memmap_hard_23",
       "type": "multiple_choice",
-      "prompt": "Mem size formula is…",
+      "prompt": "How many distinct values can 3 bits represent?",
       "choices": [
-        "DEPTH × WIDTH",
-        "DEPTH + WIDTH",
-        "DEPTH only",
-        "2^WIDTH"
+        "4",
+        "8",
+        "3",
+        "30"
       ],
-      "answer": 0,
-      "explain": "Product of depth and width.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_hard_23.mp4",
-        "poster": "media/images/memmap_hard_23-frame.png",
-        "figure": "media/images/memmap_hard_23.png"
-      }
+      "answer": 1,
+      "explain": "3 bits encode 2^3 = 8 patterns.",
+      "difficulty": "medium",
+      "id": "memmap_medium_20"
     },
     {
-      "id": "memmap_hard_24",
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 4 bits represent?",
+      "choices": [
+        "8",
+        "16",
+        "4",
+        "40"
+      ],
+      "answer": 1,
+      "explain": "4 bits encode 2^4 = 16 patterns.",
+      "difficulty": "medium",
+      "id": "memmap_medium_21"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 5 bits represent?",
+      "choices": [
+        "16",
+        "32",
+        "5",
+        "50"
+      ],
+      "answer": 1,
+      "explain": "5 bits encode 2^5 = 32 patterns.",
+      "difficulty": "medium",
+      "id": "memmap_medium_22"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 6 bits represent?",
+      "choices": [
+        "32",
+        "64",
+        "6",
+        "60"
+      ],
+      "answer": 1,
+      "explain": "6 bits encode 2^6 = 64 patterns.",
+      "difficulty": "medium",
+      "id": "memmap_medium_23"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 7 bits represent?",
+      "choices": [
+        "64",
+        "128",
+        "7",
+        "70"
+      ],
+      "answer": 1,
+      "explain": "7 bits encode 2^7 = 128 patterns.",
+      "difficulty": "medium",
+      "id": "memmap_medium_24"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 8 bits represent?",
+      "choices": [
+        "128",
+        "256",
+        "8",
+        "80"
+      ],
+      "answer": 1,
+      "explain": "8 bits encode 2^8 = 256 patterns.",
+      "difficulty": "medium",
+      "id": "memmap_medium_25"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 9 bits represent?",
+      "choices": [
+        "256",
+        "512",
+        "9",
+        "90"
+      ],
+      "answer": 1,
+      "explain": "9 bits encode 2^9 = 512 patterns.",
+      "difficulty": "medium",
+      "id": "memmap_medium_26"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 10 bits represent?",
+      "choices": [
+        "512",
+        "1024",
+        "10",
+        "100"
+      ],
+      "answer": 1,
+      "explain": "10 bits encode 2^10 = 1024 patterns.",
+      "difficulty": "medium",
+      "id": "memmap_medium_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 11 bits represent?",
+      "choices": [
+        "1024",
+        "2048",
+        "11",
+        "110"
+      ],
+      "answer": 1,
+      "explain": "11 bits encode 2^11 = 2048 patterns.",
+      "difficulty": "medium",
+      "id": "memmap_medium_28"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 12 bits represent?",
+      "choices": [
+        "2048",
+        "4096",
+        "12",
+        "120"
+      ],
+      "answer": 1,
+      "explain": "12 bits encode 2^12 = 4096 patterns.",
+      "difficulty": "medium",
+      "id": "memmap_medium_29"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 13 bits represent?",
+      "choices": [
+        "4096",
+        "8192",
+        "13",
+        "130"
+      ],
+      "answer": 1,
+      "explain": "13 bits encode 2^13 = 8192 patterns.",
+      "difficulty": "medium",
+      "id": "memmap_medium_30"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 4 is…",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(4)) = 2.",
+      "difficulty": "hard",
+      "id": "memmap_hard_05"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 8 is…",
+      "choices": [
+        "2",
+        "3",
+        "8",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(8)) = 3.",
+      "difficulty": "hard",
+      "id": "memmap_hard_06"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 16 is…",
+      "choices": [
+        "3",
+        "4",
+        "16",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(16)) = 4.",
+      "difficulty": "hard",
+      "id": "memmap_hard_07"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 32 is…",
+      "choices": [
+        "4",
+        "5",
+        "32",
+        "10"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(32)) = 5.",
+      "difficulty": "hard",
+      "id": "memmap_hard_08"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 64 is…",
+      "choices": [
+        "5",
+        "6",
+        "64",
+        "12"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(64)) = 6.",
+      "difficulty": "hard",
+      "id": "memmap_hard_09"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 8×8 memory in bits is…",
+      "choices": [
+        "16",
+        "64",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "8×8 = 64.",
+      "difficulty": "hard",
+      "id": "memmap_hard_10"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 16×32 memory in bits is…",
+      "choices": [
+        "48",
+        "512",
+        "16",
+        "32"
+      ],
+      "answer": 1,
+      "explain": "16×32 = 512.",
+      "difficulty": "hard",
+      "id": "memmap_hard_11"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 64×4 memory in bits is…",
+      "choices": [
+        "68",
+        "256",
+        "64",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "64×4 = 256.",
+      "difficulty": "hard",
+      "id": "memmap_hard_12"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 256×16 memory in bits is…",
+      "choices": [
+        "272",
+        "4096",
+        "256",
+        "16"
+      ],
+      "answer": 1,
+      "explain": "256×16 = 4096.",
+      "difficulty": "hard",
+      "id": "memmap_hard_13"
+    },
+    {
       "type": "true_false",
-      "prompt": "Address bits below log₂(DEPTH) are never used in a dense array.",
-      "answer": false,
-      "explain": "Low bits index; statement 3 inverted is false.",
+      "prompt": "FIFO empty and full must be generated carefully across domains for async FIFOs.",
+      "answer": true,
+      "explain": "Gray pointers.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_hard_24.mp4",
-        "poster": "media/images/memmap_hard_24-frame.png",
-        "figure": "media/images/memmap_hard_24.png"
-      }
+      "id": "memmap_hard_14"
     },
     {
-      "id": "memmap_hard_25",
-      "type": "multiple_choice",
-      "prompt": "Sparse map with base+offset decoding…",
-      "choices": [
-        "Comparing high bits / ranges to select a device",
-        "Only the LSB forever",
-        "Gray code only",
-        "Removing addresses"
-      ],
-      "answer": 0,
-      "explain": "Decode selects the target region.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_hard_25.mp4",
-        "poster": "media/images/memmap_hard_25-frame.png",
-        "figure": "media/images/memmap_hard_25.png"
-      }
-    },
-    {
-      "id": "memmap_hard_26",
-      "type": "multiple_choice",
-      "prompt": "Byte order on a mapped word changes…",
-      "choices": [
-        "Which byte appears at the low address",
-        "The clock frequency",
-        "Reset polarity only",
-        "ALU opcode"
-      ],
-      "answer": 0,
-      "explain": "Endianness is a map/view concern.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_hard_26.mp4",
-        "poster": "media/images/memmap_hard_26-frame.png",
-        "figure": "media/images/memmap_hard_26.png"
-      }
-    },
-    {
-      "id": "memmap_hard_27",
-      "type": "multiple_choice",
-      "prompt": "Mem size formula is…",
-      "choices": [
-        "DEPTH × WIDTH",
-        "DEPTH + WIDTH",
-        "DEPTH only",
-        "2^WIDTH"
-      ],
-      "answer": 0,
-      "explain": "Product of depth and width.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_hard_27.mp4",
-        "poster": "media/images/memmap_hard_27-frame.png",
-        "figure": "media/images/memmap_hard_27.png"
-      }
-    },
-    {
-      "id": "memmap_hard_28",
       "type": "true_false",
-      "prompt": "Address bits below log₂(DEPTH) are never used in a dense array.",
-      "answer": false,
-      "explain": "Low bits index; statement 3 inverted is false.",
+      "prompt": "Byte enables select which bytes of a word are written.",
+      "answer": true,
+      "explain": "Partial writes.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_hard_28.mp4",
-        "poster": "media/images/memmap_hard_28-frame.png",
-        "figure": "media/images/memmap_hard_28.png"
-      }
+      "id": "memmap_hard_15"
     },
     {
-      "id": "memmap_hard_29",
       "type": "multiple_choice",
-      "prompt": "Sparse map with base+offset decoding…",
+      "prompt": "How many distinct values can 1 bits represent?",
       "choices": [
-        "Comparing high bits / ranges to select a device",
-        "Only the LSB forever",
-        "Gray code only",
-        "Removing addresses"
+        "1",
+        "2",
+        "1",
+        "10"
       ],
-      "answer": 0,
-      "explain": "Decode selects the target region.",
+      "answer": 1,
+      "explain": "1 bits encode 2^1 = 2 patterns.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_hard_29.mp4",
-        "poster": "media/images/memmap_hard_29-frame.png",
-        "figure": "media/images/memmap_hard_29.png"
-      }
+      "id": "memmap_hard_16"
     },
     {
-      "id": "memmap_hard_30",
       "type": "multiple_choice",
-      "prompt": "Byte order on a mapped word changes…",
+      "prompt": "How many distinct values can 2 bits represent?",
       "choices": [
-        "Which byte appears at the low address",
-        "The clock frequency",
-        "Reset polarity only",
-        "ALU opcode"
+        "2",
+        "4",
+        "2",
+        "20"
       ],
-      "answer": 0,
-      "explain": "Endianness is a map/view concern.",
+      "answer": 1,
+      "explain": "2 bits encode 2^2 = 4 patterns.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "mem-map",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/memmap_hard_30.mp4",
-        "poster": "media/images/memmap_hard_30-frame.png",
-        "figure": "media/images/memmap_hard_30.png"
-      }
+      "id": "memmap_hard_17"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 3 bits represent?",
+      "choices": [
+        "4",
+        "8",
+        "3",
+        "30"
+      ],
+      "answer": 1,
+      "explain": "3 bits encode 2^3 = 8 patterns.",
+      "difficulty": "hard",
+      "id": "memmap_hard_18"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 4 bits represent?",
+      "choices": [
+        "8",
+        "16",
+        "4",
+        "40"
+      ],
+      "answer": 1,
+      "explain": "4 bits encode 2^4 = 16 patterns.",
+      "difficulty": "hard",
+      "id": "memmap_hard_19"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 5 bits represent?",
+      "choices": [
+        "16",
+        "32",
+        "5",
+        "50"
+      ],
+      "answer": 1,
+      "explain": "5 bits encode 2^5 = 32 patterns.",
+      "difficulty": "hard",
+      "id": "memmap_hard_20"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 6 bits represent?",
+      "choices": [
+        "32",
+        "64",
+        "6",
+        "60"
+      ],
+      "answer": 1,
+      "explain": "6 bits encode 2^6 = 64 patterns.",
+      "difficulty": "hard",
+      "id": "memmap_hard_21"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 7 bits represent?",
+      "choices": [
+        "64",
+        "128",
+        "7",
+        "70"
+      ],
+      "answer": 1,
+      "explain": "7 bits encode 2^7 = 128 patterns.",
+      "difficulty": "hard",
+      "id": "memmap_hard_22"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 8 bits represent?",
+      "choices": [
+        "128",
+        "256",
+        "8",
+        "80"
+      ],
+      "answer": 1,
+      "explain": "8 bits encode 2^8 = 256 patterns.",
+      "difficulty": "hard",
+      "id": "memmap_hard_23"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 9 bits represent?",
+      "choices": [
+        "256",
+        "512",
+        "9",
+        "90"
+      ],
+      "answer": 1,
+      "explain": "9 bits encode 2^9 = 512 patterns.",
+      "difficulty": "hard",
+      "id": "memmap_hard_24"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 10 bits represent?",
+      "choices": [
+        "512",
+        "1024",
+        "10",
+        "100"
+      ],
+      "answer": 1,
+      "explain": "10 bits encode 2^10 = 1024 patterns.",
+      "difficulty": "hard",
+      "id": "memmap_hard_25"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 11 bits represent?",
+      "choices": [
+        "1024",
+        "2048",
+        "11",
+        "110"
+      ],
+      "answer": 1,
+      "explain": "11 bits encode 2^11 = 2048 patterns.",
+      "difficulty": "hard",
+      "id": "memmap_hard_26"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 12 bits represent?",
+      "choices": [
+        "2048",
+        "4096",
+        "12",
+        "120"
+      ],
+      "answer": 1,
+      "explain": "12 bits encode 2^12 = 4096 patterns.",
+      "difficulty": "hard",
+      "id": "memmap_hard_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 13 bits represent?",
+      "choices": [
+        "4096",
+        "8192",
+        "13",
+        "130"
+      ],
+      "answer": 1,
+      "explain": "13 bits encode 2^13 = 8192 patterns.",
+      "difficulty": "hard",
+      "id": "memmap_hard_28"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 14 bits represent?",
+      "choices": [
+        "8192",
+        "16384",
+        "14",
+        "140"
+      ],
+      "answer": 1,
+      "explain": "14 bits encode 2^14 = 16384 patterns.",
+      "difficulty": "hard",
+      "id": "memmap_hard_29"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 15 bits represent?",
+      "choices": [
+        "16384",
+        "32768",
+        "15",
+        "150"
+      ],
+      "answer": 1,
+      "explain": "15 bits encode 2^15 = 32768 patterns.",
+      "difficulty": "hard",
+      "id": "memmap_hard_30"
     }
   ]
 }

@@ -14,20 +14,7 @@
       ],
       "answer": 2,
       "explain": "Space is 0x20.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "space",
-        "label": "Write space",
-        "steps": [
-          {
-            "click": "#btn-sp"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_easy_01.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "ascii_easy_02",
@@ -41,20 +28,7 @@
       ],
       "answer": 1,
       "explain": "LF is 0x0A (CR is 0x0D).",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "lf",
-        "label": "LF",
-        "steps": [
-          {
-            "click": "#btn-lf"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_easy_02.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "ascii_easy_03",
@@ -68,20 +42,7 @@
       ],
       "answer": 2,
       "explain": "NUL (0x00) terminates a C string.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_easy_03.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "ascii_easy_04",
@@ -89,695 +50,7 @@
       "prompt": "Every byte 0x00–0xFF has a unique printable ASCII glyph.",
       "answer": false,
       "explain": "Dots stand in for non-printables so columns stay aligned.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "space",
-        "label": "Write space",
-        "steps": [
-          {
-            "click": "#btn-sp"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_easy_04.png"
-      }
-    },
-    {
-      "id": "ascii_easy_05",
-      "type": "multiple_choice",
-      "prompt": "Printable ASCII typically starts at which hex value (space)?",
-      "choices": [
-        "0x00",
-        "0x0A",
-        "0x20",
-        "0x7F"
-      ],
-      "answer": 2,
-      "explain": "Space is 0x20.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "space",
-        "label": "Write space",
-        "steps": [
-          {
-            "click": "#btn-sp"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_easy_05.png"
-      }
-    },
-    {
-      "id": "ascii_easy_06",
-      "type": "multiple_choice",
-      "prompt": "ASCII line feed (LF) equals…",
-      "choices": [
-        "0x0D only",
-        "0x0A",
-        "0x20",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "LF is 0x0A (CR is 0x0D).",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "lf",
-        "label": "LF",
-        "steps": [
-          {
-            "click": "#btn-lf"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_easy_06.png"
-      }
-    },
-    {
-      "id": "ascii_easy_07",
-      "type": "multiple_choice",
-      "prompt": "Which byte terminates a classic C string?",
-      "choices": [
-        "0x20",
-        "0x0A",
-        "0x00",
-        "0xFF"
-      ],
-      "answer": 2,
-      "explain": "NUL (0x00) terminates a C string.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_easy_07.png"
-      }
-    },
-    {
-      "id": "ascii_easy_08",
-      "type": "true_false",
-      "prompt": "Every byte 0x00–0xFF has a unique printable ASCII glyph.",
-      "answer": false,
-      "explain": "Dots stand in for non-printables so columns stay aligned.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "space",
-        "label": "Write space",
-        "steps": [
-          {
-            "click": "#btn-sp"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_easy_08.png"
-      }
-    },
-    {
-      "id": "ascii_easy_09",
-      "type": "multiple_choice",
-      "prompt": "Printable ASCII typically starts at which hex value (space)?",
-      "choices": [
-        "0x00",
-        "0x0A",
-        "0x20",
-        "0x7F"
-      ],
-      "answer": 2,
-      "explain": "Space is 0x20.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "space",
-        "label": "Write space",
-        "steps": [
-          {
-            "click": "#btn-sp"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_easy_09.png"
-      }
-    },
-    {
-      "id": "ascii_easy_10",
-      "type": "multiple_choice",
-      "prompt": "ASCII line feed (LF) equals…",
-      "choices": [
-        "0x0D only",
-        "0x0A",
-        "0x20",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "LF is 0x0A (CR is 0x0D).",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "lf",
-        "label": "LF",
-        "steps": [
-          {
-            "click": "#btn-lf"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_easy_10.png"
-      }
-    },
-    {
-      "id": "ascii_easy_11",
-      "type": "multiple_choice",
-      "prompt": "Which byte terminates a classic C string?",
-      "choices": [
-        "0x20",
-        "0x0A",
-        "0x00",
-        "0xFF"
-      ],
-      "answer": 2,
-      "explain": "NUL (0x00) terminates a C string.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_easy_11.png"
-      }
-    },
-    {
-      "id": "ascii_easy_12",
-      "type": "true_false",
-      "prompt": "Every byte 0x00–0xFF has a unique printable ASCII glyph.",
-      "answer": false,
-      "explain": "Dots stand in for non-printables so columns stay aligned.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "space",
-        "label": "Write space",
-        "steps": [
-          {
-            "click": "#btn-sp"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_easy_12.png"
-      }
-    },
-    {
-      "id": "ascii_easy_13",
-      "type": "multiple_choice",
-      "prompt": "Printable ASCII typically starts at which hex value (space)?",
-      "choices": [
-        "0x00",
-        "0x0A",
-        "0x20",
-        "0x7F"
-      ],
-      "answer": 2,
-      "explain": "Space is 0x20.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "space",
-        "label": "Write space",
-        "steps": [
-          {
-            "click": "#btn-sp"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_easy_13.png"
-      }
-    },
-    {
-      "id": "ascii_easy_14",
-      "type": "multiple_choice",
-      "prompt": "ASCII line feed (LF) equals…",
-      "choices": [
-        "0x0D only",
-        "0x0A",
-        "0x20",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "LF is 0x0A (CR is 0x0D).",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "lf",
-        "label": "LF",
-        "steps": [
-          {
-            "click": "#btn-lf"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_easy_14.png"
-      }
-    },
-    {
-      "id": "ascii_easy_15",
-      "type": "multiple_choice",
-      "prompt": "Which byte terminates a classic C string?",
-      "choices": [
-        "0x20",
-        "0x0A",
-        "0x00",
-        "0xFF"
-      ],
-      "answer": 2,
-      "explain": "NUL (0x00) terminates a C string.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_easy_15.png"
-      }
-    },
-    {
-      "id": "ascii_easy_16",
-      "type": "true_false",
-      "prompt": "Every byte 0x00–0xFF has a unique printable ASCII glyph.",
-      "answer": false,
-      "explain": "Dots stand in for non-printables so columns stay aligned.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "space",
-        "label": "Write space",
-        "steps": [
-          {
-            "click": "#btn-sp"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_easy_16.png"
-      }
-    },
-    {
-      "id": "ascii_easy_17",
-      "type": "multiple_choice",
-      "prompt": "Printable ASCII typically starts at which hex value (space)?",
-      "choices": [
-        "0x00",
-        "0x0A",
-        "0x20",
-        "0x7F"
-      ],
-      "answer": 2,
-      "explain": "Space is 0x20.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "space",
-        "label": "Write space",
-        "steps": [
-          {
-            "click": "#btn-sp"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_easy_17.png"
-      }
-    },
-    {
-      "id": "ascii_easy_18",
-      "type": "multiple_choice",
-      "prompt": "ASCII line feed (LF) equals…",
-      "choices": [
-        "0x0D only",
-        "0x0A",
-        "0x20",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "LF is 0x0A (CR is 0x0D).",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "lf",
-        "label": "LF",
-        "steps": [
-          {
-            "click": "#btn-lf"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_easy_18.png"
-      }
-    },
-    {
-      "id": "ascii_easy_19",
-      "type": "multiple_choice",
-      "prompt": "Which byte terminates a classic C string?",
-      "choices": [
-        "0x20",
-        "0x0A",
-        "0x00",
-        "0xFF"
-      ],
-      "answer": 2,
-      "explain": "NUL (0x00) terminates a C string.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_easy_19.png"
-      }
-    },
-    {
-      "id": "ascii_easy_20",
-      "type": "true_false",
-      "prompt": "Every byte 0x00–0xFF has a unique printable ASCII glyph.",
-      "answer": false,
-      "explain": "Dots stand in for non-printables so columns stay aligned.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "space",
-        "label": "Write space",
-        "steps": [
-          {
-            "click": "#btn-sp"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ascii_easy_20.mp4",
-        "poster": "media/images/ascii_easy_20-frame.png",
-        "figure": "media/images/ascii_easy_20.png"
-      }
-    },
-    {
-      "id": "ascii_easy_21",
-      "type": "multiple_choice",
-      "prompt": "Printable ASCII typically starts at which hex value (space)?",
-      "choices": [
-        "0x00",
-        "0x0A",
-        "0x20",
-        "0x7F"
-      ],
-      "answer": 2,
-      "explain": "Space is 0x20.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "space",
-        "label": "Write space",
-        "steps": [
-          {
-            "click": "#btn-sp"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_easy_21.png"
-      }
-    },
-    {
-      "id": "ascii_easy_22",
-      "type": "multiple_choice",
-      "prompt": "ASCII line feed (LF) equals…",
-      "choices": [
-        "0x0D only",
-        "0x0A",
-        "0x20",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "LF is 0x0A (CR is 0x0D).",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "lf",
-        "label": "LF",
-        "steps": [
-          {
-            "click": "#btn-lf"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_easy_22.png"
-      }
-    },
-    {
-      "id": "ascii_easy_23",
-      "type": "multiple_choice",
-      "prompt": "Which byte terminates a classic C string?",
-      "choices": [
-        "0x20",
-        "0x0A",
-        "0x00",
-        "0xFF"
-      ],
-      "answer": 2,
-      "explain": "NUL (0x00) terminates a C string.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_easy_23.png"
-      }
-    },
-    {
-      "id": "ascii_easy_24",
-      "type": "true_false",
-      "prompt": "Every byte 0x00–0xFF has a unique printable ASCII glyph.",
-      "answer": false,
-      "explain": "Dots stand in for non-printables so columns stay aligned.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "space",
-        "label": "Write space",
-        "steps": [
-          {
-            "click": "#btn-sp"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_easy_24.png"
-      }
-    },
-    {
-      "id": "ascii_easy_25",
-      "type": "multiple_choice",
-      "prompt": "Printable ASCII typically starts at which hex value (space)?",
-      "choices": [
-        "0x00",
-        "0x0A",
-        "0x20",
-        "0x7F"
-      ],
-      "answer": 2,
-      "explain": "Space is 0x20.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "space",
-        "label": "Write space",
-        "steps": [
-          {
-            "click": "#btn-sp"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ascii_easy_25.mp4",
-        "poster": "media/images/ascii_easy_25-frame.png",
-        "figure": "media/images/ascii_easy_25.png"
-      }
-    },
-    {
-      "id": "ascii_easy_26",
-      "type": "multiple_choice",
-      "prompt": "ASCII line feed (LF) equals…",
-      "choices": [
-        "0x0D only",
-        "0x0A",
-        "0x20",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "LF is 0x0A (CR is 0x0D).",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "lf",
-        "label": "LF",
-        "steps": [
-          {
-            "click": "#btn-lf"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_easy_26.png"
-      }
-    },
-    {
-      "id": "ascii_easy_27",
-      "type": "multiple_choice",
-      "prompt": "Which byte terminates a classic C string?",
-      "choices": [
-        "0x20",
-        "0x0A",
-        "0x00",
-        "0xFF"
-      ],
-      "answer": 2,
-      "explain": "NUL (0x00) terminates a C string.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_easy_27.png"
-      }
-    },
-    {
-      "id": "ascii_easy_28",
-      "type": "true_false",
-      "prompt": "Every byte 0x00–0xFF has a unique printable ASCII glyph.",
-      "answer": false,
-      "explain": "Dots stand in for non-printables so columns stay aligned.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "space",
-        "label": "Write space",
-        "steps": [
-          {
-            "click": "#btn-sp"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_easy_28.png"
-      }
-    },
-    {
-      "id": "ascii_easy_29",
-      "type": "multiple_choice",
-      "prompt": "Printable ASCII typically starts at which hex value (space)?",
-      "choices": [
-        "0x00",
-        "0x0A",
-        "0x20",
-        "0x7F"
-      ],
-      "answer": 2,
-      "explain": "Space is 0x20.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "space",
-        "label": "Write space",
-        "steps": [
-          {
-            "click": "#btn-sp"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_easy_29.png"
-      }
-    },
-    {
-      "id": "ascii_easy_30",
-      "type": "multiple_choice",
-      "prompt": "ASCII line feed (LF) equals…",
-      "choices": [
-        "0x0D only",
-        "0x0A",
-        "0x20",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "LF is 0x0A (CR is 0x0D).",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "lf",
-        "label": "LF",
-        "steps": [
-          {
-            "click": "#btn-lf"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ascii_easy_30.mp4",
-        "poster": "media/images/ascii_easy_30-frame.png",
-        "figure": "media/images/ascii_easy_30.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "ascii_medium_01",
@@ -791,24 +64,7 @@
       ],
       "answer": 1,
       "explain": "'A' = 0x41 (65).",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "letter-a",
-        "label": "Load A",
-        "steps": [
-          {
-            "fill": "#text-in",
-            "value": "A"
-          },
-          {
-            "click": "#btn-load-text"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_medium_01.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "ascii_medium_02",
@@ -822,24 +78,7 @@
       ],
       "answer": 1,
       "explain": "CR is 0x0D.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "cr",
-        "label": "CR via text",
-        "steps": [
-          {
-            "fill": "#text-in",
-            "value": "\r"
-          },
-          {
-            "click": "#btn-load-text"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_medium_02.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "ascii_medium_03",
@@ -853,23 +92,7 @@
       ],
       "answer": 1,
       "explain": "DEL is 0x7F.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ascii_medium_03.mp4",
-        "poster": "media/images/ascii_medium_03-frame.png",
-        "figure": "media/images/ascii_medium_03.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "ascii_medium_04",
@@ -877,24 +100,7 @@
       "prompt": "0x41 and 'A' name the same byte value.",
       "answer": true,
       "explain": "Dump columns are dual views; controls are not printable.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "letter-a",
-        "label": "Load A",
-        "steps": [
-          {
-            "fill": "#text-in",
-            "value": "A"
-          },
-          {
-            "click": "#btn-load-text"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_medium_04.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "ascii_medium_05",
@@ -908,111 +114,11 @@
       ],
       "answer": 1,
       "explain": "'a' = 0x61 (97).",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "letter-a",
-        "label": "Load A",
-        "steps": [
-          {
-            "fill": "#text-in",
-            "value": "A"
-          },
-          {
-            "click": "#btn-load-text"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_medium_05.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "ascii_medium_06",
       "type": "multiple_choice",
-      "prompt": "ASCII CR equals…",
-      "choices": [
-        "0x0A",
-        "0x0D",
-        "0x20",
-        "0x00"
-      ],
-      "answer": 1,
-      "explain": "CR is 0x0D.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "cr",
-        "label": "CR via text",
-        "steps": [
-          {
-            "fill": "#text-in",
-            "value": "\r"
-          },
-          {
-            "click": "#btn-load-text"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_medium_06.png"
-      }
-    },
-    {
-      "id": "ascii_medium_07",
-      "type": "multiple_choice",
-      "prompt": "0x7F in ASCII is…",
-      "choices": [
-        "0x20",
-        "0x7F",
-        "0xFF",
-        "0x01"
-      ],
-      "answer": 1,
-      "explain": "DEL is 0x7F.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_medium_07.png"
-      }
-    },
-    {
-      "id": "ascii_medium_08",
-      "type": "true_false",
-      "prompt": "0x41 and 'A' name the same byte value.",
-      "answer": true,
-      "explain": "Dump columns are dual views; controls are not printable.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "letter-a",
-        "label": "Load A",
-        "steps": [
-          {
-            "fill": "#text-in",
-            "value": "A"
-          },
-          {
-            "click": "#btn-load-text"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_medium_08.png"
-      }
-    },
-    {
-      "id": "ascii_medium_09",
-      "type": "multiple_choice",
       "prompt": "ASCII '0' is which hex byte?",
       "choices": [
         "0x2F",
@@ -1022,629 +128,7 @@
       ],
       "answer": 1,
       "explain": "'0' = 0x30 (48).",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "nul",
-        "label": "NUL",
-        "steps": [
-          {
-            "click": "#btn-nul"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_medium_09.png"
-      }
-    },
-    {
-      "id": "ascii_medium_10",
-      "type": "multiple_choice",
-      "prompt": "ASCII CR equals…",
-      "choices": [
-        "0x0A",
-        "0x0D",
-        "0x20",
-        "0x00"
-      ],
-      "answer": 1,
-      "explain": "CR is 0x0D.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "cr",
-        "label": "CR via text",
-        "steps": [
-          {
-            "fill": "#text-in",
-            "value": "\r"
-          },
-          {
-            "click": "#btn-load-text"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_medium_10.png"
-      }
-    },
-    {
-      "id": "ascii_medium_11",
-      "type": "multiple_choice",
-      "prompt": "0x7F in ASCII is…",
-      "choices": [
-        "0x20",
-        "0x7F",
-        "0xFF",
-        "0x01"
-      ],
-      "answer": 1,
-      "explain": "DEL is 0x7F.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ascii_medium_11.mp4",
-        "poster": "media/images/ascii_medium_11-frame.png",
-        "figure": "media/images/ascii_medium_11.png"
-      }
-    },
-    {
-      "id": "ascii_medium_12",
-      "type": "true_false",
-      "prompt": "0x41 and 'A' name the same byte value.",
-      "answer": true,
-      "explain": "Dump columns are dual views; controls are not printable.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "letter-a",
-        "label": "Load A",
-        "steps": [
-          {
-            "fill": "#text-in",
-            "value": "A"
-          },
-          {
-            "click": "#btn-load-text"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_medium_12.png"
-      }
-    },
-    {
-      "id": "ascii_medium_13",
-      "type": "multiple_choice",
-      "prompt": "ASCII 'A' is which hex byte?",
-      "choices": [
-        "0x40",
-        "0x41",
-        "0x42",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "'A' = 0x41 (65).",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "letter-a",
-        "label": "Load A",
-        "steps": [
-          {
-            "fill": "#text-in",
-            "value": "A"
-          },
-          {
-            "click": "#btn-load-text"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_medium_13.png"
-      }
-    },
-    {
-      "id": "ascii_medium_14",
-      "type": "multiple_choice",
-      "prompt": "ASCII CR equals…",
-      "choices": [
-        "0x0A",
-        "0x0D",
-        "0x20",
-        "0x00"
-      ],
-      "answer": 1,
-      "explain": "CR is 0x0D.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "cr",
-        "label": "CR via text",
-        "steps": [
-          {
-            "fill": "#text-in",
-            "value": "\r"
-          },
-          {
-            "click": "#btn-load-text"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_medium_14.png"
-      }
-    },
-    {
-      "id": "ascii_medium_15",
-      "type": "multiple_choice",
-      "prompt": "0x7F in ASCII is…",
-      "choices": [
-        "0x20",
-        "0x7F",
-        "0xFF",
-        "0x01"
-      ],
-      "answer": 1,
-      "explain": "DEL is 0x7F.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_medium_15.png"
-      }
-    },
-    {
-      "id": "ascii_medium_16",
-      "type": "true_false",
-      "prompt": "0x41 and 'A' name the same byte value.",
-      "answer": true,
-      "explain": "Dump columns are dual views; controls are not printable.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "letter-a",
-        "label": "Load A",
-        "steps": [
-          {
-            "fill": "#text-in",
-            "value": "A"
-          },
-          {
-            "click": "#btn-load-text"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ascii_medium_16.mp4",
-        "poster": "media/images/ascii_medium_16-frame.png",
-        "figure": "media/images/ascii_medium_16.png"
-      }
-    },
-    {
-      "id": "ascii_medium_17",
-      "type": "multiple_choice",
-      "prompt": "ASCII 'a' is which hex byte?",
-      "choices": [
-        "0x60",
-        "0x61",
-        "0x62",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "'a' = 0x61 (97).",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "letter-a",
-        "label": "Load A",
-        "steps": [
-          {
-            "fill": "#text-in",
-            "value": "A"
-          },
-          {
-            "click": "#btn-load-text"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_medium_17.png"
-      }
-    },
-    {
-      "id": "ascii_medium_18",
-      "type": "multiple_choice",
-      "prompt": "ASCII CR equals…",
-      "choices": [
-        "0x0A",
-        "0x0D",
-        "0x20",
-        "0x00"
-      ],
-      "answer": 1,
-      "explain": "CR is 0x0D.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "cr",
-        "label": "CR via text",
-        "steps": [
-          {
-            "fill": "#text-in",
-            "value": "\r"
-          },
-          {
-            "click": "#btn-load-text"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_medium_18.png"
-      }
-    },
-    {
-      "id": "ascii_medium_19",
-      "type": "multiple_choice",
-      "prompt": "0x7F in ASCII is…",
-      "choices": [
-        "0x20",
-        "0x7F",
-        "0xFF",
-        "0x01"
-      ],
-      "answer": 1,
-      "explain": "DEL is 0x7F.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_medium_19.png"
-      }
-    },
-    {
-      "id": "ascii_medium_20",
-      "type": "true_false",
-      "prompt": "0x41 and 'A' name the same byte value.",
-      "answer": true,
-      "explain": "Dump columns are dual views; controls are not printable.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "letter-a",
-        "label": "Load A",
-        "steps": [
-          {
-            "fill": "#text-in",
-            "value": "A"
-          },
-          {
-            "click": "#btn-load-text"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ascii_medium_20.mp4",
-        "poster": "media/images/ascii_medium_20-frame.png",
-        "figure": "media/images/ascii_medium_20.png"
-      }
-    },
-    {
-      "id": "ascii_medium_21",
-      "type": "multiple_choice",
-      "prompt": "ASCII '0' is which hex byte?",
-      "choices": [
-        "0x2F",
-        "0x30",
-        "0x31",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "'0' = 0x30 (48).",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "nul",
-        "label": "NUL",
-        "steps": [
-          {
-            "click": "#btn-nul"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_medium_21.png"
-      }
-    },
-    {
-      "id": "ascii_medium_22",
-      "type": "multiple_choice",
-      "prompt": "ASCII CR equals…",
-      "choices": [
-        "0x0A",
-        "0x0D",
-        "0x20",
-        "0x00"
-      ],
-      "answer": 1,
-      "explain": "CR is 0x0D.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "cr",
-        "label": "CR via text",
-        "steps": [
-          {
-            "fill": "#text-in",
-            "value": "\r"
-          },
-          {
-            "click": "#btn-load-text"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_medium_22.png"
-      }
-    },
-    {
-      "id": "ascii_medium_23",
-      "type": "multiple_choice",
-      "prompt": "0x7F in ASCII is…",
-      "choices": [
-        "0x20",
-        "0x7F",
-        "0xFF",
-        "0x01"
-      ],
-      "answer": 1,
-      "explain": "DEL is 0x7F.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_medium_23.png"
-      }
-    },
-    {
-      "id": "ascii_medium_24",
-      "type": "true_false",
-      "prompt": "0x41 and 'A' name the same byte value.",
-      "answer": true,
-      "explain": "Dump columns are dual views; controls are not printable.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "letter-a",
-        "label": "Load A",
-        "steps": [
-          {
-            "fill": "#text-in",
-            "value": "A"
-          },
-          {
-            "click": "#btn-load-text"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ascii_medium_24.mp4",
-        "poster": "media/images/ascii_medium_24-frame.png",
-        "figure": "media/images/ascii_medium_24.png"
-      }
-    },
-    {
-      "id": "ascii_medium_25",
-      "type": "multiple_choice",
-      "prompt": "ASCII 'A' is which hex byte?",
-      "choices": [
-        "0x40",
-        "0x41",
-        "0x42",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "'A' = 0x41 (65).",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "letter-a",
-        "label": "Load A",
-        "steps": [
-          {
-            "fill": "#text-in",
-            "value": "A"
-          },
-          {
-            "click": "#btn-load-text"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_medium_25.png"
-      }
-    },
-    {
-      "id": "ascii_medium_26",
-      "type": "multiple_choice",
-      "prompt": "ASCII CR equals…",
-      "choices": [
-        "0x0A",
-        "0x0D",
-        "0x20",
-        "0x00"
-      ],
-      "answer": 1,
-      "explain": "CR is 0x0D.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "cr",
-        "label": "CR via text",
-        "steps": [
-          {
-            "fill": "#text-in",
-            "value": "\r"
-          },
-          {
-            "click": "#btn-load-text"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_medium_26.png"
-      }
-    },
-    {
-      "id": "ascii_medium_27",
-      "type": "multiple_choice",
-      "prompt": "0x7F in ASCII is…",
-      "choices": [
-        "0x20",
-        "0x7F",
-        "0xFF",
-        "0x01"
-      ],
-      "answer": 1,
-      "explain": "DEL is 0x7F.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_medium_27.png"
-      }
-    },
-    {
-      "id": "ascii_medium_28",
-      "type": "true_false",
-      "prompt": "0x41 and 'A' name the same byte value.",
-      "answer": true,
-      "explain": "Dump columns are dual views; controls are not printable.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "letter-a",
-        "label": "Load A",
-        "steps": [
-          {
-            "fill": "#text-in",
-            "value": "A"
-          },
-          {
-            "click": "#btn-load-text"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_medium_28.png"
-      }
-    },
-    {
-      "id": "ascii_medium_29",
-      "type": "multiple_choice",
-      "prompt": "ASCII 'a' is which hex byte?",
-      "choices": [
-        "0x60",
-        "0x61",
-        "0x62",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "'a' = 0x61 (97).",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "letter-a",
-        "label": "Load A",
-        "steps": [
-          {
-            "fill": "#text-in",
-            "value": "A"
-          },
-          {
-            "click": "#btn-load-text"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_medium_29.png"
-      }
-    },
-    {
-      "id": "ascii_medium_30",
-      "type": "multiple_choice",
-      "prompt": "ASCII CR equals…",
-      "choices": [
-        "0x0A",
-        "0x0D",
-        "0x20",
-        "0x00"
-      ],
-      "answer": 1,
-      "explain": "CR is 0x0D.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "cr",
-        "label": "CR via text",
-        "steps": [
-          {
-            "fill": "#text-in",
-            "value": "\r"
-          },
-          {
-            "click": "#btn-load-text"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_medium_30.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "ascii_hard_01",
@@ -1658,20 +142,7 @@
       ],
       "answer": 1,
       "explain": "ASCII '0' is 0x30; numeric 0 is 0x00.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "nul",
-        "label": "NUL",
-        "steps": [
-          {
-            "click": "#btn-nul"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_hard_01.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "ascii_hard_02",
@@ -1685,20 +156,7 @@
       ],
       "answer": 1,
       "explain": "7-bit ASCII printables stop at 0x7E; high bytes need another encoding.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_hard_02.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "ascii_hard_03",
@@ -1706,20 +164,7 @@
       "prompt": "Reading a ROM dump requires mapping hex ↔ characters carefully.",
       "answer": true,
       "explain": "CRLF is 0D 0A; LF-only also exists; NUL cuts C strings.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_hard_03.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "ascii_hard_04",
@@ -1733,686 +178,873 @@
       ],
       "answer": 1,
       "explain": "Offsets index bytes (often hex), not glyph counts.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_hard_04.png"
-      }
+      "difficulty": "hard"
     },
     {
-      "id": "ascii_hard_05",
       "type": "multiple_choice",
-      "prompt": "Difference between ASCII '0' and integer 0 is…",
+      "prompt": "ASCII code for space is…",
       "choices": [
-        "They are identical bytes",
-        "Digit characters are 0x30–0x39, not 0–9 numeric",
-        "Digits start at 0x00",
-        "Only UTF-16 matters"
+        "0x30",
+        "0x20",
+        "0x21",
+        "0xFF"
       ],
       "answer": 1,
-      "explain": "ASCII '0' is 0x30; numeric 0 is 0x00.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "nul",
-        "label": "NUL",
-        "steps": [
-          {
-            "click": "#btn-nul"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_hard_05.png"
-      }
+      "explain": "space → 0x20.",
+      "difficulty": "easy",
+      "id": "ascii_easy_05"
     },
     {
-      "id": "ascii_hard_06",
-      "type": "multiple_choice",
-      "prompt": "How should an ASCII-centric dump treat high bytes?",
-      "choices": [
-        "Always printable Latin letters",
-        "Not standard ASCII printables (often shown as dots)",
-        "Equal to space",
-        "Terminate C strings"
-      ],
-      "answer": 1,
-      "explain": "7-bit ASCII printables stop at 0x7E; high bytes need another encoding.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_hard_06.png"
-      }
-    },
-    {
-      "id": "ascii_hard_07",
       "type": "true_false",
-      "prompt": "Reading a ROM dump requires mapping hex ↔ characters carefully.",
+      "prompt": "ASCII space has code 0x20.",
       "answer": true,
-      "explain": "CRLF is 0D 0A; LF-only also exists; NUL cuts C strings.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_hard_07.png"
-      }
+      "explain": "Standard ASCII maps space to 0x20.",
+      "difficulty": "easy",
+      "id": "ascii_easy_06"
     },
     {
-      "id": "ascii_hard_08",
       "type": "multiple_choice",
-      "prompt": "Dump addresses refer to…",
+      "prompt": "ASCII code for digit 0 is…",
       "choices": [
-        "Only printable glyphs",
-        "Byte positions in the buffer / memory",
-        "Word counts exclusively",
-        "Clock cycles"
+        "0x20",
+        "0x30",
+        "0x31",
+        "0xFF"
       ],
       "answer": 1,
-      "explain": "Offsets index bytes (often hex), not glyph counts.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_hard_08.png"
-      }
+      "explain": "digit 0 → 0x30.",
+      "difficulty": "easy",
+      "id": "ascii_easy_07"
     },
     {
-      "id": "ascii_hard_09",
-      "type": "multiple_choice",
-      "prompt": "Difference between ASCII '0' and integer 0 is…",
-      "choices": [
-        "They are identical bytes",
-        "Digit characters are 0x30–0x39, not 0–9 numeric",
-        "Digits start at 0x00",
-        "Only UTF-16 matters"
-      ],
-      "answer": 1,
-      "explain": "ASCII '0' is 0x30; numeric 0 is 0x00.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "nul",
-        "label": "NUL",
-        "steps": [
-          {
-            "click": "#btn-nul"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_hard_09.png"
-      }
-    },
-    {
-      "id": "ascii_hard_10",
-      "type": "multiple_choice",
-      "prompt": "How should an ASCII-centric dump treat high bytes?",
-      "choices": [
-        "Always printable Latin letters",
-        "Not standard ASCII printables (often shown as dots)",
-        "Equal to space",
-        "Terminate C strings"
-      ],
-      "answer": 1,
-      "explain": "7-bit ASCII printables stop at 0x7E; high bytes need another encoding.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_hard_10.png"
-      }
-    },
-    {
-      "id": "ascii_hard_11",
       "type": "true_false",
-      "prompt": "Reading a ROM dump requires mapping hex ↔ characters carefully.",
+      "prompt": "ASCII digit 0 has code 0x30.",
       "answer": true,
-      "explain": "CRLF is 0D 0A; LF-only also exists; NUL cuts C strings.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_hard_11.png"
-      }
+      "explain": "Standard ASCII maps digit 0 to 0x30.",
+      "difficulty": "easy",
+      "id": "ascii_easy_08"
     },
     {
-      "id": "ascii_hard_12",
       "type": "multiple_choice",
-      "prompt": "Dump addresses refer to…",
+      "prompt": "ASCII code for digit 9 is…",
       "choices": [
-        "Only printable glyphs",
-        "Byte positions in the buffer / memory",
-        "Word counts exclusively",
-        "Clock cycles"
+        "0x29",
+        "0x39",
+        "0x38",
+        "0xFF"
       ],
       "answer": 1,
-      "explain": "Offsets index bytes (often hex), not glyph counts.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_hard_12.png"
-      }
+      "explain": "digit 9 → 0x39.",
+      "difficulty": "easy",
+      "id": "ascii_easy_09"
     },
     {
-      "id": "ascii_hard_13",
-      "type": "multiple_choice",
-      "prompt": "Difference between ASCII '0' and integer 0 is…",
-      "choices": [
-        "They are identical bytes",
-        "Digit characters are 0x30–0x39, not 0–9 numeric",
-        "Digits start at 0x00",
-        "Only UTF-16 matters"
-      ],
-      "answer": 1,
-      "explain": "ASCII '0' is 0x30; numeric 0 is 0x00.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "nul",
-        "label": "NUL",
-        "steps": [
-          {
-            "click": "#btn-nul"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_hard_13.png"
-      }
-    },
-    {
-      "id": "ascii_hard_14",
-      "type": "multiple_choice",
-      "prompt": "How should an ASCII-centric dump treat high bytes?",
-      "choices": [
-        "Always printable Latin letters",
-        "Not standard ASCII printables (often shown as dots)",
-        "Equal to space",
-        "Terminate C strings"
-      ],
-      "answer": 1,
-      "explain": "7-bit ASCII printables stop at 0x7E; high bytes need another encoding.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_hard_14.png"
-      }
-    },
-    {
-      "id": "ascii_hard_15",
       "type": "true_false",
-      "prompt": "Reading a ROM dump requires mapping hex ↔ characters carefully.",
+      "prompt": "ASCII digit 9 has code 0x39.",
       "answer": true,
-      "explain": "CRLF is 0D 0A; LF-only also exists; NUL cuts C strings.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_hard_15.png"
-      }
+      "explain": "Standard ASCII maps digit 9 to 0x39.",
+      "difficulty": "easy",
+      "id": "ascii_easy_10"
     },
     {
-      "id": "ascii_hard_16",
       "type": "multiple_choice",
-      "prompt": "Dump addresses refer to…",
+      "prompt": "ASCII code for 'A' is…",
       "choices": [
-        "Only printable glyphs",
-        "Byte positions in the buffer / memory",
-        "Word counts exclusively",
-        "Clock cycles"
+        "0x51",
+        "0x41",
+        "0x40",
+        "0xFF"
       ],
       "answer": 1,
-      "explain": "Offsets index bytes (often hex), not glyph counts.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_hard_16.png"
-      }
+      "explain": "'A' → 0x41.",
+      "difficulty": "easy",
+      "id": "ascii_easy_11"
     },
     {
-      "id": "ascii_hard_17",
-      "type": "multiple_choice",
-      "prompt": "Difference between ASCII '0' and integer 0 is…",
-      "choices": [
-        "They are identical bytes",
-        "Digit characters are 0x30–0x39, not 0–9 numeric",
-        "Digits start at 0x00",
-        "Only UTF-16 matters"
-      ],
-      "answer": 1,
-      "explain": "ASCII '0' is 0x30; numeric 0 is 0x00.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "nul",
-        "label": "NUL",
-        "steps": [
-          {
-            "click": "#btn-nul"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_hard_17.png"
-      }
-    },
-    {
-      "id": "ascii_hard_18",
-      "type": "multiple_choice",
-      "prompt": "How should an ASCII-centric dump treat high bytes?",
-      "choices": [
-        "Always printable Latin letters",
-        "Not standard ASCII printables (often shown as dots)",
-        "Equal to space",
-        "Terminate C strings"
-      ],
-      "answer": 1,
-      "explain": "7-bit ASCII printables stop at 0x7E; high bytes need another encoding.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_hard_18.png"
-      }
-    },
-    {
-      "id": "ascii_hard_19",
       "type": "true_false",
-      "prompt": "Reading a ROM dump requires mapping hex ↔ characters carefully.",
+      "prompt": "ASCII 'A' has code 0x41.",
       "answer": true,
-      "explain": "CRLF is 0D 0A; LF-only also exists; NUL cuts C strings.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_hard_19.png"
-      }
+      "explain": "Standard ASCII maps 'A' to 0x41.",
+      "difficulty": "easy",
+      "id": "ascii_easy_12"
     },
     {
-      "id": "ascii_hard_20",
       "type": "multiple_choice",
-      "prompt": "Dump addresses refer to…",
+      "prompt": "ASCII code for 'Z' is…",
       "choices": [
-        "Only printable glyphs",
-        "Byte positions in the buffer / memory",
-        "Word counts exclusively",
-        "Clock cycles"
+        "0x4A",
+        "0x5A",
+        "0x5B",
+        "0xFF"
       ],
       "answer": 1,
-      "explain": "Offsets index bytes (often hex), not glyph counts.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_hard_20.png"
-      }
+      "explain": "'Z' → 0x5A.",
+      "difficulty": "easy",
+      "id": "ascii_easy_13"
     },
     {
-      "id": "ascii_hard_21",
-      "type": "multiple_choice",
-      "prompt": "Difference between ASCII '0' and integer 0 is…",
-      "choices": [
-        "They are identical bytes",
-        "Digit characters are 0x30–0x39, not 0–9 numeric",
-        "Digits start at 0x00",
-        "Only UTF-16 matters"
-      ],
-      "answer": 1,
-      "explain": "ASCII '0' is 0x30; numeric 0 is 0x00.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "nul",
-        "label": "NUL",
-        "steps": [
-          {
-            "click": "#btn-nul"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_hard_21.png"
-      }
-    },
-    {
-      "id": "ascii_hard_22",
-      "type": "multiple_choice",
-      "prompt": "How should an ASCII-centric dump treat high bytes?",
-      "choices": [
-        "Always printable Latin letters",
-        "Not standard ASCII printables (often shown as dots)",
-        "Equal to space",
-        "Terminate C strings"
-      ],
-      "answer": 1,
-      "explain": "7-bit ASCII printables stop at 0x7E; high bytes need another encoding.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_hard_22.png"
-      }
-    },
-    {
-      "id": "ascii_hard_23",
       "type": "true_false",
-      "prompt": "Reading a ROM dump requires mapping hex ↔ characters carefully.",
+      "prompt": "ASCII 'Z' has code 0x5A.",
       "answer": true,
-      "explain": "CRLF is 0D 0A; LF-only also exists; NUL cuts C strings.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_hard_23.png"
-      }
+      "explain": "Standard ASCII maps 'Z' to 0x5A.",
+      "difficulty": "easy",
+      "id": "ascii_easy_14"
     },
     {
-      "id": "ascii_hard_24",
       "type": "multiple_choice",
-      "prompt": "Dump addresses refer to…",
+      "prompt": "ASCII code for 'a' is…",
       "choices": [
-        "Only printable glyphs",
-        "Byte positions in the buffer / memory",
-        "Word counts exclusively",
-        "Clock cycles"
+        "0x71",
+        "0x61",
+        "0x60",
+        "0xFF"
       ],
       "answer": 1,
-      "explain": "Offsets index bytes (often hex), not glyph counts.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_hard_24.png"
-      }
+      "explain": "'a' → 0x61.",
+      "difficulty": "easy",
+      "id": "ascii_easy_15"
     },
     {
-      "id": "ascii_hard_25",
-      "type": "multiple_choice",
-      "prompt": "Difference between ASCII '0' and integer 0 is…",
-      "choices": [
-        "They are identical bytes",
-        "Digit characters are 0x30–0x39, not 0–9 numeric",
-        "Digits start at 0x00",
-        "Only UTF-16 matters"
-      ],
-      "answer": 1,
-      "explain": "ASCII '0' is 0x30; numeric 0 is 0x00.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "nul",
-        "label": "NUL",
-        "steps": [
-          {
-            "click": "#btn-nul"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_hard_25.png"
-      }
-    },
-    {
-      "id": "ascii_hard_26",
-      "type": "multiple_choice",
-      "prompt": "How should an ASCII-centric dump treat high bytes?",
-      "choices": [
-        "Always printable Latin letters",
-        "Not standard ASCII printables (often shown as dots)",
-        "Equal to space",
-        "Terminate C strings"
-      ],
-      "answer": 1,
-      "explain": "7-bit ASCII printables stop at 0x7E; high bytes need another encoding.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_hard_26.png"
-      }
-    },
-    {
-      "id": "ascii_hard_27",
       "type": "true_false",
-      "prompt": "Reading a ROM dump requires mapping hex ↔ characters carefully.",
+      "prompt": "ASCII 'a' has code 0x61.",
       "answer": true,
-      "explain": "CRLF is 0D 0A; LF-only also exists; NUL cuts C strings.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_hard_27.png"
-      }
+      "explain": "Standard ASCII maps 'a' to 0x61.",
+      "difficulty": "easy",
+      "id": "ascii_easy_16"
     },
     {
-      "id": "ascii_hard_28",
       "type": "multiple_choice",
-      "prompt": "Dump addresses refer to…",
+      "prompt": "ASCII code for 'z' is…",
       "choices": [
-        "Only printable glyphs",
-        "Byte positions in the buffer / memory",
-        "Word counts exclusively",
-        "Clock cycles"
+        "0x6A",
+        "0x7A",
+        "0x7B",
+        "0xFF"
       ],
       "answer": 1,
-      "explain": "Offsets index bytes (often hex), not glyph counts.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_hard_28.png"
-      }
+      "explain": "'z' → 0x7A.",
+      "difficulty": "easy",
+      "id": "ascii_easy_17"
     },
     {
-      "id": "ascii_hard_29",
-      "type": "multiple_choice",
-      "prompt": "Difference between ASCII '0' and integer 0 is…",
-      "choices": [
-        "They are identical bytes",
-        "Digit characters are 0x30–0x39, not 0–9 numeric",
-        "Digits start at 0x00",
-        "Only UTF-16 matters"
-      ],
-      "answer": 1,
-      "explain": "ASCII '0' is 0x30; numeric 0 is 0x00.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "nul",
-        "label": "NUL",
-        "steps": [
-          {
-            "click": "#btn-nul"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_hard_29.png"
-      }
+      "type": "true_false",
+      "prompt": "ASCII 'z' has code 0x7A.",
+      "answer": true,
+      "explain": "Standard ASCII maps 'z' to 0x7A.",
+      "difficulty": "easy",
+      "id": "ascii_easy_18"
     },
     {
-      "id": "ascii_hard_30",
       "type": "multiple_choice",
-      "prompt": "How should an ASCII-centric dump treat high bytes?",
+      "prompt": "ASCII code for NUL is…",
       "choices": [
-        "Always printable Latin letters",
-        "Not standard ASCII printables (often shown as dots)",
-        "Equal to space",
-        "Terminate C strings"
+        "0x10",
+        "0x00",
+        "0x01",
+        "0xFF"
       ],
       "answer": 1,
-      "explain": "7-bit ASCII printables stop at 0x7E; high bytes need another encoding.",
+      "explain": "NUL → 0x00.",
+      "difficulty": "easy",
+      "id": "ascii_easy_19"
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII NUL has code 0x00.",
+      "answer": true,
+      "explain": "Standard ASCII maps NUL to 0x00.",
+      "difficulty": "easy",
+      "id": "ascii_easy_20"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for LF is…",
+      "choices": [
+        "0x1A",
+        "0x0A",
+        "0x0B",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "LF → 0x0A.",
+      "difficulty": "easy",
+      "id": "ascii_easy_21"
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII LF has code 0x0A.",
+      "answer": true,
+      "explain": "Standard ASCII maps LF to 0x0A.",
+      "difficulty": "easy",
+      "id": "ascii_easy_22"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for CR is…",
+      "choices": [
+        "0x1D",
+        "0x0D",
+        "0x0C",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "CR → 0x0D.",
+      "difficulty": "easy",
+      "id": "ascii_easy_23"
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII CR has code 0x0D.",
+      "answer": true,
+      "explain": "Standard ASCII maps CR to 0x0D.",
+      "difficulty": "easy",
+      "id": "ascii_easy_24"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for DEL is…",
+      "choices": [
+        "0x6F",
+        "0x7F",
+        "0x7E",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "DEL → 0x7F.",
+      "difficulty": "easy",
+      "id": "ascii_easy_25"
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII DEL has code 0x7F.",
+      "answer": true,
+      "explain": "Standard ASCII maps DEL to 0x7F.",
+      "difficulty": "easy",
+      "id": "ascii_easy_26"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hex digit 0 equals which decimal value?",
+      "choices": [
+        "1",
+        "0",
+        "5",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "0₁₆ = 0₁₀.",
+      "difficulty": "easy",
+      "id": "ascii_easy_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Decimal 0 as one hex digit is…",
+      "choices": [
+        "1",
+        "0",
+        "5",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "0₁₀ = 0₁₆.",
+      "difficulty": "easy",
+      "id": "ascii_easy_28"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hex digit 1 equals which decimal value?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "1₁₆ = 1₁₀.",
+      "difficulty": "easy",
+      "id": "ascii_easy_29"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Decimal 1 as one hex digit is…",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "1₁₀ = 1₁₆.",
+      "difficulty": "easy",
+      "id": "ascii_easy_30"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for space is…",
+      "choices": [
+        "0x30",
+        "0x20",
+        "0x21",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "space → 0x20.",
+      "difficulty": "medium",
+      "id": "ascii_medium_07"
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII space has code 0x20.",
+      "answer": true,
+      "explain": "Standard ASCII maps space to 0x20.",
+      "difficulty": "medium",
+      "id": "ascii_medium_08"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for digit 0 is…",
+      "choices": [
+        "0x20",
+        "0x30",
+        "0x31",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "digit 0 → 0x30.",
+      "difficulty": "medium",
+      "id": "ascii_medium_09"
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII digit 0 has code 0x30.",
+      "answer": true,
+      "explain": "Standard ASCII maps digit 0 to 0x30.",
+      "difficulty": "medium",
+      "id": "ascii_medium_10"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for digit 9 is…",
+      "choices": [
+        "0x29",
+        "0x39",
+        "0x38",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "digit 9 → 0x39.",
+      "difficulty": "medium",
+      "id": "ascii_medium_11"
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII digit 9 has code 0x39.",
+      "answer": true,
+      "explain": "Standard ASCII maps digit 9 to 0x39.",
+      "difficulty": "medium",
+      "id": "ascii_medium_12"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for 'A' is…",
+      "choices": [
+        "0x51",
+        "0x41",
+        "0x40",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "'A' → 0x41.",
+      "difficulty": "medium",
+      "id": "ascii_medium_13"
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII 'A' has code 0x41.",
+      "answer": true,
+      "explain": "Standard ASCII maps 'A' to 0x41.",
+      "difficulty": "medium",
+      "id": "ascii_medium_14"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for 'Z' is…",
+      "choices": [
+        "0x4A",
+        "0x5A",
+        "0x5B",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "'Z' → 0x5A.",
+      "difficulty": "medium",
+      "id": "ascii_medium_15"
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII 'Z' has code 0x5A.",
+      "answer": true,
+      "explain": "Standard ASCII maps 'Z' to 0x5A.",
+      "difficulty": "medium",
+      "id": "ascii_medium_16"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for 'a' is…",
+      "choices": [
+        "0x71",
+        "0x61",
+        "0x60",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "'a' → 0x61.",
+      "difficulty": "medium",
+      "id": "ascii_medium_17"
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII 'a' has code 0x61.",
+      "answer": true,
+      "explain": "Standard ASCII maps 'a' to 0x61.",
+      "difficulty": "medium",
+      "id": "ascii_medium_18"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for 'z' is…",
+      "choices": [
+        "0x6A",
+        "0x7A",
+        "0x7B",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "'z' → 0x7A.",
+      "difficulty": "medium",
+      "id": "ascii_medium_19"
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII 'z' has code 0x7A.",
+      "answer": true,
+      "explain": "Standard ASCII maps 'z' to 0x7A.",
+      "difficulty": "medium",
+      "id": "ascii_medium_20"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for NUL is…",
+      "choices": [
+        "0x10",
+        "0x00",
+        "0x01",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "NUL → 0x00.",
+      "difficulty": "medium",
+      "id": "ascii_medium_21"
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII NUL has code 0x00.",
+      "answer": true,
+      "explain": "Standard ASCII maps NUL to 0x00.",
+      "difficulty": "medium",
+      "id": "ascii_medium_22"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for LF is…",
+      "choices": [
+        "0x1A",
+        "0x0A",
+        "0x0B",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "LF → 0x0A.",
+      "difficulty": "medium",
+      "id": "ascii_medium_23"
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII LF has code 0x0A.",
+      "answer": true,
+      "explain": "Standard ASCII maps LF to 0x0A.",
+      "difficulty": "medium",
+      "id": "ascii_medium_24"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for CR is…",
+      "choices": [
+        "0x1D",
+        "0x0D",
+        "0x0C",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "CR → 0x0D.",
+      "difficulty": "medium",
+      "id": "ascii_medium_25"
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII CR has code 0x0D.",
+      "answer": true,
+      "explain": "Standard ASCII maps CR to 0x0D.",
+      "difficulty": "medium",
+      "id": "ascii_medium_26"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for DEL is…",
+      "choices": [
+        "0x6F",
+        "0x7F",
+        "0x7E",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "DEL → 0x7F.",
+      "difficulty": "medium",
+      "id": "ascii_medium_27"
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII DEL has code 0x7F.",
+      "answer": true,
+      "explain": "Standard ASCII maps DEL to 0x7F.",
+      "difficulty": "medium",
+      "id": "ascii_medium_28"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hex digit 0 equals which decimal value?",
+      "choices": [
+        "1",
+        "0",
+        "5",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "0₁₆ = 0₁₀.",
+      "difficulty": "medium",
+      "id": "ascii_medium_29"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Decimal 0 as one hex digit is…",
+      "choices": [
+        "1",
+        "0",
+        "5",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "0₁₀ = 0₁₆.",
+      "difficulty": "medium",
+      "id": "ascii_medium_30"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for space is…",
+      "choices": [
+        "0x30",
+        "0x20",
+        "0x21",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "space → 0x20.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ascii-hex",
-        "key": "starter-hi",
-        "label": "Starter Hi",
-        "steps": [
-          {
-            "click": "#ah-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/ascii_hard_30.png"
-      }
+      "id": "ascii_hard_05"
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII space has code 0x20.",
+      "answer": true,
+      "explain": "Standard ASCII maps space to 0x20.",
+      "difficulty": "hard",
+      "id": "ascii_hard_06"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for digit 0 is…",
+      "choices": [
+        "0x20",
+        "0x30",
+        "0x31",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "digit 0 → 0x30.",
+      "difficulty": "hard",
+      "id": "ascii_hard_07"
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII digit 0 has code 0x30.",
+      "answer": true,
+      "explain": "Standard ASCII maps digit 0 to 0x30.",
+      "difficulty": "hard",
+      "id": "ascii_hard_08"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for digit 9 is…",
+      "choices": [
+        "0x29",
+        "0x39",
+        "0x38",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "digit 9 → 0x39.",
+      "difficulty": "hard",
+      "id": "ascii_hard_09"
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII digit 9 has code 0x39.",
+      "answer": true,
+      "explain": "Standard ASCII maps digit 9 to 0x39.",
+      "difficulty": "hard",
+      "id": "ascii_hard_10"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for 'A' is…",
+      "choices": [
+        "0x51",
+        "0x41",
+        "0x40",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "'A' → 0x41.",
+      "difficulty": "hard",
+      "id": "ascii_hard_11"
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII 'A' has code 0x41.",
+      "answer": true,
+      "explain": "Standard ASCII maps 'A' to 0x41.",
+      "difficulty": "hard",
+      "id": "ascii_hard_12"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for 'Z' is…",
+      "choices": [
+        "0x4A",
+        "0x5A",
+        "0x5B",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "'Z' → 0x5A.",
+      "difficulty": "hard",
+      "id": "ascii_hard_13"
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII 'Z' has code 0x5A.",
+      "answer": true,
+      "explain": "Standard ASCII maps 'Z' to 0x5A.",
+      "difficulty": "hard",
+      "id": "ascii_hard_14"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for 'a' is…",
+      "choices": [
+        "0x71",
+        "0x61",
+        "0x60",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "'a' → 0x61.",
+      "difficulty": "hard",
+      "id": "ascii_hard_15"
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII 'a' has code 0x61.",
+      "answer": true,
+      "explain": "Standard ASCII maps 'a' to 0x61.",
+      "difficulty": "hard",
+      "id": "ascii_hard_16"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for 'z' is…",
+      "choices": [
+        "0x6A",
+        "0x7A",
+        "0x7B",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "'z' → 0x7A.",
+      "difficulty": "hard",
+      "id": "ascii_hard_17"
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII 'z' has code 0x7A.",
+      "answer": true,
+      "explain": "Standard ASCII maps 'z' to 0x7A.",
+      "difficulty": "hard",
+      "id": "ascii_hard_18"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for NUL is…",
+      "choices": [
+        "0x10",
+        "0x00",
+        "0x01",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "NUL → 0x00.",
+      "difficulty": "hard",
+      "id": "ascii_hard_19"
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII NUL has code 0x00.",
+      "answer": true,
+      "explain": "Standard ASCII maps NUL to 0x00.",
+      "difficulty": "hard",
+      "id": "ascii_hard_20"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for LF is…",
+      "choices": [
+        "0x1A",
+        "0x0A",
+        "0x0B",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "LF → 0x0A.",
+      "difficulty": "hard",
+      "id": "ascii_hard_21"
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII LF has code 0x0A.",
+      "answer": true,
+      "explain": "Standard ASCII maps LF to 0x0A.",
+      "difficulty": "hard",
+      "id": "ascii_hard_22"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for CR is…",
+      "choices": [
+        "0x1D",
+        "0x0D",
+        "0x0C",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "CR → 0x0D.",
+      "difficulty": "hard",
+      "id": "ascii_hard_23"
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII CR has code 0x0D.",
+      "answer": true,
+      "explain": "Standard ASCII maps CR to 0x0D.",
+      "difficulty": "hard",
+      "id": "ascii_hard_24"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for DEL is…",
+      "choices": [
+        "0x6F",
+        "0x7F",
+        "0x7E",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "DEL → 0x7F.",
+      "difficulty": "hard",
+      "id": "ascii_hard_25"
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII DEL has code 0x7F.",
+      "answer": true,
+      "explain": "Standard ASCII maps DEL to 0x7F.",
+      "difficulty": "hard",
+      "id": "ascii_hard_26"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hex digit 0 equals which decimal value?",
+      "choices": [
+        "1",
+        "0",
+        "5",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "0₁₆ = 0₁₀.",
+      "difficulty": "hard",
+      "id": "ascii_hard_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Decimal 0 as one hex digit is…",
+      "choices": [
+        "1",
+        "0",
+        "5",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "0₁₀ = 0₁₆.",
+      "difficulty": "hard",
+      "id": "ascii_hard_28"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hex digit 1 equals which decimal value?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "1₁₆ = 1₁₀.",
+      "difficulty": "hard",
+      "id": "ascii_hard_29"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Decimal 1 as one hex digit is…",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "1₁₀ = 1₁₆.",
+      "difficulty": "hard",
+      "id": "ascii_hard_30"
     }
   ]
 }

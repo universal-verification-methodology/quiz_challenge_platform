@@ -116,16 +116,35 @@
     });
   }
 
+  function colCount() {
+    return mode === "test" ? 11 : 10;
+  }
+
+  function syncModuleColumn() {
+    if (!tableEl) return;
+    const th = tableEl.querySelector('th[data-sort="module_title"]');
+    if (th) th.hidden = mode !== "test";
+    if (mode !== "test" && sortKey === "module_title") {
+      sortKey = "score";
+      sortDir = "desc";
+    }
+  }
+
   function renderRows(rows) {
     bodyEl.innerHTML = "";
+    syncModuleColumn();
+    const cols = colCount();
     if (!rows || !rows.length) {
       const tr = document.createElement("tr");
       tr.innerHTML =
-        '<td colspan="11" class="board-empty">No published results yet for this mode. Complete a quest and claim a certificate with consent to appear here.</td>';
+        '<td colspan="' +
+        cols +
+        '" class="board-empty">No published results yet for this mode. Complete a quest and claim a certificate with consent to appear here.</td>';
       bodyEl.appendChild(tr);
       return;
     }
     const ordered = sortedRows(rows);
+    const showModule = mode === "test";
     ordered.forEach((row) => {
       const tr = document.createElement("tr");
       if (row.rank <= 3) tr.className = "top-" + row.rank;
@@ -136,9 +155,9 @@
         "<td class=\"player\">" +
         escapeHtml(row.display_name) +
         "</td>" +
-        "<td class=\"module\">" +
-        escapeHtml(row.module_title || (mode === "test" ? "—" : "All modules")) +
-        "</td>" +
+        (showModule
+          ? "<td class=\"module\">" + escapeHtml(row.module_title || "—") + "</td>"
+          : "") +
         "<td class=\"num score\">" +
         row.score +
         "</td>" +
@@ -186,14 +205,19 @@
 
   async function loadBoard() {
     metaEl.textContent = "Loading…";
+    syncModuleColumn();
     bodyEl.innerHTML =
-      '<tr><td colspan="11" class="board-empty">Loading rankings…</td></tr>';
+      '<tr><td colspan="' +
+      colCount() +
+      '" class="board-empty">Loading rankings…</td></tr>';
     const site = await loadSite();
     const url = leaderboardUrl(site, mode);
     if (!url) {
       metaEl.textContent = "Leaderboard endpoint not configured.";
       bodyEl.innerHTML =
-        '<tr><td colspan="11" class="board-empty">Set results.endpoint in config/site.json and redeploy the worker.</td></tr>';
+        '<tr><td colspan="' +
+        colCount() +
+        '" class="board-empty">Set results.endpoint in config/site.json and redeploy the worker.</td></tr>';
       return;
     }
     try {
@@ -225,7 +249,9 @@
       cachedRows = [];
       metaEl.textContent = "Could not load leaderboard.";
       bodyEl.innerHTML =
-        '<tr><td colspan="11" class="board-empty">Failed to reach the results server. Redeploy the worker with GET /leaderboard support, then refresh.</td></tr>';
+        '<tr><td colspan="' +
+        colCount() +
+        '" class="board-empty">Failed to reach the results server. Redeploy the worker with GET /leaderboard support, then refresh.</td></tr>';
     }
   }
 

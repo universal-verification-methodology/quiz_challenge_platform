@@ -14,23 +14,7 @@
       ],
       "answer": 1,
       "explain": "The MSB is the sign bit in two’s complement.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "quiz-msb",
-        "label": "Quiz: MSB",
-        "steps": [
-          {
-            "challenge": "Quiz: MSB"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_easy_01.mp4",
-        "poster": "media/images/twos_easy_01-frame.png",
-        "figure": "media/images/twos_easy_01.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "twos_easy_02",
@@ -44,23 +28,7 @@
       ],
       "answer": 1,
       "explain": "Invert every bit, then add one.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "quiz-negate",
-        "label": "Quiz: negate",
-        "steps": [
-          {
-            "challenge": "Quiz: negate"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_easy_02.mp4",
-        "poster": "media/images/twos_easy_02-frame.png",
-        "figure": "media/images/twos_easy_02.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "twos_easy_03",
@@ -68,31 +36,7 @@
       "prompt": "Two’s-complement −1 is represented by every bit set.",
       "answer": true,
       "explain": "All ones is the canonical −1 pattern.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "all-ones",
-        "label": "Set −1",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "8"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-1"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_easy_03.mp4",
-        "poster": "media/images/twos_easy_03-frame.png",
-        "figure": "media/images/twos_easy_03.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "twos_easy_04",
@@ -106,249 +50,25 @@
       ],
       "answer": 1,
       "explain": "7-bit two’s complement ranges from −64 to +63.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "min-w8",
-        "label": "Width 8 min",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "8"
-          },
-          {
-            "click": "#tc2-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_easy_04.mp4",
-        "poster": "media/images/twos_easy_04-frame.png",
-        "figure": "media/images/twos_easy_04.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "twos_easy_05",
       "type": "multiple_choice",
-      "prompt": "In two’s complement, the MSB is best described as the…",
+      "prompt": "At width 5, the two’s-complement minimum is…",
       "choices": [
-        "Carry bit only",
-        "Sign bit",
-        "Always zero",
-        "Clock enable"
+        "-31",
+        "-16",
+        "-15",
+        "0"
       ],
       "answer": 1,
-      "explain": "The MSB is the sign bit in two’s complement.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "quiz-msb",
-        "label": "Quiz: MSB",
-        "steps": [
-          {
-            "challenge": "Quiz: MSB"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_easy_05.mp4",
-        "poster": "media/images/twos_easy_05-frame.png",
-        "figure": "media/images/twos_easy_05.png"
-      }
+      "explain": "5-bit two’s complement ranges from −16 to +15.",
+      "difficulty": "easy"
     },
     {
       "id": "twos_easy_06",
       "type": "multiple_choice",
-      "prompt": "How do you form −X from X in two’s complement?",
-      "choices": [
-        "Shift left once",
-        "Invert all bits, then add one",
-        "Clear the MSB only",
-        "XOR with zero"
-      ],
-      "answer": 1,
-      "explain": "Invert every bit, then add one.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "quiz-negate",
-        "label": "Quiz: negate",
-        "steps": [
-          {
-            "challenge": "Quiz: negate"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_easy_06.mp4",
-        "poster": "media/images/twos_easy_06-frame.png",
-        "figure": "media/images/twos_easy_06.png"
-      }
-    },
-    {
-      "id": "twos_easy_07",
-      "type": "true_false",
-      "prompt": "Two’s-complement −1 is represented by every bit set.",
-      "answer": true,
-      "explain": "All ones is the canonical −1 pattern.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "all-ones",
-        "label": "Set −1",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "8"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-1"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_easy_07.mp4",
-        "poster": "media/images/twos_easy_07-frame.png",
-        "figure": "media/images/twos_easy_07.png"
-      }
-    },
-    {
-      "id": "twos_easy_08",
-      "type": "multiple_choice",
-      "prompt": "At width 5, the two’s-complement minimum is…",
-      "choices": [
-        "-31",
-        "-16",
-        "-15",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "5-bit two’s complement ranges from −16 to +15.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "min-w8",
-        "label": "Width 8 min",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "8"
-          },
-          {
-            "click": "#tc2-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_easy_08.mp4",
-        "poster": "media/images/twos_easy_08-frame.png",
-        "figure": "media/images/twos_easy_08.png"
-      }
-    },
-    {
-      "id": "twos_easy_09",
-      "type": "multiple_choice",
-      "prompt": "In two’s complement, the MSB is best described as the…",
-      "choices": [
-        "Carry bit only",
-        "Sign bit",
-        "Always zero",
-        "Clock enable"
-      ],
-      "answer": 1,
-      "explain": "The MSB is the sign bit in two’s complement.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "quiz-msb",
-        "label": "Quiz: MSB",
-        "steps": [
-          {
-            "challenge": "Quiz: MSB"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_easy_09.mp4",
-        "poster": "media/images/twos_easy_09-frame.png",
-        "figure": "media/images/twos_easy_09.png"
-      }
-    },
-    {
-      "id": "twos_easy_10",
-      "type": "multiple_choice",
-      "prompt": "How do you form −X from X in two’s complement?",
-      "choices": [
-        "Shift left once",
-        "Invert all bits, then add one",
-        "Clear the MSB only",
-        "XOR with zero"
-      ],
-      "answer": 1,
-      "explain": "Invert every bit, then add one.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "quiz-negate",
-        "label": "Quiz: negate",
-        "steps": [
-          {
-            "challenge": "Quiz: negate"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_easy_10.mp4",
-        "poster": "media/images/twos_easy_10-frame.png",
-        "figure": "media/images/twos_easy_10.png"
-      }
-    },
-    {
-      "id": "twos_easy_11",
-      "type": "true_false",
-      "prompt": "Two’s-complement −1 is represented by every bit set.",
-      "answer": true,
-      "explain": "All ones is the canonical −1 pattern.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "all-ones",
-        "label": "Set −1",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "8"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-1"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_easy_11.mp4",
-        "poster": "media/images/twos_easy_11-frame.png",
-        "figure": "media/images/twos_easy_11.png"
-      }
-    },
-    {
-      "id": "twos_easy_12",
-      "type": "multiple_choice",
       "prompt": "At width 16, the two’s-complement minimum is…",
       "choices": [
         "-65535",
@@ -358,599 +78,7 @@
       ],
       "answer": 1,
       "explain": "16-bit two’s complement ranges from −32768 to +32767.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "min-w16",
-        "label": "Width 16 min",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "16"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-32768"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_easy_12.mp4",
-        "poster": "media/images/twos_easy_12-frame.png",
-        "figure": "media/images/twos_easy_12.png"
-      }
-    },
-    {
-      "id": "twos_easy_13",
-      "type": "multiple_choice",
-      "prompt": "In two’s complement, the MSB is best described as the…",
-      "choices": [
-        "Carry bit only",
-        "Sign bit",
-        "Always zero",
-        "Clock enable"
-      ],
-      "answer": 1,
-      "explain": "The MSB is the sign bit in two’s complement.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "quiz-msb",
-        "label": "Quiz: MSB",
-        "steps": [
-          {
-            "challenge": "Quiz: MSB"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_easy_13.mp4",
-        "poster": "media/images/twos_easy_13-frame.png",
-        "figure": "media/images/twos_easy_13.png"
-      }
-    },
-    {
-      "id": "twos_easy_14",
-      "type": "multiple_choice",
-      "prompt": "How do you form −X from X in two’s complement?",
-      "choices": [
-        "Shift left once",
-        "Invert all bits, then add one",
-        "Clear the MSB only",
-        "XOR with zero"
-      ],
-      "answer": 1,
-      "explain": "Invert every bit, then add one.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "quiz-negate",
-        "label": "Quiz: negate",
-        "steps": [
-          {
-            "challenge": "Quiz: negate"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_easy_14.mp4",
-        "poster": "media/images/twos_easy_14-frame.png",
-        "figure": "media/images/twos_easy_14.png"
-      }
-    },
-    {
-      "id": "twos_easy_15",
-      "type": "true_false",
-      "prompt": "Two’s-complement −1 is represented by every bit set.",
-      "answer": true,
-      "explain": "All ones is the canonical −1 pattern.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "all-ones",
-        "label": "Set −1",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "8"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-1"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_easy_15.mp4",
-        "poster": "media/images/twos_easy_15-frame.png",
-        "figure": "media/images/twos_easy_15.png"
-      }
-    },
-    {
-      "id": "twos_easy_16",
-      "type": "multiple_choice",
-      "prompt": "At width 7, the two’s-complement minimum is…",
-      "choices": [
-        "-127",
-        "-64",
-        "-63",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "7-bit two’s complement ranges from −64 to +63.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "min-w8",
-        "label": "Width 8 min",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "8"
-          },
-          {
-            "click": "#tc2-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_easy_16.mp4",
-        "poster": "media/images/twos_easy_16-frame.png",
-        "figure": "media/images/twos_easy_16.png"
-      }
-    },
-    {
-      "id": "twos_easy_17",
-      "type": "multiple_choice",
-      "prompt": "In two’s complement, the MSB is best described as the…",
-      "choices": [
-        "Carry bit only",
-        "Sign bit",
-        "Always zero",
-        "Clock enable"
-      ],
-      "answer": 1,
-      "explain": "The MSB is the sign bit in two’s complement.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "quiz-msb",
-        "label": "Quiz: MSB",
-        "steps": [
-          {
-            "challenge": "Quiz: MSB"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_easy_17.mp4",
-        "poster": "media/images/twos_easy_17-frame.png",
-        "figure": "media/images/twos_easy_17.png"
-      }
-    },
-    {
-      "id": "twos_easy_18",
-      "type": "multiple_choice",
-      "prompt": "How do you form −X from X in two’s complement?",
-      "choices": [
-        "Shift left once",
-        "Invert all bits, then add one",
-        "Clear the MSB only",
-        "XOR with zero"
-      ],
-      "answer": 1,
-      "explain": "Invert every bit, then add one.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "quiz-negate",
-        "label": "Quiz: negate",
-        "steps": [
-          {
-            "challenge": "Quiz: negate"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_easy_18.mp4",
-        "poster": "media/images/twos_easy_18-frame.png",
-        "figure": "media/images/twos_easy_18.png"
-      }
-    },
-    {
-      "id": "twos_easy_19",
-      "type": "true_false",
-      "prompt": "Two’s-complement −1 is represented by every bit set.",
-      "answer": true,
-      "explain": "All ones is the canonical −1 pattern.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "all-ones",
-        "label": "Set −1",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "8"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-1"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_easy_19.mp4",
-        "poster": "media/images/twos_easy_19-frame.png",
-        "figure": "media/images/twos_easy_19.png"
-      }
-    },
-    {
-      "id": "twos_easy_20",
-      "type": "multiple_choice",
-      "prompt": "At width 5, the two’s-complement minimum is…",
-      "choices": [
-        "-31",
-        "-16",
-        "-15",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "5-bit two’s complement ranges from −16 to +15.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "min-w8",
-        "label": "Width 8 min",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "8"
-          },
-          {
-            "click": "#tc2-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_easy_20.mp4",
-        "poster": "media/images/twos_easy_20-frame.png",
-        "figure": "media/images/twos_easy_20.png"
-      }
-    },
-    {
-      "id": "twos_easy_21",
-      "type": "multiple_choice",
-      "prompt": "In two’s complement, the MSB is best described as the…",
-      "choices": [
-        "Carry bit only",
-        "Sign bit",
-        "Always zero",
-        "Clock enable"
-      ],
-      "answer": 1,
-      "explain": "The MSB is the sign bit in two’s complement.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "quiz-msb",
-        "label": "Quiz: MSB",
-        "steps": [
-          {
-            "challenge": "Quiz: MSB"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_easy_21.mp4",
-        "poster": "media/images/twos_easy_21-frame.png",
-        "figure": "media/images/twos_easy_21.png"
-      }
-    },
-    {
-      "id": "twos_easy_22",
-      "type": "multiple_choice",
-      "prompt": "How do you form −X from X in two’s complement?",
-      "choices": [
-        "Shift left once",
-        "Invert all bits, then add one",
-        "Clear the MSB only",
-        "XOR with zero"
-      ],
-      "answer": 1,
-      "explain": "Invert every bit, then add one.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "quiz-negate",
-        "label": "Quiz: negate",
-        "steps": [
-          {
-            "challenge": "Quiz: negate"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_easy_22.mp4",
-        "poster": "media/images/twos_easy_22-frame.png",
-        "figure": "media/images/twos_easy_22.png"
-      }
-    },
-    {
-      "id": "twos_easy_23",
-      "type": "true_false",
-      "prompt": "Two’s-complement −1 is represented by every bit set.",
-      "answer": true,
-      "explain": "All ones is the canonical −1 pattern.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "all-ones",
-        "label": "Set −1",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "8"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-1"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_easy_23.mp4",
-        "poster": "media/images/twos_easy_23-frame.png",
-        "figure": "media/images/twos_easy_23.png"
-      }
-    },
-    {
-      "id": "twos_easy_24",
-      "type": "multiple_choice",
-      "prompt": "At width 16, the two’s-complement minimum is…",
-      "choices": [
-        "-65535",
-        "-32768",
-        "-32767",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "16-bit two’s complement ranges from −32768 to +32767.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "min-w16",
-        "label": "Width 16 min",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "16"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-32768"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_easy_24.mp4",
-        "poster": "media/images/twos_easy_24-frame.png",
-        "figure": "media/images/twos_easy_24.png"
-      }
-    },
-    {
-      "id": "twos_easy_25",
-      "type": "multiple_choice",
-      "prompt": "In two’s complement, the MSB is best described as the…",
-      "choices": [
-        "Carry bit only",
-        "Sign bit",
-        "Always zero",
-        "Clock enable"
-      ],
-      "answer": 1,
-      "explain": "The MSB is the sign bit in two’s complement.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "quiz-msb",
-        "label": "Quiz: MSB",
-        "steps": [
-          {
-            "challenge": "Quiz: MSB"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_easy_25.mp4",
-        "poster": "media/images/twos_easy_25-frame.png",
-        "figure": "media/images/twos_easy_25.png"
-      }
-    },
-    {
-      "id": "twos_easy_26",
-      "type": "multiple_choice",
-      "prompt": "How do you form −X from X in two’s complement?",
-      "choices": [
-        "Shift left once",
-        "Invert all bits, then add one",
-        "Clear the MSB only",
-        "XOR with zero"
-      ],
-      "answer": 1,
-      "explain": "Invert every bit, then add one.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "quiz-negate",
-        "label": "Quiz: negate",
-        "steps": [
-          {
-            "challenge": "Quiz: negate"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_easy_26.mp4",
-        "poster": "media/images/twos_easy_26-frame.png",
-        "figure": "media/images/twos_easy_26.png"
-      }
-    },
-    {
-      "id": "twos_easy_27",
-      "type": "true_false",
-      "prompt": "Two’s-complement −1 is represented by every bit set.",
-      "answer": true,
-      "explain": "All ones is the canonical −1 pattern.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "all-ones",
-        "label": "Set −1",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "8"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-1"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_easy_27.mp4",
-        "poster": "media/images/twos_easy_27-frame.png",
-        "figure": "media/images/twos_easy_27.png"
-      }
-    },
-    {
-      "id": "twos_easy_28",
-      "type": "multiple_choice",
-      "prompt": "At width 7, the two’s-complement minimum is…",
-      "choices": [
-        "-127",
-        "-64",
-        "-63",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "7-bit two’s complement ranges from −64 to +63.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "min-w8",
-        "label": "Width 8 min",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "8"
-          },
-          {
-            "click": "#tc2-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_easy_28.mp4",
-        "poster": "media/images/twos_easy_28-frame.png",
-        "figure": "media/images/twos_easy_28.png"
-      }
-    },
-    {
-      "id": "twos_easy_29",
-      "type": "multiple_choice",
-      "prompt": "In two’s complement, the MSB is best described as the…",
-      "choices": [
-        "Carry bit only",
-        "Sign bit",
-        "Always zero",
-        "Clock enable"
-      ],
-      "answer": 1,
-      "explain": "The MSB is the sign bit in two’s complement.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "quiz-msb",
-        "label": "Quiz: MSB",
-        "steps": [
-          {
-            "challenge": "Quiz: MSB"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_easy_29.mp4",
-        "poster": "media/images/twos_easy_29-frame.png",
-        "figure": "media/images/twos_easy_29.png"
-      }
-    },
-    {
-      "id": "twos_easy_30",
-      "type": "multiple_choice",
-      "prompt": "How do you form −X from X in two’s complement?",
-      "choices": [
-        "Shift left once",
-        "Invert all bits, then add one",
-        "Clear the MSB only",
-        "XOR with zero"
-      ],
-      "answer": 1,
-      "explain": "Invert every bit, then add one.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "quiz-negate",
-        "label": "Quiz: negate",
-        "steps": [
-          {
-            "challenge": "Quiz: negate"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_easy_30.mp4",
-        "poster": "media/images/twos_easy_30-frame.png",
-        "figure": "media/images/twos_easy_30.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "twos_medium_01",
@@ -964,23 +92,7 @@
       ],
       "answer": 1,
       "explain": "Max is 2^3 − 1 = 7.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "quiz-max",
-        "label": "Quiz: 8-bit max",
-        "steps": [
-          {
-            "challenge": "Quiz: 8-bit max"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_medium_01.mp4",
-        "poster": "media/images/twos_medium_01-frame.png",
-        "figure": "media/images/twos_medium_01.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "twos_medium_02",
@@ -994,31 +106,7 @@
       ],
       "answer": 1,
       "explain": "Sign bit alone is the asymmetric minimum (−128).",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "min-8",
-        "label": "8-bit min 0x80",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "8"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-128"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_medium_02.mp4",
-        "poster": "media/images/twos_medium_02-frame.png",
-        "figure": "media/images/twos_medium_02.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "twos_medium_03",
@@ -1032,23 +120,7 @@
       ],
       "answer": 1,
       "explain": "Invert + 1 maps +6 to −6.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "quiz-negate",
-        "label": "Quiz: negate",
-        "steps": [
-          {
-            "challenge": "Quiz: negate"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_medium_03.mp4",
-        "poster": "media/images/twos_medium_03-frame.png",
-        "figure": "media/images/twos_medium_03.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "twos_medium_04",
@@ -1056,23 +128,7 @@
       "prompt": "Eight-bit two’s complement max and min have equal absolute values.",
       "answer": false,
       "explain": "Min is −2^(w−1); max is 2^(w−1)−1 — not symmetric.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "starter-plus5",
-        "label": "Starter +5",
-        "steps": [
-          {
-            "click": "#tc2-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_medium_04.mp4",
-        "poster": "media/images/twos_medium_04-frame.png",
-        "figure": "media/images/twos_medium_04.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "twos_medium_05",
@@ -1086,64 +142,10 @@
       ],
       "answer": 1,
       "explain": "Max is 2^7 − 1 = 127.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "quiz-max",
-        "label": "Quiz: 8-bit max",
-        "steps": [
-          {
-            "challenge": "Quiz: 8-bit max"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_medium_05.mp4",
-        "poster": "media/images/twos_medium_05-frame.png",
-        "figure": "media/images/twos_medium_05.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "twos_medium_06",
-      "type": "multiple_choice",
-      "prompt": "Eight-bit 0x80 as two’s complement equals…",
-      "choices": [
-        "−1",
-        "−128",
-        "128",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "Sign bit alone is the asymmetric minimum (−128).",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "min-8",
-        "label": "8-bit min 0x80",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "8"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-128"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_medium_06.mp4",
-        "poster": "media/images/twos_medium_06-frame.png",
-        "figure": "media/images/twos_medium_06.png"
-      }
-    },
-    {
-      "id": "twos_medium_07",
       "type": "multiple_choice",
       "prompt": "Negate +5 in 8-bit two’s complement. You should get…",
       "choices": [
@@ -1154,53 +156,10 @@
       ],
       "answer": 1,
       "explain": "Invert + 1 maps +5 to −5.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "negate-plus5",
-        "label": "Negate +5",
-        "steps": [
-          {
-            "click": "#tc2-starter"
-          },
-          {
-            "click": "#btn-negate"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_medium_07.mp4",
-        "poster": "media/images/twos_medium_07-frame.png",
-        "figure": "media/images/twos_medium_07.png"
-      }
+      "difficulty": "medium"
     },
     {
-      "id": "twos_medium_08",
-      "type": "true_false",
-      "prompt": "Eight-bit two’s complement max and min have equal absolute values.",
-      "answer": false,
-      "explain": "Min is −2^(w−1); max is 2^(w−1)−1 — not symmetric.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "starter-plus5",
-        "label": "Starter +5",
-        "steps": [
-          {
-            "click": "#tc2-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_medium_08.mp4",
-        "poster": "media/images/twos_medium_08-frame.png",
-        "figure": "media/images/twos_medium_08.png"
-      }
-    },
-    {
-      "id": "twos_medium_09",
+      "id": "twos_medium_07",
       "type": "multiple_choice",
       "prompt": "At width 6, the two’s-complement maximum is…",
       "choices": [
@@ -1211,64 +170,10 @@
       ],
       "answer": 1,
       "explain": "Max is 2^5 − 1 = 31.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "quiz-max",
-        "label": "Quiz: 8-bit max",
-        "steps": [
-          {
-            "challenge": "Quiz: 8-bit max"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_medium_09.mp4",
-        "poster": "media/images/twos_medium_09-frame.png",
-        "figure": "media/images/twos_medium_09.png"
-      }
+      "difficulty": "medium"
     },
     {
-      "id": "twos_medium_10",
-      "type": "multiple_choice",
-      "prompt": "Eight-bit 0x80 as two’s complement equals…",
-      "choices": [
-        "−1",
-        "−128",
-        "128",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "Sign bit alone is the asymmetric minimum (−128).",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "min-8",
-        "label": "8-bit min 0x80",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "8"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-128"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_medium_10.mp4",
-        "poster": "media/images/twos_medium_10-frame.png",
-        "figure": "media/images/twos_medium_10.png"
-      }
-    },
-    {
-      "id": "twos_medium_11",
+      "id": "twos_medium_08",
       "type": "multiple_choice",
       "prompt": "Negate +4 in 8-bit two’s complement. You should get…",
       "choices": [
@@ -1279,118 +184,10 @@
       ],
       "answer": 1,
       "explain": "Invert + 1 maps +4 to −4.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "quiz-negate",
-        "label": "Quiz: negate",
-        "steps": [
-          {
-            "challenge": "Quiz: negate"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_medium_11.mp4",
-        "poster": "media/images/twos_medium_11-frame.png",
-        "figure": "media/images/twos_medium_11.png"
-      }
+      "difficulty": "medium"
     },
     {
-      "id": "twos_medium_12",
-      "type": "true_false",
-      "prompt": "Eight-bit two’s complement max and min have equal absolute values.",
-      "answer": false,
-      "explain": "Min is −2^(w−1); max is 2^(w−1)−1 — not symmetric.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "starter-plus5",
-        "label": "Starter +5",
-        "steps": [
-          {
-            "click": "#tc2-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_medium_12.mp4",
-        "poster": "media/images/twos_medium_12-frame.png",
-        "figure": "media/images/twos_medium_12.png"
-      }
-    },
-    {
-      "id": "twos_medium_13",
-      "type": "multiple_choice",
-      "prompt": "At width 4, the two’s-complement maximum is…",
-      "choices": [
-        "8",
-        "7",
-        "15",
-        "16"
-      ],
-      "answer": 1,
-      "explain": "Max is 2^3 − 1 = 7.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "quiz-max",
-        "label": "Quiz: 8-bit max",
-        "steps": [
-          {
-            "challenge": "Quiz: 8-bit max"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_medium_13.mp4",
-        "poster": "media/images/twos_medium_13-frame.png",
-        "figure": "media/images/twos_medium_13.png"
-      }
-    },
-    {
-      "id": "twos_medium_14",
-      "type": "multiple_choice",
-      "prompt": "Eight-bit 0x80 as two’s complement equals…",
-      "choices": [
-        "−1",
-        "−128",
-        "128",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "Sign bit alone is the asymmetric minimum (−128).",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "min-8",
-        "label": "8-bit min 0x80",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "8"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-128"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_medium_14.mp4",
-        "poster": "media/images/twos_medium_14-frame.png",
-        "figure": "media/images/twos_medium_14.png"
-      }
-    },
-    {
-      "id": "twos_medium_15",
+      "id": "twos_medium_09",
       "type": "multiple_choice",
       "prompt": "Negate +3 in 8-bit two’s complement. You should get…",
       "choices": [
@@ -1401,118 +198,10 @@
       ],
       "answer": 1,
       "explain": "Invert + 1 maps +3 to −3.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "quiz-negate",
-        "label": "Quiz: negate",
-        "steps": [
-          {
-            "challenge": "Quiz: negate"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_medium_15.mp4",
-        "poster": "media/images/twos_medium_15-frame.png",
-        "figure": "media/images/twos_medium_15.png"
-      }
+      "difficulty": "medium"
     },
     {
-      "id": "twos_medium_16",
-      "type": "true_false",
-      "prompt": "Eight-bit two’s complement max and min have equal absolute values.",
-      "answer": false,
-      "explain": "Min is −2^(w−1); max is 2^(w−1)−1 — not symmetric.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "starter-plus5",
-        "label": "Starter +5",
-        "steps": [
-          {
-            "click": "#tc2-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_medium_16.mp4",
-        "poster": "media/images/twos_medium_16-frame.png",
-        "figure": "media/images/twos_medium_16.png"
-      }
-    },
-    {
-      "id": "twos_medium_17",
-      "type": "multiple_choice",
-      "prompt": "At width 8, the two’s-complement maximum is…",
-      "choices": [
-        "128",
-        "127",
-        "255",
-        "256"
-      ],
-      "answer": 1,
-      "explain": "Max is 2^7 − 1 = 127.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "quiz-max",
-        "label": "Quiz: 8-bit max",
-        "steps": [
-          {
-            "challenge": "Quiz: 8-bit max"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_medium_17.mp4",
-        "poster": "media/images/twos_medium_17-frame.png",
-        "figure": "media/images/twos_medium_17.png"
-      }
-    },
-    {
-      "id": "twos_medium_18",
-      "type": "multiple_choice",
-      "prompt": "Eight-bit 0x80 as two’s complement equals…",
-      "choices": [
-        "−1",
-        "−128",
-        "128",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "Sign bit alone is the asymmetric minimum (−128).",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "min-8",
-        "label": "8-bit min 0x80",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "8"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-128"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_medium_18.mp4",
-        "poster": "media/images/twos_medium_18-frame.png",
-        "figure": "media/images/twos_medium_18.png"
-      }
-    },
-    {
-      "id": "twos_medium_19",
+      "id": "twos_medium_10",
       "type": "multiple_choice",
       "prompt": "Negate +7 in 8-bit two’s complement. You should get…",
       "choices": [
@@ -1523,362 +212,7 @@
       ],
       "answer": 1,
       "explain": "Invert + 1 maps +7 to −7.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "quiz-negate",
-        "label": "Quiz: negate",
-        "steps": [
-          {
-            "challenge": "Quiz: negate"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_medium_19.mp4",
-        "poster": "media/images/twos_medium_19-frame.png",
-        "figure": "media/images/twos_medium_19.png"
-      }
-    },
-    {
-      "id": "twos_medium_20",
-      "type": "true_false",
-      "prompt": "Eight-bit two’s complement max and min have equal absolute values.",
-      "answer": false,
-      "explain": "Min is −2^(w−1); max is 2^(w−1)−1 — not symmetric.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "starter-plus5",
-        "label": "Starter +5",
-        "steps": [
-          {
-            "click": "#tc2-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_medium_20.mp4",
-        "poster": "media/images/twos_medium_20-frame.png",
-        "figure": "media/images/twos_medium_20.png"
-      }
-    },
-    {
-      "id": "twos_medium_21",
-      "type": "multiple_choice",
-      "prompt": "At width 6, the two’s-complement maximum is…",
-      "choices": [
-        "32",
-        "31",
-        "63",
-        "64"
-      ],
-      "answer": 1,
-      "explain": "Max is 2^5 − 1 = 31.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "quiz-max",
-        "label": "Quiz: 8-bit max",
-        "steps": [
-          {
-            "challenge": "Quiz: 8-bit max"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_medium_21.mp4",
-        "poster": "media/images/twos_medium_21-frame.png",
-        "figure": "media/images/twos_medium_21.png"
-      }
-    },
-    {
-      "id": "twos_medium_22",
-      "type": "multiple_choice",
-      "prompt": "Eight-bit 0x80 as two’s complement equals…",
-      "choices": [
-        "−1",
-        "−128",
-        "128",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "Sign bit alone is the asymmetric minimum (−128).",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "min-8",
-        "label": "8-bit min 0x80",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "8"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-128"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_medium_22.mp4",
-        "poster": "media/images/twos_medium_22-frame.png",
-        "figure": "media/images/twos_medium_22.png"
-      }
-    },
-    {
-      "id": "twos_medium_23",
-      "type": "multiple_choice",
-      "prompt": "Negate +6 in 8-bit two’s complement. You should get…",
-      "choices": [
-        "+6",
-        "−6",
-        "−128",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "Invert + 1 maps +6 to −6.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "quiz-negate",
-        "label": "Quiz: negate",
-        "steps": [
-          {
-            "challenge": "Quiz: negate"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_medium_23.mp4",
-        "poster": "media/images/twos_medium_23-frame.png",
-        "figure": "media/images/twos_medium_23.png"
-      }
-    },
-    {
-      "id": "twos_medium_24",
-      "type": "true_false",
-      "prompt": "Eight-bit two’s complement max and min have equal absolute values.",
-      "answer": false,
-      "explain": "Min is −2^(w−1); max is 2^(w−1)−1 — not symmetric.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "starter-plus5",
-        "label": "Starter +5",
-        "steps": [
-          {
-            "click": "#tc2-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_medium_24.mp4",
-        "poster": "media/images/twos_medium_24-frame.png",
-        "figure": "media/images/twos_medium_24.png"
-      }
-    },
-    {
-      "id": "twos_medium_25",
-      "type": "multiple_choice",
-      "prompt": "At width 4, the two’s-complement maximum is…",
-      "choices": [
-        "8",
-        "7",
-        "15",
-        "16"
-      ],
-      "answer": 1,
-      "explain": "Max is 2^3 − 1 = 7.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "quiz-max",
-        "label": "Quiz: 8-bit max",
-        "steps": [
-          {
-            "challenge": "Quiz: 8-bit max"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_medium_25.mp4",
-        "poster": "media/images/twos_medium_25-frame.png",
-        "figure": "media/images/twos_medium_25.png"
-      }
-    },
-    {
-      "id": "twos_medium_26",
-      "type": "multiple_choice",
-      "prompt": "Eight-bit 0x80 as two’s complement equals…",
-      "choices": [
-        "−1",
-        "−128",
-        "128",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "Sign bit alone is the asymmetric minimum (−128).",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "min-8",
-        "label": "8-bit min 0x80",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "8"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-128"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_medium_26.mp4",
-        "poster": "media/images/twos_medium_26-frame.png",
-        "figure": "media/images/twos_medium_26.png"
-      }
-    },
-    {
-      "id": "twos_medium_27",
-      "type": "multiple_choice",
-      "prompt": "Negate +5 in 8-bit two’s complement. You should get…",
-      "choices": [
-        "+5",
-        "−5",
-        "−128",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "Invert + 1 maps +5 to −5.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "negate-plus5",
-        "label": "Negate +5",
-        "steps": [
-          {
-            "click": "#tc2-starter"
-          },
-          {
-            "click": "#btn-negate"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_medium_27.mp4",
-        "poster": "media/images/twos_medium_27-frame.png",
-        "figure": "media/images/twos_medium_27.png"
-      }
-    },
-    {
-      "id": "twos_medium_28",
-      "type": "true_false",
-      "prompt": "Eight-bit two’s complement max and min have equal absolute values.",
-      "answer": false,
-      "explain": "Min is −2^(w−1); max is 2^(w−1)−1 — not symmetric.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "starter-plus5",
-        "label": "Starter +5",
-        "steps": [
-          {
-            "click": "#tc2-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_medium_28.mp4",
-        "poster": "media/images/twos_medium_28-frame.png",
-        "figure": "media/images/twos_medium_28.png"
-      }
-    },
-    {
-      "id": "twos_medium_29",
-      "type": "multiple_choice",
-      "prompt": "At width 8, the two’s-complement maximum is…",
-      "choices": [
-        "128",
-        "127",
-        "255",
-        "256"
-      ],
-      "answer": 1,
-      "explain": "Max is 2^7 − 1 = 127.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "quiz-max",
-        "label": "Quiz: 8-bit max",
-        "steps": [
-          {
-            "challenge": "Quiz: 8-bit max"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_medium_29.mp4",
-        "poster": "media/images/twos_medium_29-frame.png",
-        "figure": "media/images/twos_medium_29.png"
-      }
-    },
-    {
-      "id": "twos_medium_30",
-      "type": "multiple_choice",
-      "prompt": "Eight-bit 0x80 as two’s complement equals…",
-      "choices": [
-        "−1",
-        "−128",
-        "128",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "Sign bit alone is the asymmetric minimum (−128).",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "min-8",
-        "label": "8-bit min 0x80",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "8"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-128"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_medium_30.mp4",
-        "poster": "media/images/twos_medium_30-frame.png",
-        "figure": "media/images/twos_medium_30.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "twos_hard_01",
@@ -1892,23 +226,7 @@
       ],
       "answer": 1,
       "explain": "Ordinary modular add works; interpretation is signed.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "starter-plus5",
-        "label": "Starter +5",
-        "steps": [
-          {
-            "click": "#tc2-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_hard_01.mp4",
-        "poster": "media/images/twos_hard_01-frame.png",
-        "figure": "media/images/twos_hard_01.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "twos_hard_02",
@@ -1922,31 +240,7 @@
       ],
       "answer": 1,
       "explain": "Negative values fill 1s when sign-extending.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "widen-ones",
-        "label": "Width 4 −1",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "4"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-1"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_hard_02.mp4",
-        "poster": "media/images/twos_hard_02-frame.png",
-        "figure": "media/images/twos_hard_02.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "twos_hard_03",
@@ -1960,31 +254,7 @@
       ],
       "answer": 1,
       "explain": "Type/signedness changes interpretation of the same pattern.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "all-ones",
-        "label": "Set −1",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "8"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-1"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_hard_03.mp4",
-        "poster": "media/images/twos_hard_03-frame.png",
-        "figure": "media/images/twos_hard_03.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "twos_hard_04",
@@ -1992,871 +262,987 @@
       "prompt": "Every two’s-complement value has a unique positive negation at the same width.",
       "answer": false,
       "explain": "The asymmetric min has no positive twin; negate wraps.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "starter-plus5",
-        "label": "Starter +5",
-        "steps": [
-          {
-            "click": "#tc2-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_hard_04.mp4",
-        "poster": "media/images/twos_hard_04-frame.png",
-        "figure": "media/images/twos_hard_04.png"
-      }
+      "difficulty": "hard"
     },
     {
-      "id": "twos_hard_05",
       "type": "multiple_choice",
-      "prompt": "Why can ordinary binary adders still add two’s-complement numbers?",
+      "prompt": "Signed two's-complement range at width 2 is…",
       "choices": [
-        "It needs a separate signed adder always",
-        "Same adder hardware works; wrap interprets signed results",
-        "MSB must be stripped before every add",
-        "Only subtraction works"
+        "-2 … 1",
+        "0 … 3",
+        "-1 … 1",
+        "-2 … 3"
+      ],
+      "answer": 0,
+      "explain": "[-2, 1] for 2-bit two's complement.",
+      "difficulty": "easy",
+      "id": "twos_easy_07"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Most-negative 2-bit two's-complement value is…",
+      "choices": [
+        "-1",
+        "-2",
+        "-1",
+        "0"
       ],
       "answer": 1,
-      "explain": "Ordinary modular add works; interpretation is signed.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "starter-plus5",
-        "label": "Starter +5",
-        "steps": [
-          {
-            "click": "#tc2-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_hard_05.mp4",
-        "poster": "media/images/twos_hard_05-frame.png",
-        "figure": "media/images/twos_hard_05.png"
-      }
+      "explain": "Sign bit alone → -2.",
+      "difficulty": "easy",
+      "id": "twos_easy_08"
     },
     {
-      "id": "twos_hard_06",
       "type": "multiple_choice",
-      "prompt": "Widen signed 4-bit all-ones to 8 bits. Hex is…",
+      "prompt": "Signed two's-complement range at width 3 is…",
       "choices": [
-        "0x0F",
-        "0xFF",
-        "0xF0",
-        "0x00"
+        "-4 … 3",
+        "0 … 7",
+        "-3 … 3",
+        "-4 … 7"
+      ],
+      "answer": 0,
+      "explain": "[-4, 3] for 3-bit two's complement.",
+      "difficulty": "easy",
+      "id": "twos_easy_09"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Most-negative 3-bit two's-complement value is…",
+      "choices": [
+        "-3",
+        "-4",
+        "-3",
+        "0"
       ],
       "answer": 1,
-      "explain": "Negative values fill 1s when sign-extending.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "widen-ones",
-        "label": "Width 4 −1",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "4"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-1"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_hard_06.mp4",
-        "poster": "media/images/twos_hard_06-frame.png",
-        "figure": "media/images/twos_hard_06.png"
-      }
+      "explain": "Sign bit alone → -4.",
+      "difficulty": "easy",
+      "id": "twos_easy_10"
     },
     {
-      "id": "twos_hard_07",
       "type": "multiple_choice",
-      "prompt": "Same bits, different type: signed −1 vs unsigned is…",
+      "prompt": "Signed two's-complement range at width 4 is…",
       "choices": [
-        "Bits change automatically",
-        "Changes the numeric meaning (e.g. −1 → 255)",
-        "Never matters in RTL",
-        "Only affects clocks"
+        "-8 … 7",
+        "0 … 15",
+        "-7 … 7",
+        "-8 … 15"
+      ],
+      "answer": 0,
+      "explain": "[-8, 7] for 4-bit two's complement.",
+      "difficulty": "easy",
+      "id": "twos_easy_11"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Most-negative 4-bit two's-complement value is…",
+      "choices": [
+        "-7",
+        "-8",
+        "-7",
+        "0"
       ],
       "answer": 1,
-      "explain": "Type/signedness changes interpretation of the same pattern.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "all-ones",
-        "label": "Set −1",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "8"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-1"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_hard_07.mp4",
-        "poster": "media/images/twos_hard_07-frame.png",
-        "figure": "media/images/twos_hard_07.png"
-      }
+      "explain": "Sign bit alone → -8.",
+      "difficulty": "easy",
+      "id": "twos_easy_12"
     },
     {
-      "id": "twos_hard_08",
-      "type": "true_false",
-      "prompt": "Every two’s-complement value has a unique positive negation at the same width.",
-      "answer": false,
-      "explain": "The asymmetric min has no positive twin; negate wraps.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "starter-plus5",
-        "label": "Starter +5",
-        "steps": [
-          {
-            "click": "#tc2-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_hard_08.mp4",
-        "poster": "media/images/twos_hard_08-frame.png",
-        "figure": "media/images/twos_hard_08.png"
-      }
-    },
-    {
-      "id": "twos_hard_09",
       "type": "multiple_choice",
-      "prompt": "Why can ordinary binary adders still add two’s-complement numbers?",
+      "prompt": "Signed two's-complement range at width 5 is…",
       "choices": [
-        "It needs a separate signed adder always",
-        "Same adder hardware works; wrap interprets signed results",
-        "MSB must be stripped before every add",
-        "Only subtraction works"
+        "-16 … 15",
+        "0 … 31",
+        "-15 … 15",
+        "-16 … 31"
+      ],
+      "answer": 0,
+      "explain": "[-16, 15] for 5-bit two's complement.",
+      "difficulty": "easy",
+      "id": "twos_easy_13"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Most-negative 5-bit two's-complement value is…",
+      "choices": [
+        "-15",
+        "-16",
+        "-15",
+        "0"
       ],
       "answer": 1,
-      "explain": "Ordinary modular add works; interpretation is signed.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "starter-plus5",
-        "label": "Starter +5",
-        "steps": [
-          {
-            "click": "#tc2-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_hard_09.mp4",
-        "poster": "media/images/twos_hard_09-frame.png",
-        "figure": "media/images/twos_hard_09.png"
-      }
+      "explain": "Sign bit alone → -16.",
+      "difficulty": "easy",
+      "id": "twos_easy_14"
     },
     {
-      "id": "twos_hard_10",
       "type": "multiple_choice",
-      "prompt": "Widen signed 4-bit all-ones to 8 bits. Hex is…",
+      "prompt": "Signed two's-complement range at width 6 is…",
       "choices": [
-        "0x0F",
-        "0xFF",
-        "0xF0",
-        "0x00"
+        "-32 … 31",
+        "0 … 63",
+        "-31 … 31",
+        "-32 … 63"
+      ],
+      "answer": 0,
+      "explain": "[-32, 31] for 6-bit two's complement.",
+      "difficulty": "easy",
+      "id": "twos_easy_15"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Most-negative 6-bit two's-complement value is…",
+      "choices": [
+        "-31",
+        "-32",
+        "-31",
+        "0"
       ],
       "answer": 1,
-      "explain": "Negative values fill 1s when sign-extending.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "widen-ones",
-        "label": "Width 4 −1",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "4"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-1"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_hard_10.mp4",
-        "poster": "media/images/twos_hard_10-frame.png",
-        "figure": "media/images/twos_hard_10.png"
-      }
+      "explain": "Sign bit alone → -32.",
+      "difficulty": "easy",
+      "id": "twos_easy_16"
     },
     {
-      "id": "twos_hard_11",
       "type": "multiple_choice",
-      "prompt": "Same bits, different type: signed −1 vs unsigned is…",
+      "prompt": "Signed two's-complement range at width 7 is…",
       "choices": [
-        "Bits change automatically",
-        "Changes the numeric meaning (e.g. −1 → 255)",
-        "Never matters in RTL",
-        "Only affects clocks"
+        "-64 … 63",
+        "0 … 127",
+        "-63 … 63",
+        "-64 … 127"
+      ],
+      "answer": 0,
+      "explain": "[-64, 63] for 7-bit two's complement.",
+      "difficulty": "easy",
+      "id": "twos_easy_17"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Most-negative 7-bit two's-complement value is…",
+      "choices": [
+        "-63",
+        "-64",
+        "-63",
+        "0"
       ],
       "answer": 1,
-      "explain": "Type/signedness changes interpretation of the same pattern.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "all-ones",
-        "label": "Set −1",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "8"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-1"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_hard_11.mp4",
-        "poster": "media/images/twos_hard_11-frame.png",
-        "figure": "media/images/twos_hard_11.png"
-      }
+      "explain": "Sign bit alone → -64.",
+      "difficulty": "easy",
+      "id": "twos_easy_18"
     },
     {
-      "id": "twos_hard_12",
-      "type": "true_false",
-      "prompt": "Every two’s-complement value has a unique positive negation at the same width.",
-      "answer": false,
-      "explain": "The asymmetric min has no positive twin; negate wraps.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "starter-plus5",
-        "label": "Starter +5",
-        "steps": [
-          {
-            "click": "#tc2-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_hard_12.mp4",
-        "poster": "media/images/twos_hard_12-frame.png",
-        "figure": "media/images/twos_hard_12.png"
-      }
-    },
-    {
-      "id": "twos_hard_13",
       "type": "multiple_choice",
-      "prompt": "Why can ordinary binary adders still add two’s-complement numbers?",
+      "prompt": "Signed two's-complement range at width 8 is…",
       "choices": [
-        "It needs a separate signed adder always",
-        "Same adder hardware works; wrap interprets signed results",
-        "MSB must be stripped before every add",
-        "Only subtraction works"
+        "-128 … 127",
+        "0 … 255",
+        "-127 … 127",
+        "-128 … 255"
+      ],
+      "answer": 0,
+      "explain": "[-128, 127] for 8-bit two's complement.",
+      "difficulty": "easy",
+      "id": "twos_easy_19"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Most-negative 8-bit two's-complement value is…",
+      "choices": [
+        "-127",
+        "-128",
+        "-127",
+        "0"
       ],
       "answer": 1,
-      "explain": "Ordinary modular add works; interpretation is signed.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "starter-plus5",
-        "label": "Starter +5",
-        "steps": [
-          {
-            "click": "#tc2-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_hard_13.mp4",
-        "poster": "media/images/twos_hard_13-frame.png",
-        "figure": "media/images/twos_hard_13.png"
-      }
+      "explain": "Sign bit alone → -128.",
+      "difficulty": "easy",
+      "id": "twos_easy_20"
     },
     {
-      "id": "twos_hard_14",
       "type": "multiple_choice",
-      "prompt": "Widen signed 4-bit all-ones to 8 bits. Hex is…",
+      "prompt": "Signed two's-complement range at width 9 is…",
       "choices": [
-        "0x0F",
-        "0xFF",
-        "0xF0",
-        "0x00"
+        "-256 … 255",
+        "0 … 511",
+        "-255 … 255",
+        "-256 … 511"
+      ],
+      "answer": 0,
+      "explain": "[-256, 255] for 9-bit two's complement.",
+      "difficulty": "easy",
+      "id": "twos_easy_21"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Most-negative 9-bit two's-complement value is…",
+      "choices": [
+        "-255",
+        "-256",
+        "-255",
+        "0"
       ],
       "answer": 1,
-      "explain": "Negative values fill 1s when sign-extending.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "widen-ones",
-        "label": "Width 4 −1",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "4"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-1"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_hard_14.mp4",
-        "poster": "media/images/twos_hard_14-frame.png",
-        "figure": "media/images/twos_hard_14.png"
-      }
+      "explain": "Sign bit alone → -256.",
+      "difficulty": "easy",
+      "id": "twos_easy_22"
     },
     {
-      "id": "twos_hard_15",
       "type": "multiple_choice",
-      "prompt": "Same bits, different type: signed −1 vs unsigned is…",
+      "prompt": "Signed two's-complement range at width 10 is…",
       "choices": [
-        "Bits change automatically",
-        "Changes the numeric meaning (e.g. −1 → 255)",
-        "Never matters in RTL",
-        "Only affects clocks"
+        "-512 … 511",
+        "0 … 1023",
+        "-511 … 511",
+        "-512 … 1023"
+      ],
+      "answer": 0,
+      "explain": "[-512, 511] for 10-bit two's complement.",
+      "difficulty": "easy",
+      "id": "twos_easy_23"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Most-negative 10-bit two's-complement value is…",
+      "choices": [
+        "-511",
+        "-512",
+        "-511",
+        "0"
       ],
       "answer": 1,
-      "explain": "Type/signedness changes interpretation of the same pattern.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "all-ones",
-        "label": "Set −1",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "8"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-1"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_hard_15.mp4",
-        "poster": "media/images/twos_hard_15-frame.png",
-        "figure": "media/images/twos_hard_15.png"
-      }
+      "explain": "Sign bit alone → -512.",
+      "difficulty": "easy",
+      "id": "twos_easy_24"
     },
     {
-      "id": "twos_hard_16",
-      "type": "true_false",
-      "prompt": "Every two’s-complement value has a unique positive negation at the same width.",
-      "answer": false,
-      "explain": "The asymmetric min has no positive twin; negate wraps.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "starter-plus5",
-        "label": "Starter +5",
-        "steps": [
-          {
-            "click": "#tc2-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_hard_16.mp4",
-        "poster": "media/images/twos_hard_16-frame.png",
-        "figure": "media/images/twos_hard_16.png"
-      }
-    },
-    {
-      "id": "twos_hard_17",
       "type": "multiple_choice",
-      "prompt": "Why can ordinary binary adders still add two’s-complement numbers?",
+      "prompt": "Signed two's-complement range at width 11 is…",
       "choices": [
-        "It needs a separate signed adder always",
-        "Same adder hardware works; wrap interprets signed results",
-        "MSB must be stripped before every add",
-        "Only subtraction works"
+        "-1024 … 1023",
+        "0 … 2047",
+        "-1023 … 1023",
+        "-1024 … 2047"
+      ],
+      "answer": 0,
+      "explain": "[-1024, 1023] for 11-bit two's complement.",
+      "difficulty": "easy",
+      "id": "twos_easy_25"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Most-negative 11-bit two's-complement value is…",
+      "choices": [
+        "-1023",
+        "-1024",
+        "-1023",
+        "0"
       ],
       "answer": 1,
-      "explain": "Ordinary modular add works; interpretation is signed.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "starter-plus5",
-        "label": "Starter +5",
-        "steps": [
-          {
-            "click": "#tc2-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_hard_17.mp4",
-        "poster": "media/images/twos_hard_17-frame.png",
-        "figure": "media/images/twos_hard_17.png"
-      }
+      "explain": "Sign bit alone → -1024.",
+      "difficulty": "easy",
+      "id": "twos_easy_26"
     },
     {
-      "id": "twos_hard_18",
       "type": "multiple_choice",
-      "prompt": "Widen signed 4-bit all-ones to 8 bits. Hex is…",
+      "prompt": "How many distinct values can 1 bits represent?",
       "choices": [
-        "0x0F",
-        "0xFF",
-        "0xF0",
-        "0x00"
+        "1",
+        "2",
+        "1",
+        "10"
       ],
       "answer": 1,
-      "explain": "Negative values fill 1s when sign-extending.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "widen-ones",
-        "label": "Width 4 −1",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "4"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-1"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_hard_18.mp4",
-        "poster": "media/images/twos_hard_18-frame.png",
-        "figure": "media/images/twos_hard_18.png"
-      }
+      "explain": "1 bits encode 2^1 = 2 patterns.",
+      "difficulty": "easy",
+      "id": "twos_easy_27"
     },
     {
-      "id": "twos_hard_19",
       "type": "multiple_choice",
-      "prompt": "Same bits, different type: signed −1 vs unsigned is…",
+      "prompt": "How many distinct values can 2 bits represent?",
       "choices": [
-        "Bits change automatically",
-        "Changes the numeric meaning (e.g. −1 → 255)",
-        "Never matters in RTL",
-        "Only affects clocks"
+        "2",
+        "4",
+        "2",
+        "20"
       ],
       "answer": 1,
-      "explain": "Type/signedness changes interpretation of the same pattern.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "all-ones",
-        "label": "Set −1",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "8"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-1"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_hard_19.mp4",
-        "poster": "media/images/twos_hard_19-frame.png",
-        "figure": "media/images/twos_hard_19.png"
-      }
+      "explain": "2 bits encode 2^2 = 4 patterns.",
+      "difficulty": "easy",
+      "id": "twos_easy_28"
     },
     {
-      "id": "twos_hard_20",
-      "type": "true_false",
-      "prompt": "Every two’s-complement value has a unique positive negation at the same width.",
-      "answer": false,
-      "explain": "The asymmetric min has no positive twin; negate wraps.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "starter-plus5",
-        "label": "Starter +5",
-        "steps": [
-          {
-            "click": "#tc2-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_hard_20.mp4",
-        "poster": "media/images/twos_hard_20-frame.png",
-        "figure": "media/images/twos_hard_20.png"
-      }
-    },
-    {
-      "id": "twos_hard_21",
       "type": "multiple_choice",
-      "prompt": "Why can ordinary binary adders still add two’s-complement numbers?",
+      "prompt": "How many distinct values can 3 bits represent?",
       "choices": [
-        "It needs a separate signed adder always",
-        "Same adder hardware works; wrap interprets signed results",
-        "MSB must be stripped before every add",
-        "Only subtraction works"
+        "4",
+        "8",
+        "3",
+        "30"
       ],
       "answer": 1,
-      "explain": "Ordinary modular add works; interpretation is signed.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "starter-plus5",
-        "label": "Starter +5",
-        "steps": [
-          {
-            "click": "#tc2-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_hard_21.mp4",
-        "poster": "media/images/twos_hard_21-frame.png",
-        "figure": "media/images/twos_hard_21.png"
-      }
+      "explain": "3 bits encode 2^3 = 8 patterns.",
+      "difficulty": "easy",
+      "id": "twos_easy_29"
     },
     {
-      "id": "twos_hard_22",
       "type": "multiple_choice",
-      "prompt": "Widen signed 4-bit all-ones to 8 bits. Hex is…",
+      "prompt": "How many distinct values can 4 bits represent?",
       "choices": [
-        "0x0F",
-        "0xFF",
-        "0xF0",
-        "0x00"
+        "8",
+        "16",
+        "4",
+        "40"
       ],
       "answer": 1,
-      "explain": "Negative values fill 1s when sign-extending.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "widen-ones",
-        "label": "Width 4 −1",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "4"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-1"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_hard_22.mp4",
-        "poster": "media/images/twos_hard_22-frame.png",
-        "figure": "media/images/twos_hard_22.png"
-      }
+      "explain": "4 bits encode 2^4 = 16 patterns.",
+      "difficulty": "easy",
+      "id": "twos_easy_30"
     },
     {
-      "id": "twos_hard_23",
       "type": "multiple_choice",
-      "prompt": "Same bits, different type: signed −1 vs unsigned is…",
+      "prompt": "Signed two's-complement range at width 2 is…",
       "choices": [
-        "Bits change automatically",
-        "Changes the numeric meaning (e.g. −1 → 255)",
-        "Never matters in RTL",
-        "Only affects clocks"
+        "-2 … 1",
+        "0 … 3",
+        "-1 … 1",
+        "-2 … 3"
+      ],
+      "answer": 0,
+      "explain": "[-2, 1] for 2-bit two's complement.",
+      "difficulty": "medium",
+      "id": "twos_medium_11"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Most-negative 2-bit two's-complement value is…",
+      "choices": [
+        "-1",
+        "-2",
+        "-1",
+        "0"
       ],
       "answer": 1,
-      "explain": "Type/signedness changes interpretation of the same pattern.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "all-ones",
-        "label": "Set −1",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "8"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-1"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_hard_23.mp4",
-        "poster": "media/images/twos_hard_23-frame.png",
-        "figure": "media/images/twos_hard_23.png"
-      }
+      "explain": "Sign bit alone → -2.",
+      "difficulty": "medium",
+      "id": "twos_medium_12"
     },
     {
-      "id": "twos_hard_24",
-      "type": "true_false",
-      "prompt": "Every two’s-complement value has a unique positive negation at the same width.",
-      "answer": false,
-      "explain": "The asymmetric min has no positive twin; negate wraps.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "starter-plus5",
-        "label": "Starter +5",
-        "steps": [
-          {
-            "click": "#tc2-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_hard_24.mp4",
-        "poster": "media/images/twos_hard_24-frame.png",
-        "figure": "media/images/twos_hard_24.png"
-      }
-    },
-    {
-      "id": "twos_hard_25",
       "type": "multiple_choice",
-      "prompt": "Why can ordinary binary adders still add two’s-complement numbers?",
+      "prompt": "Signed two's-complement range at width 3 is…",
       "choices": [
-        "It needs a separate signed adder always",
-        "Same adder hardware works; wrap interprets signed results",
-        "MSB must be stripped before every add",
-        "Only subtraction works"
+        "-4 … 3",
+        "0 … 7",
+        "-3 … 3",
+        "-4 … 7"
+      ],
+      "answer": 0,
+      "explain": "[-4, 3] for 3-bit two's complement.",
+      "difficulty": "medium",
+      "id": "twos_medium_13"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Most-negative 3-bit two's-complement value is…",
+      "choices": [
+        "-3",
+        "-4",
+        "-3",
+        "0"
       ],
       "answer": 1,
-      "explain": "Ordinary modular add works; interpretation is signed.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "starter-plus5",
-        "label": "Starter +5",
-        "steps": [
-          {
-            "click": "#tc2-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_hard_25.mp4",
-        "poster": "media/images/twos_hard_25-frame.png",
-        "figure": "media/images/twos_hard_25.png"
-      }
+      "explain": "Sign bit alone → -4.",
+      "difficulty": "medium",
+      "id": "twos_medium_14"
     },
     {
-      "id": "twos_hard_26",
       "type": "multiple_choice",
-      "prompt": "Widen signed 4-bit all-ones to 8 bits. Hex is…",
+      "prompt": "Signed two's-complement range at width 4 is…",
       "choices": [
-        "0x0F",
-        "0xFF",
-        "0xF0",
-        "0x00"
+        "-8 … 7",
+        "0 … 15",
+        "-7 … 7",
+        "-8 … 15"
+      ],
+      "answer": 0,
+      "explain": "[-8, 7] for 4-bit two's complement.",
+      "difficulty": "medium",
+      "id": "twos_medium_15"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Most-negative 4-bit two's-complement value is…",
+      "choices": [
+        "-7",
+        "-8",
+        "-7",
+        "0"
       ],
       "answer": 1,
-      "explain": "Negative values fill 1s when sign-extending.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "widen-ones",
-        "label": "Width 4 −1",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "4"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-1"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_hard_26.mp4",
-        "poster": "media/images/twos_hard_26-frame.png",
-        "figure": "media/images/twos_hard_26.png"
-      }
+      "explain": "Sign bit alone → -8.",
+      "difficulty": "medium",
+      "id": "twos_medium_16"
     },
     {
-      "id": "twos_hard_27",
       "type": "multiple_choice",
-      "prompt": "Same bits, different type: signed −1 vs unsigned is…",
+      "prompt": "Signed two's-complement range at width 5 is…",
       "choices": [
-        "Bits change automatically",
-        "Changes the numeric meaning (e.g. −1 → 255)",
-        "Never matters in RTL",
-        "Only affects clocks"
+        "-16 … 15",
+        "0 … 31",
+        "-15 … 15",
+        "-16 … 31"
+      ],
+      "answer": 0,
+      "explain": "[-16, 15] for 5-bit two's complement.",
+      "difficulty": "medium",
+      "id": "twos_medium_17"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Most-negative 5-bit two's-complement value is…",
+      "choices": [
+        "-15",
+        "-16",
+        "-15",
+        "0"
       ],
       "answer": 1,
-      "explain": "Type/signedness changes interpretation of the same pattern.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "all-ones",
-        "label": "Set −1",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "8"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-1"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_hard_27.mp4",
-        "poster": "media/images/twos_hard_27-frame.png",
-        "figure": "media/images/twos_hard_27.png"
-      }
+      "explain": "Sign bit alone → -16.",
+      "difficulty": "medium",
+      "id": "twos_medium_18"
     },
     {
-      "id": "twos_hard_28",
-      "type": "true_false",
-      "prompt": "Every two’s-complement value has a unique positive negation at the same width.",
-      "answer": false,
-      "explain": "The asymmetric min has no positive twin; negate wraps.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "starter-plus5",
-        "label": "Starter +5",
-        "steps": [
-          {
-            "click": "#tc2-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_hard_28.mp4",
-        "poster": "media/images/twos_hard_28-frame.png",
-        "figure": "media/images/twos_hard_28.png"
-      }
-    },
-    {
-      "id": "twos_hard_29",
       "type": "multiple_choice",
-      "prompt": "Why can ordinary binary adders still add two’s-complement numbers?",
+      "prompt": "Signed two's-complement range at width 6 is…",
       "choices": [
-        "It needs a separate signed adder always",
-        "Same adder hardware works; wrap interprets signed results",
-        "MSB must be stripped before every add",
-        "Only subtraction works"
+        "-32 … 31",
+        "0 … 63",
+        "-31 … 31",
+        "-32 … 63"
+      ],
+      "answer": 0,
+      "explain": "[-32, 31] for 6-bit two's complement.",
+      "difficulty": "medium",
+      "id": "twos_medium_19"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Most-negative 6-bit two's-complement value is…",
+      "choices": [
+        "-31",
+        "-32",
+        "-31",
+        "0"
       ],
       "answer": 1,
-      "explain": "Ordinary modular add works; interpretation is signed.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "starter-plus5",
-        "label": "Starter +5",
-        "steps": [
-          {
-            "click": "#tc2-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_hard_29.mp4",
-        "poster": "media/images/twos_hard_29-frame.png",
-        "figure": "media/images/twos_hard_29.png"
-      }
+      "explain": "Sign bit alone → -32.",
+      "difficulty": "medium",
+      "id": "twos_medium_20"
     },
     {
-      "id": "twos_hard_30",
       "type": "multiple_choice",
-      "prompt": "Widen signed 4-bit all-ones to 8 bits. Hex is…",
+      "prompt": "Signed two's-complement range at width 7 is…",
       "choices": [
-        "0x0F",
-        "0xFF",
-        "0xF0",
-        "0x00"
+        "-64 … 63",
+        "0 … 127",
+        "-63 … 63",
+        "-64 … 127"
+      ],
+      "answer": 0,
+      "explain": "[-64, 63] for 7-bit two's complement.",
+      "difficulty": "medium",
+      "id": "twos_medium_21"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Most-negative 7-bit two's-complement value is…",
+      "choices": [
+        "-63",
+        "-64",
+        "-63",
+        "0"
       ],
       "answer": 1,
-      "explain": "Negative values fill 1s when sign-extending.",
+      "explain": "Sign bit alone → -64.",
+      "difficulty": "medium",
+      "id": "twos_medium_22"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Signed two's-complement range at width 8 is…",
+      "choices": [
+        "-128 … 127",
+        "0 … 255",
+        "-127 … 127",
+        "-128 … 255"
+      ],
+      "answer": 0,
+      "explain": "[-128, 127] for 8-bit two's complement.",
+      "difficulty": "medium",
+      "id": "twos_medium_23"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Most-negative 8-bit two's-complement value is…",
+      "choices": [
+        "-127",
+        "-128",
+        "-127",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Sign bit alone → -128.",
+      "difficulty": "medium",
+      "id": "twos_medium_24"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Signed two's-complement range at width 9 is…",
+      "choices": [
+        "-256 … 255",
+        "0 … 511",
+        "-255 … 255",
+        "-256 … 511"
+      ],
+      "answer": 0,
+      "explain": "[-256, 255] for 9-bit two's complement.",
+      "difficulty": "medium",
+      "id": "twos_medium_25"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Most-negative 9-bit two's-complement value is…",
+      "choices": [
+        "-255",
+        "-256",
+        "-255",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Sign bit alone → -256.",
+      "difficulty": "medium",
+      "id": "twos_medium_26"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Signed two's-complement range at width 10 is…",
+      "choices": [
+        "-512 … 511",
+        "0 … 1023",
+        "-511 … 511",
+        "-512 … 1023"
+      ],
+      "answer": 0,
+      "explain": "[-512, 511] for 10-bit two's complement.",
+      "difficulty": "medium",
+      "id": "twos_medium_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Most-negative 10-bit two's-complement value is…",
+      "choices": [
+        "-511",
+        "-512",
+        "-511",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Sign bit alone → -512.",
+      "difficulty": "medium",
+      "id": "twos_medium_28"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Signed two's-complement range at width 11 is…",
+      "choices": [
+        "-1024 … 1023",
+        "0 … 2047",
+        "-1023 … 1023",
+        "-1024 … 2047"
+      ],
+      "answer": 0,
+      "explain": "[-1024, 1023] for 11-bit two's complement.",
+      "difficulty": "medium",
+      "id": "twos_medium_29"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Most-negative 11-bit two's-complement value is…",
+      "choices": [
+        "-1023",
+        "-1024",
+        "-1023",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Sign bit alone → -1024.",
+      "difficulty": "medium",
+      "id": "twos_medium_30"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Signed two's-complement range at width 2 is…",
+      "choices": [
+        "-2 … 1",
+        "0 … 3",
+        "-1 … 1",
+        "-2 … 3"
+      ],
+      "answer": 0,
+      "explain": "[-2, 1] for 2-bit two's complement.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "twos-complement",
-        "key": "widen-ones",
-        "label": "Width 4 −1",
-        "steps": [
-          {
-            "select": "#width-sel",
-            "value": "4"
-          },
-          {
-            "fill": "#signed-in",
-            "value": "-1"
-          },
-          {
-            "click": "#btn-apply-signed"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/twos_hard_30.mp4",
-        "poster": "media/images/twos_hard_30-frame.png",
-        "figure": "media/images/twos_hard_30.png"
-      }
+      "id": "twos_hard_05"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Most-negative 2-bit two's-complement value is…",
+      "choices": [
+        "-1",
+        "-2",
+        "-1",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Sign bit alone → -2.",
+      "difficulty": "hard",
+      "id": "twos_hard_06"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Signed two's-complement range at width 3 is…",
+      "choices": [
+        "-4 … 3",
+        "0 … 7",
+        "-3 … 3",
+        "-4 … 7"
+      ],
+      "answer": 0,
+      "explain": "[-4, 3] for 3-bit two's complement.",
+      "difficulty": "hard",
+      "id": "twos_hard_07"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Most-negative 3-bit two's-complement value is…",
+      "choices": [
+        "-3",
+        "-4",
+        "-3",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Sign bit alone → -4.",
+      "difficulty": "hard",
+      "id": "twos_hard_08"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Signed two's-complement range at width 4 is…",
+      "choices": [
+        "-8 … 7",
+        "0 … 15",
+        "-7 … 7",
+        "-8 … 15"
+      ],
+      "answer": 0,
+      "explain": "[-8, 7] for 4-bit two's complement.",
+      "difficulty": "hard",
+      "id": "twos_hard_09"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Most-negative 4-bit two's-complement value is…",
+      "choices": [
+        "-7",
+        "-8",
+        "-7",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Sign bit alone → -8.",
+      "difficulty": "hard",
+      "id": "twos_hard_10"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Signed two's-complement range at width 5 is…",
+      "choices": [
+        "-16 … 15",
+        "0 … 31",
+        "-15 … 15",
+        "-16 … 31"
+      ],
+      "answer": 0,
+      "explain": "[-16, 15] for 5-bit two's complement.",
+      "difficulty": "hard",
+      "id": "twos_hard_11"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Most-negative 5-bit two's-complement value is…",
+      "choices": [
+        "-15",
+        "-16",
+        "-15",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Sign bit alone → -16.",
+      "difficulty": "hard",
+      "id": "twos_hard_12"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Signed two's-complement range at width 6 is…",
+      "choices": [
+        "-32 … 31",
+        "0 … 63",
+        "-31 … 31",
+        "-32 … 63"
+      ],
+      "answer": 0,
+      "explain": "[-32, 31] for 6-bit two's complement.",
+      "difficulty": "hard",
+      "id": "twos_hard_13"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Most-negative 6-bit two's-complement value is…",
+      "choices": [
+        "-31",
+        "-32",
+        "-31",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Sign bit alone → -32.",
+      "difficulty": "hard",
+      "id": "twos_hard_14"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Signed two's-complement range at width 7 is…",
+      "choices": [
+        "-64 … 63",
+        "0 … 127",
+        "-63 … 63",
+        "-64 … 127"
+      ],
+      "answer": 0,
+      "explain": "[-64, 63] for 7-bit two's complement.",
+      "difficulty": "hard",
+      "id": "twos_hard_15"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Most-negative 7-bit two's-complement value is…",
+      "choices": [
+        "-63",
+        "-64",
+        "-63",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Sign bit alone → -64.",
+      "difficulty": "hard",
+      "id": "twos_hard_16"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Signed two's-complement range at width 8 is…",
+      "choices": [
+        "-128 … 127",
+        "0 … 255",
+        "-127 … 127",
+        "-128 … 255"
+      ],
+      "answer": 0,
+      "explain": "[-128, 127] for 8-bit two's complement.",
+      "difficulty": "hard",
+      "id": "twos_hard_17"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Most-negative 8-bit two's-complement value is…",
+      "choices": [
+        "-127",
+        "-128",
+        "-127",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Sign bit alone → -128.",
+      "difficulty": "hard",
+      "id": "twos_hard_18"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Signed two's-complement range at width 9 is…",
+      "choices": [
+        "-256 … 255",
+        "0 … 511",
+        "-255 … 255",
+        "-256 … 511"
+      ],
+      "answer": 0,
+      "explain": "[-256, 255] for 9-bit two's complement.",
+      "difficulty": "hard",
+      "id": "twos_hard_19"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Most-negative 9-bit two's-complement value is…",
+      "choices": [
+        "-255",
+        "-256",
+        "-255",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Sign bit alone → -256.",
+      "difficulty": "hard",
+      "id": "twos_hard_20"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Signed two's-complement range at width 10 is…",
+      "choices": [
+        "-512 … 511",
+        "0 … 1023",
+        "-511 … 511",
+        "-512 … 1023"
+      ],
+      "answer": 0,
+      "explain": "[-512, 511] for 10-bit two's complement.",
+      "difficulty": "hard",
+      "id": "twos_hard_21"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Most-negative 10-bit two's-complement value is…",
+      "choices": [
+        "-511",
+        "-512",
+        "-511",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Sign bit alone → -512.",
+      "difficulty": "hard",
+      "id": "twos_hard_22"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Signed two's-complement range at width 11 is…",
+      "choices": [
+        "-1024 … 1023",
+        "0 … 2047",
+        "-1023 … 1023",
+        "-1024 … 2047"
+      ],
+      "answer": 0,
+      "explain": "[-1024, 1023] for 11-bit two's complement.",
+      "difficulty": "hard",
+      "id": "twos_hard_23"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Most-negative 11-bit two's-complement value is…",
+      "choices": [
+        "-1023",
+        "-1024",
+        "-1023",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Sign bit alone → -1024.",
+      "difficulty": "hard",
+      "id": "twos_hard_24"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 1 bits represent?",
+      "choices": [
+        "1",
+        "2",
+        "1",
+        "10"
+      ],
+      "answer": 1,
+      "explain": "1 bits encode 2^1 = 2 patterns.",
+      "difficulty": "hard",
+      "id": "twos_hard_25"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 2 bits represent?",
+      "choices": [
+        "2",
+        "4",
+        "2",
+        "20"
+      ],
+      "answer": 1,
+      "explain": "2 bits encode 2^2 = 4 patterns.",
+      "difficulty": "hard",
+      "id": "twos_hard_26"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 3 bits represent?",
+      "choices": [
+        "4",
+        "8",
+        "3",
+        "30"
+      ],
+      "answer": 1,
+      "explain": "3 bits encode 2^3 = 8 patterns.",
+      "difficulty": "hard",
+      "id": "twos_hard_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 4 bits represent?",
+      "choices": [
+        "8",
+        "16",
+        "4",
+        "40"
+      ],
+      "answer": 1,
+      "explain": "4 bits encode 2^4 = 16 patterns.",
+      "difficulty": "hard",
+      "id": "twos_hard_28"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 5 bits represent?",
+      "choices": [
+        "16",
+        "32",
+        "5",
+        "50"
+      ],
+      "answer": 1,
+      "explain": "5 bits encode 2^5 = 32 patterns.",
+      "difficulty": "hard",
+      "id": "twos_hard_29"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "How many distinct values can 6 bits represent?",
+      "choices": [
+        "32",
+        "64",
+        "6",
+        "60"
+      ],
+      "answer": 1,
+      "explain": "6 bits encode 2^6 = 64 patterns.",
+      "difficulty": "hard",
+      "id": "twos_hard_30"
     }
   ]
 }

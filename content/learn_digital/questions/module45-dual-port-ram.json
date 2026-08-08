@@ -14,23 +14,7 @@
       ],
       "answer": 0,
       "explain": "Shared memory, two ports.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_easy_01.mp4",
-        "poster": "media/images/dpram_easy_01-frame.png",
-        "figure": "media/images/dpram_easy_01.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "dpram_easy_02",
@@ -44,23 +28,7 @@
       ],
       "answer": 0,
       "explain": "A=0, B=1 in starter.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_easy_02.mp4",
-        "poster": "media/images/dpram_easy_02-frame.png",
-        "figure": "media/images/dpram_easy_02.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "dpram_easy_03",
@@ -74,23 +42,7 @@
       ],
       "answer": 0,
       "explain": "Read-new after write.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_easy_03.mp4",
-        "poster": "media/images/dpram_easy_03-frame.png",
-        "figure": "media/images/dpram_easy_03.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "dpram_easy_04",
@@ -98,767 +50,7 @@
       "prompt": "Independent ports can read and write different addresses concurrently.",
       "answer": true,
       "explain": "Simple dual/true dual may share a clock; async is separate.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_easy_04.mp4",
-        "poster": "media/images/dpram_easy_04-frame.png",
-        "figure": "media/images/dpram_easy_04.png"
-      }
-    },
-    {
-      "id": "dpram_easy_05",
-      "type": "multiple_choice",
-      "prompt": "Dual-port RAM provides…",
-      "choices": [
-        "Two independent addr/we/din ports on one array",
-        "Two separate clock domains always",
-        "Read-only access on both ports",
-        "No address lines"
-      ],
-      "answer": 0,
-      "explain": "Shared memory, two ports.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_easy_05.mp4",
-        "poster": "media/images/dpram_easy_05-frame.png",
-        "figure": "media/images/dpram_easy_05.png"
-      }
-    },
-    {
-      "id": "dpram_easy_06",
-      "type": "multiple_choice",
-      "prompt": "A=0, B=1 with no same-addr clash is…",
-      "choices": [
-        "Independent access (no collision)",
-        "Automatic X on both dout",
-        "Both ports must write",
-        "Memory clears to zero"
-      ],
-      "answer": 0,
-      "explain": "A=0, B=1 in starter.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_easy_06.mp4",
-        "poster": "media/images/dpram_easy_06-frame.png",
-        "figure": "media/images/dpram_easy_06.png"
-      }
-    },
-    {
-      "id": "dpram_easy_07",
-      "type": "multiple_choice",
-      "prompt": "Write-first collision read yields…",
-      "choices": [
-        "New (written) data",
-        "Always old data only",
-        "Always X",
-        "The write pointer"
-      ],
-      "answer": 0,
-      "explain": "Read-new after write.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_easy_07.mp4",
-        "poster": "media/images/dpram_easy_07-frame.png",
-        "figure": "media/images/dpram_easy_07.png"
-      }
-    },
-    {
-      "id": "dpram_easy_08",
-      "type": "true_false",
-      "prompt": "Independent ports can read and write different addresses concurrently.",
-      "answer": true,
-      "explain": "Simple dual/true dual may share a clock; async is separate.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_easy_08.mp4",
-        "poster": "media/images/dpram_easy_08-frame.png",
-        "figure": "media/images/dpram_easy_08.png"
-      }
-    },
-    {
-      "id": "dpram_easy_09",
-      "type": "multiple_choice",
-      "prompt": "Dual-port RAM provides…",
-      "choices": [
-        "Two independent addr/we/din ports on one array",
-        "Two separate clock domains always",
-        "Read-only access on both ports",
-        "No address lines"
-      ],
-      "answer": 0,
-      "explain": "Shared memory, two ports.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_easy_09.mp4",
-        "poster": "media/images/dpram_easy_09-frame.png",
-        "figure": "media/images/dpram_easy_09.png"
-      }
-    },
-    {
-      "id": "dpram_easy_10",
-      "type": "multiple_choice",
-      "prompt": "A=0, B=1 with no same-addr clash is…",
-      "choices": [
-        "Independent access (no collision)",
-        "Automatic X on both dout",
-        "Both ports must write",
-        "Memory clears to zero"
-      ],
-      "answer": 0,
-      "explain": "A=0, B=1 in starter.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_easy_10.mp4",
-        "poster": "media/images/dpram_easy_10-frame.png",
-        "figure": "media/images/dpram_easy_10.png"
-      }
-    },
-    {
-      "id": "dpram_easy_11",
-      "type": "multiple_choice",
-      "prompt": "Write-first collision read yields…",
-      "choices": [
-        "New (written) data",
-        "Always old data only",
-        "Always X",
-        "The write pointer"
-      ],
-      "answer": 0,
-      "explain": "Read-new after write.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_easy_11.mp4",
-        "poster": "media/images/dpram_easy_11-frame.png",
-        "figure": "media/images/dpram_easy_11.png"
-      }
-    },
-    {
-      "id": "dpram_easy_12",
-      "type": "true_false",
-      "prompt": "Independent ports can read and write different addresses concurrently.",
-      "answer": true,
-      "explain": "Simple dual/true dual may share a clock; async is separate.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_easy_12.mp4",
-        "poster": "media/images/dpram_easy_12-frame.png",
-        "figure": "media/images/dpram_easy_12.png"
-      }
-    },
-    {
-      "id": "dpram_easy_13",
-      "type": "multiple_choice",
-      "prompt": "Dual-port RAM provides…",
-      "choices": [
-        "Two independent addr/we/din ports on one array",
-        "Two separate clock domains always",
-        "Read-only access on both ports",
-        "No address lines"
-      ],
-      "answer": 0,
-      "explain": "Shared memory, two ports.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_easy_13.mp4",
-        "poster": "media/images/dpram_easy_13-frame.png",
-        "figure": "media/images/dpram_easy_13.png"
-      }
-    },
-    {
-      "id": "dpram_easy_14",
-      "type": "multiple_choice",
-      "prompt": "A=0, B=1 with no same-addr clash is…",
-      "choices": [
-        "Independent access (no collision)",
-        "Automatic X on both dout",
-        "Both ports must write",
-        "Memory clears to zero"
-      ],
-      "answer": 0,
-      "explain": "A=0, B=1 in starter.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_easy_14.mp4",
-        "poster": "media/images/dpram_easy_14-frame.png",
-        "figure": "media/images/dpram_easy_14.png"
-      }
-    },
-    {
-      "id": "dpram_easy_15",
-      "type": "multiple_choice",
-      "prompt": "Write-first collision read yields…",
-      "choices": [
-        "New (written) data",
-        "Always old data only",
-        "Always X",
-        "The write pointer"
-      ],
-      "answer": 0,
-      "explain": "Read-new after write.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_easy_15.mp4",
-        "poster": "media/images/dpram_easy_15-frame.png",
-        "figure": "media/images/dpram_easy_15.png"
-      }
-    },
-    {
-      "id": "dpram_easy_16",
-      "type": "true_false",
-      "prompt": "Independent ports can read and write different addresses concurrently.",
-      "answer": true,
-      "explain": "Simple dual/true dual may share a clock; async is separate.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_easy_16.mp4",
-        "poster": "media/images/dpram_easy_16-frame.png",
-        "figure": "media/images/dpram_easy_16.png"
-      }
-    },
-    {
-      "id": "dpram_easy_17",
-      "type": "multiple_choice",
-      "prompt": "Dual-port RAM provides…",
-      "choices": [
-        "Two independent addr/we/din ports on one array",
-        "Two separate clock domains always",
-        "Read-only access on both ports",
-        "No address lines"
-      ],
-      "answer": 0,
-      "explain": "Shared memory, two ports.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_easy_17.mp4",
-        "poster": "media/images/dpram_easy_17-frame.png",
-        "figure": "media/images/dpram_easy_17.png"
-      }
-    },
-    {
-      "id": "dpram_easy_18",
-      "type": "multiple_choice",
-      "prompt": "A=0, B=1 with no same-addr clash is…",
-      "choices": [
-        "Independent access (no collision)",
-        "Automatic X on both dout",
-        "Both ports must write",
-        "Memory clears to zero"
-      ],
-      "answer": 0,
-      "explain": "A=0, B=1 in starter.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_easy_18.mp4",
-        "poster": "media/images/dpram_easy_18-frame.png",
-        "figure": "media/images/dpram_easy_18.png"
-      }
-    },
-    {
-      "id": "dpram_easy_19",
-      "type": "multiple_choice",
-      "prompt": "Write-first collision read yields…",
-      "choices": [
-        "New (written) data",
-        "Always old data only",
-        "Always X",
-        "The write pointer"
-      ],
-      "answer": 0,
-      "explain": "Read-new after write.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_easy_19.mp4",
-        "poster": "media/images/dpram_easy_19-frame.png",
-        "figure": "media/images/dpram_easy_19.png"
-      }
-    },
-    {
-      "id": "dpram_easy_20",
-      "type": "true_false",
-      "prompt": "Independent ports can read and write different addresses concurrently.",
-      "answer": true,
-      "explain": "Simple dual/true dual may share a clock; async is separate.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_easy_20.mp4",
-        "poster": "media/images/dpram_easy_20-frame.png",
-        "figure": "media/images/dpram_easy_20.png"
-      }
-    },
-    {
-      "id": "dpram_easy_21",
-      "type": "multiple_choice",
-      "prompt": "Dual-port RAM provides…",
-      "choices": [
-        "Two independent addr/we/din ports on one array",
-        "Two separate clock domains always",
-        "Read-only access on both ports",
-        "No address lines"
-      ],
-      "answer": 0,
-      "explain": "Shared memory, two ports.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_easy_21.mp4",
-        "poster": "media/images/dpram_easy_21-frame.png",
-        "figure": "media/images/dpram_easy_21.png"
-      }
-    },
-    {
-      "id": "dpram_easy_22",
-      "type": "multiple_choice",
-      "prompt": "A=0, B=1 with no same-addr clash is…",
-      "choices": [
-        "Independent access (no collision)",
-        "Automatic X on both dout",
-        "Both ports must write",
-        "Memory clears to zero"
-      ],
-      "answer": 0,
-      "explain": "A=0, B=1 in starter.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_easy_22.mp4",
-        "poster": "media/images/dpram_easy_22-frame.png",
-        "figure": "media/images/dpram_easy_22.png"
-      }
-    },
-    {
-      "id": "dpram_easy_23",
-      "type": "multiple_choice",
-      "prompt": "Write-first collision read yields…",
-      "choices": [
-        "New (written) data",
-        "Always old data only",
-        "Always X",
-        "The write pointer"
-      ],
-      "answer": 0,
-      "explain": "Read-new after write.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_easy_23.mp4",
-        "poster": "media/images/dpram_easy_23-frame.png",
-        "figure": "media/images/dpram_easy_23.png"
-      }
-    },
-    {
-      "id": "dpram_easy_24",
-      "type": "true_false",
-      "prompt": "Independent ports can read and write different addresses concurrently.",
-      "answer": true,
-      "explain": "Simple dual/true dual may share a clock; async is separate.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_easy_24.mp4",
-        "poster": "media/images/dpram_easy_24-frame.png",
-        "figure": "media/images/dpram_easy_24.png"
-      }
-    },
-    {
-      "id": "dpram_easy_25",
-      "type": "multiple_choice",
-      "prompt": "Dual-port RAM provides…",
-      "choices": [
-        "Two independent addr/we/din ports on one array",
-        "Two separate clock domains always",
-        "Read-only access on both ports",
-        "No address lines"
-      ],
-      "answer": 0,
-      "explain": "Shared memory, two ports.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_easy_25.mp4",
-        "poster": "media/images/dpram_easy_25-frame.png",
-        "figure": "media/images/dpram_easy_25.png"
-      }
-    },
-    {
-      "id": "dpram_easy_26",
-      "type": "multiple_choice",
-      "prompt": "A=0, B=1 with no same-addr clash is…",
-      "choices": [
-        "Independent access (no collision)",
-        "Automatic X on both dout",
-        "Both ports must write",
-        "Memory clears to zero"
-      ],
-      "answer": 0,
-      "explain": "A=0, B=1 in starter.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_easy_26.mp4",
-        "poster": "media/images/dpram_easy_26-frame.png",
-        "figure": "media/images/dpram_easy_26.png"
-      }
-    },
-    {
-      "id": "dpram_easy_27",
-      "type": "multiple_choice",
-      "prompt": "Write-first collision read yields…",
-      "choices": [
-        "New (written) data",
-        "Always old data only",
-        "Always X",
-        "The write pointer"
-      ],
-      "answer": 0,
-      "explain": "Read-new after write.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_easy_27.mp4",
-        "poster": "media/images/dpram_easy_27-frame.png",
-        "figure": "media/images/dpram_easy_27.png"
-      }
-    },
-    {
-      "id": "dpram_easy_28",
-      "type": "true_false",
-      "prompt": "Independent ports can read and write different addresses concurrently.",
-      "answer": true,
-      "explain": "Simple dual/true dual may share a clock; async is separate.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_easy_28.mp4",
-        "poster": "media/images/dpram_easy_28-frame.png",
-        "figure": "media/images/dpram_easy_28.png"
-      }
-    },
-    {
-      "id": "dpram_easy_29",
-      "type": "multiple_choice",
-      "prompt": "Dual-port RAM provides…",
-      "choices": [
-        "Two independent addr/we/din ports on one array",
-        "Two separate clock domains always",
-        "Read-only access on both ports",
-        "No address lines"
-      ],
-      "answer": 0,
-      "explain": "Shared memory, two ports.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_easy_29.mp4",
-        "poster": "media/images/dpram_easy_29-frame.png",
-        "figure": "media/images/dpram_easy_29.png"
-      }
-    },
-    {
-      "id": "dpram_easy_30",
-      "type": "multiple_choice",
-      "prompt": "A=0, B=1 with no same-addr clash is…",
-      "choices": [
-        "Independent access (no collision)",
-        "Automatic X on both dout",
-        "Both ports must write",
-        "Memory clears to zero"
-      ],
-      "answer": 0,
-      "explain": "A=0, B=1 in starter.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_easy_30.mp4",
-        "poster": "media/images/dpram_easy_30-frame.png",
-        "figure": "media/images/dpram_easy_30.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "dpram_medium_01",
@@ -872,23 +64,7 @@
       ],
       "answer": 0,
       "explain": "Read-old behavior.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_medium_01.mp4",
-        "poster": "media/images/dpram_medium_01-frame.png",
-        "figure": "media/images/dpram_medium_01.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "dpram_medium_02",
@@ -902,23 +78,7 @@
       ],
       "answer": 0,
       "explain": "Two writers conflict.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_medium_02.mp4",
-        "poster": "media/images/dpram_medium_02-frame.png",
-        "figure": "media/images/dpram_medium_02.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "dpram_medium_03",
@@ -932,23 +92,7 @@
       ],
       "answer": 0,
       "explain": "SDP ≠ true dual R/W+R/W.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_medium_03.mp4",
-        "poster": "media/images/dpram_medium_03-frame.png",
-        "figure": "media/images/dpram_medium_03.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "dpram_medium_04",
@@ -956,767 +100,7 @@
       "prompt": "Collision never occurs if addresses are equal.",
       "answer": false,
       "explain": "Equal addresses are when collisions happen.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_medium_04.mp4",
-        "poster": "media/images/dpram_medium_04-frame.png",
-        "figure": "media/images/dpram_medium_04.png"
-      }
-    },
-    {
-      "id": "dpram_medium_05",
-      "type": "multiple_choice",
-      "prompt": "read_first (write-after-read) collision returns…",
-      "choices": [
-        "Previous stored data",
-        "Always the new din",
-        "Always 0",
-        "The address"
-      ],
-      "answer": 0,
-      "explain": "Read-old behavior.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_medium_05.mp4",
-        "poster": "media/images/dpram_medium_05-frame.png",
-        "figure": "media/images/dpram_medium_05.png"
-      }
-    },
-    {
-      "id": "dpram_medium_06",
-      "type": "multiple_choice",
-      "prompt": "Two writes to one location in one cycle…",
-      "choices": [
-        "Hazard — need priority or avoid",
-        "Always safe like R/R",
-        "Forced empty FIFO",
-        "A cache miss only"
-      ],
-      "answer": 0,
-      "explain": "Two writers conflict.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_medium_06.mp4",
-        "poster": "media/images/dpram_medium_06-frame.png",
-        "figure": "media/images/dpram_medium_06.png"
-      }
-    },
-    {
-      "id": "dpram_medium_07",
-      "type": "multiple_choice",
-      "prompt": "SDP vs TDP: SDP typically…",
-      "choices": [
-        "1W1R rather than two fully symmetric R/W ports",
-        "No addresses",
-        "Only ROM",
-        "Four write ports minimum"
-      ],
-      "answer": 0,
-      "explain": "SDP ≠ true dual R/W+R/W.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_medium_07.mp4",
-        "poster": "media/images/dpram_medium_07-frame.png",
-        "figure": "media/images/dpram_medium_07.png"
-      }
-    },
-    {
-      "id": "dpram_medium_08",
-      "type": "true_false",
-      "prompt": "Collision never occurs if addresses are equal.",
-      "answer": false,
-      "explain": "Equal addresses are when collisions happen.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_medium_08.mp4",
-        "poster": "media/images/dpram_medium_08-frame.png",
-        "figure": "media/images/dpram_medium_08.png"
-      }
-    },
-    {
-      "id": "dpram_medium_09",
-      "type": "multiple_choice",
-      "prompt": "read_first (write-after-read) collision returns…",
-      "choices": [
-        "Previous stored data",
-        "Always the new din",
-        "Always 0",
-        "The address"
-      ],
-      "answer": 0,
-      "explain": "Read-old behavior.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_medium_09.mp4",
-        "poster": "media/images/dpram_medium_09-frame.png",
-        "figure": "media/images/dpram_medium_09.png"
-      }
-    },
-    {
-      "id": "dpram_medium_10",
-      "type": "multiple_choice",
-      "prompt": "Two writes to one location in one cycle…",
-      "choices": [
-        "Hazard — need priority or avoid",
-        "Always safe like R/R",
-        "Forced empty FIFO",
-        "A cache miss only"
-      ],
-      "answer": 0,
-      "explain": "Two writers conflict.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_medium_10.mp4",
-        "poster": "media/images/dpram_medium_10-frame.png",
-        "figure": "media/images/dpram_medium_10.png"
-      }
-    },
-    {
-      "id": "dpram_medium_11",
-      "type": "multiple_choice",
-      "prompt": "SDP vs TDP: SDP typically…",
-      "choices": [
-        "1W1R rather than two fully symmetric R/W ports",
-        "No addresses",
-        "Only ROM",
-        "Four write ports minimum"
-      ],
-      "answer": 0,
-      "explain": "SDP ≠ true dual R/W+R/W.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_medium_11.mp4",
-        "poster": "media/images/dpram_medium_11-frame.png",
-        "figure": "media/images/dpram_medium_11.png"
-      }
-    },
-    {
-      "id": "dpram_medium_12",
-      "type": "true_false",
-      "prompt": "Collision never occurs if addresses are equal.",
-      "answer": false,
-      "explain": "Equal addresses are when collisions happen.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_medium_12.mp4",
-        "poster": "media/images/dpram_medium_12-frame.png",
-        "figure": "media/images/dpram_medium_12.png"
-      }
-    },
-    {
-      "id": "dpram_medium_13",
-      "type": "multiple_choice",
-      "prompt": "read_first (write-after-read) collision returns…",
-      "choices": [
-        "Previous stored data",
-        "Always the new din",
-        "Always 0",
-        "The address"
-      ],
-      "answer": 0,
-      "explain": "Read-old behavior.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_medium_13.mp4",
-        "poster": "media/images/dpram_medium_13-frame.png",
-        "figure": "media/images/dpram_medium_13.png"
-      }
-    },
-    {
-      "id": "dpram_medium_14",
-      "type": "multiple_choice",
-      "prompt": "Two writes to one location in one cycle…",
-      "choices": [
-        "Hazard — need priority or avoid",
-        "Always safe like R/R",
-        "Forced empty FIFO",
-        "A cache miss only"
-      ],
-      "answer": 0,
-      "explain": "Two writers conflict.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_medium_14.mp4",
-        "poster": "media/images/dpram_medium_14-frame.png",
-        "figure": "media/images/dpram_medium_14.png"
-      }
-    },
-    {
-      "id": "dpram_medium_15",
-      "type": "multiple_choice",
-      "prompt": "SDP vs TDP: SDP typically…",
-      "choices": [
-        "1W1R rather than two fully symmetric R/W ports",
-        "No addresses",
-        "Only ROM",
-        "Four write ports minimum"
-      ],
-      "answer": 0,
-      "explain": "SDP ≠ true dual R/W+R/W.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_medium_15.mp4",
-        "poster": "media/images/dpram_medium_15-frame.png",
-        "figure": "media/images/dpram_medium_15.png"
-      }
-    },
-    {
-      "id": "dpram_medium_16",
-      "type": "true_false",
-      "prompt": "Collision never occurs if addresses are equal.",
-      "answer": false,
-      "explain": "Equal addresses are when collisions happen.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_medium_16.mp4",
-        "poster": "media/images/dpram_medium_16-frame.png",
-        "figure": "media/images/dpram_medium_16.png"
-      }
-    },
-    {
-      "id": "dpram_medium_17",
-      "type": "multiple_choice",
-      "prompt": "read_first (write-after-read) collision returns…",
-      "choices": [
-        "Previous stored data",
-        "Always the new din",
-        "Always 0",
-        "The address"
-      ],
-      "answer": 0,
-      "explain": "Read-old behavior.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_medium_17.mp4",
-        "poster": "media/images/dpram_medium_17-frame.png",
-        "figure": "media/images/dpram_medium_17.png"
-      }
-    },
-    {
-      "id": "dpram_medium_18",
-      "type": "multiple_choice",
-      "prompt": "Two writes to one location in one cycle…",
-      "choices": [
-        "Hazard — need priority or avoid",
-        "Always safe like R/R",
-        "Forced empty FIFO",
-        "A cache miss only"
-      ],
-      "answer": 0,
-      "explain": "Two writers conflict.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_medium_18.mp4",
-        "poster": "media/images/dpram_medium_18-frame.png",
-        "figure": "media/images/dpram_medium_18.png"
-      }
-    },
-    {
-      "id": "dpram_medium_19",
-      "type": "multiple_choice",
-      "prompt": "SDP vs TDP: SDP typically…",
-      "choices": [
-        "1W1R rather than two fully symmetric R/W ports",
-        "No addresses",
-        "Only ROM",
-        "Four write ports minimum"
-      ],
-      "answer": 0,
-      "explain": "SDP ≠ true dual R/W+R/W.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_medium_19.mp4",
-        "poster": "media/images/dpram_medium_19-frame.png",
-        "figure": "media/images/dpram_medium_19.png"
-      }
-    },
-    {
-      "id": "dpram_medium_20",
-      "type": "true_false",
-      "prompt": "Collision never occurs if addresses are equal.",
-      "answer": false,
-      "explain": "Equal addresses are when collisions happen.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_medium_20.mp4",
-        "poster": "media/images/dpram_medium_20-frame.png",
-        "figure": "media/images/dpram_medium_20.png"
-      }
-    },
-    {
-      "id": "dpram_medium_21",
-      "type": "multiple_choice",
-      "prompt": "read_first (write-after-read) collision returns…",
-      "choices": [
-        "Previous stored data",
-        "Always the new din",
-        "Always 0",
-        "The address"
-      ],
-      "answer": 0,
-      "explain": "Read-old behavior.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_medium_21.mp4",
-        "poster": "media/images/dpram_medium_21-frame.png",
-        "figure": "media/images/dpram_medium_21.png"
-      }
-    },
-    {
-      "id": "dpram_medium_22",
-      "type": "multiple_choice",
-      "prompt": "Two writes to one location in one cycle…",
-      "choices": [
-        "Hazard — need priority or avoid",
-        "Always safe like R/R",
-        "Forced empty FIFO",
-        "A cache miss only"
-      ],
-      "answer": 0,
-      "explain": "Two writers conflict.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_medium_22.mp4",
-        "poster": "media/images/dpram_medium_22-frame.png",
-        "figure": "media/images/dpram_medium_22.png"
-      }
-    },
-    {
-      "id": "dpram_medium_23",
-      "type": "multiple_choice",
-      "prompt": "SDP vs TDP: SDP typically…",
-      "choices": [
-        "1W1R rather than two fully symmetric R/W ports",
-        "No addresses",
-        "Only ROM",
-        "Four write ports minimum"
-      ],
-      "answer": 0,
-      "explain": "SDP ≠ true dual R/W+R/W.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_medium_23.mp4",
-        "poster": "media/images/dpram_medium_23-frame.png",
-        "figure": "media/images/dpram_medium_23.png"
-      }
-    },
-    {
-      "id": "dpram_medium_24",
-      "type": "true_false",
-      "prompt": "Collision never occurs if addresses are equal.",
-      "answer": false,
-      "explain": "Equal addresses are when collisions happen.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_medium_24.mp4",
-        "poster": "media/images/dpram_medium_24-frame.png",
-        "figure": "media/images/dpram_medium_24.png"
-      }
-    },
-    {
-      "id": "dpram_medium_25",
-      "type": "multiple_choice",
-      "prompt": "read_first (write-after-read) collision returns…",
-      "choices": [
-        "Previous stored data",
-        "Always the new din",
-        "Always 0",
-        "The address"
-      ],
-      "answer": 0,
-      "explain": "Read-old behavior.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_medium_25.mp4",
-        "poster": "media/images/dpram_medium_25-frame.png",
-        "figure": "media/images/dpram_medium_25.png"
-      }
-    },
-    {
-      "id": "dpram_medium_26",
-      "type": "multiple_choice",
-      "prompt": "Two writes to one location in one cycle…",
-      "choices": [
-        "Hazard — need priority or avoid",
-        "Always safe like R/R",
-        "Forced empty FIFO",
-        "A cache miss only"
-      ],
-      "answer": 0,
-      "explain": "Two writers conflict.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_medium_26.mp4",
-        "poster": "media/images/dpram_medium_26-frame.png",
-        "figure": "media/images/dpram_medium_26.png"
-      }
-    },
-    {
-      "id": "dpram_medium_27",
-      "type": "multiple_choice",
-      "prompt": "SDP vs TDP: SDP typically…",
-      "choices": [
-        "1W1R rather than two fully symmetric R/W ports",
-        "No addresses",
-        "Only ROM",
-        "Four write ports minimum"
-      ],
-      "answer": 0,
-      "explain": "SDP ≠ true dual R/W+R/W.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_medium_27.mp4",
-        "poster": "media/images/dpram_medium_27-frame.png",
-        "figure": "media/images/dpram_medium_27.png"
-      }
-    },
-    {
-      "id": "dpram_medium_28",
-      "type": "true_false",
-      "prompt": "Collision never occurs if addresses are equal.",
-      "answer": false,
-      "explain": "Equal addresses are when collisions happen.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_medium_28.mp4",
-        "poster": "media/images/dpram_medium_28-frame.png",
-        "figure": "media/images/dpram_medium_28.png"
-      }
-    },
-    {
-      "id": "dpram_medium_29",
-      "type": "multiple_choice",
-      "prompt": "read_first (write-after-read) collision returns…",
-      "choices": [
-        "Previous stored data",
-        "Always the new din",
-        "Always 0",
-        "The address"
-      ],
-      "answer": 0,
-      "explain": "Read-old behavior.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_medium_29.mp4",
-        "poster": "media/images/dpram_medium_29-frame.png",
-        "figure": "media/images/dpram_medium_29.png"
-      }
-    },
-    {
-      "id": "dpram_medium_30",
-      "type": "multiple_choice",
-      "prompt": "Two writes to one location in one cycle…",
-      "choices": [
-        "Hazard — need priority or avoid",
-        "Always safe like R/R",
-        "Forced empty FIFO",
-        "A cache miss only"
-      ],
-      "answer": 0,
-      "explain": "Two writers conflict.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_medium_30.mp4",
-        "poster": "media/images/dpram_medium_30-frame.png",
-        "figure": "media/images/dpram_medium_30.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "dpram_hard_01",
@@ -1730,23 +114,7 @@
       ],
       "answer": 0,
       "explain": "Hold previous read data.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_hard_01.mp4",
-        "poster": "media/images/dpram_hard_01-frame.png",
-        "figure": "media/images/dpram_hard_01.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "dpram_hard_02",
@@ -1760,23 +128,7 @@
       ],
       "answer": 0,
       "explain": "Cross-clock memory needs sync discipline.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_hard_02.mp4",
-        "poster": "media/images/dpram_hard_02-frame.png",
-        "figure": "media/images/dpram_hard_02.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "dpram_hard_03",
@@ -1790,23 +142,7 @@
       ],
       "answer": 0,
       "explain": "Force the hazard and watch dout.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_hard_03.mp4",
-        "poster": "media/images/dpram_hard_03-frame.png",
-        "figure": "media/images/dpram_hard_03.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "dpram_hard_04",
@@ -1814,767 +150,883 @@
       "prompt": "Dual-port means byte enables are impossible.",
       "answer": false,
       "explain": "Byte enables are orthogonal.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_hard_04.mp4",
-        "poster": "media/images/dpram_hard_04-frame.png",
-        "figure": "media/images/dpram_hard_04.png"
-      }
+      "difficulty": "hard"
     },
     {
-      "id": "dpram_hard_05",
       "type": "multiple_choice",
-      "prompt": "no_change collision policy means…",
+      "prompt": "Address width for depth 4 is…",
       "choices": [
-        "Read output holds prior dout (doesn’t update that cycle)",
-        "Always X",
-        "Always new din",
-        "Clears memory"
+        "1",
+        "2",
+        "4",
+        "4"
       ],
-      "answer": 0,
-      "explain": "Hold previous read data.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_hard_05.mp4",
-        "poster": "media/images/dpram_hard_05-frame.png",
-        "figure": "media/images/dpram_hard_05.png"
-      }
+      "answer": 1,
+      "explain": "ceil(log2(4)) = 2.",
+      "difficulty": "easy",
+      "id": "dpram_easy_05"
     },
     {
-      "id": "dpram_hard_06",
       "type": "multiple_choice",
-      "prompt": "Async dual-clock BRAM needs care because…",
+      "prompt": "Address width for depth 8 is…",
       "choices": [
-        "Write domain and read domain are asynchronous",
-        "AND gates glow",
-        "Tags disappear",
-        "Gray code is illegal"
+        "2",
+        "3",
+        "8",
+        "6"
       ],
-      "answer": 0,
-      "explain": "Cross-clock memory needs sync discipline.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_hard_06.mp4",
-        "poster": "media/images/dpram_hard_06-frame.png",
-        "figure": "media/images/dpram_hard_06.png"
-      }
+      "answer": 1,
+      "explain": "ceil(log2(8)) = 3.",
+      "difficulty": "easy",
+      "id": "dpram_easy_06"
     },
     {
-      "id": "dpram_hard_07",
       "type": "multiple_choice",
-      "prompt": "Hands-on DPRAM test…",
+      "prompt": "Address width for depth 16 is…",
       "choices": [
-        "Same addr W+R and observe dout vs policy",
-        "Only reading empty addresses",
-        "Ignoring we",
-        "Changing DEPTH randomly mid-cycle"
+        "3",
+        "4",
+        "16",
+        "8"
       ],
-      "answer": 0,
-      "explain": "Force the hazard and watch dout.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_hard_07.mp4",
-        "poster": "media/images/dpram_hard_07-frame.png",
-        "figure": "media/images/dpram_hard_07.png"
-      }
+      "answer": 1,
+      "explain": "ceil(log2(16)) = 4.",
+      "difficulty": "easy",
+      "id": "dpram_easy_07"
     },
     {
-      "id": "dpram_hard_08",
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 32 is…",
+      "choices": [
+        "4",
+        "5",
+        "32",
+        "10"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(32)) = 5.",
+      "difficulty": "easy",
+      "id": "dpram_easy_08"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 64 is…",
+      "choices": [
+        "5",
+        "6",
+        "64",
+        "12"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(64)) = 6.",
+      "difficulty": "easy",
+      "id": "dpram_easy_09"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 8×8 memory in bits is…",
+      "choices": [
+        "16",
+        "64",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "8×8 = 64.",
+      "difficulty": "easy",
+      "id": "dpram_easy_10"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 16×32 memory in bits is…",
+      "choices": [
+        "48",
+        "512",
+        "16",
+        "32"
+      ],
+      "answer": 1,
+      "explain": "16×32 = 512.",
+      "difficulty": "easy",
+      "id": "dpram_easy_11"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 64×4 memory in bits is…",
+      "choices": [
+        "68",
+        "256",
+        "64",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "64×4 = 256.",
+      "difficulty": "easy",
+      "id": "dpram_easy_12"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 256×16 memory in bits is…",
+      "choices": [
+        "272",
+        "4096",
+        "256",
+        "16"
+      ],
+      "answer": 1,
+      "explain": "256×16 = 4096.",
+      "difficulty": "easy",
+      "id": "dpram_easy_13"
+    },
+    {
       "type": "true_false",
-      "prompt": "Dual-port means byte enables are impossible.",
-      "answer": false,
-      "explain": "Byte enables are orthogonal.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_hard_08.mp4",
-        "poster": "media/images/dpram_hard_08-frame.png",
-        "figure": "media/images/dpram_hard_08.png"
-      }
+      "prompt": "FIFO empty and full must be generated carefully across domains for async FIFOs.",
+      "answer": true,
+      "explain": "Gray pointers.",
+      "difficulty": "easy",
+      "id": "dpram_easy_14"
     },
     {
-      "id": "dpram_hard_09",
-      "type": "multiple_choice",
-      "prompt": "no_change collision policy means…",
-      "choices": [
-        "Read output holds prior dout (doesn’t update that cycle)",
-        "Always X",
-        "Always new din",
-        "Clears memory"
-      ],
-      "answer": 0,
-      "explain": "Hold previous read data.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_hard_09.mp4",
-        "poster": "media/images/dpram_hard_09-frame.png",
-        "figure": "media/images/dpram_hard_09.png"
-      }
-    },
-    {
-      "id": "dpram_hard_10",
-      "type": "multiple_choice",
-      "prompt": "Async dual-clock BRAM needs care because…",
-      "choices": [
-        "Write domain and read domain are asynchronous",
-        "AND gates glow",
-        "Tags disappear",
-        "Gray code is illegal"
-      ],
-      "answer": 0,
-      "explain": "Cross-clock memory needs sync discipline.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_hard_10.mp4",
-        "poster": "media/images/dpram_hard_10-frame.png",
-        "figure": "media/images/dpram_hard_10.png"
-      }
-    },
-    {
-      "id": "dpram_hard_11",
-      "type": "multiple_choice",
-      "prompt": "Hands-on DPRAM test…",
-      "choices": [
-        "Same addr W+R and observe dout vs policy",
-        "Only reading empty addresses",
-        "Ignoring we",
-        "Changing DEPTH randomly mid-cycle"
-      ],
-      "answer": 0,
-      "explain": "Force the hazard and watch dout.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_hard_11.mp4",
-        "poster": "media/images/dpram_hard_11-frame.png",
-        "figure": "media/images/dpram_hard_11.png"
-      }
-    },
-    {
-      "id": "dpram_hard_12",
       "type": "true_false",
-      "prompt": "Dual-port means byte enables are impossible.",
-      "answer": false,
-      "explain": "Byte enables are orthogonal.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_hard_12.mp4",
-        "poster": "media/images/dpram_hard_12-frame.png",
-        "figure": "media/images/dpram_hard_12.png"
-      }
+      "prompt": "Byte enables select which bytes of a word are written.",
+      "answer": true,
+      "explain": "Partial writes.",
+      "difficulty": "easy",
+      "id": "dpram_easy_15"
     },
     {
-      "id": "dpram_hard_13",
-      "type": "multiple_choice",
-      "prompt": "no_change collision policy means…",
-      "choices": [
-        "Read output holds prior dout (doesn’t update that cycle)",
-        "Always X",
-        "Always new din",
-        "Clears memory"
-      ],
-      "answer": 0,
-      "explain": "Hold previous read data.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_hard_13.mp4",
-        "poster": "media/images/dpram_hard_13-frame.png",
-        "figure": "media/images/dpram_hard_13.png"
-      }
-    },
-    {
-      "id": "dpram_hard_14",
-      "type": "multiple_choice",
-      "prompt": "Async dual-clock BRAM needs care because…",
-      "choices": [
-        "Write domain and read domain are asynchronous",
-        "AND gates glow",
-        "Tags disappear",
-        "Gray code is illegal"
-      ],
-      "answer": 0,
-      "explain": "Cross-clock memory needs sync discipline.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_hard_14.mp4",
-        "poster": "media/images/dpram_hard_14-frame.png",
-        "figure": "media/images/dpram_hard_14.png"
-      }
-    },
-    {
-      "id": "dpram_hard_15",
-      "type": "multiple_choice",
-      "prompt": "Hands-on DPRAM test…",
-      "choices": [
-        "Same addr W+R and observe dout vs policy",
-        "Only reading empty addresses",
-        "Ignoring we",
-        "Changing DEPTH randomly mid-cycle"
-      ],
-      "answer": 0,
-      "explain": "Force the hazard and watch dout.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_hard_15.mp4",
-        "poster": "media/images/dpram_hard_15-frame.png",
-        "figure": "media/images/dpram_hard_15.png"
-      }
-    },
-    {
-      "id": "dpram_hard_16",
       "type": "true_false",
-      "prompt": "Dual-port means byte enables are impossible.",
-      "answer": false,
-      "explain": "Byte enables are orthogonal.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_hard_16.mp4",
-        "poster": "media/images/dpram_hard_16-frame.png",
-        "figure": "media/images/dpram_hard_16.png"
-      }
+      "prompt": "Valid/ready handshake transfers when both are high in the same cycle.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "dpram_easy_16"
     },
     {
-      "id": "dpram_hard_17",
-      "type": "multiple_choice",
-      "prompt": "no_change collision policy means…",
-      "choices": [
-        "Read output holds prior dout (doesn’t update that cycle)",
-        "Always X",
-        "Always new din",
-        "Clears memory"
-      ],
-      "answer": 0,
-      "explain": "Hold previous read data.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_hard_17.mp4",
-        "poster": "media/images/dpram_hard_17-frame.png",
-        "figure": "media/images/dpram_hard_17.png"
-      }
-    },
-    {
-      "id": "dpram_hard_18",
-      "type": "multiple_choice",
-      "prompt": "Async dual-clock BRAM needs care because…",
-      "choices": [
-        "Write domain and read domain are asynchronous",
-        "AND gates glow",
-        "Tags disappear",
-        "Gray code is illegal"
-      ],
-      "answer": 0,
-      "explain": "Cross-clock memory needs sync discipline.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_hard_18.mp4",
-        "poster": "media/images/dpram_hard_18-frame.png",
-        "figure": "media/images/dpram_hard_18.png"
-      }
-    },
-    {
-      "id": "dpram_hard_19",
-      "type": "multiple_choice",
-      "prompt": "Hands-on DPRAM test…",
-      "choices": [
-        "Same addr W+R and observe dout vs policy",
-        "Only reading empty addresses",
-        "Ignoring we",
-        "Changing DEPTH randomly mid-cycle"
-      ],
-      "answer": 0,
-      "explain": "Force the hazard and watch dout.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_hard_19.mp4",
-        "poster": "media/images/dpram_hard_19-frame.png",
-        "figure": "media/images/dpram_hard_19.png"
-      }
-    },
-    {
-      "id": "dpram_hard_20",
       "type": "true_false",
-      "prompt": "Dual-port means byte enables are impossible.",
+      "prompt": "A master may drop valid before ready acknowledges freely always.",
       "answer": false,
-      "explain": "Byte enables are orthogonal.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_hard_20.mp4",
-        "poster": "media/images/dpram_hard_20-frame.png",
-        "figure": "media/images/dpram_hard_20.png"
-      }
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "dpram_easy_17"
     },
     {
-      "id": "dpram_hard_21",
-      "type": "multiple_choice",
-      "prompt": "no_change collision policy means…",
-      "choices": [
-        "Read output holds prior dout (doesn’t update that cycle)",
-        "Always X",
-        "Always new din",
-        "Clears memory"
-      ],
-      "answer": 0,
-      "explain": "Hold previous read data.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_hard_21.mp4",
-        "poster": "media/images/dpram_hard_21-frame.png",
-        "figure": "media/images/dpram_hard_21.png"
-      }
-    },
-    {
-      "id": "dpram_hard_22",
-      "type": "multiple_choice",
-      "prompt": "Async dual-clock BRAM needs care because…",
-      "choices": [
-        "Write domain and read domain are asynchronous",
-        "AND gates glow",
-        "Tags disappear",
-        "Gray code is illegal"
-      ],
-      "answer": 0,
-      "explain": "Cross-clock memory needs sync discipline.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_hard_22.mp4",
-        "poster": "media/images/dpram_hard_22-frame.png",
-        "figure": "media/images/dpram_hard_22.png"
-      }
-    },
-    {
-      "id": "dpram_hard_23",
-      "type": "multiple_choice",
-      "prompt": "Hands-on DPRAM test…",
-      "choices": [
-        "Same addr W+R and observe dout vs policy",
-        "Only reading empty addresses",
-        "Ignoring we",
-        "Changing DEPTH randomly mid-cycle"
-      ],
-      "answer": 0,
-      "explain": "Force the hazard and watch dout.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_hard_23.mp4",
-        "poster": "media/images/dpram_hard_23-frame.png",
-        "figure": "media/images/dpram_hard_23.png"
-      }
-    },
-    {
-      "id": "dpram_hard_24",
       "type": "true_false",
-      "prompt": "Dual-port means byte enables are impossible.",
-      "answer": false,
-      "explain": "Byte enables are orthogonal.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_hard_24.mp4",
-        "poster": "media/images/dpram_hard_24-frame.png",
-        "figure": "media/images/dpram_hard_24.png"
-      }
+      "prompt": "Ready may depend on valid in the same cycle (combinational) carefully.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "dpram_easy_18"
     },
     {
-      "id": "dpram_hard_25",
-      "type": "multiple_choice",
-      "prompt": "no_change collision policy means…",
-      "choices": [
-        "Read output holds prior dout (doesn’t update that cycle)",
-        "Always X",
-        "Always new din",
-        "Clears memory"
-      ],
-      "answer": 0,
-      "explain": "Hold previous read data.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_hard_25.mp4",
-        "poster": "media/images/dpram_hard_25-frame.png",
-        "figure": "media/images/dpram_hard_25.png"
-      }
-    },
-    {
-      "id": "dpram_hard_26",
-      "type": "multiple_choice",
-      "prompt": "Async dual-clock BRAM needs care because…",
-      "choices": [
-        "Write domain and read domain are asynchronous",
-        "AND gates glow",
-        "Tags disappear",
-        "Gray code is illegal"
-      ],
-      "answer": 0,
-      "explain": "Cross-clock memory needs sync discipline.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_hard_26.mp4",
-        "poster": "media/images/dpram_hard_26-frame.png",
-        "figure": "media/images/dpram_hard_26.png"
-      }
-    },
-    {
-      "id": "dpram_hard_27",
-      "type": "multiple_choice",
-      "prompt": "Hands-on DPRAM test…",
-      "choices": [
-        "Same addr W+R and observe dout vs policy",
-        "Only reading empty addresses",
-        "Ignoring we",
-        "Changing DEPTH randomly mid-cycle"
-      ],
-      "answer": 0,
-      "explain": "Force the hazard and watch dout.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_hard_27.mp4",
-        "poster": "media/images/dpram_hard_27-frame.png",
-        "figure": "media/images/dpram_hard_27.png"
-      }
-    },
-    {
-      "id": "dpram_hard_28",
       "type": "true_false",
-      "prompt": "Dual-port means byte enables are impossible.",
+      "prompt": "AXI-style fire is valid && ready.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "dpram_easy_19"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Tri-state buses need exactly one driver when not floating intentionally.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "dpram_easy_20"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Multiple drivers asserting opposite values is bus contention.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "dpram_easy_21"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Async FIFO write and read clocks may be unrelated.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "dpram_easy_22"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Gray code helps multi-bit CDC of pointers.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "dpram_easy_23"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Single FF sync is enough for multi-bit buses.",
       "answer": false,
-      "explain": "Byte enables are orthogonal.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_hard_28.mp4",
-        "poster": "media/images/dpram_hard_28-frame.png",
-        "figure": "media/images/dpram_hard_28.png"
-      }
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "dpram_easy_24"
     },
     {
-      "id": "dpram_hard_29",
-      "type": "multiple_choice",
-      "prompt": "no_change collision policy means…",
-      "choices": [
-        "Read output holds prior dout (doesn’t update that cycle)",
-        "Always X",
-        "Always new din",
-        "Clears memory"
-      ],
-      "answer": 0,
-      "explain": "Hold previous read data.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_hard_29.mp4",
-        "poster": "media/images/dpram_hard_29-frame.png",
-        "figure": "media/images/dpram_hard_29.png"
-      }
+      "type": "true_false",
+      "prompt": "Backpressure is expressed by deasserting ready.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "dpram_easy_25"
     },
     {
-      "id": "dpram_hard_30",
       "type": "multiple_choice",
-      "prompt": "Async dual-clock BRAM needs care because…",
+      "prompt": "With valid fixed high, how many beats transfer in 1 cycles if ready is always high?",
       "choices": [
-        "Write domain and read domain are asynchronous",
-        "AND gates glow",
-        "Tags disappear",
-        "Gray code is illegal"
+        "0",
+        "1",
+        "2",
+        "0"
       ],
-      "answer": 0,
-      "explain": "Cross-clock memory needs sync discipline.",
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "dpram_easy_26"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 2 cycles if ready is always high?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "dpram_easy_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 3 cycles if ready is always high?",
+      "choices": [
+        "2",
+        "3",
+        "6",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "dpram_easy_28"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 4 cycles if ready is always high?",
+      "choices": [
+        "3",
+        "4",
+        "8",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "dpram_easy_29"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 5 cycles if ready is always high?",
+      "choices": [
+        "4",
+        "5",
+        "10",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "dpram_easy_30"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 4 is…",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(4)) = 2.",
+      "difficulty": "medium",
+      "id": "dpram_medium_05"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 8 is…",
+      "choices": [
+        "2",
+        "3",
+        "8",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(8)) = 3.",
+      "difficulty": "medium",
+      "id": "dpram_medium_06"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 16 is…",
+      "choices": [
+        "3",
+        "4",
+        "16",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(16)) = 4.",
+      "difficulty": "medium",
+      "id": "dpram_medium_07"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 32 is…",
+      "choices": [
+        "4",
+        "5",
+        "32",
+        "10"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(32)) = 5.",
+      "difficulty": "medium",
+      "id": "dpram_medium_08"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 64 is…",
+      "choices": [
+        "5",
+        "6",
+        "64",
+        "12"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(64)) = 6.",
+      "difficulty": "medium",
+      "id": "dpram_medium_09"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 8×8 memory in bits is…",
+      "choices": [
+        "16",
+        "64",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "8×8 = 64.",
+      "difficulty": "medium",
+      "id": "dpram_medium_10"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 16×32 memory in bits is…",
+      "choices": [
+        "48",
+        "512",
+        "16",
+        "32"
+      ],
+      "answer": 1,
+      "explain": "16×32 = 512.",
+      "difficulty": "medium",
+      "id": "dpram_medium_11"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 64×4 memory in bits is…",
+      "choices": [
+        "68",
+        "256",
+        "64",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "64×4 = 256.",
+      "difficulty": "medium",
+      "id": "dpram_medium_12"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 256×16 memory in bits is…",
+      "choices": [
+        "272",
+        "4096",
+        "256",
+        "16"
+      ],
+      "answer": 1,
+      "explain": "256×16 = 4096.",
+      "difficulty": "medium",
+      "id": "dpram_medium_13"
+    },
+    {
+      "type": "true_false",
+      "prompt": "FIFO empty and full must be generated carefully across domains for async FIFOs.",
+      "answer": true,
+      "explain": "Gray pointers.",
+      "difficulty": "medium",
+      "id": "dpram_medium_14"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Byte enables select which bytes of a word are written.",
+      "answer": true,
+      "explain": "Partial writes.",
+      "difficulty": "medium",
+      "id": "dpram_medium_15"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Valid/ready handshake transfers when both are high in the same cycle.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "dpram_medium_16"
+    },
+    {
+      "type": "true_false",
+      "prompt": "A master may drop valid before ready acknowledges freely always.",
+      "answer": false,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "dpram_medium_17"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Ready may depend on valid in the same cycle (combinational) carefully.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "dpram_medium_18"
+    },
+    {
+      "type": "true_false",
+      "prompt": "AXI-style fire is valid && ready.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "dpram_medium_19"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Tri-state buses need exactly one driver when not floating intentionally.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "dpram_medium_20"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Multiple drivers asserting opposite values is bus contention.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "dpram_medium_21"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Async FIFO write and read clocks may be unrelated.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "dpram_medium_22"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Gray code helps multi-bit CDC of pointers.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "dpram_medium_23"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Single FF sync is enough for multi-bit buses.",
+      "answer": false,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "dpram_medium_24"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Backpressure is expressed by deasserting ready.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "dpram_medium_25"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 1 cycles if ready is always high?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "dpram_medium_26"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 2 cycles if ready is always high?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "dpram_medium_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 3 cycles if ready is always high?",
+      "choices": [
+        "2",
+        "3",
+        "6",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "dpram_medium_28"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 4 cycles if ready is always high?",
+      "choices": [
+        "3",
+        "4",
+        "8",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "dpram_medium_29"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 5 cycles if ready is always high?",
+      "choices": [
+        "4",
+        "5",
+        "10",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "dpram_medium_30"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 4 is…",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(4)) = 2.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "dual-port-ram",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#dpr-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/dpram_hard_30.mp4",
-        "poster": "media/images/dpram_hard_30-frame.png",
-        "figure": "media/images/dpram_hard_30.png"
-      }
+      "id": "dpram_hard_05"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 8 is…",
+      "choices": [
+        "2",
+        "3",
+        "8",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(8)) = 3.",
+      "difficulty": "hard",
+      "id": "dpram_hard_06"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 16 is…",
+      "choices": [
+        "3",
+        "4",
+        "16",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(16)) = 4.",
+      "difficulty": "hard",
+      "id": "dpram_hard_07"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 32 is…",
+      "choices": [
+        "4",
+        "5",
+        "32",
+        "10"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(32)) = 5.",
+      "difficulty": "hard",
+      "id": "dpram_hard_08"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Address width for depth 64 is…",
+      "choices": [
+        "5",
+        "6",
+        "64",
+        "12"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(64)) = 6.",
+      "difficulty": "hard",
+      "id": "dpram_hard_09"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 8×8 memory in bits is…",
+      "choices": [
+        "16",
+        "64",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "8×8 = 64.",
+      "difficulty": "hard",
+      "id": "dpram_hard_10"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 16×32 memory in bits is…",
+      "choices": [
+        "48",
+        "512",
+        "16",
+        "32"
+      ],
+      "answer": 1,
+      "explain": "16×32 = 512.",
+      "difficulty": "hard",
+      "id": "dpram_hard_11"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 64×4 memory in bits is…",
+      "choices": [
+        "68",
+        "256",
+        "64",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "64×4 = 256.",
+      "difficulty": "hard",
+      "id": "dpram_hard_12"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Capacity of 256×16 memory in bits is…",
+      "choices": [
+        "272",
+        "4096",
+        "256",
+        "16"
+      ],
+      "answer": 1,
+      "explain": "256×16 = 4096.",
+      "difficulty": "hard",
+      "id": "dpram_hard_13"
+    },
+    {
+      "type": "true_false",
+      "prompt": "FIFO empty and full must be generated carefully across domains for async FIFOs.",
+      "answer": true,
+      "explain": "Gray pointers.",
+      "difficulty": "hard",
+      "id": "dpram_hard_14"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Byte enables select which bytes of a word are written.",
+      "answer": true,
+      "explain": "Partial writes.",
+      "difficulty": "hard",
+      "id": "dpram_hard_15"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Valid/ready handshake transfers when both are high in the same cycle.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "hard",
+      "id": "dpram_hard_16"
+    },
+    {
+      "type": "true_false",
+      "prompt": "A master may drop valid before ready acknowledges freely always.",
+      "answer": false,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "hard",
+      "id": "dpram_hard_17"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Ready may depend on valid in the same cycle (combinational) carefully.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "hard",
+      "id": "dpram_hard_18"
+    },
+    {
+      "type": "true_false",
+      "prompt": "AXI-style fire is valid && ready.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "hard",
+      "id": "dpram_hard_19"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Tri-state buses need exactly one driver when not floating intentionally.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "hard",
+      "id": "dpram_hard_20"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Multiple drivers asserting opposite values is bus contention.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "hard",
+      "id": "dpram_hard_21"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Async FIFO write and read clocks may be unrelated.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "hard",
+      "id": "dpram_hard_22"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Gray code helps multi-bit CDC of pointers.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "hard",
+      "id": "dpram_hard_23"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Single FF sync is enough for multi-bit buses.",
+      "answer": false,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "hard",
+      "id": "dpram_hard_24"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Backpressure is expressed by deasserting ready.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "hard",
+      "id": "dpram_hard_25"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 1 cycles if ready is always high?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "hard",
+      "id": "dpram_hard_26"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 2 cycles if ready is always high?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "hard",
+      "id": "dpram_hard_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 3 cycles if ready is always high?",
+      "choices": [
+        "2",
+        "3",
+        "6",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "hard",
+      "id": "dpram_hard_28"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 4 cycles if ready is always high?",
+      "choices": [
+        "3",
+        "4",
+        "8",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "hard",
+      "id": "dpram_hard_29"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "With valid fixed high, how many beats transfer in 5 cycles if ready is always high?",
+      "choices": [
+        "4",
+        "5",
+        "10",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "hard",
+      "id": "dpram_hard_30"
     }
   ]
 }

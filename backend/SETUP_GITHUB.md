@@ -10,12 +10,14 @@
 
 ## Option A — Terminal (recommended)
 
+**Node.js:** current Wrangler (`latest`) needs **Node ≥ 22**. This folder pins **wrangler@4.86.0**, which still runs on **Node 20**. Prefer upgrading Node when you can (`nvm install 22 && nvm use 22`).
+
 From this folder (`backend/`):
 
 ```bash
-npm install -g wrangler
-wrangler login
-wrangler secret put GITHUB_TOKEN
+npm install
+npx wrangler login
+npx wrangler secret put GITHUB_TOKEN
 ```
 
 When the terminal prompts **“Enter a secret value”**, paste the token **there** (in your own terminal), press Enter.  
@@ -24,7 +26,14 @@ You should not see the token committed to any file.
 Then deploy **only the results worker** (not the static site):
 
 ```bash
-wrangler deploy --config wrangler.toml
+npm run deploy
+# or: npx wrangler deploy --config wrangler.toml
+```
+
+If you skip `npm install` and call bare `npx wrangler`, npm may pull `latest` and fail on Node 20 — use the pinned install above, or:
+
+```bash
+npx wrangler@4.86.0 deploy --config wrangler.toml
 ```
 
 Use `--config wrangler.toml` so Wrangler does not pick up the parent [`../wrangler.jsonc`](../wrangler.jsonc), which bundles the whole site as static assets (and will fail on `node_modules`).

@@ -14,23 +14,7 @@
       ],
       "answer": 0,
       "explain": "Circulate MSB into LSB.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_easy_01.mp4",
-        "poster": "media/images/ring_easy_01-frame.png",
-        "figure": "media/images/ring_easy_01.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "ring_easy_02",
@@ -44,23 +28,7 @@
       ],
       "answer": 0,
       "explain": "Twisted ring: ~q[MSB].",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_easy_02.mp4",
-        "poster": "media/images/ring_easy_02-frame.png",
-        "figure": "media/images/ring_easy_02.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "ring_easy_03",
@@ -74,23 +42,7 @@
       ],
       "answer": 0,
       "explain": "One-hot walks (direction per wiring); starter shows 0010.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_easy_03.mp4",
-        "poster": "media/images/ring_easy_03-frame.png",
-        "figure": "media/images/ring_easy_03.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "ring_easy_04",
@@ -98,767 +50,7 @@
       "prompt": "All-zero is a great init for a ring counter.",
       "answer": false,
       "explain": "Johnson period 2N; ring needs valid one-hot — all-zero can lock.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_easy_04.mp4",
-        "poster": "media/images/ring_easy_04-frame.png",
-        "figure": "media/images/ring_easy_04.png"
-      }
-    },
-    {
-      "id": "ring_easy_05",
-      "type": "multiple_choice",
-      "prompt": "Ring counter feedback (4-bit) is…",
-      "choices": [
-        "q[MSB] fed into q0",
-        "~q[MSB] fed into q0",
-        "Always 1",
-        "No feedback"
-      ],
-      "answer": 0,
-      "explain": "Circulate MSB into LSB.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_easy_05.mp4",
-        "poster": "media/images/ring_easy_05-frame.png",
-        "figure": "media/images/ring_easy_05.png"
-      }
-    },
-    {
-      "id": "ring_easy_06",
-      "type": "multiple_choice",
-      "prompt": "Twisted-ring feedback uses…",
-      "choices": [
-        "Inverted MSB into q0",
-        "MSB unchanged into q0",
-        "XOR of all bits",
-        "Async reset only"
-      ],
-      "answer": 0,
-      "explain": "Twisted ring: ~q[MSB].",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_easy_06.mp4",
-        "poster": "media/images/ring_easy_06-frame.png",
-        "figure": "media/images/ring_easy_06.png"
-      }
-    },
-    {
-      "id": "ring_easy_07",
-      "type": "multiple_choice",
-      "prompt": "After one ring shift from 0001…",
-      "choices": [
-        "0010",
-        "0001",
-        "1000",
-        "1111"
-      ],
-      "answer": 0,
-      "explain": "One-hot walks (direction per wiring); starter shows 0010.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_easy_07.mp4",
-        "poster": "media/images/ring_easy_07-frame.png",
-        "figure": "media/images/ring_easy_07.png"
-      }
-    },
-    {
-      "id": "ring_easy_08",
-      "type": "true_false",
-      "prompt": "All-zero is a great init for a ring counter.",
-      "answer": false,
-      "explain": "Johnson period 2N; ring needs valid one-hot — all-zero can lock.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_easy_08.mp4",
-        "poster": "media/images/ring_easy_08-frame.png",
-        "figure": "media/images/ring_easy_08.png"
-      }
-    },
-    {
-      "id": "ring_easy_09",
-      "type": "multiple_choice",
-      "prompt": "Ring counter feedback (4-bit) is…",
-      "choices": [
-        "q[MSB] fed into q0",
-        "~q[MSB] fed into q0",
-        "Always 1",
-        "No feedback"
-      ],
-      "answer": 0,
-      "explain": "Circulate MSB into LSB.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_easy_09.mp4",
-        "poster": "media/images/ring_easy_09-frame.png",
-        "figure": "media/images/ring_easy_09.png"
-      }
-    },
-    {
-      "id": "ring_easy_10",
-      "type": "multiple_choice",
-      "prompt": "Twisted-ring feedback uses…",
-      "choices": [
-        "Inverted MSB into q0",
-        "MSB unchanged into q0",
-        "XOR of all bits",
-        "Async reset only"
-      ],
-      "answer": 0,
-      "explain": "Twisted ring: ~q[MSB].",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_easy_10.mp4",
-        "poster": "media/images/ring_easy_10-frame.png",
-        "figure": "media/images/ring_easy_10.png"
-      }
-    },
-    {
-      "id": "ring_easy_11",
-      "type": "multiple_choice",
-      "prompt": "After one ring shift from 0001…",
-      "choices": [
-        "0010",
-        "0001",
-        "1000",
-        "1111"
-      ],
-      "answer": 0,
-      "explain": "One-hot walks (direction per wiring); starter shows 0010.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_easy_11.mp4",
-        "poster": "media/images/ring_easy_11-frame.png",
-        "figure": "media/images/ring_easy_11.png"
-      }
-    },
-    {
-      "id": "ring_easy_12",
-      "type": "true_false",
-      "prompt": "All-zero is a great init for a ring counter.",
-      "answer": false,
-      "explain": "Johnson period 2N; ring needs valid one-hot — all-zero can lock.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_easy_12.mp4",
-        "poster": "media/images/ring_easy_12-frame.png",
-        "figure": "media/images/ring_easy_12.png"
-      }
-    },
-    {
-      "id": "ring_easy_13",
-      "type": "multiple_choice",
-      "prompt": "Ring counter feedback (4-bit) is…",
-      "choices": [
-        "q[MSB] fed into q0",
-        "~q[MSB] fed into q0",
-        "Always 1",
-        "No feedback"
-      ],
-      "answer": 0,
-      "explain": "Circulate MSB into LSB.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_easy_13.mp4",
-        "poster": "media/images/ring_easy_13-frame.png",
-        "figure": "media/images/ring_easy_13.png"
-      }
-    },
-    {
-      "id": "ring_easy_14",
-      "type": "multiple_choice",
-      "prompt": "Twisted-ring feedback uses…",
-      "choices": [
-        "Inverted MSB into q0",
-        "MSB unchanged into q0",
-        "XOR of all bits",
-        "Async reset only"
-      ],
-      "answer": 0,
-      "explain": "Twisted ring: ~q[MSB].",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_easy_14.mp4",
-        "poster": "media/images/ring_easy_14-frame.png",
-        "figure": "media/images/ring_easy_14.png"
-      }
-    },
-    {
-      "id": "ring_easy_15",
-      "type": "multiple_choice",
-      "prompt": "After one ring shift from 0001…",
-      "choices": [
-        "0010",
-        "0001",
-        "1000",
-        "1111"
-      ],
-      "answer": 0,
-      "explain": "One-hot walks (direction per wiring); starter shows 0010.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_easy_15.mp4",
-        "poster": "media/images/ring_easy_15-frame.png",
-        "figure": "media/images/ring_easy_15.png"
-      }
-    },
-    {
-      "id": "ring_easy_16",
-      "type": "true_false",
-      "prompt": "All-zero is a great init for a ring counter.",
-      "answer": false,
-      "explain": "Johnson period 2N; ring needs valid one-hot — all-zero can lock.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_easy_16.mp4",
-        "poster": "media/images/ring_easy_16-frame.png",
-        "figure": "media/images/ring_easy_16.png"
-      }
-    },
-    {
-      "id": "ring_easy_17",
-      "type": "multiple_choice",
-      "prompt": "Ring counter feedback (4-bit) is…",
-      "choices": [
-        "q[MSB] fed into q0",
-        "~q[MSB] fed into q0",
-        "Always 1",
-        "No feedback"
-      ],
-      "answer": 0,
-      "explain": "Circulate MSB into LSB.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_easy_17.mp4",
-        "poster": "media/images/ring_easy_17-frame.png",
-        "figure": "media/images/ring_easy_17.png"
-      }
-    },
-    {
-      "id": "ring_easy_18",
-      "type": "multiple_choice",
-      "prompt": "Twisted-ring feedback uses…",
-      "choices": [
-        "Inverted MSB into q0",
-        "MSB unchanged into q0",
-        "XOR of all bits",
-        "Async reset only"
-      ],
-      "answer": 0,
-      "explain": "Twisted ring: ~q[MSB].",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_easy_18.mp4",
-        "poster": "media/images/ring_easy_18-frame.png",
-        "figure": "media/images/ring_easy_18.png"
-      }
-    },
-    {
-      "id": "ring_easy_19",
-      "type": "multiple_choice",
-      "prompt": "After one ring shift from 0001…",
-      "choices": [
-        "0010",
-        "0001",
-        "1000",
-        "1111"
-      ],
-      "answer": 0,
-      "explain": "One-hot walks (direction per wiring); starter shows 0010.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_easy_19.mp4",
-        "poster": "media/images/ring_easy_19-frame.png",
-        "figure": "media/images/ring_easy_19.png"
-      }
-    },
-    {
-      "id": "ring_easy_20",
-      "type": "true_false",
-      "prompt": "All-zero is a great init for a ring counter.",
-      "answer": false,
-      "explain": "Johnson period 2N; ring needs valid one-hot — all-zero can lock.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_easy_20.mp4",
-        "poster": "media/images/ring_easy_20-frame.png",
-        "figure": "media/images/ring_easy_20.png"
-      }
-    },
-    {
-      "id": "ring_easy_21",
-      "type": "multiple_choice",
-      "prompt": "Ring counter feedback (4-bit) is…",
-      "choices": [
-        "q[MSB] fed into q0",
-        "~q[MSB] fed into q0",
-        "Always 1",
-        "No feedback"
-      ],
-      "answer": 0,
-      "explain": "Circulate MSB into LSB.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_easy_21.mp4",
-        "poster": "media/images/ring_easy_21-frame.png",
-        "figure": "media/images/ring_easy_21.png"
-      }
-    },
-    {
-      "id": "ring_easy_22",
-      "type": "multiple_choice",
-      "prompt": "Twisted-ring feedback uses…",
-      "choices": [
-        "Inverted MSB into q0",
-        "MSB unchanged into q0",
-        "XOR of all bits",
-        "Async reset only"
-      ],
-      "answer": 0,
-      "explain": "Twisted ring: ~q[MSB].",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_easy_22.mp4",
-        "poster": "media/images/ring_easy_22-frame.png",
-        "figure": "media/images/ring_easy_22.png"
-      }
-    },
-    {
-      "id": "ring_easy_23",
-      "type": "multiple_choice",
-      "prompt": "After one ring shift from 0001…",
-      "choices": [
-        "0010",
-        "0001",
-        "1000",
-        "1111"
-      ],
-      "answer": 0,
-      "explain": "One-hot walks (direction per wiring); starter shows 0010.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_easy_23.mp4",
-        "poster": "media/images/ring_easy_23-frame.png",
-        "figure": "media/images/ring_easy_23.png"
-      }
-    },
-    {
-      "id": "ring_easy_24",
-      "type": "true_false",
-      "prompt": "All-zero is a great init for a ring counter.",
-      "answer": false,
-      "explain": "Johnson period 2N; ring needs valid one-hot — all-zero can lock.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_easy_24.mp4",
-        "poster": "media/images/ring_easy_24-frame.png",
-        "figure": "media/images/ring_easy_24.png"
-      }
-    },
-    {
-      "id": "ring_easy_25",
-      "type": "multiple_choice",
-      "prompt": "Ring counter feedback (4-bit) is…",
-      "choices": [
-        "q[MSB] fed into q0",
-        "~q[MSB] fed into q0",
-        "Always 1",
-        "No feedback"
-      ],
-      "answer": 0,
-      "explain": "Circulate MSB into LSB.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_easy_25.mp4",
-        "poster": "media/images/ring_easy_25-frame.png",
-        "figure": "media/images/ring_easy_25.png"
-      }
-    },
-    {
-      "id": "ring_easy_26",
-      "type": "multiple_choice",
-      "prompt": "Twisted-ring feedback uses…",
-      "choices": [
-        "Inverted MSB into q0",
-        "MSB unchanged into q0",
-        "XOR of all bits",
-        "Async reset only"
-      ],
-      "answer": 0,
-      "explain": "Twisted ring: ~q[MSB].",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_easy_26.mp4",
-        "poster": "media/images/ring_easy_26-frame.png",
-        "figure": "media/images/ring_easy_26.png"
-      }
-    },
-    {
-      "id": "ring_easy_27",
-      "type": "multiple_choice",
-      "prompt": "After one ring shift from 0001…",
-      "choices": [
-        "0010",
-        "0001",
-        "1000",
-        "1111"
-      ],
-      "answer": 0,
-      "explain": "One-hot walks (direction per wiring); starter shows 0010.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_easy_27.mp4",
-        "poster": "media/images/ring_easy_27-frame.png",
-        "figure": "media/images/ring_easy_27.png"
-      }
-    },
-    {
-      "id": "ring_easy_28",
-      "type": "true_false",
-      "prompt": "All-zero is a great init for a ring counter.",
-      "answer": false,
-      "explain": "Johnson period 2N; ring needs valid one-hot — all-zero can lock.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_easy_28.mp4",
-        "poster": "media/images/ring_easy_28-frame.png",
-        "figure": "media/images/ring_easy_28.png"
-      }
-    },
-    {
-      "id": "ring_easy_29",
-      "type": "multiple_choice",
-      "prompt": "Ring counter feedback (4-bit) is…",
-      "choices": [
-        "q[MSB] fed into q0",
-        "~q[MSB] fed into q0",
-        "Always 1",
-        "No feedback"
-      ],
-      "answer": 0,
-      "explain": "Circulate MSB into LSB.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_easy_29.mp4",
-        "poster": "media/images/ring_easy_29-frame.png",
-        "figure": "media/images/ring_easy_29.png"
-      }
-    },
-    {
-      "id": "ring_easy_30",
-      "type": "multiple_choice",
-      "prompt": "Twisted-ring feedback uses…",
-      "choices": [
-        "Inverted MSB into q0",
-        "MSB unchanged into q0",
-        "XOR of all bits",
-        "Async reset only"
-      ],
-      "answer": 0,
-      "explain": "Twisted ring: ~q[MSB].",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_easy_30.mp4",
-        "poster": "media/images/ring_easy_30-frame.png",
-        "figure": "media/images/ring_easy_30.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "ring_medium_01",
@@ -872,23 +64,7 @@
       ],
       "answer": 0,
       "explain": "No circulating 1 → stuck at zero.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_medium_01.mp4",
-        "poster": "media/images/ring_medium_01-frame.png",
-        "figure": "media/images/ring_medium_01.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "ring_medium_02",
@@ -902,23 +78,7 @@
       ],
       "answer": 0,
       "explain": "Circulate the single 1 around.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_medium_02.mp4",
-        "poster": "media/images/ring_medium_02-frame.png",
-        "figure": "media/images/ring_medium_02.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "ring_medium_03",
@@ -932,23 +92,7 @@
       ],
       "answer": 0,
       "explain": "Inversion doubles the tour versus plain ring.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_medium_03.mp4",
-        "poster": "media/images/ring_medium_03-frame.png",
-        "figure": "media/images/ring_medium_03.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "ring_medium_04",
@@ -956,767 +100,7 @@
       "prompt": "Johnson feedback is XOR of all bits like an LFSR.",
       "answer": false,
       "explain": "Johnson uses inverted MSB, not a full LFSR tap set.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_medium_04.mp4",
-        "poster": "media/images/ring_medium_04-frame.png",
-        "figure": "media/images/ring_medium_04.png"
-      }
-    },
-    {
-      "id": "ring_medium_05",
-      "type": "multiple_choice",
-      "prompt": "Why can all-zero lock a ring?",
-      "choices": [
-        "MSB feedback stays 0 so the register never leaves 0",
-        "It forces maximal LFSR period",
-        "It invents 2N states automatically",
-        "It disables shift enables forever legally"
-      ],
-      "answer": 0,
-      "explain": "No circulating 1 → stuck at zero.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_medium_05.mp4",
-        "poster": "media/images/ring_medium_05-frame.png",
-        "figure": "media/images/ring_medium_05.png"
-      }
-    },
-    {
-      "id": "ring_medium_06",
-      "type": "multiple_choice",
-      "prompt": "Full ring period listing starts 0001 then…",
-      "choices": [
-        "0001, 0010, 0100, 1000 (then repeat)",
-        "Only 1111 forever",
-        "Random PRBS bits",
-        "Gray codes of length 2N"
-      ],
-      "answer": 0,
-      "explain": "Circulate the single 1 around.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_medium_06.mp4",
-        "poster": "media/images/ring_medium_06-frame.png",
-        "figure": "media/images/ring_medium_06.png"
-      }
-    },
-    {
-      "id": "ring_medium_07",
-      "type": "multiple_choice",
-      "prompt": "Twisted ring state count on the main cycle is…",
-      "choices": [
-        "2N distinct states in the main cycle",
-        "Exactly N states only",
-        "2^N − 1 always",
-        "Only one legal state"
-      ],
-      "answer": 0,
-      "explain": "Inversion doubles the tour versus plain ring.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_medium_07.mp4",
-        "poster": "media/images/ring_medium_07-frame.png",
-        "figure": "media/images/ring_medium_07.png"
-      }
-    },
-    {
-      "id": "ring_medium_08",
-      "type": "true_false",
-      "prompt": "Johnson feedback is XOR of all bits like an LFSR.",
-      "answer": false,
-      "explain": "Johnson uses inverted MSB, not a full LFSR tap set.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_medium_08.mp4",
-        "poster": "media/images/ring_medium_08-frame.png",
-        "figure": "media/images/ring_medium_08.png"
-      }
-    },
-    {
-      "id": "ring_medium_09",
-      "type": "multiple_choice",
-      "prompt": "Why can all-zero lock a ring?",
-      "choices": [
-        "MSB feedback stays 0 so the register never leaves 0",
-        "It forces maximal LFSR period",
-        "It invents 2N states automatically",
-        "It disables shift enables forever legally"
-      ],
-      "answer": 0,
-      "explain": "No circulating 1 → stuck at zero.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_medium_09.mp4",
-        "poster": "media/images/ring_medium_09-frame.png",
-        "figure": "media/images/ring_medium_09.png"
-      }
-    },
-    {
-      "id": "ring_medium_10",
-      "type": "multiple_choice",
-      "prompt": "Full ring period listing starts 0001 then…",
-      "choices": [
-        "0001, 0010, 0100, 1000 (then repeat)",
-        "Only 1111 forever",
-        "Random PRBS bits",
-        "Gray codes of length 2N"
-      ],
-      "answer": 0,
-      "explain": "Circulate the single 1 around.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_medium_10.mp4",
-        "poster": "media/images/ring_medium_10-frame.png",
-        "figure": "media/images/ring_medium_10.png"
-      }
-    },
-    {
-      "id": "ring_medium_11",
-      "type": "multiple_choice",
-      "prompt": "Twisted ring state count on the main cycle is…",
-      "choices": [
-        "2N distinct states in the main cycle",
-        "Exactly N states only",
-        "2^N − 1 always",
-        "Only one legal state"
-      ],
-      "answer": 0,
-      "explain": "Inversion doubles the tour versus plain ring.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_medium_11.mp4",
-        "poster": "media/images/ring_medium_11-frame.png",
-        "figure": "media/images/ring_medium_11.png"
-      }
-    },
-    {
-      "id": "ring_medium_12",
-      "type": "true_false",
-      "prompt": "Johnson feedback is XOR of all bits like an LFSR.",
-      "answer": false,
-      "explain": "Johnson uses inverted MSB, not a full LFSR tap set.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_medium_12.mp4",
-        "poster": "media/images/ring_medium_12-frame.png",
-        "figure": "media/images/ring_medium_12.png"
-      }
-    },
-    {
-      "id": "ring_medium_13",
-      "type": "multiple_choice",
-      "prompt": "Why can all-zero lock a ring?",
-      "choices": [
-        "MSB feedback stays 0 so the register never leaves 0",
-        "It forces maximal LFSR period",
-        "It invents 2N states automatically",
-        "It disables shift enables forever legally"
-      ],
-      "answer": 0,
-      "explain": "No circulating 1 → stuck at zero.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_medium_13.mp4",
-        "poster": "media/images/ring_medium_13-frame.png",
-        "figure": "media/images/ring_medium_13.png"
-      }
-    },
-    {
-      "id": "ring_medium_14",
-      "type": "multiple_choice",
-      "prompt": "Full ring period listing starts 0001 then…",
-      "choices": [
-        "0001, 0010, 0100, 1000 (then repeat)",
-        "Only 1111 forever",
-        "Random PRBS bits",
-        "Gray codes of length 2N"
-      ],
-      "answer": 0,
-      "explain": "Circulate the single 1 around.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_medium_14.mp4",
-        "poster": "media/images/ring_medium_14-frame.png",
-        "figure": "media/images/ring_medium_14.png"
-      }
-    },
-    {
-      "id": "ring_medium_15",
-      "type": "multiple_choice",
-      "prompt": "Twisted ring state count on the main cycle is…",
-      "choices": [
-        "2N distinct states in the main cycle",
-        "Exactly N states only",
-        "2^N − 1 always",
-        "Only one legal state"
-      ],
-      "answer": 0,
-      "explain": "Inversion doubles the tour versus plain ring.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_medium_15.mp4",
-        "poster": "media/images/ring_medium_15-frame.png",
-        "figure": "media/images/ring_medium_15.png"
-      }
-    },
-    {
-      "id": "ring_medium_16",
-      "type": "true_false",
-      "prompt": "Johnson feedback is XOR of all bits like an LFSR.",
-      "answer": false,
-      "explain": "Johnson uses inverted MSB, not a full LFSR tap set.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_medium_16.mp4",
-        "poster": "media/images/ring_medium_16-frame.png",
-        "figure": "media/images/ring_medium_16.png"
-      }
-    },
-    {
-      "id": "ring_medium_17",
-      "type": "multiple_choice",
-      "prompt": "Why can all-zero lock a ring?",
-      "choices": [
-        "MSB feedback stays 0 so the register never leaves 0",
-        "It forces maximal LFSR period",
-        "It invents 2N states automatically",
-        "It disables shift enables forever legally"
-      ],
-      "answer": 0,
-      "explain": "No circulating 1 → stuck at zero.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_medium_17.mp4",
-        "poster": "media/images/ring_medium_17-frame.png",
-        "figure": "media/images/ring_medium_17.png"
-      }
-    },
-    {
-      "id": "ring_medium_18",
-      "type": "multiple_choice",
-      "prompt": "Full ring period listing starts 0001 then…",
-      "choices": [
-        "0001, 0010, 0100, 1000 (then repeat)",
-        "Only 1111 forever",
-        "Random PRBS bits",
-        "Gray codes of length 2N"
-      ],
-      "answer": 0,
-      "explain": "Circulate the single 1 around.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_medium_18.mp4",
-        "poster": "media/images/ring_medium_18-frame.png",
-        "figure": "media/images/ring_medium_18.png"
-      }
-    },
-    {
-      "id": "ring_medium_19",
-      "type": "multiple_choice",
-      "prompt": "Twisted ring state count on the main cycle is…",
-      "choices": [
-        "2N distinct states in the main cycle",
-        "Exactly N states only",
-        "2^N − 1 always",
-        "Only one legal state"
-      ],
-      "answer": 0,
-      "explain": "Inversion doubles the tour versus plain ring.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_medium_19.mp4",
-        "poster": "media/images/ring_medium_19-frame.png",
-        "figure": "media/images/ring_medium_19.png"
-      }
-    },
-    {
-      "id": "ring_medium_20",
-      "type": "true_false",
-      "prompt": "Johnson feedback is XOR of all bits like an LFSR.",
-      "answer": false,
-      "explain": "Johnson uses inverted MSB, not a full LFSR tap set.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_medium_20.mp4",
-        "poster": "media/images/ring_medium_20-frame.png",
-        "figure": "media/images/ring_medium_20.png"
-      }
-    },
-    {
-      "id": "ring_medium_21",
-      "type": "multiple_choice",
-      "prompt": "Why can all-zero lock a ring?",
-      "choices": [
-        "MSB feedback stays 0 so the register never leaves 0",
-        "It forces maximal LFSR period",
-        "It invents 2N states automatically",
-        "It disables shift enables forever legally"
-      ],
-      "answer": 0,
-      "explain": "No circulating 1 → stuck at zero.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_medium_21.mp4",
-        "poster": "media/images/ring_medium_21-frame.png",
-        "figure": "media/images/ring_medium_21.png"
-      }
-    },
-    {
-      "id": "ring_medium_22",
-      "type": "multiple_choice",
-      "prompt": "Full ring period listing starts 0001 then…",
-      "choices": [
-        "0001, 0010, 0100, 1000 (then repeat)",
-        "Only 1111 forever",
-        "Random PRBS bits",
-        "Gray codes of length 2N"
-      ],
-      "answer": 0,
-      "explain": "Circulate the single 1 around.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_medium_22.mp4",
-        "poster": "media/images/ring_medium_22-frame.png",
-        "figure": "media/images/ring_medium_22.png"
-      }
-    },
-    {
-      "id": "ring_medium_23",
-      "type": "multiple_choice",
-      "prompt": "Twisted ring state count on the main cycle is…",
-      "choices": [
-        "2N distinct states in the main cycle",
-        "Exactly N states only",
-        "2^N − 1 always",
-        "Only one legal state"
-      ],
-      "answer": 0,
-      "explain": "Inversion doubles the tour versus plain ring.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_medium_23.mp4",
-        "poster": "media/images/ring_medium_23-frame.png",
-        "figure": "media/images/ring_medium_23.png"
-      }
-    },
-    {
-      "id": "ring_medium_24",
-      "type": "true_false",
-      "prompt": "Johnson feedback is XOR of all bits like an LFSR.",
-      "answer": false,
-      "explain": "Johnson uses inverted MSB, not a full LFSR tap set.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_medium_24.mp4",
-        "poster": "media/images/ring_medium_24-frame.png",
-        "figure": "media/images/ring_medium_24.png"
-      }
-    },
-    {
-      "id": "ring_medium_25",
-      "type": "multiple_choice",
-      "prompt": "Why can all-zero lock a ring?",
-      "choices": [
-        "MSB feedback stays 0 so the register never leaves 0",
-        "It forces maximal LFSR period",
-        "It invents 2N states automatically",
-        "It disables shift enables forever legally"
-      ],
-      "answer": 0,
-      "explain": "No circulating 1 → stuck at zero.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_medium_25.mp4",
-        "poster": "media/images/ring_medium_25-frame.png",
-        "figure": "media/images/ring_medium_25.png"
-      }
-    },
-    {
-      "id": "ring_medium_26",
-      "type": "multiple_choice",
-      "prompt": "Full ring period listing starts 0001 then…",
-      "choices": [
-        "0001, 0010, 0100, 1000 (then repeat)",
-        "Only 1111 forever",
-        "Random PRBS bits",
-        "Gray codes of length 2N"
-      ],
-      "answer": 0,
-      "explain": "Circulate the single 1 around.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_medium_26.mp4",
-        "poster": "media/images/ring_medium_26-frame.png",
-        "figure": "media/images/ring_medium_26.png"
-      }
-    },
-    {
-      "id": "ring_medium_27",
-      "type": "multiple_choice",
-      "prompt": "Twisted ring state count on the main cycle is…",
-      "choices": [
-        "2N distinct states in the main cycle",
-        "Exactly N states only",
-        "2^N − 1 always",
-        "Only one legal state"
-      ],
-      "answer": 0,
-      "explain": "Inversion doubles the tour versus plain ring.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_medium_27.mp4",
-        "poster": "media/images/ring_medium_27-frame.png",
-        "figure": "media/images/ring_medium_27.png"
-      }
-    },
-    {
-      "id": "ring_medium_28",
-      "type": "true_false",
-      "prompt": "Johnson feedback is XOR of all bits like an LFSR.",
-      "answer": false,
-      "explain": "Johnson uses inverted MSB, not a full LFSR tap set.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_medium_28.mp4",
-        "poster": "media/images/ring_medium_28-frame.png",
-        "figure": "media/images/ring_medium_28.png"
-      }
-    },
-    {
-      "id": "ring_medium_29",
-      "type": "multiple_choice",
-      "prompt": "Why can all-zero lock a ring?",
-      "choices": [
-        "MSB feedback stays 0 so the register never leaves 0",
-        "It forces maximal LFSR period",
-        "It invents 2N states automatically",
-        "It disables shift enables forever legally"
-      ],
-      "answer": 0,
-      "explain": "No circulating 1 → stuck at zero.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_medium_29.mp4",
-        "poster": "media/images/ring_medium_29-frame.png",
-        "figure": "media/images/ring_medium_29.png"
-      }
-    },
-    {
-      "id": "ring_medium_30",
-      "type": "multiple_choice",
-      "prompt": "Full ring period listing starts 0001 then…",
-      "choices": [
-        "0001, 0010, 0100, 1000 (then repeat)",
-        "Only 1111 forever",
-        "Random PRBS bits",
-        "Gray codes of length 2N"
-      ],
-      "answer": 0,
-      "explain": "Circulate the single 1 around.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_medium_30.mp4",
-        "poster": "media/images/ring_medium_30-frame.png",
-        "figure": "media/images/ring_medium_30.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "ring_hard_01",
@@ -1730,23 +114,7 @@
       ],
       "answer": 0,
       "explain": "Handle illegal states and reset correctly.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_hard_01.mp4",
-        "poster": "media/images/ring_hard_01-frame.png",
-        "figure": "media/images/ring_hard_01.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "ring_hard_02",
@@ -1760,23 +128,7 @@
       ],
       "answer": 0,
       "explain": "Invert or not on the recirculating bit.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_hard_02.mp4",
-        "poster": "media/images/ring_hard_02-frame.png",
-        "figure": "media/images/ring_hard_02.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "ring_hard_03",
@@ -1790,23 +142,7 @@
       ],
       "answer": 0,
       "explain": "Ring ~N; Johnson ~2N for width N.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_hard_03.mp4",
-        "poster": "media/images/ring_hard_03-frame.png",
-        "figure": "media/images/ring_hard_03.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "ring_hard_04",
@@ -1814,767 +150,1027 @@
       "prompt": "Feedback box: plain q[MSB] for ring, not-q[MSB] for Johnson.",
       "answer": true,
       "explain": "All-zero ring stays locked without a circulating 1.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_hard_04.mp4",
-        "poster": "media/images/ring_hard_04-frame.png",
-        "figure": "media/images/ring_hard_04.png"
-      }
+      "difficulty": "hard"
     },
     {
-      "id": "ring_hard_05",
       "type": "multiple_choice",
-      "prompt": "Illegal states without recovery are a pitfall because…",
+      "prompt": "Minimum bits to encode 2 states (binary) is…",
       "choices": [
-        "The machine can lock or wander off the intended cycle",
-        "Period becomes exactly 2^N − 1 always",
-        "CDC becomes free",
-        "Clocks become optional"
+        "2",
+        "1",
+        "4",
+        "1"
       ],
-      "answer": 0,
-      "explain": "Handle illegal states and reset correctly.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_hard_05.mp4",
-        "poster": "media/images/ring_hard_05-frame.png",
-        "figure": "media/images/ring_hard_05.png"
-      }
+      "answer": 1,
+      "explain": "ceil(log2(2)) = 1.",
+      "difficulty": "easy",
+      "id": "ring_easy_05"
     },
     {
-      "id": "ring_hard_06",
       "type": "multiple_choice",
-      "prompt": "always shift with feedback: ring uses…",
+      "prompt": "One-hot encoding of 2 states uses how many FFs?",
       "choices": [
-        "q0<=q[MSB] vs q0<=~q[MSB]",
-        "Both use XOR of all taps identically",
-        "Both require gated clocks",
-        "Both forbid shift registers"
+        "1",
+        "2",
+        "4",
+        "1"
       ],
-      "answer": 0,
-      "explain": "Invert or not on the recirculating bit.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_hard_06.mp4",
-        "poster": "media/images/ring_hard_06-frame.png",
-        "figure": "media/images/ring_hard_06.png"
-      }
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "easy",
+      "id": "ring_easy_06"
     },
     {
-      "id": "ring_hard_07",
       "type": "multiple_choice",
-      "prompt": "2N for N=5 equals…",
+      "prompt": "Minimum bits to encode 3 states (binary) is…",
       "choices": [
-        "10",
-        "6",
+        "3",
+        "2",
         "8",
         "2"
       ],
-      "answer": 0,
-      "explain": "Ring ~N; Johnson ~2N for width N.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_hard_07.mp4",
-        "poster": "media/images/ring_hard_07-frame.png",
-        "figure": "media/images/ring_hard_07.png"
-      }
+      "answer": 1,
+      "explain": "ceil(log2(3)) = 2.",
+      "difficulty": "easy",
+      "id": "ring_easy_07"
     },
     {
-      "id": "ring_hard_08",
-      "type": "true_false",
-      "prompt": "Feedback box: plain q[MSB] for ring, not-q[MSB] for Johnson.",
-      "answer": true,
-      "explain": "All-zero ring stays locked without a circulating 1.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_hard_08.mp4",
-        "poster": "media/images/ring_hard_08-frame.png",
-        "figure": "media/images/ring_hard_08.png"
-      }
-    },
-    {
-      "id": "ring_hard_09",
       "type": "multiple_choice",
-      "prompt": "Illegal states without recovery are a pitfall because…",
+      "prompt": "One-hot encoding of 3 states uses how many FFs?",
       "choices": [
-        "The machine can lock or wander off the intended cycle",
-        "Period becomes exactly 2^N − 1 always",
-        "CDC becomes free",
-        "Clocks become optional"
-      ],
-      "answer": 0,
-      "explain": "Handle illegal states and reset correctly.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_hard_09.mp4",
-        "poster": "media/images/ring_hard_09-frame.png",
-        "figure": "media/images/ring_hard_09.png"
-      }
-    },
-    {
-      "id": "ring_hard_10",
-      "type": "multiple_choice",
-      "prompt": "always shift with feedback: ring uses…",
-      "choices": [
-        "q0<=q[MSB] vs q0<=~q[MSB]",
-        "Both use XOR of all taps identically",
-        "Both require gated clocks",
-        "Both forbid shift registers"
-      ],
-      "answer": 0,
-      "explain": "Invert or not on the recirculating bit.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_hard_10.mp4",
-        "poster": "media/images/ring_hard_10-frame.png",
-        "figure": "media/images/ring_hard_10.png"
-      }
-    },
-    {
-      "id": "ring_hard_11",
-      "type": "multiple_choice",
-      "prompt": "2N for N=5 equals…",
-      "choices": [
-        "10",
+        "2",
+        "3",
         "6",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "easy",
+      "id": "ring_easy_08"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Minimum bits to encode 4 states (binary) is…",
+      "choices": [
+        "4",
+        "2",
+        "16",
+        "3"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(4)) = 2.",
+      "difficulty": "easy",
+      "id": "ring_easy_09"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "One-hot encoding of 4 states uses how many FFs?",
+      "choices": [
+        "2",
+        "4",
+        "8",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "easy",
+      "id": "ring_easy_10"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Minimum bits to encode 5 states (binary) is…",
+      "choices": [
+        "5",
+        "3",
+        "32",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(5)) = 3.",
+      "difficulty": "easy",
+      "id": "ring_easy_11"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "One-hot encoding of 5 states uses how many FFs?",
+      "choices": [
+        "3",
+        "5",
+        "10",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "easy",
+      "id": "ring_easy_12"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Minimum bits to encode 6 states (binary) is…",
+      "choices": [
+        "6",
+        "3",
+        "64",
+        "5"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(6)) = 3.",
+      "difficulty": "easy",
+      "id": "ring_easy_13"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "One-hot encoding of 6 states uses how many FFs?",
+      "choices": [
+        "3",
+        "6",
+        "12",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "easy",
+      "id": "ring_easy_14"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Minimum bits to encode 7 states (binary) is…",
+      "choices": [
+        "7",
+        "3",
+        "128",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(7)) = 3.",
+      "difficulty": "easy",
+      "id": "ring_easy_15"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "One-hot encoding of 7 states uses how many FFs?",
+      "choices": [
+        "3",
+        "7",
+        "14",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "easy",
+      "id": "ring_easy_16"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Minimum bits to encode 8 states (binary) is…",
+      "choices": [
+        "8",
+        "3",
+        "256",
+        "7"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(8)) = 3.",
+      "difficulty": "easy",
+      "id": "ring_easy_17"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "One-hot encoding of 8 states uses how many FFs?",
+      "choices": [
+        "3",
+        "8",
+        "16",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "easy",
+      "id": "ring_easy_18"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Minimum bits to encode 9 states (binary) is…",
+      "choices": [
+        "9",
+        "4",
+        "512",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(9)) = 4.",
+      "difficulty": "easy",
+      "id": "ring_easy_19"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "One-hot encoding of 9 states uses how many FFs?",
+      "choices": [
+        "4",
+        "9",
+        "18",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "easy",
+      "id": "ring_easy_20"
+    },
+    {
+      "type": "true_false",
+      "prompt": "One-hot often simplifies next-state logic at the cost of more FFs.",
+      "answer": true,
+      "explain": "Common FPGA style.",
+      "difficulty": "easy",
+      "id": "ring_easy_21"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Illegal one-hot codes should be handled safely.",
+      "answer": true,
+      "explain": "Avoid lockup.",
+      "difficulty": "easy",
+      "id": "ring_easy_22"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Logical right shift of 0xA5 by 1 (8-bit) is…",
+      "choices": [
+        "0x4A",
+        "0x52",
+        "0xA5",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "Zero-fill from the left → 0x52.",
+      "difficulty": "easy",
+      "id": "ring_easy_23"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Logical right shift of 0x3C by 2 (8-bit) is…",
+      "choices": [
+        "0xF0",
+        "0x0F",
+        "0x3C",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "Zero-fill from the left → 0x0F.",
+      "difficulty": "easy",
+      "id": "ring_easy_24"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Logical right shift of 0xF0 by 1 (8-bit) is…",
+      "choices": [
+        "0xE0",
+        "0x78",
+        "0xF0",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "Zero-fill from the left → 0x78.",
+      "difficulty": "easy",
+      "id": "ring_easy_25"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Logical right shift of 0x01 by 3 (8-bit) is…",
+      "choices": [
+        "0x08",
+        "0x00",
+        "0x01",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "Zero-fill from the left → 0x00.",
+      "difficulty": "easy",
+      "id": "ring_easy_26"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Logical right shift of 0x80 by 1 (8-bit) is…",
+      "choices": [
+        "0x00",
+        "0x40",
+        "0x80",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "Zero-fill from the left → 0x40.",
+      "difficulty": "easy",
+      "id": "ring_easy_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Logical right shift of 0x7E by 2 (8-bit) is…",
+      "choices": [
+        "0xF8",
+        "0x1F",
+        "0x7E",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "Zero-fill from the left → 0x1F.",
+      "difficulty": "easy",
+      "id": "ring_easy_28"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Arithmetic right shift replicates the sign bit.",
+      "answer": true,
+      "explain": "SRA sign-fills.",
+      "difficulty": "easy",
+      "id": "ring_easy_29"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Rotate moves bits with wraparound and no fill loss.",
+      "answer": true,
+      "explain": "ROL/ROR.",
+      "difficulty": "easy",
+      "id": "ring_easy_30"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Minimum bits to encode 2 states (binary) is…",
+      "choices": [
+        "2",
+        "1",
+        "4",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(2)) = 1.",
+      "difficulty": "medium",
+      "id": "ring_medium_05"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "One-hot encoding of 2 states uses how many FFs?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "medium",
+      "id": "ring_medium_06"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Minimum bits to encode 3 states (binary) is…",
+      "choices": [
+        "3",
+        "2",
         "8",
         "2"
       ],
-      "answer": 0,
-      "explain": "Ring ~N; Johnson ~2N for width N.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_hard_11.mp4",
-        "poster": "media/images/ring_hard_11-frame.png",
-        "figure": "media/images/ring_hard_11.png"
-      }
+      "answer": 1,
+      "explain": "ceil(log2(3)) = 2.",
+      "difficulty": "medium",
+      "id": "ring_medium_07"
     },
     {
-      "id": "ring_hard_12",
-      "type": "true_false",
-      "prompt": "Feedback box: plain q[MSB] for ring, not-q[MSB] for Johnson.",
-      "answer": true,
-      "explain": "All-zero ring stays locked without a circulating 1.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_hard_12.mp4",
-        "poster": "media/images/ring_hard_12-frame.png",
-        "figure": "media/images/ring_hard_12.png"
-      }
-    },
-    {
-      "id": "ring_hard_13",
       "type": "multiple_choice",
-      "prompt": "Illegal states without recovery are a pitfall because…",
+      "prompt": "One-hot encoding of 3 states uses how many FFs?",
       "choices": [
-        "The machine can lock or wander off the intended cycle",
-        "Period becomes exactly 2^N − 1 always",
-        "CDC becomes free",
-        "Clocks become optional"
-      ],
-      "answer": 0,
-      "explain": "Handle illegal states and reset correctly.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_hard_13.mp4",
-        "poster": "media/images/ring_hard_13-frame.png",
-        "figure": "media/images/ring_hard_13.png"
-      }
-    },
-    {
-      "id": "ring_hard_14",
-      "type": "multiple_choice",
-      "prompt": "always shift with feedback: ring uses…",
-      "choices": [
-        "q0<=q[MSB] vs q0<=~q[MSB]",
-        "Both use XOR of all taps identically",
-        "Both require gated clocks",
-        "Both forbid shift registers"
-      ],
-      "answer": 0,
-      "explain": "Invert or not on the recirculating bit.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_hard_14.mp4",
-        "poster": "media/images/ring_hard_14-frame.png",
-        "figure": "media/images/ring_hard_14.png"
-      }
-    },
-    {
-      "id": "ring_hard_15",
-      "type": "multiple_choice",
-      "prompt": "2N for N=5 equals…",
-      "choices": [
-        "10",
+        "2",
+        "3",
         "6",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "medium",
+      "id": "ring_medium_08"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Minimum bits to encode 4 states (binary) is…",
+      "choices": [
+        "4",
+        "2",
+        "16",
+        "3"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(4)) = 2.",
+      "difficulty": "medium",
+      "id": "ring_medium_09"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "One-hot encoding of 4 states uses how many FFs?",
+      "choices": [
+        "2",
+        "4",
+        "8",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "medium",
+      "id": "ring_medium_10"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Minimum bits to encode 5 states (binary) is…",
+      "choices": [
+        "5",
+        "3",
+        "32",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(5)) = 3.",
+      "difficulty": "medium",
+      "id": "ring_medium_11"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "One-hot encoding of 5 states uses how many FFs?",
+      "choices": [
+        "3",
+        "5",
+        "10",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "medium",
+      "id": "ring_medium_12"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Minimum bits to encode 6 states (binary) is…",
+      "choices": [
+        "6",
+        "3",
+        "64",
+        "5"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(6)) = 3.",
+      "difficulty": "medium",
+      "id": "ring_medium_13"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "One-hot encoding of 6 states uses how many FFs?",
+      "choices": [
+        "3",
+        "6",
+        "12",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "medium",
+      "id": "ring_medium_14"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Minimum bits to encode 7 states (binary) is…",
+      "choices": [
+        "7",
+        "3",
+        "128",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(7)) = 3.",
+      "difficulty": "medium",
+      "id": "ring_medium_15"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "One-hot encoding of 7 states uses how many FFs?",
+      "choices": [
+        "3",
+        "7",
+        "14",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "medium",
+      "id": "ring_medium_16"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Minimum bits to encode 8 states (binary) is…",
+      "choices": [
+        "8",
+        "3",
+        "256",
+        "7"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(8)) = 3.",
+      "difficulty": "medium",
+      "id": "ring_medium_17"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "One-hot encoding of 8 states uses how many FFs?",
+      "choices": [
+        "3",
+        "8",
+        "16",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "medium",
+      "id": "ring_medium_18"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Minimum bits to encode 9 states (binary) is…",
+      "choices": [
+        "9",
+        "4",
+        "512",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(9)) = 4.",
+      "difficulty": "medium",
+      "id": "ring_medium_19"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "One-hot encoding of 9 states uses how many FFs?",
+      "choices": [
+        "4",
+        "9",
+        "18",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "medium",
+      "id": "ring_medium_20"
+    },
+    {
+      "type": "true_false",
+      "prompt": "One-hot often simplifies next-state logic at the cost of more FFs.",
+      "answer": true,
+      "explain": "Common FPGA style.",
+      "difficulty": "medium",
+      "id": "ring_medium_21"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Illegal one-hot codes should be handled safely.",
+      "answer": true,
+      "explain": "Avoid lockup.",
+      "difficulty": "medium",
+      "id": "ring_medium_22"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Logical right shift of 0xA5 by 1 (8-bit) is…",
+      "choices": [
+        "0x4A",
+        "0x52",
+        "0xA5",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "Zero-fill from the left → 0x52.",
+      "difficulty": "medium",
+      "id": "ring_medium_23"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Logical right shift of 0x3C by 2 (8-bit) is…",
+      "choices": [
+        "0xF0",
+        "0x0F",
+        "0x3C",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "Zero-fill from the left → 0x0F.",
+      "difficulty": "medium",
+      "id": "ring_medium_24"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Logical right shift of 0xF0 by 1 (8-bit) is…",
+      "choices": [
+        "0xE0",
+        "0x78",
+        "0xF0",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "Zero-fill from the left → 0x78.",
+      "difficulty": "medium",
+      "id": "ring_medium_25"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Logical right shift of 0x01 by 3 (8-bit) is…",
+      "choices": [
+        "0x08",
+        "0x00",
+        "0x01",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "Zero-fill from the left → 0x00.",
+      "difficulty": "medium",
+      "id": "ring_medium_26"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Logical right shift of 0x80 by 1 (8-bit) is…",
+      "choices": [
+        "0x00",
+        "0x40",
+        "0x80",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "Zero-fill from the left → 0x40.",
+      "difficulty": "medium",
+      "id": "ring_medium_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Logical right shift of 0x7E by 2 (8-bit) is…",
+      "choices": [
+        "0xF8",
+        "0x1F",
+        "0x7E",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "Zero-fill from the left → 0x1F.",
+      "difficulty": "medium",
+      "id": "ring_medium_28"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Arithmetic right shift replicates the sign bit.",
+      "answer": true,
+      "explain": "SRA sign-fills.",
+      "difficulty": "medium",
+      "id": "ring_medium_29"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Rotate moves bits with wraparound and no fill loss.",
+      "answer": true,
+      "explain": "ROL/ROR.",
+      "difficulty": "medium",
+      "id": "ring_medium_30"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Minimum bits to encode 2 states (binary) is…",
+      "choices": [
+        "2",
+        "1",
+        "4",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(2)) = 1.",
+      "difficulty": "hard",
+      "id": "ring_hard_05"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "One-hot encoding of 2 states uses how many FFs?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "hard",
+      "id": "ring_hard_06"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Minimum bits to encode 3 states (binary) is…",
+      "choices": [
+        "3",
+        "2",
         "8",
         "2"
       ],
-      "answer": 0,
-      "explain": "Ring ~N; Johnson ~2N for width N.",
+      "answer": 1,
+      "explain": "ceil(log2(3)) = 2.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_hard_15.mp4",
-        "poster": "media/images/ring_hard_15-frame.png",
-        "figure": "media/images/ring_hard_15.png"
-      }
+      "id": "ring_hard_07"
     },
     {
-      "id": "ring_hard_16",
-      "type": "true_false",
-      "prompt": "Feedback box: plain q[MSB] for ring, not-q[MSB] for Johnson.",
-      "answer": true,
-      "explain": "All-zero ring stays locked without a circulating 1.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_hard_16.mp4",
-        "poster": "media/images/ring_hard_16-frame.png",
-        "figure": "media/images/ring_hard_16.png"
-      }
-    },
-    {
-      "id": "ring_hard_17",
       "type": "multiple_choice",
-      "prompt": "Illegal states without recovery are a pitfall because…",
+      "prompt": "One-hot encoding of 3 states uses how many FFs?",
       "choices": [
-        "The machine can lock or wander off the intended cycle",
-        "Period becomes exactly 2^N − 1 always",
-        "CDC becomes free",
-        "Clocks become optional"
-      ],
-      "answer": 0,
-      "explain": "Handle illegal states and reset correctly.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_hard_17.mp4",
-        "poster": "media/images/ring_hard_17-frame.png",
-        "figure": "media/images/ring_hard_17.png"
-      }
-    },
-    {
-      "id": "ring_hard_18",
-      "type": "multiple_choice",
-      "prompt": "always shift with feedback: ring uses…",
-      "choices": [
-        "q0<=q[MSB] vs q0<=~q[MSB]",
-        "Both use XOR of all taps identically",
-        "Both require gated clocks",
-        "Both forbid shift registers"
-      ],
-      "answer": 0,
-      "explain": "Invert or not on the recirculating bit.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_hard_18.mp4",
-        "poster": "media/images/ring_hard_18-frame.png",
-        "figure": "media/images/ring_hard_18.png"
-      }
-    },
-    {
-      "id": "ring_hard_19",
-      "type": "multiple_choice",
-      "prompt": "2N for N=5 equals…",
-      "choices": [
-        "10",
+        "2",
+        "3",
         "6",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "hard",
+      "id": "ring_hard_08"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Minimum bits to encode 4 states (binary) is…",
+      "choices": [
+        "4",
+        "2",
+        "16",
+        "3"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(4)) = 2.",
+      "difficulty": "hard",
+      "id": "ring_hard_09"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "One-hot encoding of 4 states uses how many FFs?",
+      "choices": [
+        "2",
+        "4",
         "8",
-        "2"
+        "1"
       ],
-      "answer": 0,
-      "explain": "Ring ~N; Johnson ~2N for width N.",
+      "answer": 1,
+      "explain": "One FF per state.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_hard_19.mp4",
-        "poster": "media/images/ring_hard_19-frame.png",
-        "figure": "media/images/ring_hard_19.png"
-      }
+      "id": "ring_hard_10"
     },
     {
-      "id": "ring_hard_20",
-      "type": "true_false",
-      "prompt": "Feedback box: plain q[MSB] for ring, not-q[MSB] for Johnson.",
-      "answer": true,
-      "explain": "All-zero ring stays locked without a circulating 1.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_hard_20.mp4",
-        "poster": "media/images/ring_hard_20-frame.png",
-        "figure": "media/images/ring_hard_20.png"
-      }
-    },
-    {
-      "id": "ring_hard_21",
       "type": "multiple_choice",
-      "prompt": "Illegal states without recovery are a pitfall because…",
+      "prompt": "Minimum bits to encode 5 states (binary) is…",
       "choices": [
-        "The machine can lock or wander off the intended cycle",
-        "Period becomes exactly 2^N − 1 always",
-        "CDC becomes free",
-        "Clocks become optional"
+        "5",
+        "3",
+        "32",
+        "4"
       ],
-      "answer": 0,
-      "explain": "Handle illegal states and reset correctly.",
+      "answer": 1,
+      "explain": "ceil(log2(5)) = 3.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_hard_21.mp4",
-        "poster": "media/images/ring_hard_21-frame.png",
-        "figure": "media/images/ring_hard_21.png"
-      }
+      "id": "ring_hard_11"
     },
     {
-      "id": "ring_hard_22",
       "type": "multiple_choice",
-      "prompt": "always shift with feedback: ring uses…",
+      "prompt": "One-hot encoding of 5 states uses how many FFs?",
       "choices": [
-        "q0<=q[MSB] vs q0<=~q[MSB]",
-        "Both use XOR of all taps identically",
-        "Both require gated clocks",
-        "Both forbid shift registers"
-      ],
-      "answer": 0,
-      "explain": "Invert or not on the recirculating bit.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_hard_22.mp4",
-        "poster": "media/images/ring_hard_22-frame.png",
-        "figure": "media/images/ring_hard_22.png"
-      }
-    },
-    {
-      "id": "ring_hard_23",
-      "type": "multiple_choice",
-      "prompt": "2N for N=5 equals…",
-      "choices": [
+        "3",
+        "5",
         "10",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "hard",
+      "id": "ring_hard_12"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Minimum bits to encode 6 states (binary) is…",
+      "choices": [
         "6",
-        "8",
-        "2"
+        "3",
+        "64",
+        "5"
       ],
-      "answer": 0,
-      "explain": "Ring ~N; Johnson ~2N for width N.",
+      "answer": 1,
+      "explain": "ceil(log2(6)) = 3.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_hard_23.mp4",
-        "poster": "media/images/ring_hard_23-frame.png",
-        "figure": "media/images/ring_hard_23.png"
-      }
+      "id": "ring_hard_13"
     },
     {
-      "id": "ring_hard_24",
-      "type": "true_false",
-      "prompt": "Feedback box: plain q[MSB] for ring, not-q[MSB] for Johnson.",
-      "answer": true,
-      "explain": "All-zero ring stays locked without a circulating 1.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_hard_24.mp4",
-        "poster": "media/images/ring_hard_24-frame.png",
-        "figure": "media/images/ring_hard_24.png"
-      }
-    },
-    {
-      "id": "ring_hard_25",
       "type": "multiple_choice",
-      "prompt": "Illegal states without recovery are a pitfall because…",
+      "prompt": "One-hot encoding of 6 states uses how many FFs?",
       "choices": [
-        "The machine can lock or wander off the intended cycle",
-        "Period becomes exactly 2^N − 1 always",
-        "CDC becomes free",
-        "Clocks become optional"
-      ],
-      "answer": 0,
-      "explain": "Handle illegal states and reset correctly.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_hard_25.mp4",
-        "poster": "media/images/ring_hard_25-frame.png",
-        "figure": "media/images/ring_hard_25.png"
-      }
-    },
-    {
-      "id": "ring_hard_26",
-      "type": "multiple_choice",
-      "prompt": "always shift with feedback: ring uses…",
-      "choices": [
-        "q0<=q[MSB] vs q0<=~q[MSB]",
-        "Both use XOR of all taps identically",
-        "Both require gated clocks",
-        "Both forbid shift registers"
-      ],
-      "answer": 0,
-      "explain": "Invert or not on the recirculating bit.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_hard_26.mp4",
-        "poster": "media/images/ring_hard_26-frame.png",
-        "figure": "media/images/ring_hard_26.png"
-      }
-    },
-    {
-      "id": "ring_hard_27",
-      "type": "multiple_choice",
-      "prompt": "2N for N=5 equals…",
-      "choices": [
-        "10",
+        "3",
         "6",
+        "12",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "hard",
+      "id": "ring_hard_14"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Minimum bits to encode 7 states (binary) is…",
+      "choices": [
+        "7",
+        "3",
+        "128",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(7)) = 3.",
+      "difficulty": "hard",
+      "id": "ring_hard_15"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "One-hot encoding of 7 states uses how many FFs?",
+      "choices": [
+        "3",
+        "7",
+        "14",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "hard",
+      "id": "ring_hard_16"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Minimum bits to encode 8 states (binary) is…",
+      "choices": [
         "8",
-        "2"
+        "3",
+        "256",
+        "7"
       ],
-      "answer": 0,
-      "explain": "Ring ~N; Johnson ~2N for width N.",
+      "answer": 1,
+      "explain": "ceil(log2(8)) = 3.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_hard_27.mp4",
-        "poster": "media/images/ring_hard_27-frame.png",
-        "figure": "media/images/ring_hard_27.png"
-      }
+      "id": "ring_hard_17"
     },
     {
-      "id": "ring_hard_28",
+      "type": "multiple_choice",
+      "prompt": "One-hot encoding of 8 states uses how many FFs?",
+      "choices": [
+        "3",
+        "8",
+        "16",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "hard",
+      "id": "ring_hard_18"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Minimum bits to encode 9 states (binary) is…",
+      "choices": [
+        "9",
+        "4",
+        "512",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(9)) = 4.",
+      "difficulty": "hard",
+      "id": "ring_hard_19"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "One-hot encoding of 9 states uses how many FFs?",
+      "choices": [
+        "4",
+        "9",
+        "18",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "hard",
+      "id": "ring_hard_20"
+    },
+    {
       "type": "true_false",
-      "prompt": "Feedback box: plain q[MSB] for ring, not-q[MSB] for Johnson.",
+      "prompt": "One-hot often simplifies next-state logic at the cost of more FFs.",
       "answer": true,
-      "explain": "All-zero ring stays locked without a circulating 1.",
+      "explain": "Common FPGA style.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_hard_28.mp4",
-        "poster": "media/images/ring_hard_28-frame.png",
-        "figure": "media/images/ring_hard_28.png"
-      }
+      "id": "ring_hard_21"
     },
     {
-      "id": "ring_hard_29",
-      "type": "multiple_choice",
-      "prompt": "Illegal states without recovery are a pitfall because…",
-      "choices": [
-        "The machine can lock or wander off the intended cycle",
-        "Period becomes exactly 2^N − 1 always",
-        "CDC becomes free",
-        "Clocks become optional"
-      ],
-      "answer": 0,
-      "explain": "Handle illegal states and reset correctly.",
+      "type": "true_false",
+      "prompt": "Illegal one-hot codes should be handled safely.",
+      "answer": true,
+      "explain": "Avoid lockup.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_hard_29.mp4",
-        "poster": "media/images/ring_hard_29-frame.png",
-        "figure": "media/images/ring_hard_29.png"
-      }
+      "id": "ring_hard_22"
     },
     {
-      "id": "ring_hard_30",
       "type": "multiple_choice",
-      "prompt": "always shift with feedback: ring uses…",
+      "prompt": "Logical right shift of 0xA5 by 1 (8-bit) is…",
       "choices": [
-        "q0<=q[MSB] vs q0<=~q[MSB]",
-        "Both use XOR of all taps identically",
-        "Both require gated clocks",
-        "Both forbid shift registers"
+        "0x4A",
+        "0x52",
+        "0xA5",
+        "0x00"
       ],
-      "answer": 0,
-      "explain": "Invert or not on the recirculating bit.",
+      "answer": 1,
+      "explain": "Zero-fill from the left → 0x52.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "ring-johnson",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#rj-starter"
-          }
-        ]
-      },
-      "media": {
-        "type": "video",
-        "src": "media/videos/ring_hard_30.mp4",
-        "poster": "media/images/ring_hard_30-frame.png",
-        "figure": "media/images/ring_hard_30.png"
-      }
+      "id": "ring_hard_23"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Logical right shift of 0x3C by 2 (8-bit) is…",
+      "choices": [
+        "0xF0",
+        "0x0F",
+        "0x3C",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "Zero-fill from the left → 0x0F.",
+      "difficulty": "hard",
+      "id": "ring_hard_24"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Logical right shift of 0xF0 by 1 (8-bit) is…",
+      "choices": [
+        "0xE0",
+        "0x78",
+        "0xF0",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "Zero-fill from the left → 0x78.",
+      "difficulty": "hard",
+      "id": "ring_hard_25"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Logical right shift of 0x01 by 3 (8-bit) is…",
+      "choices": [
+        "0x08",
+        "0x00",
+        "0x01",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "Zero-fill from the left → 0x00.",
+      "difficulty": "hard",
+      "id": "ring_hard_26"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Logical right shift of 0x80 by 1 (8-bit) is…",
+      "choices": [
+        "0x00",
+        "0x40",
+        "0x80",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "Zero-fill from the left → 0x40.",
+      "difficulty": "hard",
+      "id": "ring_hard_27"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Logical right shift of 0x7E by 2 (8-bit) is…",
+      "choices": [
+        "0xF8",
+        "0x1F",
+        "0x7E",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "Zero-fill from the left → 0x1F.",
+      "difficulty": "hard",
+      "id": "ring_hard_28"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Arithmetic right shift replicates the sign bit.",
+      "answer": true,
+      "explain": "SRA sign-fills.",
+      "difficulty": "hard",
+      "id": "ring_hard_29"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Rotate moves bits with wraparound and no fill loss.",
+      "answer": true,
+      "explain": "ROL/ROR.",
+      "difficulty": "hard",
+      "id": "ring_hard_30"
     }
   ]
 }

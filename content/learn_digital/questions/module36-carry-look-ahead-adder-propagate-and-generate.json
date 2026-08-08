@@ -14,20 +14,7 @@
       ],
       "answer": 0,
       "explain": "G = A AND B forces carry out.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_easy_01.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "cla_easy_02",
@@ -41,20 +28,7 @@
       ],
       "answer": 0,
       "explain": "P = A XOR B.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_easy_02.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "cla_easy_03",
@@ -68,20 +42,7 @@
       ],
       "answer": 0,
       "explain": "Generate or propagate path.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_easy_03.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "cla_easy_04",
@@ -89,686 +50,7 @@
       "prompt": "CLA always uses a longer carry chain than ripple.",
       "answer": false,
       "explain": "G wins; CLA shortens carry delay vs ripple.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_easy_04.png"
-      }
-    },
-    {
-      "id": "cla_easy_05",
-      "type": "multiple_choice",
-      "prompt": "Generate Gᵢ is…",
-      "choices": [
-        "Aᵢ · Bᵢ",
-        "Aᵢ ⊕ Bᵢ",
-        "Aᵢ + Bᵢ (OR only)",
-        "Cᵢ alone"
-      ],
-      "answer": 0,
-      "explain": "G = A AND B forces carry out.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_easy_05.png"
-      }
-    },
-    {
-      "id": "cla_easy_06",
-      "type": "multiple_choice",
-      "prompt": "XOR-style propagate equals…",
-      "choices": [
-        "Aᵢ ⊕ Bᵢ",
-        "Aᵢ · Bᵢ",
-        "Always 0",
-        "Cᵢ ⊕ Cᵢ₊₁"
-      ],
-      "answer": 0,
-      "explain": "P = A XOR B.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_easy_06.png"
-      }
-    },
-    {
-      "id": "cla_easy_07",
-      "type": "multiple_choice",
-      "prompt": "The CLA recurrence for next carry is…",
-      "choices": [
-        "Cᵢ₊₁ = Gᵢ + Pᵢ·Cᵢ",
-        "Cᵢ₊₁ = Aᵢ ⊕ Bᵢ",
-        "Cᵢ₊₁ = Gᵢ · Pᵢ",
-        "Cᵢ₊₁ = Cᵢ only"
-      ],
-      "answer": 0,
-      "explain": "Generate or propagate path.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_easy_07.png"
-      }
-    },
-    {
-      "id": "cla_easy_08",
-      "type": "true_false",
-      "prompt": "CLA always uses a longer carry chain than ripple.",
-      "answer": false,
-      "explain": "G wins; CLA shortens carry delay vs ripple.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_easy_08.png"
-      }
-    },
-    {
-      "id": "cla_easy_09",
-      "type": "multiple_choice",
-      "prompt": "Generate Gᵢ is…",
-      "choices": [
-        "Aᵢ · Bᵢ",
-        "Aᵢ ⊕ Bᵢ",
-        "Aᵢ + Bᵢ (OR only)",
-        "Cᵢ alone"
-      ],
-      "answer": 0,
-      "explain": "G = A AND B forces carry out.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_easy_09.png"
-      }
-    },
-    {
-      "id": "cla_easy_10",
-      "type": "multiple_choice",
-      "prompt": "XOR-style propagate equals…",
-      "choices": [
-        "Aᵢ ⊕ Bᵢ",
-        "Aᵢ · Bᵢ",
-        "Always 0",
-        "Cᵢ ⊕ Cᵢ₊₁"
-      ],
-      "answer": 0,
-      "explain": "P = A XOR B.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_easy_10.png"
-      }
-    },
-    {
-      "id": "cla_easy_11",
-      "type": "multiple_choice",
-      "prompt": "The CLA recurrence for next carry is…",
-      "choices": [
-        "Cᵢ₊₁ = Gᵢ + Pᵢ·Cᵢ",
-        "Cᵢ₊₁ = Aᵢ ⊕ Bᵢ",
-        "Cᵢ₊₁ = Gᵢ · Pᵢ",
-        "Cᵢ₊₁ = Cᵢ only"
-      ],
-      "answer": 0,
-      "explain": "Generate or propagate path.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_easy_11.png"
-      }
-    },
-    {
-      "id": "cla_easy_12",
-      "type": "true_false",
-      "prompt": "CLA always uses a longer carry chain than ripple.",
-      "answer": false,
-      "explain": "G wins; CLA shortens carry delay vs ripple.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_easy_12.png"
-      }
-    },
-    {
-      "id": "cla_easy_13",
-      "type": "multiple_choice",
-      "prompt": "Generate Gᵢ is…",
-      "choices": [
-        "Aᵢ · Bᵢ",
-        "Aᵢ ⊕ Bᵢ",
-        "Aᵢ + Bᵢ (OR only)",
-        "Cᵢ alone"
-      ],
-      "answer": 0,
-      "explain": "G = A AND B forces carry out.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_easy_13.png"
-      }
-    },
-    {
-      "id": "cla_easy_14",
-      "type": "multiple_choice",
-      "prompt": "XOR-style propagate equals…",
-      "choices": [
-        "Aᵢ ⊕ Bᵢ",
-        "Aᵢ · Bᵢ",
-        "Always 0",
-        "Cᵢ ⊕ Cᵢ₊₁"
-      ],
-      "answer": 0,
-      "explain": "P = A XOR B.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_easy_14.png"
-      }
-    },
-    {
-      "id": "cla_easy_15",
-      "type": "multiple_choice",
-      "prompt": "The CLA recurrence for next carry is…",
-      "choices": [
-        "Cᵢ₊₁ = Gᵢ + Pᵢ·Cᵢ",
-        "Cᵢ₊₁ = Aᵢ ⊕ Bᵢ",
-        "Cᵢ₊₁ = Gᵢ · Pᵢ",
-        "Cᵢ₊₁ = Cᵢ only"
-      ],
-      "answer": 0,
-      "explain": "Generate or propagate path.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_easy_15.png"
-      }
-    },
-    {
-      "id": "cla_easy_16",
-      "type": "true_false",
-      "prompt": "CLA always uses a longer carry chain than ripple.",
-      "answer": false,
-      "explain": "G wins; CLA shortens carry delay vs ripple.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_easy_16.png"
-      }
-    },
-    {
-      "id": "cla_easy_17",
-      "type": "multiple_choice",
-      "prompt": "Generate Gᵢ is…",
-      "choices": [
-        "Aᵢ · Bᵢ",
-        "Aᵢ ⊕ Bᵢ",
-        "Aᵢ + Bᵢ (OR only)",
-        "Cᵢ alone"
-      ],
-      "answer": 0,
-      "explain": "G = A AND B forces carry out.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_easy_17.png"
-      }
-    },
-    {
-      "id": "cla_easy_18",
-      "type": "multiple_choice",
-      "prompt": "XOR-style propagate equals…",
-      "choices": [
-        "Aᵢ ⊕ Bᵢ",
-        "Aᵢ · Bᵢ",
-        "Always 0",
-        "Cᵢ ⊕ Cᵢ₊₁"
-      ],
-      "answer": 0,
-      "explain": "P = A XOR B.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_easy_18.png"
-      }
-    },
-    {
-      "id": "cla_easy_19",
-      "type": "multiple_choice",
-      "prompt": "The CLA recurrence for next carry is…",
-      "choices": [
-        "Cᵢ₊₁ = Gᵢ + Pᵢ·Cᵢ",
-        "Cᵢ₊₁ = Aᵢ ⊕ Bᵢ",
-        "Cᵢ₊₁ = Gᵢ · Pᵢ",
-        "Cᵢ₊₁ = Cᵢ only"
-      ],
-      "answer": 0,
-      "explain": "Generate or propagate path.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_easy_19.png"
-      }
-    },
-    {
-      "id": "cla_easy_20",
-      "type": "true_false",
-      "prompt": "CLA always uses a longer carry chain than ripple.",
-      "answer": false,
-      "explain": "G wins; CLA shortens carry delay vs ripple.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_easy_20.png"
-      }
-    },
-    {
-      "id": "cla_easy_21",
-      "type": "multiple_choice",
-      "prompt": "Generate Gᵢ is…",
-      "choices": [
-        "Aᵢ · Bᵢ",
-        "Aᵢ ⊕ Bᵢ",
-        "Aᵢ + Bᵢ (OR only)",
-        "Cᵢ alone"
-      ],
-      "answer": 0,
-      "explain": "G = A AND B forces carry out.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_easy_21.png"
-      }
-    },
-    {
-      "id": "cla_easy_22",
-      "type": "multiple_choice",
-      "prompt": "XOR-style propagate equals…",
-      "choices": [
-        "Aᵢ ⊕ Bᵢ",
-        "Aᵢ · Bᵢ",
-        "Always 0",
-        "Cᵢ ⊕ Cᵢ₊₁"
-      ],
-      "answer": 0,
-      "explain": "P = A XOR B.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_easy_22.png"
-      }
-    },
-    {
-      "id": "cla_easy_23",
-      "type": "multiple_choice",
-      "prompt": "The CLA recurrence for next carry is…",
-      "choices": [
-        "Cᵢ₊₁ = Gᵢ + Pᵢ·Cᵢ",
-        "Cᵢ₊₁ = Aᵢ ⊕ Bᵢ",
-        "Cᵢ₊₁ = Gᵢ · Pᵢ",
-        "Cᵢ₊₁ = Cᵢ only"
-      ],
-      "answer": 0,
-      "explain": "Generate or propagate path.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_easy_23.png"
-      }
-    },
-    {
-      "id": "cla_easy_24",
-      "type": "true_false",
-      "prompt": "CLA always uses a longer carry chain than ripple.",
-      "answer": false,
-      "explain": "G wins; CLA shortens carry delay vs ripple.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_easy_24.png"
-      }
-    },
-    {
-      "id": "cla_easy_25",
-      "type": "multiple_choice",
-      "prompt": "Generate Gᵢ is…",
-      "choices": [
-        "Aᵢ · Bᵢ",
-        "Aᵢ ⊕ Bᵢ",
-        "Aᵢ + Bᵢ (OR only)",
-        "Cᵢ alone"
-      ],
-      "answer": 0,
-      "explain": "G = A AND B forces carry out.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_easy_25.png"
-      }
-    },
-    {
-      "id": "cla_easy_26",
-      "type": "multiple_choice",
-      "prompt": "XOR-style propagate equals…",
-      "choices": [
-        "Aᵢ ⊕ Bᵢ",
-        "Aᵢ · Bᵢ",
-        "Always 0",
-        "Cᵢ ⊕ Cᵢ₊₁"
-      ],
-      "answer": 0,
-      "explain": "P = A XOR B.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_easy_26.png"
-      }
-    },
-    {
-      "id": "cla_easy_27",
-      "type": "multiple_choice",
-      "prompt": "The CLA recurrence for next carry is…",
-      "choices": [
-        "Cᵢ₊₁ = Gᵢ + Pᵢ·Cᵢ",
-        "Cᵢ₊₁ = Aᵢ ⊕ Bᵢ",
-        "Cᵢ₊₁ = Gᵢ · Pᵢ",
-        "Cᵢ₊₁ = Cᵢ only"
-      ],
-      "answer": 0,
-      "explain": "Generate or propagate path.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_easy_27.png"
-      }
-    },
-    {
-      "id": "cla_easy_28",
-      "type": "true_false",
-      "prompt": "CLA always uses a longer carry chain than ripple.",
-      "answer": false,
-      "explain": "G wins; CLA shortens carry delay vs ripple.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_easy_28.png"
-      }
-    },
-    {
-      "id": "cla_easy_29",
-      "type": "multiple_choice",
-      "prompt": "Generate Gᵢ is…",
-      "choices": [
-        "Aᵢ · Bᵢ",
-        "Aᵢ ⊕ Bᵢ",
-        "Aᵢ + Bᵢ (OR only)",
-        "Cᵢ alone"
-      ],
-      "answer": 0,
-      "explain": "G = A AND B forces carry out.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_easy_29.png"
-      }
-    },
-    {
-      "id": "cla_easy_30",
-      "type": "multiple_choice",
-      "prompt": "XOR-style propagate equals…",
-      "choices": [
-        "Aᵢ ⊕ Bᵢ",
-        "Aᵢ · Bᵢ",
-        "Always 0",
-        "Cᵢ ⊕ Cᵢ₊₁"
-      ],
-      "answer": 0,
-      "explain": "P = A XOR B.",
-      "difficulty": "easy",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_easy_30.png"
-      }
+      "difficulty": "easy"
     },
     {
       "id": "cla_medium_01",
@@ -782,20 +64,7 @@
       ],
       "answer": 0,
       "explain": "Both 1 → generate; XOR is 0.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_medium_01.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "cla_medium_02",
@@ -809,20 +78,7 @@
       ],
       "answer": 0,
       "explain": "Propagate path: Cout = Cin.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_medium_02.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "cla_medium_03",
@@ -836,20 +92,7 @@
       ],
       "answer": 0,
       "explain": "No generate and no propagate → kill.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_medium_03.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "cla_medium_04",
@@ -857,686 +100,7 @@
       "prompt": "Confusing G with P never causes sum errors.",
       "answer": false,
       "explain": "Expanded AND-OR paths; G/P mix-ups break results.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_medium_04.png"
-      }
-    },
-    {
-      "id": "cla_medium_05",
-      "type": "multiple_choice",
-      "prompt": "For 5+3 bit0 (A=B=1): G₀ and P₀ are…",
-      "choices": [
-        "G=1, P=0",
-        "G=0, P=1",
-        "G=1, P=1",
-        "G=0, P=0"
-      ],
-      "answer": 0,
-      "explain": "Both 1 → generate; XOR is 0.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_medium_05.png"
-      }
-    },
-    {
-      "id": "cla_medium_06",
-      "type": "multiple_choice",
-      "prompt": "Propagate with no generate means…",
-      "choices": [
-        "Passes Cin through to Cout",
-        "Forces Cout=1 always",
-        "Kills carry always",
-        "Ignores Cin and A"
-      ],
-      "answer": 0,
-      "explain": "Propagate path: Cout = Cin.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_medium_06.png"
-      }
-    },
-    {
-      "id": "cla_medium_07",
-      "type": "multiple_choice",
-      "prompt": "G=P=0 implies Cout…",
-      "choices": [
-        "Killed (Cout=0)",
-        "Forced to 1",
-        "Equal to Cin always",
-        "Undefined forever"
-      ],
-      "answer": 0,
-      "explain": "No generate and no propagate → kill.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_medium_07.png"
-      }
-    },
-    {
-      "id": "cla_medium_08",
-      "type": "true_false",
-      "prompt": "Confusing G with P never causes sum errors.",
-      "answer": false,
-      "explain": "Expanded AND-OR paths; G/P mix-ups break results.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_medium_08.png"
-      }
-    },
-    {
-      "id": "cla_medium_09",
-      "type": "multiple_choice",
-      "prompt": "For 5+3 bit0 (A=B=1): G₀ and P₀ are…",
-      "choices": [
-        "G=1, P=0",
-        "G=0, P=1",
-        "G=1, P=1",
-        "G=0, P=0"
-      ],
-      "answer": 0,
-      "explain": "Both 1 → generate; XOR is 0.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_medium_09.png"
-      }
-    },
-    {
-      "id": "cla_medium_10",
-      "type": "multiple_choice",
-      "prompt": "Propagate with no generate means…",
-      "choices": [
-        "Passes Cin through to Cout",
-        "Forces Cout=1 always",
-        "Kills carry always",
-        "Ignores Cin and A"
-      ],
-      "answer": 0,
-      "explain": "Propagate path: Cout = Cin.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_medium_10.png"
-      }
-    },
-    {
-      "id": "cla_medium_11",
-      "type": "multiple_choice",
-      "prompt": "G=P=0 implies Cout…",
-      "choices": [
-        "Killed (Cout=0)",
-        "Forced to 1",
-        "Equal to Cin always",
-        "Undefined forever"
-      ],
-      "answer": 0,
-      "explain": "No generate and no propagate → kill.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_medium_11.png"
-      }
-    },
-    {
-      "id": "cla_medium_12",
-      "type": "true_false",
-      "prompt": "Confusing G with P never causes sum errors.",
-      "answer": false,
-      "explain": "Expanded AND-OR paths; G/P mix-ups break results.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_medium_12.png"
-      }
-    },
-    {
-      "id": "cla_medium_13",
-      "type": "multiple_choice",
-      "prompt": "For 5+3 bit0 (A=B=1): G₀ and P₀ are…",
-      "choices": [
-        "G=1, P=0",
-        "G=0, P=1",
-        "G=1, P=1",
-        "G=0, P=0"
-      ],
-      "answer": 0,
-      "explain": "Both 1 → generate; XOR is 0.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_medium_13.png"
-      }
-    },
-    {
-      "id": "cla_medium_14",
-      "type": "multiple_choice",
-      "prompt": "Propagate with no generate means…",
-      "choices": [
-        "Passes Cin through to Cout",
-        "Forces Cout=1 always",
-        "Kills carry always",
-        "Ignores Cin and A"
-      ],
-      "answer": 0,
-      "explain": "Propagate path: Cout = Cin.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_medium_14.png"
-      }
-    },
-    {
-      "id": "cla_medium_15",
-      "type": "multiple_choice",
-      "prompt": "G=P=0 implies Cout…",
-      "choices": [
-        "Killed (Cout=0)",
-        "Forced to 1",
-        "Equal to Cin always",
-        "Undefined forever"
-      ],
-      "answer": 0,
-      "explain": "No generate and no propagate → kill.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_medium_15.png"
-      }
-    },
-    {
-      "id": "cla_medium_16",
-      "type": "true_false",
-      "prompt": "Confusing G with P never causes sum errors.",
-      "answer": false,
-      "explain": "Expanded AND-OR paths; G/P mix-ups break results.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_medium_16.png"
-      }
-    },
-    {
-      "id": "cla_medium_17",
-      "type": "multiple_choice",
-      "prompt": "For 5+3 bit0 (A=B=1): G₀ and P₀ are…",
-      "choices": [
-        "G=1, P=0",
-        "G=0, P=1",
-        "G=1, P=1",
-        "G=0, P=0"
-      ],
-      "answer": 0,
-      "explain": "Both 1 → generate; XOR is 0.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_medium_17.png"
-      }
-    },
-    {
-      "id": "cla_medium_18",
-      "type": "multiple_choice",
-      "prompt": "Propagate with no generate means…",
-      "choices": [
-        "Passes Cin through to Cout",
-        "Forces Cout=1 always",
-        "Kills carry always",
-        "Ignores Cin and A"
-      ],
-      "answer": 0,
-      "explain": "Propagate path: Cout = Cin.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_medium_18.png"
-      }
-    },
-    {
-      "id": "cla_medium_19",
-      "type": "multiple_choice",
-      "prompt": "G=P=0 implies Cout…",
-      "choices": [
-        "Killed (Cout=0)",
-        "Forced to 1",
-        "Equal to Cin always",
-        "Undefined forever"
-      ],
-      "answer": 0,
-      "explain": "No generate and no propagate → kill.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_medium_19.png"
-      }
-    },
-    {
-      "id": "cla_medium_20",
-      "type": "true_false",
-      "prompt": "Confusing G with P never causes sum errors.",
-      "answer": false,
-      "explain": "Expanded AND-OR paths; G/P mix-ups break results.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_medium_20.png"
-      }
-    },
-    {
-      "id": "cla_medium_21",
-      "type": "multiple_choice",
-      "prompt": "For 5+3 bit0 (A=B=1): G₀ and P₀ are…",
-      "choices": [
-        "G=1, P=0",
-        "G=0, P=1",
-        "G=1, P=1",
-        "G=0, P=0"
-      ],
-      "answer": 0,
-      "explain": "Both 1 → generate; XOR is 0.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_medium_21.png"
-      }
-    },
-    {
-      "id": "cla_medium_22",
-      "type": "multiple_choice",
-      "prompt": "Propagate with no generate means…",
-      "choices": [
-        "Passes Cin through to Cout",
-        "Forces Cout=1 always",
-        "Kills carry always",
-        "Ignores Cin and A"
-      ],
-      "answer": 0,
-      "explain": "Propagate path: Cout = Cin.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_medium_22.png"
-      }
-    },
-    {
-      "id": "cla_medium_23",
-      "type": "multiple_choice",
-      "prompt": "G=P=0 implies Cout…",
-      "choices": [
-        "Killed (Cout=0)",
-        "Forced to 1",
-        "Equal to Cin always",
-        "Undefined forever"
-      ],
-      "answer": 0,
-      "explain": "No generate and no propagate → kill.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_medium_23.png"
-      }
-    },
-    {
-      "id": "cla_medium_24",
-      "type": "true_false",
-      "prompt": "Confusing G with P never causes sum errors.",
-      "answer": false,
-      "explain": "Expanded AND-OR paths; G/P mix-ups break results.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_medium_24.png"
-      }
-    },
-    {
-      "id": "cla_medium_25",
-      "type": "multiple_choice",
-      "prompt": "For 5+3 bit0 (A=B=1): G₀ and P₀ are…",
-      "choices": [
-        "G=1, P=0",
-        "G=0, P=1",
-        "G=1, P=1",
-        "G=0, P=0"
-      ],
-      "answer": 0,
-      "explain": "Both 1 → generate; XOR is 0.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_medium_25.png"
-      }
-    },
-    {
-      "id": "cla_medium_26",
-      "type": "multiple_choice",
-      "prompt": "Propagate with no generate means…",
-      "choices": [
-        "Passes Cin through to Cout",
-        "Forces Cout=1 always",
-        "Kills carry always",
-        "Ignores Cin and A"
-      ],
-      "answer": 0,
-      "explain": "Propagate path: Cout = Cin.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_medium_26.png"
-      }
-    },
-    {
-      "id": "cla_medium_27",
-      "type": "multiple_choice",
-      "prompt": "G=P=0 implies Cout…",
-      "choices": [
-        "Killed (Cout=0)",
-        "Forced to 1",
-        "Equal to Cin always",
-        "Undefined forever"
-      ],
-      "answer": 0,
-      "explain": "No generate and no propagate → kill.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_medium_27.png"
-      }
-    },
-    {
-      "id": "cla_medium_28",
-      "type": "true_false",
-      "prompt": "Confusing G with P never causes sum errors.",
-      "answer": false,
-      "explain": "Expanded AND-OR paths; G/P mix-ups break results.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_medium_28.png"
-      }
-    },
-    {
-      "id": "cla_medium_29",
-      "type": "multiple_choice",
-      "prompt": "For 5+3 bit0 (A=B=1): G₀ and P₀ are…",
-      "choices": [
-        "G=1, P=0",
-        "G=0, P=1",
-        "G=1, P=1",
-        "G=0, P=0"
-      ],
-      "answer": 0,
-      "explain": "Both 1 → generate; XOR is 0.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_medium_29.png"
-      }
-    },
-    {
-      "id": "cla_medium_30",
-      "type": "multiple_choice",
-      "prompt": "Propagate with no generate means…",
-      "choices": [
-        "Passes Cin through to Cout",
-        "Forces Cout=1 always",
-        "Kills carry always",
-        "Ignores Cin and A"
-      ],
-      "answer": 0,
-      "explain": "Propagate path: Cout = Cin.",
-      "difficulty": "medium",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_medium_30.png"
-      }
+      "difficulty": "medium"
     },
     {
       "id": "cla_hard_01",
@@ -1550,20 +114,7 @@
       ],
       "answer": 0,
       "explain": "Practical CLA uses hierarchy/prefix.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_hard_01.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "cla_hard_02",
@@ -1577,20 +128,7 @@
       ],
       "answer": 0,
       "explain": "Carries from G, P, C₀ without long ripple.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_hard_02.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "cla_hard_03",
@@ -1604,20 +142,7 @@
       ],
       "answer": 0,
       "explain": "C₁ = G₀ + P₀·C₀ = 1.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_hard_03.png"
-      }
+      "difficulty": "hard"
     },
     {
       "id": "cla_hard_04",
@@ -1625,686 +150,919 @@
       "prompt": "CLA eliminates the need for any timing on carry paths.",
       "answer": false,
       "explain": "Still analyze timing; literacy ≠ free STA.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_hard_04.png"
-      }
+      "difficulty": "hard"
     },
     {
-      "id": "cla_hard_05",
       "type": "multiple_choice",
-      "prompt": "Wide adders usually implement lookahead as…",
+      "prompt": "Full adder A=0 B=0 Cin=0: Sum is…",
       "choices": [
-        "Prefix trees / grouped CLA, not one flat mega-OR",
-        "Only pure ripple forever",
-        "Software loops only",
-        "ROM lookup of every sum"
-      ],
-      "answer": 0,
-      "explain": "Practical CLA uses hierarchy/prefix.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_hard_05.png"
-      }
-    },
-    {
-      "id": "cla_hard_06",
-      "type": "multiple_choice",
-      "prompt": "Why can CLA be faster than ripple?",
-      "choices": [
-        "Computing carries from G/P in parallel",
-        "Removing all adders",
-        "Using fewer bits always",
-        "Ignoring Cin"
-      ],
-      "answer": 0,
-      "explain": "Carries from G, P, C₀ without long ripple.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_hard_06.png"
-      }
-    },
-    {
-      "id": "cla_hard_07",
-      "type": "multiple_choice",
-      "prompt": "If G₀=1, C₁ equals…",
-      "choices": [
-        "1",
         "0",
-        "Equal to P₀",
-        "Undefined"
-      ],
-      "answer": 0,
-      "explain": "C₁ = G₀ + P₀·C₀ = 1.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_hard_07.png"
-      }
-    },
-    {
-      "id": "cla_hard_08",
-      "type": "true_false",
-      "prompt": "CLA eliminates the need for any timing on carry paths.",
-      "answer": false,
-      "explain": "Still analyze timing; literacy ≠ free STA.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_hard_08.png"
-      }
-    },
-    {
-      "id": "cla_hard_09",
-      "type": "multiple_choice",
-      "prompt": "Wide adders usually implement lookahead as…",
-      "choices": [
-        "Prefix trees / grouped CLA, not one flat mega-OR",
-        "Only pure ripple forever",
-        "Software loops only",
-        "ROM lookup of every sum"
-      ],
-      "answer": 0,
-      "explain": "Practical CLA uses hierarchy/prefix.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_hard_09.png"
-      }
-    },
-    {
-      "id": "cla_hard_10",
-      "type": "multiple_choice",
-      "prompt": "Why can CLA be faster than ripple?",
-      "choices": [
-        "Computing carries from G/P in parallel",
-        "Removing all adders",
-        "Using fewer bits always",
-        "Ignoring Cin"
-      ],
-      "answer": 0,
-      "explain": "Carries from G, P, C₀ without long ripple.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_hard_10.png"
-      }
-    },
-    {
-      "id": "cla_hard_11",
-      "type": "multiple_choice",
-      "prompt": "If G₀=1, C₁ equals…",
-      "choices": [
         "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 0,
+      "explain": "Sum = A⊕B⊕Cin = 0.",
+      "difficulty": "easy",
+      "id": "cla_easy_05"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=0 Cin=0: Cout is…",
+      "choices": [
         "0",
-        "Equal to P₀",
-        "Undefined"
-      ],
-      "answer": 0,
-      "explain": "C₁ = G₀ + P₀·C₀ = 1.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_hard_11.png"
-      }
-    },
-    {
-      "id": "cla_hard_12",
-      "type": "true_false",
-      "prompt": "CLA eliminates the need for any timing on carry paths.",
-      "answer": false,
-      "explain": "Still analyze timing; literacy ≠ free STA.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_hard_12.png"
-      }
-    },
-    {
-      "id": "cla_hard_13",
-      "type": "multiple_choice",
-      "prompt": "Wide adders usually implement lookahead as…",
-      "choices": [
-        "Prefix trees / grouped CLA, not one flat mega-OR",
-        "Only pure ripple forever",
-        "Software loops only",
-        "ROM lookup of every sum"
-      ],
-      "answer": 0,
-      "explain": "Practical CLA uses hierarchy/prefix.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_hard_13.png"
-      }
-    },
-    {
-      "id": "cla_hard_14",
-      "type": "multiple_choice",
-      "prompt": "Why can CLA be faster than ripple?",
-      "choices": [
-        "Computing carries from G/P in parallel",
-        "Removing all adders",
-        "Using fewer bits always",
-        "Ignoring Cin"
-      ],
-      "answer": 0,
-      "explain": "Carries from G, P, C₀ without long ripple.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_hard_14.png"
-      }
-    },
-    {
-      "id": "cla_hard_15",
-      "type": "multiple_choice",
-      "prompt": "If G₀=1, C₁ equals…",
-      "choices": [
         "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 0,
+      "explain": "Majority → Cout=0.",
+      "difficulty": "easy",
+      "id": "cla_easy_06"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=1 Cin=0: Sum is…",
+      "choices": [
         "0",
-        "Equal to P₀",
-        "Undefined"
-      ],
-      "answer": 0,
-      "explain": "C₁ = G₀ + P₀·C₀ = 1.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_hard_15.png"
-      }
-    },
-    {
-      "id": "cla_hard_16",
-      "type": "true_false",
-      "prompt": "CLA eliminates the need for any timing on carry paths.",
-      "answer": false,
-      "explain": "Still analyze timing; literacy ≠ free STA.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_hard_16.png"
-      }
-    },
-    {
-      "id": "cla_hard_17",
-      "type": "multiple_choice",
-      "prompt": "Wide adders usually implement lookahead as…",
-      "choices": [
-        "Prefix trees / grouped CLA, not one flat mega-OR",
-        "Only pure ripple forever",
-        "Software loops only",
-        "ROM lookup of every sum"
-      ],
-      "answer": 0,
-      "explain": "Practical CLA uses hierarchy/prefix.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_hard_17.png"
-      }
-    },
-    {
-      "id": "cla_hard_18",
-      "type": "multiple_choice",
-      "prompt": "Why can CLA be faster than ripple?",
-      "choices": [
-        "Computing carries from G/P in parallel",
-        "Removing all adders",
-        "Using fewer bits always",
-        "Ignoring Cin"
-      ],
-      "answer": 0,
-      "explain": "Carries from G, P, C₀ without long ripple.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_hard_18.png"
-      }
-    },
-    {
-      "id": "cla_hard_19",
-      "type": "multiple_choice",
-      "prompt": "If G₀=1, C₁ equals…",
-      "choices": [
         "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "easy",
+      "id": "cla_easy_07"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=1 Cin=0: Cout is…",
+      "choices": [
         "0",
-        "Equal to P₀",
-        "Undefined"
-      ],
-      "answer": 0,
-      "explain": "C₁ = G₀ + P₀·C₀ = 1.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_hard_19.png"
-      }
-    },
-    {
-      "id": "cla_hard_20",
-      "type": "true_false",
-      "prompt": "CLA eliminates the need for any timing on carry paths.",
-      "answer": false,
-      "explain": "Still analyze timing; literacy ≠ free STA.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_hard_20.png"
-      }
-    },
-    {
-      "id": "cla_hard_21",
-      "type": "multiple_choice",
-      "prompt": "Wide adders usually implement lookahead as…",
-      "choices": [
-        "Prefix trees / grouped CLA, not one flat mega-OR",
-        "Only pure ripple forever",
-        "Software loops only",
-        "ROM lookup of every sum"
-      ],
-      "answer": 0,
-      "explain": "Practical CLA uses hierarchy/prefix.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_hard_21.png"
-      }
-    },
-    {
-      "id": "cla_hard_22",
-      "type": "multiple_choice",
-      "prompt": "Why can CLA be faster than ripple?",
-      "choices": [
-        "Computing carries from G/P in parallel",
-        "Removing all adders",
-        "Using fewer bits always",
-        "Ignoring Cin"
-      ],
-      "answer": 0,
-      "explain": "Carries from G, P, C₀ without long ripple.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_hard_22.png"
-      }
-    },
-    {
-      "id": "cla_hard_23",
-      "type": "multiple_choice",
-      "prompt": "If G₀=1, C₁ equals…",
-      "choices": [
         "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 0,
+      "explain": "Majority → Cout=0.",
+      "difficulty": "easy",
+      "id": "cla_easy_08"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=0 Cin=0: Sum is…",
+      "choices": [
         "0",
-        "Equal to P₀",
-        "Undefined"
-      ],
-      "answer": 0,
-      "explain": "C₁ = G₀ + P₀·C₀ = 1.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_hard_23.png"
-      }
-    },
-    {
-      "id": "cla_hard_24",
-      "type": "true_false",
-      "prompt": "CLA eliminates the need for any timing on carry paths.",
-      "answer": false,
-      "explain": "Still analyze timing; literacy ≠ free STA.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_hard_24.png"
-      }
-    },
-    {
-      "id": "cla_hard_25",
-      "type": "multiple_choice",
-      "prompt": "Wide adders usually implement lookahead as…",
-      "choices": [
-        "Prefix trees / grouped CLA, not one flat mega-OR",
-        "Only pure ripple forever",
-        "Software loops only",
-        "ROM lookup of every sum"
-      ],
-      "answer": 0,
-      "explain": "Practical CLA uses hierarchy/prefix.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_hard_25.png"
-      }
-    },
-    {
-      "id": "cla_hard_26",
-      "type": "multiple_choice",
-      "prompt": "Why can CLA be faster than ripple?",
-      "choices": [
-        "Computing carries from G/P in parallel",
-        "Removing all adders",
-        "Using fewer bits always",
-        "Ignoring Cin"
-      ],
-      "answer": 0,
-      "explain": "Carries from G, P, C₀ without long ripple.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_hard_26.png"
-      }
-    },
-    {
-      "id": "cla_hard_27",
-      "type": "multiple_choice",
-      "prompt": "If G₀=1, C₁ equals…",
-      "choices": [
         "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "easy",
+      "id": "cla_easy_09"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=0 Cin=0: Cout is…",
+      "choices": [
         "0",
-        "Equal to P₀",
-        "Undefined"
+        "1",
+        "Sum",
+        "A"
       ],
       "answer": 0,
-      "explain": "C₁ = G₀ + P₀·C₀ = 1.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_hard_27.png"
-      }
+      "explain": "Majority → Cout=0.",
+      "difficulty": "easy",
+      "id": "cla_easy_10"
     },
     {
-      "id": "cla_hard_28",
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=1 Cin=0: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 0,
+      "explain": "Sum = A⊕B⊕Cin = 0.",
+      "difficulty": "easy",
+      "id": "cla_easy_11"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=1 Cin=0: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "easy",
+      "id": "cla_easy_12"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=0 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "easy",
+      "id": "cla_easy_13"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=0 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 0,
+      "explain": "Majority → Cout=0.",
+      "difficulty": "easy",
+      "id": "cla_easy_14"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=1 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 0,
+      "explain": "Sum = A⊕B⊕Cin = 0.",
+      "difficulty": "easy",
+      "id": "cla_easy_15"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=1 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "easy",
+      "id": "cla_easy_16"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=0 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 0,
+      "explain": "Sum = A⊕B⊕Cin = 0.",
+      "difficulty": "easy",
+      "id": "cla_easy_17"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=0 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "easy",
+      "id": "cla_easy_18"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=1 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "easy",
+      "id": "cla_easy_19"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=1 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "easy",
+      "id": "cla_easy_20"
+    },
+    {
       "type": "true_false",
-      "prompt": "CLA eliminates the need for any timing on carry paths.",
-      "answer": false,
-      "explain": "Still analyze timing; literacy ≠ free STA.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_hard_28.png"
-      }
+      "prompt": "Half adder has no carry-in.",
+      "answer": true,
+      "explain": "HA = Sum/Cout from A,B only.",
+      "difficulty": "easy",
+      "id": "cla_easy_21"
     },
     {
-      "id": "cla_hard_29",
-      "type": "multiple_choice",
-      "prompt": "Wide adders usually implement lookahead as…",
-      "choices": [
-        "Prefix trees / grouped CLA, not one flat mega-OR",
-        "Only pure ripple forever",
-        "Software loops only",
-        "ROM lookup of every sum"
-      ],
-      "answer": 0,
-      "explain": "Practical CLA uses hierarchy/prefix.",
-      "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_hard_29.png"
-      }
+      "type": "true_false",
+      "prompt": "A + 0 = A",
+      "answer": true,
+      "explain": "Identity for OR.",
+      "difficulty": "easy",
+      "id": "cla_easy_22"
     },
     {
-      "id": "cla_hard_30",
+      "type": "true_false",
+      "prompt": "A · 1 = A",
+      "answer": true,
+      "explain": "Identity for AND.",
+      "difficulty": "easy",
+      "id": "cla_easy_23"
+    },
+    {
+      "type": "true_false",
+      "prompt": "A + 1 = 1",
+      "answer": true,
+      "explain": "Annulment for OR.",
+      "difficulty": "easy",
+      "id": "cla_easy_24"
+    },
+    {
+      "type": "true_false",
+      "prompt": "A · 0 = 0",
+      "answer": true,
+      "explain": "Annulment for AND.",
+      "difficulty": "easy",
+      "id": "cla_easy_25"
+    },
+    {
+      "type": "true_false",
+      "prompt": "A + A = A",
+      "answer": true,
+      "explain": "Idempotent OR.",
+      "difficulty": "easy",
+      "id": "cla_easy_26"
+    },
+    {
+      "type": "true_false",
+      "prompt": "A · A = A",
+      "answer": true,
+      "explain": "Idempotent AND.",
+      "difficulty": "easy",
+      "id": "cla_easy_27"
+    },
+    {
+      "type": "true_false",
+      "prompt": "A + A' = 1",
+      "answer": true,
+      "explain": "Complement OR.",
+      "difficulty": "easy",
+      "id": "cla_easy_28"
+    },
+    {
+      "type": "true_false",
+      "prompt": "A · A' = 0",
+      "answer": true,
+      "explain": "Complement AND.",
+      "difficulty": "easy",
+      "id": "cla_easy_29"
+    },
+    {
+      "type": "true_false",
+      "prompt": "(A')' = A",
+      "answer": true,
+      "explain": "Involution.",
+      "difficulty": "easy",
+      "id": "cla_easy_30"
+    },
+    {
       "type": "multiple_choice",
-      "prompt": "Why can CLA be faster than ripple?",
+      "prompt": "Full adder A=0 B=0 Cin=0: Sum is…",
       "choices": [
-        "Computing carries from G/P in parallel",
-        "Removing all adders",
-        "Using fewer bits always",
-        "Ignoring Cin"
+        "0",
+        "1",
+        "Cout",
+        "X"
       ],
       "answer": 0,
-      "explain": "Carries from G, P, C₀ without long ripple.",
+      "explain": "Sum = A⊕B⊕Cin = 0.",
+      "difficulty": "medium",
+      "id": "cla_medium_05"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=0 Cin=0: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 0,
+      "explain": "Majority → Cout=0.",
+      "difficulty": "medium",
+      "id": "cla_medium_06"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=1 Cin=0: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "medium",
+      "id": "cla_medium_07"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=1 Cin=0: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 0,
+      "explain": "Majority → Cout=0.",
+      "difficulty": "medium",
+      "id": "cla_medium_08"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=0 Cin=0: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "medium",
+      "id": "cla_medium_09"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=0 Cin=0: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 0,
+      "explain": "Majority → Cout=0.",
+      "difficulty": "medium",
+      "id": "cla_medium_10"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=1 Cin=0: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 0,
+      "explain": "Sum = A⊕B⊕Cin = 0.",
+      "difficulty": "medium",
+      "id": "cla_medium_11"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=1 Cin=0: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "medium",
+      "id": "cla_medium_12"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=0 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "medium",
+      "id": "cla_medium_13"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=0 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 0,
+      "explain": "Majority → Cout=0.",
+      "difficulty": "medium",
+      "id": "cla_medium_14"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=1 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 0,
+      "explain": "Sum = A⊕B⊕Cin = 0.",
+      "difficulty": "medium",
+      "id": "cla_medium_15"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=1 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "medium",
+      "id": "cla_medium_16"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=0 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 0,
+      "explain": "Sum = A⊕B⊕Cin = 0.",
+      "difficulty": "medium",
+      "id": "cla_medium_17"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=0 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "medium",
+      "id": "cla_medium_18"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=1 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "medium",
+      "id": "cla_medium_19"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=1 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "medium",
+      "id": "cla_medium_20"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Half adder has no carry-in.",
+      "answer": true,
+      "explain": "HA = Sum/Cout from A,B only.",
+      "difficulty": "medium",
+      "id": "cla_medium_21"
+    },
+    {
+      "type": "true_false",
+      "prompt": "A + 0 = A",
+      "answer": true,
+      "explain": "Identity for OR.",
+      "difficulty": "medium",
+      "id": "cla_medium_22"
+    },
+    {
+      "type": "true_false",
+      "prompt": "A · 1 = A",
+      "answer": true,
+      "explain": "Identity for AND.",
+      "difficulty": "medium",
+      "id": "cla_medium_23"
+    },
+    {
+      "type": "true_false",
+      "prompt": "A + 1 = 1",
+      "answer": true,
+      "explain": "Annulment for OR.",
+      "difficulty": "medium",
+      "id": "cla_medium_24"
+    },
+    {
+      "type": "true_false",
+      "prompt": "A · 0 = 0",
+      "answer": true,
+      "explain": "Annulment for AND.",
+      "difficulty": "medium",
+      "id": "cla_medium_25"
+    },
+    {
+      "type": "true_false",
+      "prompt": "A + A = A",
+      "answer": true,
+      "explain": "Idempotent OR.",
+      "difficulty": "medium",
+      "id": "cla_medium_26"
+    },
+    {
+      "type": "true_false",
+      "prompt": "A · A = A",
+      "answer": true,
+      "explain": "Idempotent AND.",
+      "difficulty": "medium",
+      "id": "cla_medium_27"
+    },
+    {
+      "type": "true_false",
+      "prompt": "A + A' = 1",
+      "answer": true,
+      "explain": "Complement OR.",
+      "difficulty": "medium",
+      "id": "cla_medium_28"
+    },
+    {
+      "type": "true_false",
+      "prompt": "A · A' = 0",
+      "answer": true,
+      "explain": "Complement AND.",
+      "difficulty": "medium",
+      "id": "cla_medium_29"
+    },
+    {
+      "type": "true_false",
+      "prompt": "(A')' = A",
+      "answer": true,
+      "explain": "Involution.",
+      "difficulty": "medium",
+      "id": "cla_medium_30"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=0 Cin=0: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 0,
+      "explain": "Sum = A⊕B⊕Cin = 0.",
       "difficulty": "hard",
-      "tool_capture": {
-        "tool": "carry-look-ahead-adder-propagate-and-generate",
-        "key": "starter",
-        "label": "Starter",
-        "steps": [
-          {
-            "click": "#btn-starter"
-          }
-        ]
-      },
-      "media": {
-        "figure": "media/images/cla_hard_30.png"
-      }
+      "id": "cla_hard_05"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=0 Cin=0: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 0,
+      "explain": "Majority → Cout=0.",
+      "difficulty": "hard",
+      "id": "cla_hard_06"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=1 Cin=0: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "hard",
+      "id": "cla_hard_07"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=1 Cin=0: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 0,
+      "explain": "Majority → Cout=0.",
+      "difficulty": "hard",
+      "id": "cla_hard_08"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=0 Cin=0: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "hard",
+      "id": "cla_hard_09"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=0 Cin=0: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 0,
+      "explain": "Majority → Cout=0.",
+      "difficulty": "hard",
+      "id": "cla_hard_10"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=1 Cin=0: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 0,
+      "explain": "Sum = A⊕B⊕Cin = 0.",
+      "difficulty": "hard",
+      "id": "cla_hard_11"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=1 Cin=0: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "hard",
+      "id": "cla_hard_12"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=0 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "hard",
+      "id": "cla_hard_13"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=0 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 0,
+      "explain": "Majority → Cout=0.",
+      "difficulty": "hard",
+      "id": "cla_hard_14"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=1 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 0,
+      "explain": "Sum = A⊕B⊕Cin = 0.",
+      "difficulty": "hard",
+      "id": "cla_hard_15"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=0 B=1 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "hard",
+      "id": "cla_hard_16"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=0 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 0,
+      "explain": "Sum = A⊕B⊕Cin = 0.",
+      "difficulty": "hard",
+      "id": "cla_hard_17"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=0 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "hard",
+      "id": "cla_hard_18"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=1 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "hard",
+      "id": "cla_hard_19"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Full adder A=1 B=1 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "hard",
+      "id": "cla_hard_20"
+    },
+    {
+      "type": "true_false",
+      "prompt": "Half adder has no carry-in.",
+      "answer": true,
+      "explain": "HA = Sum/Cout from A,B only.",
+      "difficulty": "hard",
+      "id": "cla_hard_21"
+    },
+    {
+      "type": "true_false",
+      "prompt": "A + 0 = A",
+      "answer": true,
+      "explain": "Identity for OR.",
+      "difficulty": "hard",
+      "id": "cla_hard_22"
+    },
+    {
+      "type": "true_false",
+      "prompt": "A · 1 = A",
+      "answer": true,
+      "explain": "Identity for AND.",
+      "difficulty": "hard",
+      "id": "cla_hard_23"
+    },
+    {
+      "type": "true_false",
+      "prompt": "A + 1 = 1",
+      "answer": true,
+      "explain": "Annulment for OR.",
+      "difficulty": "hard",
+      "id": "cla_hard_24"
+    },
+    {
+      "type": "true_false",
+      "prompt": "A · 0 = 0",
+      "answer": true,
+      "explain": "Annulment for AND.",
+      "difficulty": "hard",
+      "id": "cla_hard_25"
+    },
+    {
+      "type": "true_false",
+      "prompt": "A + A = A",
+      "answer": true,
+      "explain": "Idempotent OR.",
+      "difficulty": "hard",
+      "id": "cla_hard_26"
+    },
+    {
+      "type": "true_false",
+      "prompt": "A · A = A",
+      "answer": true,
+      "explain": "Idempotent AND.",
+      "difficulty": "hard",
+      "id": "cla_hard_27"
+    },
+    {
+      "type": "true_false",
+      "prompt": "A + A' = 1",
+      "answer": true,
+      "explain": "Complement OR.",
+      "difficulty": "hard",
+      "id": "cla_hard_28"
+    },
+    {
+      "type": "true_false",
+      "prompt": "A · A' = 0",
+      "answer": true,
+      "explain": "Complement AND.",
+      "difficulty": "hard",
+      "id": "cla_hard_29"
+    },
+    {
+      "type": "true_false",
+      "prompt": "(A')' = A",
+      "answer": true,
+      "explain": "Involution.",
+      "difficulty": "hard",
+      "id": "cla_hard_30"
     }
   ]
 }

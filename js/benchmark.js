@@ -125,11 +125,31 @@
     const quest = (payload && payload.quest) || {};
     const identity = (payload && payload.identity) || {};
     const attempts = (payload && payload.attempts) || [];
+    const bench = (payload && payload.benchmark) || {};
     const levelState = payload.level_state || {};
     const cleared = countCleared(levelState);
     const maxLevels = inferMaxLevels(payload);
-    const timeouts = countTimeouts(attempts);
-    const med = medianMs(attempts);
+    // Prefer aggregates when attempts were omitted for GitHub size limits.
+    const timeouts =
+      attempts.length > 0
+        ? countTimeouts(attempts)
+        : Number(
+            summary.timeouts != null
+              ? summary.timeouts
+              : bench.timeouts != null
+                ? bench.timeouts
+                : 0
+          ) || 0;
+    const med =
+      attempts.length > 0
+        ? medianMs(attempts)
+        : Number(
+            summary.median_ms != null
+              ? summary.median_ms
+              : bench.median_ms != null
+                ? bench.median_ms
+                : 0
+          ) || 0;
     const accuracy = Number(summary.accuracy) || 0;
     // Always E/M/H for the public board column (zeros if a ladder was not played).
     const clearedCounts = clearedByDifficulty(levelState, DISPLAY_DIFFICULTIES);
