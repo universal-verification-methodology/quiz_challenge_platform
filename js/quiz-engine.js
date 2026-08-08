@@ -99,6 +99,61 @@
     return base ? base + "/" + src.replace(/^\/+/, "") : src;
   }
 
+  /** Embed when module/item has a toolId unless item.embed_tool === false. */
+  function shouldEmbedTool(item, opts) {
+    if (item && item.embed_tool === false) return false;
+    const toolId = String((item && item.tool_id) || (opts && opts.toolId) || "").trim();
+    if (!toolId) return false;
+    const base = String((opts && opts.toolsBase) || "").replace(/\/+$/, "");
+    if (!base && !(item && item.tool_url)) return false;
+    if (item && item.embed_tool === true) return true;
+    if (opts && opts.embedTools === false) return false;
+    return true;
+  }
+
+  function resolveToolEmbedUrl(item, opts) {
+    if (!shouldEmbedTool(item, opts)) return null;
+    const toolId = String((item && item.tool_id) || (opts && opts.toolId) || "").trim();
+    if (!toolId) return null;
+    if (item && item.tool_url) return String(item.tool_url);
+    const base = String((opts && opts.toolsBase) || "").replace(/\/+$/, "");
+    if (!base) return null;
+    return base + "/" + encodeURIComponent(toolId) + "/";
+  }
+
+  function appendToolEmbed(root, item, opts) {
+    const url = resolveToolEmbedUrl(item, opts);
+    if (!url) return;
+    const wrap = document.createElement("div");
+    wrap.className = "stem-tool stem-tool-full";
+    const label = document.createElement("p");
+    label.className = "stem-tool-label";
+    label.textContent = "Optional lab tool — full page below (no inner scroll box).";
+    const frame = document.createElement("iframe");
+    frame.className = "stem-tool-frame";
+    frame.src = url;
+    frame.title = "Lab tool: " + ((item && item.tool_id) || (opts && opts.toolId) || "embedded");
+    frame.setAttribute("loading", "lazy");
+    frame.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
+    frame.setAttribute("allow", "fullscreen");
+    frame.setAttribute("scrolling", "no");
+    // Cross-origin tools cannot report height; use a tall full embed so the
+    // outer page scrolls instead of a clipped iframe viewport.
+    const fromItem = Number(item && item.tool_embed_height_px);
+    const fromOpts = Number(opts && opts.toolEmbedHeightPx);
+    const px = Number.isFinite(fromItem) && fromItem > 400
+      ? fromItem
+      : Number.isFinite(fromOpts) && fromOpts > 400
+        ? fromOpts
+        : 3600;
+    const heightPx = Math.round(px);
+    frame.style.height = heightPx + "px";
+    frame.style.minHeight = heightPx + "px";
+    wrap.appendChild(label);
+    wrap.appendChild(frame);
+    root.appendChild(wrap);
+  }
+
   function fmtCountdown(msLeft) {
     const s = Math.max(0, Math.ceil(msLeft / 1000));
     if (s >= 60) {
@@ -451,6 +506,7 @@
     }
 
     root.appendChild(form);
+    appendToolEmbed(root, item, opts);
 
     if (opts._timerUi && timeLimitMs != null && timeLimitMs > 0) {
       const ui = opts._timerUi;
@@ -482,6 +538,7 @@
     DEFAULT_LIMITS_S,
     resolveTimeLimitMs,
     resolveWarnBeforeMs,
+    shouldEmbedTool,
     renderItem,
     formatChoiceLabel,
     formatCorrectLabel,

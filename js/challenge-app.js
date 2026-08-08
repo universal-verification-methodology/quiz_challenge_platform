@@ -10,6 +10,7 @@
   let bankCache = {};
   let openAttempt = null;
   let mode = "full";
+  let toolsBase = "";
 
   const els = {
     title: document.getElementById("quest-title"),
@@ -153,6 +154,41 @@
     return res.json();
   }
 
+  async function loadSite() {
+    try {
+      const site = await loadJson("config/site.json?v=7");
+      toolsBase =
+        (site.tools && site.tools.base_url) ||
+        (site.tools && site.tools.endpoint) ||
+        "";
+    } catch (_) {
+      toolsBase = "";
+    }
+  }
+
+  function quizRenderOpts(mod, item, extra) {
+    const embedTools =
+      !content.ux || content.ux.embed_tools !== false;
+    const toolId = (item && item.tool_id) || (mod && mod.toolId) || "";
+    const difficulty =
+      (extra && extra.difficulty) || (item && item.difficulty) || null;
+    const opts = Object.assign(
+      {
+        feedback: (content.ux && content.ux.feedback) || "report_only",
+        mediaBase: CONTENT_BASE,
+        toolsBase: toolsBase,
+        toolId: toolId,
+        embedTools: embedTools,
+        toolEmbedHeightPx:
+          (content.ux && content.ux.tool_embed_height_px) || 3600,
+        timeLimitMs: QCQuiz.resolveTimeLimitMs(content, item, difficulty),
+        warnBeforeMs: QCQuiz.resolveWarnBeforeMs(content),
+      },
+      extra || {}
+    );
+    return opts;
+  }
+
   async function loadBank(mod) {
     if (bankCache[mod.id]) return bankCache[mod.id];
     const bank = await loadJson(CONTENT_BASE + "/" + mod.questions);
@@ -255,30 +291,31 @@
       explain: pick.item.explain || "",
     });
 
-    QCQuiz.renderItem(els.quizRoot, pick.item, {
-      feedback: (content.ux && content.ux.feedback) || "report_only",
-      mediaBase: CONTENT_BASE,
-      timeLimitMs: QCQuiz.resolveTimeLimitMs(content, pick.item, pick.difficulty),
-      warnBeforeMs: QCQuiz.resolveWarnBeforeMs(content),
-      onGraded: ({ selected, correct, timedOut }) => {
-        QCSession.finishAttempt(session, openAttempt, selected, correct, {
-          timedOut: !!timedOut,
-        });
-        QCProgress.recordLevelOutcome(
-          content,
-          session,
-          mod.id,
-          pick.difficulty,
-          pick.item.id,
-          correct,
-          pick.bank_count
-        );
-        openAttempt = null;
-      },
-      onContinue: () => {
-        showCurrent();
-      },
-    });
+    QCQuiz.renderItem(
+      els.quizRoot,
+      pick.item,
+      quizRenderOpts(mod, pick.item, {
+        difficulty: pick.difficulty,
+        onGraded: ({ selected, correct, timedOut }) => {
+          QCSession.finishAttempt(session, openAttempt, selected, correct, {
+            timedOut: !!timedOut,
+          });
+          QCProgress.recordLevelOutcome(
+            content,
+            session,
+            mod.id,
+            pick.difficulty,
+            pick.item.id,
+            correct,
+            pick.bank_count
+          );
+          openAttempt = null;
+        },
+        onContinue: () => {
+          showCurrent();
+        },
+      })
+    );
   }
 
   async function showStemPreview(stemId) {
@@ -307,19 +344,19 @@
       els.moduleMeta.textContent = "Stem preview · " + mod.id + " · " + stemId;
     }
     if (els.progressTrack) els.progressTrack.hidden = true;
-    QCQuiz.renderItem(els.quizRoot, found, {
-      feedback: "report_only",
-      mediaBase: CONTENT_BASE,
-      timeLimitMs: QCQuiz.resolveTimeLimitMs(content, found, found.difficulty),
-      warnBeforeMs: QCQuiz.resolveWarnBeforeMs(content),
-      onGraded: () => {},
-      onContinue: () => {
-        if (els.status) {
-          els.status.hidden = false;
-          els.status.textContent = "Preview only — restart a quest to play for real.";
-        }
-      },
-    });
+    QCQuiz.renderItem(
+      els.quizRoot,
+      found,
+      quizRenderOpts(mod, found, {
+        onGraded: () => {},
+        onContinue: () => {
+          if (els.status) {
+            els.status.hidden = false;
+            els.status.textContent = "Preview only — restart a quest to play for real.";
+          }
+        },
+      })
+    );
   }
 
   function isShortParam(params) {
@@ -331,9 +368,11 @@
     mode = isShortParam(params) ? "test" : "full";
     QCSession.setMode(mode);
 
+    await loadSite();
+
     let raw;
     try {
-      raw = await loadJson(CONTENT_BASE + "/content.json?v=10");
+      raw = await loadJson(CONTENT_BASE + "/content.json?v=12");
     } catch (err) {
       if (els.status) {
         els.status.hidden = false;

@@ -831,6 +831,41 @@ body.page-report main.report-main,
   display: none;
 }
 
+.stem-tool {
+  margin: 1.5rem 0 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.stem-tool-label {
+  margin: 0;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--surface) 88%, var(--accent) 12%);
+}
+
+.stem-tool-frame {
+  display: block;
+  width: 100%;
+  /* Full embedding: tall canvas so the tool is not clipped in a scroll box.
+     Height is also set inline from JS (default 3600px / item override). */
+  height: 3600px;
+  min-height: 3600px;
+  border: 0;
+  background: #fff;
+  overflow: hidden;
+  touch-action: manipulation;
+}
+
+.stem-tool-full .stem-tool-frame {
+  /* Prefer the page scroll, not an iframe scrollbar */
+  overflow: hidden;
+}
+
 .stem-hint {
   margin: 0 0 1rem;
   font-size: 0.92rem;
