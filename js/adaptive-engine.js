@@ -1,5 +1,6 @@
 /**
  * Pick next unused item at the current difficulty; shuffle among remaining.
+ * Skips both used item ids and items that match a used prompt/choices/answer.
  */
 (function (global) {
   function normalizeType(type) {
@@ -10,6 +11,32 @@
 
   function itemsAtDifficulty(bank, difficulty) {
     return ((bank && bank.items) || []).filter((it) => (it.difficulty || "medium") === difficulty);
+  }
+
+  /** Content fingerprint so bank clones (different ids, same question) are not re-asked. */
+  function contentKey(it) {
+    return JSON.stringify({
+      d: (it && it.difficulty) || "medium",
+      t: (it && it.type) || "",
+      p: String((it && it.prompt) || "")
+        .trim()
+        .replace(/\s+/g, " "),
+      c: (it && it.choices) || null,
+      a: it && it.answer,
+    });
+  }
+
+  function uniquePoolSize(pool) {
+    const seen = {};
+    let n = 0;
+    (pool || []).forEach((it) => {
+      const k = contentKey(it);
+      if (!seen[k]) {
+        seen[k] = true;
+        n += 1;
+      }
+    });
+    return n;
   }
 
   function shuffle(arr) {
@@ -33,7 +60,15 @@
     if (st.attempts >= c.maxAttempts) return null;
 
     const pool = itemsAtDifficulty(bank, diff);
-    const remaining = pool.filter((it) => st.used_item_ids.indexOf(it.id) === -1);
+    const usedIds = {};
+    (st.used_item_ids || []).forEach((id) => {
+      usedIds[id] = true;
+    });
+    const usedKeys = {};
+    pool.forEach((it) => {
+      if (usedIds[it.id]) usedKeys[contentKey(it)] = true;
+    });
+    const remaining = pool.filter((it) => !usedIds[it.id] && !usedKeys[contentKey(it)]);
     if (!remaining.length) return null;
 
     const item = shuffle(remaining)[0];
@@ -41,7 +76,7 @@
       item,
       difficulty: diff,
       attempt_index: st.attempts + 1,
-      bank_count: pool.length,
+      bank_count: uniquePoolSize(pool),
     };
   }
 
@@ -72,6 +107,8 @@
   global.QCAdaptive = {
     normalizeType,
     itemsAtDifficulty,
+    contentKey,
+    uniquePoolSize,
     pickNext,
     grade,
     bankCounts,

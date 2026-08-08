@@ -34,19 +34,36 @@ def tf(qid: str, prompt: str, answer: bool, explain: str, difficulty: str) -> di
     }
 
 
+def content_key(it: dict) -> str:
+    return json.dumps(
+        {
+            "t": it.get("type") or "",
+            "p": " ".join(str(it.get("prompt") or "").split()),
+            "c": it.get("choices"),
+            "a": it.get("answer"),
+        },
+        sort_keys=True,
+        ensure_ascii=False,
+    )
+
+
 def pad(difficulty: str, prefix: str, builders: list) -> list[dict]:
+    """Build unique items only — never pad with clones of the same question."""
     out: list[dict] = []
-    n = 0
-    while len(out) < TARGET:
-        out.append(builders[n % len(builders)](len(out) + 1))
-        n += 1
-    fixed = []
-    for i, it in enumerate(out[:TARGET], start=1):
-        it = dict(it)
-        it["id"] = f"{prefix}_{difficulty}_{i:02d}"
+    seen: set[str] = set()
+    max_rounds = max(TARGET * 3, len(builders) * 12)
+    for n in range(max_rounds):
+        if len(out) >= TARGET:
+            break
+        it = dict(builders[n % len(builders)](n + 1))
+        key = content_key(it)
+        if key in seen:
+            continue
+        seen.add(key)
+        it["id"] = f"{prefix}_{difficulty}_{len(out) + 1:02d}"
         it["difficulty"] = difficulty
-        fixed.append(it)
-    return fixed
+        out.append(it)
+    return out
 
 
 def bank(module: str, title: str, prefix: str, easy_b: list, med_b: list, hard_b: list) -> dict:
@@ -2952,8 +2969,12 @@ def main() -> None:
             counts[it["difficulty"]] = counts.get(it["difficulty"], 0) + 1
             assert "(v" not in it["prompt"], it["prompt"]
             assert "variant " not in it["prompt"].lower(), it["prompt"]
-        assert counts.get("easy") == TARGET and counts.get("medium") == TARGET and counts.get("hard") == TARGET
-        assert len(bank_data["items"]) == 3 * TARGET
+        assert counts.get("easy", 0) >= 1 and counts.get("medium", 0) >= 1 and counts.get("hard", 0) >= 1, (
+            bank_data["module"],
+            counts,
+        )
+        keys = [content_key(it) + "|" + it["difficulty"] for it in bank_data["items"]]
+        assert len(keys) == len(set(keys)), (bank_data["module"], "duplicate questions")
         print(path.name, counts, "total", len(bank_data["items"]))
 
 

@@ -4,7 +4,7 @@
  * Rules (from content.progress):
  * - difficulties: easy → medium → hard
  * - need_correct_per_difficulty: 1
- * - max_attempts_per_difficulty: 10 (no question repeats within a level)
+ * - max_attempts_per_difficulty: 10 (no question / prompt clones within a level)
  * - advance module when all difficulties are cleared or exhausted
  */
 (function (global) {

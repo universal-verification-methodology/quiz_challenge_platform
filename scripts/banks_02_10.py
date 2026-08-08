@@ -34,23 +34,79 @@ def tf(qid: str, prompt: str, answer: bool, explain: str, difficulty: str) -> di
     }
 
 
+def content_key(it: dict) -> str:
+    return json.dumps(
+        {
+            "t": it.get("type") or "",
+            "p": " ".join(str(it.get("prompt") or "").split()),
+            "c": it.get("choices"),
+            "a": it.get("answer"),
+        },
+        sort_keys=True,
+        ensure_ascii=False,
+    )
+
+
 def pad(difficulty: str, prefix: str, builders: list) -> list[dict]:
+    """Build unique items only — never pad with clones of the same question."""
     out: list[dict] = []
-    n = 0
-    while len(out) < TARGET:
-        out.append(builders[n % len(builders)](len(out) + 1))
-        n += 1
-    fixed = []
-    for i, it in enumerate(out[:TARGET], start=1):
-        it = dict(it)
-        it["id"] = f"{prefix}_{difficulty}_{i:02d}"
+    seen: set[str] = set()
+    max_rounds = max(TARGET * 3, len(builders) * 12)
+    for n in range(max_rounds):
+        if len(out) >= TARGET:
+            break
+        it = dict(builders[n % len(builders)](n + 1))
+        key = content_key(it)
+        if key in seen:
+            continue
+        seen.add(key)
+        it["id"] = f"{prefix}_{difficulty}_{len(out) + 1:02d}"
         it["difficulty"] = difficulty
-        fixed.append(it)
-    return fixed
+        out.append(it)
+    return out
 
 
 def _pick(i: int, options: list[str]) -> str:
     return options[(i - 1) % len(options)]
+
+
+def _choice_rotate(correct: str, wrongs: list[str], i: int) -> tuple[list[str], int]:
+    """Build four choices with three distractors; rotate so answer index varies with i."""
+    start = (i - 1) % max(len(wrongs), 1)
+    picked = [wrongs[(start + k) % len(wrongs)] for k in range(3)]
+    choices = picked + [correct]
+    rot = (i - 1) % 4
+    choices = choices[rot:] + choices[:rot]
+    return choices, choices.index(correct)
+
+
+def _twos_signed(raw: int, w: int) -> int:
+    raw &= (1 << w) - 1
+    if raw >= (1 << (w - 1)):
+        return raw - (1 << w)
+    return raw
+
+
+def _bin_to_gray(b: int, w: int = 4) -> int:
+    b &= (1 << w) - 1
+    return (b ^ (b >> 1)) & ((1 << w) - 1)
+
+
+def _gray_to_bin(g: int, w: int = 4) -> int:
+    g &= (1 << w) - 1
+    b = g
+    for shift in range(1, w):
+        b ^= g >> shift
+    return b & ((1 << w) - 1)
+
+
+def _even_parity(p: int) -> int:
+    return bin(p).count("1") % 2
+
+
+def _field_mask(hi: int, lo: int) -> int:
+    w = hi - lo + 1
+    return ((1 << w) - 1) << lo
 
 
 # ---------------------------------------------------------------------------
@@ -61,46 +117,44 @@ def twos_bank() -> dict:
     widths = [4, 5, 6, 7, 8, 16]
 
     def easy_msb(i: int) -> dict:
-        return mcq(
-            "",
-            _pick(i, [
-                "In two’s complement, the MSB is best described as the…",
-                "What role does the top bit play in two’s complement?",
-                "Two’s-complement encoding treats the MSB as the…",
-                "At a fixed width, the most significant bit in two’s complement is the…",
-            ]),
-            ["Carry bit only", "Sign bit", "Always zero", "Clock enable"],
-            1,
-            "The MSB is the sign bit in two’s complement.",
-            "easy",
-        )
+        w = 4 + ((i - 1) % 8)
+        prompts = [
+            f"In {w}-bit two's complement, the MSB is best described as the…",
+            f"What role does bit {w - 1} play in {w}-bit two's complement?",
+            f"The top bit of a {w}-bit signed value is the…",
+            f"At width {w}, the most significant bit in two's complement is the…",
+        ]
+        correct = "Sign bit"
+        wrongs = ["Carry bit only", "Always zero", "Clock enable", "Parity bit", "Fraction bit", "Always one"]
+        choices, ans = _choice_rotate(correct, wrongs, i)
+        return mcq("", prompts[(i - 1) % len(prompts)], choices, ans, "The MSB is the sign bit in two's complement.", "easy")
 
     def easy_negate(i: int) -> dict:
+        v = 1 + ((i - 1) % 30)
+        correct = f"−{v}"
+        wrongs = [f"+{v}", "−128", "0", f"+{v + 1}", f"−{v + 1}"]
+        choices, ans = _choice_rotate(correct, wrongs, i)
         return mcq(
             "",
-            _pick(i, [
-                "The usual way to negate a two’s-complement value is…",
-                "How do you form −X from X in two’s complement?",
-                "Standard two’s-complement negation is…",
-                "To flip the sign of a two’s-complement number…",
-            ]),
-            ["Shift left once", "Invert all bits, then add one", "Clear the MSB only", "XOR with zero"],
-            1,
+            f"Negate +{v} in 8-bit two's complement. You should get…",
+            choices,
+            ans,
             "Invert every bit, then add one.",
             "easy",
         )
 
     def easy_allones(i: int) -> dict:
-        return tf(
+        w = 4 + ((i - 1) % 10)
+        val = _twos_signed((1 << w) - 1, w)
+        correct = str(val)
+        wrongs = ["0", "1", str(2 ** w - 1), str(-(2 ** w))]
+        choices, ans = _choice_rotate(correct, wrongs, i)
+        return mcq(
             "",
-            _pick(i, [
-                "All-ones at a fixed width is −1 in two’s complement.",
-                "The pattern of all 1-bits means −1 in two’s complement.",
-                "Two’s-complement −1 is represented by every bit set.",
-                "Unsigned all-ones and signed −1 share the same bit pattern at a fixed width.",
-            ]),
-            True,
-            "All ones is the canonical −1 pattern.",
+            f"All-ones at width {w} in two's complement equals…",
+            choices,
+            ans,
+            f"Every bit set is −1 at any fixed width.",
             "easy",
         )
 
@@ -108,129 +162,286 @@ def twos_bank() -> dict:
         w = widths[(i - 1) % len(widths)]
         return mcq(
             "",
-            f"At width {w}, the two’s-complement minimum is…",
+            f"At width {w}, the two's-complement minimum is…",
             [str(-(2 ** w - 1)), str(-(2 ** (w - 1))), str(-(2 ** (w - 1) - 1)), "0"],
             1,
-            f"{w}-bit two’s complement ranges from −{2 ** (w - 1)} to +{2 ** (w - 1) - 1}.",
+            f"{w}-bit two's complement ranges from −{2 ** (w - 1)} to +{2 ** (w - 1) - 1}.",
+            "easy",
+        )
+
+    def easy_decode(i: int) -> dict:
+        w = 4 + ((i - 1) % 8)
+        raw = ((i * 5 + 3) % (1 << w))
+        signed = _twos_signed(raw, w)
+        correct = str(signed)
+        wrongs = [str(raw), str(-raw), str(signed + 1 if signed < 0 else signed - 1)]
+        choices, ans = _choice_rotate(correct, wrongs, i)
+        return mcq(
+            "",
+            f"Interpret 0b{raw:0{w}b} as {w}-bit two's complement. The signed value is…",
+            choices,
+            ans,
+            f"MSB set → negative; value is {signed}.",
+            "easy",
+        )
+
+    def easy_max(i: int) -> dict:
+        w = 4 + ((i - 1) % 10)
+        correct = str(2 ** (w - 1) - 1)
+        wrongs = [str(2 ** (w - 1)), str(2 ** w - 1), str(2 ** w), "0"]
+        choices, ans = _choice_rotate(correct, wrongs, i)
+        return mcq(
+            "",
+            f"At width {w}, the two's-complement maximum is…",
+            choices,
+            ans,
+            f"Max is 2^{w - 1} − 1 = {2 ** (w - 1) - 1}.",
+            "easy",
+        )
+
+    def easy_zero(i: int) -> dict:
+        w = 4 + ((i - 1) % 8)
+        raw = 0
+        prompts = [
+            f"Width-{w} pattern 0b{raw:0{w}b} as signed equals…",
+            f"All-zero {w}-bit two's complement is…",
+            f"The canonical zero pattern at width {w} decodes to…",
+        ]
+        correct = "0"
+        wrongs = ["−1", "1", str(-(2 ** (w - 1)))]
+        choices, ans = _choice_rotate(correct, wrongs, i)
+        return mcq("", prompts[(i - 1) % len(prompts)], choices, ans, "All zeros is +0.", "easy")
+
+    def easy_pos(i: int) -> dict:
+        w = 8
+        v = 1 + ((i - 1) % 60)
+        raw = v
+        correct = str(v)
+        wrongs = [str(-v), str(v + 128), "0"]
+        choices, ans = _choice_rotate(correct, wrongs, i)
+        return mcq(
+            "",
+            f"8-bit pattern 0x{raw:02X} (MSB clear) as signed equals…",
+            choices,
+            ans,
+            f"MSB=0 → non-negative; value is +{v}.",
             "easy",
         )
 
     def med_max(i: int) -> dict:
-        w = widths[(i - 1) % len(widths)]
+        w = 4 + ((i - 1) % 12)
+        correct = str(2 ** (w - 1) - 1)
+        wrongs = [str(2 ** (w - 1)), str(2 ** w - 1), str(-(2 ** (w - 1)))]
+        choices, ans = _choice_rotate(correct, wrongs, i)
         return mcq(
             "",
-            f"At width {w}, the two’s-complement maximum is…",
-            [str(2 ** (w - 1)), str(2 ** (w - 1) - 1), str(2 ** w - 1), str(2 ** w)],
-            1,
-            f"Max is 2^{w - 1} − 1 = {2 ** (w - 1) - 1}.",
+            f"At width {w}, the two's-complement maximum is…",
+            choices,
+            ans,
+            f"Max is 2^{w - 1} − 1.",
             "medium",
         )
 
     def med_sign_only(i: int) -> dict:
+        w = 4 + ((i - 1) % 10)
+        raw = 1 << (w - 1)
+        signed = _twos_signed(raw, w)
+        correct = str(signed)
+        wrongs = ["−1", str(2 ** (w - 1)), "0", str(-(2 ** (w - 1)) + 1)]
+        choices, ans = _choice_rotate(correct, wrongs, i)
         return mcq(
             "",
-            _pick(i, [
-                "Width-8 pattern with only the MSB set means…",
-                "Eight-bit 0x80 as two’s complement equals…",
-                "What signed value is 10000000₂ at width 8?",
-                "Only the sign bit set in 8-bit two’s complement is…",
-            ]),
-            ["−1", "−128", "128", "0"],
-            1,
-            "Sign bit alone is the asymmetric minimum (−128).",
+            f"Width-{w} pattern with only the MSB set (0b{raw:0{w}b}) equals…",
+            choices,
+            ans,
+            f"Sign bit alone is the asymmetric minimum (−{2 ** (w - 1)}).",
             "medium",
         )
 
     def med_neg_val(i: int) -> dict:
-        v = 3 + (i % 5)
+        v = 1 + ((i - 1) % 40)
+        correct = f"−{v}"
+        wrongs = [f"+{v}", "−128", "0", f"−{v + 1}"]
+        choices, ans = _choice_rotate(correct, wrongs, i)
         return mcq(
             "",
-            f"Negate +{v} in 8-bit two’s complement. You should get…",
-            [f"+{v}", f"−{v}", "−128", "0"],
-            1,
+            f"Negate +{v} in 8-bit two's complement. You should get…",
+            choices,
+            ans,
             f"Invert + 1 maps +{v} to −{v}.",
             "medium",
         )
 
     def med_asym(i: int) -> dict:
-        prompts = [
-            ("Two’s-complement range is asymmetric: one more negative value than positive.", True),
-            ("At width 8 you can represent −128 but not +128.", True),
-            ("The most-negative pattern has no positive counterpart of equal magnitude.", True),
-            ("Eight-bit two’s complement max and min have equal absolute values.", False),
+        w = 4 + ((i - 1) % 12)
+        min_v = -(2 ** (w - 1))
+        max_v = 2 ** (w - 1) - 1
+        cases = [
+            (f"Two's-complement range at width {w} is asymmetric: one more negative value than positive.", True),
+            (f"At width {w} you can represent {min_v} but not +{2 ** (w - 1)}.", True),
+            (f"The most-negative {w}-bit pattern has no positive counterpart of equal magnitude.", True),
+            (f"Width-{w} max (+{max_v}) and min ({min_v}) have equal absolute values.", False),
+            (f"Width-{w} signed values span {min_v} through +{max_v}.", True),
+            (f"Negating +{max_v} at width {w} yields −{max_v}.", True),
         ]
-        p, a = prompts[(i - 1) % 4]
-        return tf("", p, a, "Min is −2^(w−1); max is 2^(w−1)−1 — not symmetric.", "medium")
+        p, a = cases[(i - 1) % len(cases)]
+        return tf("", p, a, f"Min is −2^(w−1); max is 2^(w−1)−1 — not symmetric.", "medium")
 
-    def hard_adder(i: int) -> dict:
+    def med_add(i: int) -> dict:
+        a = 1 + ((i - 1) % 20)
+        b = 1 + ((i * 3) % 15)
+        s = a + b
+        correct = str(s)
+        wrongs = [str(a - b), str(a ^ b), str(s + 1)]
+        choices, ans = _choice_rotate(correct, wrongs, i)
         return mcq(
             "",
-            _pick(i, [
-                "Why can ordinary binary adders still add two’s-complement numbers?",
-                "Two’s complement is popular in hardware mainly because…",
-                "Addition of signed two’s-complement values uses…",
-                "Pick the best reason two’s complement fits ALU adders.",
-            ]),
-            [
-                "It needs a separate signed adder always",
-                "Same adder hardware works; wrap interprets signed results",
-                "MSB must be stripped before every add",
-                "Only subtraction works",
-            ],
-            1,
-            "Ordinary modular add works; interpretation is signed.",
-            "hard",
+            f"8-bit signed +{a} + +{b} (no overflow) equals…",
+            choices,
+            ans,
+            f"{a}+{b}={s}; both operands positive, result fits.",
+            "medium",
         )
 
-    def hard_sext(i: int) -> dict:
+    def med_hex(i: int) -> dict:
+        w = 8
+        raw = 0x10 + ((i - 1) % 80)
+        signed = _twos_signed(raw, w)
+        correct = str(signed)
+        wrongs = [str(raw), str(-raw), str(signed + 2)]
+        choices, ans = _choice_rotate(correct, wrongs, i)
         return mcq(
             "",
-            _pick(i, [
-                "Sign-extending 0b1111 (4-bit, −1) to 8 bits yields…",
-                "Widen signed 4-bit all-ones to 8 bits. Hex is…",
-                "Two’s-complement sign extension of 1111₂ → 8 bits is…",
-                "After signed widen 4→8 from −1 nibble, the byte is…",
-            ]),
-            ["0x0F", "0xFF", "0xF0", "0x00"],
-            1,
+            f"8-bit two's complement 0x{raw:02X} equals decimal…",
+            choices,
+            ans,
+            f"0x{raw:02X} → signed {signed}.",
+            "medium",
+        )
+
+    def med_invert(i: int) -> dict:
+        v = 1 + ((i - 1) % 30)
+        raw = v & 0xFF
+        inv = (~raw) & 0xFF
+        correct = f"0x{inv:02X}"
+        wrongs = [f"0x{raw:02X}", f"0x{(inv + 1) & 0xFF:02X}", f"0x{(inv - 1) & 0xFF:02X}"]
+        choices, ans = _choice_rotate(correct, wrongs, i)
+        return mcq(
+            "",
+            f"Invert all bits of 8-bit +{v} (0x{raw:02X}). Result is…",
+            choices,
+            ans,
+            f"Bitwise NOT of 0x{raw:02X} is 0x{inv:02X}.",
+            "medium",
+        )
+
+    def hard_adder(i: int) -> dict:
+        w = 4 + ((i - 1) % 8)
+        prompts = [
+            f"Why can a {w}-bit binary adder add two's-complement numbers?",
+            f"Two's complement at width {w} fits ALU adders because…",
+            f"Signed addition of {w}-bit two's values uses…",
+        ]
+        correct = "Same adder hardware works; wrap interprets signed results"
+        wrongs = [
+            "It needs a separate signed adder always",
+            "MSB must be stripped before every add",
+            "Only subtraction works",
+            "Carry must be discarded always",
+        ]
+        choices, ans = _choice_rotate(correct, wrongs, i)
+        return mcq("", prompts[(i - 1) % len(prompts)], choices, ans, "Ordinary modular add works; interpretation is signed.", "hard")
+
+    def hard_sext(i: int) -> dict:
+        w_src = 3 + ((i - 1) % 5)
+        w_dst = w_src + 4
+        raw = (1 << w_src) - 1
+        signed = _twos_signed(raw, w_src)
+        ext = raw | (((1 << (w_dst - w_src)) - 1) << w_src) if signed < 0 else raw
+        correct = f"0b{ext:0{w_dst}b}"
+        wrongs = [f"0b{raw:0{w_dst}b}", f"0b{(ext ^ ((1 << w_dst) - 1)):0{w_dst}b}", f"0b{0:0{w_dst}b}"]
+        choices, ans = _choice_rotate(correct, wrongs, i)
+        return mcq(
+            "",
+            f"Sign-extend {w_src}-bit {signed} (0b{raw:0{w_src}b}) to {w_dst} bits yields…",
+            choices,
+            ans,
             "Negative values fill 1s when sign-extending.",
             "hard",
         )
 
     def hard_type(i: int) -> dict:
+        w = 8
+        raw = 0xF0 + ((i - 1) % 16)
+        signed = _twos_signed(raw, w)
+        unsigned = raw
+        if i % 2:
+            p = f"Reading signed 0x{raw:02X} ({signed}) as unsigned gives…"
+            correct = str(unsigned)
+            wrongs = [str(signed), "0", str(unsigned + 1)]
+        else:
+            p = f"Reading unsigned 0x{raw:02X} ({unsigned}) as 8-bit signed gives…"
+            correct = str(signed)
+            wrongs = [str(unsigned), "0", str(signed + 1)]
+        choices, ans = _choice_rotate(correct, wrongs, i)
+        return mcq("", p, choices, ans, "Type/signedness changes interpretation of the same pattern.", "hard")
+
+    def hard_negmin(i: int) -> dict:
+        w = 4 + ((i - 1) % 10)
+        min_raw = 1 << (w - 1)
+        cases = [
+            (f"Negating the most-negative {w}-bit value (−{2 ** (w - 1)}) overflows / wraps.", True),
+            (f"At width {w}, −(−{2 ** (w - 1)}) cannot be represented as +{2 ** (w - 1)}.", True),
+            (f"Invert+1 on 0b{min_raw:0{w}b} at width {w} lands back on the same pattern.", True),
+            (f"Every {w}-bit two's-complement value has a unique positive negation at the same width.", False),
+            (f"Width-{w} value +{2 ** (w - 1) - 1} negates cleanly to −{2 ** (w - 1) - 1}.", True),
+        ]
+        p, a = cases[(i - 1) % len(cases)]
+        return tf("", p, a, "The asymmetric min has no positive twin; negate wraps.", "hard")
+
+    def hard_sub(i: int) -> dict:
+        a = 5 + ((i - 1) % 20)
+        b = 1 + ((i * 2) % 10)
+        diff = a - b
+        correct = str(diff)
+        wrongs = [str(a + b), str(b - a), str(diff + 1)]
+        choices, ans = _choice_rotate(correct, wrongs, i)
         return mcq(
             "",
-            _pick(i, [
-                "Treating an 8-bit signed wire as unsigned is a pitfall because…",
-                "Reading signed 0xFF as unsigned gives…",
-                "Same bits, different type: signed −1 vs unsigned is…",
-                "Misreading the MSB as magnitude (unsigned) on a negative value…",
-            ]),
-            [
-                "Bits change automatically",
-                "Changes the numeric meaning (e.g. −1 → 255)",
-                "Never matters in RTL",
-                "Only affects clocks",
-            ],
-            1,
-            "Type/signedness changes interpretation of the same pattern.",
+            f"8-bit signed +{a} − +{b} (no overflow) equals…",
+            choices,
+            ans,
+            f"{a}−{b}={diff}.",
             "hard",
         )
 
-    def hard_negmin(i: int) -> dict:
-        prompts = [
-            ("Negating the most-negative value (−128 at width 8) overflows / wraps.", True),
-            ("At width 8, −(−128) cannot be represented as +128.", True),
-            ("Invert+1 on 0x80 at width 8 lands back on 0x80.", True),
-            ("Every two’s-complement value has a unique positive negation at the same width.", False),
-        ]
-        p, a = prompts[(i - 1) % 4]
-        return tf("", p, a, "The asymmetric min has no positive twin; negate wraps.", "hard")
+    def hard_compare(i: int) -> dict:
+        w = 8
+        a = _twos_signed(0x20 + ((i - 1) % 40), w)
+        b = _twos_signed(0x60 + ((i * 2) % 30), w)
+        if a < b:
+            correct = f"{a} < {b}"
+            ans_idx = 0
+        elif a > b:
+            correct = f"{a} > {b}"
+            ans_idx = 1
+        else:
+            correct = f"{a} = {b}"
+            ans_idx = 2
+        choices = [f"{a} < {b}", f"{a} > {b}", f"{a} = {b}", "Cannot compare signed"]
+        return mcq(
+            "",
+            f"Compare 8-bit signed {a} and {b}. Which is true?",
+            choices,
+            ans_idx,
+            "Two's-complement ordering matches integer ordering.",
+            "hard",
+        )
 
     items = (
-        pad("easy", "twos", [easy_msb, easy_negate, easy_allones, easy_min])
-        + pad("medium", "twos", [med_max, med_sign_only, med_neg_val, med_asym])
-        + pad("hard", "twos", [hard_adder, hard_sext, hard_type, hard_negmin])
+        pad("easy", "twos", [easy_msb, easy_negate, easy_allones, easy_min, easy_decode, easy_max, easy_zero, easy_pos])
+        + pad("medium", "twos", [med_max, med_sign_only, med_neg_val, med_asym, med_add, med_hex, med_invert])
+        + pad("hard", "twos", [hard_adder, hard_sext, hard_type, hard_negmin, hard_sub, hard_compare])
     )
     return {"module": "module02-twos-complement", "title": "Two's complement", "items": items}
 
@@ -1796,7 +2007,9 @@ def main() -> None:
                 assert 0 <= it["answer"] < len(it["choices"]), it
             else:
                 assert isinstance(it["answer"], bool), it
-        assert counts == {"easy": 30, "medium": 30, "hard": 30}, counts
+        assert counts.get("easy", 0) >= 1 and counts.get("medium", 0) >= 1 and counts.get("hard", 0) >= 1, counts
+        keys = [content_key(it) + "|" + it["difficulty"] for it in bank["items"]]
+        assert len(keys) == len(set(keys)), "duplicate questions in bank"
         print(path.name, counts, "total", len(bank["items"]))
 
 
