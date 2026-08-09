@@ -71,7 +71,7 @@ def find_item(bank: dict, item_id: str) -> dict | None:
 
 
 def speech_for_item(item: dict, *, has_figure: bool) -> str:
-    prompt = str(item.get("prompt") or "").strip()
+    prompt = str(item.get("prompt") or "").strip().replace("\ufffd", "…")
     typ = str(item.get("type") or "multiple_choice")
     parts: list[str] = []
     if has_figure:
@@ -87,7 +87,8 @@ def speech_for_item(item: dict, *, has_figure: bool) -> str:
         letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         for i, choice in enumerate(choices):
             label = letters[i] if i < len(letters) else str(i + 1)
-            parts.append(f"Option {label}. {choice}.")
+            choice_s = str(choice).replace("\ufffd", "…")
+            parts.append(f"Option {label}. {choice_s}.")
         parts.append("Select the best answer.")
     return re.sub(r"\s+", " ", " ".join(parts)).strip()
 

@@ -199,14 +199,29 @@ python .cursor/skills/question-video/scripts/batch_build_modules.py \
 
 Binders exist for **module01–module26** (prompt → tool challenge/preset). Modules 27+ still need binders.
 
-### Step 7: Packaging report
+### Step 7: Second-pass accuracy check
+
+After a batch build (or anytime banks change), verify speech/files match the current quiz items:
+
+```bash
+python .cursor/skills/question-video/scripts/verify_question_videos.py \
+  --course content/learn_digital
+
+# Rebuild mismatches (stale speech, missing mp4, etc.)
+python .cursor/skills/question-video/scripts/verify_question_videos.py \
+  --course content/learn_digital --fix --workers 4
+```
+
+Checks: media pointers + file sizes, `speech.txt` vs regenerated speech from prompt/choices, no answer-reveal phrases. Writes `media/_batch_logs/verify_report.json`.
+
+### Step 8: Packaging report
 
 Tell the user:
 
 - Module + item ids processed  
 - Output MP4 paths  
 - Whether JSON was patched  
-- Player note: `js/quiz-engine.js` may still need video stem rendering  
+- Verify report summary (ok / bad / by_issue)  
 - Residual risk: screen capture / multimodal models  
 
 ## Agent rules
@@ -216,7 +231,8 @@ Tell the user:
 3. Never narrate or burn-in the correct answer.
 4. Do not commit `media/videos/*.mp4` unless the user asks.
 5. If ffmpeg or edge-tts is missing, stop with install hints — do not fake MP4s.
-6. For TTS/ffmpeg conventions, you may read sibling  
+6. After large batches, run `verify_question_videos.py` and `--fix` stale/broken items.
+7. For TTS/ffmpeg conventions, you may read sibling  
    `../digital_learning/.cursor/skills/module-slides/` (especially `synthesize_audio.sh`,
    `build_video.sh`) but **run this skill’s scripts** for challenge banks.
 

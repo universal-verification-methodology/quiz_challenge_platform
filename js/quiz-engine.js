@@ -124,19 +124,33 @@
   function appendToolEmbed(root, item, opts) {
     const url = resolveToolEmbedUrl(item, opts);
     if (!url) return;
+    const toolId =
+      String((item && item.tool_id) || (opts && opts.toolId) || "lab").trim() ||
+      "lab";
     const wrap = document.createElement("div");
     wrap.className = "stem-tool stem-tool-full";
-    const label = document.createElement("p");
+    wrap.dataset.toolId = toolId;
+
+    const label = document.createElement("div");
     label.className = "stem-tool-label";
-    label.textContent = "Optional lab tool — full page below (no inner scroll box).";
+    const labelText = document.createElement("span");
+    labelText.textContent = "Lab tool — " + toolId + " (scroll the page to use it)";
+    const openLink = document.createElement("a");
+    openLink.className = "stem-tool-open";
+    openLink.href = url;
+    openLink.target = "_blank";
+    openLink.rel = "noopener noreferrer";
+    openLink.textContent = "Open in new tab";
+    label.appendChild(labelText);
+    label.appendChild(openLink);
+
     const frame = document.createElement("iframe");
     frame.className = "stem-tool-frame";
     frame.src = url;
-    frame.title = "Lab tool: " + ((item && item.tool_id) || (opts && opts.toolId) || "embedded");
+    frame.title = "Lab tool: " + toolId;
     frame.setAttribute("loading", "lazy");
     frame.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
     frame.setAttribute("allow", "fullscreen");
-    frame.setAttribute("scrolling", "no");
     // Cross-origin tools cannot report height; use a tall full embed so the
     // outer page scrolls instead of a clipped iframe viewport.
     const fromItem = Number(item && item.tool_embed_height_px);

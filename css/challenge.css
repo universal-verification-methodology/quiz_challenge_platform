@@ -832,7 +832,7 @@ body.page-report main.report-main,
 }
 
 .stem-tool {
-  margin: 1.5rem 0 0.85rem;
+  margin: 2.75rem 0 1rem;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
@@ -846,6 +846,24 @@ body.page-report main.report-main,
   color: var(--muted);
   border-bottom: 1px solid var(--line);
   background: color-mix(in srgb, var(--surface) 88%, var(--accent) 12%);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+}
+
+.stem-tool-open {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.stem-tool-open:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
 }
 
 .stem-tool-frame {

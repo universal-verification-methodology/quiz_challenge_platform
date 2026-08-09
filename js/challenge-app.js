@@ -5,12 +5,15 @@
  */
 (function () {
   const CONTENT_BASE = "content/learn_digital";
+  /** Fallback if config/site.json fails so lab embeds still resolve. */
+  const DEFAULT_TOOLS_BASE =
+    "https://universal-verification-methodology.github.io/learning/tools";
   let content = null;
   let session = null;
   let bankCache = {};
   let openAttempt = null;
   let mode = "full";
-  let toolsBase = "";
+  let toolsBase = DEFAULT_TOOLS_BASE;
 
   const els = {
     title: document.getElementById("quest-title"),
@@ -155,14 +158,19 @@
   }
 
   async function loadSite() {
+    toolsBase = DEFAULT_TOOLS_BASE;
     try {
-      const site = await loadJson("config/site.json?v=7");
-      toolsBase =
+      const site = await loadJson("config/site.json?v=8");
+      const fromSite =
         (site.tools && site.tools.base_url) ||
         (site.tools && site.tools.endpoint) ||
         "";
-    } catch (_) {
-      toolsBase = "";
+      if (fromSite) toolsBase = String(fromSite).replace(/\/+$/, "");
+    } catch (err) {
+      console.warn(
+        "config/site.json unavailable; using default tools.base_url",
+        err
+      );
     }
   }
 
@@ -372,7 +380,7 @@
 
     let raw;
     try {
-      raw = await loadJson(CONTENT_BASE + "/content.json?v=12");
+      raw = await loadJson(CONTENT_BASE + "/content.json?v=13");
     } catch (err) {
       if (els.status) {
         els.status.hidden = false;
