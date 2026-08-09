@@ -1,13 +1,15 @@
 {
   "id": "learn_digital",
   "title": "Digital Foundations Quest",
-  "version": 9,
+  "version": 13,
   "source_course": "learn_digital",
   "ux": {
     "reveal_modules_during_quiz": false,
     "feedback": "report_only",
     "module_order": "random",
-    "within_module": "easy_to_hard_clearance"
+    "within_module": "easy_to_hard_clearance",
+    "embed_tools": true,
+    "tool_embed_height_px": 3600
   },
   "timing": {
     "enabled": true,
@@ -76,7 +78,7 @@
       "toolId": "overflow-wrap",
       "questions": "questions/module03-overflow-wrap.json",
       "source_quiz": "module03-overflow-wrap/quiz.json",
-      "video_stems": false
+      "video_stems": true
     },
     {
       "id": "module04-ascii-hex",
@@ -85,7 +87,7 @@
       "toolId": "ascii-hex",
       "questions": "questions/module04-ascii-hex.json",
       "source_quiz": "module04-ascii-hex/quiz.json",
-      "video_stems": false
+      "video_stems": true
     },
     {
       "id": "module05-gray-code",
@@ -103,7 +105,7 @@
       "toolId": "bcd-lab",
       "questions": "questions/module06-bcd-lab.json",
       "source_quiz": "module06-bcd-lab/quiz.json",
-      "video_stems": false
+      "video_stems": true
     },
     {
       "id": "module07-parity-checksum",
@@ -130,7 +132,7 @@
       "toolId": "bit-fields",
       "questions": "questions/module09-bit-fields.json",
       "source_quiz": "module09-bit-fields/quiz.json",
-      "video_stems": false
+      "video_stems": true
     },
     {
       "id": "module10-endian-lab",
@@ -157,7 +159,7 @@
       "toolId": "boolean-laws",
       "questions": "questions/module12-boolean-laws.json",
       "source_quiz": "module12-boolean-laws/quiz.json",
-      "video_stems": false
+      "video_stems": true
     },
     {
       "id": "module13-kmap",
@@ -175,7 +177,7 @@
       "toolId": "sop-pos",
       "questions": "questions/module14-sop-pos.json",
       "source_quiz": "module14-sop-pos/quiz.json",
-      "video_stems": false
+      "video_stems": true
     },
     {
       "id": "module15-dont-care-lab",
@@ -184,7 +186,7 @@
       "toolId": "dont-care-lab",
       "questions": "questions/module15-dont-care-lab.json",
       "source_quiz": "module15-dont-care-lab/quiz.json",
-      "video_stems": false
+      "video_stems": true
     },
     {
       "id": "module16-logic-hazards",
@@ -193,7 +195,7 @@
       "toolId": "logic-hazards",
       "questions": "questions/module16-logic-hazards.json",
       "source_quiz": "module16-logic-hazards/quiz.json",
-      "video_stems": false
+      "video_stems": true
     },
     {
       "id": "module17-gate-composer",
@@ -211,7 +213,7 @@
       "toolId": "mux-decoder",
       "questions": "questions/module18-mux-decoder.json",
       "source_quiz": "module18-mux-decoder/quiz.json",
-      "video_stems": false
+      "video_stems": true
     },
     {
       "id": "module19-priority-compare",
@@ -229,7 +231,7 @@
       "toolId": "half-full-adder",
       "questions": "questions/module20-half-full-adder.json",
       "source_quiz": "module20-half-full-adder/quiz.json",
-      "video_stems": false
+      "video_stems": true
     },
     {
       "id": "module21-xor-parity-tree",
@@ -238,7 +240,7 @@
       "toolId": "xor-parity-tree",
       "questions": "questions/module21-xor-parity-tree.json",
       "source_quiz": "module21-xor-parity-tree/quiz.json",
-      "video_stems": false
+      "video_stems": true
     },
     {
       "id": "module22-tri-state-bus",
@@ -247,7 +249,7 @@
       "toolId": "tri-state-bus",
       "questions": "questions/module22-tri-state-bus.json",
       "source_quiz": "module22-tri-state-bus/quiz.json",
-      "video_stems": false
+      "video_stems": true
     },
     {
       "id": "module23-barrel-shifter",
@@ -310,7 +312,7 @@
       "toolId": "cdc-sync",
       "questions": "questions/module29-cdc-sync.json",
       "source_quiz": "module29-cdc-sync/quiz.json",
-      "video_stems": false
+      "video_stems": true
     },
     {
       "id": "module30-fsm-lab",
@@ -337,7 +339,7 @@
       "toolId": "seq-detector",
       "questions": "questions/module32-seq-detector.json",
       "source_quiz": "module32-seq-detector/quiz.json",
-      "video_stems": false
+      "video_stems": true
     },
     {
       "id": "module33-ring-johnson",
@@ -364,7 +366,7 @@
       "toolId": "ripple-carry-adder-animator",
       "questions": "questions/module35-ripple-carry-adder-animator.json",
       "source_quiz": "module35-ripple-carry-adder-animator/quiz.json",
-      "video_stems": false
+      "video_stems": true
     },
     {
       "id": "module36-carry-look-ahead-adder-propagate-and-generate",
@@ -373,7 +375,7 @@
       "toolId": "carry-look-ahead-adder-propagate-and-generate",
       "questions": "questions/module36-carry-look-ahead-adder-propagate-and-generate.json",
       "source_quiz": "module36-carry-look-ahead-adder-propagate-and-generate/quiz.json",
-      "video_stems": false
+      "video_stems": true
     },
     {
       "id": "module37-array-mult",
@@ -391,7 +393,7 @@
       "toolId": "alu-explorer",
       "questions": "questions/module38-alu-explorer.json",
       "source_quiz": "module38-alu-explorer/quiz.json",
-      "video_stems": false
+      "video_stems": true
     },
     {
       "id": "module39-carry-select-adder",
@@ -400,7 +402,7 @@
       "toolId": "carry-select-adder",
       "questions": "questions/module39-carry-select-adder.json",
       "source_quiz": "module39-carry-select-adder/quiz.json",
-      "video_stems": false
+      "video_stems": true
     },
     {
       "id": "module40-booth-encode",
@@ -409,7 +411,7 @@
       "toolId": "booth-encode",
       "questions": "questions/module40-booth-encode.json",
       "source_quiz": "module40-booth-encode/quiz.json",
-      "video_stems": false
+      "video_stems": true
     },
     {
       "id": "module41-signed-arith",
@@ -418,7 +420,7 @@
       "toolId": "signed-arith",
       "questions": "questions/module41-signed-arith.json",
       "source_quiz": "module41-signed-arith/quiz.json",
-      "video_stems": false
+      "video_stems": true
     },
     {
       "id": "module42-mem-map",
@@ -445,7 +447,7 @@
       "toolId": "cache-walk",
       "questions": "questions/module44-cache-walk.json",
       "source_quiz": "module44-cache-walk/quiz.json",
-      "video_stems": false
+      "video_stems": true
     },
     {
       "id": "module45-dual-port-ram",

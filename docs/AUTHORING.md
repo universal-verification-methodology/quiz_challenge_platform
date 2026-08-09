@@ -137,7 +137,10 @@ Minimal shape:
 | `progress.bank_multiplier` | Guidance: bank size ≥ `max_attempts × multiplier` (default 3 → **30** items per difficulty). |
 | `ux.module_order` | `"random"` (recommended) or `"sequential"`. |
 | `ux.feedback` | Keep `"report_only"` for the blind-quest integrity model. |
+| `ux.embed_tools` | When `true` (default), every module with a `toolId` embeds the live lab tool below the answers. Set `false` to disable. Per-item opt-out: `"embed_tool": false`. |
+| `ux.tool_embed_height_px` | Tall iframe height for full-page embeds (default 3600). |
 | `timing.limits_s` | Per-difficulty seconds; omit or disable timing only if you accept easier LLM paste. |
+| `modules[].toolId` | Maps to `config/site.json` → `tools.base_url` + `/{toolId}/`. |
 | `profiles.test` | Optional short run for dry runs (subset of modules / difficulties). |
 
 Bump `version` when you change banks so old `localStorage` sessions are less likely to mismatch (test profile already suffixes the version).
@@ -187,23 +190,26 @@ One file per module. Compatible types: `multiple_choice`, `true_false`, `short_a
 
 1. **Tag every item** with `"difficulty": "easy" | "medium" | "hard"` (or your `progress.difficulties` list).
 2. **Unique `id`s** within the module (and ideally globally).
-3. **MCQ `answer`** is the **0-based index** into `choices`.
-4. **Bank size:** aim for ≥ `max_attempts_per_difficulty × bank_multiplier` items **per difficulty** so a worst-case level never repeats a question (demo: 30 × 3).
-5. **No mid-quest spoilers** in the prompt; put teaching detail in `explain` (and optional `choice_rationales` later).
-6. **Optional media** (when your UI build supports it):
+3. **Unique prompts globally** — after padding/forging, run `python scripts/enforce_global_unique_prompts.py` so the same stem text is not reused across difficulties or modules. Regenerated items drop old `media` and need new stem videos.
+4. **MCQ `answer`** is the **0-based index** into `choices`.
+5. **Bank size:** aim for ≥ `max_attempts_per_difficulty × bank_multiplier` items **per difficulty** so a worst-case level never repeats a question (demo: 30 × 3).
+6. **No mid-quest spoilers** in the prompt; put teaching detail in `explain` (and optional `choice_rationales` later).
+7. **Optional media** (video/image hides the prompt text for anti-copy):
 
 ```json
 "media": {
-  "type": "image",
-  "src": "media/images/q1.png"
+  "type": "video",
+  "src": "media/videos/q1.mp4",
+  "poster": "media/images/q1-frame.png"
 }
 ```
 
-Prefer schematics, plots, or short clips over pure text when you want higher friction against casual LLM paste.
+Prefer schematics, plots, or short clips over pure text when you want higher friction against casual LLM paste. Tool embeds still appear for every module with a `toolId` even when an item has no video yet.
 
 To **generate stem videos** from bank items (narrated question + on-screen figure/frame), use the project skill [`.cursor/skills/question-video/`](../.cursor/skills/question-video/SKILL.md) — patterned after `digital_learning`’s `module-slides` TTS/ffmpeg pipeline.
 
-7. **Optional per-item timeout:** `"time_limit_s": 45` overrides the difficulty default from `content.json`.
+8. **Optional per-item timeout:** `"time_limit_s": 45` overrides the difficulty default from `content.json`.
+9. **Tool embed opt-out:** `"embed_tool": false`. Optional `"tool_embed_height_px": 4000` if a tall tool is clipped.
 
 ---
 
