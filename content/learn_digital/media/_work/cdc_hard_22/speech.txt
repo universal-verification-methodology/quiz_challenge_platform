@@ -1,1 +1,1 @@
-Look at the browser lab figure on the slide. Question. Which chain matches q1<=async_in; q2<=q1? Option A. always @(posedge clk_dst) begin q1<=async_in; q2<=q1; end. Option B. assign sync_out = async_in;. Option C. always @(*) q2 = async_in;. Option D. always @(posedge clk_src) q2 <= q1;. Select the best answer.
+Look at the browser lab figure on the slide. Question. For the CDC / 2-FF sync lab: Two-flop synchronizers remove all metastability risk forever? Option A. True. Option B. False. Option C. Only at DC. Option D. Only in FPGA. Select the best answer.
