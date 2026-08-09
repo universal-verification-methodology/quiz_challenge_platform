@@ -14,7 +14,13 @@
       ],
       "answer": 0,
       "explain": "fire = valid && ready.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_easy_01.mp4",
+        "poster": "media/images/handshake_easy_01-frame.png",
+        "figure": "media/images/handshake_easy_01.png"
+      }
     },
     {
       "id": "handshake_easy_02",
@@ -28,7 +34,13 @@
       ],
       "answer": 0,
       "explain": "Both assert preset.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_easy_02.mp4",
+        "poster": "media/images/handshake_easy_02-frame.png",
+        "figure": "media/images/handshake_easy_02.png"
+      }
     },
     {
       "id": "handshake_easy_03",
@@ -42,7 +54,13 @@
       ],
       "answer": 0,
       "explain": "Backpressure stability rule.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_easy_03.mp4",
+        "poster": "media/images/handshake_easy_03-frame.png",
+        "figure": "media/images/handshake_easy_03.png"
+      }
     },
     {
       "id": "handshake_easy_04",
@@ -50,7 +68,449 @@
       "prompt": "A transfer needs only ready without valid.",
       "answer": false,
       "explain": "Both must be high.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_easy_04.mp4",
+        "poster": "media/images/handshake_easy_04-frame.png",
+        "figure": "media/images/handshake_easy_04.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Handshake (valid/ready): Valid/ready handshake transfers when both are high in the same cycle.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "handshake_easy_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_easy_05.mp4",
+        "poster": "media/images/handshake_easy_05-frame.png",
+        "figure": "media/images/handshake_easy_05.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Handshake (valid/ready): A master may drop valid before ready acknowledges freely always.",
+      "answer": false,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "handshake_easy_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_easy_06.mp4",
+        "poster": "media/images/handshake_easy_06-frame.png",
+        "figure": "media/images/handshake_easy_06.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Handshake (valid/ready): Ready may depend on valid in the same cycle (combinational) carefully.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "handshake_easy_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_easy_07.mp4",
+        "poster": "media/images/handshake_easy_07-frame.png",
+        "figure": "media/images/handshake_easy_07.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Handshake (valid/ready): AXI-style fire is valid && ready.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "handshake_easy_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_easy_08.mp4",
+        "poster": "media/images/handshake_easy_08-frame.png",
+        "figure": "media/images/handshake_easy_08.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Handshake (valid/ready): Tri-state buses need exactly one driver when not floating intentionally.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "handshake_easy_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_easy_09.mp4",
+        "poster": "media/images/handshake_easy_09-frame.png",
+        "figure": "media/images/handshake_easy_09.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Handshake (valid/ready): Multiple drivers asserting opposite values is bus contention.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "handshake_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_easy_10.mp4",
+        "poster": "media/images/handshake_easy_10-frame.png",
+        "figure": "media/images/handshake_easy_10.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Handshake (valid/ready): Async FIFO write and read clocks may be unrelated.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "handshake_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_easy_11.mp4",
+        "poster": "media/images/handshake_easy_11-frame.png",
+        "figure": "media/images/handshake_easy_11.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Handshake (valid/ready): Gray code helps multi-bit CDC of pointers.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "handshake_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_easy_12.mp4",
+        "poster": "media/images/handshake_easy_12-frame.png",
+        "figure": "media/images/handshake_easy_12.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Handshake (valid/ready): Single FF sync is enough for multi-bit buses.",
+      "answer": false,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "handshake_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_easy_13.mp4",
+        "poster": "media/images/handshake_easy_13-frame.png",
+        "figure": "media/images/handshake_easy_13.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Handshake (valid/ready): Backpressure is expressed by deasserting ready.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "handshake_easy_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_easy_14.mp4",
+        "poster": "media/images/handshake_easy_14-frame.png",
+        "figure": "media/images/handshake_easy_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Handshake (valid/ready): With valid fixed high, how many beats transfer in 1 cycles if ready is always high?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "handshake_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_easy_15.mp4",
+        "poster": "media/images/handshake_easy_15-frame.png",
+        "figure": "media/images/handshake_easy_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Handshake (valid/ready): With valid fixed high, how many beats transfer in 2 cycles if ready is always high?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "handshake_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_easy_16.mp4",
+        "poster": "media/images/handshake_easy_16-frame.png",
+        "figure": "media/images/handshake_easy_16.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Handshake (valid/ready): With valid fixed high, how many beats transfer in 3 cycles if ready is always high?",
+      "choices": [
+        "2",
+        "3",
+        "6",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "handshake_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_easy_17.mp4",
+        "poster": "media/images/handshake_easy_17-frame.png",
+        "figure": "media/images/handshake_easy_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Handshake (valid/ready): With valid fixed high, how many beats transfer in 4 cycles if ready is always high?",
+      "choices": [
+        "3",
+        "4",
+        "8",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "handshake_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_easy_18.mp4",
+        "poster": "media/images/handshake_easy_18-frame.png",
+        "figure": "media/images/handshake_easy_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Handshake (valid/ready): With valid fixed high, how many beats transfer in 5 cycles if ready is always high?",
+      "choices": [
+        "4",
+        "5",
+        "10",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "handshake_easy_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_easy_19.mp4",
+        "poster": "media/images/handshake_easy_19-frame.png",
+        "figure": "media/images/handshake_easy_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Handshake (valid/ready): With valid fixed high, how many beats transfer in 6 cycles if ready is always high?",
+      "choices": [
+        "5",
+        "6",
+        "12",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "handshake_easy_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_easy_20.mp4",
+        "poster": "media/images/handshake_easy_20-frame.png",
+        "figure": "media/images/handshake_easy_20.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Handshake (valid/ready): With valid fixed high, how many beats transfer in 7 cycles if ready is always high?",
+      "choices": [
+        "6",
+        "7",
+        "14",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "handshake_easy_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_easy_21.mp4",
+        "poster": "media/images/handshake_easy_21-frame.png",
+        "figure": "media/images/handshake_easy_21.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Handshake (valid/ready): With valid fixed high, how many beats transfer in 8 cycles if ready is always high?",
+      "choices": [
+        "7",
+        "8",
+        "16",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "handshake_easy_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_easy_22.mp4",
+        "poster": "media/images/handshake_easy_22-frame.png",
+        "figure": "media/images/handshake_easy_22.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Handshake (valid/ready): Setup time is a requirement before the active clock edge.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "handshake_easy_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_easy_23.mp4",
+        "poster": "media/images/handshake_easy_23-frame.png",
+        "figure": "media/images/handshake_easy_23.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Handshake (valid/ready): Setup time is a requirement before the active clock edge?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "handshake_easy_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_easy_24.mp4",
+        "poster": "media/images/handshake_easy_24-frame.png",
+        "figure": "media/images/handshake_easy_24.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Handshake (valid/ready): Hold time is a requirement after the active clock edge.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "handshake_easy_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_easy_25.mp4",
+        "poster": "media/images/handshake_easy_25-frame.png",
+        "figure": "media/images/handshake_easy_25.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Handshake (valid/ready): Hold time is a requirement after the active clock edge?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "handshake_easy_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_easy_26.mp4",
+        "poster": "media/images/handshake_easy_26-frame.png",
+        "figure": "media/images/handshake_easy_26.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Handshake (valid/ready): Contamination delay is a min path delay from clk to Q.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "handshake_easy_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_easy_27.mp4",
+        "poster": "media/images/handshake_easy_27-frame.png",
+        "figure": "media/images/handshake_easy_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Handshake (valid/ready): Contamination delay is a min path delay from clk to Q?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "handshake_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_easy_28.mp4",
+        "poster": "media/images/handshake_easy_28-frame.png",
+        "figure": "media/images/handshake_easy_28.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Handshake (valid/ready): Clock-to-Q max is used in setup checks.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "handshake_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_easy_29.mp4",
+        "poster": "media/images/handshake_easy_29-frame.png",
+        "figure": "media/images/handshake_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Handshake (valid/ready): Clock-to-Q max is used in setup checks?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "handshake_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_easy_30.mp4",
+        "poster": "media/images/handshake_easy_30-frame.png",
+        "figure": "media/images/handshake_easy_30.png"
+      }
     },
     {
       "id": "handshake_medium_01",
@@ -64,7 +524,13 @@
       ],
       "answer": 0,
       "explain": "Not every cycle transfers.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_medium_01.mp4",
+        "poster": "media/images/handshake_medium_01-frame.png",
+        "figure": "media/images/handshake_medium_01.png"
+      }
     },
     {
       "id": "handshake_medium_02",
@@ -78,7 +544,13 @@
       ],
       "answer": 0,
       "explain": "Protocol variants constrain ready timing.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_medium_02.mp4",
+        "poster": "media/images/handshake_medium_02-frame.png",
+        "figure": "media/images/handshake_medium_02.png"
+      }
     },
     {
       "id": "handshake_medium_03",
@@ -92,7 +564,13 @@
       ],
       "answer": 0,
       "explain": "Common ready/valid plumbing.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_medium_03.mp4",
+        "poster": "media/images/handshake_medium_03-frame.png",
+        "figure": "media/images/handshake_medium_03.png"
+      }
     },
     {
       "id": "handshake_medium_04",
@@ -100,7 +578,449 @@
       "prompt": "fire can be 1 when valid=0.",
       "answer": false,
       "explain": "fire requires both.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_medium_04.mp4",
+        "poster": "media/images/handshake_medium_04-frame.png",
+        "figure": "media/images/handshake_medium_04.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Handshake (valid/ready), valid/ready handshake transfers when both are high in the same cycle.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "handshake_medium_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_medium_05.mp4",
+        "poster": "media/images/handshake_medium_05-frame.png",
+        "figure": "media/images/handshake_medium_05.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Handshake (valid/ready), a master may drop valid before ready acknowledges freely always.",
+      "answer": false,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "handshake_medium_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_medium_06.mp4",
+        "poster": "media/images/handshake_medium_06-frame.png",
+        "figure": "media/images/handshake_medium_06.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Handshake (valid/ready), ready may depend on valid in the same cycle (combinational) carefully.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "handshake_medium_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_medium_07.mp4",
+        "poster": "media/images/handshake_medium_07-frame.png",
+        "figure": "media/images/handshake_medium_07.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Handshake (valid/ready), aXI-style fire is valid && ready.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "handshake_medium_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_medium_08.mp4",
+        "poster": "media/images/handshake_medium_08-frame.png",
+        "figure": "media/images/handshake_medium_08.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Handshake (valid/ready), tri-state buses need exactly one driver when not floating intentionally.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "handshake_medium_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_medium_09.mp4",
+        "poster": "media/images/handshake_medium_09-frame.png",
+        "figure": "media/images/handshake_medium_09.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Handshake (valid/ready), multiple drivers asserting opposite values is bus contention.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "handshake_medium_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_medium_10.mp4",
+        "poster": "media/images/handshake_medium_10-frame.png",
+        "figure": "media/images/handshake_medium_10.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Handshake (valid/ready), async FIFO write and read clocks may be unrelated.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "handshake_medium_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_medium_11.mp4",
+        "poster": "media/images/handshake_medium_11-frame.png",
+        "figure": "media/images/handshake_medium_11.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Handshake (valid/ready), gray code helps multi-bit CDC of pointers.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "handshake_medium_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_medium_12.mp4",
+        "poster": "media/images/handshake_medium_12-frame.png",
+        "figure": "media/images/handshake_medium_12.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Handshake (valid/ready), single FF sync is enough for multi-bit buses.",
+      "answer": false,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "handshake_medium_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_medium_13.mp4",
+        "poster": "media/images/handshake_medium_13-frame.png",
+        "figure": "media/images/handshake_medium_13.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Handshake (valid/ready), backpressure is expressed by deasserting ready.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "handshake_medium_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_medium_14.mp4",
+        "poster": "media/images/handshake_medium_14-frame.png",
+        "figure": "media/images/handshake_medium_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Handshake (valid/ready), with valid fixed high, how many beats transfer in 1 cycles if ready is always high?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "handshake_medium_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_medium_15.mp4",
+        "poster": "media/images/handshake_medium_15-frame.png",
+        "figure": "media/images/handshake_medium_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Handshake (valid/ready), with valid fixed high, how many beats transfer in 2 cycles if ready is always high?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "handshake_medium_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_medium_16.mp4",
+        "poster": "media/images/handshake_medium_16-frame.png",
+        "figure": "media/images/handshake_medium_16.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Handshake (valid/ready), with valid fixed high, how many beats transfer in 3 cycles if ready is always high?",
+      "choices": [
+        "2",
+        "3",
+        "6",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "handshake_medium_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_medium_17.mp4",
+        "poster": "media/images/handshake_medium_17-frame.png",
+        "figure": "media/images/handshake_medium_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Handshake (valid/ready), with valid fixed high, how many beats transfer in 4 cycles if ready is always high?",
+      "choices": [
+        "3",
+        "4",
+        "8",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "handshake_medium_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_medium_18.mp4",
+        "poster": "media/images/handshake_medium_18-frame.png",
+        "figure": "media/images/handshake_medium_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Handshake (valid/ready), with valid fixed high, how many beats transfer in 5 cycles if ready is always high?",
+      "choices": [
+        "4",
+        "5",
+        "10",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "handshake_medium_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_medium_19.mp4",
+        "poster": "media/images/handshake_medium_19-frame.png",
+        "figure": "media/images/handshake_medium_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Handshake (valid/ready), with valid fixed high, how many beats transfer in 6 cycles if ready is always high?",
+      "choices": [
+        "5",
+        "6",
+        "12",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "handshake_medium_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_medium_20.mp4",
+        "poster": "media/images/handshake_medium_20-frame.png",
+        "figure": "media/images/handshake_medium_20.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Handshake (valid/ready), with valid fixed high, how many beats transfer in 7 cycles if ready is always high?",
+      "choices": [
+        "6",
+        "7",
+        "14",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "handshake_medium_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_medium_21.mp4",
+        "poster": "media/images/handshake_medium_21-frame.png",
+        "figure": "media/images/handshake_medium_21.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Handshake (valid/ready), with valid fixed high, how many beats transfer in 8 cycles if ready is always high?",
+      "choices": [
+        "7",
+        "8",
+        "16",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "handshake_medium_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_medium_22.mp4",
+        "poster": "media/images/handshake_medium_22-frame.png",
+        "figure": "media/images/handshake_medium_22.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Handshake (valid/ready), setup time is a requirement before the active clock edge.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "handshake_medium_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_medium_23.mp4",
+        "poster": "media/images/handshake_medium_23-frame.png",
+        "figure": "media/images/handshake_medium_23.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Handshake (valid/ready), setup time is a requirement before the active clock edge?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "handshake_medium_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_medium_24.mp4",
+        "poster": "media/images/handshake_medium_24-frame.png",
+        "figure": "media/images/handshake_medium_24.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Handshake (valid/ready), hold time is a requirement after the active clock edge.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "handshake_medium_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_medium_25.mp4",
+        "poster": "media/images/handshake_medium_25-frame.png",
+        "figure": "media/images/handshake_medium_25.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Handshake (valid/ready), hold time is a requirement after the active clock edge?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "handshake_medium_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_medium_26.mp4",
+        "poster": "media/images/handshake_medium_26-frame.png",
+        "figure": "media/images/handshake_medium_26.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Handshake (valid/ready), contamination delay is a min path delay from clk to Q.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "handshake_medium_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_medium_27.mp4",
+        "poster": "media/images/handshake_medium_27-frame.png",
+        "figure": "media/images/handshake_medium_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Handshake (valid/ready), contamination delay is a min path delay from clk to Q?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "handshake_medium_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_medium_28.mp4",
+        "poster": "media/images/handshake_medium_28-frame.png",
+        "figure": "media/images/handshake_medium_28.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Handshake (valid/ready), clock-to-Q max is used in setup checks.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "handshake_medium_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_medium_29.mp4",
+        "poster": "media/images/handshake_medium_29-frame.png",
+        "figure": "media/images/handshake_medium_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Handshake (valid/ready), clock-to-Q max is used in setup checks?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "handshake_medium_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_medium_30.mp4",
+        "poster": "media/images/handshake_medium_30-frame.png",
+        "figure": "media/images/handshake_medium_30.png"
+      }
     },
     {
       "id": "handshake_hard_01",
@@ -114,7 +1034,13 @@
       ],
       "answer": 0,
       "explain": "Hold until accepted.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_hard_01.mp4",
+        "poster": "media/images/handshake_hard_01-frame.png",
+        "figure": "media/images/handshake_hard_01.png"
+      }
     },
     {
       "id": "handshake_hard_02",
@@ -128,7 +1054,13 @@
       ],
       "answer": 0,
       "explain": "fire each cycle.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_hard_02.mp4",
+        "poster": "media/images/handshake_hard_02-frame.png",
+        "figure": "media/images/handshake_hard_02.png"
+      }
     },
     {
       "id": "handshake_hard_03",
@@ -142,7 +1074,13 @@
       ],
       "answer": 0,
       "explain": "Both sides must speak the same protocol.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_hard_03.mp4",
+        "poster": "media/images/handshake_hard_03-frame.png",
+        "figure": "media/images/handshake_hard_03.png"
+      }
     },
     {
       "id": "handshake_hard_04",
@@ -150,651 +1088,157 @@
       "prompt": "Handshake replaces the need for clocks.",
       "answer": false,
       "explain": "Still synchronous to a clock usually.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_hard_04.mp4",
+        "poster": "media/images/handshake_hard_04-frame.png",
+        "figure": "media/images/handshake_hard_04.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Valid/ready handshake transfers when both are high in the same cycle.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "easy",
-      "id": "handshake_easy_05"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A master may drop valid before ready acknowledges freely always.",
-      "answer": false,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "easy",
-      "id": "handshake_easy_06"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Ready may depend on valid in the same cycle (combinational) carefully.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "easy",
-      "id": "handshake_easy_07"
-    },
-    {
-      "type": "true_false",
-      "prompt": "AXI-style fire is valid && ready.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "easy",
-      "id": "handshake_easy_08"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Tri-state buses need exactly one driver when not floating intentionally.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "easy",
-      "id": "handshake_easy_09"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Multiple drivers asserting opposite values is bus contention.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "easy",
-      "id": "handshake_easy_10"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Async FIFO write and read clocks may be unrelated.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "easy",
-      "id": "handshake_easy_11"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Gray code helps multi-bit CDC of pointers.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "easy",
-      "id": "handshake_easy_12"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Single FF sync is enough for multi-bit buses.",
-      "answer": false,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "easy",
-      "id": "handshake_easy_13"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Backpressure is expressed by deasserting ready.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "easy",
-      "id": "handshake_easy_14"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 1 cycles if ready is always high?",
-      "choices": [
-        "0",
-        "1",
-        "2",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "easy",
-      "id": "handshake_easy_15"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 2 cycles if ready is always high?",
-      "choices": [
-        "1",
-        "2",
-        "4",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "easy",
-      "id": "handshake_easy_16"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 3 cycles if ready is always high?",
-      "choices": [
-        "2",
-        "3",
-        "6",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "easy",
-      "id": "handshake_easy_17"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 4 cycles if ready is always high?",
-      "choices": [
-        "3",
-        "4",
-        "8",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "easy",
-      "id": "handshake_easy_18"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 5 cycles if ready is always high?",
-      "choices": [
-        "4",
-        "5",
-        "10",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "easy",
-      "id": "handshake_easy_19"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 6 cycles if ready is always high?",
-      "choices": [
-        "5",
-        "6",
-        "12",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "easy",
-      "id": "handshake_easy_20"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 7 cycles if ready is always high?",
-      "choices": [
-        "6",
-        "7",
-        "14",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "easy",
-      "id": "handshake_easy_21"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 8 cycles if ready is always high?",
-      "choices": [
-        "7",
-        "8",
-        "16",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "easy",
-      "id": "handshake_easy_22"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Setup time is a requirement before the active clock edge.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "easy",
-      "id": "handshake_easy_23"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Setup time is a requirement before the active clock edge?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "easy",
-      "id": "handshake_easy_24"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Hold time is a requirement after the active clock edge.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "easy",
-      "id": "handshake_easy_25"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Hold time is a requirement after the active clock edge?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "easy",
-      "id": "handshake_easy_26"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Contamination delay is a min path delay from clk to Q.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "easy",
-      "id": "handshake_easy_27"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Contamination delay is a min path delay from clk to Q?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "easy",
-      "id": "handshake_easy_28"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Clock-to-Q max is used in setup checks.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "easy",
-      "id": "handshake_easy_29"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Clock-to-Q max is used in setup checks?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "easy",
-      "id": "handshake_easy_30"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Valid/ready handshake transfers when both are high in the same cycle.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "medium",
-      "id": "handshake_medium_05"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A master may drop valid before ready acknowledges freely always.",
-      "answer": false,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "medium",
-      "id": "handshake_medium_06"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Ready may depend on valid in the same cycle (combinational) carefully.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "medium",
-      "id": "handshake_medium_07"
-    },
-    {
-      "type": "true_false",
-      "prompt": "AXI-style fire is valid && ready.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "medium",
-      "id": "handshake_medium_08"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Tri-state buses need exactly one driver when not floating intentionally.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "medium",
-      "id": "handshake_medium_09"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Multiple drivers asserting opposite values is bus contention.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "medium",
-      "id": "handshake_medium_10"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Async FIFO write and read clocks may be unrelated.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "medium",
-      "id": "handshake_medium_11"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Gray code helps multi-bit CDC of pointers.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "medium",
-      "id": "handshake_medium_12"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Single FF sync is enough for multi-bit buses.",
-      "answer": false,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "medium",
-      "id": "handshake_medium_13"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Backpressure is expressed by deasserting ready.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "medium",
-      "id": "handshake_medium_14"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 1 cycles if ready is always high?",
-      "choices": [
-        "0",
-        "1",
-        "2",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "medium",
-      "id": "handshake_medium_15"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 2 cycles if ready is always high?",
-      "choices": [
-        "1",
-        "2",
-        "4",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "medium",
-      "id": "handshake_medium_16"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 3 cycles if ready is always high?",
-      "choices": [
-        "2",
-        "3",
-        "6",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "medium",
-      "id": "handshake_medium_17"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 4 cycles if ready is always high?",
-      "choices": [
-        "3",
-        "4",
-        "8",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "medium",
-      "id": "handshake_medium_18"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 5 cycles if ready is always high?",
-      "choices": [
-        "4",
-        "5",
-        "10",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "medium",
-      "id": "handshake_medium_19"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 6 cycles if ready is always high?",
-      "choices": [
-        "5",
-        "6",
-        "12",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "medium",
-      "id": "handshake_medium_20"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 7 cycles if ready is always high?",
-      "choices": [
-        "6",
-        "7",
-        "14",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "medium",
-      "id": "handshake_medium_21"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 8 cycles if ready is always high?",
-      "choices": [
-        "7",
-        "8",
-        "16",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "medium",
-      "id": "handshake_medium_22"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Setup time is a requirement before the active clock edge.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "medium",
-      "id": "handshake_medium_23"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Setup time is a requirement before the active clock edge?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "medium",
-      "id": "handshake_medium_24"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Hold time is a requirement after the active clock edge.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "medium",
-      "id": "handshake_medium_25"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Hold time is a requirement after the active clock edge?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "medium",
-      "id": "handshake_medium_26"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Contamination delay is a min path delay from clk to Q.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "medium",
-      "id": "handshake_medium_27"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Contamination delay is a min path delay from clk to Q?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "medium",
-      "id": "handshake_medium_28"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Clock-to-Q max is used in setup checks.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "medium",
-      "id": "handshake_medium_29"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Clock-to-Q max is used in setup checks?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "medium",
-      "id": "handshake_medium_30"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Valid/ready handshake transfers when both are high in the same cycle.",
+      "prompt": "For the Handshake (valid/ready) lab: Valid/ready handshake transfers when both are high in the same cycle.",
       "answer": true,
       "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "id": "handshake_hard_05"
+      "id": "handshake_hard_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_hard_05.mp4",
+        "poster": "media/images/handshake_hard_05-frame.png",
+        "figure": "media/images/handshake_hard_05.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A master may drop valid before ready acknowledges freely always.",
+      "prompt": "For the Handshake (valid/ready) lab: A master may drop valid before ready acknowledges freely always.",
       "answer": false,
       "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "id": "handshake_hard_06"
+      "id": "handshake_hard_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_hard_06.mp4",
+        "poster": "media/images/handshake_hard_06-frame.png",
+        "figure": "media/images/handshake_hard_06.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Ready may depend on valid in the same cycle (combinational) carefully.",
+      "prompt": "For the Handshake (valid/ready) lab: Ready may depend on valid in the same cycle (combinational) carefully.",
       "answer": true,
       "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "id": "handshake_hard_07"
+      "id": "handshake_hard_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_hard_07.mp4",
+        "poster": "media/images/handshake_hard_07-frame.png",
+        "figure": "media/images/handshake_hard_07.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "AXI-style fire is valid && ready.",
+      "prompt": "For the Handshake (valid/ready) lab: AXI-style fire is valid && ready.",
       "answer": true,
       "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "id": "handshake_hard_08"
+      "id": "handshake_hard_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_hard_08.mp4",
+        "poster": "media/images/handshake_hard_08-frame.png",
+        "figure": "media/images/handshake_hard_08.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Tri-state buses need exactly one driver when not floating intentionally.",
+      "prompt": "For the Handshake (valid/ready) lab: Tri-state buses need exactly one driver when not floating intentionally.",
       "answer": true,
       "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "id": "handshake_hard_09"
+      "id": "handshake_hard_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_hard_09.mp4",
+        "poster": "media/images/handshake_hard_09-frame.png",
+        "figure": "media/images/handshake_hard_09.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Multiple drivers asserting opposite values is bus contention.",
+      "prompt": "For the Handshake (valid/ready) lab: Multiple drivers asserting opposite values is bus contention.",
       "answer": true,
       "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "id": "handshake_hard_10"
+      "id": "handshake_hard_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_hard_10.mp4",
+        "poster": "media/images/handshake_hard_10-frame.png",
+        "figure": "media/images/handshake_hard_10.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Async FIFO write and read clocks may be unrelated.",
+      "prompt": "For the Handshake (valid/ready) lab: Async FIFO write and read clocks may be unrelated.",
       "answer": true,
       "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "id": "handshake_hard_11"
+      "id": "handshake_hard_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_hard_11.mp4",
+        "poster": "media/images/handshake_hard_11-frame.png",
+        "figure": "media/images/handshake_hard_11.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Gray code helps multi-bit CDC of pointers.",
+      "prompt": "For the Handshake (valid/ready) lab: Gray code helps multi-bit CDC of pointers.",
       "answer": true,
       "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "id": "handshake_hard_12"
+      "id": "handshake_hard_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_hard_12.mp4",
+        "poster": "media/images/handshake_hard_12-frame.png",
+        "figure": "media/images/handshake_hard_12.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Single FF sync is enough for multi-bit buses.",
+      "prompt": "For the Handshake (valid/ready) lab: Single FF sync is enough for multi-bit buses.",
       "answer": false,
       "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "id": "handshake_hard_13"
+      "id": "handshake_hard_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_hard_13.mp4",
+        "poster": "media/images/handshake_hard_13-frame.png",
+        "figure": "media/images/handshake_hard_13.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Backpressure is expressed by deasserting ready.",
+      "prompt": "For the Handshake (valid/ready) lab: Backpressure is expressed by deasserting ready.",
       "answer": true,
       "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "id": "handshake_hard_14"
+      "id": "handshake_hard_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_hard_14.mp4",
+        "poster": "media/images/handshake_hard_14-frame.png",
+        "figure": "media/images/handshake_hard_14.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 1 cycles if ready is always high?",
+      "prompt": "For the Handshake (valid/ready) lab: With valid fixed high, how many beats transfer in 1 cycles if ready is always high?",
       "choices": [
         "0",
         "1",
@@ -804,11 +1248,17 @@
       "answer": 1,
       "explain": "One beat per cycle when both high.",
       "difficulty": "hard",
-      "id": "handshake_hard_15"
+      "id": "handshake_hard_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_hard_15.mp4",
+        "poster": "media/images/handshake_hard_15-frame.png",
+        "figure": "media/images/handshake_hard_15.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 2 cycles if ready is always high?",
+      "prompt": "For the Handshake (valid/ready) lab: With valid fixed high, how many beats transfer in 2 cycles if ready is always high?",
       "choices": [
         "1",
         "2",
@@ -818,11 +1268,17 @@
       "answer": 1,
       "explain": "One beat per cycle when both high.",
       "difficulty": "hard",
-      "id": "handshake_hard_16"
+      "id": "handshake_hard_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_hard_16.mp4",
+        "poster": "media/images/handshake_hard_16-frame.png",
+        "figure": "media/images/handshake_hard_16.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 3 cycles if ready is always high?",
+      "prompt": "For the Handshake (valid/ready) lab: With valid fixed high, how many beats transfer in 3 cycles if ready is always high?",
       "choices": [
         "2",
         "3",
@@ -832,11 +1288,17 @@
       "answer": 1,
       "explain": "One beat per cycle when both high.",
       "difficulty": "hard",
-      "id": "handshake_hard_17"
+      "id": "handshake_hard_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_hard_17.mp4",
+        "poster": "media/images/handshake_hard_17-frame.png",
+        "figure": "media/images/handshake_hard_17.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 4 cycles if ready is always high?",
+      "prompt": "For the Handshake (valid/ready) lab: With valid fixed high, how many beats transfer in 4 cycles if ready is always high?",
       "choices": [
         "3",
         "4",
@@ -846,11 +1308,17 @@
       "answer": 1,
       "explain": "One beat per cycle when both high.",
       "difficulty": "hard",
-      "id": "handshake_hard_18"
+      "id": "handshake_hard_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_hard_18.mp4",
+        "poster": "media/images/handshake_hard_18-frame.png",
+        "figure": "media/images/handshake_hard_18.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 5 cycles if ready is always high?",
+      "prompt": "For the Handshake (valid/ready) lab: With valid fixed high, how many beats transfer in 5 cycles if ready is always high?",
       "choices": [
         "4",
         "5",
@@ -860,11 +1328,17 @@
       "answer": 1,
       "explain": "One beat per cycle when both high.",
       "difficulty": "hard",
-      "id": "handshake_hard_19"
+      "id": "handshake_hard_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_hard_19.mp4",
+        "poster": "media/images/handshake_hard_19-frame.png",
+        "figure": "media/images/handshake_hard_19.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 6 cycles if ready is always high?",
+      "prompt": "For the Handshake (valid/ready) lab: With valid fixed high, how many beats transfer in 6 cycles if ready is always high?",
       "choices": [
         "5",
         "6",
@@ -874,11 +1348,17 @@
       "answer": 1,
       "explain": "One beat per cycle when both high.",
       "difficulty": "hard",
-      "id": "handshake_hard_20"
+      "id": "handshake_hard_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_hard_20.mp4",
+        "poster": "media/images/handshake_hard_20-frame.png",
+        "figure": "media/images/handshake_hard_20.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 7 cycles if ready is always high?",
+      "prompt": "For the Handshake (valid/ready) lab: With valid fixed high, how many beats transfer in 7 cycles if ready is always high?",
       "choices": [
         "6",
         "7",
@@ -888,11 +1368,17 @@
       "answer": 1,
       "explain": "One beat per cycle when both high.",
       "difficulty": "hard",
-      "id": "handshake_hard_21"
+      "id": "handshake_hard_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_hard_21.mp4",
+        "poster": "media/images/handshake_hard_21-frame.png",
+        "figure": "media/images/handshake_hard_21.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 8 cycles if ready is always high?",
+      "prompt": "For the Handshake (valid/ready) lab: With valid fixed high, how many beats transfer in 8 cycles if ready is always high?",
       "choices": [
         "7",
         "8",
@@ -902,19 +1388,31 @@
       "answer": 1,
       "explain": "One beat per cycle when both high.",
       "difficulty": "hard",
-      "id": "handshake_hard_22"
+      "id": "handshake_hard_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_hard_22.mp4",
+        "poster": "media/images/handshake_hard_22-frame.png",
+        "figure": "media/images/handshake_hard_22.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Setup time is a requirement before the active clock edge.",
+      "prompt": "For the Handshake (valid/ready) lab: Setup time is a requirement before the active clock edge.",
       "answer": true,
       "explain": "Standard sequential timing fact.",
       "difficulty": "hard",
-      "id": "handshake_hard_23"
+      "id": "handshake_hard_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_hard_23.mp4",
+        "poster": "media/images/handshake_hard_23-frame.png",
+        "figure": "media/images/handshake_hard_23.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Setup time is a requirement before the active clock edge?",
+      "prompt": "For the Handshake (valid/ready) lab: Setup time is a requirement before the active clock edge?",
       "choices": [
         "True",
         "False",
@@ -924,19 +1422,31 @@
       "answer": 0,
       "explain": "See sequential timing notes.",
       "difficulty": "hard",
-      "id": "handshake_hard_24"
+      "id": "handshake_hard_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_hard_24.mp4",
+        "poster": "media/images/handshake_hard_24-frame.png",
+        "figure": "media/images/handshake_hard_24.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Hold time is a requirement after the active clock edge.",
+      "prompt": "For the Handshake (valid/ready) lab: Hold time is a requirement after the active clock edge.",
       "answer": true,
       "explain": "Standard sequential timing fact.",
       "difficulty": "hard",
-      "id": "handshake_hard_25"
+      "id": "handshake_hard_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_hard_25.mp4",
+        "poster": "media/images/handshake_hard_25-frame.png",
+        "figure": "media/images/handshake_hard_25.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Hold time is a requirement after the active clock edge?",
+      "prompt": "For the Handshake (valid/ready) lab: Hold time is a requirement after the active clock edge?",
       "choices": [
         "True",
         "False",
@@ -946,19 +1456,31 @@
       "answer": 0,
       "explain": "See sequential timing notes.",
       "difficulty": "hard",
-      "id": "handshake_hard_26"
+      "id": "handshake_hard_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_hard_26.mp4",
+        "poster": "media/images/handshake_hard_26-frame.png",
+        "figure": "media/images/handshake_hard_26.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Contamination delay is a min path delay from clk to Q.",
+      "prompt": "For the Handshake (valid/ready) lab: Contamination delay is a min path delay from clk to Q.",
       "answer": true,
       "explain": "Standard sequential timing fact.",
       "difficulty": "hard",
-      "id": "handshake_hard_27"
+      "id": "handshake_hard_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_hard_27.mp4",
+        "poster": "media/images/handshake_hard_27-frame.png",
+        "figure": "media/images/handshake_hard_27.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Contamination delay is a min path delay from clk to Q?",
+      "prompt": "For the Handshake (valid/ready) lab: Contamination delay is a min path delay from clk to Q?",
       "choices": [
         "True",
         "False",
@@ -968,19 +1490,31 @@
       "answer": 0,
       "explain": "See sequential timing notes.",
       "difficulty": "hard",
-      "id": "handshake_hard_28"
+      "id": "handshake_hard_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_hard_28.mp4",
+        "poster": "media/images/handshake_hard_28-frame.png",
+        "figure": "media/images/handshake_hard_28.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Clock-to-Q max is used in setup checks.",
+      "prompt": "For the Handshake (valid/ready) lab: Clock-to-Q max is used in setup checks.",
       "answer": true,
       "explain": "Standard sequential timing fact.",
       "difficulty": "hard",
-      "id": "handshake_hard_29"
+      "id": "handshake_hard_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_hard_29.mp4",
+        "poster": "media/images/handshake_hard_29-frame.png",
+        "figure": "media/images/handshake_hard_29.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Clock-to-Q max is used in setup checks?",
+      "prompt": "For the Handshake (valid/ready) lab: Clock-to-Q max is used in setup checks?",
       "choices": [
         "True",
         "False",
@@ -990,7 +1524,13 @@
       "answer": 0,
       "explain": "See sequential timing notes.",
       "difficulty": "hard",
-      "id": "handshake_hard_30"
+      "id": "handshake_hard_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/handshake_hard_30.mp4",
+        "poster": "media/images/handshake_hard_30-frame.png",
+        "figure": "media/images/handshake_hard_30.png"
+      }
     }
   ]
 }

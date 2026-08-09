@@ -14,7 +14,13 @@
       ],
       "answer": 1,
       "explain": "Inclusive: w = hi − lo + 1.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_easy_01.mp4",
+        "poster": "media/images/bitfields_easy_01-frame.png",
+        "figure": "media/images/bitfields_easy_01.png"
+      }
     },
     {
       "id": "bitfields_easy_02",
@@ -28,7 +34,13 @@
       ],
       "answer": 1,
       "explain": "Mask, then >> lo.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_easy_02.mp4",
+        "poster": "media/images/bitfields_easy_02-frame.png",
+        "figure": "media/images/bitfields_easy_02.png"
+      }
     },
     {
       "id": "bitfields_easy_03",
@@ -42,7 +54,13 @@
       ],
       "answer": 1,
       "explain": "AND with ~mask, then OR new bits.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_easy_03.mp4",
+        "poster": "media/images/bitfields_easy_03-frame.png",
+        "figure": "media/images/bitfields_easy_03.png"
+      }
     },
     {
       "id": "bitfields_easy_04",
@@ -50,7 +68,533 @@
       "prompt": "hi >= lo for a nonempty field.",
       "answer": true,
       "explain": "LSB numbering; MSB-as-0 is a different convention.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_easy_04.mp4",
+        "poster": "media/images/bitfields_easy_04-frame.png",
+        "figure": "media/images/bitfields_easy_04.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Mask for field lo=0 width=2 is…",
+      "choices": [
+        "0x1",
+        "0x3",
+        "0x3",
+        "0x1"
+      ],
+      "answer": 1,
+      "explain": "((4-1)<<0) = 0x3.",
+      "difficulty": "easy",
+      "id": "bitfields_easy_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_easy_05.mp4",
+        "poster": "media/images/bitfields_easy_05-frame.png",
+        "figure": "media/images/bitfields_easy_05.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Width of a field from bit 0 through 1 is…",
+      "choices": [
+        "1",
+        "2",
+        "2",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 2 bits.",
+      "difficulty": "easy",
+      "id": "bitfields_easy_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_easy_06.mp4",
+        "poster": "media/images/bitfields_easy_06-frame.png",
+        "figure": "media/images/bitfields_easy_06.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Mask for field lo=0 width=3 is…",
+      "choices": [
+        "0x3",
+        "0x7",
+        "0x7",
+        "0x1"
+      ],
+      "answer": 1,
+      "explain": "((8-1)<<0) = 0x7.",
+      "difficulty": "easy",
+      "id": "bitfields_easy_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_easy_07.mp4",
+        "poster": "media/images/bitfields_easy_07-frame.png",
+        "figure": "media/images/bitfields_easy_07.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Width of a field from bit 0 through 2 is…",
+      "choices": [
+        "2",
+        "3",
+        "3",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 3 bits.",
+      "difficulty": "easy",
+      "id": "bitfields_easy_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_easy_08.mp4",
+        "poster": "media/images/bitfields_easy_08-frame.png",
+        "figure": "media/images/bitfields_easy_08.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Mask for field lo=1 width=2 is…",
+      "choices": [
+        "0x3",
+        "0x6",
+        "0x3",
+        "0x2"
+      ],
+      "answer": 1,
+      "explain": "((4-1)<<1) = 0x6.",
+      "difficulty": "easy",
+      "id": "bitfields_easy_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_easy_09.mp4",
+        "poster": "media/images/bitfields_easy_09-frame.png",
+        "figure": "media/images/bitfields_easy_09.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Width of a field from bit 1 through 2 is…",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 2 bits.",
+      "difficulty": "easy",
+      "id": "bitfields_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_easy_10.mp4",
+        "poster": "media/images/bitfields_easy_10-frame.png",
+        "figure": "media/images/bitfields_easy_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Mask for field lo=2 width=3 is…",
+      "choices": [
+        "0xe",
+        "0x1c",
+        "0x7",
+        "0x4"
+      ],
+      "answer": 1,
+      "explain": "((8-1)<<2) = 0x1c.",
+      "difficulty": "easy",
+      "id": "bitfields_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_easy_11.mp4",
+        "poster": "media/images/bitfields_easy_11-frame.png",
+        "figure": "media/images/bitfields_easy_11.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Width of a field from bit 2 through 4 is…",
+      "choices": [
+        "2",
+        "3",
+        "5",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 3 bits.",
+      "difficulty": "easy",
+      "id": "bitfields_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_easy_12.mp4",
+        "poster": "media/images/bitfields_easy_12-frame.png",
+        "figure": "media/images/bitfields_easy_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Mask for field lo=4 width=4 is…",
+      "choices": [
+        "0x78",
+        "0xf0",
+        "0xf",
+        "0x10"
+      ],
+      "answer": 1,
+      "explain": "((16-1)<<4) = 0xf0.",
+      "difficulty": "easy",
+      "id": "bitfields_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_easy_13.mp4",
+        "poster": "media/images/bitfields_easy_13-frame.png",
+        "figure": "media/images/bitfields_easy_13.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Width of a field from bit 4 through 7 is…",
+      "choices": [
+        "3",
+        "4",
+        "8",
+        "16"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 4 bits.",
+      "difficulty": "easy",
+      "id": "bitfields_easy_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_easy_14.mp4",
+        "poster": "media/images/bitfields_easy_14-frame.png",
+        "figure": "media/images/bitfields_easy_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Mask for field lo=8 width=4 is…",
+      "choices": [
+        "0x780",
+        "0xf00",
+        "0xf",
+        "0x100"
+      ],
+      "answer": 1,
+      "explain": "((16-1)<<8) = 0xf00.",
+      "difficulty": "easy",
+      "id": "bitfields_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_easy_15.mp4",
+        "poster": "media/images/bitfields_easy_15-frame.png",
+        "figure": "media/images/bitfields_easy_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Width of a field from bit 8 through 11 is…",
+      "choices": [
+        "3",
+        "4",
+        "12",
+        "16"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 4 bits.",
+      "difficulty": "easy",
+      "id": "bitfields_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_easy_16.mp4",
+        "poster": "media/images/bitfields_easy_16-frame.png",
+        "figure": "media/images/bitfields_easy_16.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Mask for field lo=4 width=2 is…",
+      "choices": [
+        "0x18",
+        "0x30",
+        "0x3",
+        "0x10"
+      ],
+      "answer": 1,
+      "explain": "((4-1)<<4) = 0x30.",
+      "difficulty": "easy",
+      "id": "bitfields_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_easy_17.mp4",
+        "poster": "media/images/bitfields_easy_17-frame.png",
+        "figure": "media/images/bitfields_easy_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Width of a field from bit 4 through 5 is…",
+      "choices": [
+        "1",
+        "2",
+        "6",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 2 bits.",
+      "difficulty": "easy",
+      "id": "bitfields_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_easy_18.mp4",
+        "poster": "media/images/bitfields_easy_18-frame.png",
+        "figure": "media/images/bitfields_easy_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Mask for field lo=3 width=5 is…",
+      "choices": [
+        "0x7c",
+        "0xf8",
+        "0x1f",
+        "0x8"
+      ],
+      "answer": 1,
+      "explain": "((32-1)<<3) = 0xf8.",
+      "difficulty": "easy",
+      "id": "bitfields_easy_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_easy_19.mp4",
+        "poster": "media/images/bitfields_easy_19-frame.png",
+        "figure": "media/images/bitfields_easy_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Width of a field from bit 3 through 7 is…",
+      "choices": [
+        "4",
+        "5",
+        "8",
+        "32"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 5 bits.",
+      "difficulty": "easy",
+      "id": "bitfields_easy_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_easy_20.mp4",
+        "poster": "media/images/bitfields_easy_20-frame.png",
+        "figure": "media/images/bitfields_easy_20.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Bit-fields: Mask for field lo=0 width=2 is…",
+      "choices": [
+        "0x1",
+        "0x3",
+        "0x3",
+        "0x1"
+      ],
+      "answer": 1,
+      "explain": "((4-1)<<0) = 0x3.",
+      "difficulty": "easy",
+      "id": "bitfields_easy_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_easy_21.mp4",
+        "poster": "media/images/bitfields_easy_21-frame.png",
+        "figure": "media/images/bitfields_easy_21.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Bit-fields: Width of a field from bit 0 through 1 is…",
+      "choices": [
+        "1",
+        "2",
+        "2",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 2 bits.",
+      "difficulty": "easy",
+      "id": "bitfields_easy_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_easy_22.mp4",
+        "poster": "media/images/bitfields_easy_22-frame.png",
+        "figure": "media/images/bitfields_easy_22.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Bit-fields: Mask for field lo=0 width=3 is…",
+      "choices": [
+        "0x3",
+        "0x7",
+        "0x7",
+        "0x1"
+      ],
+      "answer": 1,
+      "explain": "((8-1)<<0) = 0x7.",
+      "difficulty": "easy",
+      "id": "bitfields_easy_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_easy_23.mp4",
+        "poster": "media/images/bitfields_easy_23-frame.png",
+        "figure": "media/images/bitfields_easy_23.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Bit-fields: Width of a field from bit 0 through 2 is…",
+      "choices": [
+        "2",
+        "3",
+        "3",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 3 bits.",
+      "difficulty": "easy",
+      "id": "bitfields_easy_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_easy_24.mp4",
+        "poster": "media/images/bitfields_easy_24-frame.png",
+        "figure": "media/images/bitfields_easy_24.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Bit-fields: Mask for field lo=1 width=2 is…",
+      "choices": [
+        "0x3",
+        "0x6",
+        "0x3",
+        "0x2"
+      ],
+      "answer": 1,
+      "explain": "((4-1)<<1) = 0x6.",
+      "difficulty": "easy",
+      "id": "bitfields_easy_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_easy_25.mp4",
+        "poster": "media/images/bitfields_easy_25-frame.png",
+        "figure": "media/images/bitfields_easy_25.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Bit-fields: Width of a field from bit 1 through 2 is…",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 2 bits.",
+      "difficulty": "easy",
+      "id": "bitfields_easy_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_easy_26.mp4",
+        "poster": "media/images/bitfields_easy_26-frame.png",
+        "figure": "media/images/bitfields_easy_26.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Bit-fields: Mask for field lo=2 width=3 is…",
+      "choices": [
+        "0xe",
+        "0x1c",
+        "0x7",
+        "0x4"
+      ],
+      "answer": 1,
+      "explain": "((8-1)<<2) = 0x1c.",
+      "difficulty": "easy",
+      "id": "bitfields_easy_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_easy_27.mp4",
+        "poster": "media/images/bitfields_easy_27-frame.png",
+        "figure": "media/images/bitfields_easy_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Bit-fields: Width of a field from bit 2 through 4 is…",
+      "choices": [
+        "2",
+        "3",
+        "5",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 3 bits.",
+      "difficulty": "easy",
+      "id": "bitfields_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_easy_28.mp4",
+        "poster": "media/images/bitfields_easy_28-frame.png",
+        "figure": "media/images/bitfields_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Bit-fields: Mask for field lo=4 width=4 is…",
+      "choices": [
+        "0x78",
+        "0xf0",
+        "0xf",
+        "0x10"
+      ],
+      "answer": 1,
+      "explain": "((16-1)<<4) = 0xf0.",
+      "difficulty": "easy",
+      "id": "bitfields_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_easy_29.mp4",
+        "poster": "media/images/bitfields_easy_29-frame.png",
+        "figure": "media/images/bitfields_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Bit-fields: Width of a field from bit 4 through 7 is…",
+      "choices": [
+        "3",
+        "4",
+        "8",
+        "16"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 4 bits.",
+      "difficulty": "easy",
+      "id": "bitfields_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_easy_30.mp4",
+        "poster": "media/images/bitfields_easy_30-frame.png",
+        "figure": "media/images/bitfields_easy_30.png"
+      }
     },
     {
       "id": "bitfields_medium_01",
@@ -64,7 +608,13 @@
       ],
       "answer": 1,
       "explain": "7−3+1 = 5.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_medium_01.mp4",
+        "poster": "media/images/bitfields_medium_01-frame.png",
+        "figure": "media/images/bitfields_medium_01.png"
+      }
     },
     {
       "id": "bitfields_medium_02",
@@ -78,7 +628,13 @@
       ],
       "answer": 1,
       "explain": "0xA52D → field 7:3 is 5.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_medium_02.mp4",
+        "poster": "media/images/bitfields_medium_02-frame.png",
+        "figure": "media/images/bitfields_medium_02.png"
+      }
     },
     {
       "id": "bitfields_medium_03",
@@ -92,7 +648,13 @@
       ],
       "answer": 1,
       "explain": "Width ones, shifted to lo.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_medium_03.mp4",
+        "poster": "media/images/bitfields_medium_03-frame.png",
+        "figure": "media/images/bitfields_medium_03.png"
+      }
     },
     {
       "id": "bitfields_medium_04",
@@ -100,7 +662,13 @@
       "prompt": "Unmasked OR of a wide value corrupts adjacent bits.",
       "answer": true,
       "explain": "Always mask; overlapping specs break packs.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_medium_04.mp4",
+        "poster": "media/images/bitfields_medium_04-frame.png",
+        "figure": "media/images/bitfields_medium_04.png"
+      }
     },
     {
       "id": "bitfields_medium_05",
@@ -114,7 +682,13 @@
       ],
       "answer": 1,
       "explain": "11−0+1 = 12.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_medium_05.mp4",
+        "poster": "media/images/bitfields_medium_05-frame.png",
+        "figure": "media/images/bitfields_medium_05.png"
+      }
     },
     {
       "id": "bitfields_medium_06",
@@ -128,7 +702,13 @@
       ],
       "answer": 1,
       "explain": "2−1+1 = 2.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_medium_06.mp4",
+        "poster": "media/images/bitfields_medium_06-frame.png",
+        "figure": "media/images/bitfields_medium_06.png"
+      }
     },
     {
       "id": "bitfields_medium_07",
@@ -142,7 +722,13 @@
       ],
       "answer": 1,
       "explain": "5−0+1 = 6.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_medium_07.mp4",
+        "poster": "media/images/bitfields_medium_07-frame.png",
+        "figure": "media/images/bitfields_medium_07.png"
+      }
     },
     {
       "id": "bitfields_medium_08",
@@ -156,7 +742,13 @@
       ],
       "answer": 1,
       "explain": "15−8+1 = 8.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_medium_08.mp4",
+        "poster": "media/images/bitfields_medium_08-frame.png",
+        "figure": "media/images/bitfields_medium_08.png"
+      }
     },
     {
       "id": "bitfields_medium_09",
@@ -170,7 +762,13 @@
       ],
       "answer": 1,
       "explain": "3−1+1 = 3.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_medium_09.mp4",
+        "poster": "media/images/bitfields_medium_09-frame.png",
+        "figure": "media/images/bitfields_medium_09.png"
+      }
     },
     {
       "id": "bitfields_medium_10",
@@ -184,7 +782,413 @@
       ],
       "answer": 1,
       "explain": "4−4+1 = 1.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_medium_10.mp4",
+        "poster": "media/images/bitfields_medium_10-frame.png",
+        "figure": "media/images/bitfields_medium_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Bit-fields, mask for field lo=0 width=2 is…",
+      "choices": [
+        "0x1",
+        "0x3",
+        "0x3",
+        "0x1"
+      ],
+      "answer": 1,
+      "explain": "((4-1)<<0) = 0x3.",
+      "difficulty": "medium",
+      "id": "bitfields_medium_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_medium_11.mp4",
+        "poster": "media/images/bitfields_medium_11-frame.png",
+        "figure": "media/images/bitfields_medium_11.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Bit-fields, width of a field from bit 0 through 1 is…",
+      "choices": [
+        "1",
+        "2",
+        "2",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 2 bits.",
+      "difficulty": "medium",
+      "id": "bitfields_medium_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_medium_12.mp4",
+        "poster": "media/images/bitfields_medium_12-frame.png",
+        "figure": "media/images/bitfields_medium_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Bit-fields, mask for field lo=0 width=3 is…",
+      "choices": [
+        "0x3",
+        "0x7",
+        "0x7",
+        "0x1"
+      ],
+      "answer": 1,
+      "explain": "((8-1)<<0) = 0x7.",
+      "difficulty": "medium",
+      "id": "bitfields_medium_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_medium_13.mp4",
+        "poster": "media/images/bitfields_medium_13-frame.png",
+        "figure": "media/images/bitfields_medium_13.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Bit-fields, width of a field from bit 0 through 2 is…",
+      "choices": [
+        "2",
+        "3",
+        "3",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 3 bits.",
+      "difficulty": "medium",
+      "id": "bitfields_medium_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_medium_14.mp4",
+        "poster": "media/images/bitfields_medium_14-frame.png",
+        "figure": "media/images/bitfields_medium_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Bit-fields, mask for field lo=1 width=2 is…",
+      "choices": [
+        "0x3",
+        "0x6",
+        "0x3",
+        "0x2"
+      ],
+      "answer": 1,
+      "explain": "((4-1)<<1) = 0x6.",
+      "difficulty": "medium",
+      "id": "bitfields_medium_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_medium_15.mp4",
+        "poster": "media/images/bitfields_medium_15-frame.png",
+        "figure": "media/images/bitfields_medium_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Bit-fields, width of a field from bit 1 through 2 is…",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 2 bits.",
+      "difficulty": "medium",
+      "id": "bitfields_medium_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_medium_16.mp4",
+        "poster": "media/images/bitfields_medium_16-frame.png",
+        "figure": "media/images/bitfields_medium_16.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Bit-fields, mask for field lo=2 width=3 is…",
+      "choices": [
+        "0xe",
+        "0x1c",
+        "0x7",
+        "0x4"
+      ],
+      "answer": 1,
+      "explain": "((8-1)<<2) = 0x1c.",
+      "difficulty": "medium",
+      "id": "bitfields_medium_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_medium_17.mp4",
+        "poster": "media/images/bitfields_medium_17-frame.png",
+        "figure": "media/images/bitfields_medium_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Bit-fields, width of a field from bit 2 through 4 is…",
+      "choices": [
+        "2",
+        "3",
+        "5",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 3 bits.",
+      "difficulty": "medium",
+      "id": "bitfields_medium_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_medium_18.mp4",
+        "poster": "media/images/bitfields_medium_18-frame.png",
+        "figure": "media/images/bitfields_medium_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Bit-fields, mask for field lo=4 width=4 is…",
+      "choices": [
+        "0x78",
+        "0xf0",
+        "0xf",
+        "0x10"
+      ],
+      "answer": 1,
+      "explain": "((16-1)<<4) = 0xf0.",
+      "difficulty": "medium",
+      "id": "bitfields_medium_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_medium_19.mp4",
+        "poster": "media/images/bitfields_medium_19-frame.png",
+        "figure": "media/images/bitfields_medium_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Bit-fields, width of a field from bit 4 through 7 is…",
+      "choices": [
+        "3",
+        "4",
+        "8",
+        "16"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 4 bits.",
+      "difficulty": "medium",
+      "id": "bitfields_medium_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_medium_20.mp4",
+        "poster": "media/images/bitfields_medium_20-frame.png",
+        "figure": "media/images/bitfields_medium_20.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Bit-fields: Mask for field lo=8 width=4 is…",
+      "choices": [
+        "0x780",
+        "0xf00",
+        "0xf",
+        "0x100"
+      ],
+      "answer": 1,
+      "explain": "((16-1)<<8) = 0xf00.",
+      "difficulty": "medium",
+      "id": "bitfields_medium_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_medium_21.mp4",
+        "poster": "media/images/bitfields_medium_21-frame.png",
+        "figure": "media/images/bitfields_medium_21.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Bit-fields: Width of a field from bit 8 through 11 is…",
+      "choices": [
+        "3",
+        "4",
+        "12",
+        "16"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 4 bits.",
+      "difficulty": "medium",
+      "id": "bitfields_medium_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_medium_22.mp4",
+        "poster": "media/images/bitfields_medium_22-frame.png",
+        "figure": "media/images/bitfields_medium_22.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Bit-fields: Mask for field lo=4 width=2 is…",
+      "choices": [
+        "0x18",
+        "0x30",
+        "0x3",
+        "0x10"
+      ],
+      "answer": 1,
+      "explain": "((4-1)<<4) = 0x30.",
+      "difficulty": "medium",
+      "id": "bitfields_medium_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_medium_23.mp4",
+        "poster": "media/images/bitfields_medium_23-frame.png",
+        "figure": "media/images/bitfields_medium_23.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Bit-fields: Width of a field from bit 4 through 5 is…",
+      "choices": [
+        "1",
+        "2",
+        "6",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 2 bits.",
+      "difficulty": "medium",
+      "id": "bitfields_medium_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_medium_24.mp4",
+        "poster": "media/images/bitfields_medium_24-frame.png",
+        "figure": "media/images/bitfields_medium_24.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Bit-fields: Mask for field lo=3 width=5 is…",
+      "choices": [
+        "0x7c",
+        "0xf8",
+        "0x1f",
+        "0x8"
+      ],
+      "answer": 1,
+      "explain": "((32-1)<<3) = 0xf8.",
+      "difficulty": "medium",
+      "id": "bitfields_medium_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_medium_25.mp4",
+        "poster": "media/images/bitfields_medium_25-frame.png",
+        "figure": "media/images/bitfields_medium_25.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Bit-fields: Width of a field from bit 3 through 7 is…",
+      "choices": [
+        "4",
+        "5",
+        "8",
+        "32"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 5 bits.",
+      "difficulty": "medium",
+      "id": "bitfields_medium_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_medium_26.mp4",
+        "poster": "media/images/bitfields_medium_26-frame.png",
+        "figure": "media/images/bitfields_medium_26.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Bit-fields: How many distinct values can 1 bits represent?",
+      "choices": [
+        "1",
+        "2",
+        "1",
+        "10"
+      ],
+      "answer": 1,
+      "explain": "1 bits encode 2^1 = 2 patterns.",
+      "difficulty": "medium",
+      "id": "bitfields_medium_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_medium_27.mp4",
+        "poster": "media/images/bitfields_medium_27-frame.png",
+        "figure": "media/images/bitfields_medium_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Bit-fields: How many distinct values can 2 bits represent?",
+      "choices": [
+        "2",
+        "4",
+        "2",
+        "20"
+      ],
+      "answer": 1,
+      "explain": "2 bits encode 2^2 = 4 patterns.",
+      "difficulty": "medium",
+      "id": "bitfields_medium_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_medium_28.mp4",
+        "poster": "media/images/bitfields_medium_28-frame.png",
+        "figure": "media/images/bitfields_medium_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Bit-fields: How many distinct values can 3 bits represent?",
+      "choices": [
+        "4",
+        "8",
+        "3",
+        "30"
+      ],
+      "answer": 1,
+      "explain": "3 bits encode 2^3 = 8 patterns.",
+      "difficulty": "medium",
+      "id": "bitfields_medium_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_medium_29.mp4",
+        "poster": "media/images/bitfields_medium_29-frame.png",
+        "figure": "media/images/bitfields_medium_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Bit-fields: How many distinct values can 4 bits represent?",
+      "choices": [
+        "8",
+        "16",
+        "4",
+        "40"
+      ],
+      "answer": 1,
+      "explain": "4 bits encode 2^4 = 16 patterns.",
+      "difficulty": "medium",
+      "id": "bitfields_medium_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_medium_30.mp4",
+        "poster": "media/images/bitfields_medium_30-frame.png",
+        "figure": "media/images/bitfields_medium_30.png"
+      }
     },
     {
       "id": "bitfields_hard_01",
@@ -198,7 +1202,13 @@
       ],
       "answer": 1,
       "explain": "3<<4 = 0x30 for a 2-bit field at lo=4.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_hard_01.mp4",
+        "poster": "media/images/bitfields_hard_01-frame.png",
+        "figure": "media/images/bitfields_hard_01.png"
+      }
     },
     {
       "id": "bitfields_hard_02",
@@ -212,7 +1222,13 @@
       ],
       "answer": 1,
       "explain": "Reset/access/side effects matter as much as bit indices.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_hard_02.mp4",
+        "poster": "media/images/bitfields_hard_02-frame.png",
+        "figure": "media/images/bitfields_hard_02.png"
+      }
     },
     {
       "id": "bitfields_hard_03",
@@ -220,7 +1236,13 @@
       "prompt": "Using MSB=0 numbering interchangeably with LSB=0 never causes bugs.",
       "answer": false,
       "explain": "Standard mask formulas; bit-order confusion is costly.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_hard_03.mp4",
+        "poster": "media/images/bitfields_hard_03-frame.png",
+        "figure": "media/images/bitfields_hard_03.png"
+      }
     },
     {
       "id": "bitfields_hard_04",
@@ -234,655 +1256,17 @@
       ],
       "answer": 3,
       "explain": "Bits 3..1 → 0b00001110 = 0x0E.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_hard_04.mp4",
+        "poster": "media/images/bitfields_hard_04-frame.png",
+        "figure": "media/images/bitfields_hard_04.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Mask for field lo=0 width=2 is…",
-      "choices": [
-        "0x1",
-        "0x3",
-        "0x3",
-        "0x1"
-      ],
-      "answer": 1,
-      "explain": "((4-1)<<0) = 0x3.",
-      "difficulty": "easy",
-      "id": "bitfields_easy_05"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Width of a field from bit 0 through 1 is…",
-      "choices": [
-        "1",
-        "2",
-        "2",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "Inclusive span → 2 bits.",
-      "difficulty": "easy",
-      "id": "bitfields_easy_06"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=0 width=3 is…",
-      "choices": [
-        "0x3",
-        "0x7",
-        "0x7",
-        "0x1"
-      ],
-      "answer": 1,
-      "explain": "((8-1)<<0) = 0x7.",
-      "difficulty": "easy",
-      "id": "bitfields_easy_07"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Width of a field from bit 0 through 2 is…",
-      "choices": [
-        "2",
-        "3",
-        "3",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "Inclusive span → 3 bits.",
-      "difficulty": "easy",
-      "id": "bitfields_easy_08"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=1 width=2 is…",
-      "choices": [
-        "0x3",
-        "0x6",
-        "0x3",
-        "0x2"
-      ],
-      "answer": 1,
-      "explain": "((4-1)<<1) = 0x6.",
-      "difficulty": "easy",
-      "id": "bitfields_easy_09"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Width of a field from bit 1 through 2 is…",
-      "choices": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "Inclusive span → 2 bits.",
-      "difficulty": "easy",
-      "id": "bitfields_easy_10"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=2 width=3 is…",
-      "choices": [
-        "0xe",
-        "0x1c",
-        "0x7",
-        "0x4"
-      ],
-      "answer": 1,
-      "explain": "((8-1)<<2) = 0x1c.",
-      "difficulty": "easy",
-      "id": "bitfields_easy_11"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Width of a field from bit 2 through 4 is…",
-      "choices": [
-        "2",
-        "3",
-        "5",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "Inclusive span → 3 bits.",
-      "difficulty": "easy",
-      "id": "bitfields_easy_12"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=4 width=4 is…",
-      "choices": [
-        "0x78",
-        "0xf0",
-        "0xf",
-        "0x10"
-      ],
-      "answer": 1,
-      "explain": "((16-1)<<4) = 0xf0.",
-      "difficulty": "easy",
-      "id": "bitfields_easy_13"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Width of a field from bit 4 through 7 is…",
-      "choices": [
-        "3",
-        "4",
-        "8",
-        "16"
-      ],
-      "answer": 1,
-      "explain": "Inclusive span → 4 bits.",
-      "difficulty": "easy",
-      "id": "bitfields_easy_14"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=8 width=4 is…",
-      "choices": [
-        "0x780",
-        "0xf00",
-        "0xf",
-        "0x100"
-      ],
-      "answer": 1,
-      "explain": "((16-1)<<8) = 0xf00.",
-      "difficulty": "easy",
-      "id": "bitfields_easy_15"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Width of a field from bit 8 through 11 is…",
-      "choices": [
-        "3",
-        "4",
-        "12",
-        "16"
-      ],
-      "answer": 1,
-      "explain": "Inclusive span → 4 bits.",
-      "difficulty": "easy",
-      "id": "bitfields_easy_16"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=4 width=2 is…",
-      "choices": [
-        "0x18",
-        "0x30",
-        "0x3",
-        "0x10"
-      ],
-      "answer": 1,
-      "explain": "((4-1)<<4) = 0x30.",
-      "difficulty": "easy",
-      "id": "bitfields_easy_17"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Width of a field from bit 4 through 5 is…",
-      "choices": [
-        "1",
-        "2",
-        "6",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "Inclusive span → 2 bits.",
-      "difficulty": "easy",
-      "id": "bitfields_easy_18"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=3 width=5 is…",
-      "choices": [
-        "0x7c",
-        "0xf8",
-        "0x1f",
-        "0x8"
-      ],
-      "answer": 1,
-      "explain": "((32-1)<<3) = 0xf8.",
-      "difficulty": "easy",
-      "id": "bitfields_easy_19"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Width of a field from bit 3 through 7 is…",
-      "choices": [
-        "4",
-        "5",
-        "8",
-        "32"
-      ],
-      "answer": 1,
-      "explain": "Inclusive span → 5 bits.",
-      "difficulty": "easy",
-      "id": "bitfields_easy_20"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "How many distinct values can 1 bits represent?",
-      "choices": [
-        "1",
-        "2",
-        "1",
-        "10"
-      ],
-      "answer": 1,
-      "explain": "1 bits encode 2^1 = 2 patterns.",
-      "difficulty": "easy",
-      "id": "bitfields_easy_21"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "How many distinct values can 2 bits represent?",
-      "choices": [
-        "2",
-        "4",
-        "2",
-        "20"
-      ],
-      "answer": 1,
-      "explain": "2 bits encode 2^2 = 4 patterns.",
-      "difficulty": "easy",
-      "id": "bitfields_easy_22"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "How many distinct values can 3 bits represent?",
-      "choices": [
-        "4",
-        "8",
-        "3",
-        "30"
-      ],
-      "answer": 1,
-      "explain": "3 bits encode 2^3 = 8 patterns.",
-      "difficulty": "easy",
-      "id": "bitfields_easy_23"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "How many distinct values can 4 bits represent?",
-      "choices": [
-        "8",
-        "16",
-        "4",
-        "40"
-      ],
-      "answer": 1,
-      "explain": "4 bits encode 2^4 = 16 patterns.",
-      "difficulty": "easy",
-      "id": "bitfields_easy_24"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "How many distinct values can 5 bits represent?",
-      "choices": [
-        "16",
-        "32",
-        "5",
-        "50"
-      ],
-      "answer": 1,
-      "explain": "5 bits encode 2^5 = 32 patterns.",
-      "difficulty": "easy",
-      "id": "bitfields_easy_25"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "How many distinct values can 6 bits represent?",
-      "choices": [
-        "32",
-        "64",
-        "6",
-        "60"
-      ],
-      "answer": 1,
-      "explain": "6 bits encode 2^6 = 64 patterns.",
-      "difficulty": "easy",
-      "id": "bitfields_easy_26"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "How many distinct values can 7 bits represent?",
-      "choices": [
-        "64",
-        "128",
-        "7",
-        "70"
-      ],
-      "answer": 1,
-      "explain": "7 bits encode 2^7 = 128 patterns.",
-      "difficulty": "easy",
-      "id": "bitfields_easy_27"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "How many distinct values can 8 bits represent?",
-      "choices": [
-        "128",
-        "256",
-        "8",
-        "80"
-      ],
-      "answer": 1,
-      "explain": "8 bits encode 2^8 = 256 patterns.",
-      "difficulty": "easy",
-      "id": "bitfields_easy_28"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "How many distinct values can 9 bits represent?",
-      "choices": [
-        "256",
-        "512",
-        "9",
-        "90"
-      ],
-      "answer": 1,
-      "explain": "9 bits encode 2^9 = 512 patterns.",
-      "difficulty": "easy",
-      "id": "bitfields_easy_29"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "How many distinct values can 10 bits represent?",
-      "choices": [
-        "512",
-        "1024",
-        "10",
-        "100"
-      ],
-      "answer": 1,
-      "explain": "10 bits encode 2^10 = 1024 patterns.",
-      "difficulty": "easy",
-      "id": "bitfields_easy_30"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=0 width=2 is…",
-      "choices": [
-        "0x1",
-        "0x3",
-        "0x3",
-        "0x1"
-      ],
-      "answer": 1,
-      "explain": "((4-1)<<0) = 0x3.",
-      "difficulty": "medium",
-      "id": "bitfields_medium_11"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Width of a field from bit 0 through 1 is…",
-      "choices": [
-        "1",
-        "2",
-        "2",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "Inclusive span → 2 bits.",
-      "difficulty": "medium",
-      "id": "bitfields_medium_12"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=0 width=3 is…",
-      "choices": [
-        "0x3",
-        "0x7",
-        "0x7",
-        "0x1"
-      ],
-      "answer": 1,
-      "explain": "((8-1)<<0) = 0x7.",
-      "difficulty": "medium",
-      "id": "bitfields_medium_13"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Width of a field from bit 0 through 2 is…",
-      "choices": [
-        "2",
-        "3",
-        "3",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "Inclusive span → 3 bits.",
-      "difficulty": "medium",
-      "id": "bitfields_medium_14"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=1 width=2 is…",
-      "choices": [
-        "0x3",
-        "0x6",
-        "0x3",
-        "0x2"
-      ],
-      "answer": 1,
-      "explain": "((4-1)<<1) = 0x6.",
-      "difficulty": "medium",
-      "id": "bitfields_medium_15"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Width of a field from bit 1 through 2 is…",
-      "choices": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "Inclusive span → 2 bits.",
-      "difficulty": "medium",
-      "id": "bitfields_medium_16"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=2 width=3 is…",
-      "choices": [
-        "0xe",
-        "0x1c",
-        "0x7",
-        "0x4"
-      ],
-      "answer": 1,
-      "explain": "((8-1)<<2) = 0x1c.",
-      "difficulty": "medium",
-      "id": "bitfields_medium_17"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Width of a field from bit 2 through 4 is…",
-      "choices": [
-        "2",
-        "3",
-        "5",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "Inclusive span → 3 bits.",
-      "difficulty": "medium",
-      "id": "bitfields_medium_18"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=4 width=4 is…",
-      "choices": [
-        "0x78",
-        "0xf0",
-        "0xf",
-        "0x10"
-      ],
-      "answer": 1,
-      "explain": "((16-1)<<4) = 0xf0.",
-      "difficulty": "medium",
-      "id": "bitfields_medium_19"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Width of a field from bit 4 through 7 is…",
-      "choices": [
-        "3",
-        "4",
-        "8",
-        "16"
-      ],
-      "answer": 1,
-      "explain": "Inclusive span → 4 bits.",
-      "difficulty": "medium",
-      "id": "bitfields_medium_20"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=8 width=4 is…",
-      "choices": [
-        "0x780",
-        "0xf00",
-        "0xf",
-        "0x100"
-      ],
-      "answer": 1,
-      "explain": "((16-1)<<8) = 0xf00.",
-      "difficulty": "medium",
-      "id": "bitfields_medium_21"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Width of a field from bit 8 through 11 is…",
-      "choices": [
-        "3",
-        "4",
-        "12",
-        "16"
-      ],
-      "answer": 1,
-      "explain": "Inclusive span → 4 bits.",
-      "difficulty": "medium",
-      "id": "bitfields_medium_22"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=4 width=2 is…",
-      "choices": [
-        "0x18",
-        "0x30",
-        "0x3",
-        "0x10"
-      ],
-      "answer": 1,
-      "explain": "((4-1)<<4) = 0x30.",
-      "difficulty": "medium",
-      "id": "bitfields_medium_23"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Width of a field from bit 4 through 5 is…",
-      "choices": [
-        "1",
-        "2",
-        "6",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "Inclusive span → 2 bits.",
-      "difficulty": "medium",
-      "id": "bitfields_medium_24"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=3 width=5 is…",
-      "choices": [
-        "0x7c",
-        "0xf8",
-        "0x1f",
-        "0x8"
-      ],
-      "answer": 1,
-      "explain": "((32-1)<<3) = 0xf8.",
-      "difficulty": "medium",
-      "id": "bitfields_medium_25"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Width of a field from bit 3 through 7 is…",
-      "choices": [
-        "4",
-        "5",
-        "8",
-        "32"
-      ],
-      "answer": 1,
-      "explain": "Inclusive span → 5 bits.",
-      "difficulty": "medium",
-      "id": "bitfields_medium_26"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "How many distinct values can 1 bits represent?",
-      "choices": [
-        "1",
-        "2",
-        "1",
-        "10"
-      ],
-      "answer": 1,
-      "explain": "1 bits encode 2^1 = 2 patterns.",
-      "difficulty": "medium",
-      "id": "bitfields_medium_27"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "How many distinct values can 2 bits represent?",
-      "choices": [
-        "2",
-        "4",
-        "2",
-        "20"
-      ],
-      "answer": 1,
-      "explain": "2 bits encode 2^2 = 4 patterns.",
-      "difficulty": "medium",
-      "id": "bitfields_medium_28"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "How many distinct values can 3 bits represent?",
-      "choices": [
-        "4",
-        "8",
-        "3",
-        "30"
-      ],
-      "answer": 1,
-      "explain": "3 bits encode 2^3 = 8 patterns.",
-      "difficulty": "medium",
-      "id": "bitfields_medium_29"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "How many distinct values can 4 bits represent?",
-      "choices": [
-        "8",
-        "16",
-        "4",
-        "40"
-      ],
-      "answer": 1,
-      "explain": "4 bits encode 2^4 = 16 patterns.",
-      "difficulty": "medium",
-      "id": "bitfields_medium_30"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=0 width=2 is…",
+      "prompt": "For the Bit-fields lab: Mask for field lo=0 width=2 is…",
       "choices": [
         "0x1",
         "0x3",
@@ -892,11 +1276,17 @@
       "answer": 1,
       "explain": "((4-1)<<0) = 0x3.",
       "difficulty": "hard",
-      "id": "bitfields_hard_05"
+      "id": "bitfields_hard_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_hard_05.mp4",
+        "poster": "media/images/bitfields_hard_05-frame.png",
+        "figure": "media/images/bitfields_hard_05.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Width of a field from bit 0 through 1 is…",
+      "prompt": "For the Bit-fields lab: Width of a field from bit 0 through 1 is…",
       "choices": [
         "1",
         "2",
@@ -906,11 +1296,17 @@
       "answer": 1,
       "explain": "Inclusive span → 2 bits.",
       "difficulty": "hard",
-      "id": "bitfields_hard_06"
+      "id": "bitfields_hard_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_hard_06.mp4",
+        "poster": "media/images/bitfields_hard_06-frame.png",
+        "figure": "media/images/bitfields_hard_06.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Mask for field lo=0 width=3 is…",
+      "prompt": "For the Bit-fields lab: Mask for field lo=0 width=3 is…",
       "choices": [
         "0x3",
         "0x7",
@@ -920,11 +1316,17 @@
       "answer": 1,
       "explain": "((8-1)<<0) = 0x7.",
       "difficulty": "hard",
-      "id": "bitfields_hard_07"
+      "id": "bitfields_hard_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_hard_07.mp4",
+        "poster": "media/images/bitfields_hard_07-frame.png",
+        "figure": "media/images/bitfields_hard_07.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Width of a field from bit 0 through 2 is…",
+      "prompt": "For the Bit-fields lab: Width of a field from bit 0 through 2 is…",
       "choices": [
         "2",
         "3",
@@ -934,11 +1336,17 @@
       "answer": 1,
       "explain": "Inclusive span → 3 bits.",
       "difficulty": "hard",
-      "id": "bitfields_hard_08"
+      "id": "bitfields_hard_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_hard_08.mp4",
+        "poster": "media/images/bitfields_hard_08-frame.png",
+        "figure": "media/images/bitfields_hard_08.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Mask for field lo=1 width=2 is…",
+      "prompt": "For the Bit-fields lab: Mask for field lo=1 width=2 is…",
       "choices": [
         "0x3",
         "0x6",
@@ -948,11 +1356,17 @@
       "answer": 1,
       "explain": "((4-1)<<1) = 0x6.",
       "difficulty": "hard",
-      "id": "bitfields_hard_09"
+      "id": "bitfields_hard_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_hard_09.mp4",
+        "poster": "media/images/bitfields_hard_09-frame.png",
+        "figure": "media/images/bitfields_hard_09.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Width of a field from bit 1 through 2 is…",
+      "prompt": "For the Bit-fields lab: Width of a field from bit 1 through 2 is…",
       "choices": [
         "1",
         "2",
@@ -962,11 +1376,17 @@
       "answer": 1,
       "explain": "Inclusive span → 2 bits.",
       "difficulty": "hard",
-      "id": "bitfields_hard_10"
+      "id": "bitfields_hard_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_hard_10.mp4",
+        "poster": "media/images/bitfields_hard_10-frame.png",
+        "figure": "media/images/bitfields_hard_10.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Mask for field lo=2 width=3 is…",
+      "prompt": "For the Bit-fields lab: Mask for field lo=2 width=3 is…",
       "choices": [
         "0xe",
         "0x1c",
@@ -976,11 +1396,17 @@
       "answer": 1,
       "explain": "((8-1)<<2) = 0x1c.",
       "difficulty": "hard",
-      "id": "bitfields_hard_11"
+      "id": "bitfields_hard_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_hard_11.mp4",
+        "poster": "media/images/bitfields_hard_11-frame.png",
+        "figure": "media/images/bitfields_hard_11.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Width of a field from bit 2 through 4 is…",
+      "prompt": "For the Bit-fields lab: Width of a field from bit 2 through 4 is…",
       "choices": [
         "2",
         "3",
@@ -990,11 +1416,17 @@
       "answer": 1,
       "explain": "Inclusive span → 3 bits.",
       "difficulty": "hard",
-      "id": "bitfields_hard_12"
+      "id": "bitfields_hard_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_hard_12.mp4",
+        "poster": "media/images/bitfields_hard_12-frame.png",
+        "figure": "media/images/bitfields_hard_12.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Mask for field lo=4 width=4 is…",
+      "prompt": "For the Bit-fields lab: Mask for field lo=4 width=4 is…",
       "choices": [
         "0x78",
         "0xf0",
@@ -1004,11 +1436,17 @@
       "answer": 1,
       "explain": "((16-1)<<4) = 0xf0.",
       "difficulty": "hard",
-      "id": "bitfields_hard_13"
+      "id": "bitfields_hard_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_hard_13.mp4",
+        "poster": "media/images/bitfields_hard_13-frame.png",
+        "figure": "media/images/bitfields_hard_13.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Width of a field from bit 4 through 7 is…",
+      "prompt": "For the Bit-fields lab: Width of a field from bit 4 through 7 is…",
       "choices": [
         "3",
         "4",
@@ -1018,11 +1456,17 @@
       "answer": 1,
       "explain": "Inclusive span → 4 bits.",
       "difficulty": "hard",
-      "id": "bitfields_hard_14"
+      "id": "bitfields_hard_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_hard_14.mp4",
+        "poster": "media/images/bitfields_hard_14-frame.png",
+        "figure": "media/images/bitfields_hard_14.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Mask for field lo=8 width=4 is…",
+      "prompt": "In Bit-fields, mask for field lo=8 width=4 is…",
       "choices": [
         "0x780",
         "0xf00",
@@ -1032,11 +1476,17 @@
       "answer": 1,
       "explain": "((16-1)<<8) = 0xf00.",
       "difficulty": "hard",
-      "id": "bitfields_hard_15"
+      "id": "bitfields_hard_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_hard_15.mp4",
+        "poster": "media/images/bitfields_hard_15-frame.png",
+        "figure": "media/images/bitfields_hard_15.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Width of a field from bit 8 through 11 is…",
+      "prompt": "In Bit-fields, width of a field from bit 8 through 11 is…",
       "choices": [
         "3",
         "4",
@@ -1046,11 +1496,17 @@
       "answer": 1,
       "explain": "Inclusive span → 4 bits.",
       "difficulty": "hard",
-      "id": "bitfields_hard_16"
+      "id": "bitfields_hard_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_hard_16.mp4",
+        "poster": "media/images/bitfields_hard_16-frame.png",
+        "figure": "media/images/bitfields_hard_16.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Mask for field lo=4 width=2 is…",
+      "prompt": "In Bit-fields, mask for field lo=4 width=2 is…",
       "choices": [
         "0x18",
         "0x30",
@@ -1060,11 +1516,17 @@
       "answer": 1,
       "explain": "((4-1)<<4) = 0x30.",
       "difficulty": "hard",
-      "id": "bitfields_hard_17"
+      "id": "bitfields_hard_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_hard_17.mp4",
+        "poster": "media/images/bitfields_hard_17-frame.png",
+        "figure": "media/images/bitfields_hard_17.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Width of a field from bit 4 through 5 is…",
+      "prompt": "In Bit-fields, width of a field from bit 4 through 5 is…",
       "choices": [
         "1",
         "2",
@@ -1074,11 +1536,17 @@
       "answer": 1,
       "explain": "Inclusive span → 2 bits.",
       "difficulty": "hard",
-      "id": "bitfields_hard_18"
+      "id": "bitfields_hard_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_hard_18.mp4",
+        "poster": "media/images/bitfields_hard_18-frame.png",
+        "figure": "media/images/bitfields_hard_18.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Mask for field lo=3 width=5 is…",
+      "prompt": "In Bit-fields, mask for field lo=3 width=5 is…",
       "choices": [
         "0x7c",
         "0xf8",
@@ -1088,11 +1556,17 @@
       "answer": 1,
       "explain": "((32-1)<<3) = 0xf8.",
       "difficulty": "hard",
-      "id": "bitfields_hard_19"
+      "id": "bitfields_hard_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_hard_19.mp4",
+        "poster": "media/images/bitfields_hard_19-frame.png",
+        "figure": "media/images/bitfields_hard_19.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Width of a field from bit 3 through 7 is…",
+      "prompt": "In Bit-fields, width of a field from bit 3 through 7 is…",
       "choices": [
         "4",
         "5",
@@ -1102,11 +1576,17 @@
       "answer": 1,
       "explain": "Inclusive span → 5 bits.",
       "difficulty": "hard",
-      "id": "bitfields_hard_20"
+      "id": "bitfields_hard_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_hard_20.mp4",
+        "poster": "media/images/bitfields_hard_20-frame.png",
+        "figure": "media/images/bitfields_hard_20.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "How many distinct values can 1 bits represent?",
+      "prompt": "In Bit-fields, how many distinct values can 1 bits represent?",
       "choices": [
         "1",
         "2",
@@ -1116,11 +1596,17 @@
       "answer": 1,
       "explain": "1 bits encode 2^1 = 2 patterns.",
       "difficulty": "hard",
-      "id": "bitfields_hard_21"
+      "id": "bitfields_hard_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_hard_21.mp4",
+        "poster": "media/images/bitfields_hard_21-frame.png",
+        "figure": "media/images/bitfields_hard_21.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "How many distinct values can 2 bits represent?",
+      "prompt": "In Bit-fields, how many distinct values can 2 bits represent?",
       "choices": [
         "2",
         "4",
@@ -1130,11 +1616,17 @@
       "answer": 1,
       "explain": "2 bits encode 2^2 = 4 patterns.",
       "difficulty": "hard",
-      "id": "bitfields_hard_22"
+      "id": "bitfields_hard_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_hard_22.mp4",
+        "poster": "media/images/bitfields_hard_22-frame.png",
+        "figure": "media/images/bitfields_hard_22.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "How many distinct values can 3 bits represent?",
+      "prompt": "In Bit-fields, how many distinct values can 3 bits represent?",
       "choices": [
         "4",
         "8",
@@ -1144,11 +1636,17 @@
       "answer": 1,
       "explain": "3 bits encode 2^3 = 8 patterns.",
       "difficulty": "hard",
-      "id": "bitfields_hard_23"
+      "id": "bitfields_hard_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_hard_23.mp4",
+        "poster": "media/images/bitfields_hard_23-frame.png",
+        "figure": "media/images/bitfields_hard_23.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "How many distinct values can 4 bits represent?",
+      "prompt": "In Bit-fields, how many distinct values can 4 bits represent?",
       "choices": [
         "8",
         "16",
@@ -1158,11 +1656,17 @@
       "answer": 1,
       "explain": "4 bits encode 2^4 = 16 patterns.",
       "difficulty": "hard",
-      "id": "bitfields_hard_24"
+      "id": "bitfields_hard_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_hard_24.mp4",
+        "poster": "media/images/bitfields_hard_24-frame.png",
+        "figure": "media/images/bitfields_hard_24.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "How many distinct values can 5 bits represent?",
+      "prompt": "Bit-fields: How many distinct values can 5 bits represent?",
       "choices": [
         "16",
         "32",
@@ -1172,11 +1676,17 @@
       "answer": 1,
       "explain": "5 bits encode 2^5 = 32 patterns.",
       "difficulty": "hard",
-      "id": "bitfields_hard_25"
+      "id": "bitfields_hard_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_hard_25.mp4",
+        "poster": "media/images/bitfields_hard_25-frame.png",
+        "figure": "media/images/bitfields_hard_25.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "How many distinct values can 6 bits represent?",
+      "prompt": "Bit-fields: How many distinct values can 6 bits represent?",
       "choices": [
         "32",
         "64",
@@ -1186,11 +1696,17 @@
       "answer": 1,
       "explain": "6 bits encode 2^6 = 64 patterns.",
       "difficulty": "hard",
-      "id": "bitfields_hard_26"
+      "id": "bitfields_hard_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_hard_26.mp4",
+        "poster": "media/images/bitfields_hard_26-frame.png",
+        "figure": "media/images/bitfields_hard_26.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "How many distinct values can 7 bits represent?",
+      "prompt": "Bit-fields: How many distinct values can 7 bits represent?",
       "choices": [
         "64",
         "128",
@@ -1200,11 +1716,17 @@
       "answer": 1,
       "explain": "7 bits encode 2^7 = 128 patterns.",
       "difficulty": "hard",
-      "id": "bitfields_hard_27"
+      "id": "bitfields_hard_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_hard_27.mp4",
+        "poster": "media/images/bitfields_hard_27-frame.png",
+        "figure": "media/images/bitfields_hard_27.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "How many distinct values can 8 bits represent?",
+      "prompt": "Bit-fields: How many distinct values can 8 bits represent?",
       "choices": [
         "128",
         "256",
@@ -1214,11 +1736,17 @@
       "answer": 1,
       "explain": "8 bits encode 2^8 = 256 patterns.",
       "difficulty": "hard",
-      "id": "bitfields_hard_28"
+      "id": "bitfields_hard_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_hard_28.mp4",
+        "poster": "media/images/bitfields_hard_28-frame.png",
+        "figure": "media/images/bitfields_hard_28.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "How many distinct values can 9 bits represent?",
+      "prompt": "Bit-fields: How many distinct values can 9 bits represent?",
       "choices": [
         "256",
         "512",
@@ -1228,11 +1756,17 @@
       "answer": 1,
       "explain": "9 bits encode 2^9 = 512 patterns.",
       "difficulty": "hard",
-      "id": "bitfields_hard_29"
+      "id": "bitfields_hard_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_hard_29.mp4",
+        "poster": "media/images/bitfields_hard_29-frame.png",
+        "figure": "media/images/bitfields_hard_29.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "How many distinct values can 10 bits represent?",
+      "prompt": "Bit-fields: How many distinct values can 10 bits represent?",
       "choices": [
         "512",
         "1024",
@@ -1242,7 +1776,13 @@
       "answer": 1,
       "explain": "10 bits encode 2^10 = 1024 patterns.",
       "difficulty": "hard",
-      "id": "bitfields_hard_30"
+      "id": "bitfields_hard_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bitfields_hard_30.mp4",
+        "poster": "media/images/bitfields_hard_30-frame.png",
+        "figure": "media/images/bitfields_hard_30.png"
+      }
     }
   ]
 }

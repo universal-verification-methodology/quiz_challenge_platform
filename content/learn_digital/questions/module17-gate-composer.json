@@ -14,7 +14,13 @@
       ],
       "answer": 1,
       "explain": "Starter is one AND gate: F = A & B.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_easy_01.mp4",
+        "poster": "media/images/gates_easy_01-frame.png",
+        "figure": "media/images/gates_easy_01.png"
+      }
     },
     {
       "id": "gates_easy_02",
@@ -28,7 +34,13 @@
       ],
       "answer": 1,
       "explain": "XOR is 1 on rows 01 and 10.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_easy_02.mp4",
+        "poster": "media/images/gates_easy_02-frame.png",
+        "figure": "media/images/gates_easy_02.png"
+      }
     },
     {
       "id": "gates_easy_03",
@@ -42,7 +54,13 @@
       ],
       "answer": 1,
       "explain": "Majority is 1 when two or three inputs are 1.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_easy_03.mp4",
+        "poster": "media/images/gates_easy_03-frame.png",
+        "figure": "media/images/gates_easy_03.png"
+      }
     },
     {
       "id": "gates_easy_04",
@@ -50,111 +68,17 @@
       "prompt": "Matching half the rows proves the net for all inputs.",
       "answer": false,
       "explain": "Exhaustive row match is the judge.",
-      "difficulty": "easy"
-    },
-    {
-      "id": "gates_medium_01",
-      "type": "multiple_choice",
-      "prompt": "Half-adder sum is which gate of A,B?",
-      "choices": [
-        "AND",
-        "XOR",
-        "OR",
-        "NAND only"
-      ],
-      "answer": 1,
-      "explain": "Sum is XOR; carry is AND.",
-      "difficulty": "medium"
-    },
-    {
-      "id": "gates_medium_02",
-      "type": "multiple_choice",
-      "prompt": "HA carry C equals…",
-      "choices": [
-        "XOR",
-        "AND",
-        "NOR",
-        "XNOR"
-      ],
-      "answer": 1,
-      "explain": "Carry is A AND B.",
-      "difficulty": "medium"
-    },
-    {
-      "id": "gates_medium_03",
-      "type": "multiple_choice",
-      "prompt": "Mux under A between B and C is…",
-      "choices": [
-        "Y follows B when A=0 and C when A=1 (typical)",
-        "Y is always A⊕B",
-        "Y ignores select",
-        "Y is majority of A,B,C only"
-      ],
-      "answer": 0,
-      "explain": "Select steers one data input to Y.",
-      "difficulty": "medium"
-    },
-    {
-      "id": "gates_medium_04",
-      "type": "true_false",
-      "prompt": "Leaving an input floating is fine if most rows still pass.",
-      "answer": false,
-      "explain": "Tie every input; FA sum/carry as stated.",
-      "difficulty": "medium"
-    },
-    {
-      "id": "gates_hard_01",
-      "type": "multiple_choice",
-      "prompt": "Full-adder Cout is which function of A,B,Cin?",
-      "choices": [
-        "A⊕B⊕Cin",
-        "majority(A,B,Cin)",
-        "A·B·Cin only",
-        "A+B+Cin without AND terms"
-      ],
-      "answer": 1,
-      "explain": "Cout is majority of A, B, Cin.",
-      "difficulty": "hard"
-    },
-    {
-      "id": "gates_hard_02",
-      "type": "multiple_choice",
-      "prompt": "A⊕B in SOP is…",
-      "choices": [
-        "A·B",
-        "A'B + AB'",
-        "A+B",
-        "A·B'·only"
-      ],
-      "answer": 1,
-      "explain": "A'B + AB' is classic XOR SOP.",
-      "difficulty": "hard"
-    },
-    {
-      "id": "gates_hard_03",
-      "type": "multiple_choice",
-      "prompt": "Failing one minterm means the net is…",
-      "choices": [
-        "is fully correct",
-        "is still wrong for the target F",
-        "proves hazard-free design",
-        "only affects POS"
-      ],
-      "answer": 1,
-      "explain": "Every row must match.",
-      "difficulty": "hard"
-    },
-    {
-      "id": "gates_hard_04",
-      "type": "true_false",
-      "prompt": "AND by itself is enough for all Boolean functions including XOR.",
-      "answer": false,
-      "explain": "NAND/NOR are complete; AND alone is not.",
-      "difficulty": "hard"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_easy_04.mp4",
+        "poster": "media/images/gates_easy_04-frame.png",
+        "figure": "media/images/gates_easy_04.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "AND(A=0, B=0) equals…",
+      "prompt": "Gate composer: AND(A=0, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -174,7 +98,7 @@
     },
     {
       "type": "multiple_choice",
-      "prompt": "AND(A=0, B=1) equals…",
+      "prompt": "Gate composer: AND(A=0, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -184,11 +108,17 @@
       "answer": 0,
       "explain": "AND truth cell → 0.",
       "difficulty": "easy",
-      "id": "gates_easy_06"
+      "id": "gates_easy_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_easy_06.mp4",
+        "poster": "media/images/gates_easy_06-frame.png",
+        "figure": "media/images/gates_easy_06.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "AND(A=1, B=0) equals…",
+      "prompt": "Gate composer: AND(A=1, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -198,11 +128,17 @@
       "answer": 0,
       "explain": "AND truth cell → 0.",
       "difficulty": "easy",
-      "id": "gates_easy_07"
+      "id": "gates_easy_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_easy_07.mp4",
+        "poster": "media/images/gates_easy_07-frame.png",
+        "figure": "media/images/gates_easy_07.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "AND(A=1, B=1) equals…",
+      "prompt": "Gate composer: AND(A=1, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -212,19 +148,31 @@
       "answer": 1,
       "explain": "AND truth cell → 1.",
       "difficulty": "easy",
-      "id": "gates_easy_08"
+      "id": "gates_easy_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_easy_08.mp4",
+        "poster": "media/images/gates_easy_08-frame.png",
+        "figure": "media/images/gates_easy_08.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A 2-input AND has four truth-table rows.",
+      "prompt": "Gate composer: A 2-input AND has four truth-table rows.",
       "answer": true,
       "explain": "Two inputs → 2² = 4 combinations.",
       "difficulty": "easy",
-      "id": "gates_easy_09"
+      "id": "gates_easy_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_easy_09.mp4",
+        "poster": "media/images/gates_easy_09-frame.png",
+        "figure": "media/images/gates_easy_09.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "OR(A=0, B=0) equals…",
+      "prompt": "Gate composer: OR(A=0, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -234,11 +182,17 @@
       "answer": 0,
       "explain": "OR truth cell → 0.",
       "difficulty": "easy",
-      "id": "gates_easy_10"
+      "id": "gates_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_easy_10.mp4",
+        "poster": "media/images/gates_easy_10-frame.png",
+        "figure": "media/images/gates_easy_10.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "OR(A=0, B=1) equals…",
+      "prompt": "Gate composer: OR(A=0, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -248,11 +202,17 @@
       "answer": 1,
       "explain": "OR truth cell → 1.",
       "difficulty": "easy",
-      "id": "gates_easy_11"
+      "id": "gates_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_easy_11.mp4",
+        "poster": "media/images/gates_easy_11-frame.png",
+        "figure": "media/images/gates_easy_11.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "OR(A=1, B=0) equals…",
+      "prompt": "Gate composer: OR(A=1, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -262,11 +222,17 @@
       "answer": 1,
       "explain": "OR truth cell → 1.",
       "difficulty": "easy",
-      "id": "gates_easy_12"
+      "id": "gates_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_easy_12.mp4",
+        "poster": "media/images/gates_easy_12-frame.png",
+        "figure": "media/images/gates_easy_12.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "OR(A=1, B=1) equals…",
+      "prompt": "Gate composer: OR(A=1, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -276,19 +242,31 @@
       "answer": 1,
       "explain": "OR truth cell → 1.",
       "difficulty": "easy",
-      "id": "gates_easy_13"
+      "id": "gates_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_easy_13.mp4",
+        "poster": "media/images/gates_easy_13-frame.png",
+        "figure": "media/images/gates_easy_13.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A 2-input OR has four truth-table rows.",
+      "prompt": "Gate composer: A 2-input OR has four truth-table rows.",
       "answer": true,
       "explain": "Two inputs → 2² = 4 combinations.",
       "difficulty": "easy",
-      "id": "gates_easy_14"
+      "id": "gates_easy_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_easy_14.mp4",
+        "poster": "media/images/gates_easy_14-frame.png",
+        "figure": "media/images/gates_easy_14.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "XOR(A=0, B=0) equals…",
+      "prompt": "Gate composer: XOR(A=0, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -298,11 +276,17 @@
       "answer": 0,
       "explain": "XOR truth cell → 0.",
       "difficulty": "easy",
-      "id": "gates_easy_15"
+      "id": "gates_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_easy_15.mp4",
+        "poster": "media/images/gates_easy_15-frame.png",
+        "figure": "media/images/gates_easy_15.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "XOR(A=0, B=1) equals…",
+      "prompt": "Gate composer: XOR(A=0, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -312,11 +296,17 @@
       "answer": 1,
       "explain": "XOR truth cell → 1.",
       "difficulty": "easy",
-      "id": "gates_easy_16"
+      "id": "gates_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_easy_16.mp4",
+        "poster": "media/images/gates_easy_16-frame.png",
+        "figure": "media/images/gates_easy_16.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "XOR(A=1, B=0) equals…",
+      "prompt": "Gate composer: XOR(A=1, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -326,11 +316,17 @@
       "answer": 1,
       "explain": "XOR truth cell → 1.",
       "difficulty": "easy",
-      "id": "gates_easy_17"
+      "id": "gates_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_easy_17.mp4",
+        "poster": "media/images/gates_easy_17-frame.png",
+        "figure": "media/images/gates_easy_17.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "XOR(A=1, B=1) equals…",
+      "prompt": "Gate composer: XOR(A=1, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -340,19 +336,31 @@
       "answer": 0,
       "explain": "XOR truth cell → 0.",
       "difficulty": "easy",
-      "id": "gates_easy_18"
+      "id": "gates_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_easy_18.mp4",
+        "poster": "media/images/gates_easy_18-frame.png",
+        "figure": "media/images/gates_easy_18.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A 2-input XOR has four truth-table rows.",
+      "prompt": "Gate composer: A 2-input XOR has four truth-table rows.",
       "answer": true,
       "explain": "Two inputs → 2² = 4 combinations.",
       "difficulty": "easy",
-      "id": "gates_easy_19"
+      "id": "gates_easy_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_easy_19.mp4",
+        "poster": "media/images/gates_easy_19-frame.png",
+        "figure": "media/images/gates_easy_19.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NAND(A=0, B=0) equals…",
+      "prompt": "Gate composer: NAND(A=0, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -362,11 +370,17 @@
       "answer": 1,
       "explain": "NAND truth cell → 1.",
       "difficulty": "easy",
-      "id": "gates_easy_20"
+      "id": "gates_easy_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_easy_20.mp4",
+        "poster": "media/images/gates_easy_20-frame.png",
+        "figure": "media/images/gates_easy_20.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NAND(A=0, B=1) equals…",
+      "prompt": "Gate composer: NAND(A=0, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -376,11 +390,17 @@
       "answer": 1,
       "explain": "NAND truth cell → 1.",
       "difficulty": "easy",
-      "id": "gates_easy_21"
+      "id": "gates_easy_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_easy_21.mp4",
+        "poster": "media/images/gates_easy_21-frame.png",
+        "figure": "media/images/gates_easy_21.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NAND(A=1, B=0) equals…",
+      "prompt": "Gate composer: NAND(A=1, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -390,11 +410,17 @@
       "answer": 1,
       "explain": "NAND truth cell → 1.",
       "difficulty": "easy",
-      "id": "gates_easy_22"
+      "id": "gates_easy_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_easy_22.mp4",
+        "poster": "media/images/gates_easy_22-frame.png",
+        "figure": "media/images/gates_easy_22.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NAND(A=1, B=1) equals…",
+      "prompt": "Gate composer: NAND(A=1, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -404,19 +430,31 @@
       "answer": 0,
       "explain": "NAND truth cell → 0.",
       "difficulty": "easy",
-      "id": "gates_easy_23"
+      "id": "gates_easy_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_easy_23.mp4",
+        "poster": "media/images/gates_easy_23-frame.png",
+        "figure": "media/images/gates_easy_23.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A 2-input NAND has four truth-table rows.",
+      "prompt": "Gate composer: A 2-input NAND has four truth-table rows.",
       "answer": true,
       "explain": "Two inputs → 2² = 4 combinations.",
       "difficulty": "easy",
-      "id": "gates_easy_24"
+      "id": "gates_easy_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_easy_24.mp4",
+        "poster": "media/images/gates_easy_24-frame.png",
+        "figure": "media/images/gates_easy_24.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NOR(A=0, B=0) equals…",
+      "prompt": "Gate composer: NOR(A=0, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -426,11 +464,17 @@
       "answer": 1,
       "explain": "NOR truth cell → 1.",
       "difficulty": "easy",
-      "id": "gates_easy_25"
+      "id": "gates_easy_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_easy_25.mp4",
+        "poster": "media/images/gates_easy_25-frame.png",
+        "figure": "media/images/gates_easy_25.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NOR(A=0, B=1) equals…",
+      "prompt": "Gate composer: NOR(A=0, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -440,11 +484,17 @@
       "answer": 0,
       "explain": "NOR truth cell → 0.",
       "difficulty": "easy",
-      "id": "gates_easy_26"
+      "id": "gates_easy_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_easy_26.mp4",
+        "poster": "media/images/gates_easy_26-frame.png",
+        "figure": "media/images/gates_easy_26.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NOR(A=1, B=0) equals…",
+      "prompt": "Gate composer: NOR(A=1, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -454,11 +504,17 @@
       "answer": 0,
       "explain": "NOR truth cell → 0.",
       "difficulty": "easy",
-      "id": "gates_easy_27"
+      "id": "gates_easy_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_easy_27.mp4",
+        "poster": "media/images/gates_easy_27-frame.png",
+        "figure": "media/images/gates_easy_27.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NOR(A=1, B=1) equals…",
+      "prompt": "Gate composer: NOR(A=1, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -468,19 +524,31 @@
       "answer": 0,
       "explain": "NOR truth cell → 0.",
       "difficulty": "easy",
-      "id": "gates_easy_28"
+      "id": "gates_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_easy_28.mp4",
+        "poster": "media/images/gates_easy_28-frame.png",
+        "figure": "media/images/gates_easy_28.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A 2-input NOR has four truth-table rows.",
+      "prompt": "Gate composer: A 2-input NOR has four truth-table rows.",
       "answer": true,
       "explain": "Two inputs → 2² = 4 combinations.",
       "difficulty": "easy",
-      "id": "gates_easy_29"
+      "id": "gates_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_easy_29.mp4",
+        "poster": "media/images/gates_easy_29-frame.png",
+        "figure": "media/images/gates_easy_29.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "XNOR(A=0, B=0) equals…",
+      "prompt": "Gate composer: XNOR(A=0, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -490,11 +558,91 @@
       "answer": 1,
       "explain": "XNOR truth cell → 1.",
       "difficulty": "easy",
-      "id": "gates_easy_30"
+      "id": "gates_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_easy_30.mp4",
+        "poster": "media/images/gates_easy_30-frame.png",
+        "figure": "media/images/gates_easy_30.png"
+      }
+    },
+    {
+      "id": "gates_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Half-adder sum is which gate of A,B?",
+      "choices": [
+        "AND",
+        "XOR",
+        "OR",
+        "NAND only"
+      ],
+      "answer": 1,
+      "explain": "Sum is XOR; carry is AND.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_medium_01.mp4",
+        "poster": "media/images/gates_medium_01-frame.png",
+        "figure": "media/images/gates_medium_01.png"
+      }
+    },
+    {
+      "id": "gates_medium_02",
+      "type": "multiple_choice",
+      "prompt": "HA carry C equals…",
+      "choices": [
+        "XOR",
+        "AND",
+        "NOR",
+        "XNOR"
+      ],
+      "answer": 1,
+      "explain": "Carry is A AND B.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_medium_02.mp4",
+        "poster": "media/images/gates_medium_02-frame.png",
+        "figure": "media/images/gates_medium_02.png"
+      }
+    },
+    {
+      "id": "gates_medium_03",
+      "type": "multiple_choice",
+      "prompt": "Mux under A between B and C is…",
+      "choices": [
+        "Y follows B when A=0 and C when A=1 (typical)",
+        "Y is always A⊕B",
+        "Y ignores select",
+        "Y is majority of A,B,C only"
+      ],
+      "answer": 0,
+      "explain": "Select steers one data input to Y.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_medium_03.mp4",
+        "poster": "media/images/gates_medium_03-frame.png",
+        "figure": "media/images/gates_medium_03.png"
+      }
+    },
+    {
+      "id": "gates_medium_04",
+      "type": "true_false",
+      "prompt": "Leaving an input floating is fine if most rows still pass.",
+      "answer": false,
+      "explain": "Tie every input; FA sum/carry as stated.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_medium_04.mp4",
+        "poster": "media/images/gates_medium_04-frame.png",
+        "figure": "media/images/gates_medium_04.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "AND(A=0, B=0) equals…",
+      "prompt": "In Gate composer, aND(A=0, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -504,11 +652,17 @@
       "answer": 0,
       "explain": "AND truth cell → 0.",
       "difficulty": "medium",
-      "id": "gates_medium_05"
+      "id": "gates_medium_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_medium_05.mp4",
+        "poster": "media/images/gates_medium_05-frame.png",
+        "figure": "media/images/gates_medium_05.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "AND(A=0, B=1) equals…",
+      "prompt": "In Gate composer, aND(A=0, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -518,11 +672,17 @@
       "answer": 0,
       "explain": "AND truth cell → 0.",
       "difficulty": "medium",
-      "id": "gates_medium_06"
+      "id": "gates_medium_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_medium_06.mp4",
+        "poster": "media/images/gates_medium_06-frame.png",
+        "figure": "media/images/gates_medium_06.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "AND(A=1, B=0) equals…",
+      "prompt": "In Gate composer, aND(A=1, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -532,11 +692,17 @@
       "answer": 0,
       "explain": "AND truth cell → 0.",
       "difficulty": "medium",
-      "id": "gates_medium_07"
+      "id": "gates_medium_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_medium_07.mp4",
+        "poster": "media/images/gates_medium_07-frame.png",
+        "figure": "media/images/gates_medium_07.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "AND(A=1, B=1) equals…",
+      "prompt": "In Gate composer, aND(A=1, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -546,19 +712,31 @@
       "answer": 1,
       "explain": "AND truth cell → 1.",
       "difficulty": "medium",
-      "id": "gates_medium_08"
+      "id": "gates_medium_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_medium_08.mp4",
+        "poster": "media/images/gates_medium_08-frame.png",
+        "figure": "media/images/gates_medium_08.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A 2-input AND has four truth-table rows.",
+      "prompt": "In Gate composer, a 2-input AND has four truth-table rows.",
       "answer": true,
       "explain": "Two inputs → 2² = 4 combinations.",
       "difficulty": "medium",
-      "id": "gates_medium_09"
+      "id": "gates_medium_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_medium_09.mp4",
+        "poster": "media/images/gates_medium_09-frame.png",
+        "figure": "media/images/gates_medium_09.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "OR(A=0, B=0) equals…",
+      "prompt": "In Gate composer, oR(A=0, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -568,11 +746,17 @@
       "answer": 0,
       "explain": "OR truth cell → 0.",
       "difficulty": "medium",
-      "id": "gates_medium_10"
+      "id": "gates_medium_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_medium_10.mp4",
+        "poster": "media/images/gates_medium_10-frame.png",
+        "figure": "media/images/gates_medium_10.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "OR(A=0, B=1) equals…",
+      "prompt": "In Gate composer, oR(A=0, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -582,11 +766,17 @@
       "answer": 1,
       "explain": "OR truth cell → 1.",
       "difficulty": "medium",
-      "id": "gates_medium_11"
+      "id": "gates_medium_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_medium_11.mp4",
+        "poster": "media/images/gates_medium_11-frame.png",
+        "figure": "media/images/gates_medium_11.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "OR(A=1, B=0) equals…",
+      "prompt": "In Gate composer, oR(A=1, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -596,11 +786,17 @@
       "answer": 1,
       "explain": "OR truth cell → 1.",
       "difficulty": "medium",
-      "id": "gates_medium_12"
+      "id": "gates_medium_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_medium_12.mp4",
+        "poster": "media/images/gates_medium_12-frame.png",
+        "figure": "media/images/gates_medium_12.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "OR(A=1, B=1) equals…",
+      "prompt": "In Gate composer, oR(A=1, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -610,19 +806,31 @@
       "answer": 1,
       "explain": "OR truth cell → 1.",
       "difficulty": "medium",
-      "id": "gates_medium_13"
+      "id": "gates_medium_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_medium_13.mp4",
+        "poster": "media/images/gates_medium_13-frame.png",
+        "figure": "media/images/gates_medium_13.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A 2-input OR has four truth-table rows.",
+      "prompt": "In Gate composer, a 2-input OR has four truth-table rows.",
       "answer": true,
       "explain": "Two inputs → 2² = 4 combinations.",
       "difficulty": "medium",
-      "id": "gates_medium_14"
+      "id": "gates_medium_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_medium_14.mp4",
+        "poster": "media/images/gates_medium_14-frame.png",
+        "figure": "media/images/gates_medium_14.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "XOR(A=0, B=0) equals…",
+      "prompt": "In Gate composer, xOR(A=0, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -632,11 +840,17 @@
       "answer": 0,
       "explain": "XOR truth cell → 0.",
       "difficulty": "medium",
-      "id": "gates_medium_15"
+      "id": "gates_medium_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_medium_15.mp4",
+        "poster": "media/images/gates_medium_15-frame.png",
+        "figure": "media/images/gates_medium_15.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "XOR(A=0, B=1) equals…",
+      "prompt": "In Gate composer, xOR(A=0, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -646,11 +860,17 @@
       "answer": 1,
       "explain": "XOR truth cell → 1.",
       "difficulty": "medium",
-      "id": "gates_medium_16"
+      "id": "gates_medium_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_medium_16.mp4",
+        "poster": "media/images/gates_medium_16-frame.png",
+        "figure": "media/images/gates_medium_16.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "XOR(A=1, B=0) equals…",
+      "prompt": "In Gate composer, xOR(A=1, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -660,11 +880,17 @@
       "answer": 1,
       "explain": "XOR truth cell → 1.",
       "difficulty": "medium",
-      "id": "gates_medium_17"
+      "id": "gates_medium_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_medium_17.mp4",
+        "poster": "media/images/gates_medium_17-frame.png",
+        "figure": "media/images/gates_medium_17.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "XOR(A=1, B=1) equals…",
+      "prompt": "In Gate composer, xOR(A=1, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -674,19 +900,31 @@
       "answer": 0,
       "explain": "XOR truth cell → 0.",
       "difficulty": "medium",
-      "id": "gates_medium_18"
+      "id": "gates_medium_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_medium_18.mp4",
+        "poster": "media/images/gates_medium_18-frame.png",
+        "figure": "media/images/gates_medium_18.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A 2-input XOR has four truth-table rows.",
+      "prompt": "In Gate composer, a 2-input XOR has four truth-table rows.",
       "answer": true,
       "explain": "Two inputs → 2² = 4 combinations.",
       "difficulty": "medium",
-      "id": "gates_medium_19"
+      "id": "gates_medium_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_medium_19.mp4",
+        "poster": "media/images/gates_medium_19-frame.png",
+        "figure": "media/images/gates_medium_19.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NAND(A=0, B=0) equals…",
+      "prompt": "In Gate composer, nAND(A=0, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -696,11 +934,17 @@
       "answer": 1,
       "explain": "NAND truth cell → 1.",
       "difficulty": "medium",
-      "id": "gates_medium_20"
+      "id": "gates_medium_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_medium_20.mp4",
+        "poster": "media/images/gates_medium_20-frame.png",
+        "figure": "media/images/gates_medium_20.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NAND(A=0, B=1) equals…",
+      "prompt": "In Gate composer, nAND(A=0, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -710,11 +954,17 @@
       "answer": 1,
       "explain": "NAND truth cell → 1.",
       "difficulty": "medium",
-      "id": "gates_medium_21"
+      "id": "gates_medium_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_medium_21.mp4",
+        "poster": "media/images/gates_medium_21-frame.png",
+        "figure": "media/images/gates_medium_21.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NAND(A=1, B=0) equals…",
+      "prompt": "In Gate composer, nAND(A=1, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -724,11 +974,17 @@
       "answer": 1,
       "explain": "NAND truth cell → 1.",
       "difficulty": "medium",
-      "id": "gates_medium_22"
+      "id": "gates_medium_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_medium_22.mp4",
+        "poster": "media/images/gates_medium_22-frame.png",
+        "figure": "media/images/gates_medium_22.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NAND(A=1, B=1) equals…",
+      "prompt": "In Gate composer, nAND(A=1, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -738,19 +994,31 @@
       "answer": 0,
       "explain": "NAND truth cell → 0.",
       "difficulty": "medium",
-      "id": "gates_medium_23"
+      "id": "gates_medium_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_medium_23.mp4",
+        "poster": "media/images/gates_medium_23-frame.png",
+        "figure": "media/images/gates_medium_23.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A 2-input NAND has four truth-table rows.",
+      "prompt": "In Gate composer, a 2-input NAND has four truth-table rows.",
       "answer": true,
       "explain": "Two inputs → 2² = 4 combinations.",
       "difficulty": "medium",
-      "id": "gates_medium_24"
+      "id": "gates_medium_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_medium_24.mp4",
+        "poster": "media/images/gates_medium_24-frame.png",
+        "figure": "media/images/gates_medium_24.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NOR(A=0, B=0) equals…",
+      "prompt": "In Gate composer, nOR(A=0, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -760,11 +1028,17 @@
       "answer": 1,
       "explain": "NOR truth cell → 1.",
       "difficulty": "medium",
-      "id": "gates_medium_25"
+      "id": "gates_medium_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_medium_25.mp4",
+        "poster": "media/images/gates_medium_25-frame.png",
+        "figure": "media/images/gates_medium_25.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NOR(A=0, B=1) equals…",
+      "prompt": "In Gate composer, nOR(A=0, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -774,11 +1048,17 @@
       "answer": 0,
       "explain": "NOR truth cell → 0.",
       "difficulty": "medium",
-      "id": "gates_medium_26"
+      "id": "gates_medium_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_medium_26.mp4",
+        "poster": "media/images/gates_medium_26-frame.png",
+        "figure": "media/images/gates_medium_26.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NOR(A=1, B=0) equals…",
+      "prompt": "In Gate composer, nOR(A=1, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -788,11 +1068,17 @@
       "answer": 0,
       "explain": "NOR truth cell → 0.",
       "difficulty": "medium",
-      "id": "gates_medium_27"
+      "id": "gates_medium_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_medium_27.mp4",
+        "poster": "media/images/gates_medium_27-frame.png",
+        "figure": "media/images/gates_medium_27.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NOR(A=1, B=1) equals…",
+      "prompt": "In Gate composer, nOR(A=1, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -802,19 +1088,31 @@
       "answer": 0,
       "explain": "NOR truth cell → 0.",
       "difficulty": "medium",
-      "id": "gates_medium_28"
+      "id": "gates_medium_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_medium_28.mp4",
+        "poster": "media/images/gates_medium_28-frame.png",
+        "figure": "media/images/gates_medium_28.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A 2-input NOR has four truth-table rows.",
+      "prompt": "In Gate composer, a 2-input NOR has four truth-table rows.",
       "answer": true,
       "explain": "Two inputs → 2² = 4 combinations.",
       "difficulty": "medium",
-      "id": "gates_medium_29"
+      "id": "gates_medium_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_medium_29.mp4",
+        "poster": "media/images/gates_medium_29-frame.png",
+        "figure": "media/images/gates_medium_29.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "XNOR(A=0, B=0) equals…",
+      "prompt": "In Gate composer, xNOR(A=0, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -824,11 +1122,91 @@
       "answer": 1,
       "explain": "XNOR truth cell → 1.",
       "difficulty": "medium",
-      "id": "gates_medium_30"
+      "id": "gates_medium_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_medium_30.mp4",
+        "poster": "media/images/gates_medium_30-frame.png",
+        "figure": "media/images/gates_medium_30.png"
+      }
+    },
+    {
+      "id": "gates_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Full-adder Cout is which function of A,B,Cin?",
+      "choices": [
+        "A⊕B⊕Cin",
+        "majority(A,B,Cin)",
+        "A·B·Cin only",
+        "A+B+Cin without AND terms"
+      ],
+      "answer": 1,
+      "explain": "Cout is majority of A, B, Cin.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_hard_01.mp4",
+        "poster": "media/images/gates_hard_01-frame.png",
+        "figure": "media/images/gates_hard_01.png"
+      }
+    },
+    {
+      "id": "gates_hard_02",
+      "type": "multiple_choice",
+      "prompt": "A⊕B in SOP is…",
+      "choices": [
+        "A·B",
+        "A'B + AB'",
+        "A+B",
+        "A·B'·only"
+      ],
+      "answer": 1,
+      "explain": "A'B + AB' is classic XOR SOP.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_hard_02.mp4",
+        "poster": "media/images/gates_hard_02-frame.png",
+        "figure": "media/images/gates_hard_02.png"
+      }
+    },
+    {
+      "id": "gates_hard_03",
+      "type": "multiple_choice",
+      "prompt": "Failing one minterm means the net is…",
+      "choices": [
+        "is fully correct",
+        "is still wrong for the target F",
+        "proves hazard-free design",
+        "only affects POS"
+      ],
+      "answer": 1,
+      "explain": "Every row must match.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_hard_03.mp4",
+        "poster": "media/images/gates_hard_03-frame.png",
+        "figure": "media/images/gates_hard_03.png"
+      }
+    },
+    {
+      "id": "gates_hard_04",
+      "type": "true_false",
+      "prompt": "AND by itself is enough for all Boolean functions including XOR.",
+      "answer": false,
+      "explain": "NAND/NOR are complete; AND alone is not.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_hard_04.mp4",
+        "poster": "media/images/gates_hard_04-frame.png",
+        "figure": "media/images/gates_hard_04.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "AND(A=0, B=0) equals…",
+      "prompt": "For the Gate composer lab: AND(A=0, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -838,11 +1216,17 @@
       "answer": 0,
       "explain": "AND truth cell → 0.",
       "difficulty": "hard",
-      "id": "gates_hard_05"
+      "id": "gates_hard_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_hard_05.mp4",
+        "poster": "media/images/gates_hard_05-frame.png",
+        "figure": "media/images/gates_hard_05.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "AND(A=0, B=1) equals…",
+      "prompt": "For the Gate composer lab: AND(A=0, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -852,11 +1236,17 @@
       "answer": 0,
       "explain": "AND truth cell → 0.",
       "difficulty": "hard",
-      "id": "gates_hard_06"
+      "id": "gates_hard_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_hard_06.mp4",
+        "poster": "media/images/gates_hard_06-frame.png",
+        "figure": "media/images/gates_hard_06.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "AND(A=1, B=0) equals…",
+      "prompt": "For the Gate composer lab: AND(A=1, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -866,11 +1256,17 @@
       "answer": 0,
       "explain": "AND truth cell → 0.",
       "difficulty": "hard",
-      "id": "gates_hard_07"
+      "id": "gates_hard_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_hard_07.mp4",
+        "poster": "media/images/gates_hard_07-frame.png",
+        "figure": "media/images/gates_hard_07.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "AND(A=1, B=1) equals…",
+      "prompt": "For the Gate composer lab: AND(A=1, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -880,19 +1276,31 @@
       "answer": 1,
       "explain": "AND truth cell → 1.",
       "difficulty": "hard",
-      "id": "gates_hard_08"
+      "id": "gates_hard_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_hard_08.mp4",
+        "poster": "media/images/gates_hard_08-frame.png",
+        "figure": "media/images/gates_hard_08.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A 2-input AND has four truth-table rows.",
+      "prompt": "For the Gate composer lab: A 2-input AND has four truth-table rows.",
       "answer": true,
       "explain": "Two inputs → 2² = 4 combinations.",
       "difficulty": "hard",
-      "id": "gates_hard_09"
+      "id": "gates_hard_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_hard_09.mp4",
+        "poster": "media/images/gates_hard_09-frame.png",
+        "figure": "media/images/gates_hard_09.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "OR(A=0, B=0) equals…",
+      "prompt": "For the Gate composer lab: OR(A=0, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -902,11 +1310,17 @@
       "answer": 0,
       "explain": "OR truth cell → 0.",
       "difficulty": "hard",
-      "id": "gates_hard_10"
+      "id": "gates_hard_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_hard_10.mp4",
+        "poster": "media/images/gates_hard_10-frame.png",
+        "figure": "media/images/gates_hard_10.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "OR(A=0, B=1) equals…",
+      "prompt": "For the Gate composer lab: OR(A=0, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -916,11 +1330,17 @@
       "answer": 1,
       "explain": "OR truth cell → 1.",
       "difficulty": "hard",
-      "id": "gates_hard_11"
+      "id": "gates_hard_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_hard_11.mp4",
+        "poster": "media/images/gates_hard_11-frame.png",
+        "figure": "media/images/gates_hard_11.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "OR(A=1, B=0) equals…",
+      "prompt": "For the Gate composer lab: OR(A=1, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -930,11 +1350,17 @@
       "answer": 1,
       "explain": "OR truth cell → 1.",
       "difficulty": "hard",
-      "id": "gates_hard_12"
+      "id": "gates_hard_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_hard_12.mp4",
+        "poster": "media/images/gates_hard_12-frame.png",
+        "figure": "media/images/gates_hard_12.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "OR(A=1, B=1) equals…",
+      "prompt": "For the Gate composer lab: OR(A=1, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -944,19 +1370,31 @@
       "answer": 1,
       "explain": "OR truth cell → 1.",
       "difficulty": "hard",
-      "id": "gates_hard_13"
+      "id": "gates_hard_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_hard_13.mp4",
+        "poster": "media/images/gates_hard_13-frame.png",
+        "figure": "media/images/gates_hard_13.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A 2-input OR has four truth-table rows.",
+      "prompt": "For the Gate composer lab: A 2-input OR has four truth-table rows.",
       "answer": true,
       "explain": "Two inputs → 2² = 4 combinations.",
       "difficulty": "hard",
-      "id": "gates_hard_14"
+      "id": "gates_hard_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_hard_14.mp4",
+        "poster": "media/images/gates_hard_14-frame.png",
+        "figure": "media/images/gates_hard_14.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "XOR(A=0, B=0) equals…",
+      "prompt": "For the Gate composer lab: XOR(A=0, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -966,11 +1404,17 @@
       "answer": 0,
       "explain": "XOR truth cell → 0.",
       "difficulty": "hard",
-      "id": "gates_hard_15"
+      "id": "gates_hard_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_hard_15.mp4",
+        "poster": "media/images/gates_hard_15-frame.png",
+        "figure": "media/images/gates_hard_15.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "XOR(A=0, B=1) equals…",
+      "prompt": "For the Gate composer lab: XOR(A=0, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -980,11 +1424,17 @@
       "answer": 1,
       "explain": "XOR truth cell → 1.",
       "difficulty": "hard",
-      "id": "gates_hard_16"
+      "id": "gates_hard_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_hard_16.mp4",
+        "poster": "media/images/gates_hard_16-frame.png",
+        "figure": "media/images/gates_hard_16.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "XOR(A=1, B=0) equals…",
+      "prompt": "For the Gate composer lab: XOR(A=1, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -994,11 +1444,17 @@
       "answer": 1,
       "explain": "XOR truth cell → 1.",
       "difficulty": "hard",
-      "id": "gates_hard_17"
+      "id": "gates_hard_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_hard_17.mp4",
+        "poster": "media/images/gates_hard_17-frame.png",
+        "figure": "media/images/gates_hard_17.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "XOR(A=1, B=1) equals…",
+      "prompt": "For the Gate composer lab: XOR(A=1, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -1008,19 +1464,31 @@
       "answer": 0,
       "explain": "XOR truth cell → 0.",
       "difficulty": "hard",
-      "id": "gates_hard_18"
+      "id": "gates_hard_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_hard_18.mp4",
+        "poster": "media/images/gates_hard_18-frame.png",
+        "figure": "media/images/gates_hard_18.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A 2-input XOR has four truth-table rows.",
+      "prompt": "For the Gate composer lab: A 2-input XOR has four truth-table rows.",
       "answer": true,
       "explain": "Two inputs → 2² = 4 combinations.",
       "difficulty": "hard",
-      "id": "gates_hard_19"
+      "id": "gates_hard_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_hard_19.mp4",
+        "poster": "media/images/gates_hard_19-frame.png",
+        "figure": "media/images/gates_hard_19.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NAND(A=0, B=0) equals…",
+      "prompt": "For the Gate composer lab: NAND(A=0, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -1030,11 +1498,17 @@
       "answer": 1,
       "explain": "NAND truth cell → 1.",
       "difficulty": "hard",
-      "id": "gates_hard_20"
+      "id": "gates_hard_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_hard_20.mp4",
+        "poster": "media/images/gates_hard_20-frame.png",
+        "figure": "media/images/gates_hard_20.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NAND(A=0, B=1) equals…",
+      "prompt": "For the Gate composer lab: NAND(A=0, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -1044,11 +1518,17 @@
       "answer": 1,
       "explain": "NAND truth cell → 1.",
       "difficulty": "hard",
-      "id": "gates_hard_21"
+      "id": "gates_hard_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_hard_21.mp4",
+        "poster": "media/images/gates_hard_21-frame.png",
+        "figure": "media/images/gates_hard_21.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NAND(A=1, B=0) equals…",
+      "prompt": "For the Gate composer lab: NAND(A=1, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -1058,11 +1538,17 @@
       "answer": 1,
       "explain": "NAND truth cell → 1.",
       "difficulty": "hard",
-      "id": "gates_hard_22"
+      "id": "gates_hard_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_hard_22.mp4",
+        "poster": "media/images/gates_hard_22-frame.png",
+        "figure": "media/images/gates_hard_22.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NAND(A=1, B=1) equals…",
+      "prompt": "For the Gate composer lab: NAND(A=1, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -1072,19 +1558,31 @@
       "answer": 0,
       "explain": "NAND truth cell → 0.",
       "difficulty": "hard",
-      "id": "gates_hard_23"
+      "id": "gates_hard_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_hard_23.mp4",
+        "poster": "media/images/gates_hard_23-frame.png",
+        "figure": "media/images/gates_hard_23.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A 2-input NAND has four truth-table rows.",
+      "prompt": "For the Gate composer lab: A 2-input NAND has four truth-table rows.",
       "answer": true,
       "explain": "Two inputs → 2² = 4 combinations.",
       "difficulty": "hard",
-      "id": "gates_hard_24"
+      "id": "gates_hard_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_hard_24.mp4",
+        "poster": "media/images/gates_hard_24-frame.png",
+        "figure": "media/images/gates_hard_24.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NOR(A=0, B=0) equals…",
+      "prompt": "For the Gate composer lab: NOR(A=0, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -1094,11 +1592,17 @@
       "answer": 1,
       "explain": "NOR truth cell → 1.",
       "difficulty": "hard",
-      "id": "gates_hard_25"
+      "id": "gates_hard_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_hard_25.mp4",
+        "poster": "media/images/gates_hard_25-frame.png",
+        "figure": "media/images/gates_hard_25.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NOR(A=0, B=1) equals…",
+      "prompt": "For the Gate composer lab: NOR(A=0, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -1108,11 +1612,17 @@
       "answer": 0,
       "explain": "NOR truth cell → 0.",
       "difficulty": "hard",
-      "id": "gates_hard_26"
+      "id": "gates_hard_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_hard_26.mp4",
+        "poster": "media/images/gates_hard_26-frame.png",
+        "figure": "media/images/gates_hard_26.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NOR(A=1, B=0) equals…",
+      "prompt": "For the Gate composer lab: NOR(A=1, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -1122,11 +1632,17 @@
       "answer": 0,
       "explain": "NOR truth cell → 0.",
       "difficulty": "hard",
-      "id": "gates_hard_27"
+      "id": "gates_hard_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_hard_27.mp4",
+        "poster": "media/images/gates_hard_27-frame.png",
+        "figure": "media/images/gates_hard_27.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NOR(A=1, B=1) equals…",
+      "prompt": "For the Gate composer lab: NOR(A=1, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -1136,19 +1652,31 @@
       "answer": 0,
       "explain": "NOR truth cell → 0.",
       "difficulty": "hard",
-      "id": "gates_hard_28"
+      "id": "gates_hard_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_hard_28.mp4",
+        "poster": "media/images/gates_hard_28-frame.png",
+        "figure": "media/images/gates_hard_28.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A 2-input NOR has four truth-table rows.",
+      "prompt": "For the Gate composer lab: A 2-input NOR has four truth-table rows.",
       "answer": true,
       "explain": "Two inputs → 2² = 4 combinations.",
       "difficulty": "hard",
-      "id": "gates_hard_29"
+      "id": "gates_hard_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_hard_29.mp4",
+        "poster": "media/images/gates_hard_29-frame.png",
+        "figure": "media/images/gates_hard_29.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "XNOR(A=0, B=0) equals…",
+      "prompt": "For the Gate composer lab: XNOR(A=0, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -1158,7 +1686,13 @@
       "answer": 1,
       "explain": "XNOR truth cell → 1.",
       "difficulty": "hard",
-      "id": "gates_hard_30"
+      "id": "gates_hard_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gates_hard_30.mp4",
+        "poster": "media/images/gates_hard_30-frame.png",
+        "figure": "media/images/gates_hard_30.png"
+      }
     }
   ]
 }

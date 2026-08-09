@@ -14,7 +14,13 @@
       ],
       "answer": 0,
       "explain": "Z is tied to the state node.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_easy_01.mp4",
+        "poster": "media/images/fsm_easy_01-frame.png",
+        "figure": "media/images/fsm_easy_01.png"
+      }
     },
     {
       "id": "fsm_easy_02",
@@ -28,7 +34,13 @@
       ],
       "answer": 0,
       "explain": "Z is on the transition arc.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_easy_02.mp4",
+        "poster": "media/images/fsm_easy_02-frame.png",
+        "figure": "media/images/fsm_easy_02.png"
+      }
     },
     {
       "id": "fsm_easy_03",
@@ -42,7 +54,13 @@
       ],
       "answer": 0,
       "explain": "x=1 toggles; x=0 holds.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_easy_03.mp4",
+        "poster": "media/images/fsm_easy_03-frame.png",
+        "figure": "media/images/fsm_easy_03.png"
+      }
     },
     {
       "id": "fsm_easy_04",
@@ -50,7 +68,521 @@
       "prompt": "A transition table lists next state for each state/input pair.",
       "answer": true,
       "explain": "One bit ≈ one cycle; do not mix Moore/Mealy column meanings.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_easy_04.mp4",
+        "poster": "media/images/fsm_easy_04-frame.png",
+        "figure": "media/images/fsm_easy_04.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Minimum bits to encode 2 states (binary) is…",
+      "choices": [
+        "2",
+        "1",
+        "4",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(2)) = 1.",
+      "difficulty": "easy",
+      "id": "fsm_easy_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_easy_05.mp4",
+        "poster": "media/images/fsm_easy_05-frame.png",
+        "figure": "media/images/fsm_easy_05.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "One-hot encoding of 2 states uses how many FFs?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "easy",
+      "id": "fsm_easy_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_easy_06.mp4",
+        "poster": "media/images/fsm_easy_06-frame.png",
+        "figure": "media/images/fsm_easy_06.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Minimum bits to encode 3 states (binary) is…",
+      "choices": [
+        "3",
+        "2",
+        "8",
+        "2"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(3)) = 2.",
+      "difficulty": "easy",
+      "id": "fsm_easy_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_easy_07.mp4",
+        "poster": "media/images/fsm_easy_07-frame.png",
+        "figure": "media/images/fsm_easy_07.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "One-hot encoding of 3 states uses how many FFs?",
+      "choices": [
+        "2",
+        "3",
+        "6",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "easy",
+      "id": "fsm_easy_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_easy_08.mp4",
+        "poster": "media/images/fsm_easy_08-frame.png",
+        "figure": "media/images/fsm_easy_08.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Minimum bits to encode 4 states (binary) is…",
+      "choices": [
+        "4",
+        "2",
+        "16",
+        "3"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(4)) = 2.",
+      "difficulty": "easy",
+      "id": "fsm_easy_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_easy_09.mp4",
+        "poster": "media/images/fsm_easy_09-frame.png",
+        "figure": "media/images/fsm_easy_09.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "One-hot encoding of 4 states uses how many FFs?",
+      "choices": [
+        "2",
+        "4",
+        "8",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "easy",
+      "id": "fsm_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_easy_10.mp4",
+        "poster": "media/images/fsm_easy_10-frame.png",
+        "figure": "media/images/fsm_easy_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Minimum bits to encode 5 states (binary) is…",
+      "choices": [
+        "5",
+        "3",
+        "32",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(5)) = 3.",
+      "difficulty": "easy",
+      "id": "fsm_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_easy_11.mp4",
+        "poster": "media/images/fsm_easy_11-frame.png",
+        "figure": "media/images/fsm_easy_11.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "One-hot encoding of 5 states uses how many FFs?",
+      "choices": [
+        "3",
+        "5",
+        "10",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "easy",
+      "id": "fsm_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_easy_12.mp4",
+        "poster": "media/images/fsm_easy_12-frame.png",
+        "figure": "media/images/fsm_easy_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Minimum bits to encode 6 states (binary) is…",
+      "choices": [
+        "6",
+        "3",
+        "64",
+        "5"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(6)) = 3.",
+      "difficulty": "easy",
+      "id": "fsm_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_easy_13.mp4",
+        "poster": "media/images/fsm_easy_13-frame.png",
+        "figure": "media/images/fsm_easy_13.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "One-hot encoding of 6 states uses how many FFs?",
+      "choices": [
+        "3",
+        "6",
+        "12",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "easy",
+      "id": "fsm_easy_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_easy_14.mp4",
+        "poster": "media/images/fsm_easy_14-frame.png",
+        "figure": "media/images/fsm_easy_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Minimum bits to encode 7 states (binary) is…",
+      "choices": [
+        "7",
+        "3",
+        "128",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(7)) = 3.",
+      "difficulty": "easy",
+      "id": "fsm_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_easy_15.mp4",
+        "poster": "media/images/fsm_easy_15-frame.png",
+        "figure": "media/images/fsm_easy_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "One-hot encoding of 7 states uses how many FFs?",
+      "choices": [
+        "3",
+        "7",
+        "14",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "easy",
+      "id": "fsm_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_easy_16.mp4",
+        "poster": "media/images/fsm_easy_16-frame.png",
+        "figure": "media/images/fsm_easy_16.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Minimum bits to encode 8 states (binary) is…",
+      "choices": [
+        "8",
+        "3",
+        "256",
+        "7"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(8)) = 3.",
+      "difficulty": "easy",
+      "id": "fsm_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_easy_17.mp4",
+        "poster": "media/images/fsm_easy_17-frame.png",
+        "figure": "media/images/fsm_easy_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "One-hot encoding of 8 states uses how many FFs?",
+      "choices": [
+        "3",
+        "8",
+        "16",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "easy",
+      "id": "fsm_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_easy_18.mp4",
+        "poster": "media/images/fsm_easy_18-frame.png",
+        "figure": "media/images/fsm_easy_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Minimum bits to encode 9 states (binary) is…",
+      "choices": [
+        "9",
+        "4",
+        "512",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(9)) = 4.",
+      "difficulty": "easy",
+      "id": "fsm_easy_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_easy_19.mp4",
+        "poster": "media/images/fsm_easy_19-frame.png",
+        "figure": "media/images/fsm_easy_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "One-hot encoding of 9 states uses how many FFs?",
+      "choices": [
+        "4",
+        "9",
+        "18",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "easy",
+      "id": "fsm_easy_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_easy_20.mp4",
+        "poster": "media/images/fsm_easy_20-frame.png",
+        "figure": "media/images/fsm_easy_20.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "One-hot often simplifies next-state logic at the cost of more FFs.",
+      "answer": true,
+      "explain": "Common FPGA style.",
+      "difficulty": "easy",
+      "id": "fsm_easy_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_easy_21.mp4",
+        "poster": "media/images/fsm_easy_21-frame.png",
+        "figure": "media/images/fsm_easy_21.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Illegal one-hot codes should be handled safely.",
+      "answer": true,
+      "explain": "Avoid lockup.",
+      "difficulty": "easy",
+      "id": "fsm_easy_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_easy_22.mp4",
+        "poster": "media/images/fsm_easy_22-frame.png",
+        "figure": "media/images/fsm_easy_22.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FSM designer: Minimum bits to encode 2 states (binary) is…",
+      "choices": [
+        "2",
+        "1",
+        "4",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(2)) = 1.",
+      "difficulty": "easy",
+      "id": "fsm_easy_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_easy_23.mp4",
+        "poster": "media/images/fsm_easy_23-frame.png",
+        "figure": "media/images/fsm_easy_23.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FSM designer: One-hot encoding of 2 states uses how many FFs?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "easy",
+      "id": "fsm_easy_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_easy_24.mp4",
+        "poster": "media/images/fsm_easy_24-frame.png",
+        "figure": "media/images/fsm_easy_24.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FSM designer: Minimum bits to encode 3 states (binary) is…",
+      "choices": [
+        "3",
+        "2",
+        "8",
+        "2"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(3)) = 2.",
+      "difficulty": "easy",
+      "id": "fsm_easy_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_easy_25.mp4",
+        "poster": "media/images/fsm_easy_25-frame.png",
+        "figure": "media/images/fsm_easy_25.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FSM designer: One-hot encoding of 3 states uses how many FFs?",
+      "choices": [
+        "2",
+        "3",
+        "6",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "easy",
+      "id": "fsm_easy_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_easy_26.mp4",
+        "poster": "media/images/fsm_easy_26-frame.png",
+        "figure": "media/images/fsm_easy_26.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FSM designer: Minimum bits to encode 4 states (binary) is…",
+      "choices": [
+        "4",
+        "2",
+        "16",
+        "3"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(4)) = 2.",
+      "difficulty": "easy",
+      "id": "fsm_easy_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_easy_27.mp4",
+        "poster": "media/images/fsm_easy_27-frame.png",
+        "figure": "media/images/fsm_easy_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FSM designer: One-hot encoding of 4 states uses how many FFs?",
+      "choices": [
+        "2",
+        "4",
+        "8",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "easy",
+      "id": "fsm_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_easy_28.mp4",
+        "poster": "media/images/fsm_easy_28-frame.png",
+        "figure": "media/images/fsm_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FSM designer: Minimum bits to encode 5 states (binary) is…",
+      "choices": [
+        "5",
+        "3",
+        "32",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(5)) = 3.",
+      "difficulty": "easy",
+      "id": "fsm_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_easy_29.mp4",
+        "poster": "media/images/fsm_easy_29-frame.png",
+        "figure": "media/images/fsm_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FSM designer: One-hot encoding of 5 states uses how many FFs?",
+      "choices": [
+        "3",
+        "5",
+        "10",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "easy",
+      "id": "fsm_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_easy_30.mp4",
+        "poster": "media/images/fsm_easy_30-frame.png",
+        "figure": "media/images/fsm_easy_30.png"
+      }
     },
     {
       "id": "fsm_medium_01",
@@ -64,7 +596,13 @@
       ],
       "answer": 0,
       "explain": "Z on the completing transition.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_medium_01.mp4",
+        "poster": "media/images/fsm_medium_01-frame.png",
+        "figure": "media/images/fsm_medium_01.png"
+      }
     },
     {
       "id": "fsm_medium_02",
@@ -78,7 +616,13 @@
       ],
       "answer": 0,
       "explain": "Cover defaults; avoid unreachable traps.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_medium_02.mp4",
+        "poster": "media/images/fsm_medium_02-frame.png",
+        "figure": "media/images/fsm_medium_02.png"
+      }
     },
     {
       "id": "fsm_medium_03",
@@ -92,7 +636,13 @@
       ],
       "answer": 0,
       "explain": "FSMs under many names.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_medium_03.mp4",
+        "poster": "media/images/fsm_medium_03-frame.png",
+        "figure": "media/images/fsm_medium_03.png"
+      }
     },
     {
       "id": "fsm_medium_04",
@@ -100,7 +650,497 @@
       "prompt": "Real RTL still needs encoding and a defined reset state.",
       "answer": true,
       "explain": "Starter is Moore toggle; do not mix styles casually.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_medium_04.mp4",
+        "poster": "media/images/fsm_medium_04-frame.png",
+        "figure": "media/images/fsm_medium_04.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In FSM designer, minimum bits to encode 2 states (binary) is…",
+      "choices": [
+        "2",
+        "1",
+        "4",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(2)) = 1.",
+      "difficulty": "medium",
+      "id": "fsm_medium_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_medium_05.mp4",
+        "poster": "media/images/fsm_medium_05-frame.png",
+        "figure": "media/images/fsm_medium_05.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In FSM designer, one-hot encoding of 2 states uses how many FFs?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "medium",
+      "id": "fsm_medium_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_medium_06.mp4",
+        "poster": "media/images/fsm_medium_06-frame.png",
+        "figure": "media/images/fsm_medium_06.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In FSM designer, minimum bits to encode 3 states (binary) is…",
+      "choices": [
+        "3",
+        "2",
+        "8",
+        "2"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(3)) = 2.",
+      "difficulty": "medium",
+      "id": "fsm_medium_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_medium_07.mp4",
+        "poster": "media/images/fsm_medium_07-frame.png",
+        "figure": "media/images/fsm_medium_07.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In FSM designer, one-hot encoding of 3 states uses how many FFs?",
+      "choices": [
+        "2",
+        "3",
+        "6",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "medium",
+      "id": "fsm_medium_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_medium_08.mp4",
+        "poster": "media/images/fsm_medium_08-frame.png",
+        "figure": "media/images/fsm_medium_08.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In FSM designer, minimum bits to encode 4 states (binary) is…",
+      "choices": [
+        "4",
+        "2",
+        "16",
+        "3"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(4)) = 2.",
+      "difficulty": "medium",
+      "id": "fsm_medium_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_medium_09.mp4",
+        "poster": "media/images/fsm_medium_09-frame.png",
+        "figure": "media/images/fsm_medium_09.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In FSM designer, one-hot encoding of 4 states uses how many FFs?",
+      "choices": [
+        "2",
+        "4",
+        "8",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "medium",
+      "id": "fsm_medium_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_medium_10.mp4",
+        "poster": "media/images/fsm_medium_10-frame.png",
+        "figure": "media/images/fsm_medium_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In FSM designer, minimum bits to encode 5 states (binary) is…",
+      "choices": [
+        "5",
+        "3",
+        "32",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(5)) = 3.",
+      "difficulty": "medium",
+      "id": "fsm_medium_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_medium_11.mp4",
+        "poster": "media/images/fsm_medium_11-frame.png",
+        "figure": "media/images/fsm_medium_11.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In FSM designer, one-hot encoding of 5 states uses how many FFs?",
+      "choices": [
+        "3",
+        "5",
+        "10",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "medium",
+      "id": "fsm_medium_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_medium_12.mp4",
+        "poster": "media/images/fsm_medium_12-frame.png",
+        "figure": "media/images/fsm_medium_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FSM designer: Minimum bits to encode 6 states (binary) is…",
+      "choices": [
+        "6",
+        "3",
+        "64",
+        "5"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(6)) = 3.",
+      "difficulty": "medium",
+      "id": "fsm_medium_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_medium_13.mp4",
+        "poster": "media/images/fsm_medium_13-frame.png",
+        "figure": "media/images/fsm_medium_13.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FSM designer: One-hot encoding of 6 states uses how many FFs?",
+      "choices": [
+        "3",
+        "6",
+        "12",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "medium",
+      "id": "fsm_medium_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_medium_14.mp4",
+        "poster": "media/images/fsm_medium_14-frame.png",
+        "figure": "media/images/fsm_medium_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FSM designer: Minimum bits to encode 7 states (binary) is…",
+      "choices": [
+        "7",
+        "3",
+        "128",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(7)) = 3.",
+      "difficulty": "medium",
+      "id": "fsm_medium_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_medium_15.mp4",
+        "poster": "media/images/fsm_medium_15-frame.png",
+        "figure": "media/images/fsm_medium_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FSM designer: One-hot encoding of 7 states uses how many FFs?",
+      "choices": [
+        "3",
+        "7",
+        "14",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "medium",
+      "id": "fsm_medium_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_medium_16.mp4",
+        "poster": "media/images/fsm_medium_16-frame.png",
+        "figure": "media/images/fsm_medium_16.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FSM designer: Minimum bits to encode 8 states (binary) is…",
+      "choices": [
+        "8",
+        "3",
+        "256",
+        "7"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(8)) = 3.",
+      "difficulty": "medium",
+      "id": "fsm_medium_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_medium_17.mp4",
+        "poster": "media/images/fsm_medium_17-frame.png",
+        "figure": "media/images/fsm_medium_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FSM designer: One-hot encoding of 8 states uses how many FFs?",
+      "choices": [
+        "3",
+        "8",
+        "16",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "medium",
+      "id": "fsm_medium_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_medium_18.mp4",
+        "poster": "media/images/fsm_medium_18-frame.png",
+        "figure": "media/images/fsm_medium_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FSM designer: Minimum bits to encode 9 states (binary) is…",
+      "choices": [
+        "9",
+        "4",
+        "512",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(9)) = 4.",
+      "difficulty": "medium",
+      "id": "fsm_medium_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_medium_19.mp4",
+        "poster": "media/images/fsm_medium_19-frame.png",
+        "figure": "media/images/fsm_medium_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FSM designer: One-hot encoding of 9 states uses how many FFs?",
+      "choices": [
+        "4",
+        "9",
+        "18",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "medium",
+      "id": "fsm_medium_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_medium_20.mp4",
+        "poster": "media/images/fsm_medium_20-frame.png",
+        "figure": "media/images/fsm_medium_20.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "FSM designer: One-hot often simplifies next-state logic at the cost of more FFs.",
+      "answer": true,
+      "explain": "Common FPGA style.",
+      "difficulty": "medium",
+      "id": "fsm_medium_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_medium_21.mp4",
+        "poster": "media/images/fsm_medium_21-frame.png",
+        "figure": "media/images/fsm_medium_21.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "FSM designer: Illegal one-hot codes should be handled safely.",
+      "answer": true,
+      "explain": "Avoid lockup.",
+      "difficulty": "medium",
+      "id": "fsm_medium_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_medium_22.mp4",
+        "poster": "media/images/fsm_medium_22-frame.png",
+        "figure": "media/images/fsm_medium_22.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "FSM designer: Setup time is a requirement before the active clock edge.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "fsm_medium_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_medium_23.mp4",
+        "poster": "media/images/fsm_medium_23-frame.png",
+        "figure": "media/images/fsm_medium_23.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FSM designer: Setup time is a requirement before the active clock edge?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "fsm_medium_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_medium_24.mp4",
+        "poster": "media/images/fsm_medium_24-frame.png",
+        "figure": "media/images/fsm_medium_24.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "FSM designer: Hold time is a requirement after the active clock edge.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "fsm_medium_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_medium_25.mp4",
+        "poster": "media/images/fsm_medium_25-frame.png",
+        "figure": "media/images/fsm_medium_25.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FSM designer: Hold time is a requirement after the active clock edge?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "fsm_medium_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_medium_26.mp4",
+        "poster": "media/images/fsm_medium_26-frame.png",
+        "figure": "media/images/fsm_medium_26.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "FSM designer: Contamination delay is a min path delay from clk to Q.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "fsm_medium_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_medium_27.mp4",
+        "poster": "media/images/fsm_medium_27-frame.png",
+        "figure": "media/images/fsm_medium_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FSM designer: Contamination delay is a min path delay from clk to Q?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "fsm_medium_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_medium_28.mp4",
+        "poster": "media/images/fsm_medium_28-frame.png",
+        "figure": "media/images/fsm_medium_28.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "FSM designer: Clock-to-Q max is used in setup checks.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "fsm_medium_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_medium_29.mp4",
+        "poster": "media/images/fsm_medium_29-frame.png",
+        "figure": "media/images/fsm_medium_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FSM designer: Clock-to-Q max is used in setup checks?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "fsm_medium_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_medium_30.mp4",
+        "poster": "media/images/fsm_medium_30-frame.png",
+        "figure": "media/images/fsm_medium_30.png"
+      }
     },
     {
       "id": "fsm_hard_01",
@@ -114,7 +1154,13 @@
       ],
       "answer": 0,
       "explain": "Input-driven state sequencing.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_hard_01.mp4",
+        "poster": "media/images/fsm_hard_01-frame.png",
+        "figure": "media/images/fsm_hard_01.png"
+      }
     },
     {
       "id": "fsm_hard_02",
@@ -128,7 +1174,13 @@
       ],
       "answer": 0,
       "explain": "Mealy can change with input mid-state; Moore waits for state.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_hard_02.mp4",
+        "poster": "media/images/fsm_hard_02-frame.png",
+        "figure": "media/images/fsm_hard_02.png"
+      }
     },
     {
       "id": "fsm_hard_03",
@@ -142,7 +1194,13 @@
       ],
       "answer": 0,
       "explain": "Encode, reset, and register the state.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_hard_03.mp4",
+        "poster": "media/images/fsm_hard_03-frame.png",
+        "figure": "media/images/fsm_hard_03.png"
+      }
     },
     {
       "id": "fsm_hard_04",
@@ -150,667 +1208,17 @@
       "prompt": "Leaving a state with no outgoing arcs is a design smell.",
       "answer": true,
       "explain": "Discrete steps ≈ cycles; cover transitions.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_hard_04.mp4",
+        "poster": "media/images/fsm_hard_04-frame.png",
+        "figure": "media/images/fsm_hard_04.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 2 states (binary) is…",
-      "choices": [
-        "2",
-        "1",
-        "4",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(2)) = 1.",
-      "difficulty": "easy",
-      "id": "fsm_easy_05"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 2 states uses how many FFs?",
-      "choices": [
-        "1",
-        "2",
-        "4",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "easy",
-      "id": "fsm_easy_06"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 3 states (binary) is…",
-      "choices": [
-        "3",
-        "2",
-        "8",
-        "2"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(3)) = 2.",
-      "difficulty": "easy",
-      "id": "fsm_easy_07"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 3 states uses how many FFs?",
-      "choices": [
-        "2",
-        "3",
-        "6",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "easy",
-      "id": "fsm_easy_08"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 4 states (binary) is…",
-      "choices": [
-        "4",
-        "2",
-        "16",
-        "3"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(4)) = 2.",
-      "difficulty": "easy",
-      "id": "fsm_easy_09"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 4 states uses how many FFs?",
-      "choices": [
-        "2",
-        "4",
-        "8",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "easy",
-      "id": "fsm_easy_10"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 5 states (binary) is…",
-      "choices": [
-        "5",
-        "3",
-        "32",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(5)) = 3.",
-      "difficulty": "easy",
-      "id": "fsm_easy_11"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 5 states uses how many FFs?",
-      "choices": [
-        "3",
-        "5",
-        "10",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "easy",
-      "id": "fsm_easy_12"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 6 states (binary) is…",
-      "choices": [
-        "6",
-        "3",
-        "64",
-        "5"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(6)) = 3.",
-      "difficulty": "easy",
-      "id": "fsm_easy_13"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 6 states uses how many FFs?",
-      "choices": [
-        "3",
-        "6",
-        "12",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "easy",
-      "id": "fsm_easy_14"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 7 states (binary) is…",
-      "choices": [
-        "7",
-        "3",
-        "128",
-        "6"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(7)) = 3.",
-      "difficulty": "easy",
-      "id": "fsm_easy_15"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 7 states uses how many FFs?",
-      "choices": [
-        "3",
-        "7",
-        "14",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "easy",
-      "id": "fsm_easy_16"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 8 states (binary) is…",
-      "choices": [
-        "8",
-        "3",
-        "256",
-        "7"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(8)) = 3.",
-      "difficulty": "easy",
-      "id": "fsm_easy_17"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 8 states uses how many FFs?",
-      "choices": [
-        "3",
-        "8",
-        "16",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "easy",
-      "id": "fsm_easy_18"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 9 states (binary) is…",
-      "choices": [
-        "9",
-        "4",
-        "512",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(9)) = 4.",
-      "difficulty": "easy",
-      "id": "fsm_easy_19"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 9 states uses how many FFs?",
-      "choices": [
-        "4",
-        "9",
-        "18",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "easy",
-      "id": "fsm_easy_20"
-    },
-    {
-      "type": "true_false",
-      "prompt": "One-hot often simplifies next-state logic at the cost of more FFs.",
-      "answer": true,
-      "explain": "Common FPGA style.",
-      "difficulty": "easy",
-      "id": "fsm_easy_21"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Illegal one-hot codes should be handled safely.",
-      "answer": true,
-      "explain": "Avoid lockup.",
-      "difficulty": "easy",
-      "id": "fsm_easy_22"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Setup time is a requirement before the active clock edge.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "easy",
-      "id": "fsm_easy_23"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Setup time is a requirement before the active clock edge?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "easy",
-      "id": "fsm_easy_24"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Hold time is a requirement after the active clock edge.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "easy",
-      "id": "fsm_easy_25"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Hold time is a requirement after the active clock edge?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "easy",
-      "id": "fsm_easy_26"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Contamination delay is a min path delay from clk to Q.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "easy",
-      "id": "fsm_easy_27"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Contamination delay is a min path delay from clk to Q?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "easy",
-      "id": "fsm_easy_28"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Clock-to-Q max is used in setup checks.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "easy",
-      "id": "fsm_easy_29"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Clock-to-Q max is used in setup checks?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "easy",
-      "id": "fsm_easy_30"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 2 states (binary) is…",
-      "choices": [
-        "2",
-        "1",
-        "4",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(2)) = 1.",
-      "difficulty": "medium",
-      "id": "fsm_medium_05"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 2 states uses how many FFs?",
-      "choices": [
-        "1",
-        "2",
-        "4",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "medium",
-      "id": "fsm_medium_06"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 3 states (binary) is…",
-      "choices": [
-        "3",
-        "2",
-        "8",
-        "2"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(3)) = 2.",
-      "difficulty": "medium",
-      "id": "fsm_medium_07"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 3 states uses how many FFs?",
-      "choices": [
-        "2",
-        "3",
-        "6",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "medium",
-      "id": "fsm_medium_08"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 4 states (binary) is…",
-      "choices": [
-        "4",
-        "2",
-        "16",
-        "3"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(4)) = 2.",
-      "difficulty": "medium",
-      "id": "fsm_medium_09"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 4 states uses how many FFs?",
-      "choices": [
-        "2",
-        "4",
-        "8",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "medium",
-      "id": "fsm_medium_10"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 5 states (binary) is…",
-      "choices": [
-        "5",
-        "3",
-        "32",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(5)) = 3.",
-      "difficulty": "medium",
-      "id": "fsm_medium_11"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 5 states uses how many FFs?",
-      "choices": [
-        "3",
-        "5",
-        "10",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "medium",
-      "id": "fsm_medium_12"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 6 states (binary) is…",
-      "choices": [
-        "6",
-        "3",
-        "64",
-        "5"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(6)) = 3.",
-      "difficulty": "medium",
-      "id": "fsm_medium_13"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 6 states uses how many FFs?",
-      "choices": [
-        "3",
-        "6",
-        "12",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "medium",
-      "id": "fsm_medium_14"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 7 states (binary) is…",
-      "choices": [
-        "7",
-        "3",
-        "128",
-        "6"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(7)) = 3.",
-      "difficulty": "medium",
-      "id": "fsm_medium_15"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 7 states uses how many FFs?",
-      "choices": [
-        "3",
-        "7",
-        "14",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "medium",
-      "id": "fsm_medium_16"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 8 states (binary) is…",
-      "choices": [
-        "8",
-        "3",
-        "256",
-        "7"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(8)) = 3.",
-      "difficulty": "medium",
-      "id": "fsm_medium_17"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 8 states uses how many FFs?",
-      "choices": [
-        "3",
-        "8",
-        "16",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "medium",
-      "id": "fsm_medium_18"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 9 states (binary) is…",
-      "choices": [
-        "9",
-        "4",
-        "512",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(9)) = 4.",
-      "difficulty": "medium",
-      "id": "fsm_medium_19"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 9 states uses how many FFs?",
-      "choices": [
-        "4",
-        "9",
-        "18",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "medium",
-      "id": "fsm_medium_20"
-    },
-    {
-      "type": "true_false",
-      "prompt": "One-hot often simplifies next-state logic at the cost of more FFs.",
-      "answer": true,
-      "explain": "Common FPGA style.",
-      "difficulty": "medium",
-      "id": "fsm_medium_21"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Illegal one-hot codes should be handled safely.",
-      "answer": true,
-      "explain": "Avoid lockup.",
-      "difficulty": "medium",
-      "id": "fsm_medium_22"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Setup time is a requirement before the active clock edge.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "medium",
-      "id": "fsm_medium_23"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Setup time is a requirement before the active clock edge?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "medium",
-      "id": "fsm_medium_24"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Hold time is a requirement after the active clock edge.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "medium",
-      "id": "fsm_medium_25"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Hold time is a requirement after the active clock edge?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "medium",
-      "id": "fsm_medium_26"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Contamination delay is a min path delay from clk to Q.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "medium",
-      "id": "fsm_medium_27"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Contamination delay is a min path delay from clk to Q?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "medium",
-      "id": "fsm_medium_28"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Clock-to-Q max is used in setup checks.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "medium",
-      "id": "fsm_medium_29"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Clock-to-Q max is used in setup checks?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "medium",
-      "id": "fsm_medium_30"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 2 states (binary) is…",
+      "prompt": "For the FSM designer lab: Minimum bits to encode 2 states (binary) is…",
       "choices": [
         "2",
         "1",
@@ -820,11 +1228,17 @@
       "answer": 1,
       "explain": "ceil(log2(2)) = 1.",
       "difficulty": "hard",
-      "id": "fsm_hard_05"
+      "id": "fsm_hard_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_hard_05.mp4",
+        "poster": "media/images/fsm_hard_05-frame.png",
+        "figure": "media/images/fsm_hard_05.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "One-hot encoding of 2 states uses how many FFs?",
+      "prompt": "For the FSM designer lab: One-hot encoding of 2 states uses how many FFs?",
       "choices": [
         "1",
         "2",
@@ -834,11 +1248,17 @@
       "answer": 1,
       "explain": "One FF per state.",
       "difficulty": "hard",
-      "id": "fsm_hard_06"
+      "id": "fsm_hard_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_hard_06.mp4",
+        "poster": "media/images/fsm_hard_06-frame.png",
+        "figure": "media/images/fsm_hard_06.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 3 states (binary) is…",
+      "prompt": "For the FSM designer lab: Minimum bits to encode 3 states (binary) is…",
       "choices": [
         "3",
         "2",
@@ -848,11 +1268,17 @@
       "answer": 1,
       "explain": "ceil(log2(3)) = 2.",
       "difficulty": "hard",
-      "id": "fsm_hard_07"
+      "id": "fsm_hard_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_hard_07.mp4",
+        "poster": "media/images/fsm_hard_07-frame.png",
+        "figure": "media/images/fsm_hard_07.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "One-hot encoding of 3 states uses how many FFs?",
+      "prompt": "For the FSM designer lab: One-hot encoding of 3 states uses how many FFs?",
       "choices": [
         "2",
         "3",
@@ -862,11 +1288,17 @@
       "answer": 1,
       "explain": "One FF per state.",
       "difficulty": "hard",
-      "id": "fsm_hard_08"
+      "id": "fsm_hard_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_hard_08.mp4",
+        "poster": "media/images/fsm_hard_08-frame.png",
+        "figure": "media/images/fsm_hard_08.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 4 states (binary) is…",
+      "prompt": "For the FSM designer lab: Minimum bits to encode 4 states (binary) is…",
       "choices": [
         "4",
         "2",
@@ -876,11 +1308,17 @@
       "answer": 1,
       "explain": "ceil(log2(4)) = 2.",
       "difficulty": "hard",
-      "id": "fsm_hard_09"
+      "id": "fsm_hard_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_hard_09.mp4",
+        "poster": "media/images/fsm_hard_09-frame.png",
+        "figure": "media/images/fsm_hard_09.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "One-hot encoding of 4 states uses how many FFs?",
+      "prompt": "For the FSM designer lab: One-hot encoding of 4 states uses how many FFs?",
       "choices": [
         "2",
         "4",
@@ -890,11 +1328,17 @@
       "answer": 1,
       "explain": "One FF per state.",
       "difficulty": "hard",
-      "id": "fsm_hard_10"
+      "id": "fsm_hard_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_hard_10.mp4",
+        "poster": "media/images/fsm_hard_10-frame.png",
+        "figure": "media/images/fsm_hard_10.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 5 states (binary) is…",
+      "prompt": "For the FSM designer lab: Minimum bits to encode 5 states (binary) is…",
       "choices": [
         "5",
         "3",
@@ -904,11 +1348,17 @@
       "answer": 1,
       "explain": "ceil(log2(5)) = 3.",
       "difficulty": "hard",
-      "id": "fsm_hard_11"
+      "id": "fsm_hard_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_hard_11.mp4",
+        "poster": "media/images/fsm_hard_11-frame.png",
+        "figure": "media/images/fsm_hard_11.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "One-hot encoding of 5 states uses how many FFs?",
+      "prompt": "For the FSM designer lab: One-hot encoding of 5 states uses how many FFs?",
       "choices": [
         "3",
         "5",
@@ -918,11 +1368,17 @@
       "answer": 1,
       "explain": "One FF per state.",
       "difficulty": "hard",
-      "id": "fsm_hard_12"
+      "id": "fsm_hard_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_hard_12.mp4",
+        "poster": "media/images/fsm_hard_12-frame.png",
+        "figure": "media/images/fsm_hard_12.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 6 states (binary) is…",
+      "prompt": "In FSM designer, minimum bits to encode 6 states (binary) is…",
       "choices": [
         "6",
         "3",
@@ -932,11 +1388,17 @@
       "answer": 1,
       "explain": "ceil(log2(6)) = 3.",
       "difficulty": "hard",
-      "id": "fsm_hard_13"
+      "id": "fsm_hard_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_hard_13.mp4",
+        "poster": "media/images/fsm_hard_13-frame.png",
+        "figure": "media/images/fsm_hard_13.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "One-hot encoding of 6 states uses how many FFs?",
+      "prompt": "In FSM designer, one-hot encoding of 6 states uses how many FFs?",
       "choices": [
         "3",
         "6",
@@ -946,11 +1408,17 @@
       "answer": 1,
       "explain": "One FF per state.",
       "difficulty": "hard",
-      "id": "fsm_hard_14"
+      "id": "fsm_hard_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_hard_14.mp4",
+        "poster": "media/images/fsm_hard_14-frame.png",
+        "figure": "media/images/fsm_hard_14.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 7 states (binary) is…",
+      "prompt": "In FSM designer, minimum bits to encode 7 states (binary) is…",
       "choices": [
         "7",
         "3",
@@ -960,11 +1428,17 @@
       "answer": 1,
       "explain": "ceil(log2(7)) = 3.",
       "difficulty": "hard",
-      "id": "fsm_hard_15"
+      "id": "fsm_hard_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_hard_15.mp4",
+        "poster": "media/images/fsm_hard_15-frame.png",
+        "figure": "media/images/fsm_hard_15.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "One-hot encoding of 7 states uses how many FFs?",
+      "prompt": "In FSM designer, one-hot encoding of 7 states uses how many FFs?",
       "choices": [
         "3",
         "7",
@@ -974,11 +1448,17 @@
       "answer": 1,
       "explain": "One FF per state.",
       "difficulty": "hard",
-      "id": "fsm_hard_16"
+      "id": "fsm_hard_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_hard_16.mp4",
+        "poster": "media/images/fsm_hard_16-frame.png",
+        "figure": "media/images/fsm_hard_16.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 8 states (binary) is…",
+      "prompt": "In FSM designer, minimum bits to encode 8 states (binary) is…",
       "choices": [
         "8",
         "3",
@@ -988,11 +1468,17 @@
       "answer": 1,
       "explain": "ceil(log2(8)) = 3.",
       "difficulty": "hard",
-      "id": "fsm_hard_17"
+      "id": "fsm_hard_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_hard_17.mp4",
+        "poster": "media/images/fsm_hard_17-frame.png",
+        "figure": "media/images/fsm_hard_17.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "One-hot encoding of 8 states uses how many FFs?",
+      "prompt": "In FSM designer, one-hot encoding of 8 states uses how many FFs?",
       "choices": [
         "3",
         "8",
@@ -1002,11 +1488,17 @@
       "answer": 1,
       "explain": "One FF per state.",
       "difficulty": "hard",
-      "id": "fsm_hard_18"
+      "id": "fsm_hard_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_hard_18.mp4",
+        "poster": "media/images/fsm_hard_18-frame.png",
+        "figure": "media/images/fsm_hard_18.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 9 states (binary) is…",
+      "prompt": "In FSM designer, minimum bits to encode 9 states (binary) is…",
       "choices": [
         "9",
         "4",
@@ -1016,11 +1508,17 @@
       "answer": 1,
       "explain": "ceil(log2(9)) = 4.",
       "difficulty": "hard",
-      "id": "fsm_hard_19"
+      "id": "fsm_hard_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_hard_19.mp4",
+        "poster": "media/images/fsm_hard_19-frame.png",
+        "figure": "media/images/fsm_hard_19.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "One-hot encoding of 9 states uses how many FFs?",
+      "prompt": "In FSM designer, one-hot encoding of 9 states uses how many FFs?",
       "choices": [
         "4",
         "9",
@@ -1030,35 +1528,59 @@
       "answer": 1,
       "explain": "One FF per state.",
       "difficulty": "hard",
-      "id": "fsm_hard_20"
+      "id": "fsm_hard_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_hard_20.mp4",
+        "poster": "media/images/fsm_hard_20-frame.png",
+        "figure": "media/images/fsm_hard_20.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "One-hot often simplifies next-state logic at the cost of more FFs.",
+      "prompt": "In FSM designer, one-hot often simplifies next-state logic at the cost of more FFs.",
       "answer": true,
       "explain": "Common FPGA style.",
       "difficulty": "hard",
-      "id": "fsm_hard_21"
+      "id": "fsm_hard_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_hard_21.mp4",
+        "poster": "media/images/fsm_hard_21-frame.png",
+        "figure": "media/images/fsm_hard_21.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Illegal one-hot codes should be handled safely.",
+      "prompt": "In FSM designer, illegal one-hot codes should be handled safely.",
       "answer": true,
       "explain": "Avoid lockup.",
       "difficulty": "hard",
-      "id": "fsm_hard_22"
+      "id": "fsm_hard_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_hard_22.mp4",
+        "poster": "media/images/fsm_hard_22-frame.png",
+        "figure": "media/images/fsm_hard_22.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Setup time is a requirement before the active clock edge.",
+      "prompt": "In FSM designer, setup time is a requirement before the active clock edge.",
       "answer": true,
       "explain": "Standard sequential timing fact.",
       "difficulty": "hard",
-      "id": "fsm_hard_23"
+      "id": "fsm_hard_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_hard_23.mp4",
+        "poster": "media/images/fsm_hard_23-frame.png",
+        "figure": "media/images/fsm_hard_23.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Setup time is a requirement before the active clock edge?",
+      "prompt": "In FSM designer, setup time is a requirement before the active clock edge?",
       "choices": [
         "True",
         "False",
@@ -1068,19 +1590,31 @@
       "answer": 0,
       "explain": "See sequential timing notes.",
       "difficulty": "hard",
-      "id": "fsm_hard_24"
+      "id": "fsm_hard_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_hard_24.mp4",
+        "poster": "media/images/fsm_hard_24-frame.png",
+        "figure": "media/images/fsm_hard_24.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Hold time is a requirement after the active clock edge.",
+      "prompt": "In FSM designer, hold time is a requirement after the active clock edge.",
       "answer": true,
       "explain": "Standard sequential timing fact.",
       "difficulty": "hard",
-      "id": "fsm_hard_25"
+      "id": "fsm_hard_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_hard_25.mp4",
+        "poster": "media/images/fsm_hard_25-frame.png",
+        "figure": "media/images/fsm_hard_25.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Hold time is a requirement after the active clock edge?",
+      "prompt": "In FSM designer, hold time is a requirement after the active clock edge?",
       "choices": [
         "True",
         "False",
@@ -1090,19 +1624,31 @@
       "answer": 0,
       "explain": "See sequential timing notes.",
       "difficulty": "hard",
-      "id": "fsm_hard_26"
+      "id": "fsm_hard_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_hard_26.mp4",
+        "poster": "media/images/fsm_hard_26-frame.png",
+        "figure": "media/images/fsm_hard_26.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Contamination delay is a min path delay from clk to Q.",
+      "prompt": "In FSM designer, contamination delay is a min path delay from clk to Q.",
       "answer": true,
       "explain": "Standard sequential timing fact.",
       "difficulty": "hard",
-      "id": "fsm_hard_27"
+      "id": "fsm_hard_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_hard_27.mp4",
+        "poster": "media/images/fsm_hard_27-frame.png",
+        "figure": "media/images/fsm_hard_27.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Contamination delay is a min path delay from clk to Q?",
+      "prompt": "In FSM designer, contamination delay is a min path delay from clk to Q?",
       "choices": [
         "True",
         "False",
@@ -1112,19 +1658,31 @@
       "answer": 0,
       "explain": "See sequential timing notes.",
       "difficulty": "hard",
-      "id": "fsm_hard_28"
+      "id": "fsm_hard_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_hard_28.mp4",
+        "poster": "media/images/fsm_hard_28-frame.png",
+        "figure": "media/images/fsm_hard_28.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Clock-to-Q max is used in setup checks.",
+      "prompt": "In FSM designer, clock-to-Q max is used in setup checks.",
       "answer": true,
       "explain": "Standard sequential timing fact.",
       "difficulty": "hard",
-      "id": "fsm_hard_29"
+      "id": "fsm_hard_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_hard_29.mp4",
+        "poster": "media/images/fsm_hard_29-frame.png",
+        "figure": "media/images/fsm_hard_29.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Clock-to-Q max is used in setup checks?",
+      "prompt": "In FSM designer, clock-to-Q max is used in setup checks?",
       "choices": [
         "True",
         "False",
@@ -1134,7 +1692,13 @@
       "answer": 0,
       "explain": "See sequential timing notes.",
       "difficulty": "hard",
-      "id": "fsm_hard_30"
+      "id": "fsm_hard_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fsm_hard_30.mp4",
+        "poster": "media/images/fsm_hard_30-frame.png",
+        "figure": "media/images/fsm_hard_30.png"
+      }
     }
   ]
 }

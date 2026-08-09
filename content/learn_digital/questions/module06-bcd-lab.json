@@ -14,7 +14,13 @@
       ],
       "answer": 1,
       "explain": "Each digit is a 4-bit nibble.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_easy_01.mp4",
+        "poster": "media/images/bcd_easy_01-frame.png",
+        "figure": "media/images/bcd_easy_01.png"
+      }
     },
     {
       "id": "bcd_easy_02",
@@ -28,7 +34,13 @@
       ],
       "answer": 1,
       "explain": "Digits are 0–9; A–F are invalid.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_easy_02.mp4",
+        "poster": "media/images/bcd_easy_02-frame.png",
+        "figure": "media/images/bcd_easy_02.png"
+      }
     },
     {
       "id": "bcd_easy_03",
@@ -42,7 +54,13 @@
       ],
       "answer": 1,
       "explain": "0x42 is BCD; binary 42 is 0x2A.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_easy_03.mp4",
+        "poster": "media/images/bcd_easy_03-frame.png",
+        "figure": "media/images/bcd_easy_03.png"
+      }
     },
     {
       "id": "bcd_easy_04",
@@ -50,7 +68,491 @@
       "prompt": "0xF is acceptable in packed BCD as digit fifteen.",
       "answer": false,
       "explain": "0xA–0xF are not decimal digits in BCD.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_easy_04.mp4",
+        "poster": "media/images/bcd_easy_04-frame.png",
+        "figure": "media/images/bcd_easy_04.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Packed BCD for decimal 15 is…",
+      "choices": [
+        "0x0F",
+        "0x15",
+        "0x51",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "Each decimal digit → nibble → 0x15.",
+      "difficulty": "easy",
+      "id": "bcd_easy_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_easy_05.mp4",
+        "poster": "media/images/bcd_easy_05-frame.png",
+        "figure": "media/images/bcd_easy_05.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Packed BCD for decimal 25 is…",
+      "choices": [
+        "0x19",
+        "0x25",
+        "0x52",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "Each decimal digit → nibble → 0x25.",
+      "difficulty": "easy",
+      "id": "bcd_easy_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_easy_06.mp4",
+        "poster": "media/images/bcd_easy_06-frame.png",
+        "figure": "media/images/bcd_easy_06.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Packed BCD for decimal 42 is…",
+      "choices": [
+        "0x2A",
+        "0x42",
+        "0x24",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "Each decimal digit → nibble → 0x42.",
+      "difficulty": "easy",
+      "id": "bcd_easy_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_easy_07.mp4",
+        "poster": "media/images/bcd_easy_07-frame.png",
+        "figure": "media/images/bcd_easy_07.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Packed BCD for decimal 99 is…",
+      "choices": [
+        "0x63",
+        "0x99",
+        "0x99",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "Each decimal digit → nibble → 0x99.",
+      "difficulty": "easy",
+      "id": "bcd_easy_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_easy_08.mp4",
+        "poster": "media/images/bcd_easy_08-frame.png",
+        "figure": "media/images/bcd_easy_08.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Packed BCD for decimal 07 is…",
+      "choices": [
+        "0x07",
+        "0x07",
+        "0x70",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "Each decimal digit → nibble → 0x07.",
+      "difficulty": "easy",
+      "id": "bcd_easy_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_easy_09.mp4",
+        "poster": "media/images/bcd_easy_09-frame.png",
+        "figure": "media/images/bcd_easy_09.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Packed BCD for decimal 30 is…",
+      "choices": [
+        "0x1E",
+        "0x30",
+        "0x03",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "Each decimal digit → nibble → 0x30.",
+      "difficulty": "easy",
+      "id": "bcd_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_easy_10.mp4",
+        "poster": "media/images/bcd_easy_10-frame.png",
+        "figure": "media/images/bcd_easy_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Packed BCD for decimal 88 is…",
+      "choices": [
+        "0x58",
+        "0x88",
+        "0x88",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "Each decimal digit → nibble → 0x88.",
+      "difficulty": "easy",
+      "id": "bcd_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_easy_11.mp4",
+        "poster": "media/images/bcd_easy_11-frame.png",
+        "figure": "media/images/bcd_easy_11.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Packed BCD for decimal 64 is…",
+      "choices": [
+        "0x40",
+        "0x64",
+        "0x46",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "Each decimal digit → nibble → 0x64.",
+      "difficulty": "easy",
+      "id": "bcd_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_easy_12.mp4",
+        "poster": "media/images/bcd_easy_12-frame.png",
+        "figure": "media/images/bcd_easy_12.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Byte 0x0A is valid packed BCD.",
+      "answer": false,
+      "explain": "BCD nibbles must be 0–9.",
+      "difficulty": "easy",
+      "id": "bcd_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_easy_13.mp4",
+        "poster": "media/images/bcd_easy_13-frame.png",
+        "figure": "media/images/bcd_easy_13.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Byte 0x1B is valid packed BCD.",
+      "answer": false,
+      "explain": "BCD nibbles must be 0–9.",
+      "difficulty": "easy",
+      "id": "bcd_easy_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_easy_14.mp4",
+        "poster": "media/images/bcd_easy_14-frame.png",
+        "figure": "media/images/bcd_easy_14.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Byte 0x2C is valid packed BCD.",
+      "answer": false,
+      "explain": "BCD nibbles must be 0–9.",
+      "difficulty": "easy",
+      "id": "bcd_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_easy_15.mp4",
+        "poster": "media/images/bcd_easy_15-frame.png",
+        "figure": "media/images/bcd_easy_15.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Byte 0x3D is valid packed BCD.",
+      "answer": false,
+      "explain": "BCD nibbles must be 0–9.",
+      "difficulty": "easy",
+      "id": "bcd_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_easy_16.mp4",
+        "poster": "media/images/bcd_easy_16-frame.png",
+        "figure": "media/images/bcd_easy_16.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Byte 0x4E is valid packed BCD.",
+      "answer": false,
+      "explain": "BCD nibbles must be 0–9.",
+      "difficulty": "easy",
+      "id": "bcd_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_easy_17.mp4",
+        "poster": "media/images/bcd_easy_17-frame.png",
+        "figure": "media/images/bcd_easy_17.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Byte 0x5F is valid packed BCD.",
+      "answer": false,
+      "explain": "BCD nibbles must be 0–9.",
+      "difficulty": "easy",
+      "id": "bcd_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_easy_18.mp4",
+        "poster": "media/images/bcd_easy_18-frame.png",
+        "figure": "media/images/bcd_easy_18.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Byte 0x9A is valid packed BCD.",
+      "answer": false,
+      "explain": "BCD nibbles must be 0–9.",
+      "difficulty": "easy",
+      "id": "bcd_easy_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_easy_19.mp4",
+        "poster": "media/images/bcd_easy_19-frame.png",
+        "figure": "media/images/bcd_easy_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hex digit 3 equals which decimal value?",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "3₁₆ = 3₁₀.",
+      "difficulty": "easy",
+      "id": "bcd_easy_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_easy_26.mp4",
+        "poster": "media/images/bcd_easy_26-frame.png",
+        "figure": "media/images/bcd_easy_26.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Decimal 3 as one hex digit is…",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "3₁₀ = 3₁₆.",
+      "difficulty": "easy",
+      "id": "bcd_easy_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_easy_27.mp4",
+        "poster": "media/images/bcd_easy_27-frame.png",
+        "figure": "media/images/bcd_easy_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hex digit 4 equals which decimal value?",
+      "choices": [
+        "3",
+        "4",
+        "5",
+        "9"
+      ],
+      "answer": 1,
+      "explain": "4₁₆ = 4₁₀.",
+      "difficulty": "easy",
+      "id": "bcd_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_easy_28.mp4",
+        "poster": "media/images/bcd_easy_28-frame.png",
+        "figure": "media/images/bcd_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Decimal 4 as one hex digit is…",
+      "choices": [
+        "3",
+        "4",
+        "5",
+        "9"
+      ],
+      "answer": 1,
+      "explain": "4₁₀ = 4₁₆.",
+      "difficulty": "easy",
+      "id": "bcd_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_easy_29.mp4",
+        "poster": "media/images/bcd_easy_29-frame.png",
+        "figure": "media/images/bcd_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Hex digit 5 equals which decimal value?",
+      "choices": [
+        "4",
+        "5",
+        "6",
+        "10"
+      ],
+      "answer": 1,
+      "explain": "5₁₆ = 5₁₀.",
+      "difficulty": "easy",
+      "id": "bcd_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_easy_30.mp4",
+        "poster": "media/images/bcd_easy_30-frame.png",
+        "figure": "media/images/bcd_easy_30.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "BCD: Packed BCD for decimal 15 is…",
+      "choices": [
+        "0x0F",
+        "0x15",
+        "0x51",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "Each decimal digit → nibble → 0x15.",
+      "difficulty": "easy",
+      "id": "bcd_easy_31",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_easy_31.mp4",
+        "poster": "media/images/bcd_easy_31-frame.png",
+        "figure": "media/images/bcd_easy_31.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "BCD: Packed BCD for decimal 25 is…",
+      "choices": [
+        "0x19",
+        "0x25",
+        "0x52",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "Each decimal digit → nibble → 0x25.",
+      "difficulty": "easy",
+      "id": "bcd_easy_32",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_easy_32.mp4",
+        "poster": "media/images/bcd_easy_32-frame.png",
+        "figure": "media/images/bcd_easy_32.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "BCD: Packed BCD for decimal 42 is…",
+      "choices": [
+        "0x2A",
+        "0x42",
+        "0x24",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "Each decimal digit → nibble → 0x42.",
+      "difficulty": "easy",
+      "id": "bcd_easy_33",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_easy_33.mp4",
+        "poster": "media/images/bcd_easy_33-frame.png",
+        "figure": "media/images/bcd_easy_33.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "BCD: Packed BCD for decimal 99 is…",
+      "choices": [
+        "0x63",
+        "0x99",
+        "0x99",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "Each decimal digit → nibble → 0x99.",
+      "difficulty": "easy",
+      "id": "bcd_easy_34",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_easy_34.mp4",
+        "poster": "media/images/bcd_easy_34-frame.png",
+        "figure": "media/images/bcd_easy_34.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "BCD: Packed BCD for decimal 07 is…",
+      "choices": [
+        "0x07",
+        "0x07",
+        "0x70",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "Each decimal digit → nibble → 0x07.",
+      "difficulty": "easy",
+      "id": "bcd_easy_35",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_easy_35.mp4",
+        "poster": "media/images/bcd_easy_35-frame.png",
+        "figure": "media/images/bcd_easy_35.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "BCD: Packed BCD for decimal 30 is…",
+      "choices": [
+        "0x1E",
+        "0x30",
+        "0x03",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "Each decimal digit → nibble → 0x30.",
+      "difficulty": "easy",
+      "id": "bcd_easy_36",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_easy_36.mp4",
+        "poster": "media/images/bcd_easy_36-frame.png",
+        "figure": "media/images/bcd_easy_36.png"
+      }
     },
     {
       "id": "bcd_medium_01",
@@ -64,7 +566,13 @@
       ],
       "answer": 1,
       "explain": "Tens=2, ones=5 → 0x25.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_medium_01.mp4",
+        "poster": "media/images/bcd_medium_01-frame.png",
+        "figure": "media/images/bcd_medium_01.png"
+      }
     },
     {
       "id": "bcd_medium_02",
@@ -78,7 +586,13 @@
       ],
       "answer": 1,
       "explain": "Same decimal, different bit spellings.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_medium_02.mp4",
+        "poster": "media/images/bcd_medium_02-frame.png",
+        "figure": "media/images/bcd_medium_02.png"
+      }
     },
     {
       "id": "bcd_medium_03",
@@ -92,7 +606,13 @@
       ],
       "answer": 1,
       "explain": "Add 6 when the nibble is not a valid digit (or carry).",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_medium_03.mp4",
+        "poster": "media/images/bcd_medium_03-frame.png",
+        "figure": "media/images/bcd_medium_03.png"
+      }
     },
     {
       "id": "bcd_medium_04",
@@ -100,7 +620,13 @@
       "prompt": "Displays and RTC chips commonly speak BCD.",
       "answer": true,
       "explain": "BCD is convenient for digits; denser binary usually wins for math.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_medium_04.mp4",
+        "poster": "media/images/bcd_medium_04-frame.png",
+        "figure": "media/images/bcd_medium_04.png"
+      }
     },
     {
       "id": "bcd_medium_05",
@@ -114,7 +640,13 @@
       ],
       "answer": 1,
       "explain": "Tens=3, ones=0 → 0x30.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_medium_05.mp4",
+        "poster": "media/images/bcd_medium_05-frame.png",
+        "figure": "media/images/bcd_medium_05.png"
+      }
     },
     {
       "id": "bcd_medium_06",
@@ -128,7 +660,13 @@
       ],
       "answer": 1,
       "explain": "Tens=4, ones=2 → 0x42.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_medium_06.mp4",
+        "poster": "media/images/bcd_medium_06-frame.png",
+        "figure": "media/images/bcd_medium_06.png"
+      }
     },
     {
       "id": "bcd_medium_07",
@@ -142,7 +680,13 @@
       ],
       "answer": 1,
       "explain": "Tens=1, ones=8 → 0x18.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_medium_07.mp4",
+        "poster": "media/images/bcd_medium_07-frame.png",
+        "figure": "media/images/bcd_medium_07.png"
+      }
     },
     {
       "id": "bcd_medium_08",
@@ -156,7 +700,13 @@
       ],
       "answer": 1,
       "explain": "Tens=9, ones=9 → 0x99.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_medium_08.mp4",
+        "poster": "media/images/bcd_medium_08-frame.png",
+        "figure": "media/images/bcd_medium_08.png"
+      }
     },
     {
       "id": "bcd_medium_09",
@@ -170,7 +720,13 @@
       ],
       "answer": 1,
       "explain": "Tens=5, ones=6 → 0x56.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_medium_09.mp4",
+        "poster": "media/images/bcd_medium_09-frame.png",
+        "figure": "media/images/bcd_medium_09.png"
+      }
     },
     {
       "id": "bcd_medium_10",
@@ -184,7 +740,371 @@
       ],
       "answer": 1,
       "explain": "Tens=0, ones=7 → 0x07.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_medium_10.mp4",
+        "poster": "media/images/bcd_medium_10-frame.png",
+        "figure": "media/images/bcd_medium_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In BCD, packed BCD for decimal 15 is…",
+      "choices": [
+        "0x0F",
+        "0x15",
+        "0x51",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "Each decimal digit → nibble → 0x15.",
+      "difficulty": "medium",
+      "id": "bcd_medium_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_medium_11.mp4",
+        "poster": "media/images/bcd_medium_11-frame.png",
+        "figure": "media/images/bcd_medium_11.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In BCD, packed BCD for decimal 25 is…",
+      "choices": [
+        "0x19",
+        "0x25",
+        "0x52",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "Each decimal digit → nibble → 0x25.",
+      "difficulty": "medium",
+      "id": "bcd_medium_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_medium_12.mp4",
+        "poster": "media/images/bcd_medium_12-frame.png",
+        "figure": "media/images/bcd_medium_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In BCD, packed BCD for decimal 42 is…",
+      "choices": [
+        "0x2A",
+        "0x42",
+        "0x24",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "Each decimal digit → nibble → 0x42.",
+      "difficulty": "medium",
+      "id": "bcd_medium_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_medium_13.mp4",
+        "poster": "media/images/bcd_medium_13-frame.png",
+        "figure": "media/images/bcd_medium_13.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In BCD, packed BCD for decimal 99 is…",
+      "choices": [
+        "0x63",
+        "0x99",
+        "0x99",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "Each decimal digit → nibble → 0x99.",
+      "difficulty": "medium",
+      "id": "bcd_medium_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_medium_14.mp4",
+        "poster": "media/images/bcd_medium_14-frame.png",
+        "figure": "media/images/bcd_medium_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In BCD, packed BCD for decimal 07 is…",
+      "choices": [
+        "0x07",
+        "0x07",
+        "0x70",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "Each decimal digit → nibble → 0x07.",
+      "difficulty": "medium",
+      "id": "bcd_medium_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_medium_15.mp4",
+        "poster": "media/images/bcd_medium_15-frame.png",
+        "figure": "media/images/bcd_medium_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In BCD, packed BCD for decimal 30 is…",
+      "choices": [
+        "0x1E",
+        "0x30",
+        "0x03",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "Each decimal digit → nibble → 0x30.",
+      "difficulty": "medium",
+      "id": "bcd_medium_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_medium_16.mp4",
+        "poster": "media/images/bcd_medium_16-frame.png",
+        "figure": "media/images/bcd_medium_16.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "BCD: Packed BCD for decimal 88 is…",
+      "choices": [
+        "0x58",
+        "0x88",
+        "0x88",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "Each decimal digit → nibble → 0x88.",
+      "difficulty": "medium",
+      "id": "bcd_medium_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_medium_17.mp4",
+        "poster": "media/images/bcd_medium_17-frame.png",
+        "figure": "media/images/bcd_medium_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "BCD: Packed BCD for decimal 64 is…",
+      "choices": [
+        "0x40",
+        "0x64",
+        "0x46",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "Each decimal digit → nibble → 0x64.",
+      "difficulty": "medium",
+      "id": "bcd_medium_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_medium_18.mp4",
+        "poster": "media/images/bcd_medium_18-frame.png",
+        "figure": "media/images/bcd_medium_18.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "BCD: Byte 0x0A is valid packed BCD.",
+      "answer": false,
+      "explain": "BCD nibbles must be 0–9.",
+      "difficulty": "medium",
+      "id": "bcd_medium_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_medium_19.mp4",
+        "poster": "media/images/bcd_medium_19-frame.png",
+        "figure": "media/images/bcd_medium_19.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "BCD: Byte 0x1B is valid packed BCD.",
+      "answer": false,
+      "explain": "BCD nibbles must be 0–9.",
+      "difficulty": "medium",
+      "id": "bcd_medium_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_medium_20.mp4",
+        "poster": "media/images/bcd_medium_20-frame.png",
+        "figure": "media/images/bcd_medium_20.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "BCD: Byte 0x2C is valid packed BCD.",
+      "answer": false,
+      "explain": "BCD nibbles must be 0–9.",
+      "difficulty": "medium",
+      "id": "bcd_medium_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_medium_21.mp4",
+        "poster": "media/images/bcd_medium_21-frame.png",
+        "figure": "media/images/bcd_medium_21.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "BCD: Byte 0x3D is valid packed BCD.",
+      "answer": false,
+      "explain": "BCD nibbles must be 0–9.",
+      "difficulty": "medium",
+      "id": "bcd_medium_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_medium_22.mp4",
+        "poster": "media/images/bcd_medium_22-frame.png",
+        "figure": "media/images/bcd_medium_22.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "BCD: Byte 0x4E is valid packed BCD.",
+      "answer": false,
+      "explain": "BCD nibbles must be 0–9.",
+      "difficulty": "medium",
+      "id": "bcd_medium_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_medium_23.mp4",
+        "poster": "media/images/bcd_medium_23-frame.png",
+        "figure": "media/images/bcd_medium_23.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "BCD: Byte 0x5F is valid packed BCD.",
+      "answer": false,
+      "explain": "BCD nibbles must be 0–9.",
+      "difficulty": "medium",
+      "id": "bcd_medium_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_medium_24.mp4",
+        "poster": "media/images/bcd_medium_24-frame.png",
+        "figure": "media/images/bcd_medium_24.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "BCD: Byte 0x9A is valid packed BCD.",
+      "answer": false,
+      "explain": "BCD nibbles must be 0–9.",
+      "difficulty": "medium",
+      "id": "bcd_medium_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_medium_25.mp4",
+        "poster": "media/images/bcd_medium_25-frame.png",
+        "figure": "media/images/bcd_medium_25.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "BCD: Hex digit 0 equals which decimal value?",
+      "choices": [
+        "1",
+        "0",
+        "5",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "0₁₆ = 0₁₀.",
+      "difficulty": "medium",
+      "id": "bcd_medium_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_medium_26.mp4",
+        "poster": "media/images/bcd_medium_26-frame.png",
+        "figure": "media/images/bcd_medium_26.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "BCD: Decimal 0 as one hex digit is…",
+      "choices": [
+        "1",
+        "0",
+        "5",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "0₁₀ = 0₁₆.",
+      "difficulty": "medium",
+      "id": "bcd_medium_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_medium_27.mp4",
+        "poster": "media/images/bcd_medium_27-frame.png",
+        "figure": "media/images/bcd_medium_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "BCD: Hex digit 1 equals which decimal value?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "1₁₆ = 1₁₀.",
+      "difficulty": "medium",
+      "id": "bcd_medium_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_medium_28.mp4",
+        "poster": "media/images/bcd_medium_28-frame.png",
+        "figure": "media/images/bcd_medium_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "BCD: Decimal 1 as one hex digit is…",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "1₁₀ = 1₁₆.",
+      "difficulty": "medium",
+      "id": "bcd_medium_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_medium_29.mp4",
+        "poster": "media/images/bcd_medium_29-frame.png",
+        "figure": "media/images/bcd_medium_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "BCD: Hex digit 2 equals which decimal value?",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "7"
+      ],
+      "answer": 1,
+      "explain": "2₁₆ = 2₁₀.",
+      "difficulty": "medium",
+      "id": "bcd_medium_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_medium_30.mp4",
+        "poster": "media/images/bcd_medium_30-frame.png",
+        "figure": "media/images/bcd_medium_30.png"
+      }
     },
     {
       "id": "bcd_hard_01",
@@ -198,7 +1118,13 @@
       ],
       "answer": 2,
       "explain": "0xC (12) is outside 0–9.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_hard_01.mp4",
+        "poster": "media/images/bcd_hard_01-frame.png",
+        "figure": "media/images/bcd_hard_01.png"
+      }
     },
     {
       "id": "bcd_hard_02",
@@ -212,7 +1138,13 @@
       ],
       "answer": 1,
       "explain": "0xA + 6 = 0x10 (decimal ten as BCD).",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_hard_02.mp4",
+        "poster": "media/images/bcd_hard_02-frame.png",
+        "figure": "media/images/bcd_hard_02.png"
+      }
     },
     {
       "id": "bcd_hard_03",
@@ -220,7 +1152,13 @@
       "prompt": "Converting binary to BCD encodes each decimal digit into nibbles.",
       "answer": true,
       "explain": "Both nibbles must stay 0–9; 0x9A is illegal.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_hard_03.mp4",
+        "poster": "media/images/bcd_hard_03-frame.png",
+        "figure": "media/images/bcd_hard_03.png"
+      }
     },
     {
       "id": "bcd_hard_04",
@@ -234,571 +1172,17 @@
       ],
       "answer": 1,
       "explain": "4 bits × 4 digits = 16 bits; 16 bits hold 4 digits.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_hard_04.mp4",
+        "poster": "media/images/bcd_hard_04-frame.png",
+        "figure": "media/images/bcd_hard_04.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Packed BCD for decimal 15 is…",
-      "choices": [
-        "0x0F",
-        "0x15",
-        "0x51",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "Each decimal digit → nibble → 0x15.",
-      "difficulty": "easy",
-      "id": "bcd_easy_05"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Packed BCD for decimal 25 is…",
-      "choices": [
-        "0x19",
-        "0x25",
-        "0x52",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "Each decimal digit → nibble → 0x25.",
-      "difficulty": "easy",
-      "id": "bcd_easy_06"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Packed BCD for decimal 42 is…",
-      "choices": [
-        "0x2A",
-        "0x42",
-        "0x24",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "Each decimal digit → nibble → 0x42.",
-      "difficulty": "easy",
-      "id": "bcd_easy_07"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Packed BCD for decimal 99 is…",
-      "choices": [
-        "0x63",
-        "0x99",
-        "0x99",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "Each decimal digit → nibble → 0x99.",
-      "difficulty": "easy",
-      "id": "bcd_easy_08"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Packed BCD for decimal 07 is…",
-      "choices": [
-        "0x07",
-        "0x07",
-        "0x70",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "Each decimal digit → nibble → 0x07.",
-      "difficulty": "easy",
-      "id": "bcd_easy_09"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Packed BCD for decimal 30 is…",
-      "choices": [
-        "0x1E",
-        "0x30",
-        "0x03",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "Each decimal digit → nibble → 0x30.",
-      "difficulty": "easy",
-      "id": "bcd_easy_10"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Packed BCD for decimal 88 is…",
-      "choices": [
-        "0x58",
-        "0x88",
-        "0x88",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "Each decimal digit → nibble → 0x88.",
-      "difficulty": "easy",
-      "id": "bcd_easy_11"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Packed BCD for decimal 64 is…",
-      "choices": [
-        "0x40",
-        "0x64",
-        "0x46",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "Each decimal digit → nibble → 0x64.",
-      "difficulty": "easy",
-      "id": "bcd_easy_12"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Byte 0x0A is valid packed BCD.",
-      "answer": false,
-      "explain": "BCD nibbles must be 0–9.",
-      "difficulty": "easy",
-      "id": "bcd_easy_13"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Byte 0x1B is valid packed BCD.",
-      "answer": false,
-      "explain": "BCD nibbles must be 0–9.",
-      "difficulty": "easy",
-      "id": "bcd_easy_14"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Byte 0x2C is valid packed BCD.",
-      "answer": false,
-      "explain": "BCD nibbles must be 0–9.",
-      "difficulty": "easy",
-      "id": "bcd_easy_15"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Byte 0x3D is valid packed BCD.",
-      "answer": false,
-      "explain": "BCD nibbles must be 0–9.",
-      "difficulty": "easy",
-      "id": "bcd_easy_16"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Byte 0x4E is valid packed BCD.",
-      "answer": false,
-      "explain": "BCD nibbles must be 0–9.",
-      "difficulty": "easy",
-      "id": "bcd_easy_17"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Byte 0x5F is valid packed BCD.",
-      "answer": false,
-      "explain": "BCD nibbles must be 0–9.",
-      "difficulty": "easy",
-      "id": "bcd_easy_18"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Byte 0x9A is valid packed BCD.",
-      "answer": false,
-      "explain": "BCD nibbles must be 0–9.",
-      "difficulty": "easy",
-      "id": "bcd_easy_19"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Hex digit 0 equals which decimal value?",
-      "choices": [
-        "1",
-        "0",
-        "5",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "0₁₆ = 0₁₀.",
-      "difficulty": "easy",
-      "id": "bcd_easy_20"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Decimal 0 as one hex digit is…",
-      "choices": [
-        "1",
-        "0",
-        "5",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "0₁₀ = 0₁₆.",
-      "difficulty": "easy",
-      "id": "bcd_easy_21"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Hex digit 1 equals which decimal value?",
-      "choices": [
-        "0",
-        "1",
-        "2",
-        "6"
-      ],
-      "answer": 1,
-      "explain": "1₁₆ = 1₁₀.",
-      "difficulty": "easy",
-      "id": "bcd_easy_22"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Decimal 1 as one hex digit is…",
-      "choices": [
-        "0",
-        "1",
-        "2",
-        "6"
-      ],
-      "answer": 1,
-      "explain": "1₁₀ = 1₁₆.",
-      "difficulty": "easy",
-      "id": "bcd_easy_23"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Hex digit 2 equals which decimal value?",
-      "choices": [
-        "1",
-        "2",
-        "3",
-        "7"
-      ],
-      "answer": 1,
-      "explain": "2₁₆ = 2₁₀.",
-      "difficulty": "easy",
-      "id": "bcd_easy_24"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Decimal 2 as one hex digit is…",
-      "choices": [
-        "1",
-        "2",
-        "3",
-        "7"
-      ],
-      "answer": 1,
-      "explain": "2₁₀ = 2₁₆.",
-      "difficulty": "easy",
-      "id": "bcd_easy_25"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Hex digit 3 equals which decimal value?",
-      "choices": [
-        "2",
-        "3",
-        "4",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "3₁₆ = 3₁₀.",
-      "difficulty": "easy",
-      "id": "bcd_easy_26"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Decimal 3 as one hex digit is…",
-      "choices": [
-        "2",
-        "3",
-        "4",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "3₁₀ = 3₁₆.",
-      "difficulty": "easy",
-      "id": "bcd_easy_27"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Hex digit 4 equals which decimal value?",
-      "choices": [
-        "3",
-        "4",
-        "5",
-        "9"
-      ],
-      "answer": 1,
-      "explain": "4₁₆ = 4₁₀.",
-      "difficulty": "easy",
-      "id": "bcd_easy_28"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Decimal 4 as one hex digit is…",
-      "choices": [
-        "3",
-        "4",
-        "5",
-        "9"
-      ],
-      "answer": 1,
-      "explain": "4₁₀ = 4₁₆.",
-      "difficulty": "easy",
-      "id": "bcd_easy_29"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Hex digit 5 equals which decimal value?",
-      "choices": [
-        "4",
-        "5",
-        "6",
-        "10"
-      ],
-      "answer": 1,
-      "explain": "5₁₆ = 5₁₀.",
-      "difficulty": "easy",
-      "id": "bcd_easy_30"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Packed BCD for decimal 15 is…",
-      "choices": [
-        "0x0F",
-        "0x15",
-        "0x51",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "Each decimal digit → nibble → 0x15.",
-      "difficulty": "medium",
-      "id": "bcd_medium_11"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Packed BCD for decimal 25 is…",
-      "choices": [
-        "0x19",
-        "0x25",
-        "0x52",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "Each decimal digit → nibble → 0x25.",
-      "difficulty": "medium",
-      "id": "bcd_medium_12"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Packed BCD for decimal 42 is…",
-      "choices": [
-        "0x2A",
-        "0x42",
-        "0x24",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "Each decimal digit → nibble → 0x42.",
-      "difficulty": "medium",
-      "id": "bcd_medium_13"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Packed BCD for decimal 99 is…",
-      "choices": [
-        "0x63",
-        "0x99",
-        "0x99",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "Each decimal digit → nibble → 0x99.",
-      "difficulty": "medium",
-      "id": "bcd_medium_14"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Packed BCD for decimal 07 is…",
-      "choices": [
-        "0x07",
-        "0x07",
-        "0x70",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "Each decimal digit → nibble → 0x07.",
-      "difficulty": "medium",
-      "id": "bcd_medium_15"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Packed BCD for decimal 30 is…",
-      "choices": [
-        "0x1E",
-        "0x30",
-        "0x03",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "Each decimal digit → nibble → 0x30.",
-      "difficulty": "medium",
-      "id": "bcd_medium_16"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Packed BCD for decimal 88 is…",
-      "choices": [
-        "0x58",
-        "0x88",
-        "0x88",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "Each decimal digit → nibble → 0x88.",
-      "difficulty": "medium",
-      "id": "bcd_medium_17"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Packed BCD for decimal 64 is…",
-      "choices": [
-        "0x40",
-        "0x64",
-        "0x46",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "Each decimal digit → nibble → 0x64.",
-      "difficulty": "medium",
-      "id": "bcd_medium_18"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Byte 0x0A is valid packed BCD.",
-      "answer": false,
-      "explain": "BCD nibbles must be 0–9.",
-      "difficulty": "medium",
-      "id": "bcd_medium_19"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Byte 0x1B is valid packed BCD.",
-      "answer": false,
-      "explain": "BCD nibbles must be 0–9.",
-      "difficulty": "medium",
-      "id": "bcd_medium_20"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Byte 0x2C is valid packed BCD.",
-      "answer": false,
-      "explain": "BCD nibbles must be 0–9.",
-      "difficulty": "medium",
-      "id": "bcd_medium_21"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Byte 0x3D is valid packed BCD.",
-      "answer": false,
-      "explain": "BCD nibbles must be 0–9.",
-      "difficulty": "medium",
-      "id": "bcd_medium_22"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Byte 0x4E is valid packed BCD.",
-      "answer": false,
-      "explain": "BCD nibbles must be 0–9.",
-      "difficulty": "medium",
-      "id": "bcd_medium_23"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Byte 0x5F is valid packed BCD.",
-      "answer": false,
-      "explain": "BCD nibbles must be 0–9.",
-      "difficulty": "medium",
-      "id": "bcd_medium_24"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Byte 0x9A is valid packed BCD.",
-      "answer": false,
-      "explain": "BCD nibbles must be 0–9.",
-      "difficulty": "medium",
-      "id": "bcd_medium_25"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Hex digit 0 equals which decimal value?",
-      "choices": [
-        "1",
-        "0",
-        "5",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "0₁₆ = 0₁₀.",
-      "difficulty": "medium",
-      "id": "bcd_medium_26"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Decimal 0 as one hex digit is…",
-      "choices": [
-        "1",
-        "0",
-        "5",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "0₁₀ = 0₁₆.",
-      "difficulty": "medium",
-      "id": "bcd_medium_27"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Hex digit 1 equals which decimal value?",
-      "choices": [
-        "0",
-        "1",
-        "2",
-        "6"
-      ],
-      "answer": 1,
-      "explain": "1₁₆ = 1₁₀.",
-      "difficulty": "medium",
-      "id": "bcd_medium_28"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Decimal 1 as one hex digit is…",
-      "choices": [
-        "0",
-        "1",
-        "2",
-        "6"
-      ],
-      "answer": 1,
-      "explain": "1₁₀ = 1₁₆.",
-      "difficulty": "medium",
-      "id": "bcd_medium_29"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Hex digit 2 equals which decimal value?",
-      "choices": [
-        "1",
-        "2",
-        "3",
-        "7"
-      ],
-      "answer": 1,
-      "explain": "2₁₆ = 2₁₀.",
-      "difficulty": "medium",
-      "id": "bcd_medium_30"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Packed BCD for decimal 15 is…",
+      "prompt": "For the BCD lab: Packed BCD for decimal 15 is…",
       "choices": [
         "0x0F",
         "0x15",
@@ -808,11 +1192,17 @@
       "answer": 1,
       "explain": "Each decimal digit → nibble → 0x15.",
       "difficulty": "hard",
-      "id": "bcd_hard_05"
+      "id": "bcd_hard_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_hard_05.mp4",
+        "poster": "media/images/bcd_hard_05-frame.png",
+        "figure": "media/images/bcd_hard_05.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Packed BCD for decimal 25 is…",
+      "prompt": "For the BCD lab: Packed BCD for decimal 25 is…",
       "choices": [
         "0x19",
         "0x25",
@@ -822,11 +1212,17 @@
       "answer": 1,
       "explain": "Each decimal digit → nibble → 0x25.",
       "difficulty": "hard",
-      "id": "bcd_hard_06"
+      "id": "bcd_hard_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_hard_06.mp4",
+        "poster": "media/images/bcd_hard_06-frame.png",
+        "figure": "media/images/bcd_hard_06.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Packed BCD for decimal 42 is…",
+      "prompt": "For the BCD lab: Packed BCD for decimal 42 is…",
       "choices": [
         "0x2A",
         "0x42",
@@ -836,11 +1232,17 @@
       "answer": 1,
       "explain": "Each decimal digit → nibble → 0x42.",
       "difficulty": "hard",
-      "id": "bcd_hard_07"
+      "id": "bcd_hard_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_hard_07.mp4",
+        "poster": "media/images/bcd_hard_07-frame.png",
+        "figure": "media/images/bcd_hard_07.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Packed BCD for decimal 99 is…",
+      "prompt": "For the BCD lab: Packed BCD for decimal 99 is…",
       "choices": [
         "0x63",
         "0x99",
@@ -850,11 +1252,17 @@
       "answer": 1,
       "explain": "Each decimal digit → nibble → 0x99.",
       "difficulty": "hard",
-      "id": "bcd_hard_08"
+      "id": "bcd_hard_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_hard_08.mp4",
+        "poster": "media/images/bcd_hard_08-frame.png",
+        "figure": "media/images/bcd_hard_08.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Packed BCD for decimal 07 is…",
+      "prompt": "For the BCD lab: Packed BCD for decimal 07 is…",
       "choices": [
         "0x07",
         "0x07",
@@ -864,11 +1272,17 @@
       "answer": 1,
       "explain": "Each decimal digit → nibble → 0x07.",
       "difficulty": "hard",
-      "id": "bcd_hard_09"
+      "id": "bcd_hard_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_hard_09.mp4",
+        "poster": "media/images/bcd_hard_09-frame.png",
+        "figure": "media/images/bcd_hard_09.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Packed BCD for decimal 30 is…",
+      "prompt": "For the BCD lab: Packed BCD for decimal 30 is…",
       "choices": [
         "0x1E",
         "0x30",
@@ -878,11 +1292,17 @@
       "answer": 1,
       "explain": "Each decimal digit → nibble → 0x30.",
       "difficulty": "hard",
-      "id": "bcd_hard_10"
+      "id": "bcd_hard_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_hard_10.mp4",
+        "poster": "media/images/bcd_hard_10-frame.png",
+        "figure": "media/images/bcd_hard_10.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Packed BCD for decimal 88 is…",
+      "prompt": "In BCD, packed BCD for decimal 88 is…",
       "choices": [
         "0x58",
         "0x88",
@@ -892,11 +1312,17 @@
       "answer": 1,
       "explain": "Each decimal digit → nibble → 0x88.",
       "difficulty": "hard",
-      "id": "bcd_hard_11"
+      "id": "bcd_hard_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_hard_11.mp4",
+        "poster": "media/images/bcd_hard_11-frame.png",
+        "figure": "media/images/bcd_hard_11.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Packed BCD for decimal 64 is…",
+      "prompt": "In BCD, packed BCD for decimal 64 is…",
       "choices": [
         "0x40",
         "0x64",
@@ -906,67 +1332,115 @@
       "answer": 1,
       "explain": "Each decimal digit → nibble → 0x64.",
       "difficulty": "hard",
-      "id": "bcd_hard_12"
+      "id": "bcd_hard_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_hard_12.mp4",
+        "poster": "media/images/bcd_hard_12-frame.png",
+        "figure": "media/images/bcd_hard_12.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Byte 0x0A is valid packed BCD.",
+      "prompt": "In BCD, byte 0x0A is valid packed BCD.",
       "answer": false,
       "explain": "BCD nibbles must be 0–9.",
       "difficulty": "hard",
-      "id": "bcd_hard_13"
+      "id": "bcd_hard_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_hard_13.mp4",
+        "poster": "media/images/bcd_hard_13-frame.png",
+        "figure": "media/images/bcd_hard_13.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Byte 0x1B is valid packed BCD.",
+      "prompt": "In BCD, byte 0x1B is valid packed BCD.",
       "answer": false,
       "explain": "BCD nibbles must be 0–9.",
       "difficulty": "hard",
-      "id": "bcd_hard_14"
+      "id": "bcd_hard_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_hard_14.mp4",
+        "poster": "media/images/bcd_hard_14-frame.png",
+        "figure": "media/images/bcd_hard_14.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Byte 0x2C is valid packed BCD.",
+      "prompt": "In BCD, byte 0x2C is valid packed BCD.",
       "answer": false,
       "explain": "BCD nibbles must be 0–9.",
       "difficulty": "hard",
-      "id": "bcd_hard_15"
+      "id": "bcd_hard_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_hard_15.mp4",
+        "poster": "media/images/bcd_hard_15-frame.png",
+        "figure": "media/images/bcd_hard_15.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Byte 0x3D is valid packed BCD.",
+      "prompt": "In BCD, byte 0x3D is valid packed BCD.",
       "answer": false,
       "explain": "BCD nibbles must be 0–9.",
       "difficulty": "hard",
-      "id": "bcd_hard_16"
+      "id": "bcd_hard_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_hard_16.mp4",
+        "poster": "media/images/bcd_hard_16-frame.png",
+        "figure": "media/images/bcd_hard_16.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Byte 0x4E is valid packed BCD.",
+      "prompt": "In BCD, byte 0x4E is valid packed BCD.",
       "answer": false,
       "explain": "BCD nibbles must be 0–9.",
       "difficulty": "hard",
-      "id": "bcd_hard_17"
+      "id": "bcd_hard_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_hard_17.mp4",
+        "poster": "media/images/bcd_hard_17-frame.png",
+        "figure": "media/images/bcd_hard_17.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Byte 0x5F is valid packed BCD.",
+      "prompt": "In BCD, byte 0x5F is valid packed BCD.",
       "answer": false,
       "explain": "BCD nibbles must be 0–9.",
       "difficulty": "hard",
-      "id": "bcd_hard_18"
+      "id": "bcd_hard_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_hard_18.mp4",
+        "poster": "media/images/bcd_hard_18-frame.png",
+        "figure": "media/images/bcd_hard_18.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Byte 0x9A is valid packed BCD.",
+      "prompt": "In BCD, byte 0x9A is valid packed BCD.",
       "answer": false,
       "explain": "BCD nibbles must be 0–9.",
       "difficulty": "hard",
-      "id": "bcd_hard_19"
+      "id": "bcd_hard_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_hard_19.mp4",
+        "poster": "media/images/bcd_hard_19-frame.png",
+        "figure": "media/images/bcd_hard_19.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Hex digit 0 equals which decimal value?",
+      "prompt": "In BCD, hex digit 0 equals which decimal value?",
       "choices": [
         "1",
         "0",
@@ -976,11 +1450,17 @@
       "answer": 1,
       "explain": "0₁₆ = 0₁₀.",
       "difficulty": "hard",
-      "id": "bcd_hard_20"
+      "id": "bcd_hard_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_hard_20.mp4",
+        "poster": "media/images/bcd_hard_20-frame.png",
+        "figure": "media/images/bcd_hard_20.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Decimal 0 as one hex digit is…",
+      "prompt": "In BCD, decimal 0 as one hex digit is…",
       "choices": [
         "1",
         "0",
@@ -990,11 +1470,17 @@
       "answer": 1,
       "explain": "0₁₀ = 0₁₆.",
       "difficulty": "hard",
-      "id": "bcd_hard_21"
+      "id": "bcd_hard_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_hard_21.mp4",
+        "poster": "media/images/bcd_hard_21-frame.png",
+        "figure": "media/images/bcd_hard_21.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Hex digit 1 equals which decimal value?",
+      "prompt": "In BCD, hex digit 1 equals which decimal value?",
       "choices": [
         "0",
         "1",
@@ -1004,11 +1490,17 @@
       "answer": 1,
       "explain": "1₁₆ = 1₁₀.",
       "difficulty": "hard",
-      "id": "bcd_hard_22"
+      "id": "bcd_hard_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_hard_22.mp4",
+        "poster": "media/images/bcd_hard_22-frame.png",
+        "figure": "media/images/bcd_hard_22.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Decimal 1 as one hex digit is…",
+      "prompt": "In BCD, decimal 1 as one hex digit is…",
       "choices": [
         "0",
         "1",
@@ -1018,11 +1510,17 @@
       "answer": 1,
       "explain": "1₁₀ = 1₁₆.",
       "difficulty": "hard",
-      "id": "bcd_hard_23"
+      "id": "bcd_hard_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_hard_23.mp4",
+        "poster": "media/images/bcd_hard_23-frame.png",
+        "figure": "media/images/bcd_hard_23.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Hex digit 2 equals which decimal value?",
+      "prompt": "In BCD, hex digit 2 equals which decimal value?",
       "choices": [
         "1",
         "2",
@@ -1032,11 +1530,17 @@
       "answer": 1,
       "explain": "2₁₆ = 2₁₀.",
       "difficulty": "hard",
-      "id": "bcd_hard_24"
+      "id": "bcd_hard_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_hard_24.mp4",
+        "poster": "media/images/bcd_hard_24-frame.png",
+        "figure": "media/images/bcd_hard_24.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Decimal 2 as one hex digit is…",
+      "prompt": "BCD: Decimal 2 as one hex digit is…",
       "choices": [
         "1",
         "2",
@@ -1046,11 +1550,17 @@
       "answer": 1,
       "explain": "2₁₀ = 2₁₆.",
       "difficulty": "hard",
-      "id": "bcd_hard_25"
+      "id": "bcd_hard_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_hard_25.mp4",
+        "poster": "media/images/bcd_hard_25-frame.png",
+        "figure": "media/images/bcd_hard_25.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Hex digit 3 equals which decimal value?",
+      "prompt": "BCD: Hex digit 3 equals which decimal value?",
       "choices": [
         "2",
         "3",
@@ -1060,11 +1570,17 @@
       "answer": 1,
       "explain": "3₁₆ = 3₁₀.",
       "difficulty": "hard",
-      "id": "bcd_hard_26"
+      "id": "bcd_hard_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_hard_26.mp4",
+        "poster": "media/images/bcd_hard_26-frame.png",
+        "figure": "media/images/bcd_hard_26.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Decimal 3 as one hex digit is…",
+      "prompt": "BCD: Decimal 3 as one hex digit is…",
       "choices": [
         "2",
         "3",
@@ -1074,11 +1590,17 @@
       "answer": 1,
       "explain": "3₁₀ = 3₁₆.",
       "difficulty": "hard",
-      "id": "bcd_hard_27"
+      "id": "bcd_hard_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_hard_27.mp4",
+        "poster": "media/images/bcd_hard_27-frame.png",
+        "figure": "media/images/bcd_hard_27.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Hex digit 4 equals which decimal value?",
+      "prompt": "BCD: Hex digit 4 equals which decimal value?",
       "choices": [
         "3",
         "4",
@@ -1088,11 +1610,17 @@
       "answer": 1,
       "explain": "4₁₆ = 4₁₀.",
       "difficulty": "hard",
-      "id": "bcd_hard_28"
+      "id": "bcd_hard_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_hard_28.mp4",
+        "poster": "media/images/bcd_hard_28-frame.png",
+        "figure": "media/images/bcd_hard_28.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Decimal 4 as one hex digit is…",
+      "prompt": "BCD: Decimal 4 as one hex digit is…",
       "choices": [
         "3",
         "4",
@@ -1102,11 +1630,17 @@
       "answer": 1,
       "explain": "4₁₀ = 4₁₆.",
       "difficulty": "hard",
-      "id": "bcd_hard_29"
+      "id": "bcd_hard_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_hard_29.mp4",
+        "poster": "media/images/bcd_hard_29-frame.png",
+        "figure": "media/images/bcd_hard_29.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Hex digit 5 equals which decimal value?",
+      "prompt": "BCD: Hex digit 5 equals which decimal value?",
       "choices": [
         "4",
         "5",
@@ -1116,7 +1650,13 @@
       "answer": 1,
       "explain": "5₁₆ = 5₁₀.",
       "difficulty": "hard",
-      "id": "bcd_hard_30"
+      "id": "bcd_hard_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bcd_hard_30.mp4",
+        "poster": "media/images/bcd_hard_30-frame.png",
+        "figure": "media/images/bcd_hard_30.png"
+      }
     }
   ]
 }

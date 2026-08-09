@@ -14,7 +14,13 @@
       ],
       "answer": 1,
       "explain": "Gray = B XOR (B >> 1).",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_01.mp4",
+        "poster": "media/images/gray_easy_01-frame.png",
+        "figure": "media/images/gray_easy_01.png"
+      }
     },
     {
       "id": "gray_easy_02",
@@ -28,7 +34,13 @@
       ],
       "answer": 1,
       "explain": "Exactly one bit flips between adjacent codes.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_02.mp4",
+        "poster": "media/images/gray_easy_02-frame.png",
+        "figure": "media/images/gray_easy_02.png"
+      }
     },
     {
       "id": "gray_easy_03",
@@ -42,7 +54,13 @@
       ],
       "answer": 1,
       "explain": "One-bit transitions reduce CDC ambiguity.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_03.mp4",
+        "poster": "media/images/gray_easy_03-frame.png",
+        "figure": "media/images/gray_easy_03.png"
+      }
     },
     {
       "id": "gray_easy_04",
@@ -50,205 +68,13 @@
       "prompt": "Gray codes are mainly for adjacency, not for ALU arithmetic.",
       "answer": true,
       "explain": "Do not treat Gray bits as binary integers for normal math.",
-      "difficulty": "easy"
-    },
-    {
-      "id": "gray_medium_01",
-      "type": "multiple_choice",
-      "prompt": "Binary 0b0000 converts to Gray…",
-      "choices": [
-        "0b0011",
-        "0b0000",
-        "0b0000",
-        "0b1111"
-      ],
-      "answer": 1,
-      "explain": "Gray = 0000 ^ (0000>>1) = 0000.",
-      "difficulty": "medium"
-    },
-    {
-      "id": "gray_medium_02",
-      "type": "multiple_choice",
-      "prompt": "Gray on K-map labels ensures…",
-      "choices": [
-        "Differ in all variables",
-        "Differ by one bit (logic adjacency)",
-        "Count in binary order only",
-        "Ignore don’t-cares"
-      ],
-      "answer": 1,
-      "explain": "Gray order makes edge-neighbors Hamming distance 1.",
-      "difficulty": "medium"
-    },
-    {
-      "id": "gray_medium_03",
-      "type": "true_false",
-      "prompt": "Rotary encoders often output Gray to avoid multi-bit glitches.",
-      "answer": true,
-      "explain": "Gray is invertible; encoders prefer single-bit changes.",
-      "difficulty": "medium"
-    },
-    {
-      "id": "gray_medium_04",
-      "type": "multiple_choice",
-      "prompt": "In Gray→binary, bit[MSB] equals…",
-      "choices": [
-        "Always 0",
-        "Gray’s MSB (then XOR chain downward)",
-        "Always 1",
-        "The LSB of Gray only"
-      ],
-      "answer": 1,
-      "explain": "Binary MSB = Gray MSB; lower bits accumulate XORs.",
-      "difficulty": "medium"
-    },
-    {
-      "id": "gray_medium_05",
-      "type": "multiple_choice",
-      "prompt": "Binary 0b0100 converts to Gray…",
-      "choices": [
-        "0b0101",
-        "0b0110",
-        "0b1000",
-        "0b1111"
-      ],
-      "answer": 1,
-      "explain": "Gray = 0100 ^ (0100>>1) = 0110.",
-      "difficulty": "medium"
-    },
-    {
-      "id": "gray_hard_01",
-      "type": "multiple_choice",
-      "prompt": "If a synchronizer samples mid-transition of a multi-bit binary counter…",
-      "choices": [
-        "Always correct values",
-        "Transient illegal intermediate codes",
-        "Faster addition",
-        "Need for clocks"
-      ],
-      "answer": 1,
-      "explain": "Several bits changing can be sampled as garbage combinations.",
-      "difficulty": "hard"
-    },
-    {
-      "id": "gray_hard_02",
-      "type": "multiple_choice",
-      "prompt": "Next Gray after binary 1 (Gray 0b0001) is…",
-      "choices": [
-        "0b0001",
-        "0b0011",
-        "0b1110",
-        "0b1111"
-      ],
-      "answer": 1,
-      "explain": "Binary 1+1 → Gray 0011.",
-      "difficulty": "hard"
-    },
-    {
-      "id": "gray_hard_03",
-      "type": "true_false",
-      "prompt": "FIFO full/empty logic often converts Gray pointers back to binary.",
-      "answer": true,
-      "explain": "Compare after consistent decode; Gray order ≠ binary magnitude.",
-      "difficulty": "hard"
-    },
-    {
-      "id": "gray_hard_04",
-      "type": "multiple_choice",
-      "prompt": "2^3 Gray codes means count…",
-      "choices": [
-        "3",
-        "6",
-        "8",
-        "9"
-      ],
-      "answer": 2,
-      "explain": "n-bit Gray has 2^n codes.",
-      "difficulty": "hard"
-    },
-    {
-      "id": "gray_hard_05",
-      "type": "multiple_choice",
-      "prompt": "Next Gray after binary 5 (Gray 0b0111) is…",
-      "choices": [
-        "0b0111",
-        "0b0101",
-        "0b1000",
-        "0b1111"
-      ],
-      "answer": 1,
-      "explain": "Binary 5+1 → Gray 0101.",
-      "difficulty": "hard"
-    },
-    {
-      "id": "gray_hard_06",
-      "type": "multiple_choice",
-      "prompt": "Next Gray after binary 2 (Gray 0b0011) is…",
-      "choices": [
-        "0b0011",
-        "0b0010",
-        "0b1100",
-        "0b1111"
-      ],
-      "answer": 1,
-      "explain": "Binary 2+1 → Gray 0010.",
-      "difficulty": "hard"
-    },
-    {
-      "id": "gray_hard_07",
-      "type": "multiple_choice",
-      "prompt": "Next Gray after binary 6 (Gray 0b0101) is…",
-      "choices": [
-        "0b0101",
-        "0b0100",
-        "0b1010",
-        "0b1111"
-      ],
-      "answer": 1,
-      "explain": "Binary 6+1 → Gray 0100.",
-      "difficulty": "hard"
-    },
-    {
-      "id": "gray_hard_08",
-      "type": "multiple_choice",
-      "prompt": "Next Gray after binary 3 (Gray 0b0010) is…",
-      "choices": [
-        "0b0010",
-        "0b0110",
-        "0b1101",
-        "0b1111"
-      ],
-      "answer": 1,
-      "explain": "Binary 3+1 → Gray 0110.",
-      "difficulty": "hard"
-    },
-    {
-      "id": "gray_hard_09",
-      "type": "multiple_choice",
-      "prompt": "Next Gray after binary 0 (Gray 0b0000) is…",
-      "choices": [
-        "0b0000",
-        "0b0001",
-        "0b1111",
-        "0b1111"
-      ],
-      "answer": 1,
-      "explain": "Binary 0+1 → Gray 0001.",
-      "difficulty": "hard"
-    },
-    {
-      "id": "gray_hard_10",
-      "type": "multiple_choice",
-      "prompt": "Next Gray after binary 4 (Gray 0b0110) is…",
-      "choices": [
-        "0b0110",
-        "0b0111",
-        "0b1001",
-        "0b1111"
-      ],
-      "answer": 1,
-      "explain": "Binary 4+1 → Gray 0111.",
-      "difficulty": "hard"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_04.mp4",
+        "poster": "media/images/gray_easy_04-frame.png",
+        "figure": "media/images/gray_easy_04.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -262,7 +88,13 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 0000.",
       "difficulty": "easy",
-      "id": "gray_easy_05"
+      "id": "gray_easy_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_05.mp4",
+        "poster": "media/images/gray_easy_05-frame.png",
+        "figure": "media/images/gray_easy_05.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -276,7 +108,13 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 0001.",
       "difficulty": "easy",
-      "id": "gray_easy_06"
+      "id": "gray_easy_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_06.mp4",
+        "poster": "media/images/gray_easy_06-frame.png",
+        "figure": "media/images/gray_easy_06.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -290,7 +128,13 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 0011.",
       "difficulty": "easy",
-      "id": "gray_easy_07"
+      "id": "gray_easy_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_07.mp4",
+        "poster": "media/images/gray_easy_07-frame.png",
+        "figure": "media/images/gray_easy_07.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -304,7 +148,13 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 0010.",
       "difficulty": "easy",
-      "id": "gray_easy_08"
+      "id": "gray_easy_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_08.mp4",
+        "poster": "media/images/gray_easy_08-frame.png",
+        "figure": "media/images/gray_easy_08.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -318,7 +168,13 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 0110.",
       "difficulty": "easy",
-      "id": "gray_easy_09"
+      "id": "gray_easy_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_09.mp4",
+        "poster": "media/images/gray_easy_09-frame.png",
+        "figure": "media/images/gray_easy_09.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -332,7 +188,13 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 0111.",
       "difficulty": "easy",
-      "id": "gray_easy_10"
+      "id": "gray_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_10.mp4",
+        "poster": "media/images/gray_easy_10-frame.png",
+        "figure": "media/images/gray_easy_10.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -346,7 +208,13 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 0101.",
       "difficulty": "easy",
-      "id": "gray_easy_11"
+      "id": "gray_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_11.mp4",
+        "poster": "media/images/gray_easy_11-frame.png",
+        "figure": "media/images/gray_easy_11.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -360,7 +228,13 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 0100.",
       "difficulty": "easy",
-      "id": "gray_easy_12"
+      "id": "gray_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_12.mp4",
+        "poster": "media/images/gray_easy_12-frame.png",
+        "figure": "media/images/gray_easy_12.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -374,7 +248,13 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 1100.",
       "difficulty": "easy",
-      "id": "gray_easy_13"
+      "id": "gray_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_13.mp4",
+        "poster": "media/images/gray_easy_13-frame.png",
+        "figure": "media/images/gray_easy_13.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -388,7 +268,13 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 1101.",
       "difficulty": "easy",
-      "id": "gray_easy_14"
+      "id": "gray_easy_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_14.mp4",
+        "poster": "media/images/gray_easy_14-frame.png",
+        "figure": "media/images/gray_easy_14.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -402,7 +288,13 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 1111.",
       "difficulty": "easy",
-      "id": "gray_easy_15"
+      "id": "gray_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_15.mp4",
+        "poster": "media/images/gray_easy_15-frame.png",
+        "figure": "media/images/gray_easy_15.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -416,7 +308,13 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 1110.",
       "difficulty": "easy",
-      "id": "gray_easy_16"
+      "id": "gray_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_16.mp4",
+        "poster": "media/images/gray_easy_16-frame.png",
+        "figure": "media/images/gray_easy_16.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -430,7 +328,13 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 1010.",
       "difficulty": "easy",
-      "id": "gray_easy_17"
+      "id": "gray_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_17.mp4",
+        "poster": "media/images/gray_easy_17-frame.png",
+        "figure": "media/images/gray_easy_17.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -444,7 +348,13 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 1011.",
       "difficulty": "easy",
-      "id": "gray_easy_18"
+      "id": "gray_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_18.mp4",
+        "poster": "media/images/gray_easy_18-frame.png",
+        "figure": "media/images/gray_easy_18.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -458,7 +368,13 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 1001.",
       "difficulty": "easy",
-      "id": "gray_easy_19"
+      "id": "gray_easy_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_19.mp4",
+        "poster": "media/images/gray_easy_19-frame.png",
+        "figure": "media/images/gray_easy_19.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -472,7 +388,13 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 1000.",
       "difficulty": "easy",
-      "id": "gray_easy_20"
+      "id": "gray_easy_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_20.mp4",
+        "poster": "media/images/gray_easy_20-frame.png",
+        "figure": "media/images/gray_easy_20.png"
+      }
     },
     {
       "type": "true_false",
@@ -480,7 +402,13 @@
       "answer": true,
       "explain": "That is the defining property of reflected Gray code.",
       "difficulty": "easy",
-      "id": "gray_easy_21"
+      "id": "gray_easy_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_21.mp4",
+        "poster": "media/images/gray_easy_21-frame.png",
+        "figure": "media/images/gray_easy_21.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -494,7 +422,13 @@
       "answer": 1,
       "explain": "0 = 0000₂.",
       "difficulty": "easy",
-      "id": "gray_easy_22"
+      "id": "gray_easy_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_22.mp4",
+        "poster": "media/images/gray_easy_22-frame.png",
+        "figure": "media/images/gray_easy_22.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -508,7 +442,13 @@
       "answer": 1,
       "explain": "1 = 0001₂.",
       "difficulty": "easy",
-      "id": "gray_easy_23"
+      "id": "gray_easy_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_23.mp4",
+        "poster": "media/images/gray_easy_23-frame.png",
+        "figure": "media/images/gray_easy_23.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -522,21 +462,13 @@
       "answer": 1,
       "explain": "2 = 0010₂.",
       "difficulty": "easy",
-      "id": "gray_easy_24"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Which is a valid 4-bit binary spelling of decimal 3?",
-      "choices": [
-        "0010",
-        "0011",
-        "1011",
-        "0100"
-      ],
-      "answer": 1,
-      "explain": "3 = 0011₂.",
-      "difficulty": "easy",
-      "id": "gray_easy_25"
+      "id": "gray_easy_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_24.mp4",
+        "poster": "media/images/gray_easy_24-frame.png",
+        "figure": "media/images/gray_easy_24.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -550,7 +482,13 @@
       "answer": 1,
       "explain": "4 = 0100₂.",
       "difficulty": "easy",
-      "id": "gray_easy_26"
+      "id": "gray_easy_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_26.mp4",
+        "poster": "media/images/gray_easy_26-frame.png",
+        "figure": "media/images/gray_easy_26.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -564,7 +502,13 @@
       "answer": 1,
       "explain": "5 = 0101₂.",
       "difficulty": "easy",
-      "id": "gray_easy_27"
+      "id": "gray_easy_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_27.mp4",
+        "poster": "media/images/gray_easy_27-frame.png",
+        "figure": "media/images/gray_easy_27.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -578,21 +522,13 @@
       "answer": 1,
       "explain": "6 = 0110₂.",
       "difficulty": "easy",
-      "id": "gray_easy_28"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Which is a valid 4-bit binary spelling of decimal 7?",
-      "choices": [
-        "0110",
-        "0111",
-        "1111",
-        "1000"
-      ],
-      "answer": 1,
-      "explain": "7 = 0111₂.",
-      "difficulty": "easy",
-      "id": "gray_easy_29"
+      "id": "gray_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_28.mp4",
+        "poster": "media/images/gray_easy_28-frame.png",
+        "figure": "media/images/gray_easy_28.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -606,11 +542,151 @@
       "answer": 1,
       "explain": "8 = 1000₂.",
       "difficulty": "easy",
-      "id": "gray_easy_30"
+      "id": "gray_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_30.mp4",
+        "poster": "media/images/gray_easy_30-frame.png",
+        "figure": "media/images/gray_easy_30.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 0000 converts to Gray as…",
+      "prompt": "Gray code: Binary 0000 converts to Gray as…",
+      "choices": [
+        "0000",
+        "0000",
+        "0001",
+        "0000"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 0000.",
+      "difficulty": "easy",
+      "id": "gray_easy_31",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_31.mp4",
+        "poster": "media/images/gray_easy_31-frame.png",
+        "figure": "media/images/gray_easy_31.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Gray code: Binary 0001 converts to Gray as…",
+      "choices": [
+        "0001",
+        "0001",
+        "0000",
+        "0000"
+      ],
+      "answer": 1,
+      "explain": "Gray = b ⊕ (b>>1) → 0001.",
+      "difficulty": "easy",
+      "id": "gray_easy_32",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_easy_32.mp4",
+        "poster": "media/images/gray_easy_32-frame.png",
+        "figure": "media/images/gray_easy_32.png"
+      }
+    },
+    {
+      "id": "gray_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Binary 0b0000 converts to Gray…",
+      "choices": [
+        "0b0011",
+        "0b0000",
+        "0b0000",
+        "0b1111"
+      ],
+      "answer": 1,
+      "explain": "Gray = 0000 ^ (0000>>1) = 0000.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_01.mp4",
+        "poster": "media/images/gray_medium_01-frame.png",
+        "figure": "media/images/gray_medium_01.png"
+      }
+    },
+    {
+      "id": "gray_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Gray on K-map labels ensures…",
+      "choices": [
+        "Differ in all variables",
+        "Differ by one bit (logic adjacency)",
+        "Count in binary order only",
+        "Ignore don’t-cares"
+      ],
+      "answer": 1,
+      "explain": "Gray order makes edge-neighbors Hamming distance 1.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_02.mp4",
+        "poster": "media/images/gray_medium_02-frame.png",
+        "figure": "media/images/gray_medium_02.png"
+      }
+    },
+    {
+      "id": "gray_medium_03",
+      "type": "true_false",
+      "prompt": "Rotary encoders often output Gray to avoid multi-bit glitches.",
+      "answer": true,
+      "explain": "Gray is invertible; encoders prefer single-bit changes.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_03.mp4",
+        "poster": "media/images/gray_medium_03-frame.png",
+        "figure": "media/images/gray_medium_03.png"
+      }
+    },
+    {
+      "id": "gray_medium_04",
+      "type": "multiple_choice",
+      "prompt": "In Gray→binary, bit[MSB] equals…",
+      "choices": [
+        "Always 0",
+        "Gray’s MSB (then XOR chain downward)",
+        "Always 1",
+        "The LSB of Gray only"
+      ],
+      "answer": 1,
+      "explain": "Binary MSB = Gray MSB; lower bits accumulate XORs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_04.mp4",
+        "poster": "media/images/gray_medium_04-frame.png",
+        "figure": "media/images/gray_medium_04.png"
+      }
+    },
+    {
+      "id": "gray_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Binary 0b0100 converts to Gray…",
+      "choices": [
+        "0b0101",
+        "0b0110",
+        "0b1000",
+        "0b1111"
+      ],
+      "answer": 1,
+      "explain": "Gray = 0100 ^ (0100>>1) = 0110.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_05.mp4",
+        "poster": "media/images/gray_medium_05-frame.png",
+        "figure": "media/images/gray_medium_05.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Gray code, binary 0000 converts to Gray as…",
       "choices": [
         "0000",
         "0000",
@@ -620,11 +696,17 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 0000.",
       "difficulty": "medium",
-      "id": "gray_medium_06"
+      "id": "gray_medium_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_06.mp4",
+        "poster": "media/images/gray_medium_06-frame.png",
+        "figure": "media/images/gray_medium_06.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 0001 converts to Gray as…",
+      "prompt": "In Gray code, binary 0001 converts to Gray as…",
       "choices": [
         "0001",
         "0001",
@@ -634,11 +716,17 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 0001.",
       "difficulty": "medium",
-      "id": "gray_medium_07"
+      "id": "gray_medium_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_07.mp4",
+        "poster": "media/images/gray_medium_07-frame.png",
+        "figure": "media/images/gray_medium_07.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 0010 converts to Gray as…",
+      "prompt": "Gray code: Binary 0010 converts to Gray as…",
       "choices": [
         "0010",
         "0011",
@@ -648,11 +736,17 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 0011.",
       "difficulty": "medium",
-      "id": "gray_medium_08"
+      "id": "gray_medium_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_08.mp4",
+        "poster": "media/images/gray_medium_08-frame.png",
+        "figure": "media/images/gray_medium_08.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 0011 converts to Gray as…",
+      "prompt": "Gray code: Binary 0011 converts to Gray as…",
       "choices": [
         "0011",
         "0010",
@@ -662,11 +756,17 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 0010.",
       "difficulty": "medium",
-      "id": "gray_medium_09"
+      "id": "gray_medium_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_09.mp4",
+        "poster": "media/images/gray_medium_09-frame.png",
+        "figure": "media/images/gray_medium_09.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 0100 converts to Gray as…",
+      "prompt": "Gray code: Binary 0100 converts to Gray as…",
       "choices": [
         "0100",
         "0110",
@@ -676,11 +776,17 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 0110.",
       "difficulty": "medium",
-      "id": "gray_medium_10"
+      "id": "gray_medium_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_10.mp4",
+        "poster": "media/images/gray_medium_10-frame.png",
+        "figure": "media/images/gray_medium_10.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 0101 converts to Gray as…",
+      "prompt": "Gray code: Binary 0101 converts to Gray as…",
       "choices": [
         "0101",
         "0111",
@@ -690,11 +796,17 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 0111.",
       "difficulty": "medium",
-      "id": "gray_medium_11"
+      "id": "gray_medium_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_11.mp4",
+        "poster": "media/images/gray_medium_11-frame.png",
+        "figure": "media/images/gray_medium_11.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 0110 converts to Gray as…",
+      "prompt": "Gray code: Binary 0110 converts to Gray as…",
       "choices": [
         "0110",
         "0101",
@@ -704,11 +816,17 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 0101.",
       "difficulty": "medium",
-      "id": "gray_medium_12"
+      "id": "gray_medium_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_12.mp4",
+        "poster": "media/images/gray_medium_12-frame.png",
+        "figure": "media/images/gray_medium_12.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 0111 converts to Gray as…",
+      "prompt": "Gray code: Binary 0111 converts to Gray as…",
       "choices": [
         "0111",
         "0100",
@@ -718,11 +836,17 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 0100.",
       "difficulty": "medium",
-      "id": "gray_medium_13"
+      "id": "gray_medium_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_13.mp4",
+        "poster": "media/images/gray_medium_13-frame.png",
+        "figure": "media/images/gray_medium_13.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 1000 converts to Gray as…",
+      "prompt": "Gray code: Binary 1000 converts to Gray as…",
       "choices": [
         "1000",
         "1100",
@@ -732,11 +856,17 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 1100.",
       "difficulty": "medium",
-      "id": "gray_medium_14"
+      "id": "gray_medium_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_14.mp4",
+        "poster": "media/images/gray_medium_14-frame.png",
+        "figure": "media/images/gray_medium_14.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 1001 converts to Gray as…",
+      "prompt": "Gray code: Binary 1001 converts to Gray as…",
       "choices": [
         "1001",
         "1101",
@@ -746,11 +876,17 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 1101.",
       "difficulty": "medium",
-      "id": "gray_medium_15"
+      "id": "gray_medium_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_15.mp4",
+        "poster": "media/images/gray_medium_15-frame.png",
+        "figure": "media/images/gray_medium_15.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 1010 converts to Gray as…",
+      "prompt": "Gray code: Binary 1010 converts to Gray as…",
       "choices": [
         "1010",
         "1111",
@@ -760,11 +896,17 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 1111.",
       "difficulty": "medium",
-      "id": "gray_medium_16"
+      "id": "gray_medium_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_16.mp4",
+        "poster": "media/images/gray_medium_16-frame.png",
+        "figure": "media/images/gray_medium_16.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 1011 converts to Gray as…",
+      "prompt": "Gray code: Binary 1011 converts to Gray as…",
       "choices": [
         "1011",
         "1110",
@@ -774,11 +916,17 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 1110.",
       "difficulty": "medium",
-      "id": "gray_medium_17"
+      "id": "gray_medium_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_17.mp4",
+        "poster": "media/images/gray_medium_17-frame.png",
+        "figure": "media/images/gray_medium_17.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 1100 converts to Gray as…",
+      "prompt": "Gray code: Binary 1100 converts to Gray as…",
       "choices": [
         "1100",
         "1010",
@@ -788,11 +936,17 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 1010.",
       "difficulty": "medium",
-      "id": "gray_medium_18"
+      "id": "gray_medium_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_18.mp4",
+        "poster": "media/images/gray_medium_18-frame.png",
+        "figure": "media/images/gray_medium_18.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 1101 converts to Gray as…",
+      "prompt": "Gray code: Binary 1101 converts to Gray as…",
       "choices": [
         "1101",
         "1011",
@@ -802,11 +956,17 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 1011.",
       "difficulty": "medium",
-      "id": "gray_medium_19"
+      "id": "gray_medium_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_19.mp4",
+        "poster": "media/images/gray_medium_19-frame.png",
+        "figure": "media/images/gray_medium_19.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 1110 converts to Gray as…",
+      "prompt": "Gray code: Binary 1110 converts to Gray as…",
       "choices": [
         "1110",
         "1001",
@@ -816,11 +976,17 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 1001.",
       "difficulty": "medium",
-      "id": "gray_medium_20"
+      "id": "gray_medium_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_20.mp4",
+        "poster": "media/images/gray_medium_20-frame.png",
+        "figure": "media/images/gray_medium_20.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 1111 converts to Gray as…",
+      "prompt": "Gray code: Binary 1111 converts to Gray as…",
       "choices": [
         "1111",
         "1000",
@@ -830,19 +996,31 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 1000.",
       "difficulty": "medium",
-      "id": "gray_medium_21"
+      "id": "gray_medium_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_21.mp4",
+        "poster": "media/images/gray_medium_21-frame.png",
+        "figure": "media/images/gray_medium_21.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Adjacent Gray codes differ by exactly one bit.",
+      "prompt": "Gray code: Adjacent Gray codes differ by exactly one bit.",
       "answer": true,
       "explain": "That is the defining property of reflected Gray code.",
       "difficulty": "medium",
-      "id": "gray_medium_22"
+      "id": "gray_medium_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_22.mp4",
+        "poster": "media/images/gray_medium_22-frame.png",
+        "figure": "media/images/gray_medium_22.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Which is a valid 4-bit binary spelling of decimal 0?",
+      "prompt": "Gray code: Which is a valid 4-bit binary spelling of decimal 0?",
       "choices": [
         "0001",
         "0000",
@@ -852,11 +1030,17 @@
       "answer": 1,
       "explain": "0 = 0000₂.",
       "difficulty": "medium",
-      "id": "gray_medium_23"
+      "id": "gray_medium_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_23.mp4",
+        "poster": "media/images/gray_medium_23-frame.png",
+        "figure": "media/images/gray_medium_23.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Which is a valid 4-bit binary spelling of decimal 1?",
+      "prompt": "Gray code: Which is a valid 4-bit binary spelling of decimal 1?",
       "choices": [
         "0000",
         "0001",
@@ -866,11 +1050,17 @@
       "answer": 1,
       "explain": "1 = 0001₂.",
       "difficulty": "medium",
-      "id": "gray_medium_24"
+      "id": "gray_medium_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_24.mp4",
+        "poster": "media/images/gray_medium_24-frame.png",
+        "figure": "media/images/gray_medium_24.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Which is a valid 4-bit binary spelling of decimal 2?",
+      "prompt": "Gray code: Which is a valid 4-bit binary spelling of decimal 2?",
       "choices": [
         "0011",
         "0010",
@@ -880,11 +1070,17 @@
       "answer": 1,
       "explain": "2 = 0010₂.",
       "difficulty": "medium",
-      "id": "gray_medium_25"
+      "id": "gray_medium_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_25.mp4",
+        "poster": "media/images/gray_medium_25-frame.png",
+        "figure": "media/images/gray_medium_25.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Which is a valid 4-bit binary spelling of decimal 3?",
+      "prompt": "Gray code: Which is a valid 4-bit binary spelling of decimal 3?",
       "choices": [
         "0010",
         "0011",
@@ -894,11 +1090,17 @@
       "answer": 1,
       "explain": "3 = 0011₂.",
       "difficulty": "medium",
-      "id": "gray_medium_26"
+      "id": "gray_medium_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_26.mp4",
+        "poster": "media/images/gray_medium_26-frame.png",
+        "figure": "media/images/gray_medium_26.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Which is a valid 4-bit binary spelling of decimal 4?",
+      "prompt": "Gray code: Which is a valid 4-bit binary spelling of decimal 4?",
       "choices": [
         "0101",
         "0100",
@@ -908,11 +1110,17 @@
       "answer": 1,
       "explain": "4 = 0100₂.",
       "difficulty": "medium",
-      "id": "gray_medium_27"
+      "id": "gray_medium_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_27.mp4",
+        "poster": "media/images/gray_medium_27-frame.png",
+        "figure": "media/images/gray_medium_27.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Which is a valid 4-bit binary spelling of decimal 5?",
+      "prompt": "Gray code: Which is a valid 4-bit binary spelling of decimal 5?",
       "choices": [
         "0100",
         "0101",
@@ -922,11 +1130,17 @@
       "answer": 1,
       "explain": "5 = 0101₂.",
       "difficulty": "medium",
-      "id": "gray_medium_28"
+      "id": "gray_medium_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_28.mp4",
+        "poster": "media/images/gray_medium_28-frame.png",
+        "figure": "media/images/gray_medium_28.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Which is a valid 4-bit binary spelling of decimal 6?",
+      "prompt": "Gray code: Which is a valid 4-bit binary spelling of decimal 6?",
       "choices": [
         "0111",
         "0110",
@@ -936,11 +1150,17 @@
       "answer": 1,
       "explain": "6 = 0110₂.",
       "difficulty": "medium",
-      "id": "gray_medium_29"
+      "id": "gray_medium_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_29.mp4",
+        "poster": "media/images/gray_medium_29-frame.png",
+        "figure": "media/images/gray_medium_29.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Which is a valid 4-bit binary spelling of decimal 7?",
+      "prompt": "Gray code: Which is a valid 4-bit binary spelling of decimal 7?",
       "choices": [
         "0110",
         "0111",
@@ -950,11 +1170,211 @@
       "answer": 1,
       "explain": "7 = 0111₂.",
       "difficulty": "medium",
-      "id": "gray_medium_30"
+      "id": "gray_medium_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_medium_30.mp4",
+        "poster": "media/images/gray_medium_30-frame.png",
+        "figure": "media/images/gray_medium_30.png"
+      }
+    },
+    {
+      "id": "gray_hard_01",
+      "type": "multiple_choice",
+      "prompt": "If a synchronizer samples mid-transition of a multi-bit binary counter…",
+      "choices": [
+        "Always correct values",
+        "Transient illegal intermediate codes",
+        "Faster addition",
+        "Need for clocks"
+      ],
+      "answer": 1,
+      "explain": "Several bits changing can be sampled as garbage combinations.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_01.mp4",
+        "poster": "media/images/gray_hard_01-frame.png",
+        "figure": "media/images/gray_hard_01.png"
+      }
+    },
+    {
+      "id": "gray_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Next Gray after binary 1 (Gray 0b0001) is…",
+      "choices": [
+        "0b0001",
+        "0b0011",
+        "0b1110",
+        "0b1111"
+      ],
+      "answer": 1,
+      "explain": "Binary 1+1 → Gray 0011.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_02.mp4",
+        "poster": "media/images/gray_hard_02-frame.png",
+        "figure": "media/images/gray_hard_02.png"
+      }
+    },
+    {
+      "id": "gray_hard_03",
+      "type": "true_false",
+      "prompt": "FIFO full/empty logic often converts Gray pointers back to binary.",
+      "answer": true,
+      "explain": "Compare after consistent decode; Gray order ≠ binary magnitude.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_03.mp4",
+        "poster": "media/images/gray_hard_03-frame.png",
+        "figure": "media/images/gray_hard_03.png"
+      }
+    },
+    {
+      "id": "gray_hard_04",
+      "type": "multiple_choice",
+      "prompt": "2^3 Gray codes means count…",
+      "choices": [
+        "3",
+        "6",
+        "8",
+        "9"
+      ],
+      "answer": 2,
+      "explain": "n-bit Gray has 2^n codes.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_04.mp4",
+        "poster": "media/images/gray_hard_04-frame.png",
+        "figure": "media/images/gray_hard_04.png"
+      }
+    },
+    {
+      "id": "gray_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Next Gray after binary 5 (Gray 0b0111) is…",
+      "choices": [
+        "0b0111",
+        "0b0101",
+        "0b1000",
+        "0b1111"
+      ],
+      "answer": 1,
+      "explain": "Binary 5+1 → Gray 0101.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_05.mp4",
+        "poster": "media/images/gray_hard_05-frame.png",
+        "figure": "media/images/gray_hard_05.png"
+      }
+    },
+    {
+      "id": "gray_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Next Gray after binary 2 (Gray 0b0011) is…",
+      "choices": [
+        "0b0011",
+        "0b0010",
+        "0b1100",
+        "0b1111"
+      ],
+      "answer": 1,
+      "explain": "Binary 2+1 → Gray 0010.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_06.mp4",
+        "poster": "media/images/gray_hard_06-frame.png",
+        "figure": "media/images/gray_hard_06.png"
+      }
+    },
+    {
+      "id": "gray_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Next Gray after binary 6 (Gray 0b0101) is…",
+      "choices": [
+        "0b0101",
+        "0b0100",
+        "0b1010",
+        "0b1111"
+      ],
+      "answer": 1,
+      "explain": "Binary 6+1 → Gray 0100.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_07.mp4",
+        "poster": "media/images/gray_hard_07-frame.png",
+        "figure": "media/images/gray_hard_07.png"
+      }
+    },
+    {
+      "id": "gray_hard_08",
+      "type": "multiple_choice",
+      "prompt": "Next Gray after binary 3 (Gray 0b0010) is…",
+      "choices": [
+        "0b0010",
+        "0b0110",
+        "0b1101",
+        "0b1111"
+      ],
+      "answer": 1,
+      "explain": "Binary 3+1 → Gray 0110.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_08.mp4",
+        "poster": "media/images/gray_hard_08-frame.png",
+        "figure": "media/images/gray_hard_08.png"
+      }
+    },
+    {
+      "id": "gray_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Next Gray after binary 0 (Gray 0b0000) is…",
+      "choices": [
+        "0b0000",
+        "0b0001",
+        "0b1111",
+        "0b1111"
+      ],
+      "answer": 1,
+      "explain": "Binary 0+1 → Gray 0001.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_09.mp4",
+        "poster": "media/images/gray_hard_09-frame.png",
+        "figure": "media/images/gray_hard_09.png"
+      }
+    },
+    {
+      "id": "gray_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Next Gray after binary 4 (Gray 0b0110) is…",
+      "choices": [
+        "0b0110",
+        "0b0111",
+        "0b1001",
+        "0b1111"
+      ],
+      "answer": 1,
+      "explain": "Binary 4+1 → Gray 0111.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_10.mp4",
+        "poster": "media/images/gray_hard_10-frame.png",
+        "figure": "media/images/gray_hard_10.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 0000 converts to Gray as…",
+      "prompt": "For the Gray code lab: Binary 0000 converts to Gray as…",
       "choices": [
         "0000",
         "0000",
@@ -964,11 +1384,17 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 0000.",
       "difficulty": "hard",
-      "id": "gray_hard_11"
+      "id": "gray_hard_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_11.mp4",
+        "poster": "media/images/gray_hard_11-frame.png",
+        "figure": "media/images/gray_hard_11.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 0001 converts to Gray as…",
+      "prompt": "For the Gray code lab: Binary 0001 converts to Gray as…",
       "choices": [
         "0001",
         "0001",
@@ -978,11 +1404,17 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 0001.",
       "difficulty": "hard",
-      "id": "gray_hard_12"
+      "id": "gray_hard_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_12.mp4",
+        "poster": "media/images/gray_hard_12-frame.png",
+        "figure": "media/images/gray_hard_12.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 0010 converts to Gray as…",
+      "prompt": "In Gray code, binary 0010 converts to Gray as…",
       "choices": [
         "0010",
         "0011",
@@ -992,11 +1424,17 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 0011.",
       "difficulty": "hard",
-      "id": "gray_hard_13"
+      "id": "gray_hard_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_13.mp4",
+        "poster": "media/images/gray_hard_13-frame.png",
+        "figure": "media/images/gray_hard_13.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 0011 converts to Gray as…",
+      "prompt": "In Gray code, binary 0011 converts to Gray as…",
       "choices": [
         "0011",
         "0010",
@@ -1006,11 +1444,17 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 0010.",
       "difficulty": "hard",
-      "id": "gray_hard_14"
+      "id": "gray_hard_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_14.mp4",
+        "poster": "media/images/gray_hard_14-frame.png",
+        "figure": "media/images/gray_hard_14.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 0100 converts to Gray as…",
+      "prompt": "In Gray code, binary 0100 converts to Gray as…",
       "choices": [
         "0100",
         "0110",
@@ -1020,11 +1464,17 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 0110.",
       "difficulty": "hard",
-      "id": "gray_hard_15"
+      "id": "gray_hard_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_15.mp4",
+        "poster": "media/images/gray_hard_15-frame.png",
+        "figure": "media/images/gray_hard_15.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 0101 converts to Gray as…",
+      "prompt": "In Gray code, binary 0101 converts to Gray as…",
       "choices": [
         "0101",
         "0111",
@@ -1034,11 +1484,17 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 0111.",
       "difficulty": "hard",
-      "id": "gray_hard_16"
+      "id": "gray_hard_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_16.mp4",
+        "poster": "media/images/gray_hard_16-frame.png",
+        "figure": "media/images/gray_hard_16.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 0110 converts to Gray as…",
+      "prompt": "In Gray code, binary 0110 converts to Gray as…",
       "choices": [
         "0110",
         "0101",
@@ -1048,11 +1504,17 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 0101.",
       "difficulty": "hard",
-      "id": "gray_hard_17"
+      "id": "gray_hard_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_17.mp4",
+        "poster": "media/images/gray_hard_17-frame.png",
+        "figure": "media/images/gray_hard_17.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 0111 converts to Gray as…",
+      "prompt": "In Gray code, binary 0111 converts to Gray as…",
       "choices": [
         "0111",
         "0100",
@@ -1062,11 +1524,17 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 0100.",
       "difficulty": "hard",
-      "id": "gray_hard_18"
+      "id": "gray_hard_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_18.mp4",
+        "poster": "media/images/gray_hard_18-frame.png",
+        "figure": "media/images/gray_hard_18.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 1000 converts to Gray as…",
+      "prompt": "In Gray code, binary 1000 converts to Gray as…",
       "choices": [
         "1000",
         "1100",
@@ -1076,11 +1544,17 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 1100.",
       "difficulty": "hard",
-      "id": "gray_hard_19"
+      "id": "gray_hard_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_19.mp4",
+        "poster": "media/images/gray_hard_19-frame.png",
+        "figure": "media/images/gray_hard_19.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 1001 converts to Gray as…",
+      "prompt": "In Gray code, binary 1001 converts to Gray as…",
       "choices": [
         "1001",
         "1101",
@@ -1090,11 +1564,17 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 1101.",
       "difficulty": "hard",
-      "id": "gray_hard_20"
+      "id": "gray_hard_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_20.mp4",
+        "poster": "media/images/gray_hard_20-frame.png",
+        "figure": "media/images/gray_hard_20.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 1010 converts to Gray as…",
+      "prompt": "In Gray code, binary 1010 converts to Gray as…",
       "choices": [
         "1010",
         "1111",
@@ -1104,11 +1584,17 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 1111.",
       "difficulty": "hard",
-      "id": "gray_hard_21"
+      "id": "gray_hard_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_21.mp4",
+        "poster": "media/images/gray_hard_21-frame.png",
+        "figure": "media/images/gray_hard_21.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 1011 converts to Gray as…",
+      "prompt": "In Gray code, binary 1011 converts to Gray as…",
       "choices": [
         "1011",
         "1110",
@@ -1118,11 +1604,17 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 1110.",
       "difficulty": "hard",
-      "id": "gray_hard_22"
+      "id": "gray_hard_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_22.mp4",
+        "poster": "media/images/gray_hard_22-frame.png",
+        "figure": "media/images/gray_hard_22.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 1100 converts to Gray as…",
+      "prompt": "In Gray code, binary 1100 converts to Gray as…",
       "choices": [
         "1100",
         "1010",
@@ -1132,11 +1624,17 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 1010.",
       "difficulty": "hard",
-      "id": "gray_hard_23"
+      "id": "gray_hard_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_23.mp4",
+        "poster": "media/images/gray_hard_23-frame.png",
+        "figure": "media/images/gray_hard_23.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 1101 converts to Gray as…",
+      "prompt": "In Gray code, binary 1101 converts to Gray as…",
       "choices": [
         "1101",
         "1011",
@@ -1146,11 +1644,17 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 1011.",
       "difficulty": "hard",
-      "id": "gray_hard_24"
+      "id": "gray_hard_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_24.mp4",
+        "poster": "media/images/gray_hard_24-frame.png",
+        "figure": "media/images/gray_hard_24.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 1110 converts to Gray as…",
+      "prompt": "In Gray code, binary 1110 converts to Gray as…",
       "choices": [
         "1110",
         "1001",
@@ -1160,11 +1664,17 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 1001.",
       "difficulty": "hard",
-      "id": "gray_hard_25"
+      "id": "gray_hard_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_25.mp4",
+        "poster": "media/images/gray_hard_25-frame.png",
+        "figure": "media/images/gray_hard_25.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Binary 1111 converts to Gray as…",
+      "prompt": "In Gray code, binary 1111 converts to Gray as…",
       "choices": [
         "1111",
         "1000",
@@ -1174,19 +1684,31 @@
       "answer": 1,
       "explain": "Gray = b ⊕ (b>>1) → 1000.",
       "difficulty": "hard",
-      "id": "gray_hard_26"
+      "id": "gray_hard_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_26.mp4",
+        "poster": "media/images/gray_hard_26-frame.png",
+        "figure": "media/images/gray_hard_26.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Adjacent Gray codes differ by exactly one bit.",
+      "prompt": "In Gray code, adjacent Gray codes differ by exactly one bit.",
       "answer": true,
       "explain": "That is the defining property of reflected Gray code.",
       "difficulty": "hard",
-      "id": "gray_hard_27"
+      "id": "gray_hard_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_27.mp4",
+        "poster": "media/images/gray_hard_27-frame.png",
+        "figure": "media/images/gray_hard_27.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Which is a valid 4-bit binary spelling of decimal 0?",
+      "prompt": "In Gray code, which is a valid 4-bit binary spelling of decimal 0?",
       "choices": [
         "0001",
         "0000",
@@ -1196,11 +1718,17 @@
       "answer": 1,
       "explain": "0 = 0000₂.",
       "difficulty": "hard",
-      "id": "gray_hard_28"
+      "id": "gray_hard_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_28.mp4",
+        "poster": "media/images/gray_hard_28-frame.png",
+        "figure": "media/images/gray_hard_28.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Which is a valid 4-bit binary spelling of decimal 1?",
+      "prompt": "In Gray code, which is a valid 4-bit binary spelling of decimal 1?",
       "choices": [
         "0000",
         "0001",
@@ -1210,11 +1738,17 @@
       "answer": 1,
       "explain": "1 = 0001₂.",
       "difficulty": "hard",
-      "id": "gray_hard_29"
+      "id": "gray_hard_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_29.mp4",
+        "poster": "media/images/gray_hard_29-frame.png",
+        "figure": "media/images/gray_hard_29.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Which is a valid 4-bit binary spelling of decimal 2?",
+      "prompt": "In Gray code, which is a valid 4-bit binary spelling of decimal 2?",
       "choices": [
         "0011",
         "0010",
@@ -1224,7 +1758,13 @@
       "answer": 1,
       "explain": "2 = 0010₂.",
       "difficulty": "hard",
-      "id": "gray_hard_30"
+      "id": "gray_hard_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gray_hard_30.mp4",
+        "poster": "media/images/gray_hard_30-frame.png",
+        "figure": "media/images/gray_hard_30.png"
+      }
     }
   ]
 }

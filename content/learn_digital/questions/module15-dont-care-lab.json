@@ -14,7 +14,13 @@
       ],
       "answer": 2,
       "explain": "X marks combinations that may be treated as 0 or 1.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_easy_01.mp4",
+        "poster": "media/images/dontcare_easy_01-frame.png",
+        "figure": "media/images/dontcare_easy_01.png"
+      }
     },
     {
       "id": "dontcare_easy_02",
@@ -28,7 +34,13 @@
       ],
       "answer": 1,
       "explain": "ON (F=1) rows must be covered; OFF rows must not.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_easy_02.mp4",
+        "poster": "media/images/dontcare_easy_02-frame.png",
+        "figure": "media/images/dontcare_easy_02.png"
+      }
     },
     {
       "id": "dontcare_easy_03",
@@ -42,7 +54,13 @@
       ],
       "answer": 1,
       "explain": "X can enlarge groups and drop literals.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_easy_03.mp4",
+        "poster": "media/images/dontcare_easy_03-frame.png",
+        "figure": "media/images/dontcare_easy_03.png"
+      }
     },
     {
       "id": "dontcare_easy_04",
@@ -50,7 +68,425 @@
       "prompt": "OFF rows are forbidden inside any valid implicant.",
       "answer": true,
       "explain": "Never cover a specified 0.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_easy_04.mp4",
+        "poster": "media/images/dontcare_easy_04-frame.png",
+        "figure": "media/images/dontcare_easy_04.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Don't-care minimization: A 2-variable K-map has how many cells?",
+      "choices": [
+        "2",
+        "4",
+        "4",
+        "2"
+      ],
+      "answer": 1,
+      "explain": "2^2 = 4 minterms.",
+      "difficulty": "easy",
+      "id": "dontcare_easy_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_easy_05.mp4",
+        "poster": "media/images/dontcare_easy_05-frame.png",
+        "figure": "media/images/dontcare_easy_05.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Don't-care minimization: A 3-variable K-map has how many cells?",
+      "choices": [
+        "3",
+        "8",
+        "6",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "2^3 = 8 minterms.",
+      "difficulty": "easy",
+      "id": "dontcare_easy_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_easy_06.mp4",
+        "poster": "media/images/dontcare_easy_06-frame.png",
+        "figure": "media/images/dontcare_easy_06.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Don't-care minimization: A 4-variable K-map has how many cells?",
+      "choices": [
+        "4",
+        "16",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "2^4 = 16 minterms.",
+      "difficulty": "easy",
+      "id": "dontcare_easy_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_easy_07.mp4",
+        "poster": "media/images/dontcare_easy_07-frame.png",
+        "figure": "media/images/dontcare_easy_07.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Don't-care minimization: Gray adjacency is required so circling groups flips one variable.",
+      "answer": true,
+      "explain": "Gray border labels.",
+      "difficulty": "easy",
+      "id": "dontcare_easy_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_easy_08.mp4",
+        "poster": "media/images/dontcare_easy_08-frame.png",
+        "figure": "media/images/dontcare_easy_08.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Don't-care minimization: Don't-cares may be included in K-map groups to enlarge prime implicants.",
+      "answer": true,
+      "explain": "X can join 1s.",
+      "difficulty": "easy",
+      "id": "dontcare_easy_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_easy_09.mp4",
+        "poster": "media/images/dontcare_easy_09-frame.png",
+        "figure": "media/images/dontcare_easy_09.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Don't-care minimization: K-map groups must be powers of two in size.",
+      "answer": true,
+      "explain": "1,2,4,8,…",
+      "difficulty": "easy",
+      "id": "dontcare_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_easy_10.mp4",
+        "poster": "media/images/dontcare_easy_10-frame.png",
+        "figure": "media/images/dontcare_easy_10.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Don't-care minimization: Diagonal cells are always considered adjacent on a K-map.",
+      "answer": false,
+      "explain": "Adjacency is edge/wrap Gray neighbors.",
+      "difficulty": "easy",
+      "id": "dontcare_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_easy_11.mp4",
+        "poster": "media/images/dontcare_easy_11-frame.png",
+        "figure": "media/images/dontcare_easy_11.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Don't-care minimization: A valid K-map group of size 1 eliminates how many literals (vs full 4-var product)?",
+      "choices": [
+        "1",
+        "0",
+        "4",
+        "0"
+      ],
+      "answer": 2,
+      "explain": "Group of 1=2^k drops k literals from a 4-var term.",
+      "difficulty": "easy",
+      "id": "dontcare_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_easy_12.mp4",
+        "poster": "media/images/dontcare_easy_12-frame.png",
+        "figure": "media/images/dontcare_easy_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Don't-care minimization: A valid K-map group of size 2 eliminates how many literals (vs full 4-var product)?",
+      "choices": [
+        "2",
+        "1",
+        "3",
+        "0"
+      ],
+      "answer": 2,
+      "explain": "Group of 2=2^k drops k literals from a 4-var term.",
+      "difficulty": "easy",
+      "id": "dontcare_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_easy_13.mp4",
+        "poster": "media/images/dontcare_easy_13-frame.png",
+        "figure": "media/images/dontcare_easy_13.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Don't-care minimization: A valid K-map group of size 4 eliminates how many literals (vs full 4-var product)?",
+      "choices": [
+        "4",
+        "2",
+        "2",
+        "0"
+      ],
+      "answer": 2,
+      "explain": "Group of 4=2^k drops k literals from a 4-var term.",
+      "difficulty": "easy",
+      "id": "dontcare_easy_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_easy_14.mp4",
+        "poster": "media/images/dontcare_easy_14-frame.png",
+        "figure": "media/images/dontcare_easy_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Don't-care minimization: A valid K-map group of size 8 eliminates how many literals (vs full 4-var product)?",
+      "choices": [
+        "8",
+        "3",
+        "1",
+        "0"
+      ],
+      "answer": 2,
+      "explain": "Group of 8=2^k drops k literals from a 4-var term.",
+      "difficulty": "easy",
+      "id": "dontcare_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_easy_15.mp4",
+        "poster": "media/images/dontcare_easy_15-frame.png",
+        "figure": "media/images/dontcare_easy_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Don't-care minimization: Minimal SOP prefers…",
+      "choices": [
+        "largest legal groups covering all 1s",
+        "one cell per 1",
+        "only 0-cells",
+        "random circles"
+      ],
+      "answer": 0,
+      "explain": "Larger power-of-two groups → fewer literals.",
+      "difficulty": "easy",
+      "id": "dontcare_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_easy_16.mp4",
+        "poster": "media/images/dontcare_easy_16-frame.png",
+        "figure": "media/images/dontcare_easy_16.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Don't-care minimization: A + 0 = A",
+      "answer": true,
+      "explain": "Identity for OR.",
+      "difficulty": "easy",
+      "id": "dontcare_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_easy_17.mp4",
+        "poster": "media/images/dontcare_easy_17-frame.png",
+        "figure": "media/images/dontcare_easy_17.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Don't-care minimization: A · 1 = A",
+      "answer": true,
+      "explain": "Identity for AND.",
+      "difficulty": "easy",
+      "id": "dontcare_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_easy_18.mp4",
+        "poster": "media/images/dontcare_easy_18-frame.png",
+        "figure": "media/images/dontcare_easy_18.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Don't-care minimization: A + 1 = 1",
+      "answer": true,
+      "explain": "Annulment for OR.",
+      "difficulty": "easy",
+      "id": "dontcare_easy_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_easy_19.mp4",
+        "poster": "media/images/dontcare_easy_19-frame.png",
+        "figure": "media/images/dontcare_easy_19.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Don't-care minimization: A · 0 = 0",
+      "answer": true,
+      "explain": "Annulment for AND.",
+      "difficulty": "easy",
+      "id": "dontcare_easy_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_easy_20.mp4",
+        "poster": "media/images/dontcare_easy_20-frame.png",
+        "figure": "media/images/dontcare_easy_20.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Don't-care minimization: A + A = A",
+      "answer": true,
+      "explain": "Idempotent OR.",
+      "difficulty": "easy",
+      "id": "dontcare_easy_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_easy_21.mp4",
+        "poster": "media/images/dontcare_easy_21-frame.png",
+        "figure": "media/images/dontcare_easy_21.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Don't-care minimization: A · A = A",
+      "answer": true,
+      "explain": "Idempotent AND.",
+      "difficulty": "easy",
+      "id": "dontcare_easy_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_easy_22.mp4",
+        "poster": "media/images/dontcare_easy_22-frame.png",
+        "figure": "media/images/dontcare_easy_22.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Don't-care minimization: A + A' = 1",
+      "answer": true,
+      "explain": "Complement OR.",
+      "difficulty": "easy",
+      "id": "dontcare_easy_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_easy_23.mp4",
+        "poster": "media/images/dontcare_easy_23-frame.png",
+        "figure": "media/images/dontcare_easy_23.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Don't-care minimization: A · A' = 0",
+      "answer": true,
+      "explain": "Complement AND.",
+      "difficulty": "easy",
+      "id": "dontcare_easy_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_easy_24.mp4",
+        "poster": "media/images/dontcare_easy_24-frame.png",
+        "figure": "media/images/dontcare_easy_24.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Don't-care minimization: (A')' = A",
+      "answer": true,
+      "explain": "Involution.",
+      "difficulty": "easy",
+      "id": "dontcare_easy_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_easy_25.mp4",
+        "poster": "media/images/dontcare_easy_25-frame.png",
+        "figure": "media/images/dontcare_easy_25.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Don't-care minimization: A + AB = A",
+      "answer": true,
+      "explain": "Absorption.",
+      "difficulty": "easy",
+      "id": "dontcare_easy_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_easy_26.mp4",
+        "poster": "media/images/dontcare_easy_26-frame.png",
+        "figure": "media/images/dontcare_easy_26.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Don't-care minimization: A(A+B) = A",
+      "answer": true,
+      "explain": "Absorption.",
+      "difficulty": "easy",
+      "id": "dontcare_easy_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_easy_27.mp4",
+        "poster": "media/images/dontcare_easy_27-frame.png",
+        "figure": "media/images/dontcare_easy_27.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Don't-care minimization: A + B = B + A",
+      "answer": true,
+      "explain": "OR commutative.",
+      "difficulty": "easy",
+      "id": "dontcare_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_easy_28.mp4",
+        "poster": "media/images/dontcare_easy_28-frame.png",
+        "figure": "media/images/dontcare_easy_28.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Don't-care minimization: AB = BA",
+      "answer": true,
+      "explain": "AND commutative.",
+      "difficulty": "easy",
+      "id": "dontcare_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_easy_29.mp4",
+        "poster": "media/images/dontcare_easy_29-frame.png",
+        "figure": "media/images/dontcare_easy_29.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Don't-care minimization: A+B = A·B",
+      "answer": false,
+      "explain": "OR is not AND.",
+      "difficulty": "easy",
+      "id": "dontcare_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_easy_30.mp4",
+        "poster": "media/images/dontcare_easy_30-frame.png",
+        "figure": "media/images/dontcare_easy_30.png"
+      }
     },
     {
       "id": "dontcare_medium_01",
@@ -64,7 +500,13 @@
       ],
       "answer": 2,
       "explain": "X may join groups when helpful.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_medium_01.mp4",
+        "poster": "media/images/dontcare_medium_01-frame.png",
+        "figure": "media/images/dontcare_medium_01.png"
+      }
     },
     {
       "id": "dontcare_medium_02",
@@ -78,7 +520,13 @@
       ],
       "answer": 1,
       "explain": "Σm with d(…) lists minterms and don't-cares.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_medium_02.mp4",
+        "poster": "media/images/dontcare_medium_02-frame.png",
+        "figure": "media/images/dontcare_medium_02.png"
+      }
     },
     {
       "id": "dontcare_medium_03",
@@ -92,7 +540,13 @@
       ],
       "answer": 1,
       "explain": "Treating X as OFF by default can miss a smaller cover.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_medium_03.mp4",
+        "poster": "media/images/dontcare_medium_03-frame.png",
+        "figure": "media/images/dontcare_medium_03.png"
+      }
     },
     {
       "id": "dontcare_medium_04",
@@ -100,7 +554,425 @@
       "prompt": "Valid covers may leave some X uncovered.",
       "answer": true,
       "explain": "X is optional; leaving X uncovered is fine.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_medium_04.mp4",
+        "poster": "media/images/dontcare_medium_04-frame.png",
+        "figure": "media/images/dontcare_medium_04.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Don't-care minimization, a 2-variable K-map has how many cells?",
+      "choices": [
+        "2",
+        "4",
+        "4",
+        "2"
+      ],
+      "answer": 1,
+      "explain": "2^2 = 4 minterms.",
+      "difficulty": "medium",
+      "id": "dontcare_medium_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_medium_05.mp4",
+        "poster": "media/images/dontcare_medium_05-frame.png",
+        "figure": "media/images/dontcare_medium_05.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Don't-care minimization, a 3-variable K-map has how many cells?",
+      "choices": [
+        "3",
+        "8",
+        "6",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "2^3 = 8 minterms.",
+      "difficulty": "medium",
+      "id": "dontcare_medium_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_medium_06.mp4",
+        "poster": "media/images/dontcare_medium_06-frame.png",
+        "figure": "media/images/dontcare_medium_06.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Don't-care minimization, a 4-variable K-map has how many cells?",
+      "choices": [
+        "4",
+        "16",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "2^4 = 16 minterms.",
+      "difficulty": "medium",
+      "id": "dontcare_medium_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_medium_07.mp4",
+        "poster": "media/images/dontcare_medium_07-frame.png",
+        "figure": "media/images/dontcare_medium_07.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Don't-care minimization, gray adjacency is required so circling groups flips one variable.",
+      "answer": true,
+      "explain": "Gray border labels.",
+      "difficulty": "medium",
+      "id": "dontcare_medium_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_medium_08.mp4",
+        "poster": "media/images/dontcare_medium_08-frame.png",
+        "figure": "media/images/dontcare_medium_08.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Don't-care minimization, don't-cares may be included in K-map groups to enlarge prime implicants.",
+      "answer": true,
+      "explain": "X can join 1s.",
+      "difficulty": "medium",
+      "id": "dontcare_medium_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_medium_09.mp4",
+        "poster": "media/images/dontcare_medium_09-frame.png",
+        "figure": "media/images/dontcare_medium_09.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Don't-care minimization, k-map groups must be powers of two in size.",
+      "answer": true,
+      "explain": "1,2,4,8,…",
+      "difficulty": "medium",
+      "id": "dontcare_medium_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_medium_10.mp4",
+        "poster": "media/images/dontcare_medium_10-frame.png",
+        "figure": "media/images/dontcare_medium_10.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Don't-care minimization, diagonal cells are always considered adjacent on a K-map.",
+      "answer": false,
+      "explain": "Adjacency is edge/wrap Gray neighbors.",
+      "difficulty": "medium",
+      "id": "dontcare_medium_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_medium_11.mp4",
+        "poster": "media/images/dontcare_medium_11-frame.png",
+        "figure": "media/images/dontcare_medium_11.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Don't-care minimization, a valid K-map group of size 1 eliminates how many literals (vs full 4-var product)?",
+      "choices": [
+        "1",
+        "0",
+        "4",
+        "0"
+      ],
+      "answer": 2,
+      "explain": "Group of 1=2^k drops k literals from a 4-var term.",
+      "difficulty": "medium",
+      "id": "dontcare_medium_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_medium_12.mp4",
+        "poster": "media/images/dontcare_medium_12-frame.png",
+        "figure": "media/images/dontcare_medium_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Don't-care minimization, a valid K-map group of size 2 eliminates how many literals (vs full 4-var product)?",
+      "choices": [
+        "2",
+        "1",
+        "3",
+        "0"
+      ],
+      "answer": 2,
+      "explain": "Group of 2=2^k drops k literals from a 4-var term.",
+      "difficulty": "medium",
+      "id": "dontcare_medium_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_medium_13.mp4",
+        "poster": "media/images/dontcare_medium_13-frame.png",
+        "figure": "media/images/dontcare_medium_13.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Don't-care minimization, a valid K-map group of size 4 eliminates how many literals (vs full 4-var product)?",
+      "choices": [
+        "4",
+        "2",
+        "2",
+        "0"
+      ],
+      "answer": 2,
+      "explain": "Group of 4=2^k drops k literals from a 4-var term.",
+      "difficulty": "medium",
+      "id": "dontcare_medium_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_medium_14.mp4",
+        "poster": "media/images/dontcare_medium_14-frame.png",
+        "figure": "media/images/dontcare_medium_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Don't-care minimization, a valid K-map group of size 8 eliminates how many literals (vs full 4-var product)?",
+      "choices": [
+        "8",
+        "3",
+        "1",
+        "0"
+      ],
+      "answer": 2,
+      "explain": "Group of 8=2^k drops k literals from a 4-var term.",
+      "difficulty": "medium",
+      "id": "dontcare_medium_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_medium_15.mp4",
+        "poster": "media/images/dontcare_medium_15-frame.png",
+        "figure": "media/images/dontcare_medium_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Don't-care minimization, minimal SOP prefers…",
+      "choices": [
+        "largest legal groups covering all 1s",
+        "one cell per 1",
+        "only 0-cells",
+        "random circles"
+      ],
+      "answer": 0,
+      "explain": "Larger power-of-two groups → fewer literals.",
+      "difficulty": "medium",
+      "id": "dontcare_medium_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_medium_16.mp4",
+        "poster": "media/images/dontcare_medium_16-frame.png",
+        "figure": "media/images/dontcare_medium_16.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Don't-care minimization, a + 0 = A",
+      "answer": true,
+      "explain": "Identity for OR.",
+      "difficulty": "medium",
+      "id": "dontcare_medium_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_medium_17.mp4",
+        "poster": "media/images/dontcare_medium_17-frame.png",
+        "figure": "media/images/dontcare_medium_17.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Don't-care minimization, a · 1 = A",
+      "answer": true,
+      "explain": "Identity for AND.",
+      "difficulty": "medium",
+      "id": "dontcare_medium_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_medium_18.mp4",
+        "poster": "media/images/dontcare_medium_18-frame.png",
+        "figure": "media/images/dontcare_medium_18.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Don't-care minimization, a + 1 = 1",
+      "answer": true,
+      "explain": "Annulment for OR.",
+      "difficulty": "medium",
+      "id": "dontcare_medium_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_medium_19.mp4",
+        "poster": "media/images/dontcare_medium_19-frame.png",
+        "figure": "media/images/dontcare_medium_19.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Don't-care minimization, a · 0 = 0",
+      "answer": true,
+      "explain": "Annulment for AND.",
+      "difficulty": "medium",
+      "id": "dontcare_medium_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_medium_20.mp4",
+        "poster": "media/images/dontcare_medium_20-frame.png",
+        "figure": "media/images/dontcare_medium_20.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Don't-care minimization, a + A = A",
+      "answer": true,
+      "explain": "Idempotent OR.",
+      "difficulty": "medium",
+      "id": "dontcare_medium_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_medium_21.mp4",
+        "poster": "media/images/dontcare_medium_21-frame.png",
+        "figure": "media/images/dontcare_medium_21.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Don't-care minimization, a · A = A",
+      "answer": true,
+      "explain": "Idempotent AND.",
+      "difficulty": "medium",
+      "id": "dontcare_medium_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_medium_22.mp4",
+        "poster": "media/images/dontcare_medium_22-frame.png",
+        "figure": "media/images/dontcare_medium_22.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Don't-care minimization, a + A' = 1",
+      "answer": true,
+      "explain": "Complement OR.",
+      "difficulty": "medium",
+      "id": "dontcare_medium_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_medium_23.mp4",
+        "poster": "media/images/dontcare_medium_23-frame.png",
+        "figure": "media/images/dontcare_medium_23.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Don't-care minimization, a · A' = 0",
+      "answer": true,
+      "explain": "Complement AND.",
+      "difficulty": "medium",
+      "id": "dontcare_medium_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_medium_24.mp4",
+        "poster": "media/images/dontcare_medium_24-frame.png",
+        "figure": "media/images/dontcare_medium_24.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Don't-care minimization, (A')' = A",
+      "answer": true,
+      "explain": "Involution.",
+      "difficulty": "medium",
+      "id": "dontcare_medium_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_medium_25.mp4",
+        "poster": "media/images/dontcare_medium_25-frame.png",
+        "figure": "media/images/dontcare_medium_25.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Don't-care minimization, a + AB = A",
+      "answer": true,
+      "explain": "Absorption.",
+      "difficulty": "medium",
+      "id": "dontcare_medium_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_medium_26.mp4",
+        "poster": "media/images/dontcare_medium_26-frame.png",
+        "figure": "media/images/dontcare_medium_26.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Don't-care minimization, a(A+B) = A",
+      "answer": true,
+      "explain": "Absorption.",
+      "difficulty": "medium",
+      "id": "dontcare_medium_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_medium_27.mp4",
+        "poster": "media/images/dontcare_medium_27-frame.png",
+        "figure": "media/images/dontcare_medium_27.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Don't-care minimization, a + B = B + A",
+      "answer": true,
+      "explain": "OR commutative.",
+      "difficulty": "medium",
+      "id": "dontcare_medium_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_medium_28.mp4",
+        "poster": "media/images/dontcare_medium_28-frame.png",
+        "figure": "media/images/dontcare_medium_28.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Don't-care minimization, aB = BA",
+      "answer": true,
+      "explain": "AND commutative.",
+      "difficulty": "medium",
+      "id": "dontcare_medium_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_medium_29.mp4",
+        "poster": "media/images/dontcare_medium_29-frame.png",
+        "figure": "media/images/dontcare_medium_29.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Don't-care minimization, a+B = A·B",
+      "answer": false,
+      "explain": "OR is not AND.",
+      "difficulty": "medium",
+      "id": "dontcare_medium_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_medium_30.mp4",
+        "poster": "media/images/dontcare_medium_30-frame.png",
+        "figure": "media/images/dontcare_medium_30.png"
+      }
     },
     {
       "id": "dontcare_hard_01",
@@ -114,7 +986,13 @@
       ],
       "answer": 0,
       "explain": "Cover ON; optionally X; never OFF.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_hard_01.mp4",
+        "poster": "media/images/dontcare_hard_01-frame.png",
+        "figure": "media/images/dontcare_hard_01.png"
+      }
     },
     {
       "id": "dontcare_hard_02",
@@ -128,7 +1006,13 @@
       ],
       "answer": 1,
       "explain": "Different X choices can give different but valid covers.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_hard_02.mp4",
+        "poster": "media/images/dontcare_hard_02-frame.png",
+        "figure": "media/images/dontcare_hard_02.png"
+      }
     },
     {
       "id": "dontcare_hard_03",
@@ -142,7 +1026,13 @@
       ],
       "answer": 0,
       "explain": "Spec must say what is truly don't-care.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_hard_03.mp4",
+        "poster": "media/images/dontcare_hard_03-frame.png",
+        "figure": "media/images/dontcare_hard_03.png"
+      }
     },
     {
       "id": "dontcare_hard_04",
@@ -150,523 +1040,17 @@
       "prompt": "Once minimized with X, the ON set may legally shrink.",
       "answer": false,
       "explain": "ON must stay covered; OFF must stay uncovered.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_hard_04.mp4",
+        "poster": "media/images/dontcare_hard_04-frame.png",
+        "figure": "media/images/dontcare_hard_04.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "A 2-variable K-map has how many cells?",
-      "choices": [
-        "2",
-        "4",
-        "4",
-        "2"
-      ],
-      "answer": 1,
-      "explain": "2^2 = 4 minterms.",
-      "difficulty": "easy",
-      "id": "dontcare_easy_05"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A 3-variable K-map has how many cells?",
-      "choices": [
-        "3",
-        "8",
-        "6",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "2^3 = 8 minterms.",
-      "difficulty": "easy",
-      "id": "dontcare_easy_06"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A 4-variable K-map has how many cells?",
-      "choices": [
-        "4",
-        "16",
-        "8",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "2^4 = 16 minterms.",
-      "difficulty": "easy",
-      "id": "dontcare_easy_07"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Gray adjacency is required so circling groups flips one variable.",
-      "answer": true,
-      "explain": "Gray border labels.",
-      "difficulty": "easy",
-      "id": "dontcare_easy_08"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Don't-cares may be included in K-map groups to enlarge prime implicants.",
-      "answer": true,
-      "explain": "X can join 1s.",
-      "difficulty": "easy",
-      "id": "dontcare_easy_09"
-    },
-    {
-      "type": "true_false",
-      "prompt": "K-map groups must be powers of two in size.",
-      "answer": true,
-      "explain": "1,2,4,8,…",
-      "difficulty": "easy",
-      "id": "dontcare_easy_10"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Diagonal cells are always considered adjacent on a K-map.",
-      "answer": false,
-      "explain": "Adjacency is edge/wrap Gray neighbors.",
-      "difficulty": "easy",
-      "id": "dontcare_easy_11"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A valid K-map group of size 1 eliminates how many literals (vs full 4-var product)?",
-      "choices": [
-        "1",
-        "0",
-        "4",
-        "0"
-      ],
-      "answer": 2,
-      "explain": "Group of 1=2^k drops k literals from a 4-var term.",
-      "difficulty": "easy",
-      "id": "dontcare_easy_12"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A valid K-map group of size 2 eliminates how many literals (vs full 4-var product)?",
-      "choices": [
-        "2",
-        "1",
-        "3",
-        "0"
-      ],
-      "answer": 2,
-      "explain": "Group of 2=2^k drops k literals from a 4-var term.",
-      "difficulty": "easy",
-      "id": "dontcare_easy_13"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A valid K-map group of size 4 eliminates how many literals (vs full 4-var product)?",
-      "choices": [
-        "4",
-        "2",
-        "2",
-        "0"
-      ],
-      "answer": 2,
-      "explain": "Group of 4=2^k drops k literals from a 4-var term.",
-      "difficulty": "easy",
-      "id": "dontcare_easy_14"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A valid K-map group of size 8 eliminates how many literals (vs full 4-var product)?",
-      "choices": [
-        "8",
-        "3",
-        "1",
-        "0"
-      ],
-      "answer": 2,
-      "explain": "Group of 8=2^k drops k literals from a 4-var term.",
-      "difficulty": "easy",
-      "id": "dontcare_easy_15"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimal SOP prefers…",
-      "choices": [
-        "largest legal groups covering all 1s",
-        "one cell per 1",
-        "only 0-cells",
-        "random circles"
-      ],
-      "answer": 0,
-      "explain": "Larger power-of-two groups → fewer literals.",
-      "difficulty": "easy",
-      "id": "dontcare_easy_16"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A + 0 = A",
-      "answer": true,
-      "explain": "Identity for OR.",
-      "difficulty": "easy",
-      "id": "dontcare_easy_17"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A · 1 = A",
-      "answer": true,
-      "explain": "Identity for AND.",
-      "difficulty": "easy",
-      "id": "dontcare_easy_18"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A + 1 = 1",
-      "answer": true,
-      "explain": "Annulment for OR.",
-      "difficulty": "easy",
-      "id": "dontcare_easy_19"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A · 0 = 0",
-      "answer": true,
-      "explain": "Annulment for AND.",
-      "difficulty": "easy",
-      "id": "dontcare_easy_20"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A + A = A",
-      "answer": true,
-      "explain": "Idempotent OR.",
-      "difficulty": "easy",
-      "id": "dontcare_easy_21"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A · A = A",
-      "answer": true,
-      "explain": "Idempotent AND.",
-      "difficulty": "easy",
-      "id": "dontcare_easy_22"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A + A' = 1",
-      "answer": true,
-      "explain": "Complement OR.",
-      "difficulty": "easy",
-      "id": "dontcare_easy_23"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A · A' = 0",
-      "answer": true,
-      "explain": "Complement AND.",
-      "difficulty": "easy",
-      "id": "dontcare_easy_24"
-    },
-    {
-      "type": "true_false",
-      "prompt": "(A')' = A",
-      "answer": true,
-      "explain": "Involution.",
-      "difficulty": "easy",
-      "id": "dontcare_easy_25"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A + AB = A",
-      "answer": true,
-      "explain": "Absorption.",
-      "difficulty": "easy",
-      "id": "dontcare_easy_26"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A(A+B) = A",
-      "answer": true,
-      "explain": "Absorption.",
-      "difficulty": "easy",
-      "id": "dontcare_easy_27"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A + B = B + A",
-      "answer": true,
-      "explain": "OR commutative.",
-      "difficulty": "easy",
-      "id": "dontcare_easy_28"
-    },
-    {
-      "type": "true_false",
-      "prompt": "AB = BA",
-      "answer": true,
-      "explain": "AND commutative.",
-      "difficulty": "easy",
-      "id": "dontcare_easy_29"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A+B = A·B",
-      "answer": false,
-      "explain": "OR is not AND.",
-      "difficulty": "easy",
-      "id": "dontcare_easy_30"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A 2-variable K-map has how many cells?",
-      "choices": [
-        "2",
-        "4",
-        "4",
-        "2"
-      ],
-      "answer": 1,
-      "explain": "2^2 = 4 minterms.",
-      "difficulty": "medium",
-      "id": "dontcare_medium_05"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A 3-variable K-map has how many cells?",
-      "choices": [
-        "3",
-        "8",
-        "6",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "2^3 = 8 minterms.",
-      "difficulty": "medium",
-      "id": "dontcare_medium_06"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A 4-variable K-map has how many cells?",
-      "choices": [
-        "4",
-        "16",
-        "8",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "2^4 = 16 minterms.",
-      "difficulty": "medium",
-      "id": "dontcare_medium_07"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Gray adjacency is required so circling groups flips one variable.",
-      "answer": true,
-      "explain": "Gray border labels.",
-      "difficulty": "medium",
-      "id": "dontcare_medium_08"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Don't-cares may be included in K-map groups to enlarge prime implicants.",
-      "answer": true,
-      "explain": "X can join 1s.",
-      "difficulty": "medium",
-      "id": "dontcare_medium_09"
-    },
-    {
-      "type": "true_false",
-      "prompt": "K-map groups must be powers of two in size.",
-      "answer": true,
-      "explain": "1,2,4,8,…",
-      "difficulty": "medium",
-      "id": "dontcare_medium_10"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Diagonal cells are always considered adjacent on a K-map.",
-      "answer": false,
-      "explain": "Adjacency is edge/wrap Gray neighbors.",
-      "difficulty": "medium",
-      "id": "dontcare_medium_11"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A valid K-map group of size 1 eliminates how many literals (vs full 4-var product)?",
-      "choices": [
-        "1",
-        "0",
-        "4",
-        "0"
-      ],
-      "answer": 2,
-      "explain": "Group of 1=2^k drops k literals from a 4-var term.",
-      "difficulty": "medium",
-      "id": "dontcare_medium_12"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A valid K-map group of size 2 eliminates how many literals (vs full 4-var product)?",
-      "choices": [
-        "2",
-        "1",
-        "3",
-        "0"
-      ],
-      "answer": 2,
-      "explain": "Group of 2=2^k drops k literals from a 4-var term.",
-      "difficulty": "medium",
-      "id": "dontcare_medium_13"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A valid K-map group of size 4 eliminates how many literals (vs full 4-var product)?",
-      "choices": [
-        "4",
-        "2",
-        "2",
-        "0"
-      ],
-      "answer": 2,
-      "explain": "Group of 4=2^k drops k literals from a 4-var term.",
-      "difficulty": "medium",
-      "id": "dontcare_medium_14"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A valid K-map group of size 8 eliminates how many literals (vs full 4-var product)?",
-      "choices": [
-        "8",
-        "3",
-        "1",
-        "0"
-      ],
-      "answer": 2,
-      "explain": "Group of 8=2^k drops k literals from a 4-var term.",
-      "difficulty": "medium",
-      "id": "dontcare_medium_15"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimal SOP prefers…",
-      "choices": [
-        "largest legal groups covering all 1s",
-        "one cell per 1",
-        "only 0-cells",
-        "random circles"
-      ],
-      "answer": 0,
-      "explain": "Larger power-of-two groups → fewer literals.",
-      "difficulty": "medium",
-      "id": "dontcare_medium_16"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A + 0 = A",
-      "answer": true,
-      "explain": "Identity for OR.",
-      "difficulty": "medium",
-      "id": "dontcare_medium_17"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A · 1 = A",
-      "answer": true,
-      "explain": "Identity for AND.",
-      "difficulty": "medium",
-      "id": "dontcare_medium_18"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A + 1 = 1",
-      "answer": true,
-      "explain": "Annulment for OR.",
-      "difficulty": "medium",
-      "id": "dontcare_medium_19"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A · 0 = 0",
-      "answer": true,
-      "explain": "Annulment for AND.",
-      "difficulty": "medium",
-      "id": "dontcare_medium_20"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A + A = A",
-      "answer": true,
-      "explain": "Idempotent OR.",
-      "difficulty": "medium",
-      "id": "dontcare_medium_21"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A · A = A",
-      "answer": true,
-      "explain": "Idempotent AND.",
-      "difficulty": "medium",
-      "id": "dontcare_medium_22"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A + A' = 1",
-      "answer": true,
-      "explain": "Complement OR.",
-      "difficulty": "medium",
-      "id": "dontcare_medium_23"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A · A' = 0",
-      "answer": true,
-      "explain": "Complement AND.",
-      "difficulty": "medium",
-      "id": "dontcare_medium_24"
-    },
-    {
-      "type": "true_false",
-      "prompt": "(A')' = A",
-      "answer": true,
-      "explain": "Involution.",
-      "difficulty": "medium",
-      "id": "dontcare_medium_25"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A + AB = A",
-      "answer": true,
-      "explain": "Absorption.",
-      "difficulty": "medium",
-      "id": "dontcare_medium_26"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A(A+B) = A",
-      "answer": true,
-      "explain": "Absorption.",
-      "difficulty": "medium",
-      "id": "dontcare_medium_27"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A + B = B + A",
-      "answer": true,
-      "explain": "OR commutative.",
-      "difficulty": "medium",
-      "id": "dontcare_medium_28"
-    },
-    {
-      "type": "true_false",
-      "prompt": "AB = BA",
-      "answer": true,
-      "explain": "AND commutative.",
-      "difficulty": "medium",
-      "id": "dontcare_medium_29"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A+B = A·B",
-      "answer": false,
-      "explain": "OR is not AND.",
-      "difficulty": "medium",
-      "id": "dontcare_medium_30"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A 2-variable K-map has how many cells?",
+      "prompt": "For the Don't-care minimization lab: A 2-variable K-map has how many cells?",
       "choices": [
         "2",
         "4",
@@ -676,11 +1060,17 @@
       "answer": 1,
       "explain": "2^2 = 4 minterms.",
       "difficulty": "hard",
-      "id": "dontcare_hard_05"
+      "id": "dontcare_hard_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_hard_05.mp4",
+        "poster": "media/images/dontcare_hard_05-frame.png",
+        "figure": "media/images/dontcare_hard_05.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "A 3-variable K-map has how many cells?",
+      "prompt": "For the Don't-care minimization lab: A 3-variable K-map has how many cells?",
       "choices": [
         "3",
         "8",
@@ -690,11 +1080,17 @@
       "answer": 1,
       "explain": "2^3 = 8 minterms.",
       "difficulty": "hard",
-      "id": "dontcare_hard_06"
+      "id": "dontcare_hard_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_hard_06.mp4",
+        "poster": "media/images/dontcare_hard_06-frame.png",
+        "figure": "media/images/dontcare_hard_06.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "A 4-variable K-map has how many cells?",
+      "prompt": "For the Don't-care minimization lab: A 4-variable K-map has how many cells?",
       "choices": [
         "4",
         "16",
@@ -704,43 +1100,73 @@
       "answer": 1,
       "explain": "2^4 = 16 minterms.",
       "difficulty": "hard",
-      "id": "dontcare_hard_07"
+      "id": "dontcare_hard_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_hard_07.mp4",
+        "poster": "media/images/dontcare_hard_07-frame.png",
+        "figure": "media/images/dontcare_hard_07.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Gray adjacency is required so circling groups flips one variable.",
+      "prompt": "For the Don't-care minimization lab: Gray adjacency is required so circling groups flips one variable.",
       "answer": true,
       "explain": "Gray border labels.",
       "difficulty": "hard",
-      "id": "dontcare_hard_08"
+      "id": "dontcare_hard_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_hard_08.mp4",
+        "poster": "media/images/dontcare_hard_08-frame.png",
+        "figure": "media/images/dontcare_hard_08.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Don't-cares may be included in K-map groups to enlarge prime implicants.",
+      "prompt": "For the Don't-care minimization lab: Don't-cares may be included in K-map groups to enlarge prime implicants.",
       "answer": true,
       "explain": "X can join 1s.",
       "difficulty": "hard",
-      "id": "dontcare_hard_09"
+      "id": "dontcare_hard_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_hard_09.mp4",
+        "poster": "media/images/dontcare_hard_09-frame.png",
+        "figure": "media/images/dontcare_hard_09.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "K-map groups must be powers of two in size.",
+      "prompt": "For the Don't-care minimization lab: K-map groups must be powers of two in size.",
       "answer": true,
       "explain": "1,2,4,8,…",
       "difficulty": "hard",
-      "id": "dontcare_hard_10"
+      "id": "dontcare_hard_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_hard_10.mp4",
+        "poster": "media/images/dontcare_hard_10-frame.png",
+        "figure": "media/images/dontcare_hard_10.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Diagonal cells are always considered adjacent on a K-map.",
+      "prompt": "For the Don't-care minimization lab: Diagonal cells are always considered adjacent on a K-map.",
       "answer": false,
       "explain": "Adjacency is edge/wrap Gray neighbors.",
       "difficulty": "hard",
-      "id": "dontcare_hard_11"
+      "id": "dontcare_hard_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_hard_11.mp4",
+        "poster": "media/images/dontcare_hard_11-frame.png",
+        "figure": "media/images/dontcare_hard_11.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "A valid K-map group of size 1 eliminates how many literals (vs full 4-var product)?",
+      "prompt": "For the Don't-care minimization lab: A valid K-map group of size 1 eliminates how many literals (vs full 4-var product)?",
       "choices": [
         "1",
         "0",
@@ -750,11 +1176,17 @@
       "answer": 2,
       "explain": "Group of 1=2^k drops k literals from a 4-var term.",
       "difficulty": "hard",
-      "id": "dontcare_hard_12"
+      "id": "dontcare_hard_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_hard_12.mp4",
+        "poster": "media/images/dontcare_hard_12-frame.png",
+        "figure": "media/images/dontcare_hard_12.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "A valid K-map group of size 2 eliminates how many literals (vs full 4-var product)?",
+      "prompt": "For the Don't-care minimization lab: A valid K-map group of size 2 eliminates how many literals (vs full 4-var product)?",
       "choices": [
         "2",
         "1",
@@ -764,11 +1196,17 @@
       "answer": 2,
       "explain": "Group of 2=2^k drops k literals from a 4-var term.",
       "difficulty": "hard",
-      "id": "dontcare_hard_13"
+      "id": "dontcare_hard_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_hard_13.mp4",
+        "poster": "media/images/dontcare_hard_13-frame.png",
+        "figure": "media/images/dontcare_hard_13.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "A valid K-map group of size 4 eliminates how many literals (vs full 4-var product)?",
+      "prompt": "For the Don't-care minimization lab: A valid K-map group of size 4 eliminates how many literals (vs full 4-var product)?",
       "choices": [
         "4",
         "2",
@@ -778,11 +1216,17 @@
       "answer": 2,
       "explain": "Group of 4=2^k drops k literals from a 4-var term.",
       "difficulty": "hard",
-      "id": "dontcare_hard_14"
+      "id": "dontcare_hard_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_hard_14.mp4",
+        "poster": "media/images/dontcare_hard_14-frame.png",
+        "figure": "media/images/dontcare_hard_14.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "A valid K-map group of size 8 eliminates how many literals (vs full 4-var product)?",
+      "prompt": "For the Don't-care minimization lab: A valid K-map group of size 8 eliminates how many literals (vs full 4-var product)?",
       "choices": [
         "8",
         "3",
@@ -792,11 +1236,17 @@
       "answer": 2,
       "explain": "Group of 8=2^k drops k literals from a 4-var term.",
       "difficulty": "hard",
-      "id": "dontcare_hard_15"
+      "id": "dontcare_hard_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_hard_15.mp4",
+        "poster": "media/images/dontcare_hard_15-frame.png",
+        "figure": "media/images/dontcare_hard_15.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Minimal SOP prefers…",
+      "prompt": "For the Don't-care minimization lab: Minimal SOP prefers…",
       "choices": [
         "largest legal groups covering all 1s",
         "one cell per 1",
@@ -806,119 +1256,209 @@
       "answer": 0,
       "explain": "Larger power-of-two groups → fewer literals.",
       "difficulty": "hard",
-      "id": "dontcare_hard_16"
+      "id": "dontcare_hard_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_hard_16.mp4",
+        "poster": "media/images/dontcare_hard_16-frame.png",
+        "figure": "media/images/dontcare_hard_16.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A + 0 = A",
+      "prompt": "For the Don't-care minimization lab: A + 0 = A",
       "answer": true,
       "explain": "Identity for OR.",
       "difficulty": "hard",
-      "id": "dontcare_hard_17"
+      "id": "dontcare_hard_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_hard_17.mp4",
+        "poster": "media/images/dontcare_hard_17-frame.png",
+        "figure": "media/images/dontcare_hard_17.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A · 1 = A",
+      "prompt": "For the Don't-care minimization lab: A · 1 = A",
       "answer": true,
       "explain": "Identity for AND.",
       "difficulty": "hard",
-      "id": "dontcare_hard_18"
+      "id": "dontcare_hard_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_hard_18.mp4",
+        "poster": "media/images/dontcare_hard_18-frame.png",
+        "figure": "media/images/dontcare_hard_18.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A + 1 = 1",
+      "prompt": "For the Don't-care minimization lab: A + 1 = 1",
       "answer": true,
       "explain": "Annulment for OR.",
       "difficulty": "hard",
-      "id": "dontcare_hard_19"
+      "id": "dontcare_hard_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_hard_19.mp4",
+        "poster": "media/images/dontcare_hard_19-frame.png",
+        "figure": "media/images/dontcare_hard_19.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A · 0 = 0",
+      "prompt": "For the Don't-care minimization lab: A · 0 = 0",
       "answer": true,
       "explain": "Annulment for AND.",
       "difficulty": "hard",
-      "id": "dontcare_hard_20"
+      "id": "dontcare_hard_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_hard_20.mp4",
+        "poster": "media/images/dontcare_hard_20-frame.png",
+        "figure": "media/images/dontcare_hard_20.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A + A = A",
+      "prompt": "For the Don't-care minimization lab: A + A = A",
       "answer": true,
       "explain": "Idempotent OR.",
       "difficulty": "hard",
-      "id": "dontcare_hard_21"
+      "id": "dontcare_hard_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_hard_21.mp4",
+        "poster": "media/images/dontcare_hard_21-frame.png",
+        "figure": "media/images/dontcare_hard_21.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A · A = A",
+      "prompt": "For the Don't-care minimization lab: A · A = A",
       "answer": true,
       "explain": "Idempotent AND.",
       "difficulty": "hard",
-      "id": "dontcare_hard_22"
+      "id": "dontcare_hard_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_hard_22.mp4",
+        "poster": "media/images/dontcare_hard_22-frame.png",
+        "figure": "media/images/dontcare_hard_22.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A + A' = 1",
+      "prompt": "For the Don't-care minimization lab: A + A' = 1",
       "answer": true,
       "explain": "Complement OR.",
       "difficulty": "hard",
-      "id": "dontcare_hard_23"
+      "id": "dontcare_hard_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_hard_23.mp4",
+        "poster": "media/images/dontcare_hard_23-frame.png",
+        "figure": "media/images/dontcare_hard_23.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A · A' = 0",
+      "prompt": "For the Don't-care minimization lab: A · A' = 0",
       "answer": true,
       "explain": "Complement AND.",
       "difficulty": "hard",
-      "id": "dontcare_hard_24"
+      "id": "dontcare_hard_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_hard_24.mp4",
+        "poster": "media/images/dontcare_hard_24-frame.png",
+        "figure": "media/images/dontcare_hard_24.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "(A')' = A",
+      "prompt": "For the Don't-care minimization lab: (A')' = A",
       "answer": true,
       "explain": "Involution.",
       "difficulty": "hard",
-      "id": "dontcare_hard_25"
+      "id": "dontcare_hard_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_hard_25.mp4",
+        "poster": "media/images/dontcare_hard_25-frame.png",
+        "figure": "media/images/dontcare_hard_25.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A + AB = A",
+      "prompt": "For the Don't-care minimization lab: A + AB = A",
       "answer": true,
       "explain": "Absorption.",
       "difficulty": "hard",
-      "id": "dontcare_hard_26"
+      "id": "dontcare_hard_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_hard_26.mp4",
+        "poster": "media/images/dontcare_hard_26-frame.png",
+        "figure": "media/images/dontcare_hard_26.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A(A+B) = A",
+      "prompt": "For the Don't-care minimization lab: A(A+B) = A",
       "answer": true,
       "explain": "Absorption.",
       "difficulty": "hard",
-      "id": "dontcare_hard_27"
+      "id": "dontcare_hard_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_hard_27.mp4",
+        "poster": "media/images/dontcare_hard_27-frame.png",
+        "figure": "media/images/dontcare_hard_27.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A + B = B + A",
+      "prompt": "For the Don't-care minimization lab: A + B = B + A",
       "answer": true,
       "explain": "OR commutative.",
       "difficulty": "hard",
-      "id": "dontcare_hard_28"
+      "id": "dontcare_hard_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_hard_28.mp4",
+        "poster": "media/images/dontcare_hard_28-frame.png",
+        "figure": "media/images/dontcare_hard_28.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "AB = BA",
+      "prompt": "For the Don't-care minimization lab: AB = BA",
       "answer": true,
       "explain": "AND commutative.",
       "difficulty": "hard",
-      "id": "dontcare_hard_29"
+      "id": "dontcare_hard_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_hard_29.mp4",
+        "poster": "media/images/dontcare_hard_29-frame.png",
+        "figure": "media/images/dontcare_hard_29.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A+B = A·B",
+      "prompt": "For the Don't-care minimization lab: A+B = A·B",
       "answer": false,
       "explain": "OR is not AND.",
       "difficulty": "hard",
-      "id": "dontcare_hard_30"
+      "id": "dontcare_hard_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dontcare_hard_30.mp4",
+        "poster": "media/images/dontcare_hard_30-frame.png",
+        "figure": "media/images/dontcare_hard_30.png"
+      }
     }
   ]
 }

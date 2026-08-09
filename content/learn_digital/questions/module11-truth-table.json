@@ -14,7 +14,13 @@
       ],
       "answer": 2,
       "explain": "2^n rows: 2^3 = 8.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_easy_01.mp4",
+        "poster": "media/images/truth_easy_01-frame.png",
+        "figure": "media/images/truth_easy_01.png"
+      }
     },
     {
       "id": "truth_easy_02",
@@ -28,7 +34,13 @@
       ],
       "answer": 1,
       "explain": "AND is 1 only on the 11 row.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_easy_02.mp4",
+        "poster": "media/images/truth_easy_02-frame.png",
+        "figure": "media/images/truth_easy_02.png"
+      }
     },
     {
       "id": "truth_easy_03",
@@ -42,7 +54,13 @@
       ],
       "answer": 1,
       "explain": "XOR is 1 on 01 and 10 rows.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_easy_03.mp4",
+        "poster": "media/images/truth_easy_03-frame.png",
+        "figure": "media/images/truth_easy_03.png"
+      }
     },
     {
       "id": "truth_easy_04",
@@ -50,7 +68,503 @@
       "prompt": "Duplicate input rows are required for a valid truth table.",
       "answer": false,
       "explain": "Every combination once; duplicates hide bugs.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_easy_04.mp4",
+        "poster": "media/images/truth_easy_04-frame.png",
+        "figure": "media/images/truth_easy_04.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "AND(A=0, B=0) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 0,
+      "explain": "AND truth cell → 0.",
+      "difficulty": "easy",
+      "id": "truth_easy_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_easy_05.mp4",
+        "poster": "media/images/truth_easy_05-frame.png",
+        "figure": "media/images/truth_easy_05.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "AND(A=0, B=1) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 0,
+      "explain": "AND truth cell → 0.",
+      "difficulty": "easy",
+      "id": "truth_easy_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_easy_06.mp4",
+        "poster": "media/images/truth_easy_06-frame.png",
+        "figure": "media/images/truth_easy_06.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "AND(A=1, B=0) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 0,
+      "explain": "AND truth cell → 0.",
+      "difficulty": "easy",
+      "id": "truth_easy_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_easy_07.mp4",
+        "poster": "media/images/truth_easy_07-frame.png",
+        "figure": "media/images/truth_easy_07.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "AND(A=1, B=1) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 1,
+      "explain": "AND truth cell → 1.",
+      "difficulty": "easy",
+      "id": "truth_easy_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_easy_08.mp4",
+        "poster": "media/images/truth_easy_08-frame.png",
+        "figure": "media/images/truth_easy_08.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "A 2-input AND has four truth-table rows.",
+      "answer": true,
+      "explain": "Two inputs → 2² = 4 combinations.",
+      "difficulty": "easy",
+      "id": "truth_easy_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_easy_09.mp4",
+        "poster": "media/images/truth_easy_09-frame.png",
+        "figure": "media/images/truth_easy_09.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "OR(A=0, B=0) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 0,
+      "explain": "OR truth cell → 0.",
+      "difficulty": "easy",
+      "id": "truth_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_easy_10.mp4",
+        "poster": "media/images/truth_easy_10-frame.png",
+        "figure": "media/images/truth_easy_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "OR(A=0, B=1) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 1,
+      "explain": "OR truth cell → 1.",
+      "difficulty": "easy",
+      "id": "truth_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_easy_11.mp4",
+        "poster": "media/images/truth_easy_11-frame.png",
+        "figure": "media/images/truth_easy_11.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "OR(A=1, B=0) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 1,
+      "explain": "OR truth cell → 1.",
+      "difficulty": "easy",
+      "id": "truth_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_easy_12.mp4",
+        "poster": "media/images/truth_easy_12-frame.png",
+        "figure": "media/images/truth_easy_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "OR(A=1, B=1) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 1,
+      "explain": "OR truth cell → 1.",
+      "difficulty": "easy",
+      "id": "truth_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_easy_13.mp4",
+        "poster": "media/images/truth_easy_13-frame.png",
+        "figure": "media/images/truth_easy_13.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "A 2-input OR has four truth-table rows.",
+      "answer": true,
+      "explain": "Two inputs → 2² = 4 combinations.",
+      "difficulty": "easy",
+      "id": "truth_easy_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_easy_14.mp4",
+        "poster": "media/images/truth_easy_14-frame.png",
+        "figure": "media/images/truth_easy_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "XOR(A=0, B=0) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 0,
+      "explain": "XOR truth cell → 0.",
+      "difficulty": "easy",
+      "id": "truth_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_easy_15.mp4",
+        "poster": "media/images/truth_easy_15-frame.png",
+        "figure": "media/images/truth_easy_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "XOR(A=0, B=1) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 1,
+      "explain": "XOR truth cell → 1.",
+      "difficulty": "easy",
+      "id": "truth_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_easy_16.mp4",
+        "poster": "media/images/truth_easy_16-frame.png",
+        "figure": "media/images/truth_easy_16.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "XOR(A=1, B=0) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 1,
+      "explain": "XOR truth cell → 1.",
+      "difficulty": "easy",
+      "id": "truth_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_easy_17.mp4",
+        "poster": "media/images/truth_easy_17-frame.png",
+        "figure": "media/images/truth_easy_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "XOR(A=1, B=1) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 0,
+      "explain": "XOR truth cell → 0.",
+      "difficulty": "easy",
+      "id": "truth_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_easy_18.mp4",
+        "poster": "media/images/truth_easy_18-frame.png",
+        "figure": "media/images/truth_easy_18.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "A 2-input XOR has four truth-table rows.",
+      "answer": true,
+      "explain": "Two inputs → 2² = 4 combinations.",
+      "difficulty": "easy",
+      "id": "truth_easy_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_easy_19.mp4",
+        "poster": "media/images/truth_easy_19-frame.png",
+        "figure": "media/images/truth_easy_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "NAND(A=0, B=0) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 1,
+      "explain": "NAND truth cell → 1.",
+      "difficulty": "easy",
+      "id": "truth_easy_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_easy_20.mp4",
+        "poster": "media/images/truth_easy_20-frame.png",
+        "figure": "media/images/truth_easy_20.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "NAND(A=0, B=1) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 1,
+      "explain": "NAND truth cell → 1.",
+      "difficulty": "easy",
+      "id": "truth_easy_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_easy_21.mp4",
+        "poster": "media/images/truth_easy_21-frame.png",
+        "figure": "media/images/truth_easy_21.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "NAND(A=1, B=0) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 1,
+      "explain": "NAND truth cell → 1.",
+      "difficulty": "easy",
+      "id": "truth_easy_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_easy_22.mp4",
+        "poster": "media/images/truth_easy_22-frame.png",
+        "figure": "media/images/truth_easy_22.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "NAND(A=1, B=1) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 0,
+      "explain": "NAND truth cell → 0.",
+      "difficulty": "easy",
+      "id": "truth_easy_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_easy_23.mp4",
+        "poster": "media/images/truth_easy_23-frame.png",
+        "figure": "media/images/truth_easy_23.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "A 2-input NAND has four truth-table rows.",
+      "answer": true,
+      "explain": "Two inputs → 2² = 4 combinations.",
+      "difficulty": "easy",
+      "id": "truth_easy_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_easy_24.mp4",
+        "poster": "media/images/truth_easy_24-frame.png",
+        "figure": "media/images/truth_easy_24.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "NOR(A=0, B=0) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 1,
+      "explain": "NOR truth cell → 1.",
+      "difficulty": "easy",
+      "id": "truth_easy_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_easy_25.mp4",
+        "poster": "media/images/truth_easy_25-frame.png",
+        "figure": "media/images/truth_easy_25.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "NOR(A=0, B=1) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 0,
+      "explain": "NOR truth cell → 0.",
+      "difficulty": "easy",
+      "id": "truth_easy_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_easy_26.mp4",
+        "poster": "media/images/truth_easy_26-frame.png",
+        "figure": "media/images/truth_easy_26.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "NOR(A=1, B=0) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 0,
+      "explain": "NOR truth cell → 0.",
+      "difficulty": "easy",
+      "id": "truth_easy_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_easy_27.mp4",
+        "poster": "media/images/truth_easy_27-frame.png",
+        "figure": "media/images/truth_easy_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "NOR(A=1, B=1) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 0,
+      "explain": "NOR truth cell → 0.",
+      "difficulty": "easy",
+      "id": "truth_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_easy_28.mp4",
+        "poster": "media/images/truth_easy_28-frame.png",
+        "figure": "media/images/truth_easy_28.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "A 2-input NOR has four truth-table rows.",
+      "answer": true,
+      "explain": "Two inputs → 2² = 4 combinations.",
+      "difficulty": "easy",
+      "id": "truth_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_easy_29.mp4",
+        "poster": "media/images/truth_easy_29-frame.png",
+        "figure": "media/images/truth_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "XNOR(A=0, B=0) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 1,
+      "explain": "XNOR truth cell → 1.",
+      "difficulty": "easy",
+      "id": "truth_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_easy_30.mp4",
+        "poster": "media/images/truth_easy_30-frame.png",
+        "figure": "media/images/truth_easy_30.png"
+      }
     },
     {
       "id": "truth_medium_01",
@@ -64,7 +578,13 @@
       ],
       "answer": 0,
       "explain": "OR is 0 only on 00.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_medium_01.mp4",
+        "poster": "media/images/truth_medium_01-frame.png",
+        "figure": "media/images/truth_medium_01.png"
+      }
     },
     {
       "id": "truth_medium_02",
@@ -78,7 +598,13 @@
       ],
       "answer": 2,
       "explain": "n inputs → 2^n rows.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_medium_02.mp4",
+        "poster": "media/images/truth_medium_02-frame.png",
+        "figure": "media/images/truth_medium_02.png"
+      }
     },
     {
       "id": "truth_medium_03",
@@ -92,7 +618,13 @@
       ],
       "answer": 1,
       "explain": "Majority needs two or three ones.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_medium_03.mp4",
+        "poster": "media/images/truth_medium_03-frame.png",
+        "figure": "media/images/truth_medium_03.png"
+      }
     },
     {
       "id": "truth_medium_04",
@@ -100,7 +632,13 @@
       "prompt": "Leaving a row blank is the same as listing every combination.",
       "answer": false,
       "explain": "X is optional for cover; blank rows are incomplete.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_medium_04.mp4",
+        "poster": "media/images/truth_medium_04-frame.png",
+        "figure": "media/images/truth_medium_04.png"
+      }
     },
     {
       "id": "truth_medium_05",
@@ -114,21 +652,483 @@
       ],
       "answer": 2,
       "explain": "n inputs → 2^n rows.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_medium_05.mp4",
+        "poster": "media/images/truth_medium_05-frame.png",
+        "figure": "media/images/truth_medium_05.png"
+      }
     },
     {
-      "id": "truth_medium_06",
       "type": "multiple_choice",
-      "prompt": "How many rows does a truth table with 3 inputs have?",
+      "prompt": "Truth tables: AND(A=0, B=0) equals…",
       "choices": [
-        "3",
-        "6",
-        "8",
-        "30"
+        "0",
+        "1",
+        "A",
+        "B"
       ],
-      "answer": 2,
-      "explain": "n inputs → 2^n rows.",
-      "difficulty": "medium"
+      "answer": 0,
+      "explain": "AND truth cell → 0.",
+      "difficulty": "medium",
+      "id": "truth_medium_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_medium_06.mp4",
+        "poster": "media/images/truth_medium_06-frame.png",
+        "figure": "media/images/truth_medium_06.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Truth tables: AND(A=0, B=1) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 0,
+      "explain": "AND truth cell → 0.",
+      "difficulty": "medium",
+      "id": "truth_medium_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_medium_07.mp4",
+        "poster": "media/images/truth_medium_07-frame.png",
+        "figure": "media/images/truth_medium_07.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Truth tables: AND(A=1, B=0) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 0,
+      "explain": "AND truth cell → 0.",
+      "difficulty": "medium",
+      "id": "truth_medium_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_medium_08.mp4",
+        "poster": "media/images/truth_medium_08-frame.png",
+        "figure": "media/images/truth_medium_08.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Truth tables: AND(A=1, B=1) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 1,
+      "explain": "AND truth cell → 1.",
+      "difficulty": "medium",
+      "id": "truth_medium_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_medium_09.mp4",
+        "poster": "media/images/truth_medium_09-frame.png",
+        "figure": "media/images/truth_medium_09.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Truth tables: A 2-input AND has four truth-table rows.",
+      "answer": true,
+      "explain": "Two inputs → 2² = 4 combinations.",
+      "difficulty": "medium",
+      "id": "truth_medium_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_medium_10.mp4",
+        "poster": "media/images/truth_medium_10-frame.png",
+        "figure": "media/images/truth_medium_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Truth tables: OR(A=0, B=0) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 0,
+      "explain": "OR truth cell → 0.",
+      "difficulty": "medium",
+      "id": "truth_medium_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_medium_11.mp4",
+        "poster": "media/images/truth_medium_11-frame.png",
+        "figure": "media/images/truth_medium_11.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Truth tables: OR(A=0, B=1) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 1,
+      "explain": "OR truth cell → 1.",
+      "difficulty": "medium",
+      "id": "truth_medium_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_medium_12.mp4",
+        "poster": "media/images/truth_medium_12-frame.png",
+        "figure": "media/images/truth_medium_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Truth tables: OR(A=1, B=0) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 1,
+      "explain": "OR truth cell → 1.",
+      "difficulty": "medium",
+      "id": "truth_medium_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_medium_13.mp4",
+        "poster": "media/images/truth_medium_13-frame.png",
+        "figure": "media/images/truth_medium_13.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Truth tables: OR(A=1, B=1) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 1,
+      "explain": "OR truth cell → 1.",
+      "difficulty": "medium",
+      "id": "truth_medium_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_medium_14.mp4",
+        "poster": "media/images/truth_medium_14-frame.png",
+        "figure": "media/images/truth_medium_14.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Truth tables: A 2-input OR has four truth-table rows.",
+      "answer": true,
+      "explain": "Two inputs → 2² = 4 combinations.",
+      "difficulty": "medium",
+      "id": "truth_medium_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_medium_15.mp4",
+        "poster": "media/images/truth_medium_15-frame.png",
+        "figure": "media/images/truth_medium_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Truth tables: XOR(A=0, B=0) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 0,
+      "explain": "XOR truth cell → 0.",
+      "difficulty": "medium",
+      "id": "truth_medium_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_medium_16.mp4",
+        "poster": "media/images/truth_medium_16-frame.png",
+        "figure": "media/images/truth_medium_16.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Truth tables: XOR(A=0, B=1) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 1,
+      "explain": "XOR truth cell → 1.",
+      "difficulty": "medium",
+      "id": "truth_medium_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_medium_17.mp4",
+        "poster": "media/images/truth_medium_17-frame.png",
+        "figure": "media/images/truth_medium_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Truth tables: XOR(A=1, B=0) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 1,
+      "explain": "XOR truth cell → 1.",
+      "difficulty": "medium",
+      "id": "truth_medium_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_medium_18.mp4",
+        "poster": "media/images/truth_medium_18-frame.png",
+        "figure": "media/images/truth_medium_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Truth tables: XOR(A=1, B=1) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 0,
+      "explain": "XOR truth cell → 0.",
+      "difficulty": "medium",
+      "id": "truth_medium_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_medium_19.mp4",
+        "poster": "media/images/truth_medium_19-frame.png",
+        "figure": "media/images/truth_medium_19.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Truth tables: A 2-input XOR has four truth-table rows.",
+      "answer": true,
+      "explain": "Two inputs → 2² = 4 combinations.",
+      "difficulty": "medium",
+      "id": "truth_medium_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_medium_20.mp4",
+        "poster": "media/images/truth_medium_20-frame.png",
+        "figure": "media/images/truth_medium_20.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Truth tables: NAND(A=0, B=0) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 1,
+      "explain": "NAND truth cell → 1.",
+      "difficulty": "medium",
+      "id": "truth_medium_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_medium_21.mp4",
+        "poster": "media/images/truth_medium_21-frame.png",
+        "figure": "media/images/truth_medium_21.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Truth tables: NAND(A=0, B=1) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 1,
+      "explain": "NAND truth cell → 1.",
+      "difficulty": "medium",
+      "id": "truth_medium_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_medium_22.mp4",
+        "poster": "media/images/truth_medium_22-frame.png",
+        "figure": "media/images/truth_medium_22.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Truth tables: NAND(A=1, B=0) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 1,
+      "explain": "NAND truth cell → 1.",
+      "difficulty": "medium",
+      "id": "truth_medium_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_medium_23.mp4",
+        "poster": "media/images/truth_medium_23-frame.png",
+        "figure": "media/images/truth_medium_23.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Truth tables: NAND(A=1, B=1) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 0,
+      "explain": "NAND truth cell → 0.",
+      "difficulty": "medium",
+      "id": "truth_medium_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_medium_24.mp4",
+        "poster": "media/images/truth_medium_24-frame.png",
+        "figure": "media/images/truth_medium_24.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Truth tables: A 2-input NAND has four truth-table rows.",
+      "answer": true,
+      "explain": "Two inputs → 2² = 4 combinations.",
+      "difficulty": "medium",
+      "id": "truth_medium_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_medium_25.mp4",
+        "poster": "media/images/truth_medium_25-frame.png",
+        "figure": "media/images/truth_medium_25.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Truth tables: NOR(A=0, B=0) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 1,
+      "explain": "NOR truth cell → 1.",
+      "difficulty": "medium",
+      "id": "truth_medium_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_medium_26.mp4",
+        "poster": "media/images/truth_medium_26-frame.png",
+        "figure": "media/images/truth_medium_26.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Truth tables: NOR(A=0, B=1) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 0,
+      "explain": "NOR truth cell → 0.",
+      "difficulty": "medium",
+      "id": "truth_medium_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_medium_27.mp4",
+        "poster": "media/images/truth_medium_27-frame.png",
+        "figure": "media/images/truth_medium_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Truth tables: NOR(A=1, B=0) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 0,
+      "explain": "NOR truth cell → 0.",
+      "difficulty": "medium",
+      "id": "truth_medium_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_medium_28.mp4",
+        "poster": "media/images/truth_medium_28-frame.png",
+        "figure": "media/images/truth_medium_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Truth tables: NOR(A=1, B=1) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 0,
+      "explain": "NOR truth cell → 0.",
+      "difficulty": "medium",
+      "id": "truth_medium_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_medium_29.mp4",
+        "poster": "media/images/truth_medium_29-frame.png",
+        "figure": "media/images/truth_medium_29.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Truth tables: A 2-input NOR has four truth-table rows.",
+      "answer": true,
+      "explain": "Two inputs → 2² = 4 combinations.",
+      "difficulty": "medium",
+      "id": "truth_medium_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_medium_30.mp4",
+        "poster": "media/images/truth_medium_30-frame.png",
+        "figure": "media/images/truth_medium_30.png"
+      }
     },
     {
       "id": "truth_hard_01",
@@ -142,7 +1142,13 @@
       ],
       "answer": 2,
       "explain": "2^4 = 16.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_hard_01.mp4",
+        "poster": "media/images/truth_hard_01-frame.png",
+        "figure": "media/images/truth_hard_01.png"
+      }
     },
     {
       "id": "truth_hard_02",
@@ -156,7 +1162,13 @@
       ],
       "answer": 2,
       "explain": "Odd number of ones among three bits: 4 of 8 rows.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_hard_02.mp4",
+        "poster": "media/images/truth_hard_02-frame.png",
+        "figure": "media/images/truth_hard_02.png"
+      }
     },
     {
       "id": "truth_hard_03",
@@ -170,7 +1182,13 @@
       ],
       "answer": 1,
       "explain": "Only AB (row 11 = m3) is 1.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_hard_03.mp4",
+        "poster": "media/images/truth_hard_03-frame.png",
+        "figure": "media/images/truth_hard_03.png"
+      }
     },
     {
       "id": "truth_hard_04",
@@ -178,657 +1196,17 @@
       "prompt": "Agreeing on three of four rows is enough to prove two-input equivalence.",
       "answer": false,
       "explain": "Complete row agreement defines functional equality.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_hard_04.mp4",
+        "poster": "media/images/truth_hard_04-frame.png",
+        "figure": "media/images/truth_hard_04.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "AND(A=0, B=0) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 0,
-      "explain": "AND truth cell → 0.",
-      "difficulty": "easy",
-      "id": "truth_easy_05"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "AND(A=0, B=1) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 0,
-      "explain": "AND truth cell → 0.",
-      "difficulty": "easy",
-      "id": "truth_easy_06"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "AND(A=1, B=0) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 0,
-      "explain": "AND truth cell → 0.",
-      "difficulty": "easy",
-      "id": "truth_easy_07"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "AND(A=1, B=1) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 1,
-      "explain": "AND truth cell → 1.",
-      "difficulty": "easy",
-      "id": "truth_easy_08"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A 2-input AND has four truth-table rows.",
-      "answer": true,
-      "explain": "Two inputs → 2² = 4 combinations.",
-      "difficulty": "easy",
-      "id": "truth_easy_09"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "OR(A=0, B=0) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 0,
-      "explain": "OR truth cell → 0.",
-      "difficulty": "easy",
-      "id": "truth_easy_10"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "OR(A=0, B=1) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 1,
-      "explain": "OR truth cell → 1.",
-      "difficulty": "easy",
-      "id": "truth_easy_11"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "OR(A=1, B=0) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 1,
-      "explain": "OR truth cell → 1.",
-      "difficulty": "easy",
-      "id": "truth_easy_12"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "OR(A=1, B=1) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 1,
-      "explain": "OR truth cell → 1.",
-      "difficulty": "easy",
-      "id": "truth_easy_13"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A 2-input OR has four truth-table rows.",
-      "answer": true,
-      "explain": "Two inputs → 2² = 4 combinations.",
-      "difficulty": "easy",
-      "id": "truth_easy_14"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "XOR(A=0, B=0) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 0,
-      "explain": "XOR truth cell → 0.",
-      "difficulty": "easy",
-      "id": "truth_easy_15"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "XOR(A=0, B=1) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 1,
-      "explain": "XOR truth cell → 1.",
-      "difficulty": "easy",
-      "id": "truth_easy_16"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "XOR(A=1, B=0) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 1,
-      "explain": "XOR truth cell → 1.",
-      "difficulty": "easy",
-      "id": "truth_easy_17"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "XOR(A=1, B=1) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 0,
-      "explain": "XOR truth cell → 0.",
-      "difficulty": "easy",
-      "id": "truth_easy_18"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A 2-input XOR has four truth-table rows.",
-      "answer": true,
-      "explain": "Two inputs → 2² = 4 combinations.",
-      "difficulty": "easy",
-      "id": "truth_easy_19"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "NAND(A=0, B=0) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 1,
-      "explain": "NAND truth cell → 1.",
-      "difficulty": "easy",
-      "id": "truth_easy_20"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "NAND(A=0, B=1) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 1,
-      "explain": "NAND truth cell → 1.",
-      "difficulty": "easy",
-      "id": "truth_easy_21"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "NAND(A=1, B=0) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 1,
-      "explain": "NAND truth cell → 1.",
-      "difficulty": "easy",
-      "id": "truth_easy_22"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "NAND(A=1, B=1) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 0,
-      "explain": "NAND truth cell → 0.",
-      "difficulty": "easy",
-      "id": "truth_easy_23"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A 2-input NAND has four truth-table rows.",
-      "answer": true,
-      "explain": "Two inputs → 2² = 4 combinations.",
-      "difficulty": "easy",
-      "id": "truth_easy_24"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "NOR(A=0, B=0) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 1,
-      "explain": "NOR truth cell → 1.",
-      "difficulty": "easy",
-      "id": "truth_easy_25"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "NOR(A=0, B=1) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 0,
-      "explain": "NOR truth cell → 0.",
-      "difficulty": "easy",
-      "id": "truth_easy_26"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "NOR(A=1, B=0) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 0,
-      "explain": "NOR truth cell → 0.",
-      "difficulty": "easy",
-      "id": "truth_easy_27"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "NOR(A=1, B=1) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 0,
-      "explain": "NOR truth cell → 0.",
-      "difficulty": "easy",
-      "id": "truth_easy_28"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A 2-input NOR has four truth-table rows.",
-      "answer": true,
-      "explain": "Two inputs → 2² = 4 combinations.",
-      "difficulty": "easy",
-      "id": "truth_easy_29"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "XNOR(A=0, B=0) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 1,
-      "explain": "XNOR truth cell → 1.",
-      "difficulty": "easy",
-      "id": "truth_easy_30"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "AND(A=0, B=0) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 0,
-      "explain": "AND truth cell → 0.",
-      "difficulty": "medium",
-      "id": "truth_medium_07"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "AND(A=0, B=1) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 0,
-      "explain": "AND truth cell → 0.",
-      "difficulty": "medium",
-      "id": "truth_medium_08"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "AND(A=1, B=0) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 0,
-      "explain": "AND truth cell → 0.",
-      "difficulty": "medium",
-      "id": "truth_medium_09"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "AND(A=1, B=1) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 1,
-      "explain": "AND truth cell → 1.",
-      "difficulty": "medium",
-      "id": "truth_medium_10"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A 2-input AND has four truth-table rows.",
-      "answer": true,
-      "explain": "Two inputs → 2² = 4 combinations.",
-      "difficulty": "medium",
-      "id": "truth_medium_11"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "OR(A=0, B=0) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 0,
-      "explain": "OR truth cell → 0.",
-      "difficulty": "medium",
-      "id": "truth_medium_12"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "OR(A=0, B=1) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 1,
-      "explain": "OR truth cell → 1.",
-      "difficulty": "medium",
-      "id": "truth_medium_13"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "OR(A=1, B=0) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 1,
-      "explain": "OR truth cell → 1.",
-      "difficulty": "medium",
-      "id": "truth_medium_14"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "OR(A=1, B=1) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 1,
-      "explain": "OR truth cell → 1.",
-      "difficulty": "medium",
-      "id": "truth_medium_15"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A 2-input OR has four truth-table rows.",
-      "answer": true,
-      "explain": "Two inputs → 2² = 4 combinations.",
-      "difficulty": "medium",
-      "id": "truth_medium_16"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "XOR(A=0, B=0) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 0,
-      "explain": "XOR truth cell → 0.",
-      "difficulty": "medium",
-      "id": "truth_medium_17"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "XOR(A=0, B=1) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 1,
-      "explain": "XOR truth cell → 1.",
-      "difficulty": "medium",
-      "id": "truth_medium_18"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "XOR(A=1, B=0) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 1,
-      "explain": "XOR truth cell → 1.",
-      "difficulty": "medium",
-      "id": "truth_medium_19"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "XOR(A=1, B=1) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 0,
-      "explain": "XOR truth cell → 0.",
-      "difficulty": "medium",
-      "id": "truth_medium_20"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A 2-input XOR has four truth-table rows.",
-      "answer": true,
-      "explain": "Two inputs → 2² = 4 combinations.",
-      "difficulty": "medium",
-      "id": "truth_medium_21"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "NAND(A=0, B=0) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 1,
-      "explain": "NAND truth cell → 1.",
-      "difficulty": "medium",
-      "id": "truth_medium_22"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "NAND(A=0, B=1) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 1,
-      "explain": "NAND truth cell → 1.",
-      "difficulty": "medium",
-      "id": "truth_medium_23"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "NAND(A=1, B=0) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 1,
-      "explain": "NAND truth cell → 1.",
-      "difficulty": "medium",
-      "id": "truth_medium_24"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "NAND(A=1, B=1) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 0,
-      "explain": "NAND truth cell → 0.",
-      "difficulty": "medium",
-      "id": "truth_medium_25"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A 2-input NAND has four truth-table rows.",
-      "answer": true,
-      "explain": "Two inputs → 2² = 4 combinations.",
-      "difficulty": "medium",
-      "id": "truth_medium_26"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "NOR(A=0, B=0) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 1,
-      "explain": "NOR truth cell → 1.",
-      "difficulty": "medium",
-      "id": "truth_medium_27"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "NOR(A=0, B=1) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 0,
-      "explain": "NOR truth cell → 0.",
-      "difficulty": "medium",
-      "id": "truth_medium_28"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "NOR(A=1, B=0) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 0,
-      "explain": "NOR truth cell → 0.",
-      "difficulty": "medium",
-      "id": "truth_medium_29"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "NOR(A=1, B=1) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 0,
-      "explain": "NOR truth cell → 0.",
-      "difficulty": "medium",
-      "id": "truth_medium_30"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "AND(A=0, B=0) equals…",
+      "prompt": "In Truth tables, aND(A=0, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -838,11 +1216,17 @@
       "answer": 0,
       "explain": "AND truth cell → 0.",
       "difficulty": "hard",
-      "id": "truth_hard_05"
+      "id": "truth_hard_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_hard_05.mp4",
+        "poster": "media/images/truth_hard_05-frame.png",
+        "figure": "media/images/truth_hard_05.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "AND(A=0, B=1) equals…",
+      "prompt": "In Truth tables, aND(A=0, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -852,11 +1236,17 @@
       "answer": 0,
       "explain": "AND truth cell → 0.",
       "difficulty": "hard",
-      "id": "truth_hard_06"
+      "id": "truth_hard_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_hard_06.mp4",
+        "poster": "media/images/truth_hard_06-frame.png",
+        "figure": "media/images/truth_hard_06.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "AND(A=1, B=0) equals…",
+      "prompt": "In Truth tables, aND(A=1, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -866,11 +1256,17 @@
       "answer": 0,
       "explain": "AND truth cell → 0.",
       "difficulty": "hard",
-      "id": "truth_hard_07"
+      "id": "truth_hard_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_hard_07.mp4",
+        "poster": "media/images/truth_hard_07-frame.png",
+        "figure": "media/images/truth_hard_07.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "AND(A=1, B=1) equals…",
+      "prompt": "In Truth tables, aND(A=1, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -880,19 +1276,31 @@
       "answer": 1,
       "explain": "AND truth cell → 1.",
       "difficulty": "hard",
-      "id": "truth_hard_08"
+      "id": "truth_hard_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_hard_08.mp4",
+        "poster": "media/images/truth_hard_08-frame.png",
+        "figure": "media/images/truth_hard_08.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A 2-input AND has four truth-table rows.",
+      "prompt": "In Truth tables, a 2-input AND has four truth-table rows.",
       "answer": true,
       "explain": "Two inputs → 2² = 4 combinations.",
       "difficulty": "hard",
-      "id": "truth_hard_09"
+      "id": "truth_hard_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_hard_09.mp4",
+        "poster": "media/images/truth_hard_09-frame.png",
+        "figure": "media/images/truth_hard_09.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "OR(A=0, B=0) equals…",
+      "prompt": "In Truth tables, oR(A=0, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -902,11 +1310,17 @@
       "answer": 0,
       "explain": "OR truth cell → 0.",
       "difficulty": "hard",
-      "id": "truth_hard_10"
+      "id": "truth_hard_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_hard_10.mp4",
+        "poster": "media/images/truth_hard_10-frame.png",
+        "figure": "media/images/truth_hard_10.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "OR(A=0, B=1) equals…",
+      "prompt": "In Truth tables, oR(A=0, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -916,11 +1330,17 @@
       "answer": 1,
       "explain": "OR truth cell → 1.",
       "difficulty": "hard",
-      "id": "truth_hard_11"
+      "id": "truth_hard_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_hard_11.mp4",
+        "poster": "media/images/truth_hard_11-frame.png",
+        "figure": "media/images/truth_hard_11.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "OR(A=1, B=0) equals…",
+      "prompt": "In Truth tables, oR(A=1, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -930,11 +1350,17 @@
       "answer": 1,
       "explain": "OR truth cell → 1.",
       "difficulty": "hard",
-      "id": "truth_hard_12"
+      "id": "truth_hard_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_hard_12.mp4",
+        "poster": "media/images/truth_hard_12-frame.png",
+        "figure": "media/images/truth_hard_12.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "OR(A=1, B=1) equals…",
+      "prompt": "In Truth tables, oR(A=1, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -944,19 +1370,31 @@
       "answer": 1,
       "explain": "OR truth cell → 1.",
       "difficulty": "hard",
-      "id": "truth_hard_13"
+      "id": "truth_hard_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_hard_13.mp4",
+        "poster": "media/images/truth_hard_13-frame.png",
+        "figure": "media/images/truth_hard_13.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A 2-input OR has four truth-table rows.",
+      "prompt": "In Truth tables, a 2-input OR has four truth-table rows.",
       "answer": true,
       "explain": "Two inputs → 2² = 4 combinations.",
       "difficulty": "hard",
-      "id": "truth_hard_14"
+      "id": "truth_hard_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_hard_14.mp4",
+        "poster": "media/images/truth_hard_14-frame.png",
+        "figure": "media/images/truth_hard_14.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "XOR(A=0, B=0) equals…",
+      "prompt": "In Truth tables, xOR(A=0, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -966,11 +1404,17 @@
       "answer": 0,
       "explain": "XOR truth cell → 0.",
       "difficulty": "hard",
-      "id": "truth_hard_15"
+      "id": "truth_hard_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_hard_15.mp4",
+        "poster": "media/images/truth_hard_15-frame.png",
+        "figure": "media/images/truth_hard_15.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "XOR(A=0, B=1) equals…",
+      "prompt": "In Truth tables, xOR(A=0, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -980,11 +1424,17 @@
       "answer": 1,
       "explain": "XOR truth cell → 1.",
       "difficulty": "hard",
-      "id": "truth_hard_16"
+      "id": "truth_hard_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_hard_16.mp4",
+        "poster": "media/images/truth_hard_16-frame.png",
+        "figure": "media/images/truth_hard_16.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "XOR(A=1, B=0) equals…",
+      "prompt": "In Truth tables, xOR(A=1, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -994,11 +1444,17 @@
       "answer": 1,
       "explain": "XOR truth cell → 1.",
       "difficulty": "hard",
-      "id": "truth_hard_17"
+      "id": "truth_hard_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_hard_17.mp4",
+        "poster": "media/images/truth_hard_17-frame.png",
+        "figure": "media/images/truth_hard_17.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "XOR(A=1, B=1) equals…",
+      "prompt": "In Truth tables, xOR(A=1, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -1008,19 +1464,31 @@
       "answer": 0,
       "explain": "XOR truth cell → 0.",
       "difficulty": "hard",
-      "id": "truth_hard_18"
+      "id": "truth_hard_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_hard_18.mp4",
+        "poster": "media/images/truth_hard_18-frame.png",
+        "figure": "media/images/truth_hard_18.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A 2-input XOR has four truth-table rows.",
+      "prompt": "In Truth tables, a 2-input XOR has four truth-table rows.",
       "answer": true,
       "explain": "Two inputs → 2² = 4 combinations.",
       "difficulty": "hard",
-      "id": "truth_hard_19"
+      "id": "truth_hard_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_hard_19.mp4",
+        "poster": "media/images/truth_hard_19-frame.png",
+        "figure": "media/images/truth_hard_19.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NAND(A=0, B=0) equals…",
+      "prompt": "In Truth tables, nAND(A=0, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -1030,11 +1498,17 @@
       "answer": 1,
       "explain": "NAND truth cell → 1.",
       "difficulty": "hard",
-      "id": "truth_hard_20"
+      "id": "truth_hard_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_hard_20.mp4",
+        "poster": "media/images/truth_hard_20-frame.png",
+        "figure": "media/images/truth_hard_20.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NAND(A=0, B=1) equals…",
+      "prompt": "In Truth tables, nAND(A=0, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -1044,11 +1518,17 @@
       "answer": 1,
       "explain": "NAND truth cell → 1.",
       "difficulty": "hard",
-      "id": "truth_hard_21"
+      "id": "truth_hard_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_hard_21.mp4",
+        "poster": "media/images/truth_hard_21-frame.png",
+        "figure": "media/images/truth_hard_21.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NAND(A=1, B=0) equals…",
+      "prompt": "In Truth tables, nAND(A=1, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -1058,11 +1538,17 @@
       "answer": 1,
       "explain": "NAND truth cell → 1.",
       "difficulty": "hard",
-      "id": "truth_hard_22"
+      "id": "truth_hard_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_hard_22.mp4",
+        "poster": "media/images/truth_hard_22-frame.png",
+        "figure": "media/images/truth_hard_22.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NAND(A=1, B=1) equals…",
+      "prompt": "In Truth tables, nAND(A=1, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -1072,19 +1558,31 @@
       "answer": 0,
       "explain": "NAND truth cell → 0.",
       "difficulty": "hard",
-      "id": "truth_hard_23"
+      "id": "truth_hard_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_hard_23.mp4",
+        "poster": "media/images/truth_hard_23-frame.png",
+        "figure": "media/images/truth_hard_23.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A 2-input NAND has four truth-table rows.",
+      "prompt": "In Truth tables, a 2-input NAND has four truth-table rows.",
       "answer": true,
       "explain": "Two inputs → 2² = 4 combinations.",
       "difficulty": "hard",
-      "id": "truth_hard_24"
+      "id": "truth_hard_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_hard_24.mp4",
+        "poster": "media/images/truth_hard_24-frame.png",
+        "figure": "media/images/truth_hard_24.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NOR(A=0, B=0) equals…",
+      "prompt": "In Truth tables, nOR(A=0, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -1094,11 +1592,17 @@
       "answer": 1,
       "explain": "NOR truth cell → 1.",
       "difficulty": "hard",
-      "id": "truth_hard_25"
+      "id": "truth_hard_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_hard_25.mp4",
+        "poster": "media/images/truth_hard_25-frame.png",
+        "figure": "media/images/truth_hard_25.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NOR(A=0, B=1) equals…",
+      "prompt": "In Truth tables, nOR(A=0, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -1108,11 +1612,17 @@
       "answer": 0,
       "explain": "NOR truth cell → 0.",
       "difficulty": "hard",
-      "id": "truth_hard_26"
+      "id": "truth_hard_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_hard_26.mp4",
+        "poster": "media/images/truth_hard_26-frame.png",
+        "figure": "media/images/truth_hard_26.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NOR(A=1, B=0) equals…",
+      "prompt": "In Truth tables, nOR(A=1, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -1122,11 +1632,17 @@
       "answer": 0,
       "explain": "NOR truth cell → 0.",
       "difficulty": "hard",
-      "id": "truth_hard_27"
+      "id": "truth_hard_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_hard_27.mp4",
+        "poster": "media/images/truth_hard_27-frame.png",
+        "figure": "media/images/truth_hard_27.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "NOR(A=1, B=1) equals…",
+      "prompt": "In Truth tables, nOR(A=1, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -1136,19 +1652,31 @@
       "answer": 0,
       "explain": "NOR truth cell → 0.",
       "difficulty": "hard",
-      "id": "truth_hard_28"
+      "id": "truth_hard_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_hard_28.mp4",
+        "poster": "media/images/truth_hard_28-frame.png",
+        "figure": "media/images/truth_hard_28.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A 2-input NOR has four truth-table rows.",
+      "prompt": "In Truth tables, a 2-input NOR has four truth-table rows.",
       "answer": true,
       "explain": "Two inputs → 2² = 4 combinations.",
       "difficulty": "hard",
-      "id": "truth_hard_29"
+      "id": "truth_hard_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_hard_29.mp4",
+        "poster": "media/images/truth_hard_29-frame.png",
+        "figure": "media/images/truth_hard_29.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "XNOR(A=0, B=0) equals…",
+      "prompt": "Truth tables: XNOR(A=0, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -1158,7 +1686,13 @@
       "answer": 1,
       "explain": "XNOR truth cell → 1.",
       "difficulty": "hard",
-      "id": "truth_hard_30"
+      "id": "truth_hard_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/truth_hard_30.mp4",
+        "poster": "media/images/truth_hard_30-frame.png",
+        "figure": "media/images/truth_hard_30.png"
+      }
     }
   ]
 }

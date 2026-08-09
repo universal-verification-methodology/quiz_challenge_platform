@@ -14,7 +14,13 @@
       ],
       "answer": 0,
       "explain": "Speculate then select on carry.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_easy_01.mp4",
+        "poster": "media/images/csa_easy_01-frame.png",
+        "figure": "media/images/csa_easy_01.png"
+      }
     },
     {
       "id": "csa_easy_02",
@@ -28,7 +34,13 @@
       ],
       "answer": 0,
       "explain": "Dual parallel upper adds.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_easy_02.mp4",
+        "poster": "media/images/csa_easy_02-frame.png",
+        "figure": "media/images/csa_easy_02.png"
+      }
     },
     {
       "id": "csa_easy_03",
@@ -42,7 +54,13 @@
       ],
       "answer": 0,
       "explain": "Real carry picks Cin=0 vs Cin=1 sum.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_easy_03.mp4",
+        "poster": "media/images/csa_easy_03-frame.png",
+        "figure": "media/images/csa_easy_03.png"
+      }
     },
     {
       "id": "csa_easy_04",
@@ -50,7 +68,527 @@
       "prompt": "Starter idea: lower finishes, then mux picks upper.",
       "answer": true,
       "explain": "Two speculative uppers; mux on real carry.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_easy_04.mp4",
+        "poster": "media/images/csa_easy_04-frame.png",
+        "figure": "media/images/csa_easy_04.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Carry-select adder: Full adder A=0 B=0 Cin=0: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 0,
+      "explain": "Sum = A⊕B⊕Cin = 0.",
+      "difficulty": "easy",
+      "id": "csa_easy_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_easy_05.mp4",
+        "poster": "media/images/csa_easy_05-frame.png",
+        "figure": "media/images/csa_easy_05.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Carry-select adder: Full adder A=0 B=0 Cin=0: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 0,
+      "explain": "Majority → Cout=0.",
+      "difficulty": "easy",
+      "id": "csa_easy_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_easy_06.mp4",
+        "poster": "media/images/csa_easy_06-frame.png",
+        "figure": "media/images/csa_easy_06.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Carry-select adder: Full adder A=0 B=1 Cin=0: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "easy",
+      "id": "csa_easy_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_easy_07.mp4",
+        "poster": "media/images/csa_easy_07-frame.png",
+        "figure": "media/images/csa_easy_07.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Carry-select adder: Full adder A=0 B=1 Cin=0: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 0,
+      "explain": "Majority → Cout=0.",
+      "difficulty": "easy",
+      "id": "csa_easy_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_easy_08.mp4",
+        "poster": "media/images/csa_easy_08-frame.png",
+        "figure": "media/images/csa_easy_08.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Carry-select adder: Full adder A=1 B=0 Cin=0: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "easy",
+      "id": "csa_easy_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_easy_09.mp4",
+        "poster": "media/images/csa_easy_09-frame.png",
+        "figure": "media/images/csa_easy_09.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Carry-select adder: Full adder A=1 B=0 Cin=0: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 0,
+      "explain": "Majority → Cout=0.",
+      "difficulty": "easy",
+      "id": "csa_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_easy_10.mp4",
+        "poster": "media/images/csa_easy_10-frame.png",
+        "figure": "media/images/csa_easy_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Carry-select adder: Full adder A=1 B=1 Cin=0: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 0,
+      "explain": "Sum = A⊕B⊕Cin = 0.",
+      "difficulty": "easy",
+      "id": "csa_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_easy_11.mp4",
+        "poster": "media/images/csa_easy_11-frame.png",
+        "figure": "media/images/csa_easy_11.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Carry-select adder: Full adder A=1 B=1 Cin=0: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "easy",
+      "id": "csa_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_easy_12.mp4",
+        "poster": "media/images/csa_easy_12-frame.png",
+        "figure": "media/images/csa_easy_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Carry-select adder: Full adder A=0 B=0 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "easy",
+      "id": "csa_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_easy_13.mp4",
+        "poster": "media/images/csa_easy_13-frame.png",
+        "figure": "media/images/csa_easy_13.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Carry-select adder: Full adder A=0 B=0 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 0,
+      "explain": "Majority → Cout=0.",
+      "difficulty": "easy",
+      "id": "csa_easy_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_easy_14.mp4",
+        "poster": "media/images/csa_easy_14-frame.png",
+        "figure": "media/images/csa_easy_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Carry-select adder: Full adder A=0 B=1 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 0,
+      "explain": "Sum = A⊕B⊕Cin = 0.",
+      "difficulty": "easy",
+      "id": "csa_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_easy_15.mp4",
+        "poster": "media/images/csa_easy_15-frame.png",
+        "figure": "media/images/csa_easy_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Carry-select adder: Full adder A=0 B=1 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "easy",
+      "id": "csa_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_easy_16.mp4",
+        "poster": "media/images/csa_easy_16-frame.png",
+        "figure": "media/images/csa_easy_16.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Carry-select adder: Full adder A=1 B=0 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 0,
+      "explain": "Sum = A⊕B⊕Cin = 0.",
+      "difficulty": "easy",
+      "id": "csa_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_easy_17.mp4",
+        "poster": "media/images/csa_easy_17-frame.png",
+        "figure": "media/images/csa_easy_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Carry-select adder: Full adder A=1 B=0 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "easy",
+      "id": "csa_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_easy_18.mp4",
+        "poster": "media/images/csa_easy_18-frame.png",
+        "figure": "media/images/csa_easy_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Carry-select adder: Full adder A=1 B=1 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "easy",
+      "id": "csa_easy_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_easy_19.mp4",
+        "poster": "media/images/csa_easy_19-frame.png",
+        "figure": "media/images/csa_easy_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Carry-select adder: Full adder A=1 B=1 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "easy",
+      "id": "csa_easy_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_easy_20.mp4",
+        "poster": "media/images/csa_easy_20-frame.png",
+        "figure": "media/images/csa_easy_20.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Carry-select adder: Half adder has no carry-in.",
+      "answer": true,
+      "explain": "HA = Sum/Cout from A,B only.",
+      "difficulty": "easy",
+      "id": "csa_easy_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_easy_21.mp4",
+        "poster": "media/images/csa_easy_21-frame.png",
+        "figure": "media/images/csa_easy_21.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Carry-select adder: A 1-to-2 decoder has how many select lines?",
+      "choices": [
+        "2",
+        "1",
+        "2",
+        "2"
+      ],
+      "answer": 1,
+      "explain": "1 selects address 2 ones-hot lines.",
+      "difficulty": "easy",
+      "id": "csa_easy_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_easy_22.mp4",
+        "poster": "media/images/csa_easy_22-frame.png",
+        "figure": "media/images/csa_easy_22.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Carry-select adder: A mux with 2 data inputs needs how many select bits?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": 1,
+      "explain": "log2(2) = 1.",
+      "difficulty": "easy",
+      "id": "csa_easy_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_easy_23.mp4",
+        "poster": "media/images/csa_easy_23-frame.png",
+        "figure": "media/images/csa_easy_23.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Carry-select adder: A 2-to-4 decoder has how many select lines?",
+      "choices": [
+        "4",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "2 selects address 4 ones-hot lines.",
+      "difficulty": "easy",
+      "id": "csa_easy_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_easy_24.mp4",
+        "poster": "media/images/csa_easy_24-frame.png",
+        "figure": "media/images/csa_easy_24.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Carry-select adder: A mux with 4 data inputs needs how many select bits?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "log2(4) = 2.",
+      "difficulty": "easy",
+      "id": "csa_easy_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_easy_25.mp4",
+        "poster": "media/images/csa_easy_25-frame.png",
+        "figure": "media/images/csa_easy_25.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Carry-select adder: A 3-to-8 decoder has how many select lines?",
+      "choices": [
+        "8",
+        "3",
+        "4",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "3 selects address 8 ones-hot lines.",
+      "difficulty": "easy",
+      "id": "csa_easy_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_easy_26.mp4",
+        "poster": "media/images/csa_easy_26-frame.png",
+        "figure": "media/images/csa_easy_26.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Carry-select adder: A mux with 8 data inputs needs how many select bits?",
+      "choices": [
+        "2",
+        "3",
+        "8",
+        "5"
+      ],
+      "answer": 1,
+      "explain": "log2(8) = 3.",
+      "difficulty": "easy",
+      "id": "csa_easy_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_easy_27.mp4",
+        "poster": "media/images/csa_easy_27-frame.png",
+        "figure": "media/images/csa_easy_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Carry-select adder: A 4-to-16 decoder has how many select lines?",
+      "choices": [
+        "16",
+        "4",
+        "5",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "4 selects address 16 ones-hot lines.",
+      "difficulty": "easy",
+      "id": "csa_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_easy_28.mp4",
+        "poster": "media/images/csa_easy_28-frame.png",
+        "figure": "media/images/csa_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Carry-select adder: A mux with 16 data inputs needs how many select bits?",
+      "choices": [
+        "3",
+        "4",
+        "16",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "log2(16) = 4.",
+      "difficulty": "easy",
+      "id": "csa_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_easy_29.mp4",
+        "poster": "media/images/csa_easy_29-frame.png",
+        "figure": "media/images/csa_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Carry-select adder: A 5-to-32 decoder has how many select lines?",
+      "choices": [
+        "32",
+        "5",
+        "6",
+        "10"
+      ],
+      "answer": 1,
+      "explain": "5 selects address 32 ones-hot lines.",
+      "difficulty": "easy",
+      "id": "csa_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_easy_30.mp4",
+        "poster": "media/images/csa_easy_30-frame.png",
+        "figure": "media/images/csa_easy_30.png"
+      }
     },
     {
       "id": "csa_medium_01",
@@ -64,7 +602,13 @@
       ],
       "answer": 0,
       "explain": "165+60=225 → 0xE1.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_medium_01.mp4",
+        "poster": "media/images/csa_medium_01-frame.png",
+        "figure": "media/images/csa_medium_01.png"
+      }
     },
     {
       "id": "csa_medium_02",
@@ -78,7 +622,13 @@
       ],
       "answer": 0,
       "explain": "Upper work overlaps; mux when carry ready.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_medium_02.mp4",
+        "poster": "media/images/csa_medium_02-frame.png",
+        "figure": "media/images/csa_medium_02.png"
+      }
     },
     {
       "id": "csa_medium_03",
@@ -92,7 +642,13 @@
       ],
       "answer": 0,
       "explain": "Dual paths plus select muxes.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_medium_03.mp4",
+        "poster": "media/images/csa_medium_03-frame.png",
+        "figure": "media/images/csa_medium_03.png"
+      }
     },
     {
       "id": "csa_medium_04",
@@ -100,7 +656,527 @@
       "prompt": "Block size choice trades area vs delay in CSA designs.",
       "answer": true,
       "explain": "CSA ≠ CLA; block sizing matters.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_medium_04.mp4",
+        "poster": "media/images/csa_medium_04-frame.png",
+        "figure": "media/images/csa_medium_04.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Carry-select adder, full adder A=0 B=0 Cin=0: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 0,
+      "explain": "Sum = A⊕B⊕Cin = 0.",
+      "difficulty": "medium",
+      "id": "csa_medium_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_medium_05.mp4",
+        "poster": "media/images/csa_medium_05-frame.png",
+        "figure": "media/images/csa_medium_05.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Carry-select adder, full adder A=0 B=0 Cin=0: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 0,
+      "explain": "Majority → Cout=0.",
+      "difficulty": "medium",
+      "id": "csa_medium_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_medium_06.mp4",
+        "poster": "media/images/csa_medium_06-frame.png",
+        "figure": "media/images/csa_medium_06.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Carry-select adder, full adder A=0 B=1 Cin=0: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "medium",
+      "id": "csa_medium_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_medium_07.mp4",
+        "poster": "media/images/csa_medium_07-frame.png",
+        "figure": "media/images/csa_medium_07.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Carry-select adder, full adder A=0 B=1 Cin=0: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 0,
+      "explain": "Majority → Cout=0.",
+      "difficulty": "medium",
+      "id": "csa_medium_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_medium_08.mp4",
+        "poster": "media/images/csa_medium_08-frame.png",
+        "figure": "media/images/csa_medium_08.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Carry-select adder, full adder A=1 B=0 Cin=0: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "medium",
+      "id": "csa_medium_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_medium_09.mp4",
+        "poster": "media/images/csa_medium_09-frame.png",
+        "figure": "media/images/csa_medium_09.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Carry-select adder, full adder A=1 B=0 Cin=0: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 0,
+      "explain": "Majority → Cout=0.",
+      "difficulty": "medium",
+      "id": "csa_medium_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_medium_10.mp4",
+        "poster": "media/images/csa_medium_10-frame.png",
+        "figure": "media/images/csa_medium_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Carry-select adder, full adder A=1 B=1 Cin=0: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 0,
+      "explain": "Sum = A⊕B⊕Cin = 0.",
+      "difficulty": "medium",
+      "id": "csa_medium_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_medium_11.mp4",
+        "poster": "media/images/csa_medium_11-frame.png",
+        "figure": "media/images/csa_medium_11.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Carry-select adder, full adder A=1 B=1 Cin=0: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "medium",
+      "id": "csa_medium_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_medium_12.mp4",
+        "poster": "media/images/csa_medium_12-frame.png",
+        "figure": "media/images/csa_medium_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Carry-select adder, full adder A=0 B=0 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "medium",
+      "id": "csa_medium_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_medium_13.mp4",
+        "poster": "media/images/csa_medium_13-frame.png",
+        "figure": "media/images/csa_medium_13.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Carry-select adder, full adder A=0 B=0 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 0,
+      "explain": "Majority → Cout=0.",
+      "difficulty": "medium",
+      "id": "csa_medium_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_medium_14.mp4",
+        "poster": "media/images/csa_medium_14-frame.png",
+        "figure": "media/images/csa_medium_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Carry-select adder, full adder A=0 B=1 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 0,
+      "explain": "Sum = A⊕B⊕Cin = 0.",
+      "difficulty": "medium",
+      "id": "csa_medium_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_medium_15.mp4",
+        "poster": "media/images/csa_medium_15-frame.png",
+        "figure": "media/images/csa_medium_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Carry-select adder, full adder A=0 B=1 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "medium",
+      "id": "csa_medium_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_medium_16.mp4",
+        "poster": "media/images/csa_medium_16-frame.png",
+        "figure": "media/images/csa_medium_16.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Carry-select adder, full adder A=1 B=0 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 0,
+      "explain": "Sum = A⊕B⊕Cin = 0.",
+      "difficulty": "medium",
+      "id": "csa_medium_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_medium_17.mp4",
+        "poster": "media/images/csa_medium_17-frame.png",
+        "figure": "media/images/csa_medium_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Carry-select adder, full adder A=1 B=0 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "medium",
+      "id": "csa_medium_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_medium_18.mp4",
+        "poster": "media/images/csa_medium_18-frame.png",
+        "figure": "media/images/csa_medium_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Carry-select adder, full adder A=1 B=1 Cin=1: Sum is…",
+      "choices": [
+        "0",
+        "1",
+        "Cout",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "Sum = A⊕B⊕Cin = 1.",
+      "difficulty": "medium",
+      "id": "csa_medium_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_medium_19.mp4",
+        "poster": "media/images/csa_medium_19-frame.png",
+        "figure": "media/images/csa_medium_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Carry-select adder, full adder A=1 B=1 Cin=1: Cout is…",
+      "choices": [
+        "0",
+        "1",
+        "Sum",
+        "A"
+      ],
+      "answer": 1,
+      "explain": "Majority → Cout=1.",
+      "difficulty": "medium",
+      "id": "csa_medium_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_medium_20.mp4",
+        "poster": "media/images/csa_medium_20-frame.png",
+        "figure": "media/images/csa_medium_20.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Carry-select adder, half adder has no carry-in.",
+      "answer": true,
+      "explain": "HA = Sum/Cout from A,B only.",
+      "difficulty": "medium",
+      "id": "csa_medium_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_medium_21.mp4",
+        "poster": "media/images/csa_medium_21-frame.png",
+        "figure": "media/images/csa_medium_21.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Carry-select adder, a 1-to-2 decoder has how many select lines?",
+      "choices": [
+        "2",
+        "1",
+        "2",
+        "2"
+      ],
+      "answer": 1,
+      "explain": "1 selects address 2 ones-hot lines.",
+      "difficulty": "medium",
+      "id": "csa_medium_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_medium_22.mp4",
+        "poster": "media/images/csa_medium_22-frame.png",
+        "figure": "media/images/csa_medium_22.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Carry-select adder, a mux with 2 data inputs needs how many select bits?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": 1,
+      "explain": "log2(2) = 1.",
+      "difficulty": "medium",
+      "id": "csa_medium_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_medium_23.mp4",
+        "poster": "media/images/csa_medium_23-frame.png",
+        "figure": "media/images/csa_medium_23.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Carry-select adder, a 2-to-4 decoder has how many select lines?",
+      "choices": [
+        "4",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "2 selects address 4 ones-hot lines.",
+      "difficulty": "medium",
+      "id": "csa_medium_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_medium_24.mp4",
+        "poster": "media/images/csa_medium_24-frame.png",
+        "figure": "media/images/csa_medium_24.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Carry-select adder, a mux with 4 data inputs needs how many select bits?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "log2(4) = 2.",
+      "difficulty": "medium",
+      "id": "csa_medium_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_medium_25.mp4",
+        "poster": "media/images/csa_medium_25-frame.png",
+        "figure": "media/images/csa_medium_25.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Carry-select adder, a 3-to-8 decoder has how many select lines?",
+      "choices": [
+        "8",
+        "3",
+        "4",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "3 selects address 8 ones-hot lines.",
+      "difficulty": "medium",
+      "id": "csa_medium_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_medium_26.mp4",
+        "poster": "media/images/csa_medium_26-frame.png",
+        "figure": "media/images/csa_medium_26.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Carry-select adder, a mux with 8 data inputs needs how many select bits?",
+      "choices": [
+        "2",
+        "3",
+        "8",
+        "5"
+      ],
+      "answer": 1,
+      "explain": "log2(8) = 3.",
+      "difficulty": "medium",
+      "id": "csa_medium_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_medium_27.mp4",
+        "poster": "media/images/csa_medium_27-frame.png",
+        "figure": "media/images/csa_medium_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Carry-select adder, a 4-to-16 decoder has how many select lines?",
+      "choices": [
+        "16",
+        "4",
+        "5",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "4 selects address 16 ones-hot lines.",
+      "difficulty": "medium",
+      "id": "csa_medium_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_medium_28.mp4",
+        "poster": "media/images/csa_medium_28-frame.png",
+        "figure": "media/images/csa_medium_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Carry-select adder, a mux with 16 data inputs needs how many select bits?",
+      "choices": [
+        "3",
+        "4",
+        "16",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "log2(16) = 4.",
+      "difficulty": "medium",
+      "id": "csa_medium_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_medium_29.mp4",
+        "poster": "media/images/csa_medium_29-frame.png",
+        "figure": "media/images/csa_medium_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Carry-select adder, a 5-to-32 decoder has how many select lines?",
+      "choices": [
+        "32",
+        "5",
+        "6",
+        "10"
+      ],
+      "answer": 1,
+      "explain": "5 selects address 32 ones-hot lines.",
+      "difficulty": "medium",
+      "id": "csa_medium_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_medium_30.mp4",
+        "poster": "media/images/csa_medium_30-frame.png",
+        "figure": "media/images/csa_medium_30.png"
+      }
     },
     {
       "id": "csa_hard_01",
@@ -114,7 +1190,13 @@
       ],
       "answer": 0,
       "explain": "Nested or multi-block select.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_hard_01.mp4",
+        "poster": "media/images/csa_hard_01-frame.png",
+        "figure": "media/images/csa_hard_01.png"
+      }
     },
     {
       "id": "csa_hard_02",
@@ -128,7 +1210,13 @@
       ],
       "answer": 0,
       "explain": "Cin hypothesis changes the upper result.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_hard_02.mp4",
+        "poster": "media/images/csa_hard_02-frame.png",
+        "figure": "media/images/csa_hard_02.png"
+      }
     },
     {
       "id": "csa_hard_03",
@@ -142,7 +1230,13 @@
       ],
       "answer": 0,
       "explain": "Overlap upper with lower; pay mux.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_hard_03.mp4",
+        "poster": "media/images/csa_hard_03-frame.png",
+        "figure": "media/images/csa_hard_03.png"
+      }
     },
     {
       "id": "csa_hard_04",
@@ -150,11 +1244,17 @@
       "prompt": "Carry-select removes the need for any carry at all.",
       "answer": false,
       "explain": "Select still depends on real carry.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_hard_04.mp4",
+        "poster": "media/images/csa_hard_04-frame.png",
+        "figure": "media/images/csa_hard_04.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Full adder A=0 B=0 Cin=0: Sum is…",
+      "prompt": "For the Carry-select adder lab: Full adder A=0 B=0 Cin=0: Sum is…",
       "choices": [
         "0",
         "1",
@@ -163,12 +1263,18 @@
       ],
       "answer": 0,
       "explain": "Sum = A⊕B⊕Cin = 0.",
-      "difficulty": "easy",
-      "id": "csa_easy_05"
+      "difficulty": "hard",
+      "id": "csa_hard_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_hard_05.mp4",
+        "poster": "media/images/csa_hard_05-frame.png",
+        "figure": "media/images/csa_hard_05.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Full adder A=0 B=0 Cin=0: Cout is…",
+      "prompt": "For the Carry-select adder lab: Full adder A=0 B=0 Cin=0: Cout is…",
       "choices": [
         "0",
         "1",
@@ -177,12 +1283,18 @@
       ],
       "answer": 0,
       "explain": "Majority → Cout=0.",
-      "difficulty": "easy",
-      "id": "csa_easy_06"
+      "difficulty": "hard",
+      "id": "csa_hard_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_hard_06.mp4",
+        "poster": "media/images/csa_hard_06-frame.png",
+        "figure": "media/images/csa_hard_06.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Full adder A=0 B=1 Cin=0: Sum is…",
+      "prompt": "For the Carry-select adder lab: Full adder A=0 B=1 Cin=0: Sum is…",
       "choices": [
         "0",
         "1",
@@ -191,12 +1303,18 @@
       ],
       "answer": 1,
       "explain": "Sum = A⊕B⊕Cin = 1.",
-      "difficulty": "easy",
-      "id": "csa_easy_07"
+      "difficulty": "hard",
+      "id": "csa_hard_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_hard_07.mp4",
+        "poster": "media/images/csa_hard_07-frame.png",
+        "figure": "media/images/csa_hard_07.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Full adder A=0 B=1 Cin=0: Cout is…",
+      "prompt": "For the Carry-select adder lab: Full adder A=0 B=1 Cin=0: Cout is…",
       "choices": [
         "0",
         "1",
@@ -205,12 +1323,18 @@
       ],
       "answer": 0,
       "explain": "Majority → Cout=0.",
-      "difficulty": "easy",
-      "id": "csa_easy_08"
+      "difficulty": "hard",
+      "id": "csa_hard_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_hard_08.mp4",
+        "poster": "media/images/csa_hard_08-frame.png",
+        "figure": "media/images/csa_hard_08.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Full adder A=1 B=0 Cin=0: Sum is…",
+      "prompt": "For the Carry-select adder lab: Full adder A=1 B=0 Cin=0: Sum is…",
       "choices": [
         "0",
         "1",
@@ -219,12 +1343,18 @@
       ],
       "answer": 1,
       "explain": "Sum = A⊕B⊕Cin = 1.",
-      "difficulty": "easy",
-      "id": "csa_easy_09"
+      "difficulty": "hard",
+      "id": "csa_hard_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_hard_09.mp4",
+        "poster": "media/images/csa_hard_09-frame.png",
+        "figure": "media/images/csa_hard_09.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Full adder A=1 B=0 Cin=0: Cout is…",
+      "prompt": "For the Carry-select adder lab: Full adder A=1 B=0 Cin=0: Cout is…",
       "choices": [
         "0",
         "1",
@@ -233,12 +1363,18 @@
       ],
       "answer": 0,
       "explain": "Majority → Cout=0.",
-      "difficulty": "easy",
-      "id": "csa_easy_10"
+      "difficulty": "hard",
+      "id": "csa_hard_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_hard_10.mp4",
+        "poster": "media/images/csa_hard_10-frame.png",
+        "figure": "media/images/csa_hard_10.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Full adder A=1 B=1 Cin=0: Sum is…",
+      "prompt": "For the Carry-select adder lab: Full adder A=1 B=1 Cin=0: Sum is…",
       "choices": [
         "0",
         "1",
@@ -247,12 +1383,18 @@
       ],
       "answer": 0,
       "explain": "Sum = A⊕B⊕Cin = 0.",
-      "difficulty": "easy",
-      "id": "csa_easy_11"
+      "difficulty": "hard",
+      "id": "csa_hard_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_hard_11.mp4",
+        "poster": "media/images/csa_hard_11-frame.png",
+        "figure": "media/images/csa_hard_11.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Full adder A=1 B=1 Cin=0: Cout is…",
+      "prompt": "For the Carry-select adder lab: Full adder A=1 B=1 Cin=0: Cout is…",
       "choices": [
         "0",
         "1",
@@ -261,12 +1403,18 @@
       ],
       "answer": 1,
       "explain": "Majority → Cout=1.",
-      "difficulty": "easy",
-      "id": "csa_easy_12"
+      "difficulty": "hard",
+      "id": "csa_hard_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_hard_12.mp4",
+        "poster": "media/images/csa_hard_12-frame.png",
+        "figure": "media/images/csa_hard_12.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Full adder A=0 B=0 Cin=1: Sum is…",
+      "prompt": "For the Carry-select adder lab: Full adder A=0 B=0 Cin=1: Sum is…",
       "choices": [
         "0",
         "1",
@@ -275,12 +1423,18 @@
       ],
       "answer": 1,
       "explain": "Sum = A⊕B⊕Cin = 1.",
-      "difficulty": "easy",
-      "id": "csa_easy_13"
+      "difficulty": "hard",
+      "id": "csa_hard_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_hard_13.mp4",
+        "poster": "media/images/csa_hard_13-frame.png",
+        "figure": "media/images/csa_hard_13.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Full adder A=0 B=0 Cin=1: Cout is…",
+      "prompt": "For the Carry-select adder lab: Full adder A=0 B=0 Cin=1: Cout is…",
       "choices": [
         "0",
         "1",
@@ -289,12 +1443,18 @@
       ],
       "answer": 0,
       "explain": "Majority → Cout=0.",
-      "difficulty": "easy",
-      "id": "csa_easy_14"
+      "difficulty": "hard",
+      "id": "csa_hard_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_hard_14.mp4",
+        "poster": "media/images/csa_hard_14-frame.png",
+        "figure": "media/images/csa_hard_14.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Full adder A=0 B=1 Cin=1: Sum is…",
+      "prompt": "For the Carry-select adder lab: Full adder A=0 B=1 Cin=1: Sum is…",
       "choices": [
         "0",
         "1",
@@ -303,12 +1463,18 @@
       ],
       "answer": 0,
       "explain": "Sum = A⊕B⊕Cin = 0.",
-      "difficulty": "easy",
-      "id": "csa_easy_15"
+      "difficulty": "hard",
+      "id": "csa_hard_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_hard_15.mp4",
+        "poster": "media/images/csa_hard_15-frame.png",
+        "figure": "media/images/csa_hard_15.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Full adder A=0 B=1 Cin=1: Cout is…",
+      "prompt": "For the Carry-select adder lab: Full adder A=0 B=1 Cin=1: Cout is…",
       "choices": [
         "0",
         "1",
@@ -317,12 +1483,18 @@
       ],
       "answer": 1,
       "explain": "Majority → Cout=1.",
-      "difficulty": "easy",
-      "id": "csa_easy_16"
+      "difficulty": "hard",
+      "id": "csa_hard_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_hard_16.mp4",
+        "poster": "media/images/csa_hard_16-frame.png",
+        "figure": "media/images/csa_hard_16.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Full adder A=1 B=0 Cin=1: Sum is…",
+      "prompt": "For the Carry-select adder lab: Full adder A=1 B=0 Cin=1: Sum is…",
       "choices": [
         "0",
         "1",
@@ -331,12 +1503,18 @@
       ],
       "answer": 0,
       "explain": "Sum = A⊕B⊕Cin = 0.",
-      "difficulty": "easy",
-      "id": "csa_easy_17"
+      "difficulty": "hard",
+      "id": "csa_hard_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_hard_17.mp4",
+        "poster": "media/images/csa_hard_17-frame.png",
+        "figure": "media/images/csa_hard_17.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Full adder A=1 B=0 Cin=1: Cout is…",
+      "prompt": "For the Carry-select adder lab: Full adder A=1 B=0 Cin=1: Cout is…",
       "choices": [
         "0",
         "1",
@@ -345,12 +1523,18 @@
       ],
       "answer": 1,
       "explain": "Majority → Cout=1.",
-      "difficulty": "easy",
-      "id": "csa_easy_18"
+      "difficulty": "hard",
+      "id": "csa_hard_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_hard_18.mp4",
+        "poster": "media/images/csa_hard_18-frame.png",
+        "figure": "media/images/csa_hard_18.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Full adder A=1 B=1 Cin=1: Sum is…",
+      "prompt": "For the Carry-select adder lab: Full adder A=1 B=1 Cin=1: Sum is…",
       "choices": [
         "0",
         "1",
@@ -359,12 +1543,18 @@
       ],
       "answer": 1,
       "explain": "Sum = A⊕B⊕Cin = 1.",
-      "difficulty": "easy",
-      "id": "csa_easy_19"
+      "difficulty": "hard",
+      "id": "csa_hard_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_hard_19.mp4",
+        "poster": "media/images/csa_hard_19-frame.png",
+        "figure": "media/images/csa_hard_19.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Full adder A=1 B=1 Cin=1: Cout is…",
+      "prompt": "For the Carry-select adder lab: Full adder A=1 B=1 Cin=1: Cout is…",
       "choices": [
         "0",
         "1",
@@ -373,736 +1563,32 @@
       ],
       "answer": 1,
       "explain": "Majority → Cout=1.",
-      "difficulty": "easy",
-      "id": "csa_easy_20"
+      "difficulty": "hard",
+      "id": "csa_hard_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_hard_20.mp4",
+        "poster": "media/images/csa_hard_20-frame.png",
+        "figure": "media/images/csa_hard_20.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Half adder has no carry-in.",
-      "answer": true,
-      "explain": "HA = Sum/Cout from A,B only.",
-      "difficulty": "easy",
-      "id": "csa_easy_21"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A 1-to-2 decoder has how many select lines?",
-      "choices": [
-        "2",
-        "1",
-        "2",
-        "2"
-      ],
-      "answer": 1,
-      "explain": "1 selects address 2 ones-hot lines.",
-      "difficulty": "easy",
-      "id": "csa_easy_22"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A mux with 2 data inputs needs how many select bits?",
-      "choices": [
-        "0",
-        "1",
-        "2",
-        "3"
-      ],
-      "answer": 1,
-      "explain": "log2(2) = 1.",
-      "difficulty": "easy",
-      "id": "csa_easy_23"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A 2-to-4 decoder has how many select lines?",
-      "choices": [
-        "4",
-        "2",
-        "3",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "2 selects address 4 ones-hot lines.",
-      "difficulty": "easy",
-      "id": "csa_easy_24"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A mux with 4 data inputs needs how many select bits?",
-      "choices": [
-        "1",
-        "2",
-        "4",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "log2(4) = 2.",
-      "difficulty": "easy",
-      "id": "csa_easy_25"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A 3-to-8 decoder has how many select lines?",
-      "choices": [
-        "8",
-        "3",
-        "4",
-        "6"
-      ],
-      "answer": 1,
-      "explain": "3 selects address 8 ones-hot lines.",
-      "difficulty": "easy",
-      "id": "csa_easy_26"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A mux with 8 data inputs needs how many select bits?",
-      "choices": [
-        "2",
-        "3",
-        "8",
-        "5"
-      ],
-      "answer": 1,
-      "explain": "log2(8) = 3.",
-      "difficulty": "easy",
-      "id": "csa_easy_27"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A 4-to-16 decoder has how many select lines?",
-      "choices": [
-        "16",
-        "4",
-        "5",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "4 selects address 16 ones-hot lines.",
-      "difficulty": "easy",
-      "id": "csa_easy_28"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A mux with 16 data inputs needs how many select bits?",
-      "choices": [
-        "3",
-        "4",
-        "16",
-        "6"
-      ],
-      "answer": 1,
-      "explain": "log2(16) = 4.",
-      "difficulty": "easy",
-      "id": "csa_easy_29"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A 5-to-32 decoder has how many select lines?",
-      "choices": [
-        "32",
-        "5",
-        "6",
-        "10"
-      ],
-      "answer": 1,
-      "explain": "5 selects address 32 ones-hot lines.",
-      "difficulty": "easy",
-      "id": "csa_easy_30"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=0 B=0 Cin=0: Sum is…",
-      "choices": [
-        "0",
-        "1",
-        "Cout",
-        "X"
-      ],
-      "answer": 0,
-      "explain": "Sum = A⊕B⊕Cin = 0.",
-      "difficulty": "medium",
-      "id": "csa_medium_05"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=0 B=0 Cin=0: Cout is…",
-      "choices": [
-        "0",
-        "1",
-        "Sum",
-        "A"
-      ],
-      "answer": 0,
-      "explain": "Majority → Cout=0.",
-      "difficulty": "medium",
-      "id": "csa_medium_06"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=0 B=1 Cin=0: Sum is…",
-      "choices": [
-        "0",
-        "1",
-        "Cout",
-        "X"
-      ],
-      "answer": 1,
-      "explain": "Sum = A⊕B⊕Cin = 1.",
-      "difficulty": "medium",
-      "id": "csa_medium_07"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=0 B=1 Cin=0: Cout is…",
-      "choices": [
-        "0",
-        "1",
-        "Sum",
-        "A"
-      ],
-      "answer": 0,
-      "explain": "Majority → Cout=0.",
-      "difficulty": "medium",
-      "id": "csa_medium_08"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=1 B=0 Cin=0: Sum is…",
-      "choices": [
-        "0",
-        "1",
-        "Cout",
-        "X"
-      ],
-      "answer": 1,
-      "explain": "Sum = A⊕B⊕Cin = 1.",
-      "difficulty": "medium",
-      "id": "csa_medium_09"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=1 B=0 Cin=0: Cout is…",
-      "choices": [
-        "0",
-        "1",
-        "Sum",
-        "A"
-      ],
-      "answer": 0,
-      "explain": "Majority → Cout=0.",
-      "difficulty": "medium",
-      "id": "csa_medium_10"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=1 B=1 Cin=0: Sum is…",
-      "choices": [
-        "0",
-        "1",
-        "Cout",
-        "X"
-      ],
-      "answer": 0,
-      "explain": "Sum = A⊕B⊕Cin = 0.",
-      "difficulty": "medium",
-      "id": "csa_medium_11"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=1 B=1 Cin=0: Cout is…",
-      "choices": [
-        "0",
-        "1",
-        "Sum",
-        "A"
-      ],
-      "answer": 1,
-      "explain": "Majority → Cout=1.",
-      "difficulty": "medium",
-      "id": "csa_medium_12"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=0 B=0 Cin=1: Sum is…",
-      "choices": [
-        "0",
-        "1",
-        "Cout",
-        "X"
-      ],
-      "answer": 1,
-      "explain": "Sum = A⊕B⊕Cin = 1.",
-      "difficulty": "medium",
-      "id": "csa_medium_13"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=0 B=0 Cin=1: Cout is…",
-      "choices": [
-        "0",
-        "1",
-        "Sum",
-        "A"
-      ],
-      "answer": 0,
-      "explain": "Majority → Cout=0.",
-      "difficulty": "medium",
-      "id": "csa_medium_14"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=0 B=1 Cin=1: Sum is…",
-      "choices": [
-        "0",
-        "1",
-        "Cout",
-        "X"
-      ],
-      "answer": 0,
-      "explain": "Sum = A⊕B⊕Cin = 0.",
-      "difficulty": "medium",
-      "id": "csa_medium_15"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=0 B=1 Cin=1: Cout is…",
-      "choices": [
-        "0",
-        "1",
-        "Sum",
-        "A"
-      ],
-      "answer": 1,
-      "explain": "Majority → Cout=1.",
-      "difficulty": "medium",
-      "id": "csa_medium_16"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=1 B=0 Cin=1: Sum is…",
-      "choices": [
-        "0",
-        "1",
-        "Cout",
-        "X"
-      ],
-      "answer": 0,
-      "explain": "Sum = A⊕B⊕Cin = 0.",
-      "difficulty": "medium",
-      "id": "csa_medium_17"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=1 B=0 Cin=1: Cout is…",
-      "choices": [
-        "0",
-        "1",
-        "Sum",
-        "A"
-      ],
-      "answer": 1,
-      "explain": "Majority → Cout=1.",
-      "difficulty": "medium",
-      "id": "csa_medium_18"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=1 B=1 Cin=1: Sum is…",
-      "choices": [
-        "0",
-        "1",
-        "Cout",
-        "X"
-      ],
-      "answer": 1,
-      "explain": "Sum = A⊕B⊕Cin = 1.",
-      "difficulty": "medium",
-      "id": "csa_medium_19"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=1 B=1 Cin=1: Cout is…",
-      "choices": [
-        "0",
-        "1",
-        "Sum",
-        "A"
-      ],
-      "answer": 1,
-      "explain": "Majority → Cout=1.",
-      "difficulty": "medium",
-      "id": "csa_medium_20"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Half adder has no carry-in.",
-      "answer": true,
-      "explain": "HA = Sum/Cout from A,B only.",
-      "difficulty": "medium",
-      "id": "csa_medium_21"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A 1-to-2 decoder has how many select lines?",
-      "choices": [
-        "2",
-        "1",
-        "2",
-        "2"
-      ],
-      "answer": 1,
-      "explain": "1 selects address 2 ones-hot lines.",
-      "difficulty": "medium",
-      "id": "csa_medium_22"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A mux with 2 data inputs needs how many select bits?",
-      "choices": [
-        "0",
-        "1",
-        "2",
-        "3"
-      ],
-      "answer": 1,
-      "explain": "log2(2) = 1.",
-      "difficulty": "medium",
-      "id": "csa_medium_23"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A 2-to-4 decoder has how many select lines?",
-      "choices": [
-        "4",
-        "2",
-        "3",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "2 selects address 4 ones-hot lines.",
-      "difficulty": "medium",
-      "id": "csa_medium_24"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A mux with 4 data inputs needs how many select bits?",
-      "choices": [
-        "1",
-        "2",
-        "4",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "log2(4) = 2.",
-      "difficulty": "medium",
-      "id": "csa_medium_25"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A 3-to-8 decoder has how many select lines?",
-      "choices": [
-        "8",
-        "3",
-        "4",
-        "6"
-      ],
-      "answer": 1,
-      "explain": "3 selects address 8 ones-hot lines.",
-      "difficulty": "medium",
-      "id": "csa_medium_26"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A mux with 8 data inputs needs how many select bits?",
-      "choices": [
-        "2",
-        "3",
-        "8",
-        "5"
-      ],
-      "answer": 1,
-      "explain": "log2(8) = 3.",
-      "difficulty": "medium",
-      "id": "csa_medium_27"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A 4-to-16 decoder has how many select lines?",
-      "choices": [
-        "16",
-        "4",
-        "5",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "4 selects address 16 ones-hot lines.",
-      "difficulty": "medium",
-      "id": "csa_medium_28"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A mux with 16 data inputs needs how many select bits?",
-      "choices": [
-        "3",
-        "4",
-        "16",
-        "6"
-      ],
-      "answer": 1,
-      "explain": "log2(16) = 4.",
-      "difficulty": "medium",
-      "id": "csa_medium_29"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A 5-to-32 decoder has how many select lines?",
-      "choices": [
-        "32",
-        "5",
-        "6",
-        "10"
-      ],
-      "answer": 1,
-      "explain": "5 selects address 32 ones-hot lines.",
-      "difficulty": "medium",
-      "id": "csa_medium_30"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=0 B=0 Cin=0: Sum is…",
-      "choices": [
-        "0",
-        "1",
-        "Cout",
-        "X"
-      ],
-      "answer": 0,
-      "explain": "Sum = A⊕B⊕Cin = 0.",
-      "difficulty": "hard",
-      "id": "csa_hard_05"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=0 B=0 Cin=0: Cout is…",
-      "choices": [
-        "0",
-        "1",
-        "Sum",
-        "A"
-      ],
-      "answer": 0,
-      "explain": "Majority → Cout=0.",
-      "difficulty": "hard",
-      "id": "csa_hard_06"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=0 B=1 Cin=0: Sum is…",
-      "choices": [
-        "0",
-        "1",
-        "Cout",
-        "X"
-      ],
-      "answer": 1,
-      "explain": "Sum = A⊕B⊕Cin = 1.",
-      "difficulty": "hard",
-      "id": "csa_hard_07"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=0 B=1 Cin=0: Cout is…",
-      "choices": [
-        "0",
-        "1",
-        "Sum",
-        "A"
-      ],
-      "answer": 0,
-      "explain": "Majority → Cout=0.",
-      "difficulty": "hard",
-      "id": "csa_hard_08"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=1 B=0 Cin=0: Sum is…",
-      "choices": [
-        "0",
-        "1",
-        "Cout",
-        "X"
-      ],
-      "answer": 1,
-      "explain": "Sum = A⊕B⊕Cin = 1.",
-      "difficulty": "hard",
-      "id": "csa_hard_09"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=1 B=0 Cin=0: Cout is…",
-      "choices": [
-        "0",
-        "1",
-        "Sum",
-        "A"
-      ],
-      "answer": 0,
-      "explain": "Majority → Cout=0.",
-      "difficulty": "hard",
-      "id": "csa_hard_10"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=1 B=1 Cin=0: Sum is…",
-      "choices": [
-        "0",
-        "1",
-        "Cout",
-        "X"
-      ],
-      "answer": 0,
-      "explain": "Sum = A⊕B⊕Cin = 0.",
-      "difficulty": "hard",
-      "id": "csa_hard_11"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=1 B=1 Cin=0: Cout is…",
-      "choices": [
-        "0",
-        "1",
-        "Sum",
-        "A"
-      ],
-      "answer": 1,
-      "explain": "Majority → Cout=1.",
-      "difficulty": "hard",
-      "id": "csa_hard_12"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=0 B=0 Cin=1: Sum is…",
-      "choices": [
-        "0",
-        "1",
-        "Cout",
-        "X"
-      ],
-      "answer": 1,
-      "explain": "Sum = A⊕B⊕Cin = 1.",
-      "difficulty": "hard",
-      "id": "csa_hard_13"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=0 B=0 Cin=1: Cout is…",
-      "choices": [
-        "0",
-        "1",
-        "Sum",
-        "A"
-      ],
-      "answer": 0,
-      "explain": "Majority → Cout=0.",
-      "difficulty": "hard",
-      "id": "csa_hard_14"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=0 B=1 Cin=1: Sum is…",
-      "choices": [
-        "0",
-        "1",
-        "Cout",
-        "X"
-      ],
-      "answer": 0,
-      "explain": "Sum = A⊕B⊕Cin = 0.",
-      "difficulty": "hard",
-      "id": "csa_hard_15"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=0 B=1 Cin=1: Cout is…",
-      "choices": [
-        "0",
-        "1",
-        "Sum",
-        "A"
-      ],
-      "answer": 1,
-      "explain": "Majority → Cout=1.",
-      "difficulty": "hard",
-      "id": "csa_hard_16"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=1 B=0 Cin=1: Sum is…",
-      "choices": [
-        "0",
-        "1",
-        "Cout",
-        "X"
-      ],
-      "answer": 0,
-      "explain": "Sum = A⊕B⊕Cin = 0.",
-      "difficulty": "hard",
-      "id": "csa_hard_17"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=1 B=0 Cin=1: Cout is…",
-      "choices": [
-        "0",
-        "1",
-        "Sum",
-        "A"
-      ],
-      "answer": 1,
-      "explain": "Majority → Cout=1.",
-      "difficulty": "hard",
-      "id": "csa_hard_18"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=1 B=1 Cin=1: Sum is…",
-      "choices": [
-        "0",
-        "1",
-        "Cout",
-        "X"
-      ],
-      "answer": 1,
-      "explain": "Sum = A⊕B⊕Cin = 1.",
-      "difficulty": "hard",
-      "id": "csa_hard_19"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Full adder A=1 B=1 Cin=1: Cout is…",
-      "choices": [
-        "0",
-        "1",
-        "Sum",
-        "A"
-      ],
-      "answer": 1,
-      "explain": "Majority → Cout=1.",
-      "difficulty": "hard",
-      "id": "csa_hard_20"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Half adder has no carry-in.",
+      "prompt": "For the Carry-select adder lab: Half adder has no carry-in.",
       "answer": true,
       "explain": "HA = Sum/Cout from A,B only.",
       "difficulty": "hard",
-      "id": "csa_hard_21"
+      "id": "csa_hard_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_hard_21.mp4",
+        "poster": "media/images/csa_hard_21-frame.png",
+        "figure": "media/images/csa_hard_21.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "A 1-to-2 decoder has how many select lines?",
+      "prompt": "For the Carry-select adder lab: A 1-to-2 decoder has how many select lines?",
       "choices": [
         "2",
         "1",
@@ -1112,11 +1598,17 @@
       "answer": 1,
       "explain": "1 selects address 2 ones-hot lines.",
       "difficulty": "hard",
-      "id": "csa_hard_22"
+      "id": "csa_hard_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_hard_22.mp4",
+        "poster": "media/images/csa_hard_22-frame.png",
+        "figure": "media/images/csa_hard_22.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "A mux with 2 data inputs needs how many select bits?",
+      "prompt": "For the Carry-select adder lab: A mux with 2 data inputs needs how many select bits?",
       "choices": [
         "0",
         "1",
@@ -1126,11 +1618,17 @@
       "answer": 1,
       "explain": "log2(2) = 1.",
       "difficulty": "hard",
-      "id": "csa_hard_23"
+      "id": "csa_hard_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_hard_23.mp4",
+        "poster": "media/images/csa_hard_23-frame.png",
+        "figure": "media/images/csa_hard_23.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "A 2-to-4 decoder has how many select lines?",
+      "prompt": "For the Carry-select adder lab: A 2-to-4 decoder has how many select lines?",
       "choices": [
         "4",
         "2",
@@ -1140,11 +1638,17 @@
       "answer": 1,
       "explain": "2 selects address 4 ones-hot lines.",
       "difficulty": "hard",
-      "id": "csa_hard_24"
+      "id": "csa_hard_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_hard_24.mp4",
+        "poster": "media/images/csa_hard_24-frame.png",
+        "figure": "media/images/csa_hard_24.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "A mux with 4 data inputs needs how many select bits?",
+      "prompt": "For the Carry-select adder lab: A mux with 4 data inputs needs how many select bits?",
       "choices": [
         "1",
         "2",
@@ -1154,11 +1658,17 @@
       "answer": 1,
       "explain": "log2(4) = 2.",
       "difficulty": "hard",
-      "id": "csa_hard_25"
+      "id": "csa_hard_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_hard_25.mp4",
+        "poster": "media/images/csa_hard_25-frame.png",
+        "figure": "media/images/csa_hard_25.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "A 3-to-8 decoder has how many select lines?",
+      "prompt": "For the Carry-select adder lab: A 3-to-8 decoder has how many select lines?",
       "choices": [
         "8",
         "3",
@@ -1168,11 +1678,17 @@
       "answer": 1,
       "explain": "3 selects address 8 ones-hot lines.",
       "difficulty": "hard",
-      "id": "csa_hard_26"
+      "id": "csa_hard_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_hard_26.mp4",
+        "poster": "media/images/csa_hard_26-frame.png",
+        "figure": "media/images/csa_hard_26.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "A mux with 8 data inputs needs how many select bits?",
+      "prompt": "For the Carry-select adder lab: A mux with 8 data inputs needs how many select bits?",
       "choices": [
         "2",
         "3",
@@ -1182,11 +1698,17 @@
       "answer": 1,
       "explain": "log2(8) = 3.",
       "difficulty": "hard",
-      "id": "csa_hard_27"
+      "id": "csa_hard_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_hard_27.mp4",
+        "poster": "media/images/csa_hard_27-frame.png",
+        "figure": "media/images/csa_hard_27.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "A 4-to-16 decoder has how many select lines?",
+      "prompt": "For the Carry-select adder lab: A 4-to-16 decoder has how many select lines?",
       "choices": [
         "16",
         "4",
@@ -1196,11 +1718,17 @@
       "answer": 1,
       "explain": "4 selects address 16 ones-hot lines.",
       "difficulty": "hard",
-      "id": "csa_hard_28"
+      "id": "csa_hard_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_hard_28.mp4",
+        "poster": "media/images/csa_hard_28-frame.png",
+        "figure": "media/images/csa_hard_28.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "A mux with 16 data inputs needs how many select bits?",
+      "prompt": "For the Carry-select adder lab: A mux with 16 data inputs needs how many select bits?",
       "choices": [
         "3",
         "4",
@@ -1210,11 +1738,17 @@
       "answer": 1,
       "explain": "log2(16) = 4.",
       "difficulty": "hard",
-      "id": "csa_hard_29"
+      "id": "csa_hard_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_hard_29.mp4",
+        "poster": "media/images/csa_hard_29-frame.png",
+        "figure": "media/images/csa_hard_29.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "A 5-to-32 decoder has how many select lines?",
+      "prompt": "For the Carry-select adder lab: A 5-to-32 decoder has how many select lines?",
       "choices": [
         "32",
         "5",
@@ -1224,7 +1758,13 @@
       "answer": 1,
       "explain": "5 selects address 32 ones-hot lines.",
       "difficulty": "hard",
-      "id": "csa_hard_30"
+      "id": "csa_hard_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/csa_hard_30.mp4",
+        "poster": "media/images/csa_hard_30-frame.png",
+        "figure": "media/images/csa_hard_30.png"
+      }
     }
   ]
 }

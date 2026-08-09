@@ -14,7 +14,13 @@
       ],
       "answer": 2,
       "explain": "Space is 0x20.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_easy_01.mp4",
+        "poster": "media/images/ascii_easy_01-frame.png",
+        "figure": "media/images/ascii_easy_01.png"
+      }
     },
     {
       "id": "ascii_easy_02",
@@ -28,7 +34,13 @@
       ],
       "answer": 1,
       "explain": "LF is 0x0A (CR is 0x0D).",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_easy_02.mp4",
+        "poster": "media/images/ascii_easy_02-frame.png",
+        "figure": "media/images/ascii_easy_02.png"
+      }
     },
     {
       "id": "ascii_easy_03",
@@ -42,7 +54,13 @@
       ],
       "answer": 2,
       "explain": "NUL (0x00) terminates a C string.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_easy_03.mp4",
+        "poster": "media/images/ascii_easy_03-frame.png",
+        "figure": "media/images/ascii_easy_03.png"
+      }
     },
     {
       "id": "ascii_easy_04",
@@ -50,7 +68,449 @@
       "prompt": "Every byte 0x00–0xFF has a unique printable ASCII glyph.",
       "answer": false,
       "explain": "Dots stand in for non-printables so columns stay aligned.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_easy_04.mp4",
+        "poster": "media/images/ascii_easy_04-frame.png",
+        "figure": "media/images/ascii_easy_04.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for space is…",
+      "choices": [
+        "0x30",
+        "0x20",
+        "0x21",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "space → 0x20.",
+      "difficulty": "easy",
+      "id": "ascii_easy_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_easy_05.mp4",
+        "poster": "media/images/ascii_easy_05-frame.png",
+        "figure": "media/images/ascii_easy_05.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII space has code 0x20.",
+      "answer": true,
+      "explain": "Standard ASCII maps space to 0x20.",
+      "difficulty": "easy",
+      "id": "ascii_easy_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_easy_06.mp4",
+        "poster": "media/images/ascii_easy_06-frame.png",
+        "figure": "media/images/ascii_easy_06.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for digit 0 is…",
+      "choices": [
+        "0x20",
+        "0x30",
+        "0x31",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "digit 0 → 0x30.",
+      "difficulty": "easy",
+      "id": "ascii_easy_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_easy_07.mp4",
+        "poster": "media/images/ascii_easy_07-frame.png",
+        "figure": "media/images/ascii_easy_07.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII digit 0 has code 0x30.",
+      "answer": true,
+      "explain": "Standard ASCII maps digit 0 to 0x30.",
+      "difficulty": "easy",
+      "id": "ascii_easy_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_easy_08.mp4",
+        "poster": "media/images/ascii_easy_08-frame.png",
+        "figure": "media/images/ascii_easy_08.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for digit 9 is…",
+      "choices": [
+        "0x29",
+        "0x39",
+        "0x38",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "digit 9 → 0x39.",
+      "difficulty": "easy",
+      "id": "ascii_easy_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_easy_09.mp4",
+        "poster": "media/images/ascii_easy_09-frame.png",
+        "figure": "media/images/ascii_easy_09.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII digit 9 has code 0x39.",
+      "answer": true,
+      "explain": "Standard ASCII maps digit 9 to 0x39.",
+      "difficulty": "easy",
+      "id": "ascii_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_easy_10.mp4",
+        "poster": "media/images/ascii_easy_10-frame.png",
+        "figure": "media/images/ascii_easy_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for 'A' is…",
+      "choices": [
+        "0x51",
+        "0x41",
+        "0x40",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "'A' → 0x41.",
+      "difficulty": "easy",
+      "id": "ascii_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_easy_11.mp4",
+        "poster": "media/images/ascii_easy_11-frame.png",
+        "figure": "media/images/ascii_easy_11.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII 'A' has code 0x41.",
+      "answer": true,
+      "explain": "Standard ASCII maps 'A' to 0x41.",
+      "difficulty": "easy",
+      "id": "ascii_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_easy_12.mp4",
+        "poster": "media/images/ascii_easy_12-frame.png",
+        "figure": "media/images/ascii_easy_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for 'Z' is…",
+      "choices": [
+        "0x4A",
+        "0x5A",
+        "0x5B",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "'Z' → 0x5A.",
+      "difficulty": "easy",
+      "id": "ascii_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_easy_13.mp4",
+        "poster": "media/images/ascii_easy_13-frame.png",
+        "figure": "media/images/ascii_easy_13.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII 'Z' has code 0x5A.",
+      "answer": true,
+      "explain": "Standard ASCII maps 'Z' to 0x5A.",
+      "difficulty": "easy",
+      "id": "ascii_easy_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_easy_14.mp4",
+        "poster": "media/images/ascii_easy_14-frame.png",
+        "figure": "media/images/ascii_easy_14.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII 'a' has code 0x61.",
+      "answer": true,
+      "explain": "Standard ASCII maps 'a' to 0x61.",
+      "difficulty": "easy",
+      "id": "ascii_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_easy_16.mp4",
+        "poster": "media/images/ascii_easy_16-frame.png",
+        "figure": "media/images/ascii_easy_16.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII 'z' has code 0x7A.",
+      "answer": true,
+      "explain": "Standard ASCII maps 'z' to 0x7A.",
+      "difficulty": "easy",
+      "id": "ascii_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_easy_18.mp4",
+        "poster": "media/images/ascii_easy_18-frame.png",
+        "figure": "media/images/ascii_easy_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for NUL is…",
+      "choices": [
+        "0x10",
+        "0x00",
+        "0x01",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "NUL → 0x00.",
+      "difficulty": "easy",
+      "id": "ascii_easy_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_easy_19.mp4",
+        "poster": "media/images/ascii_easy_19-frame.png",
+        "figure": "media/images/ascii_easy_19.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII NUL has code 0x00.",
+      "answer": true,
+      "explain": "Standard ASCII maps NUL to 0x00.",
+      "difficulty": "easy",
+      "id": "ascii_easy_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_easy_20.mp4",
+        "poster": "media/images/ascii_easy_20-frame.png",
+        "figure": "media/images/ascii_easy_20.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for LF is…",
+      "choices": [
+        "0x1A",
+        "0x0A",
+        "0x0B",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "LF → 0x0A.",
+      "difficulty": "easy",
+      "id": "ascii_easy_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_easy_21.mp4",
+        "poster": "media/images/ascii_easy_21-frame.png",
+        "figure": "media/images/ascii_easy_21.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII LF has code 0x0A.",
+      "answer": true,
+      "explain": "Standard ASCII maps LF to 0x0A.",
+      "difficulty": "easy",
+      "id": "ascii_easy_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_easy_22.mp4",
+        "poster": "media/images/ascii_easy_22-frame.png",
+        "figure": "media/images/ascii_easy_22.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for CR is…",
+      "choices": [
+        "0x1D",
+        "0x0D",
+        "0x0C",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "CR → 0x0D.",
+      "difficulty": "easy",
+      "id": "ascii_easy_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_easy_23.mp4",
+        "poster": "media/images/ascii_easy_23-frame.png",
+        "figure": "media/images/ascii_easy_23.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII CR has code 0x0D.",
+      "answer": true,
+      "explain": "Standard ASCII maps CR to 0x0D.",
+      "difficulty": "easy",
+      "id": "ascii_easy_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_easy_24.mp4",
+        "poster": "media/images/ascii_easy_24-frame.png",
+        "figure": "media/images/ascii_easy_24.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII code for DEL is…",
+      "choices": [
+        "0x6F",
+        "0x7F",
+        "0x7E",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "DEL → 0x7F.",
+      "difficulty": "easy",
+      "id": "ascii_easy_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_easy_25.mp4",
+        "poster": "media/images/ascii_easy_25-frame.png",
+        "figure": "media/images/ascii_easy_25.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII DEL has code 0x7F.",
+      "answer": true,
+      "explain": "Standard ASCII maps DEL to 0x7F.",
+      "difficulty": "easy",
+      "id": "ascii_easy_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_easy_26.mp4",
+        "poster": "media/images/ascii_easy_26-frame.png",
+        "figure": "media/images/ascii_easy_26.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII / hex: ASCII code for space is…",
+      "choices": [
+        "0x30",
+        "0x20",
+        "0x21",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "space → 0x20.",
+      "difficulty": "easy",
+      "id": "ascii_easy_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_easy_27.mp4",
+        "poster": "media/images/ascii_easy_27-frame.png",
+        "figure": "media/images/ascii_easy_27.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII / hex: ASCII space has code 0x20.",
+      "answer": true,
+      "explain": "Standard ASCII maps space to 0x20.",
+      "difficulty": "easy",
+      "id": "ascii_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_easy_28.mp4",
+        "poster": "media/images/ascii_easy_28-frame.png",
+        "figure": "media/images/ascii_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII / hex: ASCII code for digit 0 is…",
+      "choices": [
+        "0x20",
+        "0x30",
+        "0x31",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "digit 0 → 0x30.",
+      "difficulty": "easy",
+      "id": "ascii_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_easy_29.mp4",
+        "poster": "media/images/ascii_easy_29-frame.png",
+        "figure": "media/images/ascii_easy_29.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII / hex: ASCII digit 0 has code 0x30.",
+      "answer": true,
+      "explain": "Standard ASCII maps digit 0 to 0x30.",
+      "difficulty": "easy",
+      "id": "ascii_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_easy_30.mp4",
+        "poster": "media/images/ascii_easy_30-frame.png",
+        "figure": "media/images/ascii_easy_30.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII / hex: ASCII code for digit 9 is…",
+      "choices": [
+        "0x29",
+        "0x39",
+        "0x38",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "digit 9 → 0x39.",
+      "difficulty": "easy",
+      "id": "ascii_easy_31",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_easy_31.mp4",
+        "poster": "media/images/ascii_easy_31-frame.png",
+        "figure": "media/images/ascii_easy_31.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII / hex: ASCII digit 9 has code 0x39.",
+      "answer": true,
+      "explain": "Standard ASCII maps digit 9 to 0x39.",
+      "difficulty": "easy",
+      "id": "ascii_easy_32",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_easy_32.mp4",
+        "poster": "media/images/ascii_easy_32-frame.png",
+        "figure": "media/images/ascii_easy_32.png"
+      }
     },
     {
       "id": "ascii_medium_01",
@@ -64,7 +524,13 @@
       ],
       "answer": 1,
       "explain": "'A' = 0x41 (65).",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_medium_01.mp4",
+        "poster": "media/images/ascii_medium_01-frame.png",
+        "figure": "media/images/ascii_medium_01.png"
+      }
     },
     {
       "id": "ascii_medium_02",
@@ -78,7 +544,13 @@
       ],
       "answer": 1,
       "explain": "CR is 0x0D.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_medium_02.mp4",
+        "poster": "media/images/ascii_medium_02-frame.png",
+        "figure": "media/images/ascii_medium_02.png"
+      }
     },
     {
       "id": "ascii_medium_03",
@@ -92,7 +564,13 @@
       ],
       "answer": 1,
       "explain": "DEL is 0x7F.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_medium_03.mp4",
+        "poster": "media/images/ascii_medium_03-frame.png",
+        "figure": "media/images/ascii_medium_03.png"
+      }
     },
     {
       "id": "ascii_medium_04",
@@ -100,21 +578,13 @@
       "prompt": "0x41 and 'A' name the same byte value.",
       "answer": true,
       "explain": "Dump columns are dual views; controls are not printable.",
-      "difficulty": "medium"
-    },
-    {
-      "id": "ascii_medium_05",
-      "type": "multiple_choice",
-      "prompt": "ASCII 'a' is which hex byte?",
-      "choices": [
-        "0x60",
-        "0x61",
-        "0x62",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "'a' = 0x61 (97).",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_medium_04.mp4",
+        "poster": "media/images/ascii_medium_04-frame.png",
+        "figure": "media/images/ascii_medium_04.png"
+      }
     },
     {
       "id": "ascii_medium_06",
@@ -128,7 +598,447 @@
       ],
       "answer": 1,
       "explain": "'0' = 0x30 (48).",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_medium_06.mp4",
+        "poster": "media/images/ascii_medium_06-frame.png",
+        "figure": "media/images/ascii_medium_06.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In ASCII / hex, aSCII code for space is…",
+      "choices": [
+        "0x30",
+        "0x20",
+        "0x21",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "space → 0x20.",
+      "difficulty": "medium",
+      "id": "ascii_medium_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_medium_07.mp4",
+        "poster": "media/images/ascii_medium_07-frame.png",
+        "figure": "media/images/ascii_medium_07.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In ASCII / hex, aSCII space has code 0x20.",
+      "answer": true,
+      "explain": "Standard ASCII maps space to 0x20.",
+      "difficulty": "medium",
+      "id": "ascii_medium_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_medium_08.mp4",
+        "poster": "media/images/ascii_medium_08-frame.png",
+        "figure": "media/images/ascii_medium_08.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In ASCII / hex, aSCII code for digit 0 is…",
+      "choices": [
+        "0x20",
+        "0x30",
+        "0x31",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "digit 0 → 0x30.",
+      "difficulty": "medium",
+      "id": "ascii_medium_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_medium_09.mp4",
+        "poster": "media/images/ascii_medium_09-frame.png",
+        "figure": "media/images/ascii_medium_09.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In ASCII / hex, aSCII digit 0 has code 0x30.",
+      "answer": true,
+      "explain": "Standard ASCII maps digit 0 to 0x30.",
+      "difficulty": "medium",
+      "id": "ascii_medium_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_medium_10.mp4",
+        "poster": "media/images/ascii_medium_10-frame.png",
+        "figure": "media/images/ascii_medium_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In ASCII / hex, aSCII code for digit 9 is…",
+      "choices": [
+        "0x29",
+        "0x39",
+        "0x38",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "digit 9 → 0x39.",
+      "difficulty": "medium",
+      "id": "ascii_medium_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_medium_11.mp4",
+        "poster": "media/images/ascii_medium_11-frame.png",
+        "figure": "media/images/ascii_medium_11.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In ASCII / hex, aSCII digit 9 has code 0x39.",
+      "answer": true,
+      "explain": "Standard ASCII maps digit 9 to 0x39.",
+      "difficulty": "medium",
+      "id": "ascii_medium_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_medium_12.mp4",
+        "poster": "media/images/ascii_medium_12-frame.png",
+        "figure": "media/images/ascii_medium_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII / hex: ASCII code for 'A' is…",
+      "choices": [
+        "0x51",
+        "0x41",
+        "0x40",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "'A' → 0x41.",
+      "difficulty": "medium",
+      "id": "ascii_medium_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_medium_13.mp4",
+        "poster": "media/images/ascii_medium_13-frame.png",
+        "figure": "media/images/ascii_medium_13.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII / hex: ASCII 'A' has code 0x41.",
+      "answer": true,
+      "explain": "Standard ASCII maps 'A' to 0x41.",
+      "difficulty": "medium",
+      "id": "ascii_medium_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_medium_14.mp4",
+        "poster": "media/images/ascii_medium_14-frame.png",
+        "figure": "media/images/ascii_medium_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII / hex: ASCII code for 'Z' is…",
+      "choices": [
+        "0x4A",
+        "0x5A",
+        "0x5B",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "'Z' → 0x5A.",
+      "difficulty": "medium",
+      "id": "ascii_medium_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_medium_15.mp4",
+        "poster": "media/images/ascii_medium_15-frame.png",
+        "figure": "media/images/ascii_medium_15.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII / hex: ASCII 'Z' has code 0x5A.",
+      "answer": true,
+      "explain": "Standard ASCII maps 'Z' to 0x5A.",
+      "difficulty": "medium",
+      "id": "ascii_medium_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_medium_16.mp4",
+        "poster": "media/images/ascii_medium_16-frame.png",
+        "figure": "media/images/ascii_medium_16.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In ASCII / hex, aSCII code for 'a' is…",
+      "choices": [
+        "0x71",
+        "0x61",
+        "0x60",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "'a' → 0x61.",
+      "difficulty": "medium",
+      "id": "ascii_medium_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_medium_17.mp4",
+        "poster": "media/images/ascii_medium_17-frame.png",
+        "figure": "media/images/ascii_medium_17.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII / hex: ASCII 'a' has code 0x61.",
+      "answer": true,
+      "explain": "Standard ASCII maps 'a' to 0x61.",
+      "difficulty": "medium",
+      "id": "ascii_medium_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_medium_18.mp4",
+        "poster": "media/images/ascii_medium_18-frame.png",
+        "figure": "media/images/ascii_medium_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In ASCII / hex, aSCII code for 'z' is…",
+      "choices": [
+        "0x6A",
+        "0x7A",
+        "0x7B",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "'z' → 0x7A.",
+      "difficulty": "medium",
+      "id": "ascii_medium_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_medium_19.mp4",
+        "poster": "media/images/ascii_medium_19-frame.png",
+        "figure": "media/images/ascii_medium_19.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII / hex: ASCII 'z' has code 0x7A.",
+      "answer": true,
+      "explain": "Standard ASCII maps 'z' to 0x7A.",
+      "difficulty": "medium",
+      "id": "ascii_medium_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_medium_20.mp4",
+        "poster": "media/images/ascii_medium_20-frame.png",
+        "figure": "media/images/ascii_medium_20.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII / hex: ASCII code for NUL is…",
+      "choices": [
+        "0x10",
+        "0x00",
+        "0x01",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "NUL → 0x00.",
+      "difficulty": "medium",
+      "id": "ascii_medium_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_medium_21.mp4",
+        "poster": "media/images/ascii_medium_21-frame.png",
+        "figure": "media/images/ascii_medium_21.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII / hex: ASCII NUL has code 0x00.",
+      "answer": true,
+      "explain": "Standard ASCII maps NUL to 0x00.",
+      "difficulty": "medium",
+      "id": "ascii_medium_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_medium_22.mp4",
+        "poster": "media/images/ascii_medium_22-frame.png",
+        "figure": "media/images/ascii_medium_22.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII / hex: ASCII code for LF is…",
+      "choices": [
+        "0x1A",
+        "0x0A",
+        "0x0B",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "LF → 0x0A.",
+      "difficulty": "medium",
+      "id": "ascii_medium_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_medium_23.mp4",
+        "poster": "media/images/ascii_medium_23-frame.png",
+        "figure": "media/images/ascii_medium_23.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII / hex: ASCII LF has code 0x0A.",
+      "answer": true,
+      "explain": "Standard ASCII maps LF to 0x0A.",
+      "difficulty": "medium",
+      "id": "ascii_medium_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_medium_24.mp4",
+        "poster": "media/images/ascii_medium_24-frame.png",
+        "figure": "media/images/ascii_medium_24.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII / hex: ASCII code for CR is…",
+      "choices": [
+        "0x1D",
+        "0x0D",
+        "0x0C",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "CR → 0x0D.",
+      "difficulty": "medium",
+      "id": "ascii_medium_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_medium_25.mp4",
+        "poster": "media/images/ascii_medium_25-frame.png",
+        "figure": "media/images/ascii_medium_25.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII / hex: ASCII CR has code 0x0D.",
+      "answer": true,
+      "explain": "Standard ASCII maps CR to 0x0D.",
+      "difficulty": "medium",
+      "id": "ascii_medium_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_medium_26.mp4",
+        "poster": "media/images/ascii_medium_26-frame.png",
+        "figure": "media/images/ascii_medium_26.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII / hex: ASCII code for DEL is…",
+      "choices": [
+        "0x6F",
+        "0x7F",
+        "0x7E",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "DEL → 0x7F.",
+      "difficulty": "medium",
+      "id": "ascii_medium_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_medium_27.mp4",
+        "poster": "media/images/ascii_medium_27-frame.png",
+        "figure": "media/images/ascii_medium_27.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "ASCII / hex: ASCII DEL has code 0x7F.",
+      "answer": true,
+      "explain": "Standard ASCII maps DEL to 0x7F.",
+      "difficulty": "medium",
+      "id": "ascii_medium_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_medium_28.mp4",
+        "poster": "media/images/ascii_medium_28-frame.png",
+        "figure": "media/images/ascii_medium_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII / hex: Hex digit 0 equals which decimal value?",
+      "choices": [
+        "1",
+        "0",
+        "5",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "0₁₆ = 0₁₀.",
+      "difficulty": "medium",
+      "id": "ascii_medium_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_medium_29.mp4",
+        "poster": "media/images/ascii_medium_29-frame.png",
+        "figure": "media/images/ascii_medium_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII / hex: Decimal 0 as one hex digit is…",
+      "choices": [
+        "1",
+        "0",
+        "5",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "0₁₀ = 0₁₆.",
+      "difficulty": "medium",
+      "id": "ascii_medium_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_medium_30.mp4",
+        "poster": "media/images/ascii_medium_30-frame.png",
+        "figure": "media/images/ascii_medium_30.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "ASCII / hex: Hex digit 1 equals which decimal value?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "1₁₆ = 1₁₀.",
+      "difficulty": "medium",
+      "id": "ascii_medium_31",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_medium_31.mp4",
+        "poster": "media/images/ascii_medium_31-frame.png",
+        "figure": "media/images/ascii_medium_31.png"
+      }
     },
     {
       "id": "ascii_hard_01",
@@ -142,7 +1052,13 @@
       ],
       "answer": 1,
       "explain": "ASCII '0' is 0x30; numeric 0 is 0x00.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_hard_01.mp4",
+        "poster": "media/images/ascii_hard_01-frame.png",
+        "figure": "media/images/ascii_hard_01.png"
+      }
     },
     {
       "id": "ascii_hard_02",
@@ -156,7 +1072,13 @@
       ],
       "answer": 1,
       "explain": "7-bit ASCII printables stop at 0x7E; high bytes need another encoding.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_hard_02.mp4",
+        "poster": "media/images/ascii_hard_02-frame.png",
+        "figure": "media/images/ascii_hard_02.png"
+      }
     },
     {
       "id": "ascii_hard_03",
@@ -164,7 +1086,13 @@
       "prompt": "Reading a ROM dump requires mapping hex ↔ characters carefully.",
       "answer": true,
       "explain": "CRLF is 0D 0A; LF-only also exists; NUL cuts C strings.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_hard_03.mp4",
+        "poster": "media/images/ascii_hard_03-frame.png",
+        "figure": "media/images/ascii_hard_03.png"
+      }
     },
     {
       "id": "ascii_hard_04",
@@ -178,579 +1106,17 @@
       ],
       "answer": 1,
       "explain": "Offsets index bytes (often hex), not glyph counts.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_hard_04.mp4",
+        "poster": "media/images/ascii_hard_04-frame.png",
+        "figure": "media/images/ascii_hard_04.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "ASCII code for space is…",
-      "choices": [
-        "0x30",
-        "0x20",
-        "0x21",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "space → 0x20.",
-      "difficulty": "easy",
-      "id": "ascii_easy_05"
-    },
-    {
-      "type": "true_false",
-      "prompt": "ASCII space has code 0x20.",
-      "answer": true,
-      "explain": "Standard ASCII maps space to 0x20.",
-      "difficulty": "easy",
-      "id": "ascii_easy_06"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "ASCII code for digit 0 is…",
-      "choices": [
-        "0x20",
-        "0x30",
-        "0x31",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "digit 0 → 0x30.",
-      "difficulty": "easy",
-      "id": "ascii_easy_07"
-    },
-    {
-      "type": "true_false",
-      "prompt": "ASCII digit 0 has code 0x30.",
-      "answer": true,
-      "explain": "Standard ASCII maps digit 0 to 0x30.",
-      "difficulty": "easy",
-      "id": "ascii_easy_08"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "ASCII code for digit 9 is…",
-      "choices": [
-        "0x29",
-        "0x39",
-        "0x38",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "digit 9 → 0x39.",
-      "difficulty": "easy",
-      "id": "ascii_easy_09"
-    },
-    {
-      "type": "true_false",
-      "prompt": "ASCII digit 9 has code 0x39.",
-      "answer": true,
-      "explain": "Standard ASCII maps digit 9 to 0x39.",
-      "difficulty": "easy",
-      "id": "ascii_easy_10"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "ASCII code for 'A' is…",
-      "choices": [
-        "0x51",
-        "0x41",
-        "0x40",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "'A' → 0x41.",
-      "difficulty": "easy",
-      "id": "ascii_easy_11"
-    },
-    {
-      "type": "true_false",
-      "prompt": "ASCII 'A' has code 0x41.",
-      "answer": true,
-      "explain": "Standard ASCII maps 'A' to 0x41.",
-      "difficulty": "easy",
-      "id": "ascii_easy_12"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "ASCII code for 'Z' is…",
-      "choices": [
-        "0x4A",
-        "0x5A",
-        "0x5B",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "'Z' → 0x5A.",
-      "difficulty": "easy",
-      "id": "ascii_easy_13"
-    },
-    {
-      "type": "true_false",
-      "prompt": "ASCII 'Z' has code 0x5A.",
-      "answer": true,
-      "explain": "Standard ASCII maps 'Z' to 0x5A.",
-      "difficulty": "easy",
-      "id": "ascii_easy_14"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "ASCII code for 'a' is…",
-      "choices": [
-        "0x71",
-        "0x61",
-        "0x60",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "'a' → 0x61.",
-      "difficulty": "easy",
-      "id": "ascii_easy_15"
-    },
-    {
-      "type": "true_false",
-      "prompt": "ASCII 'a' has code 0x61.",
-      "answer": true,
-      "explain": "Standard ASCII maps 'a' to 0x61.",
-      "difficulty": "easy",
-      "id": "ascii_easy_16"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "ASCII code for 'z' is…",
-      "choices": [
-        "0x6A",
-        "0x7A",
-        "0x7B",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "'z' → 0x7A.",
-      "difficulty": "easy",
-      "id": "ascii_easy_17"
-    },
-    {
-      "type": "true_false",
-      "prompt": "ASCII 'z' has code 0x7A.",
-      "answer": true,
-      "explain": "Standard ASCII maps 'z' to 0x7A.",
-      "difficulty": "easy",
-      "id": "ascii_easy_18"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "ASCII code for NUL is…",
-      "choices": [
-        "0x10",
-        "0x00",
-        "0x01",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "NUL → 0x00.",
-      "difficulty": "easy",
-      "id": "ascii_easy_19"
-    },
-    {
-      "type": "true_false",
-      "prompt": "ASCII NUL has code 0x00.",
-      "answer": true,
-      "explain": "Standard ASCII maps NUL to 0x00.",
-      "difficulty": "easy",
-      "id": "ascii_easy_20"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "ASCII code for LF is…",
-      "choices": [
-        "0x1A",
-        "0x0A",
-        "0x0B",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "LF → 0x0A.",
-      "difficulty": "easy",
-      "id": "ascii_easy_21"
-    },
-    {
-      "type": "true_false",
-      "prompt": "ASCII LF has code 0x0A.",
-      "answer": true,
-      "explain": "Standard ASCII maps LF to 0x0A.",
-      "difficulty": "easy",
-      "id": "ascii_easy_22"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "ASCII code for CR is…",
-      "choices": [
-        "0x1D",
-        "0x0D",
-        "0x0C",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "CR → 0x0D.",
-      "difficulty": "easy",
-      "id": "ascii_easy_23"
-    },
-    {
-      "type": "true_false",
-      "prompt": "ASCII CR has code 0x0D.",
-      "answer": true,
-      "explain": "Standard ASCII maps CR to 0x0D.",
-      "difficulty": "easy",
-      "id": "ascii_easy_24"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "ASCII code for DEL is…",
-      "choices": [
-        "0x6F",
-        "0x7F",
-        "0x7E",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "DEL → 0x7F.",
-      "difficulty": "easy",
-      "id": "ascii_easy_25"
-    },
-    {
-      "type": "true_false",
-      "prompt": "ASCII DEL has code 0x7F.",
-      "answer": true,
-      "explain": "Standard ASCII maps DEL to 0x7F.",
-      "difficulty": "easy",
-      "id": "ascii_easy_26"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Hex digit 0 equals which decimal value?",
-      "choices": [
-        "1",
-        "0",
-        "5",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "0₁₆ = 0₁₀.",
-      "difficulty": "easy",
-      "id": "ascii_easy_27"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Decimal 0 as one hex digit is…",
-      "choices": [
-        "1",
-        "0",
-        "5",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "0₁₀ = 0₁₆.",
-      "difficulty": "easy",
-      "id": "ascii_easy_28"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Hex digit 1 equals which decimal value?",
-      "choices": [
-        "0",
-        "1",
-        "2",
-        "6"
-      ],
-      "answer": 1,
-      "explain": "1₁₆ = 1₁₀.",
-      "difficulty": "easy",
-      "id": "ascii_easy_29"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Decimal 1 as one hex digit is…",
-      "choices": [
-        "0",
-        "1",
-        "2",
-        "6"
-      ],
-      "answer": 1,
-      "explain": "1₁₀ = 1₁₆.",
-      "difficulty": "easy",
-      "id": "ascii_easy_30"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "ASCII code for space is…",
-      "choices": [
-        "0x30",
-        "0x20",
-        "0x21",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "space → 0x20.",
-      "difficulty": "medium",
-      "id": "ascii_medium_07"
-    },
-    {
-      "type": "true_false",
-      "prompt": "ASCII space has code 0x20.",
-      "answer": true,
-      "explain": "Standard ASCII maps space to 0x20.",
-      "difficulty": "medium",
-      "id": "ascii_medium_08"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "ASCII code for digit 0 is…",
-      "choices": [
-        "0x20",
-        "0x30",
-        "0x31",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "digit 0 → 0x30.",
-      "difficulty": "medium",
-      "id": "ascii_medium_09"
-    },
-    {
-      "type": "true_false",
-      "prompt": "ASCII digit 0 has code 0x30.",
-      "answer": true,
-      "explain": "Standard ASCII maps digit 0 to 0x30.",
-      "difficulty": "medium",
-      "id": "ascii_medium_10"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "ASCII code for digit 9 is…",
-      "choices": [
-        "0x29",
-        "0x39",
-        "0x38",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "digit 9 → 0x39.",
-      "difficulty": "medium",
-      "id": "ascii_medium_11"
-    },
-    {
-      "type": "true_false",
-      "prompt": "ASCII digit 9 has code 0x39.",
-      "answer": true,
-      "explain": "Standard ASCII maps digit 9 to 0x39.",
-      "difficulty": "medium",
-      "id": "ascii_medium_12"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "ASCII code for 'A' is…",
-      "choices": [
-        "0x51",
-        "0x41",
-        "0x40",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "'A' → 0x41.",
-      "difficulty": "medium",
-      "id": "ascii_medium_13"
-    },
-    {
-      "type": "true_false",
-      "prompt": "ASCII 'A' has code 0x41.",
-      "answer": true,
-      "explain": "Standard ASCII maps 'A' to 0x41.",
-      "difficulty": "medium",
-      "id": "ascii_medium_14"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "ASCII code for 'Z' is…",
-      "choices": [
-        "0x4A",
-        "0x5A",
-        "0x5B",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "'Z' → 0x5A.",
-      "difficulty": "medium",
-      "id": "ascii_medium_15"
-    },
-    {
-      "type": "true_false",
-      "prompt": "ASCII 'Z' has code 0x5A.",
-      "answer": true,
-      "explain": "Standard ASCII maps 'Z' to 0x5A.",
-      "difficulty": "medium",
-      "id": "ascii_medium_16"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "ASCII code for 'a' is…",
-      "choices": [
-        "0x71",
-        "0x61",
-        "0x60",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "'a' → 0x61.",
-      "difficulty": "medium",
-      "id": "ascii_medium_17"
-    },
-    {
-      "type": "true_false",
-      "prompt": "ASCII 'a' has code 0x61.",
-      "answer": true,
-      "explain": "Standard ASCII maps 'a' to 0x61.",
-      "difficulty": "medium",
-      "id": "ascii_medium_18"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "ASCII code for 'z' is…",
-      "choices": [
-        "0x6A",
-        "0x7A",
-        "0x7B",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "'z' → 0x7A.",
-      "difficulty": "medium",
-      "id": "ascii_medium_19"
-    },
-    {
-      "type": "true_false",
-      "prompt": "ASCII 'z' has code 0x7A.",
-      "answer": true,
-      "explain": "Standard ASCII maps 'z' to 0x7A.",
-      "difficulty": "medium",
-      "id": "ascii_medium_20"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "ASCII code for NUL is…",
-      "choices": [
-        "0x10",
-        "0x00",
-        "0x01",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "NUL → 0x00.",
-      "difficulty": "medium",
-      "id": "ascii_medium_21"
-    },
-    {
-      "type": "true_false",
-      "prompt": "ASCII NUL has code 0x00.",
-      "answer": true,
-      "explain": "Standard ASCII maps NUL to 0x00.",
-      "difficulty": "medium",
-      "id": "ascii_medium_22"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "ASCII code for LF is…",
-      "choices": [
-        "0x1A",
-        "0x0A",
-        "0x0B",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "LF → 0x0A.",
-      "difficulty": "medium",
-      "id": "ascii_medium_23"
-    },
-    {
-      "type": "true_false",
-      "prompt": "ASCII LF has code 0x0A.",
-      "answer": true,
-      "explain": "Standard ASCII maps LF to 0x0A.",
-      "difficulty": "medium",
-      "id": "ascii_medium_24"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "ASCII code for CR is…",
-      "choices": [
-        "0x1D",
-        "0x0D",
-        "0x0C",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "CR → 0x0D.",
-      "difficulty": "medium",
-      "id": "ascii_medium_25"
-    },
-    {
-      "type": "true_false",
-      "prompt": "ASCII CR has code 0x0D.",
-      "answer": true,
-      "explain": "Standard ASCII maps CR to 0x0D.",
-      "difficulty": "medium",
-      "id": "ascii_medium_26"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "ASCII code for DEL is…",
-      "choices": [
-        "0x6F",
-        "0x7F",
-        "0x7E",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "DEL → 0x7F.",
-      "difficulty": "medium",
-      "id": "ascii_medium_27"
-    },
-    {
-      "type": "true_false",
-      "prompt": "ASCII DEL has code 0x7F.",
-      "answer": true,
-      "explain": "Standard ASCII maps DEL to 0x7F.",
-      "difficulty": "medium",
-      "id": "ascii_medium_28"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Hex digit 0 equals which decimal value?",
-      "choices": [
-        "1",
-        "0",
-        "5",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "0₁₆ = 0₁₀.",
-      "difficulty": "medium",
-      "id": "ascii_medium_29"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Decimal 0 as one hex digit is…",
-      "choices": [
-        "1",
-        "0",
-        "5",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "0₁₀ = 0₁₆.",
-      "difficulty": "medium",
-      "id": "ascii_medium_30"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "ASCII code for space is…",
+      "prompt": "For the ASCII / hex lab: ASCII code for space is…",
       "choices": [
         "0x30",
         "0x20",
@@ -760,19 +1126,31 @@
       "answer": 1,
       "explain": "space → 0x20.",
       "difficulty": "hard",
-      "id": "ascii_hard_05"
+      "id": "ascii_hard_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_hard_05.mp4",
+        "poster": "media/images/ascii_hard_05-frame.png",
+        "figure": "media/images/ascii_hard_05.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "ASCII space has code 0x20.",
+      "prompt": "For the ASCII / hex lab: ASCII space has code 0x20.",
       "answer": true,
       "explain": "Standard ASCII maps space to 0x20.",
       "difficulty": "hard",
-      "id": "ascii_hard_06"
+      "id": "ascii_hard_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_hard_06.mp4",
+        "poster": "media/images/ascii_hard_06-frame.png",
+        "figure": "media/images/ascii_hard_06.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "ASCII code for digit 0 is…",
+      "prompt": "For the ASCII / hex lab: ASCII code for digit 0 is…",
       "choices": [
         "0x20",
         "0x30",
@@ -782,19 +1160,31 @@
       "answer": 1,
       "explain": "digit 0 → 0x30.",
       "difficulty": "hard",
-      "id": "ascii_hard_07"
+      "id": "ascii_hard_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_hard_07.mp4",
+        "poster": "media/images/ascii_hard_07-frame.png",
+        "figure": "media/images/ascii_hard_07.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "ASCII digit 0 has code 0x30.",
+      "prompt": "For the ASCII / hex lab: ASCII digit 0 has code 0x30.",
       "answer": true,
       "explain": "Standard ASCII maps digit 0 to 0x30.",
       "difficulty": "hard",
-      "id": "ascii_hard_08"
+      "id": "ascii_hard_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_hard_08.mp4",
+        "poster": "media/images/ascii_hard_08-frame.png",
+        "figure": "media/images/ascii_hard_08.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "ASCII code for digit 9 is…",
+      "prompt": "For the ASCII / hex lab: ASCII code for digit 9 is…",
       "choices": [
         "0x29",
         "0x39",
@@ -804,19 +1194,31 @@
       "answer": 1,
       "explain": "digit 9 → 0x39.",
       "difficulty": "hard",
-      "id": "ascii_hard_09"
+      "id": "ascii_hard_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_hard_09.mp4",
+        "poster": "media/images/ascii_hard_09-frame.png",
+        "figure": "media/images/ascii_hard_09.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "ASCII digit 9 has code 0x39.",
+      "prompt": "For the ASCII / hex lab: ASCII digit 9 has code 0x39.",
       "answer": true,
       "explain": "Standard ASCII maps digit 9 to 0x39.",
       "difficulty": "hard",
-      "id": "ascii_hard_10"
+      "id": "ascii_hard_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_hard_10.mp4",
+        "poster": "media/images/ascii_hard_10-frame.png",
+        "figure": "media/images/ascii_hard_10.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "ASCII code for 'A' is…",
+      "prompt": "For the ASCII / hex lab: ASCII code for 'A' is…",
       "choices": [
         "0x51",
         "0x41",
@@ -826,19 +1228,31 @@
       "answer": 1,
       "explain": "'A' → 0x41.",
       "difficulty": "hard",
-      "id": "ascii_hard_11"
+      "id": "ascii_hard_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_hard_11.mp4",
+        "poster": "media/images/ascii_hard_11-frame.png",
+        "figure": "media/images/ascii_hard_11.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "ASCII 'A' has code 0x41.",
+      "prompt": "In ASCII / hex, aSCII 'A' has code 0x41.",
       "answer": true,
       "explain": "Standard ASCII maps 'A' to 0x41.",
       "difficulty": "hard",
-      "id": "ascii_hard_12"
+      "id": "ascii_hard_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_hard_12.mp4",
+        "poster": "media/images/ascii_hard_12-frame.png",
+        "figure": "media/images/ascii_hard_12.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "ASCII code for 'Z' is…",
+      "prompt": "For the ASCII / hex lab: ASCII code for 'Z' is…",
       "choices": [
         "0x4A",
         "0x5A",
@@ -848,19 +1262,31 @@
       "answer": 1,
       "explain": "'Z' → 0x5A.",
       "difficulty": "hard",
-      "id": "ascii_hard_13"
+      "id": "ascii_hard_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_hard_13.mp4",
+        "poster": "media/images/ascii_hard_13-frame.png",
+        "figure": "media/images/ascii_hard_13.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "ASCII 'Z' has code 0x5A.",
+      "prompt": "In ASCII / hex, aSCII 'Z' has code 0x5A.",
       "answer": true,
       "explain": "Standard ASCII maps 'Z' to 0x5A.",
       "difficulty": "hard",
-      "id": "ascii_hard_14"
+      "id": "ascii_hard_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_hard_14.mp4",
+        "poster": "media/images/ascii_hard_14-frame.png",
+        "figure": "media/images/ascii_hard_14.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "ASCII code for 'a' is…",
+      "prompt": "ASCII code for 'a' is… (context: ascii-hex)",
       "choices": [
         "0x71",
         "0x61",
@@ -870,19 +1296,31 @@
       "answer": 1,
       "explain": "'a' → 0x61.",
       "difficulty": "hard",
-      "id": "ascii_hard_15"
+      "id": "ascii_hard_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_hard_15.mp4",
+        "poster": "media/images/ascii_hard_15-frame.png",
+        "figure": "media/images/ascii_hard_15.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "ASCII 'a' has code 0x61.",
+      "prompt": "In ASCII / hex, aSCII 'a' has code 0x61.",
       "answer": true,
       "explain": "Standard ASCII maps 'a' to 0x61.",
       "difficulty": "hard",
-      "id": "ascii_hard_16"
+      "id": "ascii_hard_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_hard_16.mp4",
+        "poster": "media/images/ascii_hard_16-frame.png",
+        "figure": "media/images/ascii_hard_16.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "ASCII code for 'z' is…",
+      "prompt": "ASCII code for 'z' is… (context: ascii-hex)",
       "choices": [
         "0x6A",
         "0x7A",
@@ -892,19 +1330,31 @@
       "answer": 1,
       "explain": "'z' → 0x7A.",
       "difficulty": "hard",
-      "id": "ascii_hard_17"
+      "id": "ascii_hard_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_hard_17.mp4",
+        "poster": "media/images/ascii_hard_17-frame.png",
+        "figure": "media/images/ascii_hard_17.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "ASCII 'z' has code 0x7A.",
+      "prompt": "In ASCII / hex, aSCII 'z' has code 0x7A.",
       "answer": true,
       "explain": "Standard ASCII maps 'z' to 0x7A.",
       "difficulty": "hard",
-      "id": "ascii_hard_18"
+      "id": "ascii_hard_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_hard_18.mp4",
+        "poster": "media/images/ascii_hard_18-frame.png",
+        "figure": "media/images/ascii_hard_18.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "ASCII code for NUL is…",
+      "prompt": "In ASCII / hex, aSCII code for NUL is…",
       "choices": [
         "0x10",
         "0x00",
@@ -914,19 +1364,31 @@
       "answer": 1,
       "explain": "NUL → 0x00.",
       "difficulty": "hard",
-      "id": "ascii_hard_19"
+      "id": "ascii_hard_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_hard_19.mp4",
+        "poster": "media/images/ascii_hard_19-frame.png",
+        "figure": "media/images/ascii_hard_19.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "ASCII NUL has code 0x00.",
+      "prompt": "In ASCII / hex, aSCII NUL has code 0x00.",
       "answer": true,
       "explain": "Standard ASCII maps NUL to 0x00.",
       "difficulty": "hard",
-      "id": "ascii_hard_20"
+      "id": "ascii_hard_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_hard_20.mp4",
+        "poster": "media/images/ascii_hard_20-frame.png",
+        "figure": "media/images/ascii_hard_20.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "ASCII code for LF is…",
+      "prompt": "In ASCII / hex, aSCII code for LF is…",
       "choices": [
         "0x1A",
         "0x0A",
@@ -936,19 +1398,31 @@
       "answer": 1,
       "explain": "LF → 0x0A.",
       "difficulty": "hard",
-      "id": "ascii_hard_21"
+      "id": "ascii_hard_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_hard_21.mp4",
+        "poster": "media/images/ascii_hard_21-frame.png",
+        "figure": "media/images/ascii_hard_21.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "ASCII LF has code 0x0A.",
+      "prompt": "In ASCII / hex, aSCII LF has code 0x0A.",
       "answer": true,
       "explain": "Standard ASCII maps LF to 0x0A.",
       "difficulty": "hard",
-      "id": "ascii_hard_22"
+      "id": "ascii_hard_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_hard_22.mp4",
+        "poster": "media/images/ascii_hard_22-frame.png",
+        "figure": "media/images/ascii_hard_22.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "ASCII code for CR is…",
+      "prompt": "In ASCII / hex, aSCII code for CR is…",
       "choices": [
         "0x1D",
         "0x0D",
@@ -958,19 +1432,31 @@
       "answer": 1,
       "explain": "CR → 0x0D.",
       "difficulty": "hard",
-      "id": "ascii_hard_23"
+      "id": "ascii_hard_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_hard_23.mp4",
+        "poster": "media/images/ascii_hard_23-frame.png",
+        "figure": "media/images/ascii_hard_23.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "ASCII CR has code 0x0D.",
+      "prompt": "In ASCII / hex, aSCII CR has code 0x0D.",
       "answer": true,
       "explain": "Standard ASCII maps CR to 0x0D.",
       "difficulty": "hard",
-      "id": "ascii_hard_24"
+      "id": "ascii_hard_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_hard_24.mp4",
+        "poster": "media/images/ascii_hard_24-frame.png",
+        "figure": "media/images/ascii_hard_24.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "ASCII code for DEL is…",
+      "prompt": "In ASCII / hex, aSCII code for DEL is…",
       "choices": [
         "0x6F",
         "0x7F",
@@ -980,19 +1466,31 @@
       "answer": 1,
       "explain": "DEL → 0x7F.",
       "difficulty": "hard",
-      "id": "ascii_hard_25"
+      "id": "ascii_hard_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_hard_25.mp4",
+        "poster": "media/images/ascii_hard_25-frame.png",
+        "figure": "media/images/ascii_hard_25.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "ASCII DEL has code 0x7F.",
+      "prompt": "In ASCII / hex, aSCII DEL has code 0x7F.",
       "answer": true,
       "explain": "Standard ASCII maps DEL to 0x7F.",
       "difficulty": "hard",
-      "id": "ascii_hard_26"
+      "id": "ascii_hard_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_hard_26.mp4",
+        "poster": "media/images/ascii_hard_26-frame.png",
+        "figure": "media/images/ascii_hard_26.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Hex digit 0 equals which decimal value?",
+      "prompt": "In ASCII / hex, hex digit 0 equals which decimal value?",
       "choices": [
         "1",
         "0",
@@ -1002,11 +1500,17 @@
       "answer": 1,
       "explain": "0₁₆ = 0₁₀.",
       "difficulty": "hard",
-      "id": "ascii_hard_27"
+      "id": "ascii_hard_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_hard_27.mp4",
+        "poster": "media/images/ascii_hard_27-frame.png",
+        "figure": "media/images/ascii_hard_27.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Decimal 0 as one hex digit is…",
+      "prompt": "In ASCII / hex, decimal 0 as one hex digit is…",
       "choices": [
         "1",
         "0",
@@ -1016,11 +1520,17 @@
       "answer": 1,
       "explain": "0₁₀ = 0₁₆.",
       "difficulty": "hard",
-      "id": "ascii_hard_28"
+      "id": "ascii_hard_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_hard_28.mp4",
+        "poster": "media/images/ascii_hard_28-frame.png",
+        "figure": "media/images/ascii_hard_28.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Hex digit 1 equals which decimal value?",
+      "prompt": "In ASCII / hex, hex digit 1 equals which decimal value?",
       "choices": [
         "0",
         "1",
@@ -1030,11 +1540,17 @@
       "answer": 1,
       "explain": "1₁₆ = 1₁₀.",
       "difficulty": "hard",
-      "id": "ascii_hard_29"
+      "id": "ascii_hard_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_hard_29.mp4",
+        "poster": "media/images/ascii_hard_29-frame.png",
+        "figure": "media/images/ascii_hard_29.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Decimal 1 as one hex digit is…",
+      "prompt": "ASCII / hex: Decimal 1 as one hex digit is…",
       "choices": [
         "0",
         "1",
@@ -1044,7 +1560,13 @@
       "answer": 1,
       "explain": "1₁₀ = 1₁₆.",
       "difficulty": "hard",
-      "id": "ascii_hard_30"
+      "id": "ascii_hard_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ascii_hard_30.mp4",
+        "poster": "media/images/ascii_hard_30-frame.png",
+        "figure": "media/images/ascii_hard_30.png"
+      }
     }
   ]
 }

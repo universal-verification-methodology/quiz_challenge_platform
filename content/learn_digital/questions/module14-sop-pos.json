@@ -14,7 +14,13 @@
       ],
       "answer": 1,
       "explain": "SOP ORs products for rows where F is 1.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_easy_01.mp4",
+        "poster": "media/images/sop_easy_01-frame.png",
+        "figure": "media/images/sop_easy_01.png"
+      }
     },
     {
       "id": "sop_easy_02",
@@ -28,7 +34,13 @@
       ],
       "answer": 0,
       "explain": "POS ANDs sums for rows where F is 0.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_easy_02.mp4",
+        "poster": "media/images/sop_easy_02-frame.png",
+        "figure": "media/images/sop_easy_02.png"
+      }
     },
     {
       "id": "sop_easy_03",
@@ -42,7 +54,13 @@
       ],
       "answer": 1,
       "explain": "m0 is the 00 row: A' AND B'.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_easy_03.mp4",
+        "poster": "media/images/sop_easy_03-frame.png",
+        "figure": "media/images/sop_easy_03.png"
+      }
     },
     {
       "id": "sop_easy_04",
@@ -50,7 +68,377 @@
       "prompt": "Sigma notation always equals the smallest SOP cover.",
       "answer": false,
       "explain": "Canonical lists every term; minimization may shrink them.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_easy_04.mp4",
+        "poster": "media/images/sop_easy_04-frame.png",
+        "figure": "media/images/sop_easy_04.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "SOP / POS: A + 0 = A",
+      "answer": true,
+      "explain": "Identity for OR.",
+      "difficulty": "easy",
+      "id": "sop_easy_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_easy_05.mp4",
+        "poster": "media/images/sop_easy_05-frame.png",
+        "figure": "media/images/sop_easy_05.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "SOP / POS: A · 1 = A",
+      "answer": true,
+      "explain": "Identity for AND.",
+      "difficulty": "easy",
+      "id": "sop_easy_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_easy_06.mp4",
+        "poster": "media/images/sop_easy_06-frame.png",
+        "figure": "media/images/sop_easy_06.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "SOP / POS: A + 1 = 1",
+      "answer": true,
+      "explain": "Annulment for OR.",
+      "difficulty": "easy",
+      "id": "sop_easy_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_easy_07.mp4",
+        "poster": "media/images/sop_easy_07-frame.png",
+        "figure": "media/images/sop_easy_07.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "SOP / POS: A · 0 = 0",
+      "answer": true,
+      "explain": "Annulment for AND.",
+      "difficulty": "easy",
+      "id": "sop_easy_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_easy_08.mp4",
+        "poster": "media/images/sop_easy_08-frame.png",
+        "figure": "media/images/sop_easy_08.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "SOP / POS: A + A = A",
+      "answer": true,
+      "explain": "Idempotent OR.",
+      "difficulty": "easy",
+      "id": "sop_easy_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_easy_09.mp4",
+        "poster": "media/images/sop_easy_09-frame.png",
+        "figure": "media/images/sop_easy_09.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "SOP / POS: A · A = A",
+      "answer": true,
+      "explain": "Idempotent AND.",
+      "difficulty": "easy",
+      "id": "sop_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_easy_10.mp4",
+        "poster": "media/images/sop_easy_10-frame.png",
+        "figure": "media/images/sop_easy_10.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "SOP / POS: A + A' = 1",
+      "answer": true,
+      "explain": "Complement OR.",
+      "difficulty": "easy",
+      "id": "sop_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_easy_11.mp4",
+        "poster": "media/images/sop_easy_11-frame.png",
+        "figure": "media/images/sop_easy_11.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "SOP / POS: A · A' = 0",
+      "answer": true,
+      "explain": "Complement AND.",
+      "difficulty": "easy",
+      "id": "sop_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_easy_12.mp4",
+        "poster": "media/images/sop_easy_12-frame.png",
+        "figure": "media/images/sop_easy_12.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "SOP / POS: (A')' = A",
+      "answer": true,
+      "explain": "Involution.",
+      "difficulty": "easy",
+      "id": "sop_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_easy_13.mp4",
+        "poster": "media/images/sop_easy_13-frame.png",
+        "figure": "media/images/sop_easy_13.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "SOP / POS: A + AB = A",
+      "answer": true,
+      "explain": "Absorption.",
+      "difficulty": "easy",
+      "id": "sop_easy_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_easy_14.mp4",
+        "poster": "media/images/sop_easy_14-frame.png",
+        "figure": "media/images/sop_easy_14.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "SOP / POS: A(A+B) = A",
+      "answer": true,
+      "explain": "Absorption.",
+      "difficulty": "easy",
+      "id": "sop_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_easy_15.mp4",
+        "poster": "media/images/sop_easy_15-frame.png",
+        "figure": "media/images/sop_easy_15.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "SOP / POS: A + B = B + A",
+      "answer": true,
+      "explain": "OR commutative.",
+      "difficulty": "easy",
+      "id": "sop_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_easy_16.mp4",
+        "poster": "media/images/sop_easy_16-frame.png",
+        "figure": "media/images/sop_easy_16.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "SOP / POS: AB = BA",
+      "answer": true,
+      "explain": "AND commutative.",
+      "difficulty": "easy",
+      "id": "sop_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_easy_17.mp4",
+        "poster": "media/images/sop_easy_17-frame.png",
+        "figure": "media/images/sop_easy_17.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "SOP / POS: A+B = A·B",
+      "answer": false,
+      "explain": "OR is not AND.",
+      "difficulty": "easy",
+      "id": "sop_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_easy_18.mp4",
+        "poster": "media/images/sop_easy_18-frame.png",
+        "figure": "media/images/sop_easy_18.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "SOP / POS: (A+B)' = A'+B'",
+      "answer": false,
+      "explain": "DeMorgan: (A+B)' = A'B'.",
+      "difficulty": "easy",
+      "id": "sop_easy_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_easy_19.mp4",
+        "poster": "media/images/sop_easy_19-frame.png",
+        "figure": "media/images/sop_easy_19.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "SOP / POS: (AB)' = A'+B'",
+      "answer": true,
+      "explain": "DeMorgan for AND.",
+      "difficulty": "easy",
+      "id": "sop_easy_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_easy_20.mp4",
+        "poster": "media/images/sop_easy_20-frame.png",
+        "figure": "media/images/sop_easy_20.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "SOP / POS: (A+B)' = A'B'",
+      "answer": true,
+      "explain": "DeMorgan for OR.",
+      "difficulty": "easy",
+      "id": "sop_easy_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_easy_21.mp4",
+        "poster": "media/images/sop_easy_21-frame.png",
+        "figure": "media/images/sop_easy_21.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "SOP / POS: A+AB' = A+B",
+      "answer": false,
+      "explain": "Not a standard identity as stated.",
+      "difficulty": "easy",
+      "id": "sop_easy_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_easy_22.mp4",
+        "poster": "media/images/sop_easy_22-frame.png",
+        "figure": "media/images/sop_easy_22.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "SOP / POS: A⊕A = 0",
+      "answer": true,
+      "explain": "XOR of equals is 0.",
+      "difficulty": "easy",
+      "id": "sop_easy_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_easy_23.mp4",
+        "poster": "media/images/sop_easy_23-frame.png",
+        "figure": "media/images/sop_easy_23.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "SOP / POS: A⊕0 = A",
+      "answer": true,
+      "explain": "XOR identity.",
+      "difficulty": "easy",
+      "id": "sop_easy_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_easy_24.mp4",
+        "poster": "media/images/sop_easy_24-frame.png",
+        "figure": "media/images/sop_easy_24.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "SOP / POS: A⊕1 = A'",
+      "answer": true,
+      "explain": "XOR with 1 complements.",
+      "difficulty": "easy",
+      "id": "sop_easy_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_easy_25.mp4",
+        "poster": "media/images/sop_easy_25-frame.png",
+        "figure": "media/images/sop_easy_25.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "SOP / POS: A+A'B = A+B",
+      "answer": true,
+      "explain": "Consensus/absorb form.",
+      "difficulty": "easy",
+      "id": "sop_easy_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_easy_26.mp4",
+        "poster": "media/images/sop_easy_26-frame.png",
+        "figure": "media/images/sop_easy_26.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "SOP / POS: Majority(A,A,B)=A",
+      "answer": true,
+      "explain": "Two votes for A.",
+      "difficulty": "easy",
+      "id": "sop_easy_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_easy_27.mp4",
+        "poster": "media/images/sop_easy_27-frame.png",
+        "figure": "media/images/sop_easy_27.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "SOP / POS: A·(B+C)=AB+AC",
+      "answer": true,
+      "explain": "Distributive.",
+      "difficulty": "easy",
+      "id": "sop_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_easy_28.mp4",
+        "poster": "media/images/sop_easy_28-frame.png",
+        "figure": "media/images/sop_easy_28.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "SOP / POS: A+(B·C)=(A+B)·(A+C)",
+      "answer": true,
+      "explain": "Distributive.",
+      "difficulty": "easy",
+      "id": "sop_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_easy_29.mp4",
+        "poster": "media/images/sop_easy_29-frame.png",
+        "figure": "media/images/sop_easy_29.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "SOP / POS: A+B+C = A·B·C",
+      "answer": false,
+      "explain": "Different operators.",
+      "difficulty": "easy",
+      "id": "sop_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_easy_30.mp4",
+        "poster": "media/images/sop_easy_30-frame.png",
+        "figure": "media/images/sop_easy_30.png"
+      }
     },
     {
       "id": "sop_medium_01",
@@ -64,7 +452,13 @@
       ],
       "answer": 1,
       "explain": "M0 = A+B (false only when A=B=0).",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_medium_01.mp4",
+        "poster": "media/images/sop_medium_01-frame.png",
+        "figure": "media/images/sop_medium_01.png"
+      }
     },
     {
       "id": "sop_medium_02",
@@ -78,7 +472,13 @@
       ],
       "answer": 1,
       "explain": "XOR is 1 on 01 and 10 → m1,m2.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_medium_02.mp4",
+        "poster": "media/images/sop_medium_02-frame.png",
+        "figure": "media/images/sop_medium_02.png"
+      }
     },
     {
       "id": "sop_medium_03",
@@ -92,7 +492,13 @@
       ],
       "answer": 3,
       "explain": "Only m3 (AB) is 1.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_medium_03.mp4",
+        "poster": "media/images/sop_medium_03-frame.png",
+        "figure": "media/images/sop_medium_03.png"
+      }
     },
     {
       "id": "sop_medium_04",
@@ -100,7 +506,377 @@
       "prompt": "Canonical POS ANDs a maxterm for each OFF row.",
       "answer": true,
       "explain": "m0 is a product; M0 is a sum — different shapes.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_medium_04.mp4",
+        "poster": "media/images/sop_medium_04-frame.png",
+        "figure": "media/images/sop_medium_04.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In SOP / POS, a + 0 = A",
+      "answer": true,
+      "explain": "Identity for OR.",
+      "difficulty": "medium",
+      "id": "sop_medium_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_medium_05.mp4",
+        "poster": "media/images/sop_medium_05-frame.png",
+        "figure": "media/images/sop_medium_05.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In SOP / POS, a · 1 = A",
+      "answer": true,
+      "explain": "Identity for AND.",
+      "difficulty": "medium",
+      "id": "sop_medium_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_medium_06.mp4",
+        "poster": "media/images/sop_medium_06-frame.png",
+        "figure": "media/images/sop_medium_06.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In SOP / POS, a + 1 = 1",
+      "answer": true,
+      "explain": "Annulment for OR.",
+      "difficulty": "medium",
+      "id": "sop_medium_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_medium_07.mp4",
+        "poster": "media/images/sop_medium_07-frame.png",
+        "figure": "media/images/sop_medium_07.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In SOP / POS, a · 0 = 0",
+      "answer": true,
+      "explain": "Annulment for AND.",
+      "difficulty": "medium",
+      "id": "sop_medium_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_medium_08.mp4",
+        "poster": "media/images/sop_medium_08-frame.png",
+        "figure": "media/images/sop_medium_08.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In SOP / POS, a + A = A",
+      "answer": true,
+      "explain": "Idempotent OR.",
+      "difficulty": "medium",
+      "id": "sop_medium_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_medium_09.mp4",
+        "poster": "media/images/sop_medium_09-frame.png",
+        "figure": "media/images/sop_medium_09.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In SOP / POS, a · A = A",
+      "answer": true,
+      "explain": "Idempotent AND.",
+      "difficulty": "medium",
+      "id": "sop_medium_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_medium_10.mp4",
+        "poster": "media/images/sop_medium_10-frame.png",
+        "figure": "media/images/sop_medium_10.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In SOP / POS, a + A' = 1",
+      "answer": true,
+      "explain": "Complement OR.",
+      "difficulty": "medium",
+      "id": "sop_medium_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_medium_11.mp4",
+        "poster": "media/images/sop_medium_11-frame.png",
+        "figure": "media/images/sop_medium_11.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In SOP / POS, a · A' = 0",
+      "answer": true,
+      "explain": "Complement AND.",
+      "difficulty": "medium",
+      "id": "sop_medium_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_medium_12.mp4",
+        "poster": "media/images/sop_medium_12-frame.png",
+        "figure": "media/images/sop_medium_12.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In SOP / POS, (A')' = A",
+      "answer": true,
+      "explain": "Involution.",
+      "difficulty": "medium",
+      "id": "sop_medium_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_medium_13.mp4",
+        "poster": "media/images/sop_medium_13-frame.png",
+        "figure": "media/images/sop_medium_13.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In SOP / POS, a + AB = A",
+      "answer": true,
+      "explain": "Absorption.",
+      "difficulty": "medium",
+      "id": "sop_medium_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_medium_14.mp4",
+        "poster": "media/images/sop_medium_14-frame.png",
+        "figure": "media/images/sop_medium_14.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In SOP / POS, a(A+B) = A",
+      "answer": true,
+      "explain": "Absorption.",
+      "difficulty": "medium",
+      "id": "sop_medium_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_medium_15.mp4",
+        "poster": "media/images/sop_medium_15-frame.png",
+        "figure": "media/images/sop_medium_15.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In SOP / POS, a + B = B + A",
+      "answer": true,
+      "explain": "OR commutative.",
+      "difficulty": "medium",
+      "id": "sop_medium_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_medium_16.mp4",
+        "poster": "media/images/sop_medium_16-frame.png",
+        "figure": "media/images/sop_medium_16.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In SOP / POS, aB = BA",
+      "answer": true,
+      "explain": "AND commutative.",
+      "difficulty": "medium",
+      "id": "sop_medium_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_medium_17.mp4",
+        "poster": "media/images/sop_medium_17-frame.png",
+        "figure": "media/images/sop_medium_17.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In SOP / POS, a+B = A·B",
+      "answer": false,
+      "explain": "OR is not AND.",
+      "difficulty": "medium",
+      "id": "sop_medium_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_medium_18.mp4",
+        "poster": "media/images/sop_medium_18-frame.png",
+        "figure": "media/images/sop_medium_18.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In SOP / POS, (A+B)' = A'+B'",
+      "answer": false,
+      "explain": "DeMorgan: (A+B)' = A'B'.",
+      "difficulty": "medium",
+      "id": "sop_medium_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_medium_19.mp4",
+        "poster": "media/images/sop_medium_19-frame.png",
+        "figure": "media/images/sop_medium_19.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In SOP / POS, (AB)' = A'+B'",
+      "answer": true,
+      "explain": "DeMorgan for AND.",
+      "difficulty": "medium",
+      "id": "sop_medium_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_medium_20.mp4",
+        "poster": "media/images/sop_medium_20-frame.png",
+        "figure": "media/images/sop_medium_20.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In SOP / POS, (A+B)' = A'B'",
+      "answer": true,
+      "explain": "DeMorgan for OR.",
+      "difficulty": "medium",
+      "id": "sop_medium_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_medium_21.mp4",
+        "poster": "media/images/sop_medium_21-frame.png",
+        "figure": "media/images/sop_medium_21.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In SOP / POS, a+AB' = A+B",
+      "answer": false,
+      "explain": "Not a standard identity as stated.",
+      "difficulty": "medium",
+      "id": "sop_medium_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_medium_22.mp4",
+        "poster": "media/images/sop_medium_22-frame.png",
+        "figure": "media/images/sop_medium_22.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In SOP / POS, a⊕A = 0",
+      "answer": true,
+      "explain": "XOR of equals is 0.",
+      "difficulty": "medium",
+      "id": "sop_medium_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_medium_23.mp4",
+        "poster": "media/images/sop_medium_23-frame.png",
+        "figure": "media/images/sop_medium_23.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In SOP / POS, a⊕0 = A",
+      "answer": true,
+      "explain": "XOR identity.",
+      "difficulty": "medium",
+      "id": "sop_medium_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_medium_24.mp4",
+        "poster": "media/images/sop_medium_24-frame.png",
+        "figure": "media/images/sop_medium_24.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In SOP / POS, a⊕1 = A'",
+      "answer": true,
+      "explain": "XOR with 1 complements.",
+      "difficulty": "medium",
+      "id": "sop_medium_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_medium_25.mp4",
+        "poster": "media/images/sop_medium_25-frame.png",
+        "figure": "media/images/sop_medium_25.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In SOP / POS, a+A'B = A+B",
+      "answer": true,
+      "explain": "Consensus/absorb form.",
+      "difficulty": "medium",
+      "id": "sop_medium_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_medium_26.mp4",
+        "poster": "media/images/sop_medium_26-frame.png",
+        "figure": "media/images/sop_medium_26.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In SOP / POS, majority(A,A,B)=A",
+      "answer": true,
+      "explain": "Two votes for A.",
+      "difficulty": "medium",
+      "id": "sop_medium_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_medium_27.mp4",
+        "poster": "media/images/sop_medium_27-frame.png",
+        "figure": "media/images/sop_medium_27.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In SOP / POS, a·(B+C)=AB+AC",
+      "answer": true,
+      "explain": "Distributive.",
+      "difficulty": "medium",
+      "id": "sop_medium_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_medium_28.mp4",
+        "poster": "media/images/sop_medium_28-frame.png",
+        "figure": "media/images/sop_medium_28.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In SOP / POS, a+(B·C)=(A+B)·(A+C)",
+      "answer": true,
+      "explain": "Distributive.",
+      "difficulty": "medium",
+      "id": "sop_medium_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_medium_29.mp4",
+        "poster": "media/images/sop_medium_29-frame.png",
+        "figure": "media/images/sop_medium_29.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In SOP / POS, a+B+C = A·B·C",
+      "answer": false,
+      "explain": "Different operators.",
+      "difficulty": "medium",
+      "id": "sop_medium_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_medium_30.mp4",
+        "poster": "media/images/sop_medium_30-frame.png",
+        "figure": "media/images/sop_medium_30.png"
+      }
     },
     {
       "id": "sop_hard_01",
@@ -114,7 +890,13 @@
       ],
       "answer": 1,
       "explain": "No ON minterms → SOP is 0.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_hard_01.mp4",
+        "poster": "media/images/sop_hard_01-frame.png",
+        "figure": "media/images/sop_hard_01.png"
+      }
     },
     {
       "id": "sop_hard_02",
@@ -128,7 +910,13 @@
       ],
       "answer": 1,
       "explain": "All ones → both forms are tautology 1.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_hard_02.mp4",
+        "poster": "media/images/sop_hard_02-frame.png",
+        "figure": "media/images/sop_hard_02.png"
+      }
     },
     {
       "id": "sop_hard_03",
@@ -142,7 +930,13 @@
       ],
       "answer": 1,
       "explain": "XOR is 0 on 00 and 11 → M0 and M3.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_hard_03.mp4",
+        "poster": "media/images/sop_hard_03-frame.png",
+        "figure": "media/images/sop_hard_03.png"
+      }
     },
     {
       "id": "sop_hard_04",
@@ -150,631 +944,377 @@
       "prompt": "Canonical SOP and POS always use identical product terms.",
       "answer": false,
       "explain": "Don't mix the dual constructions.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_hard_04.mp4",
+        "poster": "media/images/sop_hard_04-frame.png",
+        "figure": "media/images/sop_hard_04.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A + 0 = A",
-      "answer": true,
-      "explain": "Identity for OR.",
-      "difficulty": "easy",
-      "id": "sop_easy_05"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A · 1 = A",
-      "answer": true,
-      "explain": "Identity for AND.",
-      "difficulty": "easy",
-      "id": "sop_easy_06"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A + 1 = 1",
-      "answer": true,
-      "explain": "Annulment for OR.",
-      "difficulty": "easy",
-      "id": "sop_easy_07"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A · 0 = 0",
-      "answer": true,
-      "explain": "Annulment for AND.",
-      "difficulty": "easy",
-      "id": "sop_easy_08"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A + A = A",
-      "answer": true,
-      "explain": "Idempotent OR.",
-      "difficulty": "easy",
-      "id": "sop_easy_09"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A · A = A",
-      "answer": true,
-      "explain": "Idempotent AND.",
-      "difficulty": "easy",
-      "id": "sop_easy_10"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A + A' = 1",
-      "answer": true,
-      "explain": "Complement OR.",
-      "difficulty": "easy",
-      "id": "sop_easy_11"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A · A' = 0",
-      "answer": true,
-      "explain": "Complement AND.",
-      "difficulty": "easy",
-      "id": "sop_easy_12"
-    },
-    {
-      "type": "true_false",
-      "prompt": "(A')' = A",
-      "answer": true,
-      "explain": "Involution.",
-      "difficulty": "easy",
-      "id": "sop_easy_13"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A + AB = A",
-      "answer": true,
-      "explain": "Absorption.",
-      "difficulty": "easy",
-      "id": "sop_easy_14"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A(A+B) = A",
-      "answer": true,
-      "explain": "Absorption.",
-      "difficulty": "easy",
-      "id": "sop_easy_15"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A + B = B + A",
-      "answer": true,
-      "explain": "OR commutative.",
-      "difficulty": "easy",
-      "id": "sop_easy_16"
-    },
-    {
-      "type": "true_false",
-      "prompt": "AB = BA",
-      "answer": true,
-      "explain": "AND commutative.",
-      "difficulty": "easy",
-      "id": "sop_easy_17"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A+B = A·B",
-      "answer": false,
-      "explain": "OR is not AND.",
-      "difficulty": "easy",
-      "id": "sop_easy_18"
-    },
-    {
-      "type": "true_false",
-      "prompt": "(A+B)' = A'+B'",
-      "answer": false,
-      "explain": "DeMorgan: (A+B)' = A'B'.",
-      "difficulty": "easy",
-      "id": "sop_easy_19"
-    },
-    {
-      "type": "true_false",
-      "prompt": "(AB)' = A'+B'",
-      "answer": true,
-      "explain": "DeMorgan for AND.",
-      "difficulty": "easy",
-      "id": "sop_easy_20"
-    },
-    {
-      "type": "true_false",
-      "prompt": "(A+B)' = A'B'",
-      "answer": true,
-      "explain": "DeMorgan for OR.",
-      "difficulty": "easy",
-      "id": "sop_easy_21"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A+AB' = A+B",
-      "answer": false,
-      "explain": "Not a standard identity as stated.",
-      "difficulty": "easy",
-      "id": "sop_easy_22"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A⊕A = 0",
-      "answer": true,
-      "explain": "XOR of equals is 0.",
-      "difficulty": "easy",
-      "id": "sop_easy_23"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A⊕0 = A",
-      "answer": true,
-      "explain": "XOR identity.",
-      "difficulty": "easy",
-      "id": "sop_easy_24"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A⊕1 = A'",
-      "answer": true,
-      "explain": "XOR with 1 complements.",
-      "difficulty": "easy",
-      "id": "sop_easy_25"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A+A'B = A+B",
-      "answer": true,
-      "explain": "Consensus/absorb form.",
-      "difficulty": "easy",
-      "id": "sop_easy_26"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Majority(A,A,B)=A",
-      "answer": true,
-      "explain": "Two votes for A.",
-      "difficulty": "easy",
-      "id": "sop_easy_27"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A·(B+C)=AB+AC",
-      "answer": true,
-      "explain": "Distributive.",
-      "difficulty": "easy",
-      "id": "sop_easy_28"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A+(B·C)=(A+B)·(A+C)",
-      "answer": true,
-      "explain": "Distributive.",
-      "difficulty": "easy",
-      "id": "sop_easy_29"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A+B+C = A·B·C",
-      "answer": false,
-      "explain": "Different operators.",
-      "difficulty": "easy",
-      "id": "sop_easy_30"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A + 0 = A",
-      "answer": true,
-      "explain": "Identity for OR.",
-      "difficulty": "medium",
-      "id": "sop_medium_05"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A · 1 = A",
-      "answer": true,
-      "explain": "Identity for AND.",
-      "difficulty": "medium",
-      "id": "sop_medium_06"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A + 1 = 1",
-      "answer": true,
-      "explain": "Annulment for OR.",
-      "difficulty": "medium",
-      "id": "sop_medium_07"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A · 0 = 0",
-      "answer": true,
-      "explain": "Annulment for AND.",
-      "difficulty": "medium",
-      "id": "sop_medium_08"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A + A = A",
-      "answer": true,
-      "explain": "Idempotent OR.",
-      "difficulty": "medium",
-      "id": "sop_medium_09"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A · A = A",
-      "answer": true,
-      "explain": "Idempotent AND.",
-      "difficulty": "medium",
-      "id": "sop_medium_10"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A + A' = 1",
-      "answer": true,
-      "explain": "Complement OR.",
-      "difficulty": "medium",
-      "id": "sop_medium_11"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A · A' = 0",
-      "answer": true,
-      "explain": "Complement AND.",
-      "difficulty": "medium",
-      "id": "sop_medium_12"
-    },
-    {
-      "type": "true_false",
-      "prompt": "(A')' = A",
-      "answer": true,
-      "explain": "Involution.",
-      "difficulty": "medium",
-      "id": "sop_medium_13"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A + AB = A",
-      "answer": true,
-      "explain": "Absorption.",
-      "difficulty": "medium",
-      "id": "sop_medium_14"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A(A+B) = A",
-      "answer": true,
-      "explain": "Absorption.",
-      "difficulty": "medium",
-      "id": "sop_medium_15"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A + B = B + A",
-      "answer": true,
-      "explain": "OR commutative.",
-      "difficulty": "medium",
-      "id": "sop_medium_16"
-    },
-    {
-      "type": "true_false",
-      "prompt": "AB = BA",
-      "answer": true,
-      "explain": "AND commutative.",
-      "difficulty": "medium",
-      "id": "sop_medium_17"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A+B = A·B",
-      "answer": false,
-      "explain": "OR is not AND.",
-      "difficulty": "medium",
-      "id": "sop_medium_18"
-    },
-    {
-      "type": "true_false",
-      "prompt": "(A+B)' = A'+B'",
-      "answer": false,
-      "explain": "DeMorgan: (A+B)' = A'B'.",
-      "difficulty": "medium",
-      "id": "sop_medium_19"
-    },
-    {
-      "type": "true_false",
-      "prompt": "(AB)' = A'+B'",
-      "answer": true,
-      "explain": "DeMorgan for AND.",
-      "difficulty": "medium",
-      "id": "sop_medium_20"
-    },
-    {
-      "type": "true_false",
-      "prompt": "(A+B)' = A'B'",
-      "answer": true,
-      "explain": "DeMorgan for OR.",
-      "difficulty": "medium",
-      "id": "sop_medium_21"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A+AB' = A+B",
-      "answer": false,
-      "explain": "Not a standard identity as stated.",
-      "difficulty": "medium",
-      "id": "sop_medium_22"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A⊕A = 0",
-      "answer": true,
-      "explain": "XOR of equals is 0.",
-      "difficulty": "medium",
-      "id": "sop_medium_23"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A⊕0 = A",
-      "answer": true,
-      "explain": "XOR identity.",
-      "difficulty": "medium",
-      "id": "sop_medium_24"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A⊕1 = A'",
-      "answer": true,
-      "explain": "XOR with 1 complements.",
-      "difficulty": "medium",
-      "id": "sop_medium_25"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A+A'B = A+B",
-      "answer": true,
-      "explain": "Consensus/absorb form.",
-      "difficulty": "medium",
-      "id": "sop_medium_26"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Majority(A,A,B)=A",
-      "answer": true,
-      "explain": "Two votes for A.",
-      "difficulty": "medium",
-      "id": "sop_medium_27"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A·(B+C)=AB+AC",
-      "answer": true,
-      "explain": "Distributive.",
-      "difficulty": "medium",
-      "id": "sop_medium_28"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A+(B·C)=(A+B)·(A+C)",
-      "answer": true,
-      "explain": "Distributive.",
-      "difficulty": "medium",
-      "id": "sop_medium_29"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A+B+C = A·B·C",
-      "answer": false,
-      "explain": "Different operators.",
-      "difficulty": "medium",
-      "id": "sop_medium_30"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A + 0 = A",
+      "prompt": "For the SOP / POS lab: A + 0 = A",
       "answer": true,
       "explain": "Identity for OR.",
       "difficulty": "hard",
-      "id": "sop_hard_05"
+      "id": "sop_hard_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_hard_05.mp4",
+        "poster": "media/images/sop_hard_05-frame.png",
+        "figure": "media/images/sop_hard_05.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A · 1 = A",
+      "prompt": "For the SOP / POS lab: A · 1 = A",
       "answer": true,
       "explain": "Identity for AND.",
       "difficulty": "hard",
-      "id": "sop_hard_06"
+      "id": "sop_hard_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_hard_06.mp4",
+        "poster": "media/images/sop_hard_06-frame.png",
+        "figure": "media/images/sop_hard_06.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A + 1 = 1",
+      "prompt": "For the SOP / POS lab: A + 1 = 1",
       "answer": true,
       "explain": "Annulment for OR.",
       "difficulty": "hard",
-      "id": "sop_hard_07"
+      "id": "sop_hard_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_hard_07.mp4",
+        "poster": "media/images/sop_hard_07-frame.png",
+        "figure": "media/images/sop_hard_07.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A · 0 = 0",
+      "prompt": "For the SOP / POS lab: A · 0 = 0",
       "answer": true,
       "explain": "Annulment for AND.",
       "difficulty": "hard",
-      "id": "sop_hard_08"
+      "id": "sop_hard_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_hard_08.mp4",
+        "poster": "media/images/sop_hard_08-frame.png",
+        "figure": "media/images/sop_hard_08.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A + A = A",
+      "prompt": "For the SOP / POS lab: A + A = A",
       "answer": true,
       "explain": "Idempotent OR.",
       "difficulty": "hard",
-      "id": "sop_hard_09"
+      "id": "sop_hard_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_hard_09.mp4",
+        "poster": "media/images/sop_hard_09-frame.png",
+        "figure": "media/images/sop_hard_09.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A · A = A",
+      "prompt": "For the SOP / POS lab: A · A = A",
       "answer": true,
       "explain": "Idempotent AND.",
       "difficulty": "hard",
-      "id": "sop_hard_10"
+      "id": "sop_hard_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_hard_10.mp4",
+        "poster": "media/images/sop_hard_10-frame.png",
+        "figure": "media/images/sop_hard_10.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A + A' = 1",
+      "prompt": "For the SOP / POS lab: A + A' = 1",
       "answer": true,
       "explain": "Complement OR.",
       "difficulty": "hard",
-      "id": "sop_hard_11"
+      "id": "sop_hard_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_hard_11.mp4",
+        "poster": "media/images/sop_hard_11-frame.png",
+        "figure": "media/images/sop_hard_11.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A · A' = 0",
+      "prompt": "For the SOP / POS lab: A · A' = 0",
       "answer": true,
       "explain": "Complement AND.",
       "difficulty": "hard",
-      "id": "sop_hard_12"
+      "id": "sop_hard_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_hard_12.mp4",
+        "poster": "media/images/sop_hard_12-frame.png",
+        "figure": "media/images/sop_hard_12.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "(A')' = A",
+      "prompt": "For the SOP / POS lab: (A')' = A",
       "answer": true,
       "explain": "Involution.",
       "difficulty": "hard",
-      "id": "sop_hard_13"
+      "id": "sop_hard_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_hard_13.mp4",
+        "poster": "media/images/sop_hard_13-frame.png",
+        "figure": "media/images/sop_hard_13.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A + AB = A",
+      "prompt": "For the SOP / POS lab: A + AB = A",
       "answer": true,
       "explain": "Absorption.",
       "difficulty": "hard",
-      "id": "sop_hard_14"
+      "id": "sop_hard_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_hard_14.mp4",
+        "poster": "media/images/sop_hard_14-frame.png",
+        "figure": "media/images/sop_hard_14.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A(A+B) = A",
+      "prompt": "For the SOP / POS lab: A(A+B) = A",
       "answer": true,
       "explain": "Absorption.",
       "difficulty": "hard",
-      "id": "sop_hard_15"
+      "id": "sop_hard_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_hard_15.mp4",
+        "poster": "media/images/sop_hard_15-frame.png",
+        "figure": "media/images/sop_hard_15.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A + B = B + A",
+      "prompt": "For the SOP / POS lab: A + B = B + A",
       "answer": true,
       "explain": "OR commutative.",
       "difficulty": "hard",
-      "id": "sop_hard_16"
+      "id": "sop_hard_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_hard_16.mp4",
+        "poster": "media/images/sop_hard_16-frame.png",
+        "figure": "media/images/sop_hard_16.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "AB = BA",
+      "prompt": "For the SOP / POS lab: AB = BA",
       "answer": true,
       "explain": "AND commutative.",
       "difficulty": "hard",
-      "id": "sop_hard_17"
+      "id": "sop_hard_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_hard_17.mp4",
+        "poster": "media/images/sop_hard_17-frame.png",
+        "figure": "media/images/sop_hard_17.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A+B = A·B",
+      "prompt": "For the SOP / POS lab: A+B = A·B",
       "answer": false,
       "explain": "OR is not AND.",
       "difficulty": "hard",
-      "id": "sop_hard_18"
+      "id": "sop_hard_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_hard_18.mp4",
+        "poster": "media/images/sop_hard_18-frame.png",
+        "figure": "media/images/sop_hard_18.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "(A+B)' = A'+B'",
+      "prompt": "For the SOP / POS lab: (A+B)' = A'+B'",
       "answer": false,
       "explain": "DeMorgan: (A+B)' = A'B'.",
       "difficulty": "hard",
-      "id": "sop_hard_19"
+      "id": "sop_hard_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_hard_19.mp4",
+        "poster": "media/images/sop_hard_19-frame.png",
+        "figure": "media/images/sop_hard_19.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "(AB)' = A'+B'",
+      "prompt": "For the SOP / POS lab: (AB)' = A'+B'",
       "answer": true,
       "explain": "DeMorgan for AND.",
       "difficulty": "hard",
-      "id": "sop_hard_20"
+      "id": "sop_hard_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_hard_20.mp4",
+        "poster": "media/images/sop_hard_20-frame.png",
+        "figure": "media/images/sop_hard_20.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "(A+B)' = A'B'",
+      "prompt": "For the SOP / POS lab: (A+B)' = A'B'",
       "answer": true,
       "explain": "DeMorgan for OR.",
       "difficulty": "hard",
-      "id": "sop_hard_21"
+      "id": "sop_hard_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_hard_21.mp4",
+        "poster": "media/images/sop_hard_21-frame.png",
+        "figure": "media/images/sop_hard_21.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A+AB' = A+B",
+      "prompt": "For the SOP / POS lab: A+AB' = A+B",
       "answer": false,
       "explain": "Not a standard identity as stated.",
       "difficulty": "hard",
-      "id": "sop_hard_22"
+      "id": "sop_hard_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_hard_22.mp4",
+        "poster": "media/images/sop_hard_22-frame.png",
+        "figure": "media/images/sop_hard_22.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A⊕A = 0",
+      "prompt": "For the SOP / POS lab: A⊕A = 0",
       "answer": true,
       "explain": "XOR of equals is 0.",
       "difficulty": "hard",
-      "id": "sop_hard_23"
+      "id": "sop_hard_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_hard_23.mp4",
+        "poster": "media/images/sop_hard_23-frame.png",
+        "figure": "media/images/sop_hard_23.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A⊕0 = A",
+      "prompt": "For the SOP / POS lab: A⊕0 = A",
       "answer": true,
       "explain": "XOR identity.",
       "difficulty": "hard",
-      "id": "sop_hard_24"
+      "id": "sop_hard_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_hard_24.mp4",
+        "poster": "media/images/sop_hard_24-frame.png",
+        "figure": "media/images/sop_hard_24.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A⊕1 = A'",
+      "prompt": "For the SOP / POS lab: A⊕1 = A'",
       "answer": true,
       "explain": "XOR with 1 complements.",
       "difficulty": "hard",
-      "id": "sop_hard_25"
+      "id": "sop_hard_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_hard_25.mp4",
+        "poster": "media/images/sop_hard_25-frame.png",
+        "figure": "media/images/sop_hard_25.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A+A'B = A+B",
+      "prompt": "For the SOP / POS lab: A+A'B = A+B",
       "answer": true,
       "explain": "Consensus/absorb form.",
       "difficulty": "hard",
-      "id": "sop_hard_26"
+      "id": "sop_hard_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_hard_26.mp4",
+        "poster": "media/images/sop_hard_26-frame.png",
+        "figure": "media/images/sop_hard_26.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Majority(A,A,B)=A",
+      "prompt": "For the SOP / POS lab: Majority(A,A,B)=A",
       "answer": true,
       "explain": "Two votes for A.",
       "difficulty": "hard",
-      "id": "sop_hard_27"
+      "id": "sop_hard_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_hard_27.mp4",
+        "poster": "media/images/sop_hard_27-frame.png",
+        "figure": "media/images/sop_hard_27.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A·(B+C)=AB+AC",
+      "prompt": "For the SOP / POS lab: A·(B+C)=AB+AC",
       "answer": true,
       "explain": "Distributive.",
       "difficulty": "hard",
-      "id": "sop_hard_28"
+      "id": "sop_hard_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_hard_28.mp4",
+        "poster": "media/images/sop_hard_28-frame.png",
+        "figure": "media/images/sop_hard_28.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A+(B·C)=(A+B)·(A+C)",
+      "prompt": "For the SOP / POS lab: A+(B·C)=(A+B)·(A+C)",
       "answer": true,
       "explain": "Distributive.",
       "difficulty": "hard",
-      "id": "sop_hard_29"
+      "id": "sop_hard_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_hard_29.mp4",
+        "poster": "media/images/sop_hard_29-frame.png",
+        "figure": "media/images/sop_hard_29.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A+B+C = A·B·C",
+      "prompt": "For the SOP / POS lab: A+B+C = A·B·C",
       "answer": false,
       "explain": "Different operators.",
       "difficulty": "hard",
-      "id": "sop_hard_30"
+      "id": "sop_hard_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sop_hard_30.mp4",
+        "poster": "media/images/sop_hard_30-frame.png",
+        "figure": "media/images/sop_hard_30.png"
+      }
     }
   ]
 }

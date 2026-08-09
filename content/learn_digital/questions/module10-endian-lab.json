@@ -14,7 +14,13 @@
       ],
       "answer": 1,
       "explain": "LE stores LSB at +0.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_easy_01.mp4",
+        "poster": "media/images/endian_easy_01-frame.png",
+        "figure": "media/images/endian_easy_01.png"
+      }
     },
     {
       "id": "endian_easy_02",
@@ -28,7 +34,13 @@
       ],
       "answer": 3,
       "explain": "LE: 78 56 34 12.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_easy_02.mp4",
+        "poster": "media/images/endian_easy_02-frame.png",
+        "figure": "media/images/endian_easy_02.png"
+      }
     },
     {
       "id": "endian_easy_03",
@@ -42,7 +54,13 @@
       ],
       "answer": 1,
       "explain": "Network order is big-endian by convention.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_easy_03.mp4",
+        "poster": "media/images/endian_easy_03-frame.png",
+        "figure": "media/images/endian_easy_03.png"
+      }
     },
     {
       "id": "endian_easy_04",
@@ -50,191 +68,13 @@
       "prompt": "Host endian always matches network order.",
       "answer": false,
       "explain": "Value unchanged; only byte placement differs. Host ≠ wire often.",
-      "difficulty": "easy"
-    },
-    {
-      "id": "endian_medium_01",
-      "type": "multiple_choice",
-      "prompt": "For 0x12345678 little-endian, byte at +0 is…",
-      "choices": [
-        "0x12",
-        "0x78",
-        "0x00",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "LE LSB = 0x78.",
-      "difficulty": "medium"
-    },
-    {
-      "id": "endian_medium_02",
-      "type": "multiple_choice",
-      "prompt": "For 0xAABBCCDD big-endian, byte at +0 is…",
-      "choices": [
-        "0xDD",
-        "0xAA",
-        "0x56",
-        "0x00"
-      ],
-      "answer": 1,
-      "explain": "BE MSB = 0xAA.",
-      "difficulty": "medium"
-    },
-    {
-      "id": "endian_medium_03",
-      "type": "multiple_choice",
-      "prompt": "Endian swap word 0x12345678 →…",
-      "choices": [
-        "0x12345678",
-        "0x78563412",
-        "0x21436587",
-        "0x00000000"
-      ],
-      "answer": 1,
-      "explain": "78 56 34 12 as a word is 0x78563412.",
-      "difficulty": "medium"
-    },
-    {
-      "id": "endian_medium_04",
-      "type": "true_false",
-      "prompt": "Mixing LE and BE across a bus without conversion corrupts multi-byte fields.",
-      "answer": true,
-      "explain": "Byte order ≠ bit order; conversion is mandatory at boundaries.",
-      "difficulty": "medium"
-    },
-    {
-      "id": "endian_medium_05",
-      "type": "multiple_choice",
-      "prompt": "For 0x01020304 little-endian, byte at +0 is…",
-      "choices": [
-        "0x01",
-        "0x04",
-        "0x00",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "LE LSB = 0x04.",
-      "difficulty": "medium"
-    },
-    {
-      "id": "endian_medium_06",
-      "type": "multiple_choice",
-      "prompt": "For 0x11223344 big-endian, byte at +0 is…",
-      "choices": [
-        "0x44",
-        "0x11",
-        "0x56",
-        "0x00"
-      ],
-      "answer": 1,
-      "explain": "BE MSB = 0x11.",
-      "difficulty": "medium"
-    },
-    {
-      "id": "endian_medium_07",
-      "type": "multiple_choice",
-      "prompt": "For 0x0000FFFF little-endian, byte at +0 is…",
-      "choices": [
-        "0x00",
-        "0xFF",
-        "0x00",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "LE LSB = 0xFF.",
-      "difficulty": "medium"
-    },
-    {
-      "id": "endian_medium_08",
-      "type": "multiple_choice",
-      "prompt": "For 0xDEADBEEF big-endian, byte at +0 is…",
-      "choices": [
-        "0xEF",
-        "0xDE",
-        "0x56",
-        "0x00"
-      ],
-      "answer": 1,
-      "explain": "BE MSB = 0xDE.",
-      "difficulty": "medium"
-    },
-    {
-      "id": "endian_hard_01",
-      "type": "multiple_choice",
-      "prompt": "DMA / register / frame endian policy must be…",
-      "choices": [
-        "Left implicit always",
-        "Specified per interface and converted as needed",
-        "Randomized each boot",
-        "Only relevant to ASCII"
-      ],
-      "answer": 1,
-      "explain": "Explicit policy + conversion prevents silent corruption.",
-      "difficulty": "hard"
-    },
-    {
-      "id": "endian_hard_02",
-      "type": "multiple_choice",
-      "prompt": "Casting wire BE bytes as host LE int causes…",
-      "choices": [
-        "Correct value always",
-        "Scrambled numeric value (byte-reversed interpretation)",
-        "Only parity errors",
-        "Automatic Gray coding"
-      ],
-      "answer": 1,
-      "explain": "Bytes are reinterpreted → wrong integer.",
-      "difficulty": "hard"
-    },
-    {
-      "id": "endian_hard_03",
-      "type": "true_false",
-      "prompt": "Endianness never matters for 16- and 32-bit register fields.",
-      "answer": false,
-      "explain": "Multi-byte fields always have an endian story.",
-      "difficulty": "hard"
-    },
-    {
-      "id": "endian_hard_04",
-      "type": "multiple_choice",
-      "prompt": "LE bytes of 0xDEADBEEF from +0 to +3 start with 0xEF and end with…",
-      "choices": [
-        "0xEF",
-        "0xDE",
-        "0x00",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "LE order ends at the MSB 0xDE.",
-      "difficulty": "hard"
-    },
-    {
-      "id": "endian_hard_05",
-      "type": "multiple_choice",
-      "prompt": "LE bytes of 0xAABBCCDD from +0 to +3 start with 0xDD and end with…",
-      "choices": [
-        "0xDD",
-        "0xAA",
-        "0x00",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "LE order ends at the MSB 0xAA.",
-      "difficulty": "hard"
-    },
-    {
-      "id": "endian_hard_06",
-      "type": "multiple_choice",
-      "prompt": "LE bytes of 0x11223344 from +0 to +3 start with 0x44 and end with…",
-      "choices": [
-        "0x44",
-        "0x11",
-        "0x00",
-        "0xFF"
-      ],
-      "answer": 1,
-      "explain": "LE order ends at the MSB 0x11.",
-      "difficulty": "hard"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_easy_04.mp4",
+        "poster": "media/images/endian_easy_04-frame.png",
+        "figure": "media/images/endian_easy_04.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -248,7 +88,13 @@
       "answer": 1,
       "explain": "BE stores MSB first → 0x01.",
       "difficulty": "easy",
-      "id": "endian_easy_05"
+      "id": "endian_easy_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_easy_05.mp4",
+        "poster": "media/images/endian_easy_05-frame.png",
+        "figure": "media/images/endian_easy_05.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -262,7 +108,13 @@
       "answer": 1,
       "explain": "LE stores LSB first → 0x04.",
       "difficulty": "easy",
-      "id": "endian_easy_06"
+      "id": "endian_easy_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_easy_06.mp4",
+        "poster": "media/images/endian_easy_06-frame.png",
+        "figure": "media/images/endian_easy_06.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -276,7 +128,13 @@
       "answer": 1,
       "explain": "BE stores MSB first → 0xAA.",
       "difficulty": "easy",
-      "id": "endian_easy_07"
+      "id": "endian_easy_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_easy_07.mp4",
+        "poster": "media/images/endian_easy_07-frame.png",
+        "figure": "media/images/endian_easy_07.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -290,7 +148,13 @@
       "answer": 1,
       "explain": "LE stores LSB first → 0xDD.",
       "difficulty": "easy",
-      "id": "endian_easy_08"
+      "id": "endian_easy_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_easy_08.mp4",
+        "poster": "media/images/endian_easy_08-frame.png",
+        "figure": "media/images/endian_easy_08.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -304,7 +168,13 @@
       "answer": 1,
       "explain": "BE stores MSB first → 0x11.",
       "difficulty": "easy",
-      "id": "endian_easy_09"
+      "id": "endian_easy_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_easy_09.mp4",
+        "poster": "media/images/endian_easy_09-frame.png",
+        "figure": "media/images/endian_easy_09.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -318,7 +188,13 @@
       "answer": 1,
       "explain": "LE stores LSB first → 0x44.",
       "difficulty": "easy",
-      "id": "endian_easy_10"
+      "id": "endian_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_easy_10.mp4",
+        "poster": "media/images/endian_easy_10-frame.png",
+        "figure": "media/images/endian_easy_10.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -332,7 +208,13 @@
       "answer": 1,
       "explain": "BE stores MSB first → 0xDE.",
       "difficulty": "easy",
-      "id": "endian_easy_11"
+      "id": "endian_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_easy_11.mp4",
+        "poster": "media/images/endian_easy_11-frame.png",
+        "figure": "media/images/endian_easy_11.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -346,7 +228,13 @@
       "answer": 1,
       "explain": "LE stores LSB first → 0xEF.",
       "difficulty": "easy",
-      "id": "endian_easy_12"
+      "id": "endian_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_easy_12.mp4",
+        "poster": "media/images/endian_easy_12-frame.png",
+        "figure": "media/images/endian_easy_12.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -360,7 +248,13 @@
       "answer": 1,
       "explain": "BE stores MSB first → 0x00.",
       "difficulty": "easy",
-      "id": "endian_easy_13"
+      "id": "endian_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_easy_13.mp4",
+        "poster": "media/images/endian_easy_13-frame.png",
+        "figure": "media/images/endian_easy_13.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -374,7 +268,13 @@
       "answer": 1,
       "explain": "LE stores LSB first → 0xFF.",
       "difficulty": "easy",
-      "id": "endian_easy_14"
+      "id": "endian_easy_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_easy_14.mp4",
+        "poster": "media/images/endian_easy_14-frame.png",
+        "figure": "media/images/endian_easy_14.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -388,7 +288,13 @@
       "answer": 1,
       "explain": "BE stores MSB first → 0xA5.",
       "difficulty": "easy",
-      "id": "endian_easy_15"
+      "id": "endian_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_easy_15.mp4",
+        "poster": "media/images/endian_easy_15-frame.png",
+        "figure": "media/images/endian_easy_15.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -402,161 +308,13 @@
       "answer": 1,
       "explain": "LE stores LSB first → 0xA5.",
       "difficulty": "easy",
-      "id": "endian_easy_16"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Hex digit 0 equals which decimal value?",
-      "choices": [
-        "1",
-        "0",
-        "5",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "0₁₆ = 0₁₀.",
-      "difficulty": "easy",
-      "id": "endian_easy_17"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Decimal 0 as one hex digit is…",
-      "choices": [
-        "1",
-        "0",
-        "5",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "0₁₀ = 0₁₆.",
-      "difficulty": "easy",
-      "id": "endian_easy_18"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Hex digit 1 equals which decimal value?",
-      "choices": [
-        "0",
-        "1",
-        "2",
-        "6"
-      ],
-      "answer": 1,
-      "explain": "1₁₆ = 1₁₀.",
-      "difficulty": "easy",
-      "id": "endian_easy_19"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Decimal 1 as one hex digit is…",
-      "choices": [
-        "0",
-        "1",
-        "2",
-        "6"
-      ],
-      "answer": 1,
-      "explain": "1₁₀ = 1₁₆.",
-      "difficulty": "easy",
-      "id": "endian_easy_20"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Hex digit 2 equals which decimal value?",
-      "choices": [
-        "1",
-        "2",
-        "3",
-        "7"
-      ],
-      "answer": 1,
-      "explain": "2₁₆ = 2₁₀.",
-      "difficulty": "easy",
-      "id": "endian_easy_21"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Decimal 2 as one hex digit is…",
-      "choices": [
-        "1",
-        "2",
-        "3",
-        "7"
-      ],
-      "answer": 1,
-      "explain": "2₁₀ = 2₁₆.",
-      "difficulty": "easy",
-      "id": "endian_easy_22"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Hex digit 3 equals which decimal value?",
-      "choices": [
-        "2",
-        "3",
-        "4",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "3₁₆ = 3₁₀.",
-      "difficulty": "easy",
-      "id": "endian_easy_23"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Decimal 3 as one hex digit is…",
-      "choices": [
-        "2",
-        "3",
-        "4",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "3₁₀ = 3₁₆.",
-      "difficulty": "easy",
-      "id": "endian_easy_24"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Hex digit 4 equals which decimal value?",
-      "choices": [
-        "3",
-        "4",
-        "5",
-        "9"
-      ],
-      "answer": 1,
-      "explain": "4₁₆ = 4₁₀.",
-      "difficulty": "easy",
-      "id": "endian_easy_25"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Decimal 4 as one hex digit is…",
-      "choices": [
-        "3",
-        "4",
-        "5",
-        "9"
-      ],
-      "answer": 1,
-      "explain": "4₁₀ = 4₁₆.",
-      "difficulty": "easy",
-      "id": "endian_easy_26"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Hex digit 5 equals which decimal value?",
-      "choices": [
-        "4",
-        "5",
-        "6",
-        "10"
-      ],
-      "answer": 1,
-      "explain": "5₁₆ = 5₁₀.",
-      "difficulty": "easy",
-      "id": "endian_easy_27"
+      "id": "endian_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_easy_16.mp4",
+        "poster": "media/images/endian_easy_16-frame.png",
+        "figure": "media/images/endian_easy_16.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -570,7 +328,13 @@
       "answer": 1,
       "explain": "5₁₀ = 5₁₆.",
       "difficulty": "easy",
-      "id": "endian_easy_28"
+      "id": "endian_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_easy_28.mp4",
+        "poster": "media/images/endian_easy_28-frame.png",
+        "figure": "media/images/endian_easy_28.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -584,7 +348,13 @@
       "answer": 1,
       "explain": "6₁₆ = 6₁₀.",
       "difficulty": "easy",
-      "id": "endian_easy_29"
+      "id": "endian_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_easy_29.mp4",
+        "poster": "media/images/endian_easy_29-frame.png",
+        "figure": "media/images/endian_easy_29.png"
+      }
     },
     {
       "type": "multiple_choice",
@@ -598,11 +368,391 @@
       "answer": 1,
       "explain": "6₁₀ = 6₁₆.",
       "difficulty": "easy",
-      "id": "endian_easy_30"
+      "id": "endian_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_easy_30.mp4",
+        "poster": "media/images/endian_easy_30-frame.png",
+        "figure": "media/images/endian_easy_30.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Big-endian first byte of 0x01020304 is…",
+      "prompt": "Endian packing: Big-endian first byte of 0x01020304 is…",
+      "choices": [
+        "0x04",
+        "0x01",
+        "0x02",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "BE stores MSB first → 0x01.",
+      "difficulty": "easy",
+      "id": "endian_easy_31",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_easy_31.mp4",
+        "poster": "media/images/endian_easy_31-frame.png",
+        "figure": "media/images/endian_easy_31.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Endian packing: Little-endian first byte of 0x01020304 is…",
+      "choices": [
+        "0x01",
+        "0x04",
+        "0x03",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "LE stores LSB first → 0x04.",
+      "difficulty": "easy",
+      "id": "endian_easy_32",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_easy_32.mp4",
+        "poster": "media/images/endian_easy_32-frame.png",
+        "figure": "media/images/endian_easy_32.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Endian packing: Big-endian first byte of 0xAABBCCDD is…",
+      "choices": [
+        "0xDD",
+        "0xAA",
+        "0xBB",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "BE stores MSB first → 0xAA.",
+      "difficulty": "easy",
+      "id": "endian_easy_33",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_easy_33.mp4",
+        "poster": "media/images/endian_easy_33-frame.png",
+        "figure": "media/images/endian_easy_33.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Endian packing: Little-endian first byte of 0xAABBCCDD is…",
+      "choices": [
+        "0xAA",
+        "0xDD",
+        "0xCC",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "LE stores LSB first → 0xDD.",
+      "difficulty": "easy",
+      "id": "endian_easy_34",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_easy_34.mp4",
+        "poster": "media/images/endian_easy_34-frame.png",
+        "figure": "media/images/endian_easy_34.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Endian packing: Big-endian first byte of 0x11223344 is…",
+      "choices": [
+        "0x44",
+        "0x11",
+        "0x22",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "BE stores MSB first → 0x11.",
+      "difficulty": "easy",
+      "id": "endian_easy_35",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_easy_35.mp4",
+        "poster": "media/images/endian_easy_35-frame.png",
+        "figure": "media/images/endian_easy_35.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Endian packing: Little-endian first byte of 0x11223344 is…",
+      "choices": [
+        "0x11",
+        "0x44",
+        "0x33",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "LE stores LSB first → 0x44.",
+      "difficulty": "easy",
+      "id": "endian_easy_36",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_easy_36.mp4",
+        "poster": "media/images/endian_easy_36-frame.png",
+        "figure": "media/images/endian_easy_36.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Endian packing: Big-endian first byte of 0xDEADBEEF is…",
+      "choices": [
+        "0xEF",
+        "0xDE",
+        "0xAD",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "BE stores MSB first → 0xDE.",
+      "difficulty": "easy",
+      "id": "endian_easy_37",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_easy_37.mp4",
+        "poster": "media/images/endian_easy_37-frame.png",
+        "figure": "media/images/endian_easy_37.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Endian packing: Little-endian first byte of 0xDEADBEEF is…",
+      "choices": [
+        "0xDE",
+        "0xEF",
+        "0xBE",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "LE stores LSB first → 0xEF.",
+      "difficulty": "easy",
+      "id": "endian_easy_38",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_easy_38.mp4",
+        "poster": "media/images/endian_easy_38-frame.png",
+        "figure": "media/images/endian_easy_38.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Endian packing: Big-endian first byte of 0x0000FFFF is…",
+      "choices": [
+        "0xFF",
+        "0x00",
+        "0x00",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "BE stores MSB first → 0x00.",
+      "difficulty": "easy",
+      "id": "endian_easy_39",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_easy_39.mp4",
+        "poster": "media/images/endian_easy_39-frame.png",
+        "figure": "media/images/endian_easy_39.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Endian packing: Little-endian first byte of 0x0000FFFF is…",
+      "choices": [
+        "0x00",
+        "0xFF",
+        "0xFF",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "LE stores LSB first → 0xFF.",
+      "difficulty": "easy",
+      "id": "endian_easy_40",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_easy_40.mp4",
+        "poster": "media/images/endian_easy_40-frame.png",
+        "figure": "media/images/endian_easy_40.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Endian packing: Big-endian first byte of 0xA5A5A5A5 is…",
+      "choices": [
+        "0xA5",
+        "0xA5",
+        "0xA5",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "BE stores MSB first → 0xA5.",
+      "difficulty": "easy",
+      "id": "endian_easy_41",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_easy_41.mp4",
+        "poster": "media/images/endian_easy_41-frame.png",
+        "figure": "media/images/endian_easy_41.png"
+      }
+    },
+    {
+      "id": "endian_medium_01",
+      "type": "multiple_choice",
+      "prompt": "For 0x12345678 little-endian, byte at +0 is…",
+      "choices": [
+        "0x12",
+        "0x78",
+        "0x00",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "LE LSB = 0x78.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_medium_01.mp4",
+        "poster": "media/images/endian_medium_01-frame.png",
+        "figure": "media/images/endian_medium_01.png"
+      }
+    },
+    {
+      "id": "endian_medium_02",
+      "type": "multiple_choice",
+      "prompt": "For 0xAABBCCDD big-endian, byte at +0 is…",
+      "choices": [
+        "0xDD",
+        "0xAA",
+        "0x56",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "BE MSB = 0xAA.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_medium_02.mp4",
+        "poster": "media/images/endian_medium_02-frame.png",
+        "figure": "media/images/endian_medium_02.png"
+      }
+    },
+    {
+      "id": "endian_medium_03",
+      "type": "multiple_choice",
+      "prompt": "Endian swap word 0x12345678 →…",
+      "choices": [
+        "0x12345678",
+        "0x78563412",
+        "0x21436587",
+        "0x00000000"
+      ],
+      "answer": 1,
+      "explain": "78 56 34 12 as a word is 0x78563412.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_medium_03.mp4",
+        "poster": "media/images/endian_medium_03-frame.png",
+        "figure": "media/images/endian_medium_03.png"
+      }
+    },
+    {
+      "id": "endian_medium_04",
+      "type": "true_false",
+      "prompt": "Mixing LE and BE across a bus without conversion corrupts multi-byte fields.",
+      "answer": true,
+      "explain": "Byte order ≠ bit order; conversion is mandatory at boundaries.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_medium_04.mp4",
+        "poster": "media/images/endian_medium_04-frame.png",
+        "figure": "media/images/endian_medium_04.png"
+      }
+    },
+    {
+      "id": "endian_medium_05",
+      "type": "multiple_choice",
+      "prompt": "For 0x01020304 little-endian, byte at +0 is…",
+      "choices": [
+        "0x01",
+        "0x04",
+        "0x00",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "LE LSB = 0x04.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_medium_05.mp4",
+        "poster": "media/images/endian_medium_05-frame.png",
+        "figure": "media/images/endian_medium_05.png"
+      }
+    },
+    {
+      "id": "endian_medium_06",
+      "type": "multiple_choice",
+      "prompt": "For 0x11223344 big-endian, byte at +0 is…",
+      "choices": [
+        "0x44",
+        "0x11",
+        "0x56",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "BE MSB = 0x11.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_medium_06.mp4",
+        "poster": "media/images/endian_medium_06-frame.png",
+        "figure": "media/images/endian_medium_06.png"
+      }
+    },
+    {
+      "id": "endian_medium_07",
+      "type": "multiple_choice",
+      "prompt": "For 0x0000FFFF little-endian, byte at +0 is…",
+      "choices": [
+        "0x00",
+        "0xFF",
+        "0x00",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "LE LSB = 0xFF.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_medium_07.mp4",
+        "poster": "media/images/endian_medium_07-frame.png",
+        "figure": "media/images/endian_medium_07.png"
+      }
+    },
+    {
+      "id": "endian_medium_08",
+      "type": "multiple_choice",
+      "prompt": "For 0xDEADBEEF big-endian, byte at +0 is…",
+      "choices": [
+        "0xEF",
+        "0xDE",
+        "0x56",
+        "0x00"
+      ],
+      "answer": 1,
+      "explain": "BE MSB = 0xDE.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_medium_08.mp4",
+        "poster": "media/images/endian_medium_08-frame.png",
+        "figure": "media/images/endian_medium_08.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Endian packing, big-endian first byte of 0x01020304 is…",
       "choices": [
         "0x04",
         "0x01",
@@ -612,11 +762,17 @@
       "answer": 1,
       "explain": "BE stores MSB first → 0x01.",
       "difficulty": "medium",
-      "id": "endian_medium_09"
+      "id": "endian_medium_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_medium_09.mp4",
+        "poster": "media/images/endian_medium_09-frame.png",
+        "figure": "media/images/endian_medium_09.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Little-endian first byte of 0x01020304 is…",
+      "prompt": "In Endian packing, little-endian first byte of 0x01020304 is…",
       "choices": [
         "0x01",
         "0x04",
@@ -626,11 +782,17 @@
       "answer": 1,
       "explain": "LE stores LSB first → 0x04.",
       "difficulty": "medium",
-      "id": "endian_medium_10"
+      "id": "endian_medium_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_medium_10.mp4",
+        "poster": "media/images/endian_medium_10-frame.png",
+        "figure": "media/images/endian_medium_10.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Big-endian first byte of 0xAABBCCDD is…",
+      "prompt": "In Endian packing, big-endian first byte of 0xAABBCCDD is…",
       "choices": [
         "0xDD",
         "0xAA",
@@ -640,11 +802,17 @@
       "answer": 1,
       "explain": "BE stores MSB first → 0xAA.",
       "difficulty": "medium",
-      "id": "endian_medium_11"
+      "id": "endian_medium_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_medium_11.mp4",
+        "poster": "media/images/endian_medium_11-frame.png",
+        "figure": "media/images/endian_medium_11.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Little-endian first byte of 0xAABBCCDD is…",
+      "prompt": "In Endian packing, little-endian first byte of 0xAABBCCDD is…",
       "choices": [
         "0xAA",
         "0xDD",
@@ -654,11 +822,17 @@
       "answer": 1,
       "explain": "LE stores LSB first → 0xDD.",
       "difficulty": "medium",
-      "id": "endian_medium_12"
+      "id": "endian_medium_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_medium_12.mp4",
+        "poster": "media/images/endian_medium_12-frame.png",
+        "figure": "media/images/endian_medium_12.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Big-endian first byte of 0x11223344 is…",
+      "prompt": "In Endian packing, big-endian first byte of 0x11223344 is…",
       "choices": [
         "0x44",
         "0x11",
@@ -668,11 +842,17 @@
       "answer": 1,
       "explain": "BE stores MSB first → 0x11.",
       "difficulty": "medium",
-      "id": "endian_medium_13"
+      "id": "endian_medium_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_medium_13.mp4",
+        "poster": "media/images/endian_medium_13-frame.png",
+        "figure": "media/images/endian_medium_13.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Little-endian first byte of 0x11223344 is…",
+      "prompt": "In Endian packing, little-endian first byte of 0x11223344 is…",
       "choices": [
         "0x11",
         "0x44",
@@ -682,11 +862,17 @@
       "answer": 1,
       "explain": "LE stores LSB first → 0x44.",
       "difficulty": "medium",
-      "id": "endian_medium_14"
+      "id": "endian_medium_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_medium_14.mp4",
+        "poster": "media/images/endian_medium_14-frame.png",
+        "figure": "media/images/endian_medium_14.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Big-endian first byte of 0xDEADBEEF is…",
+      "prompt": "In Endian packing, big-endian first byte of 0xDEADBEEF is…",
       "choices": [
         "0xEF",
         "0xDE",
@@ -696,11 +882,17 @@
       "answer": 1,
       "explain": "BE stores MSB first → 0xDE.",
       "difficulty": "medium",
-      "id": "endian_medium_15"
+      "id": "endian_medium_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_medium_15.mp4",
+        "poster": "media/images/endian_medium_15-frame.png",
+        "figure": "media/images/endian_medium_15.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Little-endian first byte of 0xDEADBEEF is…",
+      "prompt": "In Endian packing, little-endian first byte of 0xDEADBEEF is…",
       "choices": [
         "0xDE",
         "0xEF",
@@ -710,11 +902,17 @@
       "answer": 1,
       "explain": "LE stores LSB first → 0xEF.",
       "difficulty": "medium",
-      "id": "endian_medium_16"
+      "id": "endian_medium_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_medium_16.mp4",
+        "poster": "media/images/endian_medium_16-frame.png",
+        "figure": "media/images/endian_medium_16.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Big-endian first byte of 0x0000FFFF is…",
+      "prompt": "In Endian packing, big-endian first byte of 0x0000FFFF is…",
       "choices": [
         "0xFF",
         "0x00",
@@ -724,11 +922,17 @@
       "answer": 1,
       "explain": "BE stores MSB first → 0x00.",
       "difficulty": "medium",
-      "id": "endian_medium_17"
+      "id": "endian_medium_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_medium_17.mp4",
+        "poster": "media/images/endian_medium_17-frame.png",
+        "figure": "media/images/endian_medium_17.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Little-endian first byte of 0x0000FFFF is…",
+      "prompt": "In Endian packing, little-endian first byte of 0x0000FFFF is…",
       "choices": [
         "0x00",
         "0xFF",
@@ -738,11 +942,17 @@
       "answer": 1,
       "explain": "LE stores LSB first → 0xFF.",
       "difficulty": "medium",
-      "id": "endian_medium_18"
+      "id": "endian_medium_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_medium_18.mp4",
+        "poster": "media/images/endian_medium_18-frame.png",
+        "figure": "media/images/endian_medium_18.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Big-endian first byte of 0xA5A5A5A5 is…",
+      "prompt": "In Endian packing, big-endian first byte of 0xA5A5A5A5 is…",
       "choices": [
         "0xA5",
         "0xA5",
@@ -752,11 +962,17 @@
       "answer": 1,
       "explain": "BE stores MSB first → 0xA5.",
       "difficulty": "medium",
-      "id": "endian_medium_19"
+      "id": "endian_medium_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_medium_19.mp4",
+        "poster": "media/images/endian_medium_19-frame.png",
+        "figure": "media/images/endian_medium_19.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Little-endian first byte of 0xA5A5A5A5 is…",
+      "prompt": "Endian packing: Little-endian first byte of 0xA5A5A5A5 is…",
       "choices": [
         "0xA5",
         "0xA5",
@@ -766,11 +982,17 @@
       "answer": 1,
       "explain": "LE stores LSB first → 0xA5.",
       "difficulty": "medium",
-      "id": "endian_medium_20"
+      "id": "endian_medium_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_medium_20.mp4",
+        "poster": "media/images/endian_medium_20-frame.png",
+        "figure": "media/images/endian_medium_20.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Hex digit 0 equals which decimal value?",
+      "prompt": "Endian packing: Hex digit 0 equals which decimal value?",
       "choices": [
         "1",
         "0",
@@ -780,11 +1002,17 @@
       "answer": 1,
       "explain": "0₁₆ = 0₁₀.",
       "difficulty": "medium",
-      "id": "endian_medium_21"
+      "id": "endian_medium_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_medium_21.mp4",
+        "poster": "media/images/endian_medium_21-frame.png",
+        "figure": "media/images/endian_medium_21.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Decimal 0 as one hex digit is…",
+      "prompt": "Endian packing: Decimal 0 as one hex digit is…",
       "choices": [
         "1",
         "0",
@@ -794,11 +1022,17 @@
       "answer": 1,
       "explain": "0₁₀ = 0₁₆.",
       "difficulty": "medium",
-      "id": "endian_medium_22"
+      "id": "endian_medium_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_medium_22.mp4",
+        "poster": "media/images/endian_medium_22-frame.png",
+        "figure": "media/images/endian_medium_22.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Hex digit 1 equals which decimal value?",
+      "prompt": "Endian packing: Hex digit 1 equals which decimal value?",
       "choices": [
         "0",
         "1",
@@ -808,11 +1042,17 @@
       "answer": 1,
       "explain": "1₁₆ = 1₁₀.",
       "difficulty": "medium",
-      "id": "endian_medium_23"
+      "id": "endian_medium_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_medium_23.mp4",
+        "poster": "media/images/endian_medium_23-frame.png",
+        "figure": "media/images/endian_medium_23.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Decimal 1 as one hex digit is…",
+      "prompt": "Endian packing: Decimal 1 as one hex digit is…",
       "choices": [
         "0",
         "1",
@@ -822,11 +1062,17 @@
       "answer": 1,
       "explain": "1₁₀ = 1₁₆.",
       "difficulty": "medium",
-      "id": "endian_medium_24"
+      "id": "endian_medium_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_medium_24.mp4",
+        "poster": "media/images/endian_medium_24-frame.png",
+        "figure": "media/images/endian_medium_24.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Hex digit 2 equals which decimal value?",
+      "prompt": "Endian packing: Hex digit 2 equals which decimal value?",
       "choices": [
         "1",
         "2",
@@ -836,11 +1082,17 @@
       "answer": 1,
       "explain": "2₁₆ = 2₁₀.",
       "difficulty": "medium",
-      "id": "endian_medium_25"
+      "id": "endian_medium_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_medium_25.mp4",
+        "poster": "media/images/endian_medium_25-frame.png",
+        "figure": "media/images/endian_medium_25.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Decimal 2 as one hex digit is…",
+      "prompt": "Endian packing: Decimal 2 as one hex digit is…",
       "choices": [
         "1",
         "2",
@@ -850,11 +1102,17 @@
       "answer": 1,
       "explain": "2₁₀ = 2₁₆.",
       "difficulty": "medium",
-      "id": "endian_medium_26"
+      "id": "endian_medium_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_medium_26.mp4",
+        "poster": "media/images/endian_medium_26-frame.png",
+        "figure": "media/images/endian_medium_26.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Hex digit 3 equals which decimal value?",
+      "prompt": "Endian packing: Hex digit 3 equals which decimal value?",
       "choices": [
         "2",
         "3",
@@ -864,11 +1122,17 @@
       "answer": 1,
       "explain": "3₁₆ = 3₁₀.",
       "difficulty": "medium",
-      "id": "endian_medium_27"
+      "id": "endian_medium_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_medium_27.mp4",
+        "poster": "media/images/endian_medium_27-frame.png",
+        "figure": "media/images/endian_medium_27.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Decimal 3 as one hex digit is…",
+      "prompt": "Endian packing: Decimal 3 as one hex digit is…",
       "choices": [
         "2",
         "3",
@@ -878,11 +1142,17 @@
       "answer": 1,
       "explain": "3₁₀ = 3₁₆.",
       "difficulty": "medium",
-      "id": "endian_medium_28"
+      "id": "endian_medium_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_medium_28.mp4",
+        "poster": "media/images/endian_medium_28-frame.png",
+        "figure": "media/images/endian_medium_28.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Hex digit 4 equals which decimal value?",
+      "prompt": "Endian packing: Hex digit 4 equals which decimal value?",
       "choices": [
         "3",
         "4",
@@ -892,11 +1162,17 @@
       "answer": 1,
       "explain": "4₁₆ = 4₁₀.",
       "difficulty": "medium",
-      "id": "endian_medium_29"
+      "id": "endian_medium_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_medium_29.mp4",
+        "poster": "media/images/endian_medium_29-frame.png",
+        "figure": "media/images/endian_medium_29.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Decimal 4 as one hex digit is…",
+      "prompt": "Endian packing: Decimal 4 as one hex digit is…",
       "choices": [
         "3",
         "4",
@@ -906,11 +1182,131 @@
       "answer": 1,
       "explain": "4₁₀ = 4₁₆.",
       "difficulty": "medium",
-      "id": "endian_medium_30"
+      "id": "endian_medium_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_medium_30.mp4",
+        "poster": "media/images/endian_medium_30-frame.png",
+        "figure": "media/images/endian_medium_30.png"
+      }
+    },
+    {
+      "id": "endian_hard_01",
+      "type": "multiple_choice",
+      "prompt": "DMA / register / frame endian policy must be…",
+      "choices": [
+        "Left implicit always",
+        "Specified per interface and converted as needed",
+        "Randomized each boot",
+        "Only relevant to ASCII"
+      ],
+      "answer": 1,
+      "explain": "Explicit policy + conversion prevents silent corruption.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_hard_01.mp4",
+        "poster": "media/images/endian_hard_01-frame.png",
+        "figure": "media/images/endian_hard_01.png"
+      }
+    },
+    {
+      "id": "endian_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Casting wire BE bytes as host LE int causes…",
+      "choices": [
+        "Correct value always",
+        "Scrambled numeric value (byte-reversed interpretation)",
+        "Only parity errors",
+        "Automatic Gray coding"
+      ],
+      "answer": 1,
+      "explain": "Bytes are reinterpreted → wrong integer.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_hard_02.mp4",
+        "poster": "media/images/endian_hard_02-frame.png",
+        "figure": "media/images/endian_hard_02.png"
+      }
+    },
+    {
+      "id": "endian_hard_03",
+      "type": "true_false",
+      "prompt": "Endianness never matters for 16- and 32-bit register fields.",
+      "answer": false,
+      "explain": "Multi-byte fields always have an endian story.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_hard_03.mp4",
+        "poster": "media/images/endian_hard_03-frame.png",
+        "figure": "media/images/endian_hard_03.png"
+      }
+    },
+    {
+      "id": "endian_hard_04",
+      "type": "multiple_choice",
+      "prompt": "LE bytes of 0xDEADBEEF from +0 to +3 start with 0xEF and end with…",
+      "choices": [
+        "0xEF",
+        "0xDE",
+        "0x00",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "LE order ends at the MSB 0xDE.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_hard_04.mp4",
+        "poster": "media/images/endian_hard_04-frame.png",
+        "figure": "media/images/endian_hard_04.png"
+      }
+    },
+    {
+      "id": "endian_hard_05",
+      "type": "multiple_choice",
+      "prompt": "LE bytes of 0xAABBCCDD from +0 to +3 start with 0xDD and end with…",
+      "choices": [
+        "0xDD",
+        "0xAA",
+        "0x00",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "LE order ends at the MSB 0xAA.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_hard_05.mp4",
+        "poster": "media/images/endian_hard_05-frame.png",
+        "figure": "media/images/endian_hard_05.png"
+      }
+    },
+    {
+      "id": "endian_hard_06",
+      "type": "multiple_choice",
+      "prompt": "LE bytes of 0x11223344 from +0 to +3 start with 0x44 and end with…",
+      "choices": [
+        "0x44",
+        "0x11",
+        "0x00",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "LE order ends at the MSB 0x11.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_hard_06.mp4",
+        "poster": "media/images/endian_hard_06-frame.png",
+        "figure": "media/images/endian_hard_06.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Big-endian first byte of 0x01020304 is…",
+      "prompt": "For the Endian packing lab: Big-endian first byte of 0x01020304 is…",
       "choices": [
         "0x04",
         "0x01",
@@ -920,11 +1316,17 @@
       "answer": 1,
       "explain": "BE stores MSB first → 0x01.",
       "difficulty": "hard",
-      "id": "endian_hard_07"
+      "id": "endian_hard_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_hard_07.mp4",
+        "poster": "media/images/endian_hard_07-frame.png",
+        "figure": "media/images/endian_hard_07.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Little-endian first byte of 0x01020304 is…",
+      "prompt": "For the Endian packing lab: Little-endian first byte of 0x01020304 is…",
       "choices": [
         "0x01",
         "0x04",
@@ -934,11 +1336,17 @@
       "answer": 1,
       "explain": "LE stores LSB first → 0x04.",
       "difficulty": "hard",
-      "id": "endian_hard_08"
+      "id": "endian_hard_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_hard_08.mp4",
+        "poster": "media/images/endian_hard_08-frame.png",
+        "figure": "media/images/endian_hard_08.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Big-endian first byte of 0xAABBCCDD is…",
+      "prompt": "For the Endian packing lab: Big-endian first byte of 0xAABBCCDD is…",
       "choices": [
         "0xDD",
         "0xAA",
@@ -948,11 +1356,17 @@
       "answer": 1,
       "explain": "BE stores MSB first → 0xAA.",
       "difficulty": "hard",
-      "id": "endian_hard_09"
+      "id": "endian_hard_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_hard_09.mp4",
+        "poster": "media/images/endian_hard_09-frame.png",
+        "figure": "media/images/endian_hard_09.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Little-endian first byte of 0xAABBCCDD is…",
+      "prompt": "For the Endian packing lab: Little-endian first byte of 0xAABBCCDD is…",
       "choices": [
         "0xAA",
         "0xDD",
@@ -962,11 +1376,17 @@
       "answer": 1,
       "explain": "LE stores LSB first → 0xDD.",
       "difficulty": "hard",
-      "id": "endian_hard_10"
+      "id": "endian_hard_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_hard_10.mp4",
+        "poster": "media/images/endian_hard_10-frame.png",
+        "figure": "media/images/endian_hard_10.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Big-endian first byte of 0x11223344 is…",
+      "prompt": "For the Endian packing lab: Big-endian first byte of 0x11223344 is…",
       "choices": [
         "0x44",
         "0x11",
@@ -976,11 +1396,17 @@
       "answer": 1,
       "explain": "BE stores MSB first → 0x11.",
       "difficulty": "hard",
-      "id": "endian_hard_11"
+      "id": "endian_hard_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_hard_11.mp4",
+        "poster": "media/images/endian_hard_11-frame.png",
+        "figure": "media/images/endian_hard_11.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Little-endian first byte of 0x11223344 is…",
+      "prompt": "For the Endian packing lab: Little-endian first byte of 0x11223344 is…",
       "choices": [
         "0x11",
         "0x44",
@@ -990,11 +1416,17 @@
       "answer": 1,
       "explain": "LE stores LSB first → 0x44.",
       "difficulty": "hard",
-      "id": "endian_hard_12"
+      "id": "endian_hard_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_hard_12.mp4",
+        "poster": "media/images/endian_hard_12-frame.png",
+        "figure": "media/images/endian_hard_12.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Big-endian first byte of 0xDEADBEEF is…",
+      "prompt": "For the Endian packing lab: Big-endian first byte of 0xDEADBEEF is…",
       "choices": [
         "0xEF",
         "0xDE",
@@ -1004,11 +1436,17 @@
       "answer": 1,
       "explain": "BE stores MSB first → 0xDE.",
       "difficulty": "hard",
-      "id": "endian_hard_13"
+      "id": "endian_hard_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_hard_13.mp4",
+        "poster": "media/images/endian_hard_13-frame.png",
+        "figure": "media/images/endian_hard_13.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Little-endian first byte of 0xDEADBEEF is…",
+      "prompt": "For the Endian packing lab: Little-endian first byte of 0xDEADBEEF is…",
       "choices": [
         "0xDE",
         "0xEF",
@@ -1018,11 +1456,17 @@
       "answer": 1,
       "explain": "LE stores LSB first → 0xEF.",
       "difficulty": "hard",
-      "id": "endian_hard_14"
+      "id": "endian_hard_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_hard_14.mp4",
+        "poster": "media/images/endian_hard_14-frame.png",
+        "figure": "media/images/endian_hard_14.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Big-endian first byte of 0x0000FFFF is…",
+      "prompt": "For the Endian packing lab: Big-endian first byte of 0x0000FFFF is…",
       "choices": [
         "0xFF",
         "0x00",
@@ -1032,11 +1476,17 @@
       "answer": 1,
       "explain": "BE stores MSB first → 0x00.",
       "difficulty": "hard",
-      "id": "endian_hard_15"
+      "id": "endian_hard_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_hard_15.mp4",
+        "poster": "media/images/endian_hard_15-frame.png",
+        "figure": "media/images/endian_hard_15.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Little-endian first byte of 0x0000FFFF is…",
+      "prompt": "For the Endian packing lab: Little-endian first byte of 0x0000FFFF is…",
       "choices": [
         "0x00",
         "0xFF",
@@ -1046,11 +1496,17 @@
       "answer": 1,
       "explain": "LE stores LSB first → 0xFF.",
       "difficulty": "hard",
-      "id": "endian_hard_16"
+      "id": "endian_hard_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_hard_16.mp4",
+        "poster": "media/images/endian_hard_16-frame.png",
+        "figure": "media/images/endian_hard_16.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Big-endian first byte of 0xA5A5A5A5 is…",
+      "prompt": "For the Endian packing lab: Big-endian first byte of 0xA5A5A5A5 is…",
       "choices": [
         "0xA5",
         "0xA5",
@@ -1060,11 +1516,17 @@
       "answer": 1,
       "explain": "BE stores MSB first → 0xA5.",
       "difficulty": "hard",
-      "id": "endian_hard_17"
+      "id": "endian_hard_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_hard_17.mp4",
+        "poster": "media/images/endian_hard_17-frame.png",
+        "figure": "media/images/endian_hard_17.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Little-endian first byte of 0xA5A5A5A5 is…",
+      "prompt": "In Endian packing, little-endian first byte of 0xA5A5A5A5 is…",
       "choices": [
         "0xA5",
         "0xA5",
@@ -1074,11 +1536,17 @@
       "answer": 1,
       "explain": "LE stores LSB first → 0xA5.",
       "difficulty": "hard",
-      "id": "endian_hard_18"
+      "id": "endian_hard_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_hard_18.mp4",
+        "poster": "media/images/endian_hard_18-frame.png",
+        "figure": "media/images/endian_hard_18.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Hex digit 0 equals which decimal value?",
+      "prompt": "In Endian packing, hex digit 0 equals which decimal value?",
       "choices": [
         "1",
         "0",
@@ -1088,11 +1556,17 @@
       "answer": 1,
       "explain": "0₁₆ = 0₁₀.",
       "difficulty": "hard",
-      "id": "endian_hard_19"
+      "id": "endian_hard_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_hard_19.mp4",
+        "poster": "media/images/endian_hard_19-frame.png",
+        "figure": "media/images/endian_hard_19.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Decimal 0 as one hex digit is…",
+      "prompt": "In Endian packing, decimal 0 as one hex digit is…",
       "choices": [
         "1",
         "0",
@@ -1102,11 +1576,17 @@
       "answer": 1,
       "explain": "0₁₀ = 0₁₆.",
       "difficulty": "hard",
-      "id": "endian_hard_20"
+      "id": "endian_hard_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_hard_20.mp4",
+        "poster": "media/images/endian_hard_20-frame.png",
+        "figure": "media/images/endian_hard_20.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Hex digit 1 equals which decimal value?",
+      "prompt": "In Endian packing, hex digit 1 equals which decimal value?",
       "choices": [
         "0",
         "1",
@@ -1116,11 +1596,17 @@
       "answer": 1,
       "explain": "1₁₆ = 1₁₀.",
       "difficulty": "hard",
-      "id": "endian_hard_21"
+      "id": "endian_hard_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_hard_21.mp4",
+        "poster": "media/images/endian_hard_21-frame.png",
+        "figure": "media/images/endian_hard_21.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Decimal 1 as one hex digit is…",
+      "prompt": "In Endian packing, decimal 1 as one hex digit is…",
       "choices": [
         "0",
         "1",
@@ -1130,11 +1616,17 @@
       "answer": 1,
       "explain": "1₁₀ = 1₁₆.",
       "difficulty": "hard",
-      "id": "endian_hard_22"
+      "id": "endian_hard_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_hard_22.mp4",
+        "poster": "media/images/endian_hard_22-frame.png",
+        "figure": "media/images/endian_hard_22.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Hex digit 2 equals which decimal value?",
+      "prompt": "In Endian packing, hex digit 2 equals which decimal value?",
       "choices": [
         "1",
         "2",
@@ -1144,11 +1636,17 @@
       "answer": 1,
       "explain": "2₁₆ = 2₁₀.",
       "difficulty": "hard",
-      "id": "endian_hard_23"
+      "id": "endian_hard_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_hard_23.mp4",
+        "poster": "media/images/endian_hard_23-frame.png",
+        "figure": "media/images/endian_hard_23.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Decimal 2 as one hex digit is…",
+      "prompt": "In Endian packing, decimal 2 as one hex digit is…",
       "choices": [
         "1",
         "2",
@@ -1158,11 +1656,17 @@
       "answer": 1,
       "explain": "2₁₀ = 2₁₆.",
       "difficulty": "hard",
-      "id": "endian_hard_24"
+      "id": "endian_hard_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_hard_24.mp4",
+        "poster": "media/images/endian_hard_24-frame.png",
+        "figure": "media/images/endian_hard_24.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Hex digit 3 equals which decimal value?",
+      "prompt": "In Endian packing, hex digit 3 equals which decimal value?",
       "choices": [
         "2",
         "3",
@@ -1172,11 +1676,17 @@
       "answer": 1,
       "explain": "3₁₆ = 3₁₀.",
       "difficulty": "hard",
-      "id": "endian_hard_25"
+      "id": "endian_hard_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_hard_25.mp4",
+        "poster": "media/images/endian_hard_25-frame.png",
+        "figure": "media/images/endian_hard_25.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Decimal 3 as one hex digit is…",
+      "prompt": "In Endian packing, decimal 3 as one hex digit is…",
       "choices": [
         "2",
         "3",
@@ -1186,11 +1696,17 @@
       "answer": 1,
       "explain": "3₁₀ = 3₁₆.",
       "difficulty": "hard",
-      "id": "endian_hard_26"
+      "id": "endian_hard_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_hard_26.mp4",
+        "poster": "media/images/endian_hard_26-frame.png",
+        "figure": "media/images/endian_hard_26.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Hex digit 4 equals which decimal value?",
+      "prompt": "In Endian packing, hex digit 4 equals which decimal value?",
       "choices": [
         "3",
         "4",
@@ -1200,11 +1716,17 @@
       "answer": 1,
       "explain": "4₁₆ = 4₁₀.",
       "difficulty": "hard",
-      "id": "endian_hard_27"
+      "id": "endian_hard_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_hard_27.mp4",
+        "poster": "media/images/endian_hard_27-frame.png",
+        "figure": "media/images/endian_hard_27.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Decimal 4 as one hex digit is…",
+      "prompt": "In Endian packing, decimal 4 as one hex digit is…",
       "choices": [
         "3",
         "4",
@@ -1214,11 +1736,17 @@
       "answer": 1,
       "explain": "4₁₀ = 4₁₆.",
       "difficulty": "hard",
-      "id": "endian_hard_28"
+      "id": "endian_hard_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_hard_28.mp4",
+        "poster": "media/images/endian_hard_28-frame.png",
+        "figure": "media/images/endian_hard_28.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Hex digit 5 equals which decimal value?",
+      "prompt": "Endian packing: Hex digit 5 equals which decimal value?",
       "choices": [
         "4",
         "5",
@@ -1228,11 +1756,17 @@
       "answer": 1,
       "explain": "5₁₆ = 5₁₀.",
       "difficulty": "hard",
-      "id": "endian_hard_29"
+      "id": "endian_hard_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_hard_29.mp4",
+        "poster": "media/images/endian_hard_29-frame.png",
+        "figure": "media/images/endian_hard_29.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Decimal 5 as one hex digit is…",
+      "prompt": "Endian packing: Decimal 5 as one hex digit is…",
       "choices": [
         "4",
         "5",
@@ -1242,7 +1776,13 @@
       "answer": 1,
       "explain": "5₁₀ = 5₁₆.",
       "difficulty": "hard",
-      "id": "endian_hard_30"
+      "id": "endian_hard_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/endian_hard_30.mp4",
+        "poster": "media/images/endian_hard_30-frame.png",
+        "figure": "media/images/endian_hard_30.png"
+      }
     }
   ]
 }

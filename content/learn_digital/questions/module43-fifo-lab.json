@@ -14,7 +14,13 @@
       ],
       "answer": 0,
       "explain": "Order-preserving queue.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_easy_01.mp4",
+        "poster": "media/images/fifo_easy_01-frame.png",
+        "figure": "media/images/fifo_easy_01.png"
+      }
     },
     {
       "id": "fifo_easy_02",
@@ -28,7 +34,13 @@
       ],
       "answer": 0,
       "explain": "One entry stored at slot 0.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_easy_02.mp4",
+        "poster": "media/images/fifo_easy_02-frame.png",
+        "figure": "media/images/fifo_easy_02.png"
+      }
     },
     {
       "id": "fifo_easy_03",
@@ -42,7 +54,13 @@
       ],
       "answer": 0,
       "explain": "All slots occupied.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_easy_03.mp4",
+        "poster": "media/images/fifo_easy_03-frame.png",
+        "figure": "media/images/fifo_easy_03.png"
+      }
     },
     {
       "id": "fifo_easy_04",
@@ -50,7 +68,461 @@
       "prompt": "FIFO is random-access by address like RAM.",
       "answer": false,
       "explain": "Queue discipline, not RAM addressing.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_easy_04.mp4",
+        "poster": "media/images/fifo_easy_04-frame.png",
+        "figure": "media/images/fifo_easy_04.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FIFO pointers: Address width for depth 4 is…",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(4)) = 2.",
+      "difficulty": "easy",
+      "id": "fifo_easy_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_easy_05.mp4",
+        "poster": "media/images/fifo_easy_05-frame.png",
+        "figure": "media/images/fifo_easy_05.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FIFO pointers: Address width for depth 8 is…",
+      "choices": [
+        "2",
+        "3",
+        "8",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(8)) = 3.",
+      "difficulty": "easy",
+      "id": "fifo_easy_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_easy_06.mp4",
+        "poster": "media/images/fifo_easy_06-frame.png",
+        "figure": "media/images/fifo_easy_06.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FIFO pointers: Address width for depth 16 is…",
+      "choices": [
+        "3",
+        "4",
+        "16",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(16)) = 4.",
+      "difficulty": "easy",
+      "id": "fifo_easy_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_easy_07.mp4",
+        "poster": "media/images/fifo_easy_07-frame.png",
+        "figure": "media/images/fifo_easy_07.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FIFO pointers: Address width for depth 32 is…",
+      "choices": [
+        "4",
+        "5",
+        "32",
+        "10"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(32)) = 5.",
+      "difficulty": "easy",
+      "id": "fifo_easy_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_easy_08.mp4",
+        "poster": "media/images/fifo_easy_08-frame.png",
+        "figure": "media/images/fifo_easy_08.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FIFO pointers: Address width for depth 64 is…",
+      "choices": [
+        "5",
+        "6",
+        "64",
+        "12"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(64)) = 6.",
+      "difficulty": "easy",
+      "id": "fifo_easy_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_easy_09.mp4",
+        "poster": "media/images/fifo_easy_09-frame.png",
+        "figure": "media/images/fifo_easy_09.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FIFO pointers: Capacity of 8×8 memory in bits is…",
+      "choices": [
+        "16",
+        "64",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "8×8 = 64.",
+      "difficulty": "easy",
+      "id": "fifo_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_easy_10.mp4",
+        "poster": "media/images/fifo_easy_10-frame.png",
+        "figure": "media/images/fifo_easy_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FIFO pointers: Capacity of 16×32 memory in bits is…",
+      "choices": [
+        "48",
+        "512",
+        "16",
+        "32"
+      ],
+      "answer": 1,
+      "explain": "16×32 = 512.",
+      "difficulty": "easy",
+      "id": "fifo_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_easy_11.mp4",
+        "poster": "media/images/fifo_easy_11-frame.png",
+        "figure": "media/images/fifo_easy_11.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FIFO pointers: Capacity of 64×4 memory in bits is…",
+      "choices": [
+        "68",
+        "256",
+        "64",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "64×4 = 256.",
+      "difficulty": "easy",
+      "id": "fifo_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_easy_12.mp4",
+        "poster": "media/images/fifo_easy_12-frame.png",
+        "figure": "media/images/fifo_easy_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FIFO pointers: Capacity of 256×16 memory in bits is…",
+      "choices": [
+        "272",
+        "4096",
+        "256",
+        "16"
+      ],
+      "answer": 1,
+      "explain": "256×16 = 4096.",
+      "difficulty": "easy",
+      "id": "fifo_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_easy_13.mp4",
+        "poster": "media/images/fifo_easy_13-frame.png",
+        "figure": "media/images/fifo_easy_13.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "FIFO pointers: FIFO empty and full must be generated carefully across domains for async FIFOs.",
+      "answer": true,
+      "explain": "Gray pointers.",
+      "difficulty": "easy",
+      "id": "fifo_easy_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_easy_14.mp4",
+        "poster": "media/images/fifo_easy_14-frame.png",
+        "figure": "media/images/fifo_easy_14.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "FIFO pointers: Byte enables select which bytes of a word are written.",
+      "answer": true,
+      "explain": "Partial writes.",
+      "difficulty": "easy",
+      "id": "fifo_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_easy_15.mp4",
+        "poster": "media/images/fifo_easy_15-frame.png",
+        "figure": "media/images/fifo_easy_15.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "FIFO pointers: Valid/ready handshake transfers when both are high in the same cycle.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "fifo_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_easy_16.mp4",
+        "poster": "media/images/fifo_easy_16-frame.png",
+        "figure": "media/images/fifo_easy_16.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "FIFO pointers: A master may drop valid before ready acknowledges freely always.",
+      "answer": false,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "fifo_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_easy_17.mp4",
+        "poster": "media/images/fifo_easy_17-frame.png",
+        "figure": "media/images/fifo_easy_17.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "FIFO pointers: Ready may depend on valid in the same cycle (combinational) carefully.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "fifo_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_easy_18.mp4",
+        "poster": "media/images/fifo_easy_18-frame.png",
+        "figure": "media/images/fifo_easy_18.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "FIFO pointers: AXI-style fire is valid && ready.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "fifo_easy_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_easy_19.mp4",
+        "poster": "media/images/fifo_easy_19-frame.png",
+        "figure": "media/images/fifo_easy_19.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "FIFO pointers: Tri-state buses need exactly one driver when not floating intentionally.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "fifo_easy_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_easy_20.mp4",
+        "poster": "media/images/fifo_easy_20-frame.png",
+        "figure": "media/images/fifo_easy_20.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "FIFO pointers: Multiple drivers asserting opposite values is bus contention.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "fifo_easy_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_easy_21.mp4",
+        "poster": "media/images/fifo_easy_21-frame.png",
+        "figure": "media/images/fifo_easy_21.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "FIFO pointers: Async FIFO write and read clocks may be unrelated.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "fifo_easy_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_easy_22.mp4",
+        "poster": "media/images/fifo_easy_22-frame.png",
+        "figure": "media/images/fifo_easy_22.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "FIFO pointers: Gray code helps multi-bit CDC of pointers.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "fifo_easy_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_easy_23.mp4",
+        "poster": "media/images/fifo_easy_23-frame.png",
+        "figure": "media/images/fifo_easy_23.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "FIFO pointers: Single FF sync is enough for multi-bit buses.",
+      "answer": false,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "fifo_easy_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_easy_24.mp4",
+        "poster": "media/images/fifo_easy_24-frame.png",
+        "figure": "media/images/fifo_easy_24.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "FIFO pointers: Backpressure is expressed by deasserting ready.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "fifo_easy_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_easy_25.mp4",
+        "poster": "media/images/fifo_easy_25-frame.png",
+        "figure": "media/images/fifo_easy_25.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FIFO pointers: With valid fixed high, how many beats transfer in 1 cycles if ready is always high?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "fifo_easy_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_easy_26.mp4",
+        "poster": "media/images/fifo_easy_26-frame.png",
+        "figure": "media/images/fifo_easy_26.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FIFO pointers: With valid fixed high, how many beats transfer in 2 cycles if ready is always high?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "fifo_easy_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_easy_27.mp4",
+        "poster": "media/images/fifo_easy_27-frame.png",
+        "figure": "media/images/fifo_easy_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FIFO pointers: With valid fixed high, how many beats transfer in 3 cycles if ready is always high?",
+      "choices": [
+        "2",
+        "3",
+        "6",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "fifo_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_easy_28.mp4",
+        "poster": "media/images/fifo_easy_28-frame.png",
+        "figure": "media/images/fifo_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FIFO pointers: With valid fixed high, how many beats transfer in 4 cycles if ready is always high?",
+      "choices": [
+        "3",
+        "4",
+        "8",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "fifo_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_easy_29.mp4",
+        "poster": "media/images/fifo_easy_29-frame.png",
+        "figure": "media/images/fifo_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "FIFO pointers: With valid fixed high, how many beats transfer in 5 cycles if ready is always high?",
+      "choices": [
+        "4",
+        "5",
+        "10",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "fifo_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_easy_30.mp4",
+        "poster": "media/images/fifo_easy_30-frame.png",
+        "figure": "media/images/fifo_easy_30.png"
+      }
     },
     {
       "id": "fifo_medium_01",
@@ -64,7 +536,13 @@
       ],
       "answer": 0,
       "explain": "wr tracks next write slot.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_medium_01.mp4",
+        "poster": "media/images/fifo_medium_01-frame.png",
+        "figure": "media/images/fifo_medium_01.png"
+      }
     },
     {
       "id": "fifo_medium_02",
@@ -78,7 +556,13 @@
       ],
       "answer": 0,
       "explain": "rd tracks oldest entry.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_medium_02.mp4",
+        "poster": "media/images/fifo_medium_02-frame.png",
+        "figure": "media/images/fifo_medium_02.png"
+      }
     },
     {
       "id": "fifo_medium_03",
@@ -92,7 +576,13 @@
       ],
       "answer": 0,
       "explain": "Count tracks occupancy.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_medium_03.mp4",
+        "poster": "media/images/fifo_medium_03-frame.png",
+        "figure": "media/images/fifo_medium_03.png"
+      }
     },
     {
       "id": "fifo_medium_04",
@@ -100,7 +590,13 @@
       "prompt": "rd and wr are allowed to index beyond DEPTH without wrap.",
       "answer": false,
       "explain": "Circular indexing uses modulo DEPTH.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_medium_04.mp4",
+        "poster": "media/images/fifo_medium_04-frame.png",
+        "figure": "media/images/fifo_medium_04.png"
+      }
     },
     {
       "id": "fifo_medium_05",
@@ -114,7 +610,13 @@
       ],
       "answer": 0,
       "explain": "Count tracks occupancy.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_medium_05.mp4",
+        "poster": "media/images/fifo_medium_05-frame.png",
+        "figure": "media/images/fifo_medium_05.png"
+      }
     },
     {
       "id": "fifo_medium_06",
@@ -128,7 +630,421 @@
       ],
       "answer": 0,
       "explain": "Count tracks occupancy.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_medium_06.mp4",
+        "poster": "media/images/fifo_medium_06-frame.png",
+        "figure": "media/images/fifo_medium_06.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In FIFO pointers, address width for depth 4 is…",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(4)) = 2.",
+      "difficulty": "medium",
+      "id": "fifo_medium_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_medium_07.mp4",
+        "poster": "media/images/fifo_medium_07-frame.png",
+        "figure": "media/images/fifo_medium_07.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In FIFO pointers, address width for depth 8 is…",
+      "choices": [
+        "2",
+        "3",
+        "8",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(8)) = 3.",
+      "difficulty": "medium",
+      "id": "fifo_medium_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_medium_08.mp4",
+        "poster": "media/images/fifo_medium_08-frame.png",
+        "figure": "media/images/fifo_medium_08.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In FIFO pointers, address width for depth 16 is…",
+      "choices": [
+        "3",
+        "4",
+        "16",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(16)) = 4.",
+      "difficulty": "medium",
+      "id": "fifo_medium_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_medium_09.mp4",
+        "poster": "media/images/fifo_medium_09-frame.png",
+        "figure": "media/images/fifo_medium_09.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In FIFO pointers, address width for depth 32 is…",
+      "choices": [
+        "4",
+        "5",
+        "32",
+        "10"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(32)) = 5.",
+      "difficulty": "medium",
+      "id": "fifo_medium_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_medium_10.mp4",
+        "poster": "media/images/fifo_medium_10-frame.png",
+        "figure": "media/images/fifo_medium_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In FIFO pointers, address width for depth 64 is…",
+      "choices": [
+        "5",
+        "6",
+        "64",
+        "12"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(64)) = 6.",
+      "difficulty": "medium",
+      "id": "fifo_medium_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_medium_11.mp4",
+        "poster": "media/images/fifo_medium_11-frame.png",
+        "figure": "media/images/fifo_medium_11.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In FIFO pointers, capacity of 8×8 memory in bits is…",
+      "choices": [
+        "16",
+        "64",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "8×8 = 64.",
+      "difficulty": "medium",
+      "id": "fifo_medium_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_medium_12.mp4",
+        "poster": "media/images/fifo_medium_12-frame.png",
+        "figure": "media/images/fifo_medium_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In FIFO pointers, capacity of 16×32 memory in bits is…",
+      "choices": [
+        "48",
+        "512",
+        "16",
+        "32"
+      ],
+      "answer": 1,
+      "explain": "16×32 = 512.",
+      "difficulty": "medium",
+      "id": "fifo_medium_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_medium_13.mp4",
+        "poster": "media/images/fifo_medium_13-frame.png",
+        "figure": "media/images/fifo_medium_13.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In FIFO pointers, capacity of 64×4 memory in bits is…",
+      "choices": [
+        "68",
+        "256",
+        "64",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "64×4 = 256.",
+      "difficulty": "medium",
+      "id": "fifo_medium_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_medium_14.mp4",
+        "poster": "media/images/fifo_medium_14-frame.png",
+        "figure": "media/images/fifo_medium_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In FIFO pointers, capacity of 256×16 memory in bits is…",
+      "choices": [
+        "272",
+        "4096",
+        "256",
+        "16"
+      ],
+      "answer": 1,
+      "explain": "256×16 = 4096.",
+      "difficulty": "medium",
+      "id": "fifo_medium_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_medium_15.mp4",
+        "poster": "media/images/fifo_medium_15-frame.png",
+        "figure": "media/images/fifo_medium_15.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In FIFO pointers, fIFO empty and full must be generated carefully across domains for async FIFOs.",
+      "answer": true,
+      "explain": "Gray pointers.",
+      "difficulty": "medium",
+      "id": "fifo_medium_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_medium_16.mp4",
+        "poster": "media/images/fifo_medium_16-frame.png",
+        "figure": "media/images/fifo_medium_16.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In FIFO pointers, byte enables select which bytes of a word are written.",
+      "answer": true,
+      "explain": "Partial writes.",
+      "difficulty": "medium",
+      "id": "fifo_medium_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_medium_17.mp4",
+        "poster": "media/images/fifo_medium_17-frame.png",
+        "figure": "media/images/fifo_medium_17.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In FIFO pointers, valid/ready handshake transfers when both are high in the same cycle.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "fifo_medium_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_medium_18.mp4",
+        "poster": "media/images/fifo_medium_18-frame.png",
+        "figure": "media/images/fifo_medium_18.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In FIFO pointers, a master may drop valid before ready acknowledges freely always.",
+      "answer": false,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "fifo_medium_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_medium_19.mp4",
+        "poster": "media/images/fifo_medium_19-frame.png",
+        "figure": "media/images/fifo_medium_19.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In FIFO pointers, ready may depend on valid in the same cycle (combinational) carefully.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "fifo_medium_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_medium_20.mp4",
+        "poster": "media/images/fifo_medium_20-frame.png",
+        "figure": "media/images/fifo_medium_20.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In FIFO pointers, aXI-style fire is valid && ready.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "fifo_medium_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_medium_21.mp4",
+        "poster": "media/images/fifo_medium_21-frame.png",
+        "figure": "media/images/fifo_medium_21.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In FIFO pointers, tri-state buses need exactly one driver when not floating intentionally.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "fifo_medium_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_medium_22.mp4",
+        "poster": "media/images/fifo_medium_22-frame.png",
+        "figure": "media/images/fifo_medium_22.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In FIFO pointers, multiple drivers asserting opposite values is bus contention.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "fifo_medium_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_medium_23.mp4",
+        "poster": "media/images/fifo_medium_23-frame.png",
+        "figure": "media/images/fifo_medium_23.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In FIFO pointers, async FIFO write and read clocks may be unrelated.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "fifo_medium_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_medium_24.mp4",
+        "poster": "media/images/fifo_medium_24-frame.png",
+        "figure": "media/images/fifo_medium_24.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In FIFO pointers, gray code helps multi-bit CDC of pointers.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "fifo_medium_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_medium_25.mp4",
+        "poster": "media/images/fifo_medium_25-frame.png",
+        "figure": "media/images/fifo_medium_25.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In FIFO pointers, single FF sync is enough for multi-bit buses.",
+      "answer": false,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "fifo_medium_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_medium_26.mp4",
+        "poster": "media/images/fifo_medium_26-frame.png",
+        "figure": "media/images/fifo_medium_26.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In FIFO pointers, backpressure is expressed by deasserting ready.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "fifo_medium_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_medium_27.mp4",
+        "poster": "media/images/fifo_medium_27-frame.png",
+        "figure": "media/images/fifo_medium_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In FIFO pointers, with valid fixed high, how many beats transfer in 1 cycles if ready is always high?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "fifo_medium_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_medium_28.mp4",
+        "poster": "media/images/fifo_medium_28-frame.png",
+        "figure": "media/images/fifo_medium_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In FIFO pointers, with valid fixed high, how many beats transfer in 2 cycles if ready is always high?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "fifo_medium_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_medium_29.mp4",
+        "poster": "media/images/fifo_medium_29-frame.png",
+        "figure": "media/images/fifo_medium_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In FIFO pointers, with valid fixed high, how many beats transfer in 3 cycles if ready is always high?",
+      "choices": [
+        "2",
+        "3",
+        "6",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "fifo_medium_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_medium_30.mp4",
+        "poster": "media/images/fifo_medium_30-frame.png",
+        "figure": "media/images/fifo_medium_30.png"
+      }
     },
     {
       "id": "fifo_hard_01",
@@ -142,7 +1058,13 @@
       ],
       "answer": 0,
       "explain": "wr==rd alone is ambiguous.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_hard_01.mp4",
+        "poster": "media/images/fifo_hard_01-frame.png",
+        "figure": "media/images/fifo_hard_01.png"
+      }
     },
     {
       "id": "fifo_hard_02",
@@ -156,7 +1078,13 @@
       ],
       "answer": 0,
       "explain": "Balanced push/pop restore empty.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_hard_02.mp4",
+        "poster": "media/images/fifo_hard_02-frame.png",
+        "figure": "media/images/fifo_hard_02.png"
+      }
     },
     {
       "id": "fifo_hard_03",
@@ -170,7 +1098,13 @@
       ],
       "answer": 0,
       "explain": "Read latency / data validity style.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_hard_03.mp4",
+        "poster": "media/images/fifo_hard_03-frame.png",
+        "figure": "media/images/fifo_hard_03.png"
+      }
     },
     {
       "id": "fifo_hard_04",
@@ -178,567 +1112,17 @@
       "prompt": "DEPTH=1 FIFOs cannot exist.",
       "answer": false,
       "explain": "Depth-1 is valid; pointer updates matter.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_hard_04.mp4",
+        "poster": "media/images/fifo_hard_04-frame.png",
+        "figure": "media/images/fifo_hard_04.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Address width for depth 4 is…",
-      "choices": [
-        "1",
-        "2",
-        "4",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(4)) = 2.",
-      "difficulty": "easy",
-      "id": "fifo_easy_05"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Address width for depth 8 is…",
-      "choices": [
-        "2",
-        "3",
-        "8",
-        "6"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(8)) = 3.",
-      "difficulty": "easy",
-      "id": "fifo_easy_06"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Address width for depth 16 is…",
-      "choices": [
-        "3",
-        "4",
-        "16",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(16)) = 4.",
-      "difficulty": "easy",
-      "id": "fifo_easy_07"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Address width for depth 32 is…",
-      "choices": [
-        "4",
-        "5",
-        "32",
-        "10"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(32)) = 5.",
-      "difficulty": "easy",
-      "id": "fifo_easy_08"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Address width for depth 64 is…",
-      "choices": [
-        "5",
-        "6",
-        "64",
-        "12"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(64)) = 6.",
-      "difficulty": "easy",
-      "id": "fifo_easy_09"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Capacity of 8×8 memory in bits is…",
-      "choices": [
-        "16",
-        "64",
-        "8",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "8×8 = 64.",
-      "difficulty": "easy",
-      "id": "fifo_easy_10"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Capacity of 16×32 memory in bits is…",
-      "choices": [
-        "48",
-        "512",
-        "16",
-        "32"
-      ],
-      "answer": 1,
-      "explain": "16×32 = 512.",
-      "difficulty": "easy",
-      "id": "fifo_easy_11"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Capacity of 64×4 memory in bits is…",
-      "choices": [
-        "68",
-        "256",
-        "64",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "64×4 = 256.",
-      "difficulty": "easy",
-      "id": "fifo_easy_12"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Capacity of 256×16 memory in bits is…",
-      "choices": [
-        "272",
-        "4096",
-        "256",
-        "16"
-      ],
-      "answer": 1,
-      "explain": "256×16 = 4096.",
-      "difficulty": "easy",
-      "id": "fifo_easy_13"
-    },
-    {
-      "type": "true_false",
-      "prompt": "FIFO empty and full must be generated carefully across domains for async FIFOs.",
-      "answer": true,
-      "explain": "Gray pointers.",
-      "difficulty": "easy",
-      "id": "fifo_easy_14"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Byte enables select which bytes of a word are written.",
-      "answer": true,
-      "explain": "Partial writes.",
-      "difficulty": "easy",
-      "id": "fifo_easy_15"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Valid/ready handshake transfers when both are high in the same cycle.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "easy",
-      "id": "fifo_easy_16"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A master may drop valid before ready acknowledges freely always.",
-      "answer": false,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "easy",
-      "id": "fifo_easy_17"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Ready may depend on valid in the same cycle (combinational) carefully.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "easy",
-      "id": "fifo_easy_18"
-    },
-    {
-      "type": "true_false",
-      "prompt": "AXI-style fire is valid && ready.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "easy",
-      "id": "fifo_easy_19"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Tri-state buses need exactly one driver when not floating intentionally.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "easy",
-      "id": "fifo_easy_20"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Multiple drivers asserting opposite values is bus contention.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "easy",
-      "id": "fifo_easy_21"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Async FIFO write and read clocks may be unrelated.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "easy",
-      "id": "fifo_easy_22"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Gray code helps multi-bit CDC of pointers.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "easy",
-      "id": "fifo_easy_23"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Single FF sync is enough for multi-bit buses.",
-      "answer": false,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "easy",
-      "id": "fifo_easy_24"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Backpressure is expressed by deasserting ready.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "easy",
-      "id": "fifo_easy_25"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 1 cycles if ready is always high?",
-      "choices": [
-        "0",
-        "1",
-        "2",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "easy",
-      "id": "fifo_easy_26"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 2 cycles if ready is always high?",
-      "choices": [
-        "1",
-        "2",
-        "4",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "easy",
-      "id": "fifo_easy_27"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 3 cycles if ready is always high?",
-      "choices": [
-        "2",
-        "3",
-        "6",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "easy",
-      "id": "fifo_easy_28"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 4 cycles if ready is always high?",
-      "choices": [
-        "3",
-        "4",
-        "8",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "easy",
-      "id": "fifo_easy_29"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 5 cycles if ready is always high?",
-      "choices": [
-        "4",
-        "5",
-        "10",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "easy",
-      "id": "fifo_easy_30"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Address width for depth 4 is…",
-      "choices": [
-        "1",
-        "2",
-        "4",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(4)) = 2.",
-      "difficulty": "medium",
-      "id": "fifo_medium_07"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Address width for depth 8 is…",
-      "choices": [
-        "2",
-        "3",
-        "8",
-        "6"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(8)) = 3.",
-      "difficulty": "medium",
-      "id": "fifo_medium_08"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Address width for depth 16 is…",
-      "choices": [
-        "3",
-        "4",
-        "16",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(16)) = 4.",
-      "difficulty": "medium",
-      "id": "fifo_medium_09"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Address width for depth 32 is…",
-      "choices": [
-        "4",
-        "5",
-        "32",
-        "10"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(32)) = 5.",
-      "difficulty": "medium",
-      "id": "fifo_medium_10"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Address width for depth 64 is…",
-      "choices": [
-        "5",
-        "6",
-        "64",
-        "12"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(64)) = 6.",
-      "difficulty": "medium",
-      "id": "fifo_medium_11"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Capacity of 8×8 memory in bits is…",
-      "choices": [
-        "16",
-        "64",
-        "8",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "8×8 = 64.",
-      "difficulty": "medium",
-      "id": "fifo_medium_12"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Capacity of 16×32 memory in bits is…",
-      "choices": [
-        "48",
-        "512",
-        "16",
-        "32"
-      ],
-      "answer": 1,
-      "explain": "16×32 = 512.",
-      "difficulty": "medium",
-      "id": "fifo_medium_13"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Capacity of 64×4 memory in bits is…",
-      "choices": [
-        "68",
-        "256",
-        "64",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "64×4 = 256.",
-      "difficulty": "medium",
-      "id": "fifo_medium_14"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Capacity of 256×16 memory in bits is…",
-      "choices": [
-        "272",
-        "4096",
-        "256",
-        "16"
-      ],
-      "answer": 1,
-      "explain": "256×16 = 4096.",
-      "difficulty": "medium",
-      "id": "fifo_medium_15"
-    },
-    {
-      "type": "true_false",
-      "prompt": "FIFO empty and full must be generated carefully across domains for async FIFOs.",
-      "answer": true,
-      "explain": "Gray pointers.",
-      "difficulty": "medium",
-      "id": "fifo_medium_16"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Byte enables select which bytes of a word are written.",
-      "answer": true,
-      "explain": "Partial writes.",
-      "difficulty": "medium",
-      "id": "fifo_medium_17"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Valid/ready handshake transfers when both are high in the same cycle.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "medium",
-      "id": "fifo_medium_18"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A master may drop valid before ready acknowledges freely always.",
-      "answer": false,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "medium",
-      "id": "fifo_medium_19"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Ready may depend on valid in the same cycle (combinational) carefully.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "medium",
-      "id": "fifo_medium_20"
-    },
-    {
-      "type": "true_false",
-      "prompt": "AXI-style fire is valid && ready.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "medium",
-      "id": "fifo_medium_21"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Tri-state buses need exactly one driver when not floating intentionally.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "medium",
-      "id": "fifo_medium_22"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Multiple drivers asserting opposite values is bus contention.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "medium",
-      "id": "fifo_medium_23"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Async FIFO write and read clocks may be unrelated.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "medium",
-      "id": "fifo_medium_24"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Gray code helps multi-bit CDC of pointers.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "medium",
-      "id": "fifo_medium_25"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Single FF sync is enough for multi-bit buses.",
-      "answer": false,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "medium",
-      "id": "fifo_medium_26"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Backpressure is expressed by deasserting ready.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "medium",
-      "id": "fifo_medium_27"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 1 cycles if ready is always high?",
-      "choices": [
-        "0",
-        "1",
-        "2",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "medium",
-      "id": "fifo_medium_28"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 2 cycles if ready is always high?",
-      "choices": [
-        "1",
-        "2",
-        "4",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "medium",
-      "id": "fifo_medium_29"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 3 cycles if ready is always high?",
-      "choices": [
-        "2",
-        "3",
-        "6",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "medium",
-      "id": "fifo_medium_30"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Address width for depth 4 is…",
+      "prompt": "For the FIFO pointers lab: Address width for depth 4 is…",
       "choices": [
         "1",
         "2",
@@ -748,11 +1132,17 @@
       "answer": 1,
       "explain": "ceil(log2(4)) = 2.",
       "difficulty": "hard",
-      "id": "fifo_hard_05"
+      "id": "fifo_hard_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_hard_05.mp4",
+        "poster": "media/images/fifo_hard_05-frame.png",
+        "figure": "media/images/fifo_hard_05.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Address width for depth 8 is…",
+      "prompt": "For the FIFO pointers lab: Address width for depth 8 is…",
       "choices": [
         "2",
         "3",
@@ -762,11 +1152,17 @@
       "answer": 1,
       "explain": "ceil(log2(8)) = 3.",
       "difficulty": "hard",
-      "id": "fifo_hard_06"
+      "id": "fifo_hard_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_hard_06.mp4",
+        "poster": "media/images/fifo_hard_06-frame.png",
+        "figure": "media/images/fifo_hard_06.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Address width for depth 16 is…",
+      "prompt": "For the FIFO pointers lab: Address width for depth 16 is…",
       "choices": [
         "3",
         "4",
@@ -776,11 +1172,17 @@
       "answer": 1,
       "explain": "ceil(log2(16)) = 4.",
       "difficulty": "hard",
-      "id": "fifo_hard_07"
+      "id": "fifo_hard_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_hard_07.mp4",
+        "poster": "media/images/fifo_hard_07-frame.png",
+        "figure": "media/images/fifo_hard_07.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Address width for depth 32 is…",
+      "prompt": "For the FIFO pointers lab: Address width for depth 32 is…",
       "choices": [
         "4",
         "5",
@@ -790,11 +1192,17 @@
       "answer": 1,
       "explain": "ceil(log2(32)) = 5.",
       "difficulty": "hard",
-      "id": "fifo_hard_08"
+      "id": "fifo_hard_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_hard_08.mp4",
+        "poster": "media/images/fifo_hard_08-frame.png",
+        "figure": "media/images/fifo_hard_08.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Address width for depth 64 is…",
+      "prompt": "For the FIFO pointers lab: Address width for depth 64 is…",
       "choices": [
         "5",
         "6",
@@ -804,11 +1212,17 @@
       "answer": 1,
       "explain": "ceil(log2(64)) = 6.",
       "difficulty": "hard",
-      "id": "fifo_hard_09"
+      "id": "fifo_hard_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_hard_09.mp4",
+        "poster": "media/images/fifo_hard_09-frame.png",
+        "figure": "media/images/fifo_hard_09.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Capacity of 8×8 memory in bits is…",
+      "prompt": "For the FIFO pointers lab: Capacity of 8×8 memory in bits is…",
       "choices": [
         "16",
         "64",
@@ -818,11 +1232,17 @@
       "answer": 1,
       "explain": "8×8 = 64.",
       "difficulty": "hard",
-      "id": "fifo_hard_10"
+      "id": "fifo_hard_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_hard_10.mp4",
+        "poster": "media/images/fifo_hard_10-frame.png",
+        "figure": "media/images/fifo_hard_10.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Capacity of 16×32 memory in bits is…",
+      "prompt": "For the FIFO pointers lab: Capacity of 16×32 memory in bits is…",
       "choices": [
         "48",
         "512",
@@ -832,11 +1252,17 @@
       "answer": 1,
       "explain": "16×32 = 512.",
       "difficulty": "hard",
-      "id": "fifo_hard_11"
+      "id": "fifo_hard_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_hard_11.mp4",
+        "poster": "media/images/fifo_hard_11-frame.png",
+        "figure": "media/images/fifo_hard_11.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Capacity of 64×4 memory in bits is…",
+      "prompt": "For the FIFO pointers lab: Capacity of 64×4 memory in bits is…",
       "choices": [
         "68",
         "256",
@@ -846,11 +1272,17 @@
       "answer": 1,
       "explain": "64×4 = 256.",
       "difficulty": "hard",
-      "id": "fifo_hard_12"
+      "id": "fifo_hard_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_hard_12.mp4",
+        "poster": "media/images/fifo_hard_12-frame.png",
+        "figure": "media/images/fifo_hard_12.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Capacity of 256×16 memory in bits is…",
+      "prompt": "For the FIFO pointers lab: Capacity of 256×16 memory in bits is…",
       "choices": [
         "272",
         "4096",
@@ -860,107 +1292,185 @@
       "answer": 1,
       "explain": "256×16 = 4096.",
       "difficulty": "hard",
-      "id": "fifo_hard_13"
+      "id": "fifo_hard_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_hard_13.mp4",
+        "poster": "media/images/fifo_hard_13-frame.png",
+        "figure": "media/images/fifo_hard_13.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "FIFO empty and full must be generated carefully across domains for async FIFOs.",
+      "prompt": "For the FIFO pointers lab: FIFO empty and full must be generated carefully across domains for async FIFOs.",
       "answer": true,
       "explain": "Gray pointers.",
       "difficulty": "hard",
-      "id": "fifo_hard_14"
+      "id": "fifo_hard_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_hard_14.mp4",
+        "poster": "media/images/fifo_hard_14-frame.png",
+        "figure": "media/images/fifo_hard_14.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Byte enables select which bytes of a word are written.",
+      "prompt": "For the FIFO pointers lab: Byte enables select which bytes of a word are written.",
       "answer": true,
       "explain": "Partial writes.",
       "difficulty": "hard",
-      "id": "fifo_hard_15"
+      "id": "fifo_hard_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_hard_15.mp4",
+        "poster": "media/images/fifo_hard_15-frame.png",
+        "figure": "media/images/fifo_hard_15.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Valid/ready handshake transfers when both are high in the same cycle.",
+      "prompt": "For the FIFO pointers lab: Valid/ready handshake transfers when both are high in the same cycle.",
       "answer": true,
       "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "id": "fifo_hard_16"
+      "id": "fifo_hard_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_hard_16.mp4",
+        "poster": "media/images/fifo_hard_16-frame.png",
+        "figure": "media/images/fifo_hard_16.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A master may drop valid before ready acknowledges freely always.",
+      "prompt": "For the FIFO pointers lab: A master may drop valid before ready acknowledges freely always.",
       "answer": false,
       "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "id": "fifo_hard_17"
+      "id": "fifo_hard_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_hard_17.mp4",
+        "poster": "media/images/fifo_hard_17-frame.png",
+        "figure": "media/images/fifo_hard_17.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Ready may depend on valid in the same cycle (combinational) carefully.",
+      "prompt": "For the FIFO pointers lab: Ready may depend on valid in the same cycle (combinational) carefully.",
       "answer": true,
       "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "id": "fifo_hard_18"
+      "id": "fifo_hard_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_hard_18.mp4",
+        "poster": "media/images/fifo_hard_18-frame.png",
+        "figure": "media/images/fifo_hard_18.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "AXI-style fire is valid && ready.",
+      "prompt": "For the FIFO pointers lab: AXI-style fire is valid && ready.",
       "answer": true,
       "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "id": "fifo_hard_19"
+      "id": "fifo_hard_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_hard_19.mp4",
+        "poster": "media/images/fifo_hard_19-frame.png",
+        "figure": "media/images/fifo_hard_19.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Tri-state buses need exactly one driver when not floating intentionally.",
+      "prompt": "For the FIFO pointers lab: Tri-state buses need exactly one driver when not floating intentionally.",
       "answer": true,
       "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "id": "fifo_hard_20"
+      "id": "fifo_hard_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_hard_20.mp4",
+        "poster": "media/images/fifo_hard_20-frame.png",
+        "figure": "media/images/fifo_hard_20.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Multiple drivers asserting opposite values is bus contention.",
+      "prompt": "For the FIFO pointers lab: Multiple drivers asserting opposite values is bus contention.",
       "answer": true,
       "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "id": "fifo_hard_21"
+      "id": "fifo_hard_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_hard_21.mp4",
+        "poster": "media/images/fifo_hard_21-frame.png",
+        "figure": "media/images/fifo_hard_21.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Async FIFO write and read clocks may be unrelated.",
+      "prompt": "For the FIFO pointers lab: Async FIFO write and read clocks may be unrelated.",
       "answer": true,
       "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "id": "fifo_hard_22"
+      "id": "fifo_hard_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_hard_22.mp4",
+        "poster": "media/images/fifo_hard_22-frame.png",
+        "figure": "media/images/fifo_hard_22.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Gray code helps multi-bit CDC of pointers.",
+      "prompt": "For the FIFO pointers lab: Gray code helps multi-bit CDC of pointers.",
       "answer": true,
       "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "id": "fifo_hard_23"
+      "id": "fifo_hard_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_hard_23.mp4",
+        "poster": "media/images/fifo_hard_23-frame.png",
+        "figure": "media/images/fifo_hard_23.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Single FF sync is enough for multi-bit buses.",
+      "prompt": "For the FIFO pointers lab: Single FF sync is enough for multi-bit buses.",
       "answer": false,
       "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "id": "fifo_hard_24"
+      "id": "fifo_hard_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_hard_24.mp4",
+        "poster": "media/images/fifo_hard_24-frame.png",
+        "figure": "media/images/fifo_hard_24.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Backpressure is expressed by deasserting ready.",
+      "prompt": "For the FIFO pointers lab: Backpressure is expressed by deasserting ready.",
       "answer": true,
       "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "id": "fifo_hard_25"
+      "id": "fifo_hard_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_hard_25.mp4",
+        "poster": "media/images/fifo_hard_25-frame.png",
+        "figure": "media/images/fifo_hard_25.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 1 cycles if ready is always high?",
+      "prompt": "For the FIFO pointers lab: With valid fixed high, how many beats transfer in 1 cycles if ready is always high?",
       "choices": [
         "0",
         "1",
@@ -970,11 +1480,17 @@
       "answer": 1,
       "explain": "One beat per cycle when both high.",
       "difficulty": "hard",
-      "id": "fifo_hard_26"
+      "id": "fifo_hard_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_hard_26.mp4",
+        "poster": "media/images/fifo_hard_26-frame.png",
+        "figure": "media/images/fifo_hard_26.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 2 cycles if ready is always high?",
+      "prompt": "For the FIFO pointers lab: With valid fixed high, how many beats transfer in 2 cycles if ready is always high?",
       "choices": [
         "1",
         "2",
@@ -984,11 +1500,17 @@
       "answer": 1,
       "explain": "One beat per cycle when both high.",
       "difficulty": "hard",
-      "id": "fifo_hard_27"
+      "id": "fifo_hard_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_hard_27.mp4",
+        "poster": "media/images/fifo_hard_27-frame.png",
+        "figure": "media/images/fifo_hard_27.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 3 cycles if ready is always high?",
+      "prompt": "For the FIFO pointers lab: With valid fixed high, how many beats transfer in 3 cycles if ready is always high?",
       "choices": [
         "2",
         "3",
@@ -998,11 +1520,17 @@
       "answer": 1,
       "explain": "One beat per cycle when both high.",
       "difficulty": "hard",
-      "id": "fifo_hard_28"
+      "id": "fifo_hard_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_hard_28.mp4",
+        "poster": "media/images/fifo_hard_28-frame.png",
+        "figure": "media/images/fifo_hard_28.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 4 cycles if ready is always high?",
+      "prompt": "In FIFO pointers, with valid fixed high, how many beats transfer in 4 cycles if ready is always high?",
       "choices": [
         "3",
         "4",
@@ -1012,11 +1540,17 @@
       "answer": 1,
       "explain": "One beat per cycle when both high.",
       "difficulty": "hard",
-      "id": "fifo_hard_29"
+      "id": "fifo_hard_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_hard_29.mp4",
+        "poster": "media/images/fifo_hard_29-frame.png",
+        "figure": "media/images/fifo_hard_29.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 5 cycles if ready is always high?",
+      "prompt": "In FIFO pointers, with valid fixed high, how many beats transfer in 5 cycles if ready is always high?",
       "choices": [
         "4",
         "5",
@@ -1026,7 +1560,13 @@
       "answer": 1,
       "explain": "One beat per cycle when both high.",
       "difficulty": "hard",
-      "id": "fifo_hard_30"
+      "id": "fifo_hard_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/fifo_hard_30.mp4",
+        "poster": "media/images/fifo_hard_30-frame.png",
+        "figure": "media/images/fifo_hard_30.png"
+      }
     }
   ]
 }

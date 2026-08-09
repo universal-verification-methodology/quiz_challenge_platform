@@ -14,7 +14,13 @@
       ],
       "answer": 0,
       "explain": "Signal crosses unrelated clocks.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_easy_01.mp4",
+        "poster": "media/images/cdc_easy_01-frame.png",
+        "figure": "media/images/cdc_easy_01.png"
+      }
     },
     {
       "id": "cdc_easy_02",
@@ -28,7 +34,13 @@
       ],
       "answer": 0,
       "explain": "q2 samples after settle time.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_easy_02.mp4",
+        "poster": "media/images/cdc_easy_02-frame.png",
+        "figure": "media/images/cdc_easy_02.png"
+      }
     },
     {
       "id": "cdc_easy_03",
@@ -42,7 +54,13 @@
       ],
       "answer": 0,
       "explain": "Bits can skew on separate 2-FF paths.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_easy_03.mp4",
+        "poster": "media/images/cdc_easy_03-frame.png",
+        "figure": "media/images/cdc_easy_03.png"
+      }
     },
     {
       "id": "cdc_easy_04",
@@ -50,7 +68,455 @@
       "prompt": "Never fan q1 into combinational logic in the dst domain.",
       "answer": true,
       "explain": "q1 can be metastable; one-FF is unsafe; use q2.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_easy_04.mp4",
+        "poster": "media/images/cdc_easy_04-frame.png",
+        "figure": "media/images/cdc_easy_04.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "CDC / 2-FF sync: Setup time is a requirement before the active clock edge.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "cdc_easy_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_easy_05.mp4",
+        "poster": "media/images/cdc_easy_05-frame.png",
+        "figure": "media/images/cdc_easy_05.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "CDC / 2-FF sync: Setup time is a requirement before the active clock edge?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "cdc_easy_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_easy_06.mp4",
+        "poster": "media/images/cdc_easy_06-frame.png",
+        "figure": "media/images/cdc_easy_06.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "CDC / 2-FF sync: Hold time is a requirement after the active clock edge.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "cdc_easy_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_easy_07.mp4",
+        "poster": "media/images/cdc_easy_07-frame.png",
+        "figure": "media/images/cdc_easy_07.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "CDC / 2-FF sync: Hold time is a requirement after the active clock edge?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "cdc_easy_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_easy_08.mp4",
+        "poster": "media/images/cdc_easy_08-frame.png",
+        "figure": "media/images/cdc_easy_08.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "CDC / 2-FF sync: Contamination delay is a min path delay from clk to Q.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "cdc_easy_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_easy_09.mp4",
+        "poster": "media/images/cdc_easy_09-frame.png",
+        "figure": "media/images/cdc_easy_09.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "CDC / 2-FF sync: Contamination delay is a min path delay from clk to Q?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "cdc_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_easy_10.mp4",
+        "poster": "media/images/cdc_easy_10-frame.png",
+        "figure": "media/images/cdc_easy_10.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "CDC / 2-FF sync: Clock-to-Q max is used in setup checks.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "cdc_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_easy_11.mp4",
+        "poster": "media/images/cdc_easy_11-frame.png",
+        "figure": "media/images/cdc_easy_11.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "CDC / 2-FF sync: Clock-to-Q max is used in setup checks?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "cdc_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_easy_12.mp4",
+        "poster": "media/images/cdc_easy_12-frame.png",
+        "figure": "media/images/cdc_easy_12.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "CDC / 2-FF sync: Hold checks use min delays / contamination.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "cdc_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_easy_13.mp4",
+        "poster": "media/images/cdc_easy_13-frame.png",
+        "figure": "media/images/cdc_easy_13.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "CDC / 2-FF sync: Hold checks use min delays / contamination?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "cdc_easy_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_easy_14.mp4",
+        "poster": "media/images/cdc_easy_14-frame.png",
+        "figure": "media/images/cdc_easy_14.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "CDC / 2-FF sync: A positive-edge FF samples D on the rising edge.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "cdc_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_easy_15.mp4",
+        "poster": "media/images/cdc_easy_15-frame.png",
+        "figure": "media/images/cdc_easy_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "CDC / 2-FF sync: A positive-edge FF samples D on the rising edge?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "cdc_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_easy_16.mp4",
+        "poster": "media/images/cdc_easy_16-frame.png",
+        "figure": "media/images/cdc_easy_16.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "CDC / 2-FF sync: Async reset can release without timing care.",
+      "answer": false,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "cdc_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_easy_17.mp4",
+        "poster": "media/images/cdc_easy_17-frame.png",
+        "figure": "media/images/cdc_easy_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "CDC / 2-FF sync: Async reset can release without timing care?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 1,
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "cdc_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_easy_18.mp4",
+        "poster": "media/images/cdc_easy_18-frame.png",
+        "figure": "media/images/cdc_easy_18.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "CDC / 2-FF sync: Metastability can occur when setup/hold is violated.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "cdc_easy_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_easy_19.mp4",
+        "poster": "media/images/cdc_easy_19-frame.png",
+        "figure": "media/images/cdc_easy_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "CDC / 2-FF sync: Metastability can occur when setup/hold is violated?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "cdc_easy_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_easy_20.mp4",
+        "poster": "media/images/cdc_easy_20-frame.png",
+        "figure": "media/images/cdc_easy_20.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "CDC / 2-FF sync: Two-flop synchronizers remove all metastability risk forever.",
+      "answer": false,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "cdc_easy_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_easy_21.mp4",
+        "poster": "media/images/cdc_easy_21-frame.png",
+        "figure": "media/images/cdc_easy_21.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "CDC / 2-FF sync: Two-flop synchronizers remove all metastability risk forever?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 1,
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "cdc_easy_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_easy_22.mp4",
+        "poster": "media/images/cdc_easy_22-frame.png",
+        "figure": "media/images/cdc_easy_22.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "CDC / 2-FF sync: Clock skew can hurt or help a setup margin depending on direction.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "cdc_easy_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_easy_23.mp4",
+        "poster": "media/images/cdc_easy_23-frame.png",
+        "figure": "media/images/cdc_easy_23.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "CDC / 2-FF sync: Clock skew can hurt or help a setup margin depending on direction?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "cdc_easy_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_easy_24.mp4",
+        "poster": "media/images/cdc_easy_24-frame.png",
+        "figure": "media/images/cdc_easy_24.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "CDC / 2-FF sync: Gating a clock with a free AND is best practice.",
+      "answer": false,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "cdc_easy_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_easy_25.mp4",
+        "poster": "media/images/cdc_easy_25-frame.png",
+        "figure": "media/images/cdc_easy_25.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "CDC / 2-FF sync: Gating a clock with a free AND is best practice?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 1,
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "cdc_easy_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_easy_26.mp4",
+        "poster": "media/images/cdc_easy_26-frame.png",
+        "figure": "media/images/cdc_easy_26.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "CDC / 2-FF sync: ICG cells are preferred for clock enables.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "cdc_easy_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_easy_27.mp4",
+        "poster": "media/images/cdc_easy_27-frame.png",
+        "figure": "media/images/cdc_easy_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "CDC / 2-FF sync: ICG cells are preferred for clock enables?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "cdc_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_easy_28.mp4",
+        "poster": "media/images/cdc_easy_28-frame.png",
+        "figure": "media/images/cdc_easy_28.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "CDC / 2-FF sync: Reset recovery/removal are timing checks at reset release.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "easy",
+      "id": "cdc_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_easy_29.mp4",
+        "poster": "media/images/cdc_easy_29-frame.png",
+        "figure": "media/images/cdc_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "CDC / 2-FF sync: Reset recovery/removal are timing checks at reset release?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "easy",
+      "id": "cdc_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_easy_30.mp4",
+        "poster": "media/images/cdc_easy_30-frame.png",
+        "figure": "media/images/cdc_easy_30.png"
+      }
     },
     {
       "id": "cdc_medium_01",
@@ -64,7 +530,13 @@
       ],
       "answer": 0,
       "explain": "Second sample after metastability window.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_medium_01.mp4",
+        "poster": "media/images/cdc_medium_01-frame.png",
+        "figure": "media/images/cdc_medium_01.png"
+      }
     },
     {
       "id": "cdc_medium_02",
@@ -78,7 +550,13 @@
       ],
       "answer": 0,
       "explain": "No settle flop before use.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_medium_02.mp4",
+        "poster": "media/images/cdc_medium_02-frame.png",
+        "figure": "media/images/cdc_medium_02.png"
+      }
     },
     {
       "id": "cdc_medium_03",
@@ -92,7 +570,13 @@
       ],
       "answer": 0,
       "explain": "Skewed bits can form illegal intermediate values.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_medium_03.mp4",
+        "poster": "media/images/cdc_medium_03-frame.png",
+        "figure": "media/images/cdc_medium_03.png"
+      }
     },
     {
       "id": "cdc_medium_04",
@@ -100,7 +584,455 @@
       "prompt": "q1 should not fan into dst combinational logic.",
       "answer": true,
       "explain": "Treat CDC seriously; 2-FF is for single-bit control-class signals.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_medium_04.mp4",
+        "poster": "media/images/cdc_medium_04-frame.png",
+        "figure": "media/images/cdc_medium_04.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In CDC / 2-FF sync, setup time is a requirement before the active clock edge.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "cdc_medium_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_medium_05.mp4",
+        "poster": "media/images/cdc_medium_05-frame.png",
+        "figure": "media/images/cdc_medium_05.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In CDC / 2-FF sync, setup time is a requirement before the active clock edge?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "cdc_medium_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_medium_06.mp4",
+        "poster": "media/images/cdc_medium_06-frame.png",
+        "figure": "media/images/cdc_medium_06.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In CDC / 2-FF sync, hold time is a requirement after the active clock edge.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "cdc_medium_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_medium_07.mp4",
+        "poster": "media/images/cdc_medium_07-frame.png",
+        "figure": "media/images/cdc_medium_07.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In CDC / 2-FF sync, hold time is a requirement after the active clock edge?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "cdc_medium_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_medium_08.mp4",
+        "poster": "media/images/cdc_medium_08-frame.png",
+        "figure": "media/images/cdc_medium_08.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In CDC / 2-FF sync, contamination delay is a min path delay from clk to Q.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "cdc_medium_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_medium_09.mp4",
+        "poster": "media/images/cdc_medium_09-frame.png",
+        "figure": "media/images/cdc_medium_09.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In CDC / 2-FF sync, contamination delay is a min path delay from clk to Q?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "cdc_medium_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_medium_10.mp4",
+        "poster": "media/images/cdc_medium_10-frame.png",
+        "figure": "media/images/cdc_medium_10.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In CDC / 2-FF sync, clock-to-Q max is used in setup checks.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "cdc_medium_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_medium_11.mp4",
+        "poster": "media/images/cdc_medium_11-frame.png",
+        "figure": "media/images/cdc_medium_11.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In CDC / 2-FF sync, clock-to-Q max is used in setup checks?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "cdc_medium_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_medium_12.mp4",
+        "poster": "media/images/cdc_medium_12-frame.png",
+        "figure": "media/images/cdc_medium_12.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In CDC / 2-FF sync, hold checks use min delays / contamination.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "cdc_medium_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_medium_13.mp4",
+        "poster": "media/images/cdc_medium_13-frame.png",
+        "figure": "media/images/cdc_medium_13.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In CDC / 2-FF sync, hold checks use min delays / contamination?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "cdc_medium_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_medium_14.mp4",
+        "poster": "media/images/cdc_medium_14-frame.png",
+        "figure": "media/images/cdc_medium_14.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In CDC / 2-FF sync, a positive-edge FF samples D on the rising edge.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "cdc_medium_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_medium_15.mp4",
+        "poster": "media/images/cdc_medium_15-frame.png",
+        "figure": "media/images/cdc_medium_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In CDC / 2-FF sync, a positive-edge FF samples D on the rising edge?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "cdc_medium_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_medium_16.mp4",
+        "poster": "media/images/cdc_medium_16-frame.png",
+        "figure": "media/images/cdc_medium_16.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In CDC / 2-FF sync, async reset can release without timing care.",
+      "answer": false,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "cdc_medium_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_medium_17.mp4",
+        "poster": "media/images/cdc_medium_17-frame.png",
+        "figure": "media/images/cdc_medium_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In CDC / 2-FF sync, async reset can release without timing care?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 1,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "cdc_medium_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_medium_18.mp4",
+        "poster": "media/images/cdc_medium_18-frame.png",
+        "figure": "media/images/cdc_medium_18.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In CDC / 2-FF sync, metastability can occur when setup/hold is violated.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "cdc_medium_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_medium_19.mp4",
+        "poster": "media/images/cdc_medium_19-frame.png",
+        "figure": "media/images/cdc_medium_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In CDC / 2-FF sync, metastability can occur when setup/hold is violated?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "cdc_medium_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_medium_20.mp4",
+        "poster": "media/images/cdc_medium_20-frame.png",
+        "figure": "media/images/cdc_medium_20.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In CDC / 2-FF sync, two-flop synchronizers remove all metastability risk forever.",
+      "answer": false,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "cdc_medium_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_medium_21.mp4",
+        "poster": "media/images/cdc_medium_21-frame.png",
+        "figure": "media/images/cdc_medium_21.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In CDC / 2-FF sync, two-flop synchronizers remove all metastability risk forever?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 1,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "cdc_medium_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_medium_22.mp4",
+        "poster": "media/images/cdc_medium_22-frame.png",
+        "figure": "media/images/cdc_medium_22.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In CDC / 2-FF sync, clock skew can hurt or help a setup margin depending on direction.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "cdc_medium_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_medium_23.mp4",
+        "poster": "media/images/cdc_medium_23-frame.png",
+        "figure": "media/images/cdc_medium_23.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In CDC / 2-FF sync, clock skew can hurt or help a setup margin depending on direction?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "cdc_medium_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_medium_24.mp4",
+        "poster": "media/images/cdc_medium_24-frame.png",
+        "figure": "media/images/cdc_medium_24.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In CDC / 2-FF sync, gating a clock with a free AND is best practice.",
+      "answer": false,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "cdc_medium_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_medium_25.mp4",
+        "poster": "media/images/cdc_medium_25-frame.png",
+        "figure": "media/images/cdc_medium_25.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In CDC / 2-FF sync, gating a clock with a free AND is best practice?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 1,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "cdc_medium_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_medium_26.mp4",
+        "poster": "media/images/cdc_medium_26-frame.png",
+        "figure": "media/images/cdc_medium_26.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In CDC / 2-FF sync, iCG cells are preferred for clock enables.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "cdc_medium_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_medium_27.mp4",
+        "poster": "media/images/cdc_medium_27-frame.png",
+        "figure": "media/images/cdc_medium_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In CDC / 2-FF sync, iCG cells are preferred for clock enables?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "cdc_medium_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_medium_28.mp4",
+        "poster": "media/images/cdc_medium_28-frame.png",
+        "figure": "media/images/cdc_medium_28.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In CDC / 2-FF sync, reset recovery/removal are timing checks at reset release.",
+      "answer": true,
+      "explain": "Standard sequential timing fact.",
+      "difficulty": "medium",
+      "id": "cdc_medium_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_medium_29.mp4",
+        "poster": "media/images/cdc_medium_29-frame.png",
+        "figure": "media/images/cdc_medium_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In CDC / 2-FF sync, reset recovery/removal are timing checks at reset release?",
+      "choices": [
+        "True",
+        "False",
+        "Only at DC",
+        "Only in FPGA"
+      ],
+      "answer": 0,
+      "explain": "See sequential timing notes.",
+      "difficulty": "medium",
+      "id": "cdc_medium_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_medium_30.mp4",
+        "poster": "media/images/cdc_medium_30-frame.png",
+        "figure": "media/images/cdc_medium_30.png"
+      }
     },
     {
       "id": "cdc_hard_01",
@@ -114,7 +1046,13 @@
       ],
       "answer": 0,
       "explain": "Constraints, cells, and proper data-path protocols.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_hard_01.mp4",
+        "poster": "media/images/cdc_hard_01-frame.png",
+        "figure": "media/images/cdc_hard_01.png"
+      }
     },
     {
       "id": "cdc_hard_02",
@@ -128,7 +1066,13 @@
       ],
       "answer": 0,
       "explain": "Both flops in the destination domain; use q2.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_hard_02.mp4",
+        "poster": "media/images/cdc_hard_02-frame.png",
+        "figure": "media/images/cdc_hard_02.png"
+      }
     },
     {
       "id": "cdc_hard_03",
@@ -142,7 +1086,13 @@
       ],
       "answer": 0,
       "explain": "First flop can go metastable; wait for q2.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_hard_03.mp4",
+        "poster": "media/images/cdc_hard_03-frame.png",
+        "figure": "media/images/cdc_hard_03.png"
+      }
     },
     {
       "id": "cdc_hard_04",
@@ -150,591 +1100,31 @@
       "prompt": "Source changing while dst samples is the core CDC hazard.",
       "answer": true,
       "explain": "Protocols for multi-bit; 2-FF alone is not enough for buses.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_hard_04.mp4",
+        "poster": "media/images/cdc_hard_04-frame.png",
+        "figure": "media/images/cdc_hard_04.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Setup time is a requirement before the active clock edge.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "easy",
-      "id": "cdc_easy_05"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Setup time is a requirement before the active clock edge?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "easy",
-      "id": "cdc_easy_06"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Hold time is a requirement after the active clock edge.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "easy",
-      "id": "cdc_easy_07"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Hold time is a requirement after the active clock edge?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "easy",
-      "id": "cdc_easy_08"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Contamination delay is a min path delay from clk to Q.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "easy",
-      "id": "cdc_easy_09"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Contamination delay is a min path delay from clk to Q?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "easy",
-      "id": "cdc_easy_10"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Clock-to-Q max is used in setup checks.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "easy",
-      "id": "cdc_easy_11"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Clock-to-Q max is used in setup checks?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "easy",
-      "id": "cdc_easy_12"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Hold checks use min delays / contamination.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "easy",
-      "id": "cdc_easy_13"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Hold checks use min delays / contamination?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "easy",
-      "id": "cdc_easy_14"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A positive-edge FF samples D on the rising edge.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "easy",
-      "id": "cdc_easy_15"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A positive-edge FF samples D on the rising edge?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "easy",
-      "id": "cdc_easy_16"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Async reset can release without timing care.",
-      "answer": false,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "easy",
-      "id": "cdc_easy_17"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Async reset can release without timing care?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 1,
-      "explain": "See sequential timing notes.",
-      "difficulty": "easy",
-      "id": "cdc_easy_18"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Metastability can occur when setup/hold is violated.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "easy",
-      "id": "cdc_easy_19"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Metastability can occur when setup/hold is violated?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "easy",
-      "id": "cdc_easy_20"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Two-flop synchronizers remove all metastability risk forever.",
-      "answer": false,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "easy",
-      "id": "cdc_easy_21"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Two-flop synchronizers remove all metastability risk forever?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 1,
-      "explain": "See sequential timing notes.",
-      "difficulty": "easy",
-      "id": "cdc_easy_22"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Clock skew can hurt or help a setup margin depending on direction.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "easy",
-      "id": "cdc_easy_23"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Clock skew can hurt or help a setup margin depending on direction?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "easy",
-      "id": "cdc_easy_24"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Gating a clock with a free AND is best practice.",
-      "answer": false,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "easy",
-      "id": "cdc_easy_25"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Gating a clock with a free AND is best practice?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 1,
-      "explain": "See sequential timing notes.",
-      "difficulty": "easy",
-      "id": "cdc_easy_26"
-    },
-    {
-      "type": "true_false",
-      "prompt": "ICG cells are preferred for clock enables.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "easy",
-      "id": "cdc_easy_27"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "ICG cells are preferred for clock enables?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "easy",
-      "id": "cdc_easy_28"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Reset recovery/removal are timing checks at reset release.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "easy",
-      "id": "cdc_easy_29"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Reset recovery/removal are timing checks at reset release?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "easy",
-      "id": "cdc_easy_30"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Setup time is a requirement before the active clock edge.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "medium",
-      "id": "cdc_medium_05"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Setup time is a requirement before the active clock edge?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "medium",
-      "id": "cdc_medium_06"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Hold time is a requirement after the active clock edge.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "medium",
-      "id": "cdc_medium_07"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Hold time is a requirement after the active clock edge?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "medium",
-      "id": "cdc_medium_08"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Contamination delay is a min path delay from clk to Q.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "medium",
-      "id": "cdc_medium_09"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Contamination delay is a min path delay from clk to Q?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "medium",
-      "id": "cdc_medium_10"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Clock-to-Q max is used in setup checks.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "medium",
-      "id": "cdc_medium_11"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Clock-to-Q max is used in setup checks?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "medium",
-      "id": "cdc_medium_12"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Hold checks use min delays / contamination.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "medium",
-      "id": "cdc_medium_13"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Hold checks use min delays / contamination?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "medium",
-      "id": "cdc_medium_14"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A positive-edge FF samples D on the rising edge.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "medium",
-      "id": "cdc_medium_15"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A positive-edge FF samples D on the rising edge?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "medium",
-      "id": "cdc_medium_16"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Async reset can release without timing care.",
-      "answer": false,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "medium",
-      "id": "cdc_medium_17"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Async reset can release without timing care?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 1,
-      "explain": "See sequential timing notes.",
-      "difficulty": "medium",
-      "id": "cdc_medium_18"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Metastability can occur when setup/hold is violated.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "medium",
-      "id": "cdc_medium_19"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Metastability can occur when setup/hold is violated?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "medium",
-      "id": "cdc_medium_20"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Two-flop synchronizers remove all metastability risk forever.",
-      "answer": false,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "medium",
-      "id": "cdc_medium_21"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Two-flop synchronizers remove all metastability risk forever?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 1,
-      "explain": "See sequential timing notes.",
-      "difficulty": "medium",
-      "id": "cdc_medium_22"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Clock skew can hurt or help a setup margin depending on direction.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "medium",
-      "id": "cdc_medium_23"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Clock skew can hurt or help a setup margin depending on direction?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "medium",
-      "id": "cdc_medium_24"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Gating a clock with a free AND is best practice.",
-      "answer": false,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "medium",
-      "id": "cdc_medium_25"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Gating a clock with a free AND is best practice?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 1,
-      "explain": "See sequential timing notes.",
-      "difficulty": "medium",
-      "id": "cdc_medium_26"
-    },
-    {
-      "type": "true_false",
-      "prompt": "ICG cells are preferred for clock enables.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "medium",
-      "id": "cdc_medium_27"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "ICG cells are preferred for clock enables?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "medium",
-      "id": "cdc_medium_28"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Reset recovery/removal are timing checks at reset release.",
-      "answer": true,
-      "explain": "Standard sequential timing fact.",
-      "difficulty": "medium",
-      "id": "cdc_medium_29"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Reset recovery/removal are timing checks at reset release?",
-      "choices": [
-        "True",
-        "False",
-        "Only at DC",
-        "Only in FPGA"
-      ],
-      "answer": 0,
-      "explain": "See sequential timing notes.",
-      "difficulty": "medium",
-      "id": "cdc_medium_30"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Setup time is a requirement before the active clock edge.",
+      "prompt": "For the CDC / 2-FF sync lab: Setup time is a requirement before the active clock edge.",
       "answer": true,
       "explain": "Standard sequential timing fact.",
       "difficulty": "hard",
-      "id": "cdc_hard_05"
+      "id": "cdc_hard_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_hard_05.mp4",
+        "poster": "media/images/cdc_hard_05-frame.png",
+        "figure": "media/images/cdc_hard_05.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Setup time is a requirement before the active clock edge?",
+      "prompt": "For the CDC / 2-FF sync lab: Setup time is a requirement before the active clock edge?",
       "choices": [
         "True",
         "False",
@@ -744,19 +1134,31 @@
       "answer": 0,
       "explain": "See sequential timing notes.",
       "difficulty": "hard",
-      "id": "cdc_hard_06"
+      "id": "cdc_hard_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_hard_06.mp4",
+        "poster": "media/images/cdc_hard_06-frame.png",
+        "figure": "media/images/cdc_hard_06.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Hold time is a requirement after the active clock edge.",
+      "prompt": "For the CDC / 2-FF sync lab: Hold time is a requirement after the active clock edge.",
       "answer": true,
       "explain": "Standard sequential timing fact.",
       "difficulty": "hard",
-      "id": "cdc_hard_07"
+      "id": "cdc_hard_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_hard_07.mp4",
+        "poster": "media/images/cdc_hard_07-frame.png",
+        "figure": "media/images/cdc_hard_07.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Hold time is a requirement after the active clock edge?",
+      "prompt": "For the CDC / 2-FF sync lab: Hold time is a requirement after the active clock edge?",
       "choices": [
         "True",
         "False",
@@ -766,19 +1168,31 @@
       "answer": 0,
       "explain": "See sequential timing notes.",
       "difficulty": "hard",
-      "id": "cdc_hard_08"
+      "id": "cdc_hard_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_hard_08.mp4",
+        "poster": "media/images/cdc_hard_08-frame.png",
+        "figure": "media/images/cdc_hard_08.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Contamination delay is a min path delay from clk to Q.",
+      "prompt": "For the CDC / 2-FF sync lab: Contamination delay is a min path delay from clk to Q.",
       "answer": true,
       "explain": "Standard sequential timing fact.",
       "difficulty": "hard",
-      "id": "cdc_hard_09"
+      "id": "cdc_hard_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_hard_09.mp4",
+        "poster": "media/images/cdc_hard_09-frame.png",
+        "figure": "media/images/cdc_hard_09.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Contamination delay is a min path delay from clk to Q?",
+      "prompt": "For the CDC / 2-FF sync lab: Contamination delay is a min path delay from clk to Q?",
       "choices": [
         "True",
         "False",
@@ -788,19 +1202,31 @@
       "answer": 0,
       "explain": "See sequential timing notes.",
       "difficulty": "hard",
-      "id": "cdc_hard_10"
+      "id": "cdc_hard_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_hard_10.mp4",
+        "poster": "media/images/cdc_hard_10-frame.png",
+        "figure": "media/images/cdc_hard_10.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Clock-to-Q max is used in setup checks.",
+      "prompt": "For the CDC / 2-FF sync lab: Clock-to-Q max is used in setup checks.",
       "answer": true,
       "explain": "Standard sequential timing fact.",
       "difficulty": "hard",
-      "id": "cdc_hard_11"
+      "id": "cdc_hard_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_hard_11.mp4",
+        "poster": "media/images/cdc_hard_11-frame.png",
+        "figure": "media/images/cdc_hard_11.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Clock-to-Q max is used in setup checks?",
+      "prompt": "For the CDC / 2-FF sync lab: Clock-to-Q max is used in setup checks?",
       "choices": [
         "True",
         "False",
@@ -810,19 +1236,31 @@
       "answer": 0,
       "explain": "See sequential timing notes.",
       "difficulty": "hard",
-      "id": "cdc_hard_12"
+      "id": "cdc_hard_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_hard_12.mp4",
+        "poster": "media/images/cdc_hard_12-frame.png",
+        "figure": "media/images/cdc_hard_12.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Hold checks use min delays / contamination.",
+      "prompt": "For the CDC / 2-FF sync lab: Hold checks use min delays / contamination.",
       "answer": true,
       "explain": "Standard sequential timing fact.",
       "difficulty": "hard",
-      "id": "cdc_hard_13"
+      "id": "cdc_hard_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_hard_13.mp4",
+        "poster": "media/images/cdc_hard_13-frame.png",
+        "figure": "media/images/cdc_hard_13.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Hold checks use min delays / contamination?",
+      "prompt": "For the CDC / 2-FF sync lab: Hold checks use min delays / contamination?",
       "choices": [
         "True",
         "False",
@@ -832,19 +1270,31 @@
       "answer": 0,
       "explain": "See sequential timing notes.",
       "difficulty": "hard",
-      "id": "cdc_hard_14"
+      "id": "cdc_hard_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_hard_14.mp4",
+        "poster": "media/images/cdc_hard_14-frame.png",
+        "figure": "media/images/cdc_hard_14.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A positive-edge FF samples D on the rising edge.",
+      "prompt": "For the CDC / 2-FF sync lab: A positive-edge FF samples D on the rising edge.",
       "answer": true,
       "explain": "Standard sequential timing fact.",
       "difficulty": "hard",
-      "id": "cdc_hard_15"
+      "id": "cdc_hard_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_hard_15.mp4",
+        "poster": "media/images/cdc_hard_15-frame.png",
+        "figure": "media/images/cdc_hard_15.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "A positive-edge FF samples D on the rising edge?",
+      "prompt": "For the CDC / 2-FF sync lab: A positive-edge FF samples D on the rising edge?",
       "choices": [
         "True",
         "False",
@@ -854,19 +1304,31 @@
       "answer": 0,
       "explain": "See sequential timing notes.",
       "difficulty": "hard",
-      "id": "cdc_hard_16"
+      "id": "cdc_hard_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_hard_16.mp4",
+        "poster": "media/images/cdc_hard_16-frame.png",
+        "figure": "media/images/cdc_hard_16.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Async reset can release without timing care.",
+      "prompt": "For the CDC / 2-FF sync lab: Async reset can release without timing care.",
       "answer": false,
       "explain": "Standard sequential timing fact.",
       "difficulty": "hard",
-      "id": "cdc_hard_17"
+      "id": "cdc_hard_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_hard_17.mp4",
+        "poster": "media/images/cdc_hard_17-frame.png",
+        "figure": "media/images/cdc_hard_17.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Async reset can release without timing care?",
+      "prompt": "For the CDC / 2-FF sync lab: Async reset can release without timing care?",
       "choices": [
         "True",
         "False",
@@ -876,19 +1338,31 @@
       "answer": 1,
       "explain": "See sequential timing notes.",
       "difficulty": "hard",
-      "id": "cdc_hard_18"
+      "id": "cdc_hard_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_hard_18.mp4",
+        "poster": "media/images/cdc_hard_18-frame.png",
+        "figure": "media/images/cdc_hard_18.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Metastability can occur when setup/hold is violated.",
+      "prompt": "For the CDC / 2-FF sync lab: Metastability can occur when setup/hold is violated.",
       "answer": true,
       "explain": "Standard sequential timing fact.",
       "difficulty": "hard",
-      "id": "cdc_hard_19"
+      "id": "cdc_hard_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_hard_19.mp4",
+        "poster": "media/images/cdc_hard_19-frame.png",
+        "figure": "media/images/cdc_hard_19.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Metastability can occur when setup/hold is violated?",
+      "prompt": "For the CDC / 2-FF sync lab: Metastability can occur when setup/hold is violated?",
       "choices": [
         "True",
         "False",
@@ -898,19 +1372,31 @@
       "answer": 0,
       "explain": "See sequential timing notes.",
       "difficulty": "hard",
-      "id": "cdc_hard_20"
+      "id": "cdc_hard_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_hard_20.mp4",
+        "poster": "media/images/cdc_hard_20-frame.png",
+        "figure": "media/images/cdc_hard_20.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Two-flop synchronizers remove all metastability risk forever.",
+      "prompt": "For the CDC / 2-FF sync lab: Two-flop synchronizers remove all metastability risk forever.",
       "answer": false,
       "explain": "Standard sequential timing fact.",
       "difficulty": "hard",
-      "id": "cdc_hard_21"
+      "id": "cdc_hard_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_hard_21.mp4",
+        "poster": "media/images/cdc_hard_21-frame.png",
+        "figure": "media/images/cdc_hard_21.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Two-flop synchronizers remove all metastability risk forever?",
+      "prompt": "For the CDC / 2-FF sync lab: Two-flop synchronizers remove all metastability risk forever?",
       "choices": [
         "True",
         "False",
@@ -920,19 +1406,31 @@
       "answer": 1,
       "explain": "See sequential timing notes.",
       "difficulty": "hard",
-      "id": "cdc_hard_22"
+      "id": "cdc_hard_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_hard_22.mp4",
+        "poster": "media/images/cdc_hard_22-frame.png",
+        "figure": "media/images/cdc_hard_22.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Clock skew can hurt or help a setup margin depending on direction.",
+      "prompt": "For the CDC / 2-FF sync lab: Clock skew can hurt or help a setup margin depending on direction.",
       "answer": true,
       "explain": "Standard sequential timing fact.",
       "difficulty": "hard",
-      "id": "cdc_hard_23"
+      "id": "cdc_hard_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_hard_23.mp4",
+        "poster": "media/images/cdc_hard_23-frame.png",
+        "figure": "media/images/cdc_hard_23.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Clock skew can hurt or help a setup margin depending on direction?",
+      "prompt": "For the CDC / 2-FF sync lab: Clock skew can hurt or help a setup margin depending on direction?",
       "choices": [
         "True",
         "False",
@@ -942,19 +1440,31 @@
       "answer": 0,
       "explain": "See sequential timing notes.",
       "difficulty": "hard",
-      "id": "cdc_hard_24"
+      "id": "cdc_hard_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_hard_24.mp4",
+        "poster": "media/images/cdc_hard_24-frame.png",
+        "figure": "media/images/cdc_hard_24.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Gating a clock with a free AND is best practice.",
+      "prompt": "For the CDC / 2-FF sync lab: Gating a clock with a free AND is best practice.",
       "answer": false,
       "explain": "Standard sequential timing fact.",
       "difficulty": "hard",
-      "id": "cdc_hard_25"
+      "id": "cdc_hard_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_hard_25.mp4",
+        "poster": "media/images/cdc_hard_25-frame.png",
+        "figure": "media/images/cdc_hard_25.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Gating a clock with a free AND is best practice?",
+      "prompt": "For the CDC / 2-FF sync lab: Gating a clock with a free AND is best practice?",
       "choices": [
         "True",
         "False",
@@ -964,19 +1474,31 @@
       "answer": 1,
       "explain": "See sequential timing notes.",
       "difficulty": "hard",
-      "id": "cdc_hard_26"
+      "id": "cdc_hard_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_hard_26.mp4",
+        "poster": "media/images/cdc_hard_26-frame.png",
+        "figure": "media/images/cdc_hard_26.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "ICG cells are preferred for clock enables.",
+      "prompt": "For the CDC / 2-FF sync lab: ICG cells are preferred for clock enables.",
       "answer": true,
       "explain": "Standard sequential timing fact.",
       "difficulty": "hard",
-      "id": "cdc_hard_27"
+      "id": "cdc_hard_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_hard_27.mp4",
+        "poster": "media/images/cdc_hard_27-frame.png",
+        "figure": "media/images/cdc_hard_27.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "ICG cells are preferred for clock enables?",
+      "prompt": "For the CDC / 2-FF sync lab: ICG cells are preferred for clock enables?",
       "choices": [
         "True",
         "False",
@@ -986,19 +1508,31 @@
       "answer": 0,
       "explain": "See sequential timing notes.",
       "difficulty": "hard",
-      "id": "cdc_hard_28"
+      "id": "cdc_hard_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_hard_28.mp4",
+        "poster": "media/images/cdc_hard_28-frame.png",
+        "figure": "media/images/cdc_hard_28.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Reset recovery/removal are timing checks at reset release.",
+      "prompt": "For the CDC / 2-FF sync lab: Reset recovery/removal are timing checks at reset release.",
       "answer": true,
       "explain": "Standard sequential timing fact.",
       "difficulty": "hard",
-      "id": "cdc_hard_29"
+      "id": "cdc_hard_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_hard_29.mp4",
+        "poster": "media/images/cdc_hard_29-frame.png",
+        "figure": "media/images/cdc_hard_29.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Reset recovery/removal are timing checks at reset release?",
+      "prompt": "For the CDC / 2-FF sync lab: Reset recovery/removal are timing checks at reset release?",
       "choices": [
         "True",
         "False",
@@ -1008,7 +1542,13 @@
       "answer": 0,
       "explain": "See sequential timing notes.",
       "difficulty": "hard",
-      "id": "cdc_hard_30"
+      "id": "cdc_hard_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cdc_hard_30.mp4",
+        "poster": "media/images/cdc_hard_30-frame.png",
+        "figure": "media/images/cdc_hard_30.png"
+      }
     }
   ]
 }

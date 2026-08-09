@@ -14,7 +14,13 @@
       ],
       "answer": 0,
       "explain": "Partial store mask.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_easy_01.mp4",
+        "poster": "media/images/byteen_easy_01-frame.png",
+        "figure": "media/images/byteen_easy_01.png"
+      }
     },
     {
       "id": "byteen_easy_02",
@@ -28,7 +34,13 @@
       ],
       "answer": 0,
       "explain": "Only LSB lane from din.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_easy_02.mp4",
+        "poster": "media/images/byteen_easy_02-frame.png",
+        "figure": "media/images/byteen_easy_02.png"
+      }
     },
     {
       "id": "byteen_easy_03",
@@ -42,7 +54,13 @@
       ],
       "answer": 0,
       "explain": "Lanes 0 and 1.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_easy_03.mp4",
+        "poster": "media/images/byteen_easy_03-frame.png",
+        "figure": "media/images/byteen_easy_03.png"
+      }
     },
     {
       "id": "byteen_easy_04",
@@ -50,7 +68,521 @@
       "prompt": "be=1111 clears the word to zero without din.",
       "answer": false,
       "explain": "1111 writes all lanes from din; does not auto-zero.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_easy_04.mp4",
+        "poster": "media/images/byteen_easy_04-frame.png",
+        "figure": "media/images/byteen_easy_04.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Byte-enable memory: Address width for depth 4 is…",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(4)) = 2.",
+      "difficulty": "easy",
+      "id": "byteen_easy_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_easy_05.mp4",
+        "poster": "media/images/byteen_easy_05-frame.png",
+        "figure": "media/images/byteen_easy_05.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Byte-enable memory: Address width for depth 8 is…",
+      "choices": [
+        "2",
+        "3",
+        "8",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(8)) = 3.",
+      "difficulty": "easy",
+      "id": "byteen_easy_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_easy_06.mp4",
+        "poster": "media/images/byteen_easy_06-frame.png",
+        "figure": "media/images/byteen_easy_06.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Byte-enable memory: Address width for depth 16 is…",
+      "choices": [
+        "3",
+        "4",
+        "16",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(16)) = 4.",
+      "difficulty": "easy",
+      "id": "byteen_easy_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_easy_07.mp4",
+        "poster": "media/images/byteen_easy_07-frame.png",
+        "figure": "media/images/byteen_easy_07.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Byte-enable memory: Address width for depth 32 is…",
+      "choices": [
+        "4",
+        "5",
+        "32",
+        "10"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(32)) = 5.",
+      "difficulty": "easy",
+      "id": "byteen_easy_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_easy_08.mp4",
+        "poster": "media/images/byteen_easy_08-frame.png",
+        "figure": "media/images/byteen_easy_08.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Byte-enable memory: Address width for depth 64 is…",
+      "choices": [
+        "5",
+        "6",
+        "64",
+        "12"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(64)) = 6.",
+      "difficulty": "easy",
+      "id": "byteen_easy_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_easy_09.mp4",
+        "poster": "media/images/byteen_easy_09-frame.png",
+        "figure": "media/images/byteen_easy_09.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Byte-enable memory: Capacity of 8×8 memory in bits is…",
+      "choices": [
+        "16",
+        "64",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "8×8 = 64.",
+      "difficulty": "easy",
+      "id": "byteen_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_easy_10.mp4",
+        "poster": "media/images/byteen_easy_10-frame.png",
+        "figure": "media/images/byteen_easy_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Byte-enable memory: Capacity of 16×32 memory in bits is…",
+      "choices": [
+        "48",
+        "512",
+        "16",
+        "32"
+      ],
+      "answer": 1,
+      "explain": "16×32 = 512.",
+      "difficulty": "easy",
+      "id": "byteen_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_easy_11.mp4",
+        "poster": "media/images/byteen_easy_11-frame.png",
+        "figure": "media/images/byteen_easy_11.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Byte-enable memory: Capacity of 64×4 memory in bits is…",
+      "choices": [
+        "68",
+        "256",
+        "64",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "64×4 = 256.",
+      "difficulty": "easy",
+      "id": "byteen_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_easy_12.mp4",
+        "poster": "media/images/byteen_easy_12-frame.png",
+        "figure": "media/images/byteen_easy_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Byte-enable memory: Capacity of 256×16 memory in bits is…",
+      "choices": [
+        "272",
+        "4096",
+        "256",
+        "16"
+      ],
+      "answer": 1,
+      "explain": "256×16 = 4096.",
+      "difficulty": "easy",
+      "id": "byteen_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_easy_13.mp4",
+        "poster": "media/images/byteen_easy_13-frame.png",
+        "figure": "media/images/byteen_easy_13.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Byte-enable memory: FIFO empty and full must be generated carefully across domains for async FIFOs.",
+      "answer": true,
+      "explain": "Gray pointers.",
+      "difficulty": "easy",
+      "id": "byteen_easy_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_easy_14.mp4",
+        "poster": "media/images/byteen_easy_14-frame.png",
+        "figure": "media/images/byteen_easy_14.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Byte-enable memory: Byte enables select which bytes of a word are written.",
+      "answer": true,
+      "explain": "Partial writes.",
+      "difficulty": "easy",
+      "id": "byteen_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_easy_15.mp4",
+        "poster": "media/images/byteen_easy_15-frame.png",
+        "figure": "media/images/byteen_easy_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Byte-enable memory: Mask for field lo=0 width=2 is…",
+      "choices": [
+        "0x1",
+        "0x3",
+        "0x3",
+        "0x1"
+      ],
+      "answer": 1,
+      "explain": "((4-1)<<0) = 0x3.",
+      "difficulty": "easy",
+      "id": "byteen_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_easy_16.mp4",
+        "poster": "media/images/byteen_easy_16-frame.png",
+        "figure": "media/images/byteen_easy_16.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Byte-enable memory: Width of a field from bit 0 through 1 is…",
+      "choices": [
+        "1",
+        "2",
+        "2",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 2 bits.",
+      "difficulty": "easy",
+      "id": "byteen_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_easy_17.mp4",
+        "poster": "media/images/byteen_easy_17-frame.png",
+        "figure": "media/images/byteen_easy_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Byte-enable memory: Mask for field lo=0 width=3 is…",
+      "choices": [
+        "0x3",
+        "0x7",
+        "0x7",
+        "0x1"
+      ],
+      "answer": 1,
+      "explain": "((8-1)<<0) = 0x7.",
+      "difficulty": "easy",
+      "id": "byteen_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_easy_18.mp4",
+        "poster": "media/images/byteen_easy_18-frame.png",
+        "figure": "media/images/byteen_easy_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Byte-enable memory: Width of a field from bit 0 through 2 is…",
+      "choices": [
+        "2",
+        "3",
+        "3",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 3 bits.",
+      "difficulty": "easy",
+      "id": "byteen_easy_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_easy_19.mp4",
+        "poster": "media/images/byteen_easy_19-frame.png",
+        "figure": "media/images/byteen_easy_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Byte-enable memory: Mask for field lo=1 width=2 is…",
+      "choices": [
+        "0x3",
+        "0x6",
+        "0x3",
+        "0x2"
+      ],
+      "answer": 1,
+      "explain": "((4-1)<<1) = 0x6.",
+      "difficulty": "easy",
+      "id": "byteen_easy_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_easy_20.mp4",
+        "poster": "media/images/byteen_easy_20-frame.png",
+        "figure": "media/images/byteen_easy_20.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Byte-enable memory: Width of a field from bit 1 through 2 is…",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 2 bits.",
+      "difficulty": "easy",
+      "id": "byteen_easy_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_easy_21.mp4",
+        "poster": "media/images/byteen_easy_21-frame.png",
+        "figure": "media/images/byteen_easy_21.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Byte-enable memory: Mask for field lo=2 width=3 is…",
+      "choices": [
+        "0xe",
+        "0x1c",
+        "0x7",
+        "0x4"
+      ],
+      "answer": 1,
+      "explain": "((8-1)<<2) = 0x1c.",
+      "difficulty": "easy",
+      "id": "byteen_easy_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_easy_22.mp4",
+        "poster": "media/images/byteen_easy_22-frame.png",
+        "figure": "media/images/byteen_easy_22.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Byte-enable memory: Width of a field from bit 2 through 4 is…",
+      "choices": [
+        "2",
+        "3",
+        "5",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 3 bits.",
+      "difficulty": "easy",
+      "id": "byteen_easy_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_easy_23.mp4",
+        "poster": "media/images/byteen_easy_23-frame.png",
+        "figure": "media/images/byteen_easy_23.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Byte-enable memory: Mask for field lo=4 width=4 is…",
+      "choices": [
+        "0x78",
+        "0xf0",
+        "0xf",
+        "0x10"
+      ],
+      "answer": 1,
+      "explain": "((16-1)<<4) = 0xf0.",
+      "difficulty": "easy",
+      "id": "byteen_easy_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_easy_24.mp4",
+        "poster": "media/images/byteen_easy_24-frame.png",
+        "figure": "media/images/byteen_easy_24.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Byte-enable memory: Width of a field from bit 4 through 7 is…",
+      "choices": [
+        "3",
+        "4",
+        "8",
+        "16"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 4 bits.",
+      "difficulty": "easy",
+      "id": "byteen_easy_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_easy_25.mp4",
+        "poster": "media/images/byteen_easy_25-frame.png",
+        "figure": "media/images/byteen_easy_25.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Byte-enable memory: Mask for field lo=8 width=4 is…",
+      "choices": [
+        "0x780",
+        "0xf00",
+        "0xf",
+        "0x100"
+      ],
+      "answer": 1,
+      "explain": "((16-1)<<8) = 0xf00.",
+      "difficulty": "easy",
+      "id": "byteen_easy_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_easy_26.mp4",
+        "poster": "media/images/byteen_easy_26-frame.png",
+        "figure": "media/images/byteen_easy_26.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Byte-enable memory: Width of a field from bit 8 through 11 is…",
+      "choices": [
+        "3",
+        "4",
+        "12",
+        "16"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 4 bits.",
+      "difficulty": "easy",
+      "id": "byteen_easy_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_easy_27.mp4",
+        "poster": "media/images/byteen_easy_27-frame.png",
+        "figure": "media/images/byteen_easy_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Byte-enable memory: Mask for field lo=4 width=2 is…",
+      "choices": [
+        "0x18",
+        "0x30",
+        "0x3",
+        "0x10"
+      ],
+      "answer": 1,
+      "explain": "((4-1)<<4) = 0x30.",
+      "difficulty": "easy",
+      "id": "byteen_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_easy_28.mp4",
+        "poster": "media/images/byteen_easy_28-frame.png",
+        "figure": "media/images/byteen_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Byte-enable memory: Width of a field from bit 4 through 5 is…",
+      "choices": [
+        "1",
+        "2",
+        "6",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 2 bits.",
+      "difficulty": "easy",
+      "id": "byteen_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_easy_29.mp4",
+        "poster": "media/images/byteen_easy_29-frame.png",
+        "figure": "media/images/byteen_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Byte-enable memory: Mask for field lo=3 width=5 is…",
+      "choices": [
+        "0x7c",
+        "0xf8",
+        "0x1f",
+        "0x8"
+      ],
+      "answer": 1,
+      "explain": "((32-1)<<3) = 0xf8.",
+      "difficulty": "easy",
+      "id": "byteen_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_easy_30.mp4",
+        "poster": "media/images/byteen_easy_30-frame.png",
+        "figure": "media/images/byteen_easy_30.png"
+      }
     },
     {
       "id": "byteen_medium_01",
@@ -64,7 +596,13 @@
       ],
       "answer": 0,
       "explain": "One-hot high lane.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_medium_01.mp4",
+        "poster": "media/images/byteen_medium_01-frame.png",
+        "figure": "media/images/byteen_medium_01.png"
+      }
     },
     {
       "id": "byteen_medium_02",
@@ -78,7 +616,13 @@
       ],
       "answer": 0,
       "explain": "Mask lanes or RMW.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_medium_02.mp4",
+        "poster": "media/images/byteen_medium_02-frame.png",
+        "figure": "media/images/byteen_medium_02.png"
+      }
     },
     {
       "id": "byteen_medium_03",
@@ -92,7 +636,13 @@
       ],
       "answer": 0,
       "explain": "One bit per byte lane.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_medium_03.mp4",
+        "poster": "media/images/byteen_medium_03-frame.png",
+        "figure": "media/images/byteen_medium_03.png"
+      }
     },
     {
       "id": "byteen_medium_04",
@@ -100,7 +650,521 @@
       "prompt": "BE=1100 always means little-endian halfword at LSB.",
       "answer": false,
       "explain": "Lane mapping depends on endianness.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_medium_04.mp4",
+        "poster": "media/images/byteen_medium_04-frame.png",
+        "figure": "media/images/byteen_medium_04.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Byte-enable memory, address width for depth 4 is…",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(4)) = 2.",
+      "difficulty": "medium",
+      "id": "byteen_medium_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_medium_05.mp4",
+        "poster": "media/images/byteen_medium_05-frame.png",
+        "figure": "media/images/byteen_medium_05.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Byte-enable memory, address width for depth 8 is…",
+      "choices": [
+        "2",
+        "3",
+        "8",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(8)) = 3.",
+      "difficulty": "medium",
+      "id": "byteen_medium_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_medium_06.mp4",
+        "poster": "media/images/byteen_medium_06-frame.png",
+        "figure": "media/images/byteen_medium_06.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Byte-enable memory, address width for depth 16 is…",
+      "choices": [
+        "3",
+        "4",
+        "16",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(16)) = 4.",
+      "difficulty": "medium",
+      "id": "byteen_medium_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_medium_07.mp4",
+        "poster": "media/images/byteen_medium_07-frame.png",
+        "figure": "media/images/byteen_medium_07.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Byte-enable memory, address width for depth 32 is…",
+      "choices": [
+        "4",
+        "5",
+        "32",
+        "10"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(32)) = 5.",
+      "difficulty": "medium",
+      "id": "byteen_medium_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_medium_08.mp4",
+        "poster": "media/images/byteen_medium_08-frame.png",
+        "figure": "media/images/byteen_medium_08.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Byte-enable memory, address width for depth 64 is…",
+      "choices": [
+        "5",
+        "6",
+        "64",
+        "12"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(64)) = 6.",
+      "difficulty": "medium",
+      "id": "byteen_medium_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_medium_09.mp4",
+        "poster": "media/images/byteen_medium_09-frame.png",
+        "figure": "media/images/byteen_medium_09.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Byte-enable memory, capacity of 8×8 memory in bits is…",
+      "choices": [
+        "16",
+        "64",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "8×8 = 64.",
+      "difficulty": "medium",
+      "id": "byteen_medium_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_medium_10.mp4",
+        "poster": "media/images/byteen_medium_10-frame.png",
+        "figure": "media/images/byteen_medium_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Byte-enable memory, capacity of 16×32 memory in bits is…",
+      "choices": [
+        "48",
+        "512",
+        "16",
+        "32"
+      ],
+      "answer": 1,
+      "explain": "16×32 = 512.",
+      "difficulty": "medium",
+      "id": "byteen_medium_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_medium_11.mp4",
+        "poster": "media/images/byteen_medium_11-frame.png",
+        "figure": "media/images/byteen_medium_11.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Byte-enable memory, capacity of 64×4 memory in bits is…",
+      "choices": [
+        "68",
+        "256",
+        "64",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "64×4 = 256.",
+      "difficulty": "medium",
+      "id": "byteen_medium_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_medium_12.mp4",
+        "poster": "media/images/byteen_medium_12-frame.png",
+        "figure": "media/images/byteen_medium_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Byte-enable memory, capacity of 256×16 memory in bits is…",
+      "choices": [
+        "272",
+        "4096",
+        "256",
+        "16"
+      ],
+      "answer": 1,
+      "explain": "256×16 = 4096.",
+      "difficulty": "medium",
+      "id": "byteen_medium_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_medium_13.mp4",
+        "poster": "media/images/byteen_medium_13-frame.png",
+        "figure": "media/images/byteen_medium_13.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Byte-enable memory, fIFO empty and full must be generated carefully across domains for async FIFOs.",
+      "answer": true,
+      "explain": "Gray pointers.",
+      "difficulty": "medium",
+      "id": "byteen_medium_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_medium_14.mp4",
+        "poster": "media/images/byteen_medium_14-frame.png",
+        "figure": "media/images/byteen_medium_14.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Byte-enable memory, byte enables select which bytes of a word are written.",
+      "answer": true,
+      "explain": "Partial writes.",
+      "difficulty": "medium",
+      "id": "byteen_medium_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_medium_15.mp4",
+        "poster": "media/images/byteen_medium_15-frame.png",
+        "figure": "media/images/byteen_medium_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Byte-enable memory, mask for field lo=0 width=2 is…",
+      "choices": [
+        "0x1",
+        "0x3",
+        "0x3",
+        "0x1"
+      ],
+      "answer": 1,
+      "explain": "((4-1)<<0) = 0x3.",
+      "difficulty": "medium",
+      "id": "byteen_medium_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_medium_16.mp4",
+        "poster": "media/images/byteen_medium_16-frame.png",
+        "figure": "media/images/byteen_medium_16.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Byte-enable memory, width of a field from bit 0 through 1 is…",
+      "choices": [
+        "1",
+        "2",
+        "2",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 2 bits.",
+      "difficulty": "medium",
+      "id": "byteen_medium_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_medium_17.mp4",
+        "poster": "media/images/byteen_medium_17-frame.png",
+        "figure": "media/images/byteen_medium_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Byte-enable memory, mask for field lo=0 width=3 is…",
+      "choices": [
+        "0x3",
+        "0x7",
+        "0x7",
+        "0x1"
+      ],
+      "answer": 1,
+      "explain": "((8-1)<<0) = 0x7.",
+      "difficulty": "medium",
+      "id": "byteen_medium_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_medium_18.mp4",
+        "poster": "media/images/byteen_medium_18-frame.png",
+        "figure": "media/images/byteen_medium_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Byte-enable memory, width of a field from bit 0 through 2 is…",
+      "choices": [
+        "2",
+        "3",
+        "3",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 3 bits.",
+      "difficulty": "medium",
+      "id": "byteen_medium_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_medium_19.mp4",
+        "poster": "media/images/byteen_medium_19-frame.png",
+        "figure": "media/images/byteen_medium_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Byte-enable memory, mask for field lo=1 width=2 is…",
+      "choices": [
+        "0x3",
+        "0x6",
+        "0x3",
+        "0x2"
+      ],
+      "answer": 1,
+      "explain": "((4-1)<<1) = 0x6.",
+      "difficulty": "medium",
+      "id": "byteen_medium_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_medium_20.mp4",
+        "poster": "media/images/byteen_medium_20-frame.png",
+        "figure": "media/images/byteen_medium_20.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Byte-enable memory, width of a field from bit 1 through 2 is…",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 2 bits.",
+      "difficulty": "medium",
+      "id": "byteen_medium_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_medium_21.mp4",
+        "poster": "media/images/byteen_medium_21-frame.png",
+        "figure": "media/images/byteen_medium_21.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Byte-enable memory, mask for field lo=2 width=3 is…",
+      "choices": [
+        "0xe",
+        "0x1c",
+        "0x7",
+        "0x4"
+      ],
+      "answer": 1,
+      "explain": "((8-1)<<2) = 0x1c.",
+      "difficulty": "medium",
+      "id": "byteen_medium_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_medium_22.mp4",
+        "poster": "media/images/byteen_medium_22-frame.png",
+        "figure": "media/images/byteen_medium_22.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Byte-enable memory, width of a field from bit 2 through 4 is…",
+      "choices": [
+        "2",
+        "3",
+        "5",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 3 bits.",
+      "difficulty": "medium",
+      "id": "byteen_medium_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_medium_23.mp4",
+        "poster": "media/images/byteen_medium_23-frame.png",
+        "figure": "media/images/byteen_medium_23.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Byte-enable memory, mask for field lo=4 width=4 is…",
+      "choices": [
+        "0x78",
+        "0xf0",
+        "0xf",
+        "0x10"
+      ],
+      "answer": 1,
+      "explain": "((16-1)<<4) = 0xf0.",
+      "difficulty": "medium",
+      "id": "byteen_medium_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_medium_24.mp4",
+        "poster": "media/images/byteen_medium_24-frame.png",
+        "figure": "media/images/byteen_medium_24.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Byte-enable memory, width of a field from bit 4 through 7 is…",
+      "choices": [
+        "3",
+        "4",
+        "8",
+        "16"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 4 bits.",
+      "difficulty": "medium",
+      "id": "byteen_medium_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_medium_25.mp4",
+        "poster": "media/images/byteen_medium_25-frame.png",
+        "figure": "media/images/byteen_medium_25.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Byte-enable memory, mask for field lo=8 width=4 is…",
+      "choices": [
+        "0x780",
+        "0xf00",
+        "0xf",
+        "0x100"
+      ],
+      "answer": 1,
+      "explain": "((16-1)<<8) = 0xf00.",
+      "difficulty": "medium",
+      "id": "byteen_medium_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_medium_26.mp4",
+        "poster": "media/images/byteen_medium_26-frame.png",
+        "figure": "media/images/byteen_medium_26.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Byte-enable memory, width of a field from bit 8 through 11 is…",
+      "choices": [
+        "3",
+        "4",
+        "12",
+        "16"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 4 bits.",
+      "difficulty": "medium",
+      "id": "byteen_medium_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_medium_27.mp4",
+        "poster": "media/images/byteen_medium_27-frame.png",
+        "figure": "media/images/byteen_medium_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Byte-enable memory, mask for field lo=4 width=2 is…",
+      "choices": [
+        "0x18",
+        "0x30",
+        "0x3",
+        "0x10"
+      ],
+      "answer": 1,
+      "explain": "((4-1)<<4) = 0x30.",
+      "difficulty": "medium",
+      "id": "byteen_medium_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_medium_28.mp4",
+        "poster": "media/images/byteen_medium_28-frame.png",
+        "figure": "media/images/byteen_medium_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Byte-enable memory, width of a field from bit 4 through 5 is…",
+      "choices": [
+        "1",
+        "2",
+        "6",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "Inclusive span → 2 bits.",
+      "difficulty": "medium",
+      "id": "byteen_medium_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_medium_29.mp4",
+        "poster": "media/images/byteen_medium_29-frame.png",
+        "figure": "media/images/byteen_medium_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Byte-enable memory, mask for field lo=3 width=5 is…",
+      "choices": [
+        "0x7c",
+        "0xf8",
+        "0x1f",
+        "0x8"
+      ],
+      "answer": 1,
+      "explain": "((32-1)<<3) = 0xf8.",
+      "difficulty": "medium",
+      "id": "byteen_medium_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_medium_30.mp4",
+        "poster": "media/images/byteen_medium_30-frame.png",
+        "figure": "media/images/byteen_medium_30.png"
+      }
     },
     {
       "id": "byteen_hard_01",
@@ -114,7 +1178,13 @@
       ],
       "answer": 0,
       "explain": "Lane 2 is the 0xCC position → DD77BBAA.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_hard_01.mp4",
+        "poster": "media/images/byteen_hard_01-frame.png",
+        "figure": "media/images/byteen_hard_01.png"
+      }
     },
     {
       "id": "byteen_hard_02",
@@ -128,7 +1198,13 @@
       ],
       "answer": 0,
       "explain": "Check bits cover the whole word.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_hard_02.mp4",
+        "poster": "media/images/byteen_hard_02-frame.png",
+        "figure": "media/images/byteen_hard_02.png"
+      }
     },
     {
       "id": "byteen_hard_03",
@@ -142,7 +1218,13 @@
       ],
       "answer": 0,
       "explain": "All lanes take din.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_hard_03.mp4",
+        "poster": "media/images/byteen_hard_03-frame.png",
+        "figure": "media/images/byteen_hard_03.png"
+      }
     },
     {
       "id": "byteen_hard_04",
@@ -150,715 +1232,17 @@
       "prompt": "Byte enables replace the need for addresses.",
       "answer": false,
       "explain": "Address still selects the word.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_hard_04.mp4",
+        "poster": "media/images/byteen_hard_04-frame.png",
+        "figure": "media/images/byteen_hard_04.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Address width for depth 4 is…",
-      "choices": [
-        "1",
-        "2",
-        "4",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(4)) = 2.",
-      "difficulty": "easy",
-      "id": "byteen_easy_05"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Address width for depth 8 is…",
-      "choices": [
-        "2",
-        "3",
-        "8",
-        "6"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(8)) = 3.",
-      "difficulty": "easy",
-      "id": "byteen_easy_06"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Address width for depth 16 is…",
-      "choices": [
-        "3",
-        "4",
-        "16",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(16)) = 4.",
-      "difficulty": "easy",
-      "id": "byteen_easy_07"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Address width for depth 32 is…",
-      "choices": [
-        "4",
-        "5",
-        "32",
-        "10"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(32)) = 5.",
-      "difficulty": "easy",
-      "id": "byteen_easy_08"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Address width for depth 64 is…",
-      "choices": [
-        "5",
-        "6",
-        "64",
-        "12"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(64)) = 6.",
-      "difficulty": "easy",
-      "id": "byteen_easy_09"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Capacity of 8×8 memory in bits is…",
-      "choices": [
-        "16",
-        "64",
-        "8",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "8×8 = 64.",
-      "difficulty": "easy",
-      "id": "byteen_easy_10"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Capacity of 16×32 memory in bits is…",
-      "choices": [
-        "48",
-        "512",
-        "16",
-        "32"
-      ],
-      "answer": 1,
-      "explain": "16×32 = 512.",
-      "difficulty": "easy",
-      "id": "byteen_easy_11"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Capacity of 64×4 memory in bits is…",
-      "choices": [
-        "68",
-        "256",
-        "64",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "64×4 = 256.",
-      "difficulty": "easy",
-      "id": "byteen_easy_12"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Capacity of 256×16 memory in bits is…",
-      "choices": [
-        "272",
-        "4096",
-        "256",
-        "16"
-      ],
-      "answer": 1,
-      "explain": "256×16 = 4096.",
-      "difficulty": "easy",
-      "id": "byteen_easy_13"
-    },
-    {
-      "type": "true_false",
-      "prompt": "FIFO empty and full must be generated carefully across domains for async FIFOs.",
-      "answer": true,
-      "explain": "Gray pointers.",
-      "difficulty": "easy",
-      "id": "byteen_easy_14"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Byte enables select which bytes of a word are written.",
-      "answer": true,
-      "explain": "Partial writes.",
-      "difficulty": "easy",
-      "id": "byteen_easy_15"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=0 width=2 is…",
-      "choices": [
-        "0x1",
-        "0x3",
-        "0x3",
-        "0x1"
-      ],
-      "answer": 1,
-      "explain": "((4-1)<<0) = 0x3.",
-      "difficulty": "easy",
-      "id": "byteen_easy_16"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Width of a field from bit 0 through 1 is…",
-      "choices": [
-        "1",
-        "2",
-        "2",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "Inclusive span → 2 bits.",
-      "difficulty": "easy",
-      "id": "byteen_easy_17"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=0 width=3 is…",
-      "choices": [
-        "0x3",
-        "0x7",
-        "0x7",
-        "0x1"
-      ],
-      "answer": 1,
-      "explain": "((8-1)<<0) = 0x7.",
-      "difficulty": "easy",
-      "id": "byteen_easy_18"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Width of a field from bit 0 through 2 is…",
-      "choices": [
-        "2",
-        "3",
-        "3",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "Inclusive span → 3 bits.",
-      "difficulty": "easy",
-      "id": "byteen_easy_19"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=1 width=2 is…",
-      "choices": [
-        "0x3",
-        "0x6",
-        "0x3",
-        "0x2"
-      ],
-      "answer": 1,
-      "explain": "((4-1)<<1) = 0x6.",
-      "difficulty": "easy",
-      "id": "byteen_easy_20"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Width of a field from bit 1 through 2 is…",
-      "choices": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "Inclusive span → 2 bits.",
-      "difficulty": "easy",
-      "id": "byteen_easy_21"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=2 width=3 is…",
-      "choices": [
-        "0xe",
-        "0x1c",
-        "0x7",
-        "0x4"
-      ],
-      "answer": 1,
-      "explain": "((8-1)<<2) = 0x1c.",
-      "difficulty": "easy",
-      "id": "byteen_easy_22"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Width of a field from bit 2 through 4 is…",
-      "choices": [
-        "2",
-        "3",
-        "5",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "Inclusive span → 3 bits.",
-      "difficulty": "easy",
-      "id": "byteen_easy_23"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=4 width=4 is…",
-      "choices": [
-        "0x78",
-        "0xf0",
-        "0xf",
-        "0x10"
-      ],
-      "answer": 1,
-      "explain": "((16-1)<<4) = 0xf0.",
-      "difficulty": "easy",
-      "id": "byteen_easy_24"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Width of a field from bit 4 through 7 is…",
-      "choices": [
-        "3",
-        "4",
-        "8",
-        "16"
-      ],
-      "answer": 1,
-      "explain": "Inclusive span → 4 bits.",
-      "difficulty": "easy",
-      "id": "byteen_easy_25"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=8 width=4 is…",
-      "choices": [
-        "0x780",
-        "0xf00",
-        "0xf",
-        "0x100"
-      ],
-      "answer": 1,
-      "explain": "((16-1)<<8) = 0xf00.",
-      "difficulty": "easy",
-      "id": "byteen_easy_26"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Width of a field from bit 8 through 11 is…",
-      "choices": [
-        "3",
-        "4",
-        "12",
-        "16"
-      ],
-      "answer": 1,
-      "explain": "Inclusive span → 4 bits.",
-      "difficulty": "easy",
-      "id": "byteen_easy_27"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=4 width=2 is…",
-      "choices": [
-        "0x18",
-        "0x30",
-        "0x3",
-        "0x10"
-      ],
-      "answer": 1,
-      "explain": "((4-1)<<4) = 0x30.",
-      "difficulty": "easy",
-      "id": "byteen_easy_28"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Width of a field from bit 4 through 5 is…",
-      "choices": [
-        "1",
-        "2",
-        "6",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "Inclusive span → 2 bits.",
-      "difficulty": "easy",
-      "id": "byteen_easy_29"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=3 width=5 is…",
-      "choices": [
-        "0x7c",
-        "0xf8",
-        "0x1f",
-        "0x8"
-      ],
-      "answer": 1,
-      "explain": "((32-1)<<3) = 0xf8.",
-      "difficulty": "easy",
-      "id": "byteen_easy_30"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Address width for depth 4 is…",
-      "choices": [
-        "1",
-        "2",
-        "4",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(4)) = 2.",
-      "difficulty": "medium",
-      "id": "byteen_medium_05"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Address width for depth 8 is…",
-      "choices": [
-        "2",
-        "3",
-        "8",
-        "6"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(8)) = 3.",
-      "difficulty": "medium",
-      "id": "byteen_medium_06"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Address width for depth 16 is…",
-      "choices": [
-        "3",
-        "4",
-        "16",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(16)) = 4.",
-      "difficulty": "medium",
-      "id": "byteen_medium_07"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Address width for depth 32 is…",
-      "choices": [
-        "4",
-        "5",
-        "32",
-        "10"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(32)) = 5.",
-      "difficulty": "medium",
-      "id": "byteen_medium_08"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Address width for depth 64 is…",
-      "choices": [
-        "5",
-        "6",
-        "64",
-        "12"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(64)) = 6.",
-      "difficulty": "medium",
-      "id": "byteen_medium_09"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Capacity of 8×8 memory in bits is…",
-      "choices": [
-        "16",
-        "64",
-        "8",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "8×8 = 64.",
-      "difficulty": "medium",
-      "id": "byteen_medium_10"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Capacity of 16×32 memory in bits is…",
-      "choices": [
-        "48",
-        "512",
-        "16",
-        "32"
-      ],
-      "answer": 1,
-      "explain": "16×32 = 512.",
-      "difficulty": "medium",
-      "id": "byteen_medium_11"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Capacity of 64×4 memory in bits is…",
-      "choices": [
-        "68",
-        "256",
-        "64",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "64×4 = 256.",
-      "difficulty": "medium",
-      "id": "byteen_medium_12"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Capacity of 256×16 memory in bits is…",
-      "choices": [
-        "272",
-        "4096",
-        "256",
-        "16"
-      ],
-      "answer": 1,
-      "explain": "256×16 = 4096.",
-      "difficulty": "medium",
-      "id": "byteen_medium_13"
-    },
-    {
-      "type": "true_false",
-      "prompt": "FIFO empty and full must be generated carefully across domains for async FIFOs.",
-      "answer": true,
-      "explain": "Gray pointers.",
-      "difficulty": "medium",
-      "id": "byteen_medium_14"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Byte enables select which bytes of a word are written.",
-      "answer": true,
-      "explain": "Partial writes.",
-      "difficulty": "medium",
-      "id": "byteen_medium_15"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=0 width=2 is…",
-      "choices": [
-        "0x1",
-        "0x3",
-        "0x3",
-        "0x1"
-      ],
-      "answer": 1,
-      "explain": "((4-1)<<0) = 0x3.",
-      "difficulty": "medium",
-      "id": "byteen_medium_16"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Width of a field from bit 0 through 1 is…",
-      "choices": [
-        "1",
-        "2",
-        "2",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "Inclusive span → 2 bits.",
-      "difficulty": "medium",
-      "id": "byteen_medium_17"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=0 width=3 is…",
-      "choices": [
-        "0x3",
-        "0x7",
-        "0x7",
-        "0x1"
-      ],
-      "answer": 1,
-      "explain": "((8-1)<<0) = 0x7.",
-      "difficulty": "medium",
-      "id": "byteen_medium_18"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Width of a field from bit 0 through 2 is…",
-      "choices": [
-        "2",
-        "3",
-        "3",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "Inclusive span → 3 bits.",
-      "difficulty": "medium",
-      "id": "byteen_medium_19"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=1 width=2 is…",
-      "choices": [
-        "0x3",
-        "0x6",
-        "0x3",
-        "0x2"
-      ],
-      "answer": 1,
-      "explain": "((4-1)<<1) = 0x6.",
-      "difficulty": "medium",
-      "id": "byteen_medium_20"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Width of a field from bit 1 through 2 is…",
-      "choices": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "Inclusive span → 2 bits.",
-      "difficulty": "medium",
-      "id": "byteen_medium_21"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=2 width=3 is…",
-      "choices": [
-        "0xe",
-        "0x1c",
-        "0x7",
-        "0x4"
-      ],
-      "answer": 1,
-      "explain": "((8-1)<<2) = 0x1c.",
-      "difficulty": "medium",
-      "id": "byteen_medium_22"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Width of a field from bit 2 through 4 is…",
-      "choices": [
-        "2",
-        "3",
-        "5",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "Inclusive span → 3 bits.",
-      "difficulty": "medium",
-      "id": "byteen_medium_23"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=4 width=4 is…",
-      "choices": [
-        "0x78",
-        "0xf0",
-        "0xf",
-        "0x10"
-      ],
-      "answer": 1,
-      "explain": "((16-1)<<4) = 0xf0.",
-      "difficulty": "medium",
-      "id": "byteen_medium_24"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Width of a field from bit 4 through 7 is…",
-      "choices": [
-        "3",
-        "4",
-        "8",
-        "16"
-      ],
-      "answer": 1,
-      "explain": "Inclusive span → 4 bits.",
-      "difficulty": "medium",
-      "id": "byteen_medium_25"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=8 width=4 is…",
-      "choices": [
-        "0x780",
-        "0xf00",
-        "0xf",
-        "0x100"
-      ],
-      "answer": 1,
-      "explain": "((16-1)<<8) = 0xf00.",
-      "difficulty": "medium",
-      "id": "byteen_medium_26"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Width of a field from bit 8 through 11 is…",
-      "choices": [
-        "3",
-        "4",
-        "12",
-        "16"
-      ],
-      "answer": 1,
-      "explain": "Inclusive span → 4 bits.",
-      "difficulty": "medium",
-      "id": "byteen_medium_27"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=4 width=2 is…",
-      "choices": [
-        "0x18",
-        "0x30",
-        "0x3",
-        "0x10"
-      ],
-      "answer": 1,
-      "explain": "((4-1)<<4) = 0x30.",
-      "difficulty": "medium",
-      "id": "byteen_medium_28"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Width of a field from bit 4 through 5 is…",
-      "choices": [
-        "1",
-        "2",
-        "6",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "Inclusive span → 2 bits.",
-      "difficulty": "medium",
-      "id": "byteen_medium_29"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Mask for field lo=3 width=5 is…",
-      "choices": [
-        "0x7c",
-        "0xf8",
-        "0x1f",
-        "0x8"
-      ],
-      "answer": 1,
-      "explain": "((32-1)<<3) = 0xf8.",
-      "difficulty": "medium",
-      "id": "byteen_medium_30"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Address width for depth 4 is…",
+      "prompt": "For the Byte-enable memory lab: Address width for depth 4 is…",
       "choices": [
         "1",
         "2",
@@ -868,11 +1252,17 @@
       "answer": 1,
       "explain": "ceil(log2(4)) = 2.",
       "difficulty": "hard",
-      "id": "byteen_hard_05"
+      "id": "byteen_hard_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_hard_05.mp4",
+        "poster": "media/images/byteen_hard_05-frame.png",
+        "figure": "media/images/byteen_hard_05.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Address width for depth 8 is…",
+      "prompt": "For the Byte-enable memory lab: Address width for depth 8 is…",
       "choices": [
         "2",
         "3",
@@ -882,11 +1272,17 @@
       "answer": 1,
       "explain": "ceil(log2(8)) = 3.",
       "difficulty": "hard",
-      "id": "byteen_hard_06"
+      "id": "byteen_hard_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_hard_06.mp4",
+        "poster": "media/images/byteen_hard_06-frame.png",
+        "figure": "media/images/byteen_hard_06.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Address width for depth 16 is…",
+      "prompt": "For the Byte-enable memory lab: Address width for depth 16 is…",
       "choices": [
         "3",
         "4",
@@ -896,11 +1292,17 @@
       "answer": 1,
       "explain": "ceil(log2(16)) = 4.",
       "difficulty": "hard",
-      "id": "byteen_hard_07"
+      "id": "byteen_hard_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_hard_07.mp4",
+        "poster": "media/images/byteen_hard_07-frame.png",
+        "figure": "media/images/byteen_hard_07.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Address width for depth 32 is…",
+      "prompt": "For the Byte-enable memory lab: Address width for depth 32 is…",
       "choices": [
         "4",
         "5",
@@ -910,11 +1312,17 @@
       "answer": 1,
       "explain": "ceil(log2(32)) = 5.",
       "difficulty": "hard",
-      "id": "byteen_hard_08"
+      "id": "byteen_hard_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_hard_08.mp4",
+        "poster": "media/images/byteen_hard_08-frame.png",
+        "figure": "media/images/byteen_hard_08.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Address width for depth 64 is…",
+      "prompt": "For the Byte-enable memory lab: Address width for depth 64 is…",
       "choices": [
         "5",
         "6",
@@ -924,11 +1332,17 @@
       "answer": 1,
       "explain": "ceil(log2(64)) = 6.",
       "difficulty": "hard",
-      "id": "byteen_hard_09"
+      "id": "byteen_hard_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_hard_09.mp4",
+        "poster": "media/images/byteen_hard_09-frame.png",
+        "figure": "media/images/byteen_hard_09.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Capacity of 8×8 memory in bits is…",
+      "prompt": "For the Byte-enable memory lab: Capacity of 8×8 memory in bits is…",
       "choices": [
         "16",
         "64",
@@ -938,11 +1352,17 @@
       "answer": 1,
       "explain": "8×8 = 64.",
       "difficulty": "hard",
-      "id": "byteen_hard_10"
+      "id": "byteen_hard_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_hard_10.mp4",
+        "poster": "media/images/byteen_hard_10-frame.png",
+        "figure": "media/images/byteen_hard_10.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Capacity of 16×32 memory in bits is…",
+      "prompt": "For the Byte-enable memory lab: Capacity of 16×32 memory in bits is…",
       "choices": [
         "48",
         "512",
@@ -952,11 +1372,17 @@
       "answer": 1,
       "explain": "16×32 = 512.",
       "difficulty": "hard",
-      "id": "byteen_hard_11"
+      "id": "byteen_hard_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_hard_11.mp4",
+        "poster": "media/images/byteen_hard_11-frame.png",
+        "figure": "media/images/byteen_hard_11.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Capacity of 64×4 memory in bits is…",
+      "prompt": "For the Byte-enable memory lab: Capacity of 64×4 memory in bits is…",
       "choices": [
         "68",
         "256",
@@ -966,11 +1392,17 @@
       "answer": 1,
       "explain": "64×4 = 256.",
       "difficulty": "hard",
-      "id": "byteen_hard_12"
+      "id": "byteen_hard_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_hard_12.mp4",
+        "poster": "media/images/byteen_hard_12-frame.png",
+        "figure": "media/images/byteen_hard_12.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Capacity of 256×16 memory in bits is…",
+      "prompt": "For the Byte-enable memory lab: Capacity of 256×16 memory in bits is…",
       "choices": [
         "272",
         "4096",
@@ -980,27 +1412,45 @@
       "answer": 1,
       "explain": "256×16 = 4096.",
       "difficulty": "hard",
-      "id": "byteen_hard_13"
+      "id": "byteen_hard_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_hard_13.mp4",
+        "poster": "media/images/byteen_hard_13-frame.png",
+        "figure": "media/images/byteen_hard_13.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "FIFO empty and full must be generated carefully across domains for async FIFOs.",
+      "prompt": "For the Byte-enable memory lab: FIFO empty and full must be generated carefully across domains for async FIFOs.",
       "answer": true,
       "explain": "Gray pointers.",
       "difficulty": "hard",
-      "id": "byteen_hard_14"
+      "id": "byteen_hard_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_hard_14.mp4",
+        "poster": "media/images/byteen_hard_14-frame.png",
+        "figure": "media/images/byteen_hard_14.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Byte enables select which bytes of a word are written.",
+      "prompt": "For the Byte-enable memory lab: Byte enables select which bytes of a word are written.",
       "answer": true,
       "explain": "Partial writes.",
       "difficulty": "hard",
-      "id": "byteen_hard_15"
+      "id": "byteen_hard_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_hard_15.mp4",
+        "poster": "media/images/byteen_hard_15-frame.png",
+        "figure": "media/images/byteen_hard_15.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Mask for field lo=0 width=2 is…",
+      "prompt": "For the Byte-enable memory lab: Mask for field lo=0 width=2 is…",
       "choices": [
         "0x1",
         "0x3",
@@ -1010,11 +1460,17 @@
       "answer": 1,
       "explain": "((4-1)<<0) = 0x3.",
       "difficulty": "hard",
-      "id": "byteen_hard_16"
+      "id": "byteen_hard_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_hard_16.mp4",
+        "poster": "media/images/byteen_hard_16-frame.png",
+        "figure": "media/images/byteen_hard_16.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Width of a field from bit 0 through 1 is…",
+      "prompt": "For the Byte-enable memory lab: Width of a field from bit 0 through 1 is…",
       "choices": [
         "1",
         "2",
@@ -1024,11 +1480,17 @@
       "answer": 1,
       "explain": "Inclusive span → 2 bits.",
       "difficulty": "hard",
-      "id": "byteen_hard_17"
+      "id": "byteen_hard_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_hard_17.mp4",
+        "poster": "media/images/byteen_hard_17-frame.png",
+        "figure": "media/images/byteen_hard_17.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Mask for field lo=0 width=3 is…",
+      "prompt": "For the Byte-enable memory lab: Mask for field lo=0 width=3 is…",
       "choices": [
         "0x3",
         "0x7",
@@ -1038,11 +1500,17 @@
       "answer": 1,
       "explain": "((8-1)<<0) = 0x7.",
       "difficulty": "hard",
-      "id": "byteen_hard_18"
+      "id": "byteen_hard_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_hard_18.mp4",
+        "poster": "media/images/byteen_hard_18-frame.png",
+        "figure": "media/images/byteen_hard_18.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Width of a field from bit 0 through 2 is…",
+      "prompt": "For the Byte-enable memory lab: Width of a field from bit 0 through 2 is…",
       "choices": [
         "2",
         "3",
@@ -1052,11 +1520,17 @@
       "answer": 1,
       "explain": "Inclusive span → 3 bits.",
       "difficulty": "hard",
-      "id": "byteen_hard_19"
+      "id": "byteen_hard_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_hard_19.mp4",
+        "poster": "media/images/byteen_hard_19-frame.png",
+        "figure": "media/images/byteen_hard_19.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Mask for field lo=1 width=2 is…",
+      "prompt": "For the Byte-enable memory lab: Mask for field lo=1 width=2 is…",
       "choices": [
         "0x3",
         "0x6",
@@ -1066,11 +1540,17 @@
       "answer": 1,
       "explain": "((4-1)<<1) = 0x6.",
       "difficulty": "hard",
-      "id": "byteen_hard_20"
+      "id": "byteen_hard_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_hard_20.mp4",
+        "poster": "media/images/byteen_hard_20-frame.png",
+        "figure": "media/images/byteen_hard_20.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Width of a field from bit 1 through 2 is…",
+      "prompt": "For the Byte-enable memory lab: Width of a field from bit 1 through 2 is…",
       "choices": [
         "1",
         "2",
@@ -1080,11 +1560,17 @@
       "answer": 1,
       "explain": "Inclusive span → 2 bits.",
       "difficulty": "hard",
-      "id": "byteen_hard_21"
+      "id": "byteen_hard_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_hard_21.mp4",
+        "poster": "media/images/byteen_hard_21-frame.png",
+        "figure": "media/images/byteen_hard_21.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Mask for field lo=2 width=3 is…",
+      "prompt": "For the Byte-enable memory lab: Mask for field lo=2 width=3 is…",
       "choices": [
         "0xe",
         "0x1c",
@@ -1094,11 +1580,17 @@
       "answer": 1,
       "explain": "((8-1)<<2) = 0x1c.",
       "difficulty": "hard",
-      "id": "byteen_hard_22"
+      "id": "byteen_hard_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_hard_22.mp4",
+        "poster": "media/images/byteen_hard_22-frame.png",
+        "figure": "media/images/byteen_hard_22.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Width of a field from bit 2 through 4 is…",
+      "prompt": "For the Byte-enable memory lab: Width of a field from bit 2 through 4 is…",
       "choices": [
         "2",
         "3",
@@ -1108,11 +1600,17 @@
       "answer": 1,
       "explain": "Inclusive span → 3 bits.",
       "difficulty": "hard",
-      "id": "byteen_hard_23"
+      "id": "byteen_hard_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_hard_23.mp4",
+        "poster": "media/images/byteen_hard_23-frame.png",
+        "figure": "media/images/byteen_hard_23.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Mask for field lo=4 width=4 is…",
+      "prompt": "For the Byte-enable memory lab: Mask for field lo=4 width=4 is…",
       "choices": [
         "0x78",
         "0xf0",
@@ -1122,11 +1620,17 @@
       "answer": 1,
       "explain": "((16-1)<<4) = 0xf0.",
       "difficulty": "hard",
-      "id": "byteen_hard_24"
+      "id": "byteen_hard_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_hard_24.mp4",
+        "poster": "media/images/byteen_hard_24-frame.png",
+        "figure": "media/images/byteen_hard_24.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Width of a field from bit 4 through 7 is…",
+      "prompt": "For the Byte-enable memory lab: Width of a field from bit 4 through 7 is…",
       "choices": [
         "3",
         "4",
@@ -1136,11 +1640,17 @@
       "answer": 1,
       "explain": "Inclusive span → 4 bits.",
       "difficulty": "hard",
-      "id": "byteen_hard_25"
+      "id": "byteen_hard_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_hard_25.mp4",
+        "poster": "media/images/byteen_hard_25-frame.png",
+        "figure": "media/images/byteen_hard_25.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Mask for field lo=8 width=4 is…",
+      "prompt": "For the Byte-enable memory lab: Mask for field lo=8 width=4 is…",
       "choices": [
         "0x780",
         "0xf00",
@@ -1150,11 +1660,17 @@
       "answer": 1,
       "explain": "((16-1)<<8) = 0xf00.",
       "difficulty": "hard",
-      "id": "byteen_hard_26"
+      "id": "byteen_hard_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_hard_26.mp4",
+        "poster": "media/images/byteen_hard_26-frame.png",
+        "figure": "media/images/byteen_hard_26.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Width of a field from bit 8 through 11 is…",
+      "prompt": "For the Byte-enable memory lab: Width of a field from bit 8 through 11 is…",
       "choices": [
         "3",
         "4",
@@ -1164,11 +1680,17 @@
       "answer": 1,
       "explain": "Inclusive span → 4 bits.",
       "difficulty": "hard",
-      "id": "byteen_hard_27"
+      "id": "byteen_hard_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_hard_27.mp4",
+        "poster": "media/images/byteen_hard_27-frame.png",
+        "figure": "media/images/byteen_hard_27.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Mask for field lo=4 width=2 is…",
+      "prompt": "For the Byte-enable memory lab: Mask for field lo=4 width=2 is…",
       "choices": [
         "0x18",
         "0x30",
@@ -1178,11 +1700,17 @@
       "answer": 1,
       "explain": "((4-1)<<4) = 0x30.",
       "difficulty": "hard",
-      "id": "byteen_hard_28"
+      "id": "byteen_hard_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_hard_28.mp4",
+        "poster": "media/images/byteen_hard_28-frame.png",
+        "figure": "media/images/byteen_hard_28.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Width of a field from bit 4 through 5 is…",
+      "prompt": "For the Byte-enable memory lab: Width of a field from bit 4 through 5 is…",
       "choices": [
         "1",
         "2",
@@ -1192,11 +1720,17 @@
       "answer": 1,
       "explain": "Inclusive span → 2 bits.",
       "difficulty": "hard",
-      "id": "byteen_hard_29"
+      "id": "byteen_hard_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_hard_29.mp4",
+        "poster": "media/images/byteen_hard_29-frame.png",
+        "figure": "media/images/byteen_hard_29.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Mask for field lo=3 width=5 is…",
+      "prompt": "For the Byte-enable memory lab: Mask for field lo=3 width=5 is…",
       "choices": [
         "0x7c",
         "0xf8",
@@ -1206,7 +1740,13 @@
       "answer": 1,
       "explain": "((32-1)<<3) = 0xf8.",
       "difficulty": "hard",
-      "id": "byteen_hard_30"
+      "id": "byteen_hard_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/byteen_hard_30.mp4",
+        "poster": "media/images/byteen_hard_30-frame.png",
+        "figure": "media/images/byteen_hard_30.png"
+      }
     }
   ]
 }

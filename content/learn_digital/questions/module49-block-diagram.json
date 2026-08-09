@@ -14,7 +14,13 @@
       ],
       "answer": 0,
       "explain": "out → in, matching addr/data/ctrl/instr.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_easy_01.mp4",
+        "poster": "media/images/blkdiag_easy_01-frame.png",
+        "figure": "media/images/blkdiag_easy_01.png"
+      }
     },
     {
       "id": "blkdiag_easy_02",
@@ -28,7 +34,13 @@
       ],
       "answer": 0,
       "explain": "Four CPU↔Memory links still missing.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_easy_02.mp4",
+        "poster": "media/images/blkdiag_easy_02-frame.png",
+        "figure": "media/images/blkdiag_easy_02.png"
+      }
     },
     {
       "id": "blkdiag_easy_03",
@@ -42,7 +54,13 @@
       ],
       "answer": 0,
       "explain": "Fetch and load/store paths.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_easy_03.mp4",
+        "poster": "media/images/blkdiag_easy_03-frame.png",
+        "figure": "media/images/blkdiag_easy_03.png"
+      }
     },
     {
       "id": "blkdiag_easy_04",
@@ -50,7 +68,473 @@
       "prompt": "Any port may connect to any other port freely.",
       "answer": false,
       "explain": "Typed out→in only.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_easy_04.mp4",
+        "poster": "media/images/blkdiag_easy_04-frame.png",
+        "figure": "media/images/blkdiag_easy_04.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Block-diagram integrator: Valid/ready handshake transfers when both are high in the same cycle.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "blkdiag_easy_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_easy_05.mp4",
+        "poster": "media/images/blkdiag_easy_05-frame.png",
+        "figure": "media/images/blkdiag_easy_05.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Block-diagram integrator: A master may drop valid before ready acknowledges freely always.",
+      "answer": false,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "blkdiag_easy_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_easy_06.mp4",
+        "poster": "media/images/blkdiag_easy_06-frame.png",
+        "figure": "media/images/blkdiag_easy_06.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Block-diagram integrator: Ready may depend on valid in the same cycle (combinational) carefully.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "blkdiag_easy_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_easy_07.mp4",
+        "poster": "media/images/blkdiag_easy_07-frame.png",
+        "figure": "media/images/blkdiag_easy_07.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Block-diagram integrator: AXI-style fire is valid && ready.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "blkdiag_easy_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_easy_08.mp4",
+        "poster": "media/images/blkdiag_easy_08-frame.png",
+        "figure": "media/images/blkdiag_easy_08.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Block-diagram integrator: Tri-state buses need exactly one driver when not floating intentionally.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "blkdiag_easy_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_easy_09.mp4",
+        "poster": "media/images/blkdiag_easy_09-frame.png",
+        "figure": "media/images/blkdiag_easy_09.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Block-diagram integrator: Multiple drivers asserting opposite values is bus contention.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "blkdiag_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_easy_10.mp4",
+        "poster": "media/images/blkdiag_easy_10-frame.png",
+        "figure": "media/images/blkdiag_easy_10.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Block-diagram integrator: Async FIFO write and read clocks may be unrelated.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "blkdiag_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_easy_11.mp4",
+        "poster": "media/images/blkdiag_easy_11-frame.png",
+        "figure": "media/images/blkdiag_easy_11.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Block-diagram integrator: Gray code helps multi-bit CDC of pointers.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "blkdiag_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_easy_12.mp4",
+        "poster": "media/images/blkdiag_easy_12-frame.png",
+        "figure": "media/images/blkdiag_easy_12.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Block-diagram integrator: Single FF sync is enough for multi-bit buses.",
+      "answer": false,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "blkdiag_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_easy_13.mp4",
+        "poster": "media/images/blkdiag_easy_13-frame.png",
+        "figure": "media/images/blkdiag_easy_13.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Block-diagram integrator: Backpressure is expressed by deasserting ready.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "easy",
+      "id": "blkdiag_easy_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_easy_14.mp4",
+        "poster": "media/images/blkdiag_easy_14-frame.png",
+        "figure": "media/images/blkdiag_easy_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Block-diagram integrator: With valid fixed high, how many beats transfer in 1 cycles if ready is always high?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "blkdiag_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_easy_15.mp4",
+        "poster": "media/images/blkdiag_easy_15-frame.png",
+        "figure": "media/images/blkdiag_easy_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Block-diagram integrator: With valid fixed high, how many beats transfer in 2 cycles if ready is always high?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "blkdiag_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_easy_16.mp4",
+        "poster": "media/images/blkdiag_easy_16-frame.png",
+        "figure": "media/images/blkdiag_easy_16.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Block-diagram integrator: With valid fixed high, how many beats transfer in 3 cycles if ready is always high?",
+      "choices": [
+        "2",
+        "3",
+        "6",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "blkdiag_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_easy_17.mp4",
+        "poster": "media/images/blkdiag_easy_17-frame.png",
+        "figure": "media/images/blkdiag_easy_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Block-diagram integrator: With valid fixed high, how many beats transfer in 4 cycles if ready is always high?",
+      "choices": [
+        "3",
+        "4",
+        "8",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "blkdiag_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_easy_18.mp4",
+        "poster": "media/images/blkdiag_easy_18-frame.png",
+        "figure": "media/images/blkdiag_easy_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Block-diagram integrator: With valid fixed high, how many beats transfer in 5 cycles if ready is always high?",
+      "choices": [
+        "4",
+        "5",
+        "10",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "blkdiag_easy_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_easy_19.mp4",
+        "poster": "media/images/blkdiag_easy_19-frame.png",
+        "figure": "media/images/blkdiag_easy_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Block-diagram integrator: With valid fixed high, how many beats transfer in 6 cycles if ready is always high?",
+      "choices": [
+        "5",
+        "6",
+        "12",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "blkdiag_easy_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_easy_20.mp4",
+        "poster": "media/images/blkdiag_easy_20-frame.png",
+        "figure": "media/images/blkdiag_easy_20.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Block-diagram integrator: With valid fixed high, how many beats transfer in 7 cycles if ready is always high?",
+      "choices": [
+        "6",
+        "7",
+        "14",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "blkdiag_easy_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_easy_21.mp4",
+        "poster": "media/images/blkdiag_easy_21-frame.png",
+        "figure": "media/images/blkdiag_easy_21.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Block-diagram integrator: With valid fixed high, how many beats transfer in 8 cycles if ready is always high?",
+      "choices": [
+        "7",
+        "8",
+        "16",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "easy",
+      "id": "blkdiag_easy_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_easy_22.mp4",
+        "poster": "media/images/blkdiag_easy_22-frame.png",
+        "figure": "media/images/blkdiag_easy_22.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Block-diagram integrator: A 1-to-2 decoder has how many select lines?",
+      "choices": [
+        "2",
+        "1",
+        "2",
+        "2"
+      ],
+      "answer": 1,
+      "explain": "1 selects address 2 ones-hot lines.",
+      "difficulty": "easy",
+      "id": "blkdiag_easy_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_easy_23.mp4",
+        "poster": "media/images/blkdiag_easy_23-frame.png",
+        "figure": "media/images/blkdiag_easy_23.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Block-diagram integrator: A mux with 2 data inputs needs how many select bits?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": 1,
+      "explain": "log2(2) = 1.",
+      "difficulty": "easy",
+      "id": "blkdiag_easy_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_easy_24.mp4",
+        "poster": "media/images/blkdiag_easy_24-frame.png",
+        "figure": "media/images/blkdiag_easy_24.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Block-diagram integrator: A 2-to-4 decoder has how many select lines?",
+      "choices": [
+        "4",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "2 selects address 4 ones-hot lines.",
+      "difficulty": "easy",
+      "id": "blkdiag_easy_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_easy_25.mp4",
+        "poster": "media/images/blkdiag_easy_25-frame.png",
+        "figure": "media/images/blkdiag_easy_25.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Block-diagram integrator: A mux with 4 data inputs needs how many select bits?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "log2(4) = 2.",
+      "difficulty": "easy",
+      "id": "blkdiag_easy_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_easy_26.mp4",
+        "poster": "media/images/blkdiag_easy_26-frame.png",
+        "figure": "media/images/blkdiag_easy_26.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Block-diagram integrator: A 3-to-8 decoder has how many select lines?",
+      "choices": [
+        "8",
+        "3",
+        "4",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "3 selects address 8 ones-hot lines.",
+      "difficulty": "easy",
+      "id": "blkdiag_easy_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_easy_27.mp4",
+        "poster": "media/images/blkdiag_easy_27-frame.png",
+        "figure": "media/images/blkdiag_easy_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Block-diagram integrator: A mux with 8 data inputs needs how many select bits?",
+      "choices": [
+        "2",
+        "3",
+        "8",
+        "5"
+      ],
+      "answer": 1,
+      "explain": "log2(8) = 3.",
+      "difficulty": "easy",
+      "id": "blkdiag_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_easy_28.mp4",
+        "poster": "media/images/blkdiag_easy_28-frame.png",
+        "figure": "media/images/blkdiag_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Block-diagram integrator: A 4-to-16 decoder has how many select lines?",
+      "choices": [
+        "16",
+        "4",
+        "5",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "4 selects address 16 ones-hot lines.",
+      "difficulty": "easy",
+      "id": "blkdiag_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_easy_29.mp4",
+        "poster": "media/images/blkdiag_easy_29-frame.png",
+        "figure": "media/images/blkdiag_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Block-diagram integrator: A mux with 16 data inputs needs how many select bits?",
+      "choices": [
+        "3",
+        "4",
+        "16",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "log2(16) = 4.",
+      "difficulty": "easy",
+      "id": "blkdiag_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_easy_30.mp4",
+        "poster": "media/images/blkdiag_easy_30-frame.png",
+        "figure": "media/images/blkdiag_easy_30.png"
+      }
     },
     {
       "id": "blkdiag_medium_01",
@@ -64,7 +548,13 @@
       ],
       "answer": 0,
       "explain": "Fetch path.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_medium_01.mp4",
+        "poster": "media/images/blkdiag_medium_01-frame.png",
+        "figure": "media/images/blkdiag_medium_01.png"
+      }
     },
     {
       "id": "blkdiag_medium_02",
@@ -78,7 +568,13 @@
       ],
       "answer": 0,
       "explain": "Write vs read data directions.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_medium_02.mp4",
+        "poster": "media/images/blkdiag_medium_02-frame.png",
+        "figure": "media/images/blkdiag_medium_02.png"
+      }
     },
     {
       "id": "blkdiag_medium_03",
@@ -92,7 +588,13 @@
       ],
       "answer": 0,
       "explain": "CPU issues addresses.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_medium_03.mp4",
+        "poster": "media/images/blkdiag_medium_03-frame.png",
+        "figure": "media/images/blkdiag_medium_03.png"
+      }
     },
     {
       "id": "blkdiag_medium_04",
@@ -100,7 +602,473 @@
       "prompt": "Leaving rdata unwired breaks loads.",
       "answer": true,
       "explain": "Diagrams teach structure; protocols still matter.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_medium_04.mp4",
+        "poster": "media/images/blkdiag_medium_04-frame.png",
+        "figure": "media/images/blkdiag_medium_04.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Block-diagram integrator, valid/ready handshake transfers when both are high in the same cycle.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "blkdiag_medium_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_medium_05.mp4",
+        "poster": "media/images/blkdiag_medium_05-frame.png",
+        "figure": "media/images/blkdiag_medium_05.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Block-diagram integrator, a master may drop valid before ready acknowledges freely always.",
+      "answer": false,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "blkdiag_medium_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_medium_06.mp4",
+        "poster": "media/images/blkdiag_medium_06-frame.png",
+        "figure": "media/images/blkdiag_medium_06.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Block-diagram integrator, ready may depend on valid in the same cycle (combinational) carefully.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "blkdiag_medium_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_medium_07.mp4",
+        "poster": "media/images/blkdiag_medium_07-frame.png",
+        "figure": "media/images/blkdiag_medium_07.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Block-diagram integrator, aXI-style fire is valid && ready.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "blkdiag_medium_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_medium_08.mp4",
+        "poster": "media/images/blkdiag_medium_08-frame.png",
+        "figure": "media/images/blkdiag_medium_08.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Block-diagram integrator, tri-state buses need exactly one driver when not floating intentionally.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "blkdiag_medium_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_medium_09.mp4",
+        "poster": "media/images/blkdiag_medium_09-frame.png",
+        "figure": "media/images/blkdiag_medium_09.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Block-diagram integrator, multiple drivers asserting opposite values is bus contention.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "blkdiag_medium_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_medium_10.mp4",
+        "poster": "media/images/blkdiag_medium_10-frame.png",
+        "figure": "media/images/blkdiag_medium_10.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Block-diagram integrator, async FIFO write and read clocks may be unrelated.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "blkdiag_medium_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_medium_11.mp4",
+        "poster": "media/images/blkdiag_medium_11-frame.png",
+        "figure": "media/images/blkdiag_medium_11.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Block-diagram integrator, gray code helps multi-bit CDC of pointers.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "blkdiag_medium_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_medium_12.mp4",
+        "poster": "media/images/blkdiag_medium_12-frame.png",
+        "figure": "media/images/blkdiag_medium_12.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Block-diagram integrator, single FF sync is enough for multi-bit buses.",
+      "answer": false,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "blkdiag_medium_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_medium_13.mp4",
+        "poster": "media/images/blkdiag_medium_13-frame.png",
+        "figure": "media/images/blkdiag_medium_13.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Block-diagram integrator, backpressure is expressed by deasserting ready.",
+      "answer": true,
+      "explain": "Handshake / interconnect fact.",
+      "difficulty": "medium",
+      "id": "blkdiag_medium_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_medium_14.mp4",
+        "poster": "media/images/blkdiag_medium_14-frame.png",
+        "figure": "media/images/blkdiag_medium_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Block-diagram integrator, with valid fixed high, how many beats transfer in 1 cycles if ready is always high?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "blkdiag_medium_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_medium_15.mp4",
+        "poster": "media/images/blkdiag_medium_15-frame.png",
+        "figure": "media/images/blkdiag_medium_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Block-diagram integrator, with valid fixed high, how many beats transfer in 2 cycles if ready is always high?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "blkdiag_medium_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_medium_16.mp4",
+        "poster": "media/images/blkdiag_medium_16-frame.png",
+        "figure": "media/images/blkdiag_medium_16.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Block-diagram integrator, with valid fixed high, how many beats transfer in 3 cycles if ready is always high?",
+      "choices": [
+        "2",
+        "3",
+        "6",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "blkdiag_medium_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_medium_17.mp4",
+        "poster": "media/images/blkdiag_medium_17-frame.png",
+        "figure": "media/images/blkdiag_medium_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Block-diagram integrator, with valid fixed high, how many beats transfer in 4 cycles if ready is always high?",
+      "choices": [
+        "3",
+        "4",
+        "8",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "blkdiag_medium_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_medium_18.mp4",
+        "poster": "media/images/blkdiag_medium_18-frame.png",
+        "figure": "media/images/blkdiag_medium_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Block-diagram integrator, with valid fixed high, how many beats transfer in 5 cycles if ready is always high?",
+      "choices": [
+        "4",
+        "5",
+        "10",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "blkdiag_medium_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_medium_19.mp4",
+        "poster": "media/images/blkdiag_medium_19-frame.png",
+        "figure": "media/images/blkdiag_medium_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Block-diagram integrator, with valid fixed high, how many beats transfer in 6 cycles if ready is always high?",
+      "choices": [
+        "5",
+        "6",
+        "12",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "blkdiag_medium_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_medium_20.mp4",
+        "poster": "media/images/blkdiag_medium_20-frame.png",
+        "figure": "media/images/blkdiag_medium_20.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Block-diagram integrator, with valid fixed high, how many beats transfer in 7 cycles if ready is always high?",
+      "choices": [
+        "6",
+        "7",
+        "14",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "blkdiag_medium_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_medium_21.mp4",
+        "poster": "media/images/blkdiag_medium_21-frame.png",
+        "figure": "media/images/blkdiag_medium_21.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Block-diagram integrator, with valid fixed high, how many beats transfer in 8 cycles if ready is always high?",
+      "choices": [
+        "7",
+        "8",
+        "16",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "One beat per cycle when both high.",
+      "difficulty": "medium",
+      "id": "blkdiag_medium_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_medium_22.mp4",
+        "poster": "media/images/blkdiag_medium_22-frame.png",
+        "figure": "media/images/blkdiag_medium_22.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Block-diagram integrator, a 1-to-2 decoder has how many select lines?",
+      "choices": [
+        "2",
+        "1",
+        "2",
+        "2"
+      ],
+      "answer": 1,
+      "explain": "1 selects address 2 ones-hot lines.",
+      "difficulty": "medium",
+      "id": "blkdiag_medium_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_medium_23.mp4",
+        "poster": "media/images/blkdiag_medium_23-frame.png",
+        "figure": "media/images/blkdiag_medium_23.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Block-diagram integrator, a mux with 2 data inputs needs how many select bits?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": 1,
+      "explain": "log2(2) = 1.",
+      "difficulty": "medium",
+      "id": "blkdiag_medium_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_medium_24.mp4",
+        "poster": "media/images/blkdiag_medium_24-frame.png",
+        "figure": "media/images/blkdiag_medium_24.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Block-diagram integrator, a 2-to-4 decoder has how many select lines?",
+      "choices": [
+        "4",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "2 selects address 4 ones-hot lines.",
+      "difficulty": "medium",
+      "id": "blkdiag_medium_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_medium_25.mp4",
+        "poster": "media/images/blkdiag_medium_25-frame.png",
+        "figure": "media/images/blkdiag_medium_25.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Block-diagram integrator, a mux with 4 data inputs needs how many select bits?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "log2(4) = 2.",
+      "difficulty": "medium",
+      "id": "blkdiag_medium_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_medium_26.mp4",
+        "poster": "media/images/blkdiag_medium_26-frame.png",
+        "figure": "media/images/blkdiag_medium_26.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Block-diagram integrator, a 3-to-8 decoder has how many select lines?",
+      "choices": [
+        "8",
+        "3",
+        "4",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "3 selects address 8 ones-hot lines.",
+      "difficulty": "medium",
+      "id": "blkdiag_medium_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_medium_27.mp4",
+        "poster": "media/images/blkdiag_medium_27-frame.png",
+        "figure": "media/images/blkdiag_medium_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Block-diagram integrator, a mux with 8 data inputs needs how many select bits?",
+      "choices": [
+        "2",
+        "3",
+        "8",
+        "5"
+      ],
+      "answer": 1,
+      "explain": "log2(8) = 3.",
+      "difficulty": "medium",
+      "id": "blkdiag_medium_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_medium_28.mp4",
+        "poster": "media/images/blkdiag_medium_28-frame.png",
+        "figure": "media/images/blkdiag_medium_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Block-diagram integrator, a 4-to-16 decoder has how many select lines?",
+      "choices": [
+        "16",
+        "4",
+        "5",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "4 selects address 16 ones-hot lines.",
+      "difficulty": "medium",
+      "id": "blkdiag_medium_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_medium_29.mp4",
+        "poster": "media/images/blkdiag_medium_29-frame.png",
+        "figure": "media/images/blkdiag_medium_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Block-diagram integrator, a mux with 16 data inputs needs how many select bits?",
+      "choices": [
+        "3",
+        "4",
+        "16",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "log2(16) = 4.",
+      "difficulty": "medium",
+      "id": "blkdiag_medium_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_medium_30.mp4",
+        "poster": "media/images/blkdiag_medium_30-frame.png",
+        "figure": "media/images/blkdiag_medium_30.png"
+      }
     },
     {
       "id": "blkdiag_hard_01",
@@ -114,7 +1082,13 @@
       ],
       "answer": 0,
       "explain": "Every required input needs a source.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_hard_01.mp4",
+        "poster": "media/images/blkdiag_hard_01-frame.png",
+        "figure": "media/images/blkdiag_hard_01.png"
+      }
     },
     {
       "id": "blkdiag_hard_02",
@@ -128,7 +1102,13 @@
       ],
       "answer": 0,
       "explain": "Broadcast can be legal; watch protocols.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_hard_02.mp4",
+        "poster": "media/images/blkdiag_hard_02-frame.png",
+        "figure": "media/images/blkdiag_hard_02.png"
+      }
     },
     {
       "id": "blkdiag_hard_03",
@@ -142,7 +1122,13 @@
       ],
       "answer": 0,
       "explain": "Single driver per input.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_hard_03.mp4",
+        "poster": "media/images/blkdiag_hard_03-frame.png",
+        "figure": "media/images/blkdiag_hard_03.png"
+      }
     },
     {
       "id": "blkdiag_hard_04",
@@ -150,699 +1136,157 @@
       "prompt": "Block-diagram literacy removes the need for RTL forever.",
       "answer": false,
       "explain": "Still need RTL/courses beyond the lab.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_hard_04.mp4",
+        "poster": "media/images/blkdiag_hard_04-frame.png",
+        "figure": "media/images/blkdiag_hard_04.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Valid/ready handshake transfers when both are high in the same cycle.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "easy",
-      "id": "blkdiag_easy_05"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A master may drop valid before ready acknowledges freely always.",
-      "answer": false,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "easy",
-      "id": "blkdiag_easy_06"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Ready may depend on valid in the same cycle (combinational) carefully.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "easy",
-      "id": "blkdiag_easy_07"
-    },
-    {
-      "type": "true_false",
-      "prompt": "AXI-style fire is valid && ready.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "easy",
-      "id": "blkdiag_easy_08"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Tri-state buses need exactly one driver when not floating intentionally.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "easy",
-      "id": "blkdiag_easy_09"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Multiple drivers asserting opposite values is bus contention.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "easy",
-      "id": "blkdiag_easy_10"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Async FIFO write and read clocks may be unrelated.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "easy",
-      "id": "blkdiag_easy_11"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Gray code helps multi-bit CDC of pointers.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "easy",
-      "id": "blkdiag_easy_12"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Single FF sync is enough for multi-bit buses.",
-      "answer": false,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "easy",
-      "id": "blkdiag_easy_13"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Backpressure is expressed by deasserting ready.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "easy",
-      "id": "blkdiag_easy_14"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 1 cycles if ready is always high?",
-      "choices": [
-        "0",
-        "1",
-        "2",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "easy",
-      "id": "blkdiag_easy_15"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 2 cycles if ready is always high?",
-      "choices": [
-        "1",
-        "2",
-        "4",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "easy",
-      "id": "blkdiag_easy_16"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 3 cycles if ready is always high?",
-      "choices": [
-        "2",
-        "3",
-        "6",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "easy",
-      "id": "blkdiag_easy_17"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 4 cycles if ready is always high?",
-      "choices": [
-        "3",
-        "4",
-        "8",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "easy",
-      "id": "blkdiag_easy_18"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 5 cycles if ready is always high?",
-      "choices": [
-        "4",
-        "5",
-        "10",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "easy",
-      "id": "blkdiag_easy_19"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 6 cycles if ready is always high?",
-      "choices": [
-        "5",
-        "6",
-        "12",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "easy",
-      "id": "blkdiag_easy_20"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 7 cycles if ready is always high?",
-      "choices": [
-        "6",
-        "7",
-        "14",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "easy",
-      "id": "blkdiag_easy_21"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 8 cycles if ready is always high?",
-      "choices": [
-        "7",
-        "8",
-        "16",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "easy",
-      "id": "blkdiag_easy_22"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A 1-to-2 decoder has how many select lines?",
-      "choices": [
-        "2",
-        "1",
-        "2",
-        "2"
-      ],
-      "answer": 1,
-      "explain": "1 selects address 2 ones-hot lines.",
-      "difficulty": "easy",
-      "id": "blkdiag_easy_23"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A mux with 2 data inputs needs how many select bits?",
-      "choices": [
-        "0",
-        "1",
-        "2",
-        "3"
-      ],
-      "answer": 1,
-      "explain": "log2(2) = 1.",
-      "difficulty": "easy",
-      "id": "blkdiag_easy_24"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A 2-to-4 decoder has how many select lines?",
-      "choices": [
-        "4",
-        "2",
-        "3",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "2 selects address 4 ones-hot lines.",
-      "difficulty": "easy",
-      "id": "blkdiag_easy_25"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A mux with 4 data inputs needs how many select bits?",
-      "choices": [
-        "1",
-        "2",
-        "4",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "log2(4) = 2.",
-      "difficulty": "easy",
-      "id": "blkdiag_easy_26"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A 3-to-8 decoder has how many select lines?",
-      "choices": [
-        "8",
-        "3",
-        "4",
-        "6"
-      ],
-      "answer": 1,
-      "explain": "3 selects address 8 ones-hot lines.",
-      "difficulty": "easy",
-      "id": "blkdiag_easy_27"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A mux with 8 data inputs needs how many select bits?",
-      "choices": [
-        "2",
-        "3",
-        "8",
-        "5"
-      ],
-      "answer": 1,
-      "explain": "log2(8) = 3.",
-      "difficulty": "easy",
-      "id": "blkdiag_easy_28"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A 4-to-16 decoder has how many select lines?",
-      "choices": [
-        "16",
-        "4",
-        "5",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "4 selects address 16 ones-hot lines.",
-      "difficulty": "easy",
-      "id": "blkdiag_easy_29"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A mux with 16 data inputs needs how many select bits?",
-      "choices": [
-        "3",
-        "4",
-        "16",
-        "6"
-      ],
-      "answer": 1,
-      "explain": "log2(16) = 4.",
-      "difficulty": "easy",
-      "id": "blkdiag_easy_30"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Valid/ready handshake transfers when both are high in the same cycle.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "medium",
-      "id": "blkdiag_medium_05"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A master may drop valid before ready acknowledges freely always.",
-      "answer": false,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "medium",
-      "id": "blkdiag_medium_06"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Ready may depend on valid in the same cycle (combinational) carefully.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "medium",
-      "id": "blkdiag_medium_07"
-    },
-    {
-      "type": "true_false",
-      "prompt": "AXI-style fire is valid && ready.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "medium",
-      "id": "blkdiag_medium_08"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Tri-state buses need exactly one driver when not floating intentionally.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "medium",
-      "id": "blkdiag_medium_09"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Multiple drivers asserting opposite values is bus contention.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "medium",
-      "id": "blkdiag_medium_10"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Async FIFO write and read clocks may be unrelated.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "medium",
-      "id": "blkdiag_medium_11"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Gray code helps multi-bit CDC of pointers.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "medium",
-      "id": "blkdiag_medium_12"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Single FF sync is enough for multi-bit buses.",
-      "answer": false,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "medium",
-      "id": "blkdiag_medium_13"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Backpressure is expressed by deasserting ready.",
-      "answer": true,
-      "explain": "Handshake / interconnect fact.",
-      "difficulty": "medium",
-      "id": "blkdiag_medium_14"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 1 cycles if ready is always high?",
-      "choices": [
-        "0",
-        "1",
-        "2",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "medium",
-      "id": "blkdiag_medium_15"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 2 cycles if ready is always high?",
-      "choices": [
-        "1",
-        "2",
-        "4",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "medium",
-      "id": "blkdiag_medium_16"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 3 cycles if ready is always high?",
-      "choices": [
-        "2",
-        "3",
-        "6",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "medium",
-      "id": "blkdiag_medium_17"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 4 cycles if ready is always high?",
-      "choices": [
-        "3",
-        "4",
-        "8",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "medium",
-      "id": "blkdiag_medium_18"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 5 cycles if ready is always high?",
-      "choices": [
-        "4",
-        "5",
-        "10",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "medium",
-      "id": "blkdiag_medium_19"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 6 cycles if ready is always high?",
-      "choices": [
-        "5",
-        "6",
-        "12",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "medium",
-      "id": "blkdiag_medium_20"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 7 cycles if ready is always high?",
-      "choices": [
-        "6",
-        "7",
-        "14",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "medium",
-      "id": "blkdiag_medium_21"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 8 cycles if ready is always high?",
-      "choices": [
-        "7",
-        "8",
-        "16",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "One beat per cycle when both high.",
-      "difficulty": "medium",
-      "id": "blkdiag_medium_22"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A 1-to-2 decoder has how many select lines?",
-      "choices": [
-        "2",
-        "1",
-        "2",
-        "2"
-      ],
-      "answer": 1,
-      "explain": "1 selects address 2 ones-hot lines.",
-      "difficulty": "medium",
-      "id": "blkdiag_medium_23"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A mux with 2 data inputs needs how many select bits?",
-      "choices": [
-        "0",
-        "1",
-        "2",
-        "3"
-      ],
-      "answer": 1,
-      "explain": "log2(2) = 1.",
-      "difficulty": "medium",
-      "id": "blkdiag_medium_24"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A 2-to-4 decoder has how many select lines?",
-      "choices": [
-        "4",
-        "2",
-        "3",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "2 selects address 4 ones-hot lines.",
-      "difficulty": "medium",
-      "id": "blkdiag_medium_25"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A mux with 4 data inputs needs how many select bits?",
-      "choices": [
-        "1",
-        "2",
-        "4",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "log2(4) = 2.",
-      "difficulty": "medium",
-      "id": "blkdiag_medium_26"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A 3-to-8 decoder has how many select lines?",
-      "choices": [
-        "8",
-        "3",
-        "4",
-        "6"
-      ],
-      "answer": 1,
-      "explain": "3 selects address 8 ones-hot lines.",
-      "difficulty": "medium",
-      "id": "blkdiag_medium_27"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A mux with 8 data inputs needs how many select bits?",
-      "choices": [
-        "2",
-        "3",
-        "8",
-        "5"
-      ],
-      "answer": 1,
-      "explain": "log2(8) = 3.",
-      "difficulty": "medium",
-      "id": "blkdiag_medium_28"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A 4-to-16 decoder has how many select lines?",
-      "choices": [
-        "16",
-        "4",
-        "5",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "4 selects address 16 ones-hot lines.",
-      "difficulty": "medium",
-      "id": "blkdiag_medium_29"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "A mux with 16 data inputs needs how many select bits?",
-      "choices": [
-        "3",
-        "4",
-        "16",
-        "6"
-      ],
-      "answer": 1,
-      "explain": "log2(16) = 4.",
-      "difficulty": "medium",
-      "id": "blkdiag_medium_30"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Valid/ready handshake transfers when both are high in the same cycle.",
+      "prompt": "For the Block-diagram integrator lab: Valid/ready handshake transfers when both are high in the same cycle.",
       "answer": true,
       "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "id": "blkdiag_hard_05"
+      "id": "blkdiag_hard_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_hard_05.mp4",
+        "poster": "media/images/blkdiag_hard_05-frame.png",
+        "figure": "media/images/blkdiag_hard_05.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A master may drop valid before ready acknowledges freely always.",
+      "prompt": "For the Block-diagram integrator lab: A master may drop valid before ready acknowledges freely always.",
       "answer": false,
       "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "id": "blkdiag_hard_06"
+      "id": "blkdiag_hard_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_hard_06.mp4",
+        "poster": "media/images/blkdiag_hard_06-frame.png",
+        "figure": "media/images/blkdiag_hard_06.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Ready may depend on valid in the same cycle (combinational) carefully.",
+      "prompt": "For the Block-diagram integrator lab: Ready may depend on valid in the same cycle (combinational) carefully.",
       "answer": true,
       "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "id": "blkdiag_hard_07"
+      "id": "blkdiag_hard_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_hard_07.mp4",
+        "poster": "media/images/blkdiag_hard_07-frame.png",
+        "figure": "media/images/blkdiag_hard_07.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "AXI-style fire is valid && ready.",
+      "prompt": "For the Block-diagram integrator lab: AXI-style fire is valid && ready.",
       "answer": true,
       "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "id": "blkdiag_hard_08"
+      "id": "blkdiag_hard_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_hard_08.mp4",
+        "poster": "media/images/blkdiag_hard_08-frame.png",
+        "figure": "media/images/blkdiag_hard_08.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Tri-state buses need exactly one driver when not floating intentionally.",
+      "prompt": "For the Block-diagram integrator lab: Tri-state buses need exactly one driver when not floating intentionally.",
       "answer": true,
       "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "id": "blkdiag_hard_09"
+      "id": "blkdiag_hard_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_hard_09.mp4",
+        "poster": "media/images/blkdiag_hard_09-frame.png",
+        "figure": "media/images/blkdiag_hard_09.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Multiple drivers asserting opposite values is bus contention.",
+      "prompt": "For the Block-diagram integrator lab: Multiple drivers asserting opposite values is bus contention.",
       "answer": true,
       "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "id": "blkdiag_hard_10"
+      "id": "blkdiag_hard_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_hard_10.mp4",
+        "poster": "media/images/blkdiag_hard_10-frame.png",
+        "figure": "media/images/blkdiag_hard_10.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Async FIFO write and read clocks may be unrelated.",
+      "prompt": "For the Block-diagram integrator lab: Async FIFO write and read clocks may be unrelated.",
       "answer": true,
       "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "id": "blkdiag_hard_11"
+      "id": "blkdiag_hard_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_hard_11.mp4",
+        "poster": "media/images/blkdiag_hard_11-frame.png",
+        "figure": "media/images/blkdiag_hard_11.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Gray code helps multi-bit CDC of pointers.",
+      "prompt": "For the Block-diagram integrator lab: Gray code helps multi-bit CDC of pointers.",
       "answer": true,
       "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "id": "blkdiag_hard_12"
+      "id": "blkdiag_hard_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_hard_12.mp4",
+        "poster": "media/images/blkdiag_hard_12-frame.png",
+        "figure": "media/images/blkdiag_hard_12.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Single FF sync is enough for multi-bit buses.",
+      "prompt": "For the Block-diagram integrator lab: Single FF sync is enough for multi-bit buses.",
       "answer": false,
       "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "id": "blkdiag_hard_13"
+      "id": "blkdiag_hard_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_hard_13.mp4",
+        "poster": "media/images/blkdiag_hard_13-frame.png",
+        "figure": "media/images/blkdiag_hard_13.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Backpressure is expressed by deasserting ready.",
+      "prompt": "For the Block-diagram integrator lab: Backpressure is expressed by deasserting ready.",
       "answer": true,
       "explain": "Handshake / interconnect fact.",
       "difficulty": "hard",
-      "id": "blkdiag_hard_14"
+      "id": "blkdiag_hard_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_hard_14.mp4",
+        "poster": "media/images/blkdiag_hard_14-frame.png",
+        "figure": "media/images/blkdiag_hard_14.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 1 cycles if ready is always high?",
+      "prompt": "For the Block-diagram integrator lab: With valid fixed high, how many beats transfer in 1 cycles if ready is always high?",
       "choices": [
         "0",
         "1",
@@ -852,11 +1296,17 @@
       "answer": 1,
       "explain": "One beat per cycle when both high.",
       "difficulty": "hard",
-      "id": "blkdiag_hard_15"
+      "id": "blkdiag_hard_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_hard_15.mp4",
+        "poster": "media/images/blkdiag_hard_15-frame.png",
+        "figure": "media/images/blkdiag_hard_15.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 2 cycles if ready is always high?",
+      "prompt": "For the Block-diagram integrator lab: With valid fixed high, how many beats transfer in 2 cycles if ready is always high?",
       "choices": [
         "1",
         "2",
@@ -866,11 +1316,17 @@
       "answer": 1,
       "explain": "One beat per cycle when both high.",
       "difficulty": "hard",
-      "id": "blkdiag_hard_16"
+      "id": "blkdiag_hard_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_hard_16.mp4",
+        "poster": "media/images/blkdiag_hard_16-frame.png",
+        "figure": "media/images/blkdiag_hard_16.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 3 cycles if ready is always high?",
+      "prompt": "For the Block-diagram integrator lab: With valid fixed high, how many beats transfer in 3 cycles if ready is always high?",
       "choices": [
         "2",
         "3",
@@ -880,11 +1336,17 @@
       "answer": 1,
       "explain": "One beat per cycle when both high.",
       "difficulty": "hard",
-      "id": "blkdiag_hard_17"
+      "id": "blkdiag_hard_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_hard_17.mp4",
+        "poster": "media/images/blkdiag_hard_17-frame.png",
+        "figure": "media/images/blkdiag_hard_17.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 4 cycles if ready is always high?",
+      "prompt": "For the Block-diagram integrator lab: With valid fixed high, how many beats transfer in 4 cycles if ready is always high?",
       "choices": [
         "3",
         "4",
@@ -894,11 +1356,17 @@
       "answer": 1,
       "explain": "One beat per cycle when both high.",
       "difficulty": "hard",
-      "id": "blkdiag_hard_18"
+      "id": "blkdiag_hard_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_hard_18.mp4",
+        "poster": "media/images/blkdiag_hard_18-frame.png",
+        "figure": "media/images/blkdiag_hard_18.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 5 cycles if ready is always high?",
+      "prompt": "For the Block-diagram integrator lab: With valid fixed high, how many beats transfer in 5 cycles if ready is always high?",
       "choices": [
         "4",
         "5",
@@ -908,11 +1376,17 @@
       "answer": 1,
       "explain": "One beat per cycle when both high.",
       "difficulty": "hard",
-      "id": "blkdiag_hard_19"
+      "id": "blkdiag_hard_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_hard_19.mp4",
+        "poster": "media/images/blkdiag_hard_19-frame.png",
+        "figure": "media/images/blkdiag_hard_19.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 6 cycles if ready is always high?",
+      "prompt": "For the Block-diagram integrator lab: With valid fixed high, how many beats transfer in 6 cycles if ready is always high?",
       "choices": [
         "5",
         "6",
@@ -922,11 +1396,17 @@
       "answer": 1,
       "explain": "One beat per cycle when both high.",
       "difficulty": "hard",
-      "id": "blkdiag_hard_20"
+      "id": "blkdiag_hard_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_hard_20.mp4",
+        "poster": "media/images/blkdiag_hard_20-frame.png",
+        "figure": "media/images/blkdiag_hard_20.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 7 cycles if ready is always high?",
+      "prompt": "For the Block-diagram integrator lab: With valid fixed high, how many beats transfer in 7 cycles if ready is always high?",
       "choices": [
         "6",
         "7",
@@ -936,11 +1416,17 @@
       "answer": 1,
       "explain": "One beat per cycle when both high.",
       "difficulty": "hard",
-      "id": "blkdiag_hard_21"
+      "id": "blkdiag_hard_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_hard_21.mp4",
+        "poster": "media/images/blkdiag_hard_21-frame.png",
+        "figure": "media/images/blkdiag_hard_21.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "With valid fixed high, how many beats transfer in 8 cycles if ready is always high?",
+      "prompt": "For the Block-diagram integrator lab: With valid fixed high, how many beats transfer in 8 cycles if ready is always high?",
       "choices": [
         "7",
         "8",
@@ -950,11 +1436,17 @@
       "answer": 1,
       "explain": "One beat per cycle when both high.",
       "difficulty": "hard",
-      "id": "blkdiag_hard_22"
+      "id": "blkdiag_hard_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_hard_22.mp4",
+        "poster": "media/images/blkdiag_hard_22-frame.png",
+        "figure": "media/images/blkdiag_hard_22.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "A 1-to-2 decoder has how many select lines?",
+      "prompt": "For the Block-diagram integrator lab: A 1-to-2 decoder has how many select lines?",
       "choices": [
         "2",
         "1",
@@ -964,11 +1456,17 @@
       "answer": 1,
       "explain": "1 selects address 2 ones-hot lines.",
       "difficulty": "hard",
-      "id": "blkdiag_hard_23"
+      "id": "blkdiag_hard_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_hard_23.mp4",
+        "poster": "media/images/blkdiag_hard_23-frame.png",
+        "figure": "media/images/blkdiag_hard_23.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "A mux with 2 data inputs needs how many select bits?",
+      "prompt": "For the Block-diagram integrator lab: A mux with 2 data inputs needs how many select bits?",
       "choices": [
         "0",
         "1",
@@ -978,11 +1476,17 @@
       "answer": 1,
       "explain": "log2(2) = 1.",
       "difficulty": "hard",
-      "id": "blkdiag_hard_24"
+      "id": "blkdiag_hard_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_hard_24.mp4",
+        "poster": "media/images/blkdiag_hard_24-frame.png",
+        "figure": "media/images/blkdiag_hard_24.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "A 2-to-4 decoder has how many select lines?",
+      "prompt": "For the Block-diagram integrator lab: A 2-to-4 decoder has how many select lines?",
       "choices": [
         "4",
         "2",
@@ -992,11 +1496,17 @@
       "answer": 1,
       "explain": "2 selects address 4 ones-hot lines.",
       "difficulty": "hard",
-      "id": "blkdiag_hard_25"
+      "id": "blkdiag_hard_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_hard_25.mp4",
+        "poster": "media/images/blkdiag_hard_25-frame.png",
+        "figure": "media/images/blkdiag_hard_25.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "A mux with 4 data inputs needs how many select bits?",
+      "prompt": "For the Block-diagram integrator lab: A mux with 4 data inputs needs how many select bits?",
       "choices": [
         "1",
         "2",
@@ -1006,11 +1516,17 @@
       "answer": 1,
       "explain": "log2(4) = 2.",
       "difficulty": "hard",
-      "id": "blkdiag_hard_26"
+      "id": "blkdiag_hard_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_hard_26.mp4",
+        "poster": "media/images/blkdiag_hard_26-frame.png",
+        "figure": "media/images/blkdiag_hard_26.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "A 3-to-8 decoder has how many select lines?",
+      "prompt": "For the Block-diagram integrator lab: A 3-to-8 decoder has how many select lines?",
       "choices": [
         "8",
         "3",
@@ -1020,11 +1536,17 @@
       "answer": 1,
       "explain": "3 selects address 8 ones-hot lines.",
       "difficulty": "hard",
-      "id": "blkdiag_hard_27"
+      "id": "blkdiag_hard_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_hard_27.mp4",
+        "poster": "media/images/blkdiag_hard_27-frame.png",
+        "figure": "media/images/blkdiag_hard_27.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "A mux with 8 data inputs needs how many select bits?",
+      "prompt": "For the Block-diagram integrator lab: A mux with 8 data inputs needs how many select bits?",
       "choices": [
         "2",
         "3",
@@ -1034,11 +1556,17 @@
       "answer": 1,
       "explain": "log2(8) = 3.",
       "difficulty": "hard",
-      "id": "blkdiag_hard_28"
+      "id": "blkdiag_hard_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_hard_28.mp4",
+        "poster": "media/images/blkdiag_hard_28-frame.png",
+        "figure": "media/images/blkdiag_hard_28.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "A 4-to-16 decoder has how many select lines?",
+      "prompt": "For the Block-diagram integrator lab: A 4-to-16 decoder has how many select lines?",
       "choices": [
         "16",
         "4",
@@ -1048,11 +1576,17 @@
       "answer": 1,
       "explain": "4 selects address 16 ones-hot lines.",
       "difficulty": "hard",
-      "id": "blkdiag_hard_29"
+      "id": "blkdiag_hard_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_hard_29.mp4",
+        "poster": "media/images/blkdiag_hard_29-frame.png",
+        "figure": "media/images/blkdiag_hard_29.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "A mux with 16 data inputs needs how many select bits?",
+      "prompt": "For the Block-diagram integrator lab: A mux with 16 data inputs needs how many select bits?",
       "choices": [
         "3",
         "4",
@@ -1062,7 +1596,13 @@
       "answer": 1,
       "explain": "log2(16) = 4.",
       "difficulty": "hard",
-      "id": "blkdiag_hard_30"
+      "id": "blkdiag_hard_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/blkdiag_hard_30.mp4",
+        "poster": "media/images/blkdiag_hard_30-frame.png",
+        "figure": "media/images/blkdiag_hard_30.png"
+      }
     }
   ]
 }

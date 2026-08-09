@@ -14,7 +14,13 @@
       ],
       "answer": 0,
       "explain": "Pattern in serial input.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_easy_01.mp4",
+        "poster": "media/images/seqdet_easy_01-frame.png",
+        "figure": "media/images/seqdet_easy_01.png"
+      }
     },
     {
       "id": "seqdet_easy_02",
@@ -28,7 +34,13 @@
       ],
       "answer": 0,
       "explain": "Z on final matching bit.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_easy_02.mp4",
+        "poster": "media/images/seqdet_easy_02-frame.png",
+        "figure": "media/images/seqdet_easy_02.png"
+      }
     },
     {
       "id": "seqdet_easy_03",
@@ -42,7 +54,13 @@
       ],
       "answer": 0,
       "explain": "Reuse matched suffix.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_easy_03.mp4",
+        "poster": "media/images/seqdet_easy_03-frame.png",
+        "figure": "media/images/seqdet_easy_03.png"
+      }
     },
     {
       "id": "seqdet_easy_04",
@@ -50,7 +68,515 @@
       "prompt": "Moore detectors often add a dedicated detect state where Z stays high.",
       "answer": true,
       "explain": "Prefix recovery jumps to the longest proper prefix — not always S0.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_easy_04.mp4",
+        "poster": "media/images/seqdet_easy_04-frame.png",
+        "figure": "media/images/seqdet_easy_04.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Sequence detector: Minimum bits to encode 2 states (binary) is…",
+      "choices": [
+        "2",
+        "1",
+        "4",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(2)) = 1.",
+      "difficulty": "easy",
+      "id": "seqdet_easy_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_easy_05.mp4",
+        "poster": "media/images/seqdet_easy_05-frame.png",
+        "figure": "media/images/seqdet_easy_05.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Sequence detector: One-hot encoding of 2 states uses how many FFs?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "easy",
+      "id": "seqdet_easy_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_easy_06.mp4",
+        "poster": "media/images/seqdet_easy_06-frame.png",
+        "figure": "media/images/seqdet_easy_06.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Sequence detector: Minimum bits to encode 3 states (binary) is…",
+      "choices": [
+        "3",
+        "2",
+        "8",
+        "2"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(3)) = 2.",
+      "difficulty": "easy",
+      "id": "seqdet_easy_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_easy_07.mp4",
+        "poster": "media/images/seqdet_easy_07-frame.png",
+        "figure": "media/images/seqdet_easy_07.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Sequence detector: One-hot encoding of 3 states uses how many FFs?",
+      "choices": [
+        "2",
+        "3",
+        "6",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "easy",
+      "id": "seqdet_easy_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_easy_08.mp4",
+        "poster": "media/images/seqdet_easy_08-frame.png",
+        "figure": "media/images/seqdet_easy_08.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Sequence detector: Minimum bits to encode 4 states (binary) is…",
+      "choices": [
+        "4",
+        "2",
+        "16",
+        "3"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(4)) = 2.",
+      "difficulty": "easy",
+      "id": "seqdet_easy_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_easy_09.mp4",
+        "poster": "media/images/seqdet_easy_09-frame.png",
+        "figure": "media/images/seqdet_easy_09.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Sequence detector: One-hot encoding of 4 states uses how many FFs?",
+      "choices": [
+        "2",
+        "4",
+        "8",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "easy",
+      "id": "seqdet_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_easy_10.mp4",
+        "poster": "media/images/seqdet_easy_10-frame.png",
+        "figure": "media/images/seqdet_easy_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Sequence detector: Minimum bits to encode 5 states (binary) is…",
+      "choices": [
+        "5",
+        "3",
+        "32",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(5)) = 3.",
+      "difficulty": "easy",
+      "id": "seqdet_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_easy_11.mp4",
+        "poster": "media/images/seqdet_easy_11-frame.png",
+        "figure": "media/images/seqdet_easy_11.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Sequence detector: One-hot encoding of 5 states uses how many FFs?",
+      "choices": [
+        "3",
+        "5",
+        "10",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "easy",
+      "id": "seqdet_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_easy_12.mp4",
+        "poster": "media/images/seqdet_easy_12-frame.png",
+        "figure": "media/images/seqdet_easy_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Sequence detector: Minimum bits to encode 6 states (binary) is…",
+      "choices": [
+        "6",
+        "3",
+        "64",
+        "5"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(6)) = 3.",
+      "difficulty": "easy",
+      "id": "seqdet_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_easy_13.mp4",
+        "poster": "media/images/seqdet_easy_13-frame.png",
+        "figure": "media/images/seqdet_easy_13.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Sequence detector: One-hot encoding of 6 states uses how many FFs?",
+      "choices": [
+        "3",
+        "6",
+        "12",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "easy",
+      "id": "seqdet_easy_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_easy_14.mp4",
+        "poster": "media/images/seqdet_easy_14-frame.png",
+        "figure": "media/images/seqdet_easy_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Sequence detector: Minimum bits to encode 7 states (binary) is…",
+      "choices": [
+        "7",
+        "3",
+        "128",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(7)) = 3.",
+      "difficulty": "easy",
+      "id": "seqdet_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_easy_15.mp4",
+        "poster": "media/images/seqdet_easy_15-frame.png",
+        "figure": "media/images/seqdet_easy_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Sequence detector: One-hot encoding of 7 states uses how many FFs?",
+      "choices": [
+        "3",
+        "7",
+        "14",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "easy",
+      "id": "seqdet_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_easy_16.mp4",
+        "poster": "media/images/seqdet_easy_16-frame.png",
+        "figure": "media/images/seqdet_easy_16.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Sequence detector: Minimum bits to encode 8 states (binary) is…",
+      "choices": [
+        "8",
+        "3",
+        "256",
+        "7"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(8)) = 3.",
+      "difficulty": "easy",
+      "id": "seqdet_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_easy_17.mp4",
+        "poster": "media/images/seqdet_easy_17-frame.png",
+        "figure": "media/images/seqdet_easy_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Sequence detector: One-hot encoding of 8 states uses how many FFs?",
+      "choices": [
+        "3",
+        "8",
+        "16",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "easy",
+      "id": "seqdet_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_easy_18.mp4",
+        "poster": "media/images/seqdet_easy_18-frame.png",
+        "figure": "media/images/seqdet_easy_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Sequence detector: Minimum bits to encode 9 states (binary) is…",
+      "choices": [
+        "9",
+        "4",
+        "512",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(9)) = 4.",
+      "difficulty": "easy",
+      "id": "seqdet_easy_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_easy_19.mp4",
+        "poster": "media/images/seqdet_easy_19-frame.png",
+        "figure": "media/images/seqdet_easy_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Sequence detector: One-hot encoding of 9 states uses how many FFs?",
+      "choices": [
+        "4",
+        "9",
+        "18",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "easy",
+      "id": "seqdet_easy_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_easy_20.mp4",
+        "poster": "media/images/seqdet_easy_20-frame.png",
+        "figure": "media/images/seqdet_easy_20.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Sequence detector: One-hot often simplifies next-state logic at the cost of more FFs.",
+      "answer": true,
+      "explain": "Common FPGA style.",
+      "difficulty": "easy",
+      "id": "seqdet_easy_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_easy_21.mp4",
+        "poster": "media/images/seqdet_easy_21-frame.png",
+        "figure": "media/images/seqdet_easy_21.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Sequence detector: Illegal one-hot codes should be handled safely.",
+      "answer": true,
+      "explain": "Avoid lockup.",
+      "difficulty": "easy",
+      "id": "seqdet_easy_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_easy_22.mp4",
+        "poster": "media/images/seqdet_easy_22-frame.png",
+        "figure": "media/images/seqdet_easy_22.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Sequence detector: AND(A=0, B=0) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 0,
+      "explain": "AND truth cell → 0.",
+      "difficulty": "easy",
+      "id": "seqdet_easy_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_easy_23.mp4",
+        "poster": "media/images/seqdet_easy_23-frame.png",
+        "figure": "media/images/seqdet_easy_23.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Sequence detector: AND(A=0, B=1) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 0,
+      "explain": "AND truth cell → 0.",
+      "difficulty": "easy",
+      "id": "seqdet_easy_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_easy_24.mp4",
+        "poster": "media/images/seqdet_easy_24-frame.png",
+        "figure": "media/images/seqdet_easy_24.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Sequence detector: AND(A=1, B=0) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 0,
+      "explain": "AND truth cell → 0.",
+      "difficulty": "easy",
+      "id": "seqdet_easy_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_easy_25.mp4",
+        "poster": "media/images/seqdet_easy_25-frame.png",
+        "figure": "media/images/seqdet_easy_25.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Sequence detector: AND(A=1, B=1) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 1,
+      "explain": "AND truth cell → 1.",
+      "difficulty": "easy",
+      "id": "seqdet_easy_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_easy_26.mp4",
+        "poster": "media/images/seqdet_easy_26-frame.png",
+        "figure": "media/images/seqdet_easy_26.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Sequence detector: A 2-input AND has four truth-table rows.",
+      "answer": true,
+      "explain": "Two inputs → 2² = 4 combinations.",
+      "difficulty": "easy",
+      "id": "seqdet_easy_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_easy_27.mp4",
+        "poster": "media/images/seqdet_easy_27-frame.png",
+        "figure": "media/images/seqdet_easy_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Sequence detector: OR(A=0, B=0) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 0,
+      "explain": "OR truth cell → 0.",
+      "difficulty": "easy",
+      "id": "seqdet_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_easy_28.mp4",
+        "poster": "media/images/seqdet_easy_28-frame.png",
+        "figure": "media/images/seqdet_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Sequence detector: OR(A=0, B=1) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 1,
+      "explain": "OR truth cell → 1.",
+      "difficulty": "easy",
+      "id": "seqdet_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_easy_29.mp4",
+        "poster": "media/images/seqdet_easy_29-frame.png",
+        "figure": "media/images/seqdet_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Sequence detector: OR(A=1, B=0) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 1,
+      "explain": "OR truth cell → 1.",
+      "difficulty": "easy",
+      "id": "seqdet_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_easy_30.mp4",
+        "poster": "media/images/seqdet_easy_30-frame.png",
+        "figure": "media/images/seqdet_easy_30.png"
+      }
     },
     {
       "id": "seqdet_medium_01",
@@ -64,7 +590,13 @@
       ],
       "answer": 0,
       "explain": "Reuse partial progress; do not waste matches.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_medium_01.mp4",
+        "poster": "media/images/seqdet_medium_01-frame.png",
+        "figure": "media/images/seqdet_medium_01.png"
+      }
     },
     {
       "id": "seqdet_medium_02",
@@ -78,7 +610,13 @@
       ],
       "answer": 0,
       "explain": "Timing and overlap are part of the spec.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_medium_02.mp4",
+        "poster": "media/images/seqdet_medium_02-frame.png",
+        "figure": "media/images/seqdet_medium_02.png"
+      }
     },
     {
       "id": "seqdet_medium_03",
@@ -92,7 +630,13 @@
       ],
       "answer": 0,
       "explain": "Prefix length of the target.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_medium_03.mp4",
+        "poster": "media/images/seqdet_medium_03-frame.png",
+        "figure": "media/images/seqdet_medium_03.png"
+      }
     },
     {
       "id": "seqdet_medium_04",
@@ -100,7 +644,515 @@
       "prompt": "Stream 1011 yields Z history 0,0,0,1 in the Mealy starter.",
       "answer": true,
       "explain": "Mealy asserts on the completing bit; overlap is a real pitfall.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_medium_04.mp4",
+        "poster": "media/images/seqdet_medium_04-frame.png",
+        "figure": "media/images/seqdet_medium_04.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Sequence detector, minimum bits to encode 2 states (binary) is…",
+      "choices": [
+        "2",
+        "1",
+        "4",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(2)) = 1.",
+      "difficulty": "medium",
+      "id": "seqdet_medium_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_medium_05.mp4",
+        "poster": "media/images/seqdet_medium_05-frame.png",
+        "figure": "media/images/seqdet_medium_05.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Sequence detector, one-hot encoding of 2 states uses how many FFs?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "medium",
+      "id": "seqdet_medium_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_medium_06.mp4",
+        "poster": "media/images/seqdet_medium_06-frame.png",
+        "figure": "media/images/seqdet_medium_06.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Sequence detector, minimum bits to encode 3 states (binary) is…",
+      "choices": [
+        "3",
+        "2",
+        "8",
+        "2"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(3)) = 2.",
+      "difficulty": "medium",
+      "id": "seqdet_medium_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_medium_07.mp4",
+        "poster": "media/images/seqdet_medium_07-frame.png",
+        "figure": "media/images/seqdet_medium_07.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Sequence detector, one-hot encoding of 3 states uses how many FFs?",
+      "choices": [
+        "2",
+        "3",
+        "6",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "medium",
+      "id": "seqdet_medium_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_medium_08.mp4",
+        "poster": "media/images/seqdet_medium_08-frame.png",
+        "figure": "media/images/seqdet_medium_08.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Sequence detector, minimum bits to encode 4 states (binary) is…",
+      "choices": [
+        "4",
+        "2",
+        "16",
+        "3"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(4)) = 2.",
+      "difficulty": "medium",
+      "id": "seqdet_medium_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_medium_09.mp4",
+        "poster": "media/images/seqdet_medium_09-frame.png",
+        "figure": "media/images/seqdet_medium_09.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Sequence detector, one-hot encoding of 4 states uses how many FFs?",
+      "choices": [
+        "2",
+        "4",
+        "8",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "medium",
+      "id": "seqdet_medium_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_medium_10.mp4",
+        "poster": "media/images/seqdet_medium_10-frame.png",
+        "figure": "media/images/seqdet_medium_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Sequence detector, minimum bits to encode 5 states (binary) is…",
+      "choices": [
+        "5",
+        "3",
+        "32",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(5)) = 3.",
+      "difficulty": "medium",
+      "id": "seqdet_medium_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_medium_11.mp4",
+        "poster": "media/images/seqdet_medium_11-frame.png",
+        "figure": "media/images/seqdet_medium_11.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Sequence detector, one-hot encoding of 5 states uses how many FFs?",
+      "choices": [
+        "3",
+        "5",
+        "10",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "medium",
+      "id": "seqdet_medium_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_medium_12.mp4",
+        "poster": "media/images/seqdet_medium_12-frame.png",
+        "figure": "media/images/seqdet_medium_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Sequence detector, minimum bits to encode 6 states (binary) is…",
+      "choices": [
+        "6",
+        "3",
+        "64",
+        "5"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(6)) = 3.",
+      "difficulty": "medium",
+      "id": "seqdet_medium_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_medium_13.mp4",
+        "poster": "media/images/seqdet_medium_13-frame.png",
+        "figure": "media/images/seqdet_medium_13.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Sequence detector, one-hot encoding of 6 states uses how many FFs?",
+      "choices": [
+        "3",
+        "6",
+        "12",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "medium",
+      "id": "seqdet_medium_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_medium_14.mp4",
+        "poster": "media/images/seqdet_medium_14-frame.png",
+        "figure": "media/images/seqdet_medium_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Sequence detector, minimum bits to encode 7 states (binary) is…",
+      "choices": [
+        "7",
+        "3",
+        "128",
+        "6"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(7)) = 3.",
+      "difficulty": "medium",
+      "id": "seqdet_medium_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_medium_15.mp4",
+        "poster": "media/images/seqdet_medium_15-frame.png",
+        "figure": "media/images/seqdet_medium_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Sequence detector, one-hot encoding of 7 states uses how many FFs?",
+      "choices": [
+        "3",
+        "7",
+        "14",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "medium",
+      "id": "seqdet_medium_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_medium_16.mp4",
+        "poster": "media/images/seqdet_medium_16-frame.png",
+        "figure": "media/images/seqdet_medium_16.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Sequence detector, minimum bits to encode 8 states (binary) is…",
+      "choices": [
+        "8",
+        "3",
+        "256",
+        "7"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(8)) = 3.",
+      "difficulty": "medium",
+      "id": "seqdet_medium_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_medium_17.mp4",
+        "poster": "media/images/seqdet_medium_17-frame.png",
+        "figure": "media/images/seqdet_medium_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Sequence detector, one-hot encoding of 8 states uses how many FFs?",
+      "choices": [
+        "3",
+        "8",
+        "16",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "medium",
+      "id": "seqdet_medium_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_medium_18.mp4",
+        "poster": "media/images/seqdet_medium_18-frame.png",
+        "figure": "media/images/seqdet_medium_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Sequence detector, minimum bits to encode 9 states (binary) is…",
+      "choices": [
+        "9",
+        "4",
+        "512",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "ceil(log2(9)) = 4.",
+      "difficulty": "medium",
+      "id": "seqdet_medium_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_medium_19.mp4",
+        "poster": "media/images/seqdet_medium_19-frame.png",
+        "figure": "media/images/seqdet_medium_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Sequence detector, one-hot encoding of 9 states uses how many FFs?",
+      "choices": [
+        "4",
+        "9",
+        "18",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "One FF per state.",
+      "difficulty": "medium",
+      "id": "seqdet_medium_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_medium_20.mp4",
+        "poster": "media/images/seqdet_medium_20-frame.png",
+        "figure": "media/images/seqdet_medium_20.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Sequence detector, one-hot often simplifies next-state logic at the cost of more FFs.",
+      "answer": true,
+      "explain": "Common FPGA style.",
+      "difficulty": "medium",
+      "id": "seqdet_medium_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_medium_21.mp4",
+        "poster": "media/images/seqdet_medium_21-frame.png",
+        "figure": "media/images/seqdet_medium_21.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Sequence detector, illegal one-hot codes should be handled safely.",
+      "answer": true,
+      "explain": "Avoid lockup.",
+      "difficulty": "medium",
+      "id": "seqdet_medium_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_medium_22.mp4",
+        "poster": "media/images/seqdet_medium_22-frame.png",
+        "figure": "media/images/seqdet_medium_22.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Sequence detector, aND(A=0, B=0) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 0,
+      "explain": "AND truth cell → 0.",
+      "difficulty": "medium",
+      "id": "seqdet_medium_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_medium_23.mp4",
+        "poster": "media/images/seqdet_medium_23-frame.png",
+        "figure": "media/images/seqdet_medium_23.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Sequence detector, aND(A=0, B=1) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 0,
+      "explain": "AND truth cell → 0.",
+      "difficulty": "medium",
+      "id": "seqdet_medium_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_medium_24.mp4",
+        "poster": "media/images/seqdet_medium_24-frame.png",
+        "figure": "media/images/seqdet_medium_24.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Sequence detector, aND(A=1, B=0) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 0,
+      "explain": "AND truth cell → 0.",
+      "difficulty": "medium",
+      "id": "seqdet_medium_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_medium_25.mp4",
+        "poster": "media/images/seqdet_medium_25-frame.png",
+        "figure": "media/images/seqdet_medium_25.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Sequence detector, aND(A=1, B=1) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 1,
+      "explain": "AND truth cell → 1.",
+      "difficulty": "medium",
+      "id": "seqdet_medium_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_medium_26.mp4",
+        "poster": "media/images/seqdet_medium_26-frame.png",
+        "figure": "media/images/seqdet_medium_26.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "In Sequence detector, a 2-input AND has four truth-table rows.",
+      "answer": true,
+      "explain": "Two inputs → 2² = 4 combinations.",
+      "difficulty": "medium",
+      "id": "seqdet_medium_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_medium_27.mp4",
+        "poster": "media/images/seqdet_medium_27-frame.png",
+        "figure": "media/images/seqdet_medium_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Sequence detector, oR(A=0, B=0) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 0,
+      "explain": "OR truth cell → 0.",
+      "difficulty": "medium",
+      "id": "seqdet_medium_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_medium_28.mp4",
+        "poster": "media/images/seqdet_medium_28-frame.png",
+        "figure": "media/images/seqdet_medium_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Sequence detector, oR(A=0, B=1) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 1,
+      "explain": "OR truth cell → 1.",
+      "difficulty": "medium",
+      "id": "seqdet_medium_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_medium_29.mp4",
+        "poster": "media/images/seqdet_medium_29-frame.png",
+        "figure": "media/images/seqdet_medium_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "In Sequence detector, oR(A=1, B=0) equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "B"
+      ],
+      "answer": 1,
+      "explain": "OR truth cell → 1.",
+      "difficulty": "medium",
+      "id": "seqdet_medium_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_medium_30.mp4",
+        "poster": "media/images/seqdet_medium_30-frame.png",
+        "figure": "media/images/seqdet_medium_30.png"
+      }
     },
     {
       "id": "seqdet_hard_01",
@@ -114,7 +1166,13 @@
       ],
       "answer": 0,
       "explain": "Suffix can begin the next detection.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_hard_01.mp4",
+        "poster": "media/images/seqdet_hard_01-frame.png",
+        "figure": "media/images/seqdet_hard_01.png"
+      }
     },
     {
       "id": "seqdet_hard_02",
@@ -128,7 +1186,13 @@
       ],
       "answer": 0,
       "explain": "Encode, reset, and verify streams.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_hard_02.mp4",
+        "poster": "media/images/seqdet_hard_02-frame.png",
+        "figure": "media/images/seqdet_hard_02.png"
+      }
     },
     {
       "id": "seqdet_hard_03",
@@ -142,7 +1206,13 @@
       ],
       "answer": 0,
       "explain": "Follow the pattern; recover on mismatch.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_hard_03.mp4",
+        "poster": "media/images/seqdet_hard_03-frame.png",
+        "figure": "media/images/seqdet_hard_03.png"
+      }
     },
     {
       "id": "seqdet_hard_04",
@@ -150,703 +1220,17 @@
       "prompt": "Non-overlap vs overlap is a specification choice.",
       "answer": true,
       "explain": "Prefix recovery is not optional for correct overlap behavior.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_hard_04.mp4",
+        "poster": "media/images/seqdet_hard_04-frame.png",
+        "figure": "media/images/seqdet_hard_04.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 2 states (binary) is…",
-      "choices": [
-        "2",
-        "1",
-        "4",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(2)) = 1.",
-      "difficulty": "easy",
-      "id": "seqdet_easy_05"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 2 states uses how many FFs?",
-      "choices": [
-        "1",
-        "2",
-        "4",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "easy",
-      "id": "seqdet_easy_06"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 3 states (binary) is…",
-      "choices": [
-        "3",
-        "2",
-        "8",
-        "2"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(3)) = 2.",
-      "difficulty": "easy",
-      "id": "seqdet_easy_07"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 3 states uses how many FFs?",
-      "choices": [
-        "2",
-        "3",
-        "6",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "easy",
-      "id": "seqdet_easy_08"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 4 states (binary) is…",
-      "choices": [
-        "4",
-        "2",
-        "16",
-        "3"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(4)) = 2.",
-      "difficulty": "easy",
-      "id": "seqdet_easy_09"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 4 states uses how many FFs?",
-      "choices": [
-        "2",
-        "4",
-        "8",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "easy",
-      "id": "seqdet_easy_10"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 5 states (binary) is…",
-      "choices": [
-        "5",
-        "3",
-        "32",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(5)) = 3.",
-      "difficulty": "easy",
-      "id": "seqdet_easy_11"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 5 states uses how many FFs?",
-      "choices": [
-        "3",
-        "5",
-        "10",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "easy",
-      "id": "seqdet_easy_12"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 6 states (binary) is…",
-      "choices": [
-        "6",
-        "3",
-        "64",
-        "5"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(6)) = 3.",
-      "difficulty": "easy",
-      "id": "seqdet_easy_13"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 6 states uses how many FFs?",
-      "choices": [
-        "3",
-        "6",
-        "12",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "easy",
-      "id": "seqdet_easy_14"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 7 states (binary) is…",
-      "choices": [
-        "7",
-        "3",
-        "128",
-        "6"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(7)) = 3.",
-      "difficulty": "easy",
-      "id": "seqdet_easy_15"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 7 states uses how many FFs?",
-      "choices": [
-        "3",
-        "7",
-        "14",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "easy",
-      "id": "seqdet_easy_16"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 8 states (binary) is…",
-      "choices": [
-        "8",
-        "3",
-        "256",
-        "7"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(8)) = 3.",
-      "difficulty": "easy",
-      "id": "seqdet_easy_17"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 8 states uses how many FFs?",
-      "choices": [
-        "3",
-        "8",
-        "16",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "easy",
-      "id": "seqdet_easy_18"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 9 states (binary) is…",
-      "choices": [
-        "9",
-        "4",
-        "512",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(9)) = 4.",
-      "difficulty": "easy",
-      "id": "seqdet_easy_19"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 9 states uses how many FFs?",
-      "choices": [
-        "4",
-        "9",
-        "18",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "easy",
-      "id": "seqdet_easy_20"
-    },
-    {
-      "type": "true_false",
-      "prompt": "One-hot often simplifies next-state logic at the cost of more FFs.",
-      "answer": true,
-      "explain": "Common FPGA style.",
-      "difficulty": "easy",
-      "id": "seqdet_easy_21"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Illegal one-hot codes should be handled safely.",
-      "answer": true,
-      "explain": "Avoid lockup.",
-      "difficulty": "easy",
-      "id": "seqdet_easy_22"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "AND(A=0, B=0) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 0,
-      "explain": "AND truth cell → 0.",
-      "difficulty": "easy",
-      "id": "seqdet_easy_23"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "AND(A=0, B=1) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 0,
-      "explain": "AND truth cell → 0.",
-      "difficulty": "easy",
-      "id": "seqdet_easy_24"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "AND(A=1, B=0) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 0,
-      "explain": "AND truth cell → 0.",
-      "difficulty": "easy",
-      "id": "seqdet_easy_25"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "AND(A=1, B=1) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 1,
-      "explain": "AND truth cell → 1.",
-      "difficulty": "easy",
-      "id": "seqdet_easy_26"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A 2-input AND has four truth-table rows.",
-      "answer": true,
-      "explain": "Two inputs → 2² = 4 combinations.",
-      "difficulty": "easy",
-      "id": "seqdet_easy_27"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "OR(A=0, B=0) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 0,
-      "explain": "OR truth cell → 0.",
-      "difficulty": "easy",
-      "id": "seqdet_easy_28"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "OR(A=0, B=1) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 1,
-      "explain": "OR truth cell → 1.",
-      "difficulty": "easy",
-      "id": "seqdet_easy_29"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "OR(A=1, B=0) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 1,
-      "explain": "OR truth cell → 1.",
-      "difficulty": "easy",
-      "id": "seqdet_easy_30"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 2 states (binary) is…",
-      "choices": [
-        "2",
-        "1",
-        "4",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(2)) = 1.",
-      "difficulty": "medium",
-      "id": "seqdet_medium_05"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 2 states uses how many FFs?",
-      "choices": [
-        "1",
-        "2",
-        "4",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "medium",
-      "id": "seqdet_medium_06"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 3 states (binary) is…",
-      "choices": [
-        "3",
-        "2",
-        "8",
-        "2"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(3)) = 2.",
-      "difficulty": "medium",
-      "id": "seqdet_medium_07"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 3 states uses how many FFs?",
-      "choices": [
-        "2",
-        "3",
-        "6",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "medium",
-      "id": "seqdet_medium_08"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 4 states (binary) is…",
-      "choices": [
-        "4",
-        "2",
-        "16",
-        "3"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(4)) = 2.",
-      "difficulty": "medium",
-      "id": "seqdet_medium_09"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 4 states uses how many FFs?",
-      "choices": [
-        "2",
-        "4",
-        "8",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "medium",
-      "id": "seqdet_medium_10"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 5 states (binary) is…",
-      "choices": [
-        "5",
-        "3",
-        "32",
-        "4"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(5)) = 3.",
-      "difficulty": "medium",
-      "id": "seqdet_medium_11"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 5 states uses how many FFs?",
-      "choices": [
-        "3",
-        "5",
-        "10",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "medium",
-      "id": "seqdet_medium_12"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 6 states (binary) is…",
-      "choices": [
-        "6",
-        "3",
-        "64",
-        "5"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(6)) = 3.",
-      "difficulty": "medium",
-      "id": "seqdet_medium_13"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 6 states uses how many FFs?",
-      "choices": [
-        "3",
-        "6",
-        "12",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "medium",
-      "id": "seqdet_medium_14"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 7 states (binary) is…",
-      "choices": [
-        "7",
-        "3",
-        "128",
-        "6"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(7)) = 3.",
-      "difficulty": "medium",
-      "id": "seqdet_medium_15"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 7 states uses how many FFs?",
-      "choices": [
-        "3",
-        "7",
-        "14",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "medium",
-      "id": "seqdet_medium_16"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 8 states (binary) is…",
-      "choices": [
-        "8",
-        "3",
-        "256",
-        "7"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(8)) = 3.",
-      "difficulty": "medium",
-      "id": "seqdet_medium_17"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 8 states uses how many FFs?",
-      "choices": [
-        "3",
-        "8",
-        "16",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "medium",
-      "id": "seqdet_medium_18"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 9 states (binary) is…",
-      "choices": [
-        "9",
-        "4",
-        "512",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "ceil(log2(9)) = 4.",
-      "difficulty": "medium",
-      "id": "seqdet_medium_19"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "One-hot encoding of 9 states uses how many FFs?",
-      "choices": [
-        "4",
-        "9",
-        "18",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "One FF per state.",
-      "difficulty": "medium",
-      "id": "seqdet_medium_20"
-    },
-    {
-      "type": "true_false",
-      "prompt": "One-hot often simplifies next-state logic at the cost of more FFs.",
-      "answer": true,
-      "explain": "Common FPGA style.",
-      "difficulty": "medium",
-      "id": "seqdet_medium_21"
-    },
-    {
-      "type": "true_false",
-      "prompt": "Illegal one-hot codes should be handled safely.",
-      "answer": true,
-      "explain": "Avoid lockup.",
-      "difficulty": "medium",
-      "id": "seqdet_medium_22"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "AND(A=0, B=0) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 0,
-      "explain": "AND truth cell → 0.",
-      "difficulty": "medium",
-      "id": "seqdet_medium_23"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "AND(A=0, B=1) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 0,
-      "explain": "AND truth cell → 0.",
-      "difficulty": "medium",
-      "id": "seqdet_medium_24"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "AND(A=1, B=0) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 0,
-      "explain": "AND truth cell → 0.",
-      "difficulty": "medium",
-      "id": "seqdet_medium_25"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "AND(A=1, B=1) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 1,
-      "explain": "AND truth cell → 1.",
-      "difficulty": "medium",
-      "id": "seqdet_medium_26"
-    },
-    {
-      "type": "true_false",
-      "prompt": "A 2-input AND has four truth-table rows.",
-      "answer": true,
-      "explain": "Two inputs → 2² = 4 combinations.",
-      "difficulty": "medium",
-      "id": "seqdet_medium_27"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "OR(A=0, B=0) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 0,
-      "explain": "OR truth cell → 0.",
-      "difficulty": "medium",
-      "id": "seqdet_medium_28"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "OR(A=0, B=1) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 1,
-      "explain": "OR truth cell → 1.",
-      "difficulty": "medium",
-      "id": "seqdet_medium_29"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "OR(A=1, B=0) equals…",
-      "choices": [
-        "0",
-        "1",
-        "A",
-        "B"
-      ],
-      "answer": 1,
-      "explain": "OR truth cell → 1.",
-      "difficulty": "medium",
-      "id": "seqdet_medium_30"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 2 states (binary) is…",
+      "prompt": "For the Sequence detector lab: Minimum bits to encode 2 states (binary) is…",
       "choices": [
         "2",
         "1",
@@ -856,11 +1240,17 @@
       "answer": 1,
       "explain": "ceil(log2(2)) = 1.",
       "difficulty": "hard",
-      "id": "seqdet_hard_05"
+      "id": "seqdet_hard_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_hard_05.mp4",
+        "poster": "media/images/seqdet_hard_05-frame.png",
+        "figure": "media/images/seqdet_hard_05.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "One-hot encoding of 2 states uses how many FFs?",
+      "prompt": "For the Sequence detector lab: One-hot encoding of 2 states uses how many FFs?",
       "choices": [
         "1",
         "2",
@@ -870,11 +1260,17 @@
       "answer": 1,
       "explain": "One FF per state.",
       "difficulty": "hard",
-      "id": "seqdet_hard_06"
+      "id": "seqdet_hard_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_hard_06.mp4",
+        "poster": "media/images/seqdet_hard_06-frame.png",
+        "figure": "media/images/seqdet_hard_06.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 3 states (binary) is…",
+      "prompt": "For the Sequence detector lab: Minimum bits to encode 3 states (binary) is…",
       "choices": [
         "3",
         "2",
@@ -884,11 +1280,17 @@
       "answer": 1,
       "explain": "ceil(log2(3)) = 2.",
       "difficulty": "hard",
-      "id": "seqdet_hard_07"
+      "id": "seqdet_hard_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_hard_07.mp4",
+        "poster": "media/images/seqdet_hard_07-frame.png",
+        "figure": "media/images/seqdet_hard_07.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "One-hot encoding of 3 states uses how many FFs?",
+      "prompt": "For the Sequence detector lab: One-hot encoding of 3 states uses how many FFs?",
       "choices": [
         "2",
         "3",
@@ -898,11 +1300,17 @@
       "answer": 1,
       "explain": "One FF per state.",
       "difficulty": "hard",
-      "id": "seqdet_hard_08"
+      "id": "seqdet_hard_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_hard_08.mp4",
+        "poster": "media/images/seqdet_hard_08-frame.png",
+        "figure": "media/images/seqdet_hard_08.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 4 states (binary) is…",
+      "prompt": "For the Sequence detector lab: Minimum bits to encode 4 states (binary) is…",
       "choices": [
         "4",
         "2",
@@ -912,11 +1320,17 @@
       "answer": 1,
       "explain": "ceil(log2(4)) = 2.",
       "difficulty": "hard",
-      "id": "seqdet_hard_09"
+      "id": "seqdet_hard_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_hard_09.mp4",
+        "poster": "media/images/seqdet_hard_09-frame.png",
+        "figure": "media/images/seqdet_hard_09.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "One-hot encoding of 4 states uses how many FFs?",
+      "prompt": "For the Sequence detector lab: One-hot encoding of 4 states uses how many FFs?",
       "choices": [
         "2",
         "4",
@@ -926,11 +1340,17 @@
       "answer": 1,
       "explain": "One FF per state.",
       "difficulty": "hard",
-      "id": "seqdet_hard_10"
+      "id": "seqdet_hard_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_hard_10.mp4",
+        "poster": "media/images/seqdet_hard_10-frame.png",
+        "figure": "media/images/seqdet_hard_10.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 5 states (binary) is…",
+      "prompt": "For the Sequence detector lab: Minimum bits to encode 5 states (binary) is…",
       "choices": [
         "5",
         "3",
@@ -940,11 +1360,17 @@
       "answer": 1,
       "explain": "ceil(log2(5)) = 3.",
       "difficulty": "hard",
-      "id": "seqdet_hard_11"
+      "id": "seqdet_hard_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_hard_11.mp4",
+        "poster": "media/images/seqdet_hard_11-frame.png",
+        "figure": "media/images/seqdet_hard_11.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "One-hot encoding of 5 states uses how many FFs?",
+      "prompt": "For the Sequence detector lab: One-hot encoding of 5 states uses how many FFs?",
       "choices": [
         "3",
         "5",
@@ -954,11 +1380,17 @@
       "answer": 1,
       "explain": "One FF per state.",
       "difficulty": "hard",
-      "id": "seqdet_hard_12"
+      "id": "seqdet_hard_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_hard_12.mp4",
+        "poster": "media/images/seqdet_hard_12-frame.png",
+        "figure": "media/images/seqdet_hard_12.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 6 states (binary) is…",
+      "prompt": "For the Sequence detector lab: Minimum bits to encode 6 states (binary) is…",
       "choices": [
         "6",
         "3",
@@ -968,11 +1400,17 @@
       "answer": 1,
       "explain": "ceil(log2(6)) = 3.",
       "difficulty": "hard",
-      "id": "seqdet_hard_13"
+      "id": "seqdet_hard_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_hard_13.mp4",
+        "poster": "media/images/seqdet_hard_13-frame.png",
+        "figure": "media/images/seqdet_hard_13.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "One-hot encoding of 6 states uses how many FFs?",
+      "prompt": "For the Sequence detector lab: One-hot encoding of 6 states uses how many FFs?",
       "choices": [
         "3",
         "6",
@@ -982,11 +1420,17 @@
       "answer": 1,
       "explain": "One FF per state.",
       "difficulty": "hard",
-      "id": "seqdet_hard_14"
+      "id": "seqdet_hard_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_hard_14.mp4",
+        "poster": "media/images/seqdet_hard_14-frame.png",
+        "figure": "media/images/seqdet_hard_14.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 7 states (binary) is…",
+      "prompt": "For the Sequence detector lab: Minimum bits to encode 7 states (binary) is…",
       "choices": [
         "7",
         "3",
@@ -996,11 +1440,17 @@
       "answer": 1,
       "explain": "ceil(log2(7)) = 3.",
       "difficulty": "hard",
-      "id": "seqdet_hard_15"
+      "id": "seqdet_hard_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_hard_15.mp4",
+        "poster": "media/images/seqdet_hard_15-frame.png",
+        "figure": "media/images/seqdet_hard_15.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "One-hot encoding of 7 states uses how many FFs?",
+      "prompt": "For the Sequence detector lab: One-hot encoding of 7 states uses how many FFs?",
       "choices": [
         "3",
         "7",
@@ -1010,11 +1460,17 @@
       "answer": 1,
       "explain": "One FF per state.",
       "difficulty": "hard",
-      "id": "seqdet_hard_16"
+      "id": "seqdet_hard_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_hard_16.mp4",
+        "poster": "media/images/seqdet_hard_16-frame.png",
+        "figure": "media/images/seqdet_hard_16.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 8 states (binary) is…",
+      "prompt": "For the Sequence detector lab: Minimum bits to encode 8 states (binary) is…",
       "choices": [
         "8",
         "3",
@@ -1024,11 +1480,17 @@
       "answer": 1,
       "explain": "ceil(log2(8)) = 3.",
       "difficulty": "hard",
-      "id": "seqdet_hard_17"
+      "id": "seqdet_hard_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_hard_17.mp4",
+        "poster": "media/images/seqdet_hard_17-frame.png",
+        "figure": "media/images/seqdet_hard_17.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "One-hot encoding of 8 states uses how many FFs?",
+      "prompt": "For the Sequence detector lab: One-hot encoding of 8 states uses how many FFs?",
       "choices": [
         "3",
         "8",
@@ -1038,11 +1500,17 @@
       "answer": 1,
       "explain": "One FF per state.",
       "difficulty": "hard",
-      "id": "seqdet_hard_18"
+      "id": "seqdet_hard_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_hard_18.mp4",
+        "poster": "media/images/seqdet_hard_18-frame.png",
+        "figure": "media/images/seqdet_hard_18.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Minimum bits to encode 9 states (binary) is…",
+      "prompt": "For the Sequence detector lab: Minimum bits to encode 9 states (binary) is…",
       "choices": [
         "9",
         "4",
@@ -1052,11 +1520,17 @@
       "answer": 1,
       "explain": "ceil(log2(9)) = 4.",
       "difficulty": "hard",
-      "id": "seqdet_hard_19"
+      "id": "seqdet_hard_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_hard_19.mp4",
+        "poster": "media/images/seqdet_hard_19-frame.png",
+        "figure": "media/images/seqdet_hard_19.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "One-hot encoding of 9 states uses how many FFs?",
+      "prompt": "For the Sequence detector lab: One-hot encoding of 9 states uses how many FFs?",
       "choices": [
         "4",
         "9",
@@ -1066,27 +1540,45 @@
       "answer": 1,
       "explain": "One FF per state.",
       "difficulty": "hard",
-      "id": "seqdet_hard_20"
+      "id": "seqdet_hard_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_hard_20.mp4",
+        "poster": "media/images/seqdet_hard_20-frame.png",
+        "figure": "media/images/seqdet_hard_20.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "One-hot often simplifies next-state logic at the cost of more FFs.",
+      "prompt": "For the Sequence detector lab: One-hot often simplifies next-state logic at the cost of more FFs.",
       "answer": true,
       "explain": "Common FPGA style.",
       "difficulty": "hard",
-      "id": "seqdet_hard_21"
+      "id": "seqdet_hard_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_hard_21.mp4",
+        "poster": "media/images/seqdet_hard_21-frame.png",
+        "figure": "media/images/seqdet_hard_21.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "Illegal one-hot codes should be handled safely.",
+      "prompt": "For the Sequence detector lab: Illegal one-hot codes should be handled safely.",
       "answer": true,
       "explain": "Avoid lockup.",
       "difficulty": "hard",
-      "id": "seqdet_hard_22"
+      "id": "seqdet_hard_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_hard_22.mp4",
+        "poster": "media/images/seqdet_hard_22-frame.png",
+        "figure": "media/images/seqdet_hard_22.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "AND(A=0, B=0) equals…",
+      "prompt": "For the Sequence detector lab: AND(A=0, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -1096,11 +1588,17 @@
       "answer": 0,
       "explain": "AND truth cell → 0.",
       "difficulty": "hard",
-      "id": "seqdet_hard_23"
+      "id": "seqdet_hard_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_hard_23.mp4",
+        "poster": "media/images/seqdet_hard_23-frame.png",
+        "figure": "media/images/seqdet_hard_23.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "AND(A=0, B=1) equals…",
+      "prompt": "For the Sequence detector lab: AND(A=0, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -1110,11 +1608,17 @@
       "answer": 0,
       "explain": "AND truth cell → 0.",
       "difficulty": "hard",
-      "id": "seqdet_hard_24"
+      "id": "seqdet_hard_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_hard_24.mp4",
+        "poster": "media/images/seqdet_hard_24-frame.png",
+        "figure": "media/images/seqdet_hard_24.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "AND(A=1, B=0) equals…",
+      "prompt": "For the Sequence detector lab: AND(A=1, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -1124,11 +1628,17 @@
       "answer": 0,
       "explain": "AND truth cell → 0.",
       "difficulty": "hard",
-      "id": "seqdet_hard_25"
+      "id": "seqdet_hard_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_hard_25.mp4",
+        "poster": "media/images/seqdet_hard_25-frame.png",
+        "figure": "media/images/seqdet_hard_25.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "AND(A=1, B=1) equals…",
+      "prompt": "For the Sequence detector lab: AND(A=1, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -1138,19 +1648,31 @@
       "answer": 1,
       "explain": "AND truth cell → 1.",
       "difficulty": "hard",
-      "id": "seqdet_hard_26"
+      "id": "seqdet_hard_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_hard_26.mp4",
+        "poster": "media/images/seqdet_hard_26-frame.png",
+        "figure": "media/images/seqdet_hard_26.png"
+      }
     },
     {
       "type": "true_false",
-      "prompt": "A 2-input AND has four truth-table rows.",
+      "prompt": "For the Sequence detector lab: A 2-input AND has four truth-table rows.",
       "answer": true,
       "explain": "Two inputs → 2² = 4 combinations.",
       "difficulty": "hard",
-      "id": "seqdet_hard_27"
+      "id": "seqdet_hard_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_hard_27.mp4",
+        "poster": "media/images/seqdet_hard_27-frame.png",
+        "figure": "media/images/seqdet_hard_27.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "OR(A=0, B=0) equals…",
+      "prompt": "For the Sequence detector lab: OR(A=0, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -1160,11 +1682,17 @@
       "answer": 0,
       "explain": "OR truth cell → 0.",
       "difficulty": "hard",
-      "id": "seqdet_hard_28"
+      "id": "seqdet_hard_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_hard_28.mp4",
+        "poster": "media/images/seqdet_hard_28-frame.png",
+        "figure": "media/images/seqdet_hard_28.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "OR(A=0, B=1) equals…",
+      "prompt": "For the Sequence detector lab: OR(A=0, B=1) equals…",
       "choices": [
         "0",
         "1",
@@ -1174,11 +1702,17 @@
       "answer": 1,
       "explain": "OR truth cell → 1.",
       "difficulty": "hard",
-      "id": "seqdet_hard_29"
+      "id": "seqdet_hard_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_hard_29.mp4",
+        "poster": "media/images/seqdet_hard_29-frame.png",
+        "figure": "media/images/seqdet_hard_29.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "OR(A=1, B=0) equals…",
+      "prompt": "For the Sequence detector lab: OR(A=1, B=0) equals…",
       "choices": [
         "0",
         "1",
@@ -1188,7 +1722,13 @@
       "answer": 1,
       "explain": "OR truth cell → 1.",
       "difficulty": "hard",
-      "id": "seqdet_hard_30"
+      "id": "seqdet_hard_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/seqdet_hard_30.mp4",
+        "poster": "media/images/seqdet_hard_30-frame.png",
+        "figure": "media/images/seqdet_hard_30.png"
+      }
     }
   ]
 }

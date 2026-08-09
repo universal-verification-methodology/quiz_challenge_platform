@@ -14,7 +14,13 @@
       ],
       "answer": 1,
       "explain": "17 mod 16 = 1.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_easy_01.mp4",
+        "poster": "media/images/overflow_easy_01-frame.png",
+        "figure": "media/images/overflow_easy_01.png"
+      }
     },
     {
       "id": "overflow_easy_02",
@@ -22,7 +28,13 @@
       "prompt": "Unsigned carry and signed overflow are identical flags.",
       "answer": false,
       "explain": "Carry tracks unsigned out-of-range; overflow tracks signed.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_easy_02.mp4",
+        "poster": "media/images/overflow_easy_02-frame.png",
+        "figure": "media/images/overflow_easy_02.png"
+      }
     },
     {
       "id": "overflow_easy_03",
@@ -36,7 +48,13 @@
       ],
       "answer": 1,
       "explain": "Sat clamps; ordinary fixed-width add usually wraps.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_easy_03.mp4",
+        "poster": "media/images/overflow_easy_03-frame.png",
+        "figure": "media/images/overflow_easy_03.png"
+      }
     },
     {
       "id": "overflow_easy_04",
@@ -50,7 +68,533 @@
       ],
       "answer": 1,
       "explain": "Counters commonly count modulo 2^w.",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_easy_04.mp4",
+        "poster": "media/images/overflow_easy_04-frame.png",
+        "figure": "media/images/overflow_easy_04.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 4: 3+5 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 16 → 8.",
+      "difficulty": "easy",
+      "id": "overflow_easy_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_easy_05.mp4",
+        "poster": "media/images/overflow_easy_05-frame.png",
+        "figure": "media/images/overflow_easy_05.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 4: 7+1 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 16 → 8.",
+      "difficulty": "easy",
+      "id": "overflow_easy_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_easy_06.mp4",
+        "poster": "media/images/overflow_easy_06-frame.png",
+        "figure": "media/images/overflow_easy_06.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 4: 9+9 yields…",
+      "choices": [
+        "18",
+        "2",
+        "15",
+        "2"
+      ],
+      "answer": 1,
+      "explain": "Mod 16 → 2.",
+      "difficulty": "easy",
+      "id": "overflow_easy_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_easy_07.mp4",
+        "poster": "media/images/overflow_easy_07-frame.png",
+        "figure": "media/images/overflow_easy_07.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 4: 15+2 yields…",
+      "choices": [
+        "17",
+        "1",
+        "15",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "Mod 16 → 1.",
+      "difficulty": "easy",
+      "id": "overflow_easy_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_easy_08.mp4",
+        "poster": "media/images/overflow_easy_08-frame.png",
+        "figure": "media/images/overflow_easy_08.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 4: 15+1 yields…",
+      "choices": [
+        "16",
+        "0",
+        "15",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 16 → 0.",
+      "difficulty": "easy",
+      "id": "overflow_easy_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_easy_09.mp4",
+        "poster": "media/images/overflow_easy_09-frame.png",
+        "figure": "media/images/overflow_easy_09.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 4: 8+8 yields…",
+      "choices": [
+        "16",
+        "0",
+        "15",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 16 → 0.",
+      "difficulty": "easy",
+      "id": "overflow_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_easy_10.mp4",
+        "poster": "media/images/overflow_easy_10-frame.png",
+        "figure": "media/images/overflow_easy_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 5: 3+5 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Mod 32 → 8.",
+      "difficulty": "easy",
+      "id": "overflow_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_easy_11.mp4",
+        "poster": "media/images/overflow_easy_11-frame.png",
+        "figure": "media/images/overflow_easy_11.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 5: 7+1 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Mod 32 → 8.",
+      "difficulty": "easy",
+      "id": "overflow_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_easy_12.mp4",
+        "poster": "media/images/overflow_easy_12-frame.png",
+        "figure": "media/images/overflow_easy_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 5: 9+9 yields…",
+      "choices": [
+        "18",
+        "18",
+        "18",
+        "2"
+      ],
+      "answer": 1,
+      "explain": "Mod 32 → 18.",
+      "difficulty": "easy",
+      "id": "overflow_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_easy_13.mp4",
+        "poster": "media/images/overflow_easy_13-frame.png",
+        "figure": "media/images/overflow_easy_13.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 5: 15+2 yields…",
+      "choices": [
+        "17",
+        "17",
+        "17",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "Mod 32 → 17.",
+      "difficulty": "easy",
+      "id": "overflow_easy_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_easy_14.mp4",
+        "poster": "media/images/overflow_easy_14-frame.png",
+        "figure": "media/images/overflow_easy_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 5: 31+1 yields…",
+      "choices": [
+        "32",
+        "0",
+        "31",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 32 → 0.",
+      "difficulty": "easy",
+      "id": "overflow_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_easy_15.mp4",
+        "poster": "media/images/overflow_easy_15-frame.png",
+        "figure": "media/images/overflow_easy_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 5: 16+16 yields…",
+      "choices": [
+        "32",
+        "0",
+        "31",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 32 → 0.",
+      "difficulty": "easy",
+      "id": "overflow_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_easy_16.mp4",
+        "poster": "media/images/overflow_easy_16-frame.png",
+        "figure": "media/images/overflow_easy_16.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 6: 3+5 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Mod 64 → 8.",
+      "difficulty": "easy",
+      "id": "overflow_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_easy_17.mp4",
+        "poster": "media/images/overflow_easy_17-frame.png",
+        "figure": "media/images/overflow_easy_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 6: 7+1 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Mod 64 → 8.",
+      "difficulty": "easy",
+      "id": "overflow_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_easy_18.mp4",
+        "poster": "media/images/overflow_easy_18-frame.png",
+        "figure": "media/images/overflow_easy_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 6: 9+9 yields…",
+      "choices": [
+        "18",
+        "18",
+        "18",
+        "18"
+      ],
+      "answer": 1,
+      "explain": "Mod 64 → 18.",
+      "difficulty": "easy",
+      "id": "overflow_easy_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_easy_19.mp4",
+        "poster": "media/images/overflow_easy_19-frame.png",
+        "figure": "media/images/overflow_easy_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 6: 15+2 yields…",
+      "choices": [
+        "17",
+        "17",
+        "17",
+        "17"
+      ],
+      "answer": 1,
+      "explain": "Mod 64 → 17.",
+      "difficulty": "easy",
+      "id": "overflow_easy_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_easy_20.mp4",
+        "poster": "media/images/overflow_easy_20-frame.png",
+        "figure": "media/images/overflow_easy_20.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 6: 63+1 yields…",
+      "choices": [
+        "64",
+        "0",
+        "63",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 64 → 0.",
+      "difficulty": "easy",
+      "id": "overflow_easy_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_easy_21.mp4",
+        "poster": "media/images/overflow_easy_21-frame.png",
+        "figure": "media/images/overflow_easy_21.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 6: 32+32 yields…",
+      "choices": [
+        "64",
+        "0",
+        "63",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 64 → 0.",
+      "difficulty": "easy",
+      "id": "overflow_easy_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_easy_22.mp4",
+        "poster": "media/images/overflow_easy_22-frame.png",
+        "figure": "media/images/overflow_easy_22.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 7: 3+5 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Mod 128 → 8.",
+      "difficulty": "easy",
+      "id": "overflow_easy_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_easy_23.mp4",
+        "poster": "media/images/overflow_easy_23-frame.png",
+        "figure": "media/images/overflow_easy_23.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 7: 7+1 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Mod 128 → 8.",
+      "difficulty": "easy",
+      "id": "overflow_easy_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_easy_24.mp4",
+        "poster": "media/images/overflow_easy_24-frame.png",
+        "figure": "media/images/overflow_easy_24.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 7: 9+9 yields…",
+      "choices": [
+        "18",
+        "18",
+        "18",
+        "18"
+      ],
+      "answer": 1,
+      "explain": "Mod 128 → 18.",
+      "difficulty": "easy",
+      "id": "overflow_easy_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_easy_25.mp4",
+        "poster": "media/images/overflow_easy_25-frame.png",
+        "figure": "media/images/overflow_easy_25.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 7: 15+2 yields…",
+      "choices": [
+        "17",
+        "17",
+        "17",
+        "17"
+      ],
+      "answer": 1,
+      "explain": "Mod 128 → 17.",
+      "difficulty": "easy",
+      "id": "overflow_easy_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_easy_26.mp4",
+        "poster": "media/images/overflow_easy_26-frame.png",
+        "figure": "media/images/overflow_easy_26.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 7: 127+1 yields…",
+      "choices": [
+        "128",
+        "0",
+        "127",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 128 → 0.",
+      "difficulty": "easy",
+      "id": "overflow_easy_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_easy_27.mp4",
+        "poster": "media/images/overflow_easy_27-frame.png",
+        "figure": "media/images/overflow_easy_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 7: 64+64 yields…",
+      "choices": [
+        "128",
+        "0",
+        "127",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 128 → 0.",
+      "difficulty": "easy",
+      "id": "overflow_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_easy_28.mp4",
+        "poster": "media/images/overflow_easy_28-frame.png",
+        "figure": "media/images/overflow_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 8: 3+5 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Mod 256 → 8.",
+      "difficulty": "easy",
+      "id": "overflow_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_easy_29.mp4",
+        "poster": "media/images/overflow_easy_29-frame.png",
+        "figure": "media/images/overflow_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Unsigned wrap add at width 8: 7+1 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Mod 256 → 8.",
+      "difficulty": "easy",
+      "id": "overflow_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_easy_30.mp4",
+        "poster": "media/images/overflow_easy_30-frame.png",
+        "figure": "media/images/overflow_easy_30.png"
+      }
     },
     {
       "id": "overflow_medium_01",
@@ -64,7 +608,13 @@
       ],
       "answer": 1,
       "explain": "14+3=17; mod 16 → 1.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_medium_01.mp4",
+        "poster": "media/images/overflow_medium_01-frame.png",
+        "figure": "media/images/overflow_medium_01.png"
+      }
     },
     {
       "id": "overflow_medium_02",
@@ -78,7 +628,13 @@
       ],
       "answer": 1,
       "explain": "8 is out of range; pattern 1000 means −8.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_medium_02.mp4",
+        "poster": "media/images/overflow_medium_02-frame.png",
+        "figure": "media/images/overflow_medium_02.png"
+      }
     },
     {
       "id": "overflow_medium_03",
@@ -86,7 +642,13 @@
       "prompt": "Checking only the carry flag proves there was no signed overflow.",
       "answer": false,
       "explain": "Signed overflow ≠ carry; width bounds the stored result.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_medium_03.mp4",
+        "poster": "media/images/overflow_medium_03-frame.png",
+        "figure": "media/images/overflow_medium_03.png"
+      }
     },
     {
       "id": "overflow_medium_04",
@@ -100,7 +662,13 @@
       ],
       "answer": 1,
       "explain": "Default is modular wrap unless you build saturation.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_medium_04.mp4",
+        "poster": "media/images/overflow_medium_04-frame.png",
+        "figure": "media/images/overflow_medium_04.png"
+      }
     },
     {
       "id": "overflow_medium_05",
@@ -114,7 +682,13 @@
       ],
       "answer": 1,
       "explain": "250+10=260; mod 256 → 4.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_medium_05.mp4",
+        "poster": "media/images/overflow_medium_05-frame.png",
+        "figure": "media/images/overflow_medium_05.png"
+      }
     },
     {
       "id": "overflow_medium_06",
@@ -128,7 +702,493 @@
       ],
       "answer": 1,
       "explain": "12+5=17; mod 16 → 1.",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_medium_06.mp4",
+        "poster": "media/images/overflow_medium_06-frame.png",
+        "figure": "media/images/overflow_medium_06.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Overflow / wrap: Unsigned wrap add at width 4: 3+5 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 16 → 8.",
+      "difficulty": "medium",
+      "id": "overflow_medium_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_medium_07.mp4",
+        "poster": "media/images/overflow_medium_07-frame.png",
+        "figure": "media/images/overflow_medium_07.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Overflow / wrap: Unsigned wrap add at width 4: 7+1 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 16 → 8.",
+      "difficulty": "medium",
+      "id": "overflow_medium_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_medium_08.mp4",
+        "poster": "media/images/overflow_medium_08-frame.png",
+        "figure": "media/images/overflow_medium_08.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Overflow / wrap: Unsigned wrap add at width 4: 9+9 yields…",
+      "choices": [
+        "18",
+        "2",
+        "15",
+        "2"
+      ],
+      "answer": 1,
+      "explain": "Mod 16 → 2.",
+      "difficulty": "medium",
+      "id": "overflow_medium_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_medium_09.mp4",
+        "poster": "media/images/overflow_medium_09-frame.png",
+        "figure": "media/images/overflow_medium_09.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Overflow / wrap: Unsigned wrap add at width 4: 15+2 yields…",
+      "choices": [
+        "17",
+        "1",
+        "15",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "Mod 16 → 1.",
+      "difficulty": "medium",
+      "id": "overflow_medium_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_medium_10.mp4",
+        "poster": "media/images/overflow_medium_10-frame.png",
+        "figure": "media/images/overflow_medium_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Overflow / wrap: Unsigned wrap add at width 4: 15+1 yields…",
+      "choices": [
+        "16",
+        "0",
+        "15",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 16 → 0.",
+      "difficulty": "medium",
+      "id": "overflow_medium_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_medium_11.mp4",
+        "poster": "media/images/overflow_medium_11-frame.png",
+        "figure": "media/images/overflow_medium_11.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Overflow / wrap: Unsigned wrap add at width 4: 8+8 yields…",
+      "choices": [
+        "16",
+        "0",
+        "15",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 16 → 0.",
+      "difficulty": "medium",
+      "id": "overflow_medium_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_medium_12.mp4",
+        "poster": "media/images/overflow_medium_12-frame.png",
+        "figure": "media/images/overflow_medium_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Overflow / wrap: Unsigned wrap add at width 5: 3+5 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Mod 32 → 8.",
+      "difficulty": "medium",
+      "id": "overflow_medium_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_medium_13.mp4",
+        "poster": "media/images/overflow_medium_13-frame.png",
+        "figure": "media/images/overflow_medium_13.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Overflow / wrap: Unsigned wrap add at width 5: 7+1 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Mod 32 → 8.",
+      "difficulty": "medium",
+      "id": "overflow_medium_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_medium_14.mp4",
+        "poster": "media/images/overflow_medium_14-frame.png",
+        "figure": "media/images/overflow_medium_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Overflow / wrap: Unsigned wrap add at width 5: 9+9 yields…",
+      "choices": [
+        "18",
+        "18",
+        "18",
+        "2"
+      ],
+      "answer": 1,
+      "explain": "Mod 32 → 18.",
+      "difficulty": "medium",
+      "id": "overflow_medium_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_medium_15.mp4",
+        "poster": "media/images/overflow_medium_15-frame.png",
+        "figure": "media/images/overflow_medium_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Overflow / wrap: Unsigned wrap add at width 5: 15+2 yields…",
+      "choices": [
+        "17",
+        "17",
+        "17",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "Mod 32 → 17.",
+      "difficulty": "medium",
+      "id": "overflow_medium_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_medium_16.mp4",
+        "poster": "media/images/overflow_medium_16-frame.png",
+        "figure": "media/images/overflow_medium_16.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Overflow / wrap: Unsigned wrap add at width 5: 31+1 yields…",
+      "choices": [
+        "32",
+        "0",
+        "31",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 32 → 0.",
+      "difficulty": "medium",
+      "id": "overflow_medium_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_medium_17.mp4",
+        "poster": "media/images/overflow_medium_17-frame.png",
+        "figure": "media/images/overflow_medium_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Overflow / wrap: Unsigned wrap add at width 5: 16+16 yields…",
+      "choices": [
+        "32",
+        "0",
+        "31",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 32 → 0.",
+      "difficulty": "medium",
+      "id": "overflow_medium_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_medium_18.mp4",
+        "poster": "media/images/overflow_medium_18-frame.png",
+        "figure": "media/images/overflow_medium_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Overflow / wrap: Unsigned wrap add at width 6: 3+5 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Mod 64 → 8.",
+      "difficulty": "medium",
+      "id": "overflow_medium_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_medium_19.mp4",
+        "poster": "media/images/overflow_medium_19-frame.png",
+        "figure": "media/images/overflow_medium_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Overflow / wrap: Unsigned wrap add at width 6: 7+1 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Mod 64 → 8.",
+      "difficulty": "medium",
+      "id": "overflow_medium_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_medium_20.mp4",
+        "poster": "media/images/overflow_medium_20-frame.png",
+        "figure": "media/images/overflow_medium_20.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Overflow / wrap: Unsigned wrap add at width 6: 9+9 yields…",
+      "choices": [
+        "18",
+        "18",
+        "18",
+        "18"
+      ],
+      "answer": 1,
+      "explain": "Mod 64 → 18.",
+      "difficulty": "medium",
+      "id": "overflow_medium_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_medium_21.mp4",
+        "poster": "media/images/overflow_medium_21-frame.png",
+        "figure": "media/images/overflow_medium_21.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Overflow / wrap: Unsigned wrap add at width 6: 15+2 yields…",
+      "choices": [
+        "17",
+        "17",
+        "17",
+        "17"
+      ],
+      "answer": 1,
+      "explain": "Mod 64 → 17.",
+      "difficulty": "medium",
+      "id": "overflow_medium_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_medium_22.mp4",
+        "poster": "media/images/overflow_medium_22-frame.png",
+        "figure": "media/images/overflow_medium_22.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Overflow / wrap: Unsigned wrap add at width 6: 63+1 yields…",
+      "choices": [
+        "64",
+        "0",
+        "63",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 64 → 0.",
+      "difficulty": "medium",
+      "id": "overflow_medium_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_medium_23.mp4",
+        "poster": "media/images/overflow_medium_23-frame.png",
+        "figure": "media/images/overflow_medium_23.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Overflow / wrap: Unsigned wrap add at width 6: 32+32 yields…",
+      "choices": [
+        "64",
+        "0",
+        "63",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 64 → 0.",
+      "difficulty": "medium",
+      "id": "overflow_medium_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_medium_24.mp4",
+        "poster": "media/images/overflow_medium_24-frame.png",
+        "figure": "media/images/overflow_medium_24.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Overflow / wrap: Unsigned wrap add at width 7: 3+5 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Mod 128 → 8.",
+      "difficulty": "medium",
+      "id": "overflow_medium_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_medium_25.mp4",
+        "poster": "media/images/overflow_medium_25-frame.png",
+        "figure": "media/images/overflow_medium_25.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Overflow / wrap: Unsigned wrap add at width 7: 7+1 yields…",
+      "choices": [
+        "8",
+        "8",
+        "8",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "Mod 128 → 8.",
+      "difficulty": "medium",
+      "id": "overflow_medium_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_medium_26.mp4",
+        "poster": "media/images/overflow_medium_26-frame.png",
+        "figure": "media/images/overflow_medium_26.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Overflow / wrap: Unsigned wrap add at width 7: 9+9 yields…",
+      "choices": [
+        "18",
+        "18",
+        "18",
+        "18"
+      ],
+      "answer": 1,
+      "explain": "Mod 128 → 18.",
+      "difficulty": "medium",
+      "id": "overflow_medium_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_medium_27.mp4",
+        "poster": "media/images/overflow_medium_27-frame.png",
+        "figure": "media/images/overflow_medium_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Overflow / wrap: Unsigned wrap add at width 7: 15+2 yields…",
+      "choices": [
+        "17",
+        "17",
+        "17",
+        "17"
+      ],
+      "answer": 1,
+      "explain": "Mod 128 → 17.",
+      "difficulty": "medium",
+      "id": "overflow_medium_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_medium_28.mp4",
+        "poster": "media/images/overflow_medium_28-frame.png",
+        "figure": "media/images/overflow_medium_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Overflow / wrap: Unsigned wrap add at width 7: 127+1 yields…",
+      "choices": [
+        "128",
+        "0",
+        "127",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 128 → 0.",
+      "difficulty": "medium",
+      "id": "overflow_medium_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_medium_29.mp4",
+        "poster": "media/images/overflow_medium_29-frame.png",
+        "figure": "media/images/overflow_medium_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Overflow / wrap: Unsigned wrap add at width 7: 64+64 yields…",
+      "choices": [
+        "128",
+        "0",
+        "127",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "Mod 128 → 0.",
+      "difficulty": "medium",
+      "id": "overflow_medium_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_medium_30.mp4",
+        "poster": "media/images/overflow_medium_30-frame.png",
+        "figure": "media/images/overflow_medium_30.png"
+      }
     },
     {
       "id": "overflow_hard_01",
@@ -142,7 +1202,13 @@
       ],
       "answer": 1,
       "explain": "XOR of carry-in and carry-out of the MSB flags signed overflow.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_hard_01.mp4",
+        "poster": "media/images/overflow_hard_01-frame.png",
+        "figure": "media/images/overflow_hard_01.png"
+      }
     },
     {
       "id": "overflow_hard_02",
@@ -156,7 +1222,13 @@
       ],
       "answer": 1,
       "explain": "Modular: −1 ≡ 255 mod 256.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_hard_02.mp4",
+        "poster": "media/images/overflow_hard_02-frame.png",
+        "figure": "media/images/overflow_hard_02.png"
+      }
     },
     {
       "id": "overflow_hard_03",
@@ -164,7 +1236,13 @@
       "prompt": "You must know width when verifying an adder result.",
       "answer": true,
       "explain": "Sat ≠ wrap; stored bits are modulo the width.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_hard_03.mp4",
+        "poster": "media/images/overflow_hard_03-frame.png",
+        "figure": "media/images/overflow_hard_03.png"
+      }
     },
     {
       "id": "overflow_hard_04",
@@ -178,711 +1256,17 @@
       ],
       "answer": 1,
       "explain": "Disagreeing overflow policies corrupt multi-block datapaths.",
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_hard_04.mp4",
+        "poster": "media/images/overflow_hard_04-frame.png",
+        "figure": "media/images/overflow_hard_04.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 4: 3+5 yields…",
-      "choices": [
-        "8",
-        "8",
-        "8",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "Mod 16 → 8.",
-      "difficulty": "easy",
-      "id": "overflow_easy_05"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 4: 7+1 yields…",
-      "choices": [
-        "8",
-        "8",
-        "8",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "Mod 16 → 8.",
-      "difficulty": "easy",
-      "id": "overflow_easy_06"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 4: 9+9 yields…",
-      "choices": [
-        "18",
-        "2",
-        "15",
-        "2"
-      ],
-      "answer": 1,
-      "explain": "Mod 16 → 2.",
-      "difficulty": "easy",
-      "id": "overflow_easy_07"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 4: 15+2 yields…",
-      "choices": [
-        "17",
-        "1",
-        "15",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "Mod 16 → 1.",
-      "difficulty": "easy",
-      "id": "overflow_easy_08"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 4: 15+1 yields…",
-      "choices": [
-        "16",
-        "0",
-        "15",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "Mod 16 → 0.",
-      "difficulty": "easy",
-      "id": "overflow_easy_09"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 4: 8+8 yields…",
-      "choices": [
-        "16",
-        "0",
-        "15",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "Mod 16 → 0.",
-      "difficulty": "easy",
-      "id": "overflow_easy_10"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 5: 3+5 yields…",
-      "choices": [
-        "8",
-        "8",
-        "8",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "Mod 32 → 8.",
-      "difficulty": "easy",
-      "id": "overflow_easy_11"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 5: 7+1 yields…",
-      "choices": [
-        "8",
-        "8",
-        "8",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "Mod 32 → 8.",
-      "difficulty": "easy",
-      "id": "overflow_easy_12"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 5: 9+9 yields…",
-      "choices": [
-        "18",
-        "18",
-        "18",
-        "2"
-      ],
-      "answer": 1,
-      "explain": "Mod 32 → 18.",
-      "difficulty": "easy",
-      "id": "overflow_easy_13"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 5: 15+2 yields…",
-      "choices": [
-        "17",
-        "17",
-        "17",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "Mod 32 → 17.",
-      "difficulty": "easy",
-      "id": "overflow_easy_14"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 5: 31+1 yields…",
-      "choices": [
-        "32",
-        "0",
-        "31",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "Mod 32 → 0.",
-      "difficulty": "easy",
-      "id": "overflow_easy_15"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 5: 16+16 yields…",
-      "choices": [
-        "32",
-        "0",
-        "31",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "Mod 32 → 0.",
-      "difficulty": "easy",
-      "id": "overflow_easy_16"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 6: 3+5 yields…",
-      "choices": [
-        "8",
-        "8",
-        "8",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "Mod 64 → 8.",
-      "difficulty": "easy",
-      "id": "overflow_easy_17"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 6: 7+1 yields…",
-      "choices": [
-        "8",
-        "8",
-        "8",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "Mod 64 → 8.",
-      "difficulty": "easy",
-      "id": "overflow_easy_18"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 6: 9+9 yields…",
-      "choices": [
-        "18",
-        "18",
-        "18",
-        "18"
-      ],
-      "answer": 1,
-      "explain": "Mod 64 → 18.",
-      "difficulty": "easy",
-      "id": "overflow_easy_19"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 6: 15+2 yields…",
-      "choices": [
-        "17",
-        "17",
-        "17",
-        "17"
-      ],
-      "answer": 1,
-      "explain": "Mod 64 → 17.",
-      "difficulty": "easy",
-      "id": "overflow_easy_20"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 6: 63+1 yields…",
-      "choices": [
-        "64",
-        "0",
-        "63",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "Mod 64 → 0.",
-      "difficulty": "easy",
-      "id": "overflow_easy_21"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 6: 32+32 yields…",
-      "choices": [
-        "64",
-        "0",
-        "63",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "Mod 64 → 0.",
-      "difficulty": "easy",
-      "id": "overflow_easy_22"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 7: 3+5 yields…",
-      "choices": [
-        "8",
-        "8",
-        "8",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "Mod 128 → 8.",
-      "difficulty": "easy",
-      "id": "overflow_easy_23"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 7: 7+1 yields…",
-      "choices": [
-        "8",
-        "8",
-        "8",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "Mod 128 → 8.",
-      "difficulty": "easy",
-      "id": "overflow_easy_24"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 7: 9+9 yields…",
-      "choices": [
-        "18",
-        "18",
-        "18",
-        "18"
-      ],
-      "answer": 1,
-      "explain": "Mod 128 → 18.",
-      "difficulty": "easy",
-      "id": "overflow_easy_25"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 7: 15+2 yields…",
-      "choices": [
-        "17",
-        "17",
-        "17",
-        "17"
-      ],
-      "answer": 1,
-      "explain": "Mod 128 → 17.",
-      "difficulty": "easy",
-      "id": "overflow_easy_26"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 7: 127+1 yields…",
-      "choices": [
-        "128",
-        "0",
-        "127",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "Mod 128 → 0.",
-      "difficulty": "easy",
-      "id": "overflow_easy_27"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 7: 64+64 yields…",
-      "choices": [
-        "128",
-        "0",
-        "127",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "Mod 128 → 0.",
-      "difficulty": "easy",
-      "id": "overflow_easy_28"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 8: 3+5 yields…",
-      "choices": [
-        "8",
-        "8",
-        "8",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "Mod 256 → 8.",
-      "difficulty": "easy",
-      "id": "overflow_easy_29"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 8: 7+1 yields…",
-      "choices": [
-        "8",
-        "8",
-        "8",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "Mod 256 → 8.",
-      "difficulty": "easy",
-      "id": "overflow_easy_30"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 4: 3+5 yields…",
-      "choices": [
-        "8",
-        "8",
-        "8",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "Mod 16 → 8.",
-      "difficulty": "medium",
-      "id": "overflow_medium_07"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 4: 7+1 yields…",
-      "choices": [
-        "8",
-        "8",
-        "8",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "Mod 16 → 8.",
-      "difficulty": "medium",
-      "id": "overflow_medium_08"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 4: 9+9 yields…",
-      "choices": [
-        "18",
-        "2",
-        "15",
-        "2"
-      ],
-      "answer": 1,
-      "explain": "Mod 16 → 2.",
-      "difficulty": "medium",
-      "id": "overflow_medium_09"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 4: 15+2 yields…",
-      "choices": [
-        "17",
-        "1",
-        "15",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "Mod 16 → 1.",
-      "difficulty": "medium",
-      "id": "overflow_medium_10"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 4: 15+1 yields…",
-      "choices": [
-        "16",
-        "0",
-        "15",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "Mod 16 → 0.",
-      "difficulty": "medium",
-      "id": "overflow_medium_11"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 4: 8+8 yields…",
-      "choices": [
-        "16",
-        "0",
-        "15",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "Mod 16 → 0.",
-      "difficulty": "medium",
-      "id": "overflow_medium_12"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 5: 3+5 yields…",
-      "choices": [
-        "8",
-        "8",
-        "8",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "Mod 32 → 8.",
-      "difficulty": "medium",
-      "id": "overflow_medium_13"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 5: 7+1 yields…",
-      "choices": [
-        "8",
-        "8",
-        "8",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "Mod 32 → 8.",
-      "difficulty": "medium",
-      "id": "overflow_medium_14"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 5: 9+9 yields…",
-      "choices": [
-        "18",
-        "18",
-        "18",
-        "2"
-      ],
-      "answer": 1,
-      "explain": "Mod 32 → 18.",
-      "difficulty": "medium",
-      "id": "overflow_medium_15"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 5: 15+2 yields…",
-      "choices": [
-        "17",
-        "17",
-        "17",
-        "1"
-      ],
-      "answer": 1,
-      "explain": "Mod 32 → 17.",
-      "difficulty": "medium",
-      "id": "overflow_medium_16"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 5: 31+1 yields…",
-      "choices": [
-        "32",
-        "0",
-        "31",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "Mod 32 → 0.",
-      "difficulty": "medium",
-      "id": "overflow_medium_17"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 5: 16+16 yields…",
-      "choices": [
-        "32",
-        "0",
-        "31",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "Mod 32 → 0.",
-      "difficulty": "medium",
-      "id": "overflow_medium_18"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 6: 3+5 yields…",
-      "choices": [
-        "8",
-        "8",
-        "8",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "Mod 64 → 8.",
-      "difficulty": "medium",
-      "id": "overflow_medium_19"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 6: 7+1 yields…",
-      "choices": [
-        "8",
-        "8",
-        "8",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "Mod 64 → 8.",
-      "difficulty": "medium",
-      "id": "overflow_medium_20"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 6: 9+9 yields…",
-      "choices": [
-        "18",
-        "18",
-        "18",
-        "18"
-      ],
-      "answer": 1,
-      "explain": "Mod 64 → 18.",
-      "difficulty": "medium",
-      "id": "overflow_medium_21"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 6: 15+2 yields…",
-      "choices": [
-        "17",
-        "17",
-        "17",
-        "17"
-      ],
-      "answer": 1,
-      "explain": "Mod 64 → 17.",
-      "difficulty": "medium",
-      "id": "overflow_medium_22"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 6: 63+1 yields…",
-      "choices": [
-        "64",
-        "0",
-        "63",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "Mod 64 → 0.",
-      "difficulty": "medium",
-      "id": "overflow_medium_23"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 6: 32+32 yields…",
-      "choices": [
-        "64",
-        "0",
-        "63",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "Mod 64 → 0.",
-      "difficulty": "medium",
-      "id": "overflow_medium_24"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 7: 3+5 yields…",
-      "choices": [
-        "8",
-        "8",
-        "8",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "Mod 128 → 8.",
-      "difficulty": "medium",
-      "id": "overflow_medium_25"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 7: 7+1 yields…",
-      "choices": [
-        "8",
-        "8",
-        "8",
-        "8"
-      ],
-      "answer": 1,
-      "explain": "Mod 128 → 8.",
-      "difficulty": "medium",
-      "id": "overflow_medium_26"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 7: 9+9 yields…",
-      "choices": [
-        "18",
-        "18",
-        "18",
-        "18"
-      ],
-      "answer": 1,
-      "explain": "Mod 128 → 18.",
-      "difficulty": "medium",
-      "id": "overflow_medium_27"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 7: 15+2 yields…",
-      "choices": [
-        "17",
-        "17",
-        "17",
-        "17"
-      ],
-      "answer": 1,
-      "explain": "Mod 128 → 17.",
-      "difficulty": "medium",
-      "id": "overflow_medium_28"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 7: 127+1 yields…",
-      "choices": [
-        "128",
-        "0",
-        "127",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "Mod 128 → 0.",
-      "difficulty": "medium",
-      "id": "overflow_medium_29"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 7: 64+64 yields…",
-      "choices": [
-        "128",
-        "0",
-        "127",
-        "0"
-      ],
-      "answer": 1,
-      "explain": "Mod 128 → 0.",
-      "difficulty": "medium",
-      "id": "overflow_medium_30"
-    },
-    {
-      "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 4: 3+5 yields…",
+      "prompt": "In Overflow / wrap, unsigned wrap add at width 4: 3+5 yields…",
       "choices": [
         "8",
         "8",
@@ -892,11 +1276,17 @@
       "answer": 1,
       "explain": "Mod 16 → 8.",
       "difficulty": "hard",
-      "id": "overflow_hard_05"
+      "id": "overflow_hard_05",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_hard_05.mp4",
+        "poster": "media/images/overflow_hard_05-frame.png",
+        "figure": "media/images/overflow_hard_05.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 4: 7+1 yields…",
+      "prompt": "In Overflow / wrap, unsigned wrap add at width 4: 7+1 yields…",
       "choices": [
         "8",
         "8",
@@ -906,11 +1296,17 @@
       "answer": 1,
       "explain": "Mod 16 → 8.",
       "difficulty": "hard",
-      "id": "overflow_hard_06"
+      "id": "overflow_hard_06",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_hard_06.mp4",
+        "poster": "media/images/overflow_hard_06-frame.png",
+        "figure": "media/images/overflow_hard_06.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 4: 9+9 yields…",
+      "prompt": "In Overflow / wrap, unsigned wrap add at width 4: 9+9 yields…",
       "choices": [
         "18",
         "2",
@@ -920,11 +1316,17 @@
       "answer": 1,
       "explain": "Mod 16 → 2.",
       "difficulty": "hard",
-      "id": "overflow_hard_07"
+      "id": "overflow_hard_07",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_hard_07.mp4",
+        "poster": "media/images/overflow_hard_07-frame.png",
+        "figure": "media/images/overflow_hard_07.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 4: 15+2 yields…",
+      "prompt": "In Overflow / wrap, unsigned wrap add at width 4: 15+2 yields…",
       "choices": [
         "17",
         "1",
@@ -934,11 +1336,17 @@
       "answer": 1,
       "explain": "Mod 16 → 1.",
       "difficulty": "hard",
-      "id": "overflow_hard_08"
+      "id": "overflow_hard_08",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_hard_08.mp4",
+        "poster": "media/images/overflow_hard_08-frame.png",
+        "figure": "media/images/overflow_hard_08.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 4: 15+1 yields…",
+      "prompt": "In Overflow / wrap, unsigned wrap add at width 4: 15+1 yields…",
       "choices": [
         "16",
         "0",
@@ -948,11 +1356,17 @@
       "answer": 1,
       "explain": "Mod 16 → 0.",
       "difficulty": "hard",
-      "id": "overflow_hard_09"
+      "id": "overflow_hard_09",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_hard_09.mp4",
+        "poster": "media/images/overflow_hard_09-frame.png",
+        "figure": "media/images/overflow_hard_09.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 4: 8+8 yields…",
+      "prompt": "In Overflow / wrap, unsigned wrap add at width 4: 8+8 yields…",
       "choices": [
         "16",
         "0",
@@ -962,11 +1376,17 @@
       "answer": 1,
       "explain": "Mod 16 → 0.",
       "difficulty": "hard",
-      "id": "overflow_hard_10"
+      "id": "overflow_hard_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_hard_10.mp4",
+        "poster": "media/images/overflow_hard_10-frame.png",
+        "figure": "media/images/overflow_hard_10.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 5: 3+5 yields…",
+      "prompt": "In Overflow / wrap, unsigned wrap add at width 5: 3+5 yields…",
       "choices": [
         "8",
         "8",
@@ -976,11 +1396,17 @@
       "answer": 1,
       "explain": "Mod 32 → 8.",
       "difficulty": "hard",
-      "id": "overflow_hard_11"
+      "id": "overflow_hard_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_hard_11.mp4",
+        "poster": "media/images/overflow_hard_11-frame.png",
+        "figure": "media/images/overflow_hard_11.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 5: 7+1 yields…",
+      "prompt": "In Overflow / wrap, unsigned wrap add at width 5: 7+1 yields…",
       "choices": [
         "8",
         "8",
@@ -990,11 +1416,17 @@
       "answer": 1,
       "explain": "Mod 32 → 8.",
       "difficulty": "hard",
-      "id": "overflow_hard_12"
+      "id": "overflow_hard_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_hard_12.mp4",
+        "poster": "media/images/overflow_hard_12-frame.png",
+        "figure": "media/images/overflow_hard_12.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 5: 9+9 yields…",
+      "prompt": "In Overflow / wrap, unsigned wrap add at width 5: 9+9 yields…",
       "choices": [
         "18",
         "18",
@@ -1004,11 +1436,17 @@
       "answer": 1,
       "explain": "Mod 32 → 18.",
       "difficulty": "hard",
-      "id": "overflow_hard_13"
+      "id": "overflow_hard_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_hard_13.mp4",
+        "poster": "media/images/overflow_hard_13-frame.png",
+        "figure": "media/images/overflow_hard_13.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 5: 15+2 yields…",
+      "prompt": "In Overflow / wrap, unsigned wrap add at width 5: 15+2 yields…",
       "choices": [
         "17",
         "17",
@@ -1018,11 +1456,17 @@
       "answer": 1,
       "explain": "Mod 32 → 17.",
       "difficulty": "hard",
-      "id": "overflow_hard_14"
+      "id": "overflow_hard_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_hard_14.mp4",
+        "poster": "media/images/overflow_hard_14-frame.png",
+        "figure": "media/images/overflow_hard_14.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 5: 31+1 yields…",
+      "prompt": "In Overflow / wrap, unsigned wrap add at width 5: 31+1 yields…",
       "choices": [
         "32",
         "0",
@@ -1032,11 +1476,17 @@
       "answer": 1,
       "explain": "Mod 32 → 0.",
       "difficulty": "hard",
-      "id": "overflow_hard_15"
+      "id": "overflow_hard_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_hard_15.mp4",
+        "poster": "media/images/overflow_hard_15-frame.png",
+        "figure": "media/images/overflow_hard_15.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 5: 16+16 yields…",
+      "prompt": "In Overflow / wrap, unsigned wrap add at width 5: 16+16 yields…",
       "choices": [
         "32",
         "0",
@@ -1046,11 +1496,17 @@
       "answer": 1,
       "explain": "Mod 32 → 0.",
       "difficulty": "hard",
-      "id": "overflow_hard_16"
+      "id": "overflow_hard_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_hard_16.mp4",
+        "poster": "media/images/overflow_hard_16-frame.png",
+        "figure": "media/images/overflow_hard_16.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 6: 3+5 yields…",
+      "prompt": "In Overflow / wrap, unsigned wrap add at width 6: 3+5 yields…",
       "choices": [
         "8",
         "8",
@@ -1060,11 +1516,17 @@
       "answer": 1,
       "explain": "Mod 64 → 8.",
       "difficulty": "hard",
-      "id": "overflow_hard_17"
+      "id": "overflow_hard_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_hard_17.mp4",
+        "poster": "media/images/overflow_hard_17-frame.png",
+        "figure": "media/images/overflow_hard_17.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 6: 7+1 yields…",
+      "prompt": "In Overflow / wrap, unsigned wrap add at width 6: 7+1 yields…",
       "choices": [
         "8",
         "8",
@@ -1074,11 +1536,17 @@
       "answer": 1,
       "explain": "Mod 64 → 8.",
       "difficulty": "hard",
-      "id": "overflow_hard_18"
+      "id": "overflow_hard_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_hard_18.mp4",
+        "poster": "media/images/overflow_hard_18-frame.png",
+        "figure": "media/images/overflow_hard_18.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 6: 9+9 yields…",
+      "prompt": "In Overflow / wrap, unsigned wrap add at width 6: 9+9 yields…",
       "choices": [
         "18",
         "18",
@@ -1088,11 +1556,17 @@
       "answer": 1,
       "explain": "Mod 64 → 18.",
       "difficulty": "hard",
-      "id": "overflow_hard_19"
+      "id": "overflow_hard_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_hard_19.mp4",
+        "poster": "media/images/overflow_hard_19-frame.png",
+        "figure": "media/images/overflow_hard_19.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 6: 15+2 yields…",
+      "prompt": "In Overflow / wrap, unsigned wrap add at width 6: 15+2 yields…",
       "choices": [
         "17",
         "17",
@@ -1102,11 +1576,17 @@
       "answer": 1,
       "explain": "Mod 64 → 17.",
       "difficulty": "hard",
-      "id": "overflow_hard_20"
+      "id": "overflow_hard_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_hard_20.mp4",
+        "poster": "media/images/overflow_hard_20-frame.png",
+        "figure": "media/images/overflow_hard_20.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 6: 63+1 yields…",
+      "prompt": "In Overflow / wrap, unsigned wrap add at width 6: 63+1 yields…",
       "choices": [
         "64",
         "0",
@@ -1116,11 +1596,17 @@
       "answer": 1,
       "explain": "Mod 64 → 0.",
       "difficulty": "hard",
-      "id": "overflow_hard_21"
+      "id": "overflow_hard_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_hard_21.mp4",
+        "poster": "media/images/overflow_hard_21-frame.png",
+        "figure": "media/images/overflow_hard_21.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 6: 32+32 yields…",
+      "prompt": "In Overflow / wrap, unsigned wrap add at width 6: 32+32 yields…",
       "choices": [
         "64",
         "0",
@@ -1130,11 +1616,17 @@
       "answer": 1,
       "explain": "Mod 64 → 0.",
       "difficulty": "hard",
-      "id": "overflow_hard_22"
+      "id": "overflow_hard_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_hard_22.mp4",
+        "poster": "media/images/overflow_hard_22-frame.png",
+        "figure": "media/images/overflow_hard_22.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 7: 3+5 yields…",
+      "prompt": "In Overflow / wrap, unsigned wrap add at width 7: 3+5 yields…",
       "choices": [
         "8",
         "8",
@@ -1144,11 +1636,17 @@
       "answer": 1,
       "explain": "Mod 128 → 8.",
       "difficulty": "hard",
-      "id": "overflow_hard_23"
+      "id": "overflow_hard_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_hard_23.mp4",
+        "poster": "media/images/overflow_hard_23-frame.png",
+        "figure": "media/images/overflow_hard_23.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 7: 7+1 yields…",
+      "prompt": "In Overflow / wrap, unsigned wrap add at width 7: 7+1 yields…",
       "choices": [
         "8",
         "8",
@@ -1158,11 +1656,17 @@
       "answer": 1,
       "explain": "Mod 128 → 8.",
       "difficulty": "hard",
-      "id": "overflow_hard_24"
+      "id": "overflow_hard_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_hard_24.mp4",
+        "poster": "media/images/overflow_hard_24-frame.png",
+        "figure": "media/images/overflow_hard_24.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 7: 9+9 yields…",
+      "prompt": "In Overflow / wrap, unsigned wrap add at width 7: 9+9 yields…",
       "choices": [
         "18",
         "18",
@@ -1172,11 +1676,17 @@
       "answer": 1,
       "explain": "Mod 128 → 18.",
       "difficulty": "hard",
-      "id": "overflow_hard_25"
+      "id": "overflow_hard_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_hard_25.mp4",
+        "poster": "media/images/overflow_hard_25-frame.png",
+        "figure": "media/images/overflow_hard_25.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 7: 15+2 yields…",
+      "prompt": "In Overflow / wrap, unsigned wrap add at width 7: 15+2 yields…",
       "choices": [
         "17",
         "17",
@@ -1186,11 +1696,17 @@
       "answer": 1,
       "explain": "Mod 128 → 17.",
       "difficulty": "hard",
-      "id": "overflow_hard_26"
+      "id": "overflow_hard_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_hard_26.mp4",
+        "poster": "media/images/overflow_hard_26-frame.png",
+        "figure": "media/images/overflow_hard_26.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 7: 127+1 yields…",
+      "prompt": "In Overflow / wrap, unsigned wrap add at width 7: 127+1 yields…",
       "choices": [
         "128",
         "0",
@@ -1200,11 +1716,17 @@
       "answer": 1,
       "explain": "Mod 128 → 0.",
       "difficulty": "hard",
-      "id": "overflow_hard_27"
+      "id": "overflow_hard_27",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_hard_27.mp4",
+        "poster": "media/images/overflow_hard_27-frame.png",
+        "figure": "media/images/overflow_hard_27.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 7: 64+64 yields…",
+      "prompt": "In Overflow / wrap, unsigned wrap add at width 7: 64+64 yields…",
       "choices": [
         "128",
         "0",
@@ -1214,11 +1736,17 @@
       "answer": 1,
       "explain": "Mod 128 → 0.",
       "difficulty": "hard",
-      "id": "overflow_hard_28"
+      "id": "overflow_hard_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_hard_28.mp4",
+        "poster": "media/images/overflow_hard_28-frame.png",
+        "figure": "media/images/overflow_hard_28.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 8: 3+5 yields…",
+      "prompt": "Overflow / wrap: Unsigned wrap add at width 8: 3+5 yields…",
       "choices": [
         "8",
         "8",
@@ -1228,11 +1756,17 @@
       "answer": 1,
       "explain": "Mod 256 → 8.",
       "difficulty": "hard",
-      "id": "overflow_hard_29"
+      "id": "overflow_hard_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_hard_29.mp4",
+        "poster": "media/images/overflow_hard_29-frame.png",
+        "figure": "media/images/overflow_hard_29.png"
+      }
     },
     {
       "type": "multiple_choice",
-      "prompt": "Unsigned wrap add at width 8: 7+1 yields…",
+      "prompt": "Overflow / wrap: Unsigned wrap add at width 8: 7+1 yields…",
       "choices": [
         "8",
         "8",
@@ -1242,7 +1776,13 @@
       "answer": 1,
       "explain": "Mod 256 → 8.",
       "difficulty": "hard",
-      "id": "overflow_hard_30"
+      "id": "overflow_hard_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/overflow_hard_30.mp4",
+        "poster": "media/images/overflow_hard_30-frame.png",
+        "figure": "media/images/overflow_hard_30.png"
+      }
     }
   ]
 }
