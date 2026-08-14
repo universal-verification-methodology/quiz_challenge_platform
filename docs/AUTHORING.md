@@ -60,22 +60,14 @@ Example: `content/learn_signals/`, `content/cs101_midterm/`.
 
 2. Edit `content/<your_course_id>/content.json` (see §4).
 3. Replace question files under `content/<your_course_id>/questions/`.
-4. Point the runtime at your pack — today the demo hardcodes the path in `js/challenge-app.js`:
+4. Point the runtime at your pack — set `courses` / `default_course` in `config/site.json`, or open:
 
-```js
-const CONTENT_BASE = "content/learn_digital";
+```text
+challenge.html?course=<your_course_id>&restart=1
+challenge.html?course=<your_course_id>&short=1&restart=1
 ```
 
-Change it to:
-
-```js
-const CONTENT_BASE = "content/<your_course_id>";
-```
-
-5. Optionally update `index.html` hero title/copy so students see your course name.
-6. Serve locally and open `challenge.html?restart=1`.
-
-> **Paper / roadmap note:** a future improvement is reading `CONTENT_BASE` from `config/site.json` or a query param so adopters need not edit JS. Until then, one-line path change is the documented switch.
+The home page lists each course with Full / Short Quest links. Legacy one-line override in `js/challenge-app.js` is no longer required when the pack is registered in `site.json`.
 
 ---
 
