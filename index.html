@@ -3,34 +3,54 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Digital Foundations Quest</title>
-    <link rel="stylesheet" href="css/challenge.css" />
+    <title>Challenge Platform</title>
+    <link rel="stylesheet" href="css/challenge.css?v=19" />
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="index.html">Challenge Platform</a>
       <nav class="nav-links">
         <a href="index.html">Home</a>
-        <a href="challenge.html?restart=1">Full Quest</a>
-        <a href="challenge.html?short=1&amp;restart=1">Short Quest</a>
         <a href="dashboard.html">Leaderboard</a>
       </nav>
     </header>
 
     <main>
       <section class="hero">
-        <p class="eyebrow">Digital foundations challenge</p>
-        <h1>Digital Foundations Quest</h1>
-        <div class="actions">
-          <a class="btn primary" href="challenge.html?restart=1">Full Quest</a>
-          <a class="btn ghost" href="challenge.html?short=1&amp;restart=1">Short Quest</a>
-          <a class="btn ghost" href="dashboard.html">Leaderboard</a>
-        </div>
-        <p class="hero-cert-note">
-          After you finish, enter your <strong>name</strong> and <strong>email</strong> on the
-          results page to claim your certificate (and optionally appear on the leaderboard).
+        <p class="eyebrow">Adaptive quiz challenge</p>
+        <h1>Challenge Platform</h1>
+        <p class="lede">
+          Blind quest, silent grading mid-run, analytical report at the end.
+          Pick a course, then Full Quest or Short Quest.
         </p>
       </section>
+
+      <section class="course-grid" id="courses" aria-label="Courses">
+        <article class="course-card">
+          <p class="eyebrow">Digital foundations</p>
+          <h2>Digital Foundations Quest</h2>
+          <p class="course-meta">49 modules · radix through handshakes</p>
+          <div class="actions">
+            <a class="btn primary" href="challenge.html?course=learn_digital&amp;restart=1">Full Quest</a>
+            <a class="btn ghost" href="challenge.html?course=learn_digital&amp;short=1&amp;restart=1">Short Quest</a>
+          </div>
+        </article>
+
+        <article class="course-card">
+          <p class="eyebrow">IEEE 1364 RTL</p>
+          <h2>Verilog RTL Quest</h2>
+          <p class="course-meta">17 modules · ports through HDL style</p>
+          <div class="actions">
+            <a class="btn primary" href="challenge.html?course=learn_verilog&amp;restart=1">Full Quest</a>
+            <a class="btn ghost" href="challenge.html?course=learn_verilog&amp;short=1&amp;restart=1">Short Quest</a>
+          </div>
+        </article>
+      </section>
+
+      <p class="hero-cert-note">
+        After you finish, enter your <strong>name</strong> and <strong>email</strong> on the
+        results page to claim your certificate (and optionally appear on the leaderboard).
+      </p>
     </main>
 
     <footer class="site-footer">
