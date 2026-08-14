@@ -6,7 +6,7 @@
 [![Org](https://img.shields.io/badge/org-universal--verification--methodology-0A9EDC)](https://github.com/universal-verification-methodology)
 [![Domain](https://img.shields.io/badge/domain-adaptive%20quiz%20%7C%20digital%20design-purple)](https://github.com/universal-verification-methodology/quiz_challenge_platform)
 
-**quiz_challenge_platform** is a standalone **variable-length**, module-mapped quiz challenge — blind quest, silent grading mid-run, analytical report at the end. The demo pack is Digital Foundations (`learn_digital`); the runtime is content-agnostic and merge-ready with `digital_learning`.
+**quiz_challenge_platform** is a standalone **variable-length**, module-mapped quiz challenge — blind quest, silent grading mid-run, analytical report at the end. Demo packs: Digital Foundations (`learn_digital`) and Verilog RTL (`learn_verilog`); the runtime is content-agnostic and merge-ready with `digital_learning`.
 
 Learners usually **open the live site** or clone and serve locally. Authors edit banks under `content/<course_id>/`, regenerate if needed, and push; Cloudflare / Pages Actions publish from `main`.
 
@@ -34,7 +34,8 @@ quiz_challenge_platform/
 ├── config/
 │   └── site.json           # certificate labels + results endpoints
 ├── content/
-│   └── learn_digital/      # demo pack (01–49)
+│   ├── learn_digital/      # Digital Foundations (01–49)
+│   └── learn_verilog/     # Verilog RTL Quest (01–17)
 │       ├── content.json    # modules, timing, progress, profiles
 │       ├── questions/      # one JSON bank per module
 │       └── media/          # optional stem images / video
@@ -69,16 +70,16 @@ On Windows (PowerShell), if bash/`run.sh` is unavailable:
 py -3 -m http.server 18080 --bind 127.0.0.1
 ```
 
-Open http://127.0.0.1:18080/ and start a quest with **Full Quest** or **Short Quest** (both clear stale sessions). Optional: `PORT=8080 ./run.sh`.
+Open http://127.0.0.1:18080/ and pick a course, then **Full Quest** or **Short Quest** (both clear stale sessions). Optional: `PORT=8080 ./run.sh`.
 
 ## Quest modes
 
 | Mode | How to start | What you get |
 |------|----------------|--------------|
-| **Full Quest** | Home → **Full Quest**, or `challenge.html?restart=1` | All modules in the course pack |
-| **Short Quest** | Home → **Short Quest**, or `challenge.html?short=1&restart=1` | **1 random module**, all 3 levels, **2 correct** per level (max 6 attempts/level) → best **6** / worst **18** questions |
+| **Full Quest** | Home → course → **Full Quest**, or `challenge.html?course=<id>&restart=1` | All modules in that course pack |
+| **Short Quest** | Home → course → **Short Quest**, or `challenge.html?course=<id>&short=1&restart=1` | **1 random module**, all 3 levels, **2 correct** per level (max 6 attempts/level) → best **6** / worst **18** questions |
 
-`?test=1` is an alias for Short Quest. Profile `profiles.test` in `content.json` sets `module_count` (demo: **1**). Full and Short boards stay separate on the leaderboard.
+`?test=1` is an alias for Short Quest. Profile `profiles.test` in `content.json` sets `module_count` (demo: **1**). Full and Short boards stay separate on the leaderboard. Course packs: `learn_digital` (49 modules), `learn_verilog` (17 modules).
 
 Recommended path: Short Quest to feel the loop → Full Quest for the complete challenge → report / certificate.
 
@@ -90,13 +91,23 @@ Recommended path: Short Quest to feel the loop → Full Quest for the complete c
 | Per difficulty (Full) | Need **1 correct**, max **10** unique attempts |
 | Difficulties | easy → medium → hard inside each module |
 | Bank | **30** items / difficulty (= 3 × 10) |
-| Demo size | **49** modules (01–49) → best **147** / worst **1470** questions |
+| Demo size | **learn_digital** 49 modules · **learn_verilog** 17 modules · 30 items / difficulty |
 | Feedback | Report only after the quest |
 
 Regenerate banks:
 
 ```bash
-py -3 scripts/generate_difficulty_banks.py
+py -3 scripts/generate_difficulty_banks.py          # learn_digital
+py -3 scripts/generate_verilog_banks.py             # learn_verilog
+py -3 scripts/enrich_verilog_prompts.py             # unique RTL snippets (learn_verilog)
+```
+
+Verilog stem videos (see `.cursor/skills/question-video/`):
+
+```bash
+py -3 .cursor/skills/question-video/scripts/sync_tool_figures.py --course content/learn_verilog --mode copy
+py -3 .cursor/skills/question-video/scripts/parallel_build_all.py --course content/learn_verilog --max-procs 4
+py -3 .cursor/skills/question-video/scripts/verify_question_videos.py --course content/learn_verilog
 ```
 
 ## Certificate and results

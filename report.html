@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Report · Digital Foundations Quest</title>
-    <link rel="stylesheet" href="css/challenge.css" />
+    <title>Report · Challenge Quest</title>
+    <link rel="stylesheet" href="css/challenge.css?v=19" />
   </head>
   <body class="page-report">
     <header class="site-header no-print">
@@ -34,22 +34,30 @@
       Certificate unlocks after you share name, email, and (optional) testimony
     </footer>
 
-    <script src="js/session-log.js?v=6"></script>
+    <script src="js/session-log.js?v=8"></script>
     <script src="js/benchmark.js?v=4"></script>
-    <script src="js/report.js?v=8"></script>
+    <script src="js/report.js?v=9"></script>
     <script src="js/results.js?v=9"></script>
-    <script src="js/certificate.js?v=18"></script>
+    <script src="js/certificate.js?v=19"></script>
     <script>
       (function () {
         const params = new URLSearchParams(location.search);
         let mode =
           params.get("short") === "1" || params.get("test") === "1" ? "test" : "full";
+        let courseId = (params.get("course") || "").trim();
 
         function hasAttempts(s) {
           return s && s.attempts && s.attempts.length;
         }
 
-        function loadSessionForReport() {
+        function loadSessionForReport(site) {
+          const courses = (site && site.courses) || {};
+          const defaultCourse = (site && site.default_course) || "learn_digital";
+          if (!courseId || (Object.keys(courses).length && !courses[courseId])) {
+            courseId = defaultCourse;
+          }
+          if (QCSession.setCourse) QCSession.setCourse(courseId);
+
           QCSession.setMode(mode);
           let session = QCSession.load();
           if (hasAttempts(session)) return { session, mode };
@@ -59,13 +67,32 @@
           session = QCSession.load();
           if (hasAttempts(session)) return { session, mode: other };
 
+          const ids = Object.keys(courses);
+          for (let i = 0; i < ids.length; i++) {
+            if (ids[i] === courseId) continue;
+            if (QCSession.setCourse) QCSession.setCourse(ids[i]);
+            QCSession.setMode(mode);
+            session = QCSession.load();
+            if (hasAttempts(session)) {
+              courseId = ids[i];
+              return { session, mode };
+            }
+            QCSession.setMode(other);
+            session = QCSession.load();
+            if (hasAttempts(session)) {
+              courseId = ids[i];
+              return { session, mode: other };
+            }
+          }
+
+          if (QCSession.setCourse) QCSession.setCourse(courseId);
           QCSession.setMode(mode);
           return { session: null, mode };
         }
 
         async function loadSite() {
           try {
-            const res = await fetch("config/site.json?v=5", { cache: "no-store" });
+            const res = await fetch("config/site.json?v=9", { cache: "no-store" });
             if (!res.ok) return {};
             return res.json();
           } catch (_) {
@@ -73,34 +100,52 @@
           }
         }
 
-        const loaded = loadSessionForReport();
-        const session = loaded.session;
-        mode = loaded.mode;
-
-        const qs = mode === "test" ? "?short=1&restart=1" : "?restart=1";
-        const startHref = "challenge.html" + qs;
-        ["new-quest-link", "empty-start-link", "try-again-link"].forEach((id) => {
-          const el = document.getElementById(id);
-          if (el) el.href = startHref;
-        });
-
-        const empty = document.getElementById("report-empty");
-        const root = document.getElementById("report-root");
-        const certRoot = document.getElementById("cert-root");
-        const actions = document.getElementById("report-actions");
-
-        if (!hasAttempts(session) || QCCertificate.isClaimed(session)) {
-          QCSession.setMode(mode);
-          QCSession.clear();
-          empty.hidden = false;
-          return;
-        }
-
-        QCReport.render(root, session);
-        actions.hidden = false;
-        certRoot.hidden = false;
-
         loadSite().then((site) => {
+          const loaded = loadSessionForReport(site);
+          const session = loaded.session;
+          mode = loaded.mode;
+          if (session && session.course_id) courseId = session.course_id;
+          if (QCSession.setCourse) QCSession.setCourse(courseId);
+
+          const parts = ["course=" + encodeURIComponent(courseId), "restart=1"];
+          if (mode === "test") parts.unshift("short=1");
+          const startHref = "challenge.html?" + parts.join("&");
+          ["new-quest-link", "empty-start-link", "try-again-link"].forEach((id) => {
+            const el = document.getElementById(id);
+            if (el) el.href = startHref;
+          });
+          document.querySelectorAll("a[href*='challenge.html']").forEach((a) => {
+            try {
+              const url = new URL(a.getAttribute("href"), location.href);
+              if (!url.pathname.endsWith("challenge.html")) return;
+              url.searchParams.set("course", courseId);
+              a.setAttribute(
+                "href",
+                url.pathname.split("/").pop() + url.search + url.hash
+              );
+            } catch (_) {}
+          });
+
+          const empty = document.getElementById("report-empty");
+          const root = document.getElementById("report-root");
+          const certRoot = document.getElementById("cert-root");
+          const actions = document.getElementById("report-actions");
+
+          if (!hasAttempts(session) || QCCertificate.isClaimed(session)) {
+            QCSession.setMode(mode);
+            QCSession.clear();
+            empty.hidden = false;
+            return;
+          }
+
+          try {
+            document.title = "Report · " + (session.title || courseId || "Quest");
+          } catch (_) {}
+
+          QCReport.render(root, session);
+          actions.hidden = false;
+          certRoot.hidden = false;
+
           const requireTestimony =
             !site.certificate || site.certificate.require_testimony !== false;
 
@@ -109,7 +154,6 @@
             onClaim: async (identity, statusEl) => {
               const payload = QCResults.buildPayload(session, identity, site);
               QCResults.storeLocalCopy(payload);
-              // Slim copy for GitHub Issues (~65KB body limit); keep full locally.
               const submitPayload =
                 typeof QCResults.slimForSubmit === "function"
                   ? QCResults.slimForSubmit(payload)
@@ -142,7 +186,8 @@
 
               QCCertificate.markClaimed(session);
               QCCertificate.downloadCertificatePdf(session, identity, site);
-              statusEl.textContent = "Certificate downloaded." + submitMsg + " Resetting the session…";
+              statusEl.textContent =
+                "Certificate downloaded." + submitMsg + " Resetting the session…";
               QCSession.setMode(mode);
               QCSession.clear();
               history.replaceState(null, "", "index.html");

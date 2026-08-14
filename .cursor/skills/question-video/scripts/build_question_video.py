@@ -70,8 +70,81 @@ def find_item(bank: dict, item_id: str) -> dict | None:
     return None
 
 
+def speakable_verilog(text: str) -> str:
+    """Make Verilog-heavy quiz text easier for TTS (and STT round-trips)."""
+    s = str(text or "").replace("\ufffd", "...")
+    s = s.replace("\x0b", "")  # bad-escape artifact before 'verilog'
+    s = s.replace("…", "...").replace("↔", " to ").replace("—", " - ").replace("–", "-")
+    # Drop fenced RTL; the slide/figure already shows it.
+    had_fence = "```" in s or bool(re.search(r"(?i)`\s*verilog\b", s))
+    s = re.sub(
+        r"```(?:verilog|systemverilog|sv)?[^\n]*\n.*?```",
+        " ",
+        s,
+        flags=re.I | re.S,
+    )
+    # Recover from corrupted single-backtick fences.
+    s = re.sub(r"(?is)`\s*verilog\b.*?`", " ", s)
+    # Drop enrichment noise that confuses narration.
+    s = re.sub(r"(?m)^\s*//\s*Review context:.*$", " ", s)
+    s = re.sub(r"//\s*Review context:[^\n]*", " ", s)
+    if re.search(r"(?i)given this rtl snippet", s) or had_fence:
+        s = re.sub(
+            r"(?i)given this rtl snippet\s*[:.]?\s*",
+            "Given the RTL snippet on the slide. ",
+            s,
+            count=1,
+        )
+
+    def _bits(m: re.Match[str]) -> str:
+        width, base, digits = m.group(1), m.group(2).lower(), m.group(3)
+        base_word = {"b": "binary", "h": "hex", "d": "decimal", "o": "octal"}.get(base, base)
+        spaced = " ".join(digits)
+        return f"{width} bit {base_word} {spaced}"
+
+    s = re.sub(r"\b(\d+)'([bhdoBHDO])([0-9a-fA-FxXzZ_]+)\b", _bits, s)
+    s = re.sub(r"`([^`]+)`", r"\1", s)
+    s = s.replace("@(*)", " at star ")
+    s = s.replace("always_ff", " always F F ")
+    s = s.replace("always_comb", " always comb ")
+    s = s.replace("posedge", " positive edge ")
+    s = s.replace("negedge", " negative edge ")
+    s = s.replace("$clog2", " clog 2 ")
+    s = s.replace("$error", " error ")
+    s = re.sub(r"(?i)wild equality\s*==\?", "wild equality", s)
+    s = s.replace("==?", " wild equality ")
+    s = s.replace("!=?", " wild inequality ")
+    s = s.replace("<<", " left shift ")
+    s = s.replace(">>", " right shift ")
+    s = s.replace("&&", " and ")
+    s = s.replace("||", " or ")
+    s = s.replace("~&", " nand ")
+    s = s.replace("~|", " nor ")
+    s = s.replace("^~", " xnor ")
+    s = s.replace("~^", " xnor ")
+    s = re.sub(r"\{(\d+)\{", r" replicate \1 times ", s)
+    s = s.replace("{", " concat ").replace("}", " ")
+    s = re.sub(r"(?i)\blocalparam\b", " local parameter ", s)
+    s = re.sub(r"(?i)\bparameter\b", " parameter ", s)
+    s = re.sub(r"(?i)\bSIPO\b", " S I P O ", s)
+    s = re.sub(r"(?i)\bPISO\b", " P I S O ", s)
+    s = re.sub(r"(?i)\bCDC\b", " C D C ", s)
+    s = re.sub(r"(?i)\bFSM\b", " F S M ", s)
+    s = re.sub(r"(?i)\bSV\b", " SystemVerilog ", s)
+    s = re.sub(r"(?i)\bwand\b", " wired AND ", s)
+    s = re.sub(r"(?i)\bwor\b", " wired OR ", s)
+    s = re.sub(r"(?i)\btri\b(?!-state)", " tri-state ", s)
+    s = re.sub(r"(?i)\bpull[- ]?ups\b", " pull ups ", s)
+    s = re.sub(r"(?i)\bbus keepers\b", " bus keeper cells ", s)
+    s = re.sub(r"[`]+", " ", s)
+    s = re.sub(r"\s+", " ", s).strip(" .")
+    if s and not s.endswith(("?", ".", "!")):
+        s += "."
+    return s
+
+
 def speech_for_item(item: dict, *, has_figure: bool) -> str:
-    prompt = str(item.get("prompt") or "").strip().replace("\ufffd", "…")
+    prompt = speakable_verilog(str(item.get("prompt") or "").strip())
     typ = str(item.get("type") or "multiple_choice")
     parts: list[str] = []
     if has_figure:
@@ -87,8 +160,8 @@ def speech_for_item(item: dict, *, has_figure: bool) -> str:
         letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         for i, choice in enumerate(choices):
             label = letters[i] if i < len(letters) else str(i + 1)
-            choice_s = str(choice).replace("\ufffd", "…")
-            parts.append(f"Option {label}. {choice_s}.")
+            choice_s = speakable_verilog(str(choice))
+            parts.append(f"Option {label}. {choice_s}")
         parts.append("Select the best answer.")
     return re.sub(r"\s+", " ", " ".join(parts)).strip()
 

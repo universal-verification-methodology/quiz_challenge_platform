@@ -189,8 +189,8 @@
       (site && site.certificate && site.certificate.endorsement_url) ||
       "https://github.com/universal-verification-methodology";
     const course =
-      (site && site.certificate && site.certificate.course_label) ||
       session.title ||
+      (site && site.certificate && site.certificate.course_label) ||
       "Quest";
     const shortModule =
       session.mode === "test"

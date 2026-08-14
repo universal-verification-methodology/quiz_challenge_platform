@@ -74,7 +74,9 @@
         ? session.short_module_title
           ? "Short Quest · " + session.short_module_title
           : "Short Quest"
-        : "Digital Foundations Quest");
+        : session.course_id === "learn_verilog"
+          ? "Verilog RTL Quest"
+          : "Digital Foundations Quest");
     const when = fmtCompleted(session.completed_at || session.started_at);
     sub.innerHTML =
       "<span class=\"report-quest-name\">" +

@@ -141,11 +141,12 @@ def check_item(course: Path, module_id: str, item: dict, build) -> dict:
         if has_video and n_act != n_exp and n_act != norm_text(expected):
             issues.append("speech_stale_vs_bank")
         if has_video:
-            prompt = norm_text(sanitize_prompt(str(item.get("prompt") or "")))
-            if prompt and len(prompt) >= 8:
-                pcore = prompt.rstrip(" .?")
-                if pcore and pcore not in n_act:
-                    issues.append("prompt_missing_from_stored_speech")
+            # Prefer speakable English stem over raw prompt (which includes RTL fences).
+            english = build.speakable_verilog(str(item.get("prompt") or ""))
+            # Keep a short distinctive chunk from the end of the English question.
+            chunk = norm_text(english)[-80:].strip(" .?")
+            if chunk and len(chunk) >= 12 and chunk not in n_act:
+                issues.append("prompt_missing_from_stored_speech")
             issues.extend(spoiler_hits(actual, item))
     elif has_video:
         issues.append("missing_speech_txt")

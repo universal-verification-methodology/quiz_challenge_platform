@@ -2,9 +2,11 @@
  * Challenge controller — variable length; 1 correct per difficulty (max 10).
  * Short Quest: ?test=1|?short=1 → 1 random module, easy→medium→hard (see content.profiles.test).
  * Full Quest: all course modules.
+ * Course pack: ?course=learn_digital|learn_verilog (see config/site.json).
  */
 (function () {
-  const CONTENT_BASE = "content/learn_digital";
+  const DEFAULT_COURSE = "learn_digital";
+  const DEFAULT_CONTENT_BASE = "content/learn_digital";
   /** Fallback if config/site.json fails so lab embeds still resolve. */
   const DEFAULT_TOOLS_BASE =
     "https://universal-verification-methodology.github.io/learning/tools";
@@ -14,6 +16,9 @@
   let openAttempt = null;
   let mode = "full";
   let toolsBase = DEFAULT_TOOLS_BASE;
+  let courseId = DEFAULT_COURSE;
+  let contentBase = DEFAULT_CONTENT_BASE;
+  let siteConfig = null;
 
   const els = {
     title: document.getElementById("quest-title"),
@@ -24,7 +29,7 @@
   };
 
   const SHORT_FALLBACK = {
-    title: "Digital Foundations Quest (Short)",
+    title: "Short Quest",
     module_count: 1,
     difficulties: ["easy", "medium", "hard"],
     need_correct_per_difficulty: 2,
@@ -157,10 +162,41 @@
     return res.json();
   }
 
-  async function loadSite() {
+  function resolveCourse(params, site) {
+    const allowed = (site && site.courses) || {};
+    const fallback =
+      (site && site.default_course) || DEFAULT_COURSE;
+    let id = (params.get("course") || fallback || DEFAULT_COURSE).trim();
+    if (!id) id = DEFAULT_COURSE;
+    // If catalog missing (offline/misconfig), honor the query/default id.
+    if (!Object.keys(allowed).length) return id;
+    if (allowed[id]) return id;
+    if (allowed[fallback]) return fallback;
+    const keys = Object.keys(allowed);
+    if (keys.length) return keys[0];
+    return DEFAULT_COURSE;
+  }
+
+  function courseMeta(site, id) {
+    const entry = (site && site.courses && site.courses[id]) || {};
+    return {
+      id: id,
+      content_base: entry.content_base || "content/" + id,
+      label: entry.label || id,
+      eyebrow: entry.eyebrow || "",
+    };
+  }
+
+  function courseQuery() {
+    return "course=" + encodeURIComponent(courseId);
+  }
+
+  async function loadSite(params) {
     toolsBase = DEFAULT_TOOLS_BASE;
+    siteConfig = null;
     try {
-      const site = await loadJson("config/site.json?v=8");
+      const site = await loadJson("config/site.json?v=9");
+      siteConfig = site;
       const fromSite =
         (site.tools && site.tools.base_url) ||
         (site.tools && site.tools.endpoint) ||
@@ -172,6 +208,10 @@
         err
       );
     }
+    courseId = resolveCourse(params || new URLSearchParams(), siteConfig);
+    const meta = courseMeta(siteConfig, courseId);
+    contentBase = meta.content_base || DEFAULT_CONTENT_BASE;
+    if (QCSession && QCSession.setCourse) QCSession.setCourse(courseId);
   }
 
   function quizRenderOpts(mod, item, extra) {
@@ -183,7 +223,7 @@
     const opts = Object.assign(
       {
         feedback: (content.ux && content.ux.feedback) || "report_only",
-        mediaBase: CONTENT_BASE,
+        mediaBase: contentBase,
         toolsBase: toolsBase,
         toolId: toolId,
         embedTools: embedTools,
@@ -199,7 +239,7 @@
 
   async function loadBank(mod) {
     if (bankCache[mod.id]) return bankCache[mod.id];
-    const bank = await loadJson(CONTENT_BASE + "/" + mod.questions);
+    const bank = await loadJson(contentBase + "/" + mod.questions);
     bankCache[mod.id] = bank;
     return bank;
   }
@@ -218,11 +258,42 @@
   }
 
   function reportUrl() {
-    return mode === "test" ? "report.html?short=1" : "report.html";
+    const parts = [courseQuery()];
+    if (mode === "test") parts.unshift("short=1");
+    return "report.html?" + parts.join("&");
   }
 
   function shortQuestQuery() {
-    return "short=1";
+    return "short=1&" + courseQuery();
+  }
+
+  function fullQuestQuery() {
+    return courseQuery();
+  }
+
+  function rewriteNavForCourse() {
+    document.querySelectorAll("a[href*='challenge.html']").forEach((a) => {
+      try {
+        const url = new URL(a.getAttribute("href"), location.href);
+        if (!url.pathname.endsWith("challenge.html")) return;
+        url.searchParams.set("course", courseId);
+        a.setAttribute(
+          "href",
+          url.pathname.split("/").pop() + url.search + url.hash
+        );
+      } catch (_) {}
+    });
+    document.querySelectorAll("a[href*='report.html']").forEach((a) => {
+      try {
+        const url = new URL(a.getAttribute("href"), location.href);
+        if (!url.pathname.endsWith("report.html")) return;
+        url.searchParams.set("course", courseId);
+        a.setAttribute(
+          "href",
+          url.pathname.split("/").pop() + url.search + url.hash
+        );
+      } catch (_) {}
+    });
   }
 
   async function showCurrent() {
@@ -376,11 +447,12 @@
     mode = isShortParam(params) ? "test" : "full";
     QCSession.setMode(mode);
 
-    await loadSite();
+    await loadSite(params);
+    rewriteNavForCourse();
 
     let raw;
     try {
-      raw = await loadJson(CONTENT_BASE + "/content.json?v=13");
+      raw = await loadJson(contentBase + "/content.json?v=3");
     } catch (err) {
       if (els.status) {
         els.status.hidden = false;
@@ -458,8 +530,14 @@
       restartLink.href =
         mode === "test"
           ? "challenge.html?" + shortQuestQuery() + "&restart=1"
-          : "challenge.html?restart=1";
+          : "challenge.html?" + fullQuestQuery() + "&restart=1";
     }
+
+    try {
+      document.title =
+        (mode === "test" ? "Short Quest · " : "Challenge · ") +
+        (content.title || courseMeta(siteConfig, courseId).label);
+    } catch (_) {}
 
     const stemId = params.get("stem");
     if (stemId) {

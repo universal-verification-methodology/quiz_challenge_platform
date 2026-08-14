@@ -67,10 +67,10 @@ def load_modules(course: Path) -> list[dict]:
     return list(data.get("modules") or [])
 
 
-def copy_lab_starter(dl: Path, module_id: str, tool_id: str, dest: Path) -> bool:
-    src = dl / "courses" / "learn_digital" / module_id / "assets" / "lab-starter.png"
+def copy_lab_starter(dl: Path, module_id: str, tool_id: str, dest: Path, *, course_id: str = "learn_digital") -> bool:
+    src = dl / "courses" / course_id / module_id / "assets" / "lab-starter.png"
     if not src.is_file():
-        alt = dl / "courses" / "learn_digital" / module_id / "frames" / "slide-3.png"
+        alt = dl / "courses" / course_id / module_id / "frames" / "slide-3.png"
         src = alt if alt.is_file() else src
     if not src.is_file():
         return False
@@ -163,6 +163,11 @@ def main() -> int:
     out_dir = course / "media" / "images" / "tools"
     out_dir.mkdir(parents=True, exist_ok=True)
 
+    manifest = course / "content.json"
+    course_id = "learn_digital"
+    if manifest.is_file():
+        course_id = json.loads(manifest.read_text(encoding="utf-8")).get("source_course") or course.name
+
     modules = load_modules(course)
     if not modules:
         modules = [{"id": mid, "toolId": tid} for mid, tid in MODULE_TOOLS.items()]
@@ -178,7 +183,7 @@ def main() -> int:
         dest = out_dir / f"{tool_id}.png"
         done = False
         if args.mode in ("copy", "copy-then-capture"):
-            done = copy_lab_starter(dl, mid, tool_id, dest)
+            done = copy_lab_starter(dl, mid, tool_id, dest, course_id=course_id)
         if args.mode == "capture" or (args.mode == "copy-then-capture" and not done):
             done = capture_instrument(tool_id, dest, base=args.base)
         if done:

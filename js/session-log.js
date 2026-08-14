@@ -1,20 +1,34 @@
 /**
  * Per-attempt session log + localStorage persistence.
  * Full and Short Quest modes use separate keys so they never mix.
+ * Keys are also scoped by course_id so packs do not overwrite each other.
  */
 (function (global) {
-  const KEYS = {
+  const KEY_PREFIX = {
+    full: "qc_session_v4_full",
+    test: "qc_session_v4_test",
+  };
+  /** @deprecated legacy unscoped keys (pre multi-course) */
+  const LEGACY_KEYS = {
     full: "qc_session_v4_full",
     test: "qc_session_v4_test",
   };
   let activeMode = "full";
+  let activeCourse = "";
 
-  function storageKey() {
-    return KEYS[activeMode] || KEYS.full;
+  function storageKey(mode, courseId) {
+    const m = mode === "test" ? "test" : "full";
+    const base = KEY_PREFIX[m] || KEY_PREFIX.full;
+    const c = courseId != null ? courseId : activeCourse;
+    return c ? base + "__" + c : base;
   }
 
   function setMode(mode) {
     activeMode = mode === "test" ? "test" : "full";
+  }
+
+  function setCourse(courseId) {
+    activeCourse = courseId ? String(courseId) : "";
   }
 
   function createSession(courseId, title, opts) {
@@ -33,25 +47,47 @@
     };
   }
 
-  function loadFrom(mode) {
+  function readKey(key) {
     try {
-      const raw = localStorage.getItem(KEYS[mode] || KEYS.full);
+      const raw = localStorage.getItem(key);
       return raw ? JSON.parse(raw) : null;
     } catch (_) {
       return null;
     }
   }
 
+  function loadFrom(mode, courseId) {
+    const scoped = readKey(storageKey(mode, courseId));
+    if (scoped) return scoped;
+    // Migrate legacy unscoped session if it matches this course (or course unknown).
+    const legacy = readKey(LEGACY_KEYS[mode === "test" ? "test" : "full"]);
+    if (!legacy) return null;
+    const want = courseId != null ? courseId : activeCourse;
+    if (want && legacy.course_id && legacy.course_id !== want) return null;
+    return legacy;
+  }
+
   function load() {
-    return loadFrom(activeMode);
+    return loadFrom(activeMode, activeCourse);
   }
 
   function save(session) {
-    localStorage.setItem(storageKey(), JSON.stringify(session));
+    if (session && session.course_id) setCourse(session.course_id);
+    localStorage.setItem(storageKey(activeMode, activeCourse), JSON.stringify(session));
   }
 
   function clear() {
-    localStorage.removeItem(storageKey());
+    localStorage.removeItem(storageKey(activeMode, activeCourse));
+    // Also clear legacy key when it belongs to this course / is empty course.
+    try {
+      const legacy = readKey(LEGACY_KEYS[activeMode]);
+      if (
+        legacy &&
+        (!activeCourse || !legacy.course_id || legacy.course_id === activeCourse)
+      ) {
+        localStorage.removeItem(LEGACY_KEYS[activeMode]);
+      }
+    } catch (_) {}
   }
 
   function startAttempt(session, meta) {
@@ -82,69 +118,55 @@
       item_id: open.item_id,
       attempt_index: open.attempt_index,
       started_at: open.started_at,
-      answered_at,
-      duration_ms,
-      selected,
-      correct: !!correct,
-      timed_out: !!extra.timedOut,
+      answered_at: answered_at,
+      duration_ms: duration_ms,
       difficulty: open.difficulty,
       prompt: open.prompt,
       choices: open.choices,
+      selected: selected,
       correct_answer: open.correct_answer,
+      correct: !!correct,
       explain: open.explain,
+      timed_out: !!(extra.timed_out || extra.timedOut),
     };
     session.attempts.push(record);
     if (correct) {
-      const mid = open.module_id;
-      session.module_correct[mid] = (session.module_correct[mid] || 0) + 1;
+      if (!session.module_correct[open.module_id]) session.module_correct[open.module_id] = 0;
+      session.module_correct[open.module_id] += 1;
     }
-    save(session);
     return record;
   }
 
   function aggregates(session) {
     const attempts = session.attempts || [];
+    const correct = attempts.filter((a) => a && a.correct);
+    const wrong = attempts.filter((a) => a && !a.correct);
     const total_ms = attempts.reduce((s, a) => s + (a.duration_ms || 0), 0);
-    const correct = attempts.filter((a) => a.correct);
-    const wrong = attempts.filter((a) => !a.correct);
     const byModule = {};
     const byLevel = {};
     attempts.forEach((a) => {
+      if (!a) return;
       if (!byModule[a.module_id]) {
         byModule[a.module_id] = {
-          module_id: a.module_id,
-          title: a.module_title,
+          id: a.module_id,
+          title: a.module_title || a.module_id,
           attempts: 0,
           correct: 0,
-          wrong: 0,
-          time_ms: 0,
+          ms: 0,
         };
       }
-      const m = byModule[a.module_id];
-      m.attempts += 1;
-      m.time_ms += a.duration_ms || 0;
-      if (a.correct) m.correct += 1;
-      else m.wrong += 1;
+      byModule[a.module_id].attempts += 1;
+      byModule[a.module_id].ms += a.duration_ms || 0;
+      if (a.correct) byModule[a.module_id].correct += 1;
 
-      const lk = a.module_id + "::" + (a.difficulty || "?");
-      if (!byLevel[lk]) {
-        byLevel[lk] = {
-          module_id: a.module_id,
-          title: a.module_title,
-          difficulty: a.difficulty || "?",
-          attempts: 0,
-          correct: 0,
-          wrong: 0,
-          time_ms: 0,
-        };
+      const lvl = a.difficulty || "unknown";
+      if (!byLevel[lvl]) {
+        byLevel[lvl] = { difficulty: lvl, attempts: 0, correct: 0, ms: 0 };
       }
-      const L = byLevel[lk];
-      L.attempts += 1;
-      L.time_ms += a.duration_ms || 0;
-      if (a.correct) L.correct += 1;
-      else L.wrong += 1;
+      byLevel[lvl].attempts += 1;
+      byLevel[lvl].ms += a.duration_ms || 0;
+      if (a.correct) byLevel[lvl].correct += 1;
     });
-
     const level_state = session.level_state || {};
     return {
       total_attempts: attempts.length,
@@ -159,8 +181,9 @@
   }
 
   global.QCSession = {
-    KEYS,
+    KEY_PREFIX,
     setMode,
+    setCourse,
     createSession,
     load,
     loadFrom,
@@ -169,5 +192,6 @@
     startAttempt,
     finishAttempt,
     aggregates,
+    storageKey,
   };
 })(window);
