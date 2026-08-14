@@ -264,6 +264,46 @@ body.page-dashboard main,
   font-weight: 600;
 }
 
+.course-grid {
+  display: grid;
+  gap: 1.25rem;
+  margin: 0.5rem 0 1.5rem;
+}
+
+@media (min-width: 720px) {
+  .course-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.course-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.35rem 1.4rem;
+}
+
+.course-card h2 {
+  font-family: var(--display);
+  font-size: 1.45rem;
+  line-height: 1.2;
+  margin: 0 0 0.35rem;
+}
+
+.course-card .eyebrow {
+  margin: 0 0 0.35rem;
+}
+
+.course-meta {
+  color: var(--muted);
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+}
+
+.course-card .actions {
+  margin: 0;
+}
+
 .panel {
   background: var(--surface);
   border: 1px solid var(--line);
