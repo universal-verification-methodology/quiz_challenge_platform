@@ -40,7 +40,13 @@ jobs:
       - name: Prune non-site paths before asset upload
         run: |
           rm -rf .git backend .cursor paper scripts docs .wrangler node_modules
-          rm -rf content/learn_digital/media/_work content/learn_digital/media/_batch_logs
+          rm -rf content/*/media/_work content/*/media/_batch_logs
+          rm -f content/*/media/_batch_build.log
+          # Drop per-item stem/frame PNGs; keep tools/. Stays under the 20k-file cap.
+          find content -path '*/media/images/tools' -prune -o \
+            -path '*/media/images/*' -type f -print -delete
+          echo "Asset file count (cap 20k free / 100k paid):"
+          find . -type f | wc -l
           echo "Largest remaining paths:"
           du -sh ./* .[!.]* 2>/dev/null | sort -hr | head -20
 

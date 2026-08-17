@@ -28,5 +28,11 @@ docs/
 *.pack
 *.idx
 
-content/learn_digital/media/_work/
-content/learn_digital/media/_batch_logs/
+# Build scratch — never serve
+content/**/media/_work/
+content/**/media/_batch_logs/
+
+# Per-item stem/frame PNGs (videos already cover stems). Keep media/images/tools/.
+content/learn_digital/media/images/*.png
+content/learn_verilog/media/images/*.png
+content/learn_unix/media/images/*.png
