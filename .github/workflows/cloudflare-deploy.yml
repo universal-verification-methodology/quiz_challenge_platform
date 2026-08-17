@@ -38,17 +38,36 @@ jobs:
       # assets.directory is "."; Workers will otherwise scan .git packs (>25 MiB)
       # and non-site trees even when .assetsignore should skip them.
       - name: Prune non-site paths before asset upload
+        shell: bash
         run: |
           rm -rf .git backend .cursor paper scripts docs .wrangler node_modules
-          rm -rf content/*/media/_work content/*/media/_batch_logs
-          rm -f content/*/media/_batch_build.log
-          # Drop per-item stem/frame PNGs; keep tools/. Stays under the 20k-file cap.
-          find content -path '*/media/images/tools' -prune -o \
-            -path '*/media/images/*' -type f -print -delete
-          echo "Asset file count (cap 20k free / 100k paid):"
-          find . -type f | wc -l
-          echo "Largest remaining paths:"
-          du -sh ./* .[!.]* 2>/dev/null | sort -hr | head -20
+          python3 - <<'PY'
+          import shutil
+          from pathlib import Path
+
+          root = Path("content")
+          removed = 0
+          for course in root.glob("*"):
+              media = course / "media"
+              for scratch in ("_work", "_batch_logs"):
+                  p = media / scratch
+                  if p.exists():
+                      shutil.rmtree(p, ignore_errors=True)
+              log = media / "_batch_build.log"
+              if log.exists():
+                  log.unlink()
+              images = media / "images"
+              if images.is_dir():
+                  for p in images.iterdir():
+                      if p.is_dir() and p.name == "tools":
+                          continue
+                      if p.is_file() and p.suffix.lower() == ".png":
+                          p.unlink()
+                          removed += 1
+          files = sum(1 for p in Path(".").rglob("*") if p.is_file())
+          print(f"removed {removed} stem pngs; remaining files={files}")
+          PY
+          du -sh content/* || true
 
       - name: Deploy Worker (static assets)
         uses: cloudflare/wrangler-action@v3

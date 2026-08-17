@@ -35,16 +35,35 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Prepare site bundle
+        shell: bash
         run: |
-          mkdir -p _site
-          cp index.html challenge.html dashboard.html report.html _site/
-          cp -r config css js _site/
-          cp -r content _site/
-          rm -rf _site/content/*/media/_work _site/content/*/media/_batch_logs
-          find _site/content -path '*/media/images/tools' -prune -o \
-            -path '*/media/images/*' -type f -delete
-          # Worker / tooling stay off Pages
-          rm -rf _site/backend _site/scripts _site/docs _site/node_modules || true
+          python3 - <<'PY'
+          import shutil
+          from pathlib import Path
+
+          root = Path("content")
+          for course in root.glob("*"):
+              media = course / "media"
+              for scratch in ("_work", "_batch_logs"):
+                  p = media / scratch
+                  if p.exists():
+                      shutil.rmtree(p, ignore_errors=True)
+              images = media / "images"
+              if images.is_dir():
+                  for p in images.iterdir():
+                      if p.is_dir() and p.name == "tools":
+                          continue
+                      if p.is_file() and p.suffix.lower() == ".png":
+                          p.unlink()
+          site = Path("_site")
+          site.mkdir()
+          for name in ("index.html", "challenge.html", "dashboard.html", "report.html"):
+              shutil.copy2(name, site / name)
+          for name in ("config", "css", "js"):
+              shutil.copytree(name, site / name)
+          shutil.move("content", site / "content")
+          print("pages bundle ready")
+          PY
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
