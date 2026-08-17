@@ -1,0 +1,1680 @@
+{
+  "module": "module06-sensitivity-list",
+  "title": "Sensitivity lists",
+  "items": [
+    {
+      "id": "sens_easy_01",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg clk; always @(*) clk = en ? rst_n : clk;\n```\nA sensitivity list tells the simulator…",
+      "choices": [
+        "Which signal events re-run the always block",
+        "Only port directions",
+        "The PLL period",
+        "Which files to compile"
+      ],
+      "answer": 0,
+      "explain": "Events trigger the process.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_easy_01.mp4",
+        "poster": "media/images/sens_easy_01-frame.png",
+        "figure": "media/images/sens_easy_01.png"
+      }
+    },
+    {
+      "id": "sens_easy_02",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 12; localparam MAX = (1<<W)-1;\n```\nalways @(A) Y = A & B; when only B changes…",
+      "choices": [
+        "The block often does not run — Y can stay stale",
+        "Y always updates correctly",
+        "A flop is inferred",
+        "Sim must stop"
+      ],
+      "answer": 0,
+      "explain": "Incomplete sensitivity → sim/synth mismatch risk.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_easy_02.mp4",
+        "poster": "media/images/sens_easy_02-frame.png",
+        "figure": "media/images/sens_easy_02.png"
+      }
+    },
+    {
+      "id": "sens_easy_03",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) rst_n <= data;\n```\nalways @(posedge clk) Q <= D; when D changes alone…",
+      "choices": [
+        "Q updates on the next rising clock edge",
+        "Q updates immediately on every D change",
+        "Q clears",
+        "Illegal"
+      ],
+      "answer": 0,
+      "explain": "Edge-triggered sampling.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_easy_03.mp4",
+        "poster": "media/images/sens_easy_03-frame.png",
+        "figure": "media/images/sens_easy_03.png"
+      }
+    },
+    {
+      "id": "sens_easy_04",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [31:0] data; assign count = data ^ sel;\n```\n@(*) is meant to include every signal read in the combinational block.",
+      "answer": true,
+      "explain": "Implicit full combo sensitivity.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_easy_04.mp4",
+        "poster": "media/images/sens_easy_04-frame.png",
+        "figure": "media/images/sens_easy_04.png"
+      }
+    },
+    {
+      "id": "sens_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg count; always @(*) count = sel ? out : count;\n```\n`negedge rst_n` in a list means…",
+      "choices": [
+        "Trigger on falling edge of rst_n",
+        "Level sensitive only",
+        "Ignore rst_n",
+        "Parameter"
+      ],
+      "answer": 0,
+      "explain": "Edge keyword.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_easy_05.mp4",
+        "poster": "media/images/sens_easy_05-frame.png",
+        "figure": "media/images/sens_easy_05.png"
+      }
+    },
+    {
+      "id": "sens_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 4; localparam MAX = (1<<W)-1;\n```\nalways @* is…",
+      "choices": [
+        "Same idea as @(*) full combo sensitivity",
+        "A clock edge",
+        "Only for TB",
+        "A nettype"
+      ],
+      "answer": 0,
+      "explain": "@* ≈ @(*).",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_easy_06.mp4",
+        "poster": "media/images/sens_easy_06-frame.png",
+        "figure": "media/images/sens_easy_06.png"
+      }
+    },
+    {
+      "id": "sens_easy_07",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) out <= sum;\n```\nClocked always blocks should list the clock edge (and reset if async).",
+      "answer": true,
+      "explain": "Explicit sequential sensitivity.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_easy_07.mp4",
+        "poster": "media/images/sens_easy_07-frame.png",
+        "figure": "media/images/sens_easy_07.png"
+      }
+    },
+    {
+      "id": "sens_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [5:0] sum; assign din = sum ^ qout;\n```\nMissing reset from an async reset flop template…",
+      "choices": [
+        "Breaks reset behavior vs intent",
+        "Speeds timing always",
+        "Required for synth",
+        "Only affects $finish"
+      ],
+      "answer": 0,
+      "explain": "Sensitivity must match async reset style.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_easy_08.mp4",
+        "poster": "media/images/sens_easy_08-frame.png",
+        "figure": "media/images/sens_easy_08.png"
+      }
+    },
+    {
+      "id": "sens_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg din; always @(*) din = qout ? a : din;\n```\nLevel-sensitive `always @(en)` for latches…",
+      "choices": [
+        "Can model latch behavior when coded that way",
+        "Always makes a flop",
+        "Is illegal",
+        "Is a package"
+      ],
+      "answer": 0,
+      "explain": "Latch templates use levels.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_easy_09.mp4",
+        "poster": "media/images/sens_easy_09-frame.png",
+        "figure": "media/images/sens_easy_09.png"
+      }
+    },
+    {
+      "id": "sens_easy_10",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 8; localparam MAX = (1<<W)-1;\n```\nEmpty `always @()` is valid full sensitivity.",
+      "answer": false,
+      "explain": "Use @(*) / @*.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_easy_10.mp4",
+        "poster": "media/images/sens_easy_10-frame.png",
+        "figure": "media/images/sens_easy_10.png"
+      }
+    },
+    {
+      "id": "sens_easy_11",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) a <= b;\n```\n// Review context: `y[5:0]` slot 11 variant 1\nA sensitivity list tells the simulator…",
+      "choices": [
+        "Which signal events re-run the always block",
+        "Only port directions",
+        "The PLL period",
+        "Which files to compile"
+      ],
+      "answer": 0,
+      "explain": "Events trigger the process.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_easy_11.mp4",
+        "poster": "media/images/sens_easy_11-frame.png",
+        "figure": "media/images/sens_easy_11.png"
+      }
+    },
+    {
+      "id": "sens_easy_12",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [15:0] b; assign y = b ^ q;\n```\n// Review context: `q[6:0]` slot 12 variant 1\nalways @(A) Y = A & B; when only B changes…",
+      "choices": [
+        "The block often does not run — Y can stay stale",
+        "Y always updates correctly",
+        "A flop is inferred",
+        "Sim must stop"
+      ],
+      "answer": 0,
+      "explain": "Incomplete sensitivity → sim/synth mismatch risk.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_easy_12.mp4",
+        "poster": "media/images/sens_easy_12-frame.png",
+        "figure": "media/images/sens_easy_12.png"
+      }
+    },
+    {
+      "id": "sens_easy_13",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg y; always @(*) y = q ? d : y;\n```\n// Review context: `d[7:0]` slot 13 variant 1\nalways @(posedge clk) Q <= D; when D changes alone…",
+      "choices": [
+        "Q updates on the next rising clock edge",
+        "Q updates immediately on every D change",
+        "Q clears",
+        "Illegal"
+      ],
+      "answer": 0,
+      "explain": "Edge-triggered sampling.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_easy_13.mp4",
+        "poster": "media/images/sens_easy_13-frame.png",
+        "figure": "media/images/sens_easy_13.png"
+      }
+    },
+    {
+      "id": "sens_easy_14",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 3; localparam MAX = (1<<W)-1;\n```\n// Review context: `clk[11:0]` slot 14 variant 1\n@(*) is meant to include every signal read in the combinational block.",
+      "answer": true,
+      "explain": "Implicit full combo sensitivity.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_easy_14.mp4",
+        "poster": "media/images/sens_easy_14-frame.png",
+        "figure": "media/images/sens_easy_14.png"
+      }
+    },
+    {
+      "id": "sens_easy_15",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) d <= clk;\n```\n// Review context: `en[15:0]` slot 15 variant 1\n`negedge rst_n` in a list means…",
+      "choices": [
+        "Trigger on falling edge of rst_n",
+        "Level sensitive only",
+        "Ignore rst_n",
+        "Parameter"
+      ],
+      "answer": 0,
+      "explain": "Edge keyword.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_easy_15.mp4",
+        "poster": "media/images/sens_easy_15-frame.png",
+        "figure": "media/images/sens_easy_15.png"
+      }
+    },
+    {
+      "id": "sens_easy_16",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [4:0] clk; assign en = clk ^ rst_n;\n```\n// Review context: `rst_n[31:0]` slot 16 variant 1\nalways @* is…",
+      "choices": [
+        "Same idea as @(*) full combo sensitivity",
+        "A clock edge",
+        "Only for TB",
+        "A nettype"
+      ],
+      "answer": 0,
+      "explain": "@* ≈ @(*).",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_easy_16.mp4",
+        "poster": "media/images/sens_easy_16-frame.png",
+        "figure": "media/images/sens_easy_16.png"
+      }
+    },
+    {
+      "id": "sens_easy_17",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg en; always @(*) en = rst_n ? data : en;\n```\n// Review context: `data[2:0]` slot 17 variant 1\nClocked always blocks should list the clock edge (and reset if async).",
+      "answer": true,
+      "explain": "Explicit sequential sensitivity.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_easy_17.mp4",
+        "poster": "media/images/sens_easy_17-frame.png",
+        "figure": "media/images/sens_easy_17.png"
+      }
+    },
+    {
+      "id": "sens_easy_18",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 7; localparam MAX = (1<<W)-1;\n```\n// Review context: `count[3:0]` slot 18 variant 1\nMissing reset from an async reset flop template…",
+      "choices": [
+        "Breaks reset behavior vs intent",
+        "Speeds timing always",
+        "Required for synth",
+        "Only affects $finish"
+      ],
+      "answer": 0,
+      "explain": "Sensitivity must match async reset style.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_easy_18.mp4",
+        "poster": "media/images/sens_easy_18-frame.png",
+        "figure": "media/images/sens_easy_18.png"
+      }
+    },
+    {
+      "id": "sens_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) data <= count;\n```\n// Review context: `a[4:0]` slot 19 variant 1\nLevel-sensitive `always @(en)` for latches…",
+      "choices": [
+        "Can model latch behavior when coded that way",
+        "Always makes a flop",
+        "Is illegal",
+        "Is a package"
+      ],
+      "answer": 0,
+      "explain": "Latch templates use levels.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_easy_19.mp4",
+        "poster": "media/images/sens_easy_19-frame.png",
+        "figure": "media/images/sens_easy_19.png"
+      }
+    },
+    {
+      "id": "sens_easy_20",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [11:0] count; assign sel = count ^ out;\n```\n// Review context: `b[5:0]` slot 20 variant 1\nEmpty `always @()` is valid full sensitivity.",
+      "answer": false,
+      "explain": "Use @(*) / @*.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_easy_20.mp4",
+        "poster": "media/images/sens_easy_20-frame.png",
+        "figure": "media/images/sens_easy_20.png"
+      }
+    },
+    {
+      "id": "sens_easy_21",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg sel; always @(*) sel = out ? sum : sel;\n```\n// Review context: `y[6:0]` slot 21 variant 1\nA sensitivity list tells the simulator…",
+      "choices": [
+        "Which signal events re-run the always block",
+        "Only port directions",
+        "The PLL period",
+        "Which files to compile"
+      ],
+      "answer": 0,
+      "explain": "Events trigger the process.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_easy_21.mp4",
+        "poster": "media/images/sens_easy_21-frame.png",
+        "figure": "media/images/sens_easy_21.png"
+      }
+    },
+    {
+      "id": "sens_easy_22",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 32; localparam MAX = (1<<W)-1;\n```\n// Review context: `q[7:0]` slot 22 variant 1\nalways @(A) Y = A & B; when only B changes…",
+      "choices": [
+        "The block often does not run — Y can stay stale",
+        "Y always updates correctly",
+        "A flop is inferred",
+        "Sim must stop"
+      ],
+      "answer": 0,
+      "explain": "Incomplete sensitivity → sim/synth mismatch risk.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_easy_22.mp4",
+        "poster": "media/images/sens_easy_22-frame.png",
+        "figure": "media/images/sens_easy_22.png"
+      }
+    },
+    {
+      "id": "sens_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) sum <= din;\n```\n// Review context: `d[11:0]` slot 23 variant 1\nalways @(posedge clk) Q <= D; when D changes alone…",
+      "choices": [
+        "Q updates on the next rising clock edge",
+        "Q updates immediately on every D change",
+        "Q clears",
+        "Illegal"
+      ],
+      "answer": 0,
+      "explain": "Edge-triggered sampling.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_easy_23.mp4",
+        "poster": "media/images/sens_easy_23-frame.png",
+        "figure": "media/images/sens_easy_23.png"
+      }
+    },
+    {
+      "id": "sens_easy_24",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [3:0] din; assign qout = din ^ a;\n```\n// Review context: `clk[15:0]` slot 24 variant 1\n@(*) is meant to include every signal read in the combinational block.",
+      "answer": true,
+      "explain": "Implicit full combo sensitivity.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_easy_24.mp4",
+        "poster": "media/images/sens_easy_24-frame.png",
+        "figure": "media/images/sens_easy_24.png"
+      }
+    },
+    {
+      "id": "sens_easy_25",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg qout; always @(*) qout = a ? b : qout;\n```\n// Review context: `en[31:0]` slot 25 variant 1\n`negedge rst_n` in a list means…",
+      "choices": [
+        "Trigger on falling edge of rst_n",
+        "Level sensitive only",
+        "Ignore rst_n",
+        "Parameter"
+      ],
+      "answer": 0,
+      "explain": "Edge keyword.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_easy_25.mp4",
+        "poster": "media/images/sens_easy_25-frame.png",
+        "figure": "media/images/sens_easy_25.png"
+      }
+    },
+    {
+      "id": "sens_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 6; localparam MAX = (1<<W)-1;\n```\n// Review context: `rst_n[2:0]` slot 26 variant 1\nalways @* is…",
+      "choices": [
+        "Same idea as @(*) full combo sensitivity",
+        "A clock edge",
+        "Only for TB",
+        "A nettype"
+      ],
+      "answer": 0,
+      "explain": "@* ≈ @(*).",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_easy_26.mp4",
+        "poster": "media/images/sens_easy_26-frame.png",
+        "figure": "media/images/sens_easy_26.png"
+      }
+    },
+    {
+      "id": "sens_easy_27",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) b <= y;\n```\n// Review context: `data[3:0]` slot 27 variant 1\nClocked always blocks should list the clock edge (and reset if async).",
+      "answer": true,
+      "explain": "Explicit sequential sensitivity.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_easy_27.mp4",
+        "poster": "media/images/sens_easy_27-frame.png",
+        "figure": "media/images/sens_easy_27.png"
+      }
+    },
+    {
+      "id": "sens_easy_28",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [7:0] y; assign q = y ^ d;\n```\n// Review context: `count[4:0]` slot 28 variant 1\nMissing reset from an async reset flop template…",
+      "choices": [
+        "Breaks reset behavior vs intent",
+        "Speeds timing always",
+        "Required for synth",
+        "Only affects $finish"
+      ],
+      "answer": 0,
+      "explain": "Sensitivity must match async reset style.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_easy_28.mp4",
+        "poster": "media/images/sens_easy_28-frame.png",
+        "figure": "media/images/sens_easy_28.png"
+      }
+    },
+    {
+      "id": "sens_easy_29",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg q; always @(*) q = d ? clk : q;\n```\n// Review context: `a[5:0]` slot 29 variant 1\nLevel-sensitive `always @(en)` for latches…",
+      "choices": [
+        "Can model latch behavior when coded that way",
+        "Always makes a flop",
+        "Is illegal",
+        "Is a package"
+      ],
+      "answer": 0,
+      "explain": "Latch templates use levels.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_easy_29.mp4",
+        "poster": "media/images/sens_easy_29-frame.png",
+        "figure": "media/images/sens_easy_29.png"
+      }
+    },
+    {
+      "id": "sens_easy_30",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 16; localparam MAX = (1<<W)-1;\n```\n// Review context: `b[6:0]` slot 30 variant 1\nEmpty `always @()` is valid full sensitivity.",
+      "answer": false,
+      "explain": "Use @(*) / @*.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_easy_30.mp4",
+        "poster": "media/images/sens_easy_30-frame.png",
+        "figure": "media/images/sens_easy_30.png"
+      }
+    },
+    {
+      "id": "sens_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #3: combo block drives y\n```\nSynth tools often ignore sensitivity lists and…",
+      "choices": [
+        "Infer hardware from body assignments — mismatch risk if list wrong",
+        "Delete always blocks",
+        "Require #delays",
+        "Force TB only"
+      ],
+      "answer": 0,
+      "explain": "Sim follows list; synth follows logic.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_medium_01.mp4",
+        "poster": "media/images/sens_medium_01-frame.png",
+        "figure": "media/images/sens_medium_01.png"
+      }
+    },
+    {
+      "id": "sens_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign q = (d & clk) | (d ^ clk);\n```\n`always @(posedge clk or negedge rst_n)` is a classic…",
+      "choices": [
+        "Async reset flop template",
+        "Pure combo block",
+        "Generate if",
+        "DPI call"
+      ],
+      "answer": 0,
+      "explain": "Async reset sensitivity.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_medium_02.mp4",
+        "poster": "media/images/sens_medium_02-frame.png",
+        "figure": "media/images/sens_medium_02.png"
+      }
+    },
+    {
+      "id": "sens_medium_03",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) d <= 0; else d <= clk;\n```\nPutting data inputs in a clocked sensitivity list makes a combo block.",
+      "answer": false,
+      "explain": "Still edge-triggered if only edges; don't add levels carelessly.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_medium_03.mp4",
+        "poster": "media/images/sens_medium_03-frame.png",
+        "figure": "media/images/sens_medium_03.png"
+      }
+    },
+    {
+      "id": "sens_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g6 end\n```\nIncomplete combo sensitivity typically causes…",
+      "choices": [
+        "Simulation that doesn't update when expected",
+        "Faster WNS always",
+        "Mandatory latch",
+        "No RTL"
+      ],
+      "answer": 0,
+      "explain": "Stale values in sim.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_medium_04.mp4",
+        "poster": "media/images/sens_medium_04-frame.png",
+        "figure": "media/images/sens_medium_04.png"
+      }
+    },
+    {
+      "id": "sens_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #7: combo block drives en\n```\n`always_comb` (SV) vs `@(*)`…",
+      "choices": [
+        "always_comb adds checking/intent for combo",
+        "They differ in nettype only",
+        "always_comb is a wire",
+        "Identical token"
+      ],
+      "answer": 0,
+      "explain": "SV intent + checks.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_medium_05.mp4",
+        "poster": "media/images/sens_medium_05-frame.png",
+        "figure": "media/images/sens_medium_05.png"
+      }
+    },
+    {
+      "id": "sens_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign rst_n = (data & count) | (data ^ count);\n```\nEdge `posedge` triggers when signal…",
+      "choices": [
+        "Rises 0→1 (and some X/Z rules)",
+        "Is level 1 continuously without edge",
+        "Is Z only",
+        "Changes parameter"
+      ],
+      "answer": 0,
+      "explain": "Rising edge event.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_medium_06.mp4",
+        "poster": "media/images/sens_medium_06-frame.png",
+        "figure": "media/images/sens_medium_06.png"
+      }
+    },
+    {
+      "id": "sens_medium_07",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) data <= 0; else data <= count;\n```\nBoth posedge and negedge of the same clock in one always is unusual/wrong for a simple flop.",
+      "answer": true,
+      "explain": "Pick one edge for a FF.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_medium_07.mp4",
+        "poster": "media/images/sens_medium_07-frame.png",
+        "figure": "media/images/sens_medium_07.png"
+      }
+    },
+    {
+      "id": "sens_medium_08",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g10 end\n```\nSensitive to a bus `always @(data)` triggers on…",
+      "choices": [
+        "Any bit change of data",
+        "Only MSB",
+        "Only when data==0",
+        "Never"
+      ],
+      "answer": 0,
+      "explain": "Any element change.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_medium_08.mp4",
+        "poster": "media/images/sens_medium_08-frame.png",
+        "figure": "media/images/sens_medium_08.png"
+      }
+    },
+    {
+      "id": "sens_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #11: combo block drives sel\n```\nUsing `#` delays instead of proper sensitivity…",
+      "choices": [
+        "Is not synthesizable sequential style",
+        "Creates async FIFO",
+        "Is ANSI ports",
+        "Is localparam"
+      ],
+      "answer": 0,
+      "explain": "Delay-driven TB hacks ≠ RTL.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_medium_09.mp4",
+        "poster": "media/images/sens_medium_09-frame.png",
+        "figure": "media/images/sens_medium_09.png"
+      }
+    },
+    {
+      "id": "sens_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign out = (sum & din) | (sum ^ din);\n```\nWhy do teachers stress using @(*) for combinational always blocks?",
+      "choices": [
+        "Avoid incomplete sensitivity bugs",
+        "Force flops",
+        "Remove resets",
+        "Ban ternary"
+      ],
+      "answer": 0,
+      "explain": "Correctness.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_medium_10.mp4",
+        "poster": "media/images/sens_medium_10-frame.png",
+        "figure": "media/images/sens_medium_10.png"
+      }
+    },
+    {
+      "id": "sens_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) sum <= 0; else sum <= din;\n```\n// Review context: `y[5:0]` slot 11 variant 1\nSynth tools often ignore sensitivity lists and…",
+      "choices": [
+        "Infer hardware from body assignments — mismatch risk if list wrong",
+        "Delete always blocks",
+        "Require #delays",
+        "Force TB only"
+      ],
+      "answer": 0,
+      "explain": "Sim follows list; synth follows logic.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_medium_11.mp4",
+        "poster": "media/images/sens_medium_11-frame.png",
+        "figure": "media/images/sens_medium_11.png"
+      }
+    },
+    {
+      "id": "sens_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g14 end\n```\n// Review context: `q[6:0]` slot 12 variant 1\n`always @(posedge clk or negedge rst_n)` is a classic…",
+      "choices": [
+        "Async reset flop template",
+        "Pure combo block",
+        "Generate if",
+        "DPI call"
+      ],
+      "answer": 0,
+      "explain": "Async reset sensitivity.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_medium_12.mp4",
+        "poster": "media/images/sens_medium_12-frame.png",
+        "figure": "media/images/sens_medium_12.png"
+      }
+    },
+    {
+      "id": "sens_medium_13",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #15: combo block drives qout\n```\n// Review context: `d[7:0]` slot 13 variant 1\nPutting data inputs in a clocked sensitivity list makes a combo block.",
+      "answer": false,
+      "explain": "Still edge-triggered if only edges; don't add levels carelessly.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_medium_13.mp4",
+        "poster": "media/images/sens_medium_13-frame.png",
+        "figure": "media/images/sens_medium_13.png"
+      }
+    },
+    {
+      "id": "sens_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign a = (b & y) | (b ^ y);\n```\n// Review context: `clk[11:0]` slot 14 variant 1\nIncomplete combo sensitivity typically causes…",
+      "choices": [
+        "Simulation that doesn't update when expected",
+        "Faster WNS always",
+        "Mandatory latch",
+        "No RTL"
+      ],
+      "answer": 0,
+      "explain": "Stale values in sim.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_medium_14.mp4",
+        "poster": "media/images/sens_medium_14-frame.png",
+        "figure": "media/images/sens_medium_14.png"
+      }
+    },
+    {
+      "id": "sens_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) b <= 0; else b <= y;\n```\n// Review context: `en[15:0]` slot 15 variant 1\n`always_comb` (SV) vs `@(*)`…",
+      "choices": [
+        "always_comb adds checking/intent for combo",
+        "They differ in nettype only",
+        "always_comb is a wire",
+        "Identical token"
+      ],
+      "answer": 0,
+      "explain": "SV intent + checks.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_medium_15.mp4",
+        "poster": "media/images/sens_medium_15-frame.png",
+        "figure": "media/images/sens_medium_15.png"
+      }
+    },
+    {
+      "id": "sens_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g18 end\n```\n// Review context: `rst_n[31:0]` slot 16 variant 1\nEdge `posedge` triggers when signal…",
+      "choices": [
+        "Rises 0→1 (and some X/Z rules)",
+        "Is level 1 continuously without edge",
+        "Is Z only",
+        "Changes parameter"
+      ],
+      "answer": 0,
+      "explain": "Rising edge event.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_medium_16.mp4",
+        "poster": "media/images/sens_medium_16-frame.png",
+        "figure": "media/images/sens_medium_16.png"
+      }
+    },
+    {
+      "id": "sens_medium_17",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #19: combo block drives q\n```\n// Review context: `data[2:0]` slot 17 variant 1\nBoth posedge and negedge of the same clock in one always is unusual/wrong for a simple flop.",
+      "answer": true,
+      "explain": "Pick one edge for a FF.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_medium_17.mp4",
+        "poster": "media/images/sens_medium_17-frame.png",
+        "figure": "media/images/sens_medium_17.png"
+      }
+    },
+    {
+      "id": "sens_medium_18",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign d = (clk & en) | (clk ^ en);\n```\n// Review context: `count[3:0]` slot 18 variant 1\nSensitive to a bus `always @(data)` triggers on…",
+      "choices": [
+        "Any bit change of data",
+        "Only MSB",
+        "Only when data==0",
+        "Never"
+      ],
+      "answer": 0,
+      "explain": "Any element change.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_medium_18.mp4",
+        "poster": "media/images/sens_medium_18-frame.png",
+        "figure": "media/images/sens_medium_18.png"
+      }
+    },
+    {
+      "id": "sens_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) clk <= 0; else clk <= en;\n```\n// Review context: `a[4:0]` slot 19 variant 1\nUsing `#` delays instead of proper sensitivity…",
+      "choices": [
+        "Is not synthesizable sequential style",
+        "Creates async FIFO",
+        "Is ANSI ports",
+        "Is localparam"
+      ],
+      "answer": 0,
+      "explain": "Delay-driven TB hacks ≠ RTL.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_medium_19.mp4",
+        "poster": "media/images/sens_medium_19-frame.png",
+        "figure": "media/images/sens_medium_19.png"
+      }
+    },
+    {
+      "id": "sens_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g22 end\n```\n// Review context: `b[5:0]` slot 20 variant 1\nWhy teachers stress `@(*)` for combo…",
+      "choices": [
+        "Avoid incomplete sensitivity bugs",
+        "Force flops",
+        "Remove resets",
+        "Ban ternary"
+      ],
+      "answer": 0,
+      "explain": "Correctness.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_medium_20.mp4",
+        "poster": "media/images/sens_medium_20-frame.png",
+        "figure": "media/images/sens_medium_20.png"
+      }
+    },
+    {
+      "id": "sens_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #23: combo block drives rst_n\n```\n// Review context: `y[6:0]` slot 21 variant 1\nSynth tools often ignore sensitivity lists and…",
+      "choices": [
+        "Infer hardware from body assignments — mismatch risk if list wrong",
+        "Delete always blocks",
+        "Require #delays",
+        "Force TB only"
+      ],
+      "answer": 0,
+      "explain": "Sim follows list; synth follows logic.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_medium_21.mp4",
+        "poster": "media/images/sens_medium_21-frame.png",
+        "figure": "media/images/sens_medium_21.png"
+      }
+    },
+    {
+      "id": "sens_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign data = (count & sel) | (count ^ sel);\n```\n// Review context: `q[7:0]` slot 22 variant 1\n`always @(posedge clk or negedge rst_n)` is a classic…",
+      "choices": [
+        "Async reset flop template",
+        "Pure combo block",
+        "Generate if",
+        "DPI call"
+      ],
+      "answer": 0,
+      "explain": "Async reset sensitivity.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_medium_22.mp4",
+        "poster": "media/images/sens_medium_22-frame.png",
+        "figure": "media/images/sens_medium_22.png"
+      }
+    },
+    {
+      "id": "sens_medium_23",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) count <= 0; else count <= sel;\n```\n// Review context: `d[11:0]` slot 23 variant 1\nPutting data inputs in a clocked sensitivity list makes a combo block.",
+      "answer": false,
+      "explain": "Still edge-triggered if only edges; don't add levels carelessly.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_medium_23.mp4",
+        "poster": "media/images/sens_medium_23-frame.png",
+        "figure": "media/images/sens_medium_23.png"
+      }
+    },
+    {
+      "id": "sens_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g26 end\n```\n// Review context: `clk[15:0]` slot 24 variant 1\nIncomplete combo sensitivity typically causes…",
+      "choices": [
+        "Simulation that doesn't update when expected",
+        "Faster WNS always",
+        "Mandatory latch",
+        "No RTL"
+      ],
+      "answer": 0,
+      "explain": "Stale values in sim.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_medium_24.mp4",
+        "poster": "media/images/sens_medium_24-frame.png",
+        "figure": "media/images/sens_medium_24.png"
+      }
+    },
+    {
+      "id": "sens_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #27: combo block drives out\n```\n// Review context: `en[31:0]` slot 25 variant 1\n`always_comb` (SV) vs `@(*)`…",
+      "choices": [
+        "always_comb adds checking/intent for combo",
+        "They differ in nettype only",
+        "always_comb is a wire",
+        "Identical token"
+      ],
+      "answer": 0,
+      "explain": "SV intent + checks.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_medium_25.mp4",
+        "poster": "media/images/sens_medium_25-frame.png",
+        "figure": "media/images/sens_medium_25.png"
+      }
+    },
+    {
+      "id": "sens_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign sum = (din & qout) | (din ^ qout);\n```\n// Review context: `rst_n[2:0]` slot 26 variant 1\nEdge `posedge` triggers when signal…",
+      "choices": [
+        "Rises 0→1 (and some X/Z rules)",
+        "Is level 1 continuously without edge",
+        "Is Z only",
+        "Changes parameter"
+      ],
+      "answer": 0,
+      "explain": "Rising edge event.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_medium_26.mp4",
+        "poster": "media/images/sens_medium_26-frame.png",
+        "figure": "media/images/sens_medium_26.png"
+      }
+    },
+    {
+      "id": "sens_medium_27",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) din <= 0; else din <= qout;\n```\n// Review context: `data[3:0]` slot 27 variant 1\nBoth posedge and negedge of the same clock in one always is unusual/wrong for a simple flop.",
+      "answer": true,
+      "explain": "Pick one edge for a FF.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_medium_27.mp4",
+        "poster": "media/images/sens_medium_27-frame.png",
+        "figure": "media/images/sens_medium_27.png"
+      }
+    },
+    {
+      "id": "sens_medium_28",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g30 end\n```\n// Review context: `count[4:0]` slot 28 variant 1\nSensitive to a bus `always @(data)` triggers on…",
+      "choices": [
+        "Any bit change of data",
+        "Only MSB",
+        "Only when data==0",
+        "Never"
+      ],
+      "answer": 0,
+      "explain": "Any element change.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_medium_28.mp4",
+        "poster": "media/images/sens_medium_28-frame.png",
+        "figure": "media/images/sens_medium_28.png"
+      }
+    },
+    {
+      "id": "sens_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #31: combo block drives a\n```\n// Review context: `a[5:0]` slot 29 variant 1\nUsing `#` delays instead of proper sensitivity…",
+      "choices": [
+        "Is not synthesizable sequential style",
+        "Creates async FIFO",
+        "Is ANSI ports",
+        "Is localparam"
+      ],
+      "answer": 0,
+      "explain": "Delay-driven TB hacks ≠ RTL.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_medium_29.mp4",
+        "poster": "media/images/sens_medium_29-frame.png",
+        "figure": "media/images/sens_medium_29.png"
+      }
+    },
+    {
+      "id": "sens_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign b = (y & q) | (y ^ q);\n```\n// Review context: `b[6:0]` slot 30 variant 1\nWhy teachers stress `@(*)` for combo…",
+      "choices": [
+        "Avoid incomplete sensitivity bugs",
+        "Force flops",
+        "Remove resets",
+        "Ban ternary"
+      ],
+      "answer": 0,
+      "explain": "Correctness.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_medium_30.mp4",
+        "poster": "media/images/sens_medium_30-frame.png",
+        "figure": "media/images/sens_medium_30.png"
+      }
+    },
+    {
+      "id": "sens_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) d <= d + 1'b1; end\n```\nAsync set/reset both in sensitivity require…",
+      "choices": [
+        "Careful if/else priority in the body matching the list",
+        "No body conditions",
+        "Only blocking assigns",
+        "Only wires"
+      ],
+      "answer": 0,
+      "explain": "Template must match edges.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_hard_01.mp4",
+        "poster": "media/images/sens_hard_01-frame.png",
+        "figure": "media/images/sens_hard_01.png"
+      }
+    },
+    {
+      "id": "sens_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 6: do not sample clk multi-bit raw\n```\nIffy `always @(posedge clk or en)` mixed edge/level…",
+      "choices": [
+        "Not a standard FF/latch template — avoid",
+        "Preferred dual-edge FF",
+        "Required ANSI",
+        "Same as @(*)"
+      ],
+      "answer": 0,
+      "explain": "Don't mix casually.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_hard_02.mp4",
+        "poster": "media/images/sens_hard_02-frame.png",
+        "figure": "media/images/sens_hard_02.png"
+      }
+    },
+    {
+      "id": "sens_hard_03",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (en) /* full case required */\n```\nSV `always_ff` still needs an event control like `@(posedge clk)`.",
+      "answer": true,
+      "explain": "always_ff includes the edge control.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_hard_03.mp4",
+        "poster": "media/images/sens_hard_03-frame.png",
+        "figure": "media/images/sens_hard_03.png"
+      }
+    },
+    {
+      "id": "sens_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p8; @(posedge clk) rst_n |-> ##1 data; endproperty\n```\nGlitchy combo feeding an edge clock pin…",
+      "choices": [
+        "Is a design hazard (not a sensitivity-list keyword fix)",
+        "Is fixed by @(*)",
+        "Is a localparam",
+        "Is ANSI-only"
+      ],
+      "answer": 0,
+      "explain": "Clock integrity ≠ list syntax.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_hard_04.mp4",
+        "poster": "media/images/sens_hard_04-frame.png",
+        "figure": "media/images/sens_hard_04.png"
+      }
+    },
+    {
+      "id": "sens_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) data <= data + 1'b1; end\n```\nImplicit event control wait(expr)…",
+      "choices": [
+        "Is more TB/procedural than synth RTL flop style",
+        "Is the standard FF",
+        "Replaces ports",
+        "Is a net"
+      ],
+      "answer": 0,
+      "explain": "wait is procedural.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_hard_05.mp4",
+        "poster": "media/images/sens_hard_05-frame.png",
+        "figure": "media/images/sens_hard_05.png"
+      }
+    },
+    {
+      "id": "sens_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 10: do not sample count multi-bit raw\n```\nSensitivity to `posedge clk[0]` on a vector clock…",
+      "choices": [
+        "Triggers on that bit's rising edge",
+        "Illegal always",
+        "Means whole bus edge",
+        "Sets WIDTH"
+      ],
+      "answer": 0,
+      "explain": "Bit event.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_hard_06.mp4",
+        "poster": "media/images/sens_hard_06-frame.png",
+        "figure": "media/images/sens_hard_06.png"
+      }
+    },
+    {
+      "id": "sens_hard_07",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (sel) /* full case required */\n```\nSynthesis may implement combo logic even if your sensitivity list omitted a read signal.",
+      "answer": true,
+      "explain": "Hence sim/synth mismatch danger.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_hard_07.mp4",
+        "poster": "media/images/sens_hard_07-frame.png",
+        "figure": "media/images/sens_hard_07.png"
+      }
+    },
+    {
+      "id": "sens_hard_08",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p12; @(posedge clk) out |-> ##1 sum; endproperty\n```\nDual-edge FF coding…",
+      "choices": [
+        "Needs explicit dual-edge intent/technology support — not a casual list tweak",
+        "Is `always @(*)`",
+        "Is `assign`",
+        "Is `defparam`"
+      ],
+      "answer": 0,
+      "explain": "Specialized.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_hard_08.mp4",
+        "poster": "media/images/sens_hard_08-frame.png",
+        "figure": "media/images/sens_hard_08.png"
+      }
+    },
+    {
+      "id": "sens_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) sum <= sum + 1'b1; end\n```\nStarvation: combo block never in list of a mixed always…",
+      "choices": [
+        "Can hide bugs until a listed signal toggles",
+        "Speeds STA",
+        "Fixes CDC",
+        "Required for lint clean"
+      ],
+      "answer": 0,
+      "explain": "Stale until event.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_hard_09.mp4",
+        "poster": "media/images/sens_hard_09-frame.png",
+        "figure": "media/images/sens_hard_09.png"
+      }
+    },
+    {
+      "id": "sens_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 14: do not sample din multi-bit raw\n```\nBest teaching rule for combo always…",
+      "choices": [
+        "Use @(*) / always_comb and assign every output path",
+        "List only one input randomly",
+        "Use #5 delays",
+        "Use initial"
+      ],
+      "answer": 0,
+      "explain": "Full sensitivity + complete assigns.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_hard_10.mp4",
+        "poster": "media/images/sens_hard_10-frame.png",
+        "figure": "media/images/sens_hard_10.png"
+      }
+    },
+    {
+      "id": "sens_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (qout) /* full case required */\n```\n// Review context: `y[5:0]` slot 11 variant 1\nAsync set/reset both in sensitivity require…",
+      "choices": [
+        "Careful if/else priority in the body matching the list",
+        "No body conditions",
+        "Only blocking assigns",
+        "Only wires"
+      ],
+      "answer": 0,
+      "explain": "Template must match edges.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_hard_11.mp4",
+        "poster": "media/images/sens_hard_11-frame.png",
+        "figure": "media/images/sens_hard_11.png"
+      }
+    },
+    {
+      "id": "sens_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p16; @(posedge clk) a |-> ##1 b; endproperty\n```\n// Review context: `q[6:0]` slot 12 variant 1\nIffy `always @(posedge clk or en)` mixed edge/level…",
+      "choices": [
+        "Not a standard FF/latch template — avoid",
+        "Preferred dual-edge FF",
+        "Required ANSI",
+        "Same as @(*)"
+      ],
+      "answer": 0,
+      "explain": "Don't mix casually.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_hard_12.mp4",
+        "poster": "media/images/sens_hard_12-frame.png",
+        "figure": "media/images/sens_hard_12.png"
+      }
+    },
+    {
+      "id": "sens_hard_13",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) b <= b + 1'b1; end\n```\n// Review context: `d[7:0]` slot 13 variant 1\nSV `always_ff` still needs an event control like `@(posedge clk)`.",
+      "answer": true,
+      "explain": "always_ff includes the edge control.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_hard_13.mp4",
+        "poster": "media/images/sens_hard_13-frame.png",
+        "figure": "media/images/sens_hard_13.png"
+      }
+    },
+    {
+      "id": "sens_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 18: do not sample y multi-bit raw\n```\n// Review context: `clk[11:0]` slot 14 variant 1\nGlitchy combo feeding an edge clock pin…",
+      "choices": [
+        "Is a design hazard (not a sensitivity-list keyword fix)",
+        "Is fixed by @(*)",
+        "Is a localparam",
+        "Is ANSI-only"
+      ],
+      "answer": 0,
+      "explain": "Clock integrity ≠ list syntax.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_hard_14.mp4",
+        "poster": "media/images/sens_hard_14-frame.png",
+        "figure": "media/images/sens_hard_14.png"
+      }
+    },
+    {
+      "id": "sens_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (q) /* full case required */\n```\n// Review context: `en[15:0]` slot 15 variant 1\nImplicit event control wait(expr)…",
+      "choices": [
+        "Is more TB/procedural than synth RTL flop style",
+        "Is the standard FF",
+        "Replaces ports",
+        "Is a net"
+      ],
+      "answer": 0,
+      "explain": "wait is procedural.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_hard_15.mp4",
+        "poster": "media/images/sens_hard_15-frame.png",
+        "figure": "media/images/sens_hard_15.png"
+      }
+    },
+    {
+      "id": "sens_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p20; @(posedge clk) d |-> ##1 clk; endproperty\n```\n// Review context: `rst_n[31:0]` slot 16 variant 1\nSensitivity to `posedge clk[0]` on a vector clock…",
+      "choices": [
+        "Triggers on that bit's rising edge",
+        "Illegal always",
+        "Means whole bus edge",
+        "Sets WIDTH"
+      ],
+      "answer": 0,
+      "explain": "Bit event.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_hard_16.mp4",
+        "poster": "media/images/sens_hard_16-frame.png",
+        "figure": "media/images/sens_hard_16.png"
+      }
+    },
+    {
+      "id": "sens_hard_17",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) clk <= clk + 1'b1; end\n```\n// Review context: `data[2:0]` slot 17 variant 1\nSynthesis may implement combo logic even if your sensitivity list omitted a read signal.",
+      "answer": true,
+      "explain": "Hence sim/synth mismatch danger.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_hard_17.mp4",
+        "poster": "media/images/sens_hard_17-frame.png",
+        "figure": "media/images/sens_hard_17.png"
+      }
+    },
+    {
+      "id": "sens_hard_18",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 22: do not sample en multi-bit raw\n```\n// Review context: `count[3:0]` slot 18 variant 1\nDual-edge FF coding…",
+      "choices": [
+        "Needs explicit dual-edge intent/technology support — not a casual list tweak",
+        "Is `always @(*)`",
+        "Is `assign`",
+        "Is `defparam`"
+      ],
+      "answer": 0,
+      "explain": "Specialized.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_hard_18.mp4",
+        "poster": "media/images/sens_hard_18-frame.png",
+        "figure": "media/images/sens_hard_18.png"
+      }
+    },
+    {
+      "id": "sens_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (rst_n) /* full case required */\n```\n// Review context: `a[4:0]` slot 19 variant 1\nStarvation: combo block never in list of a mixed always…",
+      "choices": [
+        "Can hide bugs until a listed signal toggles",
+        "Speeds STA",
+        "Fixes CDC",
+        "Required for lint clean"
+      ],
+      "answer": 0,
+      "explain": "Stale until event.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_hard_19.mp4",
+        "poster": "media/images/sens_hard_19-frame.png",
+        "figure": "media/images/sens_hard_19.png"
+      }
+    },
+    {
+      "id": "sens_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p24; @(posedge clk) data |-> ##1 count; endproperty\n```\n// Review context: `b[5:0]` slot 20 variant 1\nBest teaching rule for combo always…",
+      "choices": [
+        "Use @(*) / always_comb and assign every output path",
+        "List only one input randomly",
+        "Use #5 delays",
+        "Use initial"
+      ],
+      "answer": 0,
+      "explain": "Full sensitivity + complete assigns.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_hard_20.mp4",
+        "poster": "media/images/sens_hard_20-frame.png",
+        "figure": "media/images/sens_hard_20.png"
+      }
+    },
+    {
+      "id": "sens_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) count <= count + 1'b1; end\n```\n// Review context: `y[6:0]` slot 21 variant 1\nAsync set/reset both in sensitivity require…",
+      "choices": [
+        "Careful if/else priority in the body matching the list",
+        "No body conditions",
+        "Only blocking assigns",
+        "Only wires"
+      ],
+      "answer": 0,
+      "explain": "Template must match edges.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_hard_21.mp4",
+        "poster": "media/images/sens_hard_21-frame.png",
+        "figure": "media/images/sens_hard_21.png"
+      }
+    },
+    {
+      "id": "sens_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 26: do not sample sel multi-bit raw\n```\n// Review context: `q[7:0]` slot 22 variant 1\nIffy `always @(posedge clk or en)` mixed edge/level…",
+      "choices": [
+        "Not a standard FF/latch template — avoid",
+        "Preferred dual-edge FF",
+        "Required ANSI",
+        "Same as @(*)"
+      ],
+      "answer": 0,
+      "explain": "Don't mix casually.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_hard_22.mp4",
+        "poster": "media/images/sens_hard_22-frame.png",
+        "figure": "media/images/sens_hard_22.png"
+      }
+    },
+    {
+      "id": "sens_hard_23",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (out) /* full case required */\n```\n// Review context: `d[11:0]` slot 23 variant 1\nSV `always_ff` still needs an event control like `@(posedge clk)`.",
+      "answer": true,
+      "explain": "always_ff includes the edge control.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_hard_23.mp4",
+        "poster": "media/images/sens_hard_23-frame.png",
+        "figure": "media/images/sens_hard_23.png"
+      }
+    },
+    {
+      "id": "sens_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p28; @(posedge clk) sum |-> ##1 din; endproperty\n```\n// Review context: `clk[15:0]` slot 24 variant 1\nGlitchy combo feeding an edge clock pin…",
+      "choices": [
+        "Is a design hazard (not a sensitivity-list keyword fix)",
+        "Is fixed by @(*)",
+        "Is a localparam",
+        "Is ANSI-only"
+      ],
+      "answer": 0,
+      "explain": "Clock integrity ≠ list syntax.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_hard_24.mp4",
+        "poster": "media/images/sens_hard_24-frame.png",
+        "figure": "media/images/sens_hard_24.png"
+      }
+    },
+    {
+      "id": "sens_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) din <= din + 1'b1; end\n```\n// Review context: `en[31:0]` slot 25 variant 1\nImplicit event control wait(expr)…",
+      "choices": [
+        "Is more TB/procedural than synth RTL flop style",
+        "Is the standard FF",
+        "Replaces ports",
+        "Is a net"
+      ],
+      "answer": 0,
+      "explain": "wait is procedural.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_hard_25.mp4",
+        "poster": "media/images/sens_hard_25-frame.png",
+        "figure": "media/images/sens_hard_25.png"
+      }
+    },
+    {
+      "id": "sens_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 30: do not sample qout multi-bit raw\n```\n// Review context: `rst_n[2:0]` slot 26 variant 1\nSensitivity to `posedge clk[0]` on a vector clock…",
+      "choices": [
+        "Triggers on that bit's rising edge",
+        "Illegal always",
+        "Means whole bus edge",
+        "Sets WIDTH"
+      ],
+      "answer": 0,
+      "explain": "Bit event.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_hard_26.mp4",
+        "poster": "media/images/sens_hard_26-frame.png",
+        "figure": "media/images/sens_hard_26.png"
+      }
+    },
+    {
+      "id": "sens_hard_27",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (a) /* full case required */\n```\n// Review context: `data[3:0]` slot 27 variant 1\nSynthesis may implement combo logic even if your sensitivity list omitted a read signal.",
+      "answer": true,
+      "explain": "Hence sim/synth mismatch danger.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_hard_27.mp4",
+        "poster": "media/images/sens_hard_27-frame.png",
+        "figure": "media/images/sens_hard_27.png"
+      }
+    },
+    {
+      "id": "sens_hard_28",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p32; @(posedge clk) b |-> ##1 y; endproperty\n```\n// Review context: `count[4:0]` slot 28 variant 1\nDual-edge FF coding…",
+      "choices": [
+        "Needs explicit dual-edge intent/technology support — not a casual list tweak",
+        "Is `always @(*)`",
+        "Is `assign`",
+        "Is `defparam`"
+      ],
+      "answer": 0,
+      "explain": "Specialized.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_hard_28.mp4",
+        "poster": "media/images/sens_hard_28-frame.png",
+        "figure": "media/images/sens_hard_28.png"
+      }
+    },
+    {
+      "id": "sens_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) y <= y + 1'b1; end\n```\n// Review context: `a[5:0]` slot 29 variant 1\nStarvation: combo block never in list of a mixed always…",
+      "choices": [
+        "Can hide bugs until a listed signal toggles",
+        "Speeds STA",
+        "Fixes CDC",
+        "Required for lint clean"
+      ],
+      "answer": 0,
+      "explain": "Stale until event.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_hard_29.mp4",
+        "poster": "media/images/sens_hard_29-frame.png",
+        "figure": "media/images/sens_hard_29.png"
+      }
+    },
+    {
+      "id": "sens_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 34: do not sample q multi-bit raw\n```\n// Review context: `b[6:0]` slot 30 variant 1\nBest teaching rule for combo always…",
+      "choices": [
+        "Use @(*) / always_comb and assign every output path",
+        "List only one input randomly",
+        "Use #5 delays",
+        "Use initial"
+      ],
+      "answer": 0,
+      "explain": "Full sensitivity + complete assigns.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sens_hard_30.mp4",
+        "poster": "media/images/sens_hard_30-frame.png",
+        "figure": "media/images/sens_hard_30.png"
+      }
+    }
+  ]
+}

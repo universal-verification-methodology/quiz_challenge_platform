@@ -1,0 +1,1698 @@
+{
+  "module": "module18-safe-scripting",
+  "title": "Safe scripting",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncommand -v jq >/dev/null || { echo missing; exit 127; }\n```\nset -e at the top of a script typically...",
+      "choices": [
+        "Disables all errors",
+        "Exits the script when a command fails (non-zero)",
+        "Deletes tmp automatically",
+        "Turns off quoting rules"
+      ],
+      "answer": 1,
+      "explain": "errexit (-e) stops on the first failing command.",
+      "difficulty": "easy",
+      "id": "safe_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_easy_01.mp4",
+        "poster": "media/images/safe_easy_01-frame.png",
+        "figure": "media/images/safe_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -euo pipefail; f=$(mktemp); echo hi >\"$f\"; rm -f -- \"$f\"\n```\nQuoting \"$file\" helps because...",
+      "choices": [
+        "It makes rm ignore the file",
+        "Spaces and special characters in the path stay one argument",
+        "It disables set -u",
+        "It is required only for Python"
+      ],
+      "answer": 1,
+      "explain": "Unquoted expansions can word-split and hit the wrong paths.",
+      "difficulty": "easy",
+      "id": "safe_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_easy_02.mp4",
+        "poster": "media/images/safe_easy_02-frame.png",
+        "figure": "media/images/safe_easy_02.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\0' docs/* | xargs -0 -n1 echo\n```\nA dry-run default (print what would be deleted) is safer than deleting on first run.",
+      "answer": true,
+      "explain": "Inspect first; require an explicit --confirm (or similar) for destruction.",
+      "difficulty": "easy",
+      "id": "safe_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_easy_03.mp4",
+        "poster": "media/images/safe_easy_03-frame.png",
+        "figure": "media/images/safe_easy_03.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# quote: rm -rf -- \"${dir}\"\n```\n./clean_tmp.sh with no flags in this module's example...",
+      "choices": [
+        "Always deletes tmp/*.tmp",
+        "Prints Would delete lines and leaves the files",
+        "Formats the disk",
+        "Ignores set -e"
+      ],
+      "answer": 1,
+      "explain": "Dry run is the default; --confirm performs the deletes.",
+      "difficulty": "easy",
+      "id": "safe_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_easy_04.mp4",
+        "poster": "media/images/safe_easy_04-frame.png",
+        "figure": "media/images/safe_easy_04.png"
+      }
+    },
+    {
+      "id": "safe_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncommand -v jq >/dev/null || { echo missing; exit 127; }\n```\nQuoting `\"$var\"` prevents...",
+      "choices": [
+        "Word splitting / globbing surprises",
+        "All bugs forever",
+        "Exit status",
+        "Signals"
+      ],
+      "answer": 0,
+      "explain": "Quote expansions.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_easy_05.mp4",
+        "poster": "media/images/safe_easy_05-frame.png",
+        "figure": "media/images/safe_easy_05.png"
+      }
+    },
+    {
+      "id": "safe_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -euo pipefail; f=$(mktemp); echo hi >\"$f\"; rm -f -- \"$f\"\n```\n`set -u` errors on...",
+      "choices": [
+        "Unset variable use",
+        "Set variables",
+        "Only aliases",
+        "Only functions"
+      ],
+      "answer": 0,
+      "explain": "nounset.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_easy_06.mp4",
+        "poster": "media/images/safe_easy_06-frame.png",
+        "figure": "media/images/safe_easy_06.png"
+      }
+    },
+    {
+      "id": "safe_easy_07",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\0' src/* | xargs -0 -n1 echo\n```\nNever parse `ls` output for scripting file lists.",
+      "answer": true,
+      "explain": "ls is for humans.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_easy_07.mp4",
+        "poster": "media/images/safe_easy_07-frame.png",
+        "figure": "media/images/safe_easy_07.png"
+      }
+    },
+    {
+      "id": "safe_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# quote: rm -rf -- \"${dir}\"\n```\nPrefer `\"$@\"` over `$*` because...",
+      "choices": [
+        "It preserves arguments",
+        "It is shorter always",
+        "It disables quoting",
+        "It clears PATH"
+      ],
+      "answer": 0,
+      "explain": "$@ correctness.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_easy_08.mp4",
+        "poster": "media/images/safe_easy_08-frame.png",
+        "figure": "media/images/safe_easy_08.png"
+      }
+    },
+    {
+      "id": "safe_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncommand -v jq >/dev/null || { echo missing; exit 127; }\n```\nTemporary files should use...",
+      "choices": [
+        "`mktemp`",
+        "Fixed /tmp/a.txt always",
+        "Only $RANDOM name alone",
+        "World-writable fixed names"
+      ],
+      "answer": 0,
+      "explain": "mktemp is safer.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_easy_09.mp4",
+        "poster": "media/images/safe_easy_09-frame.png",
+        "figure": "media/images/safe_easy_09.png"
+      }
+    },
+    {
+      "id": "safe_easy_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -euo pipefail; f=$(mktemp); echo hi >\"$f\"; rm -f -- \"$f\"\n```\n`rm -rf \"$dir\"` dangers rise when...",
+      "choices": [
+        "$dir is empty/untrusted",
+        "dir is quoted absolute specific",
+        "You use dry-run first",
+        "You confirm path"
+      ],
+      "answer": 0,
+      "explain": "Empty expand disasters.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_easy_10.mp4",
+        "poster": "media/images/safe_easy_10-frame.png",
+        "figure": "media/images/safe_easy_10.png"
+      }
+    },
+    {
+      "id": "safe_easy_11",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\0' docs/* | xargs -0 -n1 echo\n```\n`read -r` + IFS= is a safer line-read pattern.",
+      "answer": true,
+      "explain": "Classic safe read.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_easy_11.mp4",
+        "poster": "media/images/safe_easy_11-frame.png",
+        "figure": "media/images/safe_easy_11.png"
+      }
+    },
+    {
+      "id": "safe_easy_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# quote: rm -rf -- \"${dir}\"\n```\nCheck commands exist with...",
+      "choices": [
+        "`command -v`",
+        "Only which always portable",
+        "Only ls /bin",
+        "Only type -P on all sh"
+      ],
+      "answer": 0,
+      "explain": "command -v portable-ish.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_easy_12.mp4",
+        "poster": "media/images/safe_easy_12-frame.png",
+        "figure": "media/images/safe_easy_12.png"
+      }
+    },
+    {
+      "id": "safe_easy_13",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncommand -v jq >/dev/null || { echo missing; exit 127; }\n```\nAvoid `eval` unless...",
+      "choices": [
+        "You fully control/validate input",
+        "Always for speed",
+        "Parsing ls",
+        "Expanding globs"
+      ],
+      "answer": 0,
+      "explain": "eval last resort.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_easy_13.mp4",
+        "poster": "media/images/safe_easy_13-frame.png",
+        "figure": "media/images/safe_easy_13.png"
+      }
+    },
+    {
+      "id": "safe_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -euo pipefail; f=$(mktemp); echo hi >\"$f\"; rm -f -- \"$f\"\n```\nShebang + `set -euo pipefail` helps...",
+      "choices": [
+        "Catch mistakes early",
+        "Hide errors",
+        "Disable traps",
+        "Force interactive"
+      ],
+      "answer": 0,
+      "explain": "Strict defaults.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_easy_14.mp4",
+        "poster": "media/images/safe_easy_14-frame.png",
+        "figure": "media/images/safe_easy_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\0' src/* | xargs -0 -n1 echo\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nset -e at the top of a script typically...",
+      "choices": [
+        "Disables all errors",
+        "Exits the script when a command fails (non-zero)",
+        "Deletes tmp automatically",
+        "Turns off quoting rules"
+      ],
+      "answer": 1,
+      "explain": "errexit (-e) stops on the first failing command.",
+      "difficulty": "easy",
+      "id": "safe_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_easy_15.mp4",
+        "poster": "media/images/safe_easy_15-frame.png",
+        "figure": "media/images/safe_easy_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# quote: rm -rf -- \"${dir}\"\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nQuoting \"$file\" helps because...",
+      "choices": [
+        "It makes rm ignore the file",
+        "Spaces and special characters in the path stay one argument",
+        "It disables set -u",
+        "It is required only for Python"
+      ],
+      "answer": 1,
+      "explain": "Unquoted expansions can word-split and hit the wrong paths.",
+      "difficulty": "easy",
+      "id": "safe_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_easy_16.mp4",
+        "poster": "media/images/safe_easy_16-frame.png",
+        "figure": "media/images/safe_easy_16.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ncommand -v jq >/dev/null || { echo missing; exit 127; }\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nA dry-run default (print what would be deleted) is safer than deleting on first run.",
+      "answer": true,
+      "explain": "Inspect first; require an explicit --confirm (or similar) for destruction.",
+      "difficulty": "easy",
+      "id": "safe_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_easy_17.mp4",
+        "poster": "media/images/safe_easy_17-frame.png",
+        "figure": "media/images/safe_easy_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -euo pipefail; f=$(mktemp); echo hi >\"$f\"; rm -f -- \"$f\"\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\n./clean_tmp.sh with no flags in this module's example...",
+      "choices": [
+        "Always deletes tmp/*.tmp",
+        "Prints Would delete lines and leaves the files",
+        "Formats the disk",
+        "Ignores set -e"
+      ],
+      "answer": 1,
+      "explain": "Dry run is the default; --confirm performs the deletes.",
+      "difficulty": "easy",
+      "id": "safe_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_easy_18.mp4",
+        "poster": "media/images/safe_easy_18-frame.png",
+        "figure": "media/images/safe_easy_18.png"
+      }
+    },
+    {
+      "id": "safe_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\0' docs/* | xargs -0 -n1 echo\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nQuoting `\"$var\"` prevents...",
+      "choices": [
+        "Word splitting / globbing surprises",
+        "All bugs forever",
+        "Exit status",
+        "Signals"
+      ],
+      "answer": 0,
+      "explain": "Quote expansions.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_easy_19.mp4",
+        "poster": "media/images/safe_easy_19-frame.png",
+        "figure": "media/images/safe_easy_19.png"
+      }
+    },
+    {
+      "id": "safe_easy_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# quote: rm -rf -- \"${dir}\"\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\n`set -u` errors on...",
+      "choices": [
+        "Unset variable use",
+        "Set variables",
+        "Only aliases",
+        "Only functions"
+      ],
+      "answer": 0,
+      "explain": "nounset.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_easy_20.mp4",
+        "poster": "media/images/safe_easy_20-frame.png",
+        "figure": "media/images/safe_easy_20.png"
+      }
+    },
+    {
+      "id": "safe_easy_21",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ncommand -v jq >/dev/null || { echo missing; exit 127; }\n```\n# Review context: `/var/log/golf` slot 21 variant 1\nNever parse `ls` output for scripting file lists.",
+      "answer": true,
+      "explain": "ls is for humans.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_easy_21.mp4",
+        "poster": "media/images/safe_easy_21-frame.png",
+        "figure": "media/images/safe_easy_21.png"
+      }
+    },
+    {
+      "id": "safe_easy_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -euo pipefail; f=$(mktemp); echo hi >\"$f\"; rm -f -- \"$f\"\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\nPrefer `\"$@\"` over `$*` because...",
+      "choices": [
+        "It preserves arguments",
+        "It is shorter always",
+        "It disables quoting",
+        "It clears PATH"
+      ],
+      "answer": 0,
+      "explain": "$@ correctness.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_easy_22.mp4",
+        "poster": "media/images/safe_easy_22-frame.png",
+        "figure": "media/images/safe_easy_22.png"
+      }
+    },
+    {
+      "id": "safe_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\0' src/* | xargs -0 -n1 echo\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\nTemporary files should use...",
+      "choices": [
+        "`mktemp`",
+        "Fixed /tmp/a.txt always",
+        "Only $RANDOM name alone",
+        "World-writable fixed names"
+      ],
+      "answer": 0,
+      "explain": "mktemp is safer.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_easy_23.mp4",
+        "poster": "media/images/safe_easy_23-frame.png",
+        "figure": "media/images/safe_easy_23.png"
+      }
+    },
+    {
+      "id": "safe_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# quote: rm -rf -- \"${dir}\"\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\n`rm -rf \"$dir\"` dangers rise when...",
+      "choices": [
+        "$dir is empty/untrusted",
+        "dir is quoted absolute specific",
+        "You use dry-run first",
+        "You confirm path"
+      ],
+      "answer": 0,
+      "explain": "Empty expand disasters.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_easy_24.mp4",
+        "poster": "media/images/safe_easy_24-frame.png",
+        "figure": "media/images/safe_easy_24.png"
+      }
+    },
+    {
+      "id": "safe_easy_25",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ncommand -v jq >/dev/null || { echo missing; exit 127; }\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\n`read -r` + IFS= is a safer line-read pattern.",
+      "answer": true,
+      "explain": "Classic safe read.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_easy_25.mp4",
+        "poster": "media/images/safe_easy_25-frame.png",
+        "figure": "media/images/safe_easy_25.png"
+      }
+    },
+    {
+      "id": "safe_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -euo pipefail; f=$(mktemp); echo hi >\"$f\"; rm -f -- \"$f\"\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nCheck commands exist with...",
+      "choices": [
+        "`command -v`",
+        "Only which always portable",
+        "Only ls /bin",
+        "Only type -P on all sh"
+      ],
+      "answer": 0,
+      "explain": "command -v portable-ish.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_easy_26.mp4",
+        "poster": "media/images/safe_easy_26-frame.png",
+        "figure": "media/images/safe_easy_26.png"
+      }
+    },
+    {
+      "id": "safe_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\0' docs/* | xargs -0 -n1 echo\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nAvoid `eval` unless...",
+      "choices": [
+        "You fully control/validate input",
+        "Always for speed",
+        "Parsing ls",
+        "Expanding globs"
+      ],
+      "answer": 0,
+      "explain": "eval last resort.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_easy_27.mp4",
+        "poster": "media/images/safe_easy_27-frame.png",
+        "figure": "media/images/safe_easy_27.png"
+      }
+    },
+    {
+      "id": "safe_easy_28",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# quote: rm -rf -- \"${dir}\"\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nShebang + `set -euo pipefail` helps...",
+      "choices": [
+        "Catch mistakes early",
+        "Hide errors",
+        "Disable traps",
+        "Force interactive"
+      ],
+      "answer": 0,
+      "explain": "Strict defaults.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_easy_28.mp4",
+        "poster": "media/images/safe_easy_28-frame.png",
+        "figure": "media/images/safe_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncommand -v jq >/dev/null || { echo missing; exit 127; }\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nset -e at the top of a script typically...",
+      "choices": [
+        "Disables all errors",
+        "Exits the script when a command fails (non-zero)",
+        "Deletes tmp automatically",
+        "Turns off quoting rules"
+      ],
+      "answer": 1,
+      "explain": "errexit (-e) stops on the first failing command.",
+      "difficulty": "easy",
+      "id": "safe_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_easy_29.mp4",
+        "poster": "media/images/safe_easy_29-frame.png",
+        "figure": "media/images/safe_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -euo pipefail; f=$(mktemp); echo hi >\"$f\"; rm -f -- \"$f\"\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nQuoting \"$file\" helps because...",
+      "choices": [
+        "It makes rm ignore the file",
+        "Spaces and special characters in the path stay one argument",
+        "It disables set -u",
+        "It is required only for Python"
+      ],
+      "answer": 1,
+      "explain": "Unquoted expansions can word-split and hit the wrong paths.",
+      "difficulty": "easy",
+      "id": "safe_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_easy_30.mp4",
+        "poster": "media/images/safe_easy_30-frame.png",
+        "figure": "media/images/safe_easy_30.png"
+      }
+    },
+    {
+      "id": "safe_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# quote: rm -rf -- \"${dir}\"\n```\nTOCTOU races mean...",
+      "choices": [
+        "Time-of-check vs time-of-use gaps",
+        "Only timezone bugs",
+        "Only man typos",
+        "Only make -j"
+      ],
+      "answer": 0,
+      "explain": "Check then use races.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_medium_01.mp4",
+        "poster": "media/images/safe_medium_01-frame.png",
+        "figure": "media/images/safe_medium_01.png"
+      }
+    },
+    {
+      "id": "safe_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncommand -v jq >/dev/null || { echo missing; exit 127; }\n```\nCreate dirs with `mkdir -p` and modes via...",
+      "choices": [
+        "`mkdir -m` / umask awareness",
+        "chmod 777 always after",
+        "Ignoring modes",
+        "Sticky on /"
+      ],
+      "answer": 0,
+      "explain": "Safe dir create.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_medium_02.mp4",
+        "poster": "media/images/safe_medium_02-frame.png",
+        "figure": "media/images/safe_medium_02.png"
+      }
+    },
+    {
+      "id": "safe_medium_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nset -euo pipefail; f=$(mktemp); echo hi >\"$f\"; rm -f -- \"$f\"\n```\nUse `--` to end options before arbitrary filenames.",
+      "answer": true,
+      "explain": "-- stops option parsing.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_medium_03.mp4",
+        "poster": "media/images/safe_medium_03-frame.png",
+        "figure": "media/images/safe_medium_03.png"
+      }
+    },
+    {
+      "id": "safe_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\0' docs/* | xargs -0 -n1 echo\n```\n`find ... -exec cmd {} +` is often safer/faster than...",
+      "choices": [
+        "Parsing ls | xargs without -0",
+        "Using abs paths",
+        "Using functions",
+        "Using case"
+      ],
+      "answer": 0,
+      "explain": "find -exec batches.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_medium_04.mp4",
+        "poster": "media/images/safe_medium_04-frame.png",
+        "figure": "media/images/safe_medium_04.png"
+      }
+    },
+    {
+      "id": "safe_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# quote: rm -rf -- \"${dir}\"\n```\nWorld-writable directories + predictable names enable...",
+      "choices": [
+        "Symlink planting attacks",
+        "Faster mktemp",
+        "Safer rm",
+        "Better man"
+      ],
+      "answer": 0,
+      "explain": "Predictable names are risky.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_medium_05.mp4",
+        "poster": "media/images/safe_medium_05-frame.png",
+        "figure": "media/images/safe_medium_05.png"
+      }
+    },
+    {
+      "id": "safe_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncommand -v jq >/dev/null || { echo missing; exit 127; }\n```\nShellCheck helps by...",
+      "choices": [
+        "Static-linting common shell pitfalls",
+        "Replacing tests",
+        "Formatting disks",
+        "Setting PS1"
+      ],
+      "answer": 0,
+      "explain": "Lint your shell.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_medium_06.mp4",
+        "poster": "media/images/safe_medium_06-frame.png",
+        "figure": "media/images/safe_medium_06.png"
+      }
+    },
+    {
+      "id": "safe_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -euo pipefail; f=$(mktemp); echo hi >\"$f\"; rm -f -- \"$f\"\n```\nRestrict PATH in privileged scripts to...",
+      "choices": [
+        "Trusted absolute directories",
+        "`.` first",
+        "~/Downloads first",
+        "Empty PATH"
+      ],
+      "answer": 0,
+      "explain": "Trusted PATH.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_medium_07.mp4",
+        "poster": "media/images/safe_medium_07-frame.png",
+        "figure": "media/images/safe_medium_07.png"
+      }
+    },
+    {
+      "id": "safe_medium_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\0' src/* | xargs -0 -n1 echo\n```\nQuote here-doc delimiters when embedding untrusted text.",
+      "answer": true,
+      "explain": "Prevent expansion injection.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_medium_08.mp4",
+        "poster": "media/images/safe_medium_08-frame.png",
+        "figure": "media/images/safe_medium_08.png"
+      }
+    },
+    {
+      "id": "safe_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# quote: rm -rf -- \"${dir}\"\n```\n`trap cleanup EXIT` should be...",
+      "choices": [
+        "Idempotent and signal-safe-ish",
+        "Calling sudo rm -rf /",
+        "Clearing disks",
+        "Disabling networking always"
+      ],
+      "answer": 0,
+      "explain": "Safe cleanup.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_medium_09.mp4",
+        "poster": "media/images/safe_medium_09-frame.png",
+        "figure": "media/images/safe_medium_09.png"
+      }
+    },
+    {
+      "id": "safe_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncommand -v jq >/dev/null || { echo missing; exit 127; }\n```\nPrefer arrays in bash for lists because...",
+      "choices": [
+        "Avoid IFS splitting hell",
+        "Arrays are POSIX",
+        "Faster than CPU",
+        "They setuid"
+      ],
+      "answer": 0,
+      "explain": "Arrays hold words.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_medium_10.mp4",
+        "poster": "media/images/safe_medium_10-frame.png",
+        "figure": "media/images/safe_medium_10.png"
+      }
+    },
+    {
+      "id": "safe_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -euo pipefail; f=$(mktemp); echo hi >\"$f\"; rm -f -- \"$f\"\n```\n# Review context: `~/bin/echo` slot 11 variant 1\nTOCTOU races mean...",
+      "choices": [
+        "Time-of-check vs time-of-use gaps",
+        "Only timezone bugs",
+        "Only man typos",
+        "Only make -j"
+      ],
+      "answer": 0,
+      "explain": "Check then use races.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_medium_11.mp4",
+        "poster": "media/images/safe_medium_11-frame.png",
+        "figure": "media/images/safe_medium_11.png"
+      }
+    },
+    {
+      "id": "safe_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\0' docs/* | xargs -0 -n1 echo\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\nCreate dirs with `mkdir -p` and modes via...",
+      "choices": [
+        "`mkdir -m` / umask awareness",
+        "chmod 777 always after",
+        "Ignoring modes",
+        "Sticky on /"
+      ],
+      "answer": 0,
+      "explain": "Safe dir create.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_medium_12.mp4",
+        "poster": "media/images/safe_medium_12-frame.png",
+        "figure": "media/images/safe_medium_12.png"
+      }
+    },
+    {
+      "id": "safe_medium_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# quote: rm -rf -- \"${dir}\"\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\nUse `--` to end options before arbitrary filenames.",
+      "answer": true,
+      "explain": "-- stops option parsing.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_medium_13.mp4",
+        "poster": "media/images/safe_medium_13-frame.png",
+        "figure": "media/images/safe_medium_13.png"
+      }
+    },
+    {
+      "id": "safe_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncommand -v jq >/dev/null || { echo missing; exit 127; }\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\n`find ... -exec cmd {} +` is often safer/faster than...",
+      "choices": [
+        "Parsing ls | xargs without -0",
+        "Using abs paths",
+        "Using functions",
+        "Using case"
+      ],
+      "answer": 0,
+      "explain": "find -exec batches.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_medium_14.mp4",
+        "poster": "media/images/safe_medium_14-frame.png",
+        "figure": "media/images/safe_medium_14.png"
+      }
+    },
+    {
+      "id": "safe_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -euo pipefail; f=$(mktemp); echo hi >\"$f\"; rm -f -- \"$f\"\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nWorld-writable directories + predictable names enable...",
+      "choices": [
+        "Symlink planting attacks",
+        "Faster mktemp",
+        "Safer rm",
+        "Better man"
+      ],
+      "answer": 0,
+      "explain": "Predictable names are risky.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_medium_15.mp4",
+        "poster": "media/images/safe_medium_15-frame.png",
+        "figure": "media/images/safe_medium_15.png"
+      }
+    },
+    {
+      "id": "safe_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\0' src/* | xargs -0 -n1 echo\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nShellCheck helps by...",
+      "choices": [
+        "Static-linting common shell pitfalls",
+        "Replacing tests",
+        "Formatting disks",
+        "Setting PS1"
+      ],
+      "answer": 0,
+      "explain": "Lint your shell.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_medium_16.mp4",
+        "poster": "media/images/safe_medium_16-frame.png",
+        "figure": "media/images/safe_medium_16.png"
+      }
+    },
+    {
+      "id": "safe_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# quote: rm -rf -- \"${dir}\"\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nRestrict PATH in privileged scripts to...",
+      "choices": [
+        "Trusted absolute directories",
+        "`.` first",
+        "~/Downloads first",
+        "Empty PATH"
+      ],
+      "answer": 0,
+      "explain": "Trusted PATH.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_medium_17.mp4",
+        "poster": "media/images/safe_medium_17-frame.png",
+        "figure": "media/images/safe_medium_17.png"
+      }
+    },
+    {
+      "id": "safe_medium_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ncommand -v jq >/dev/null || { echo missing; exit 127; }\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nQuote here-doc delimiters when embedding untrusted text.",
+      "answer": true,
+      "explain": "Prevent expansion injection.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_medium_18.mp4",
+        "poster": "media/images/safe_medium_18-frame.png",
+        "figure": "media/images/safe_medium_18.png"
+      }
+    },
+    {
+      "id": "safe_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -euo pipefail; f=$(mktemp); echo hi >\"$f\"; rm -f -- \"$f\"\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\n`trap cleanup EXIT` should be...",
+      "choices": [
+        "Idempotent and signal-safe-ish",
+        "Calling sudo rm -rf /",
+        "Clearing disks",
+        "Disabling networking always"
+      ],
+      "answer": 0,
+      "explain": "Safe cleanup.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_medium_19.mp4",
+        "poster": "media/images/safe_medium_19-frame.png",
+        "figure": "media/images/safe_medium_19.png"
+      }
+    },
+    {
+      "id": "safe_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\0' docs/* | xargs -0 -n1 echo\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\nPrefer arrays in bash for lists because...",
+      "choices": [
+        "Avoid IFS splitting hell",
+        "Arrays are POSIX",
+        "Faster than CPU",
+        "They setuid"
+      ],
+      "answer": 0,
+      "explain": "Arrays hold words.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_medium_20.mp4",
+        "poster": "media/images/safe_medium_20-frame.png",
+        "figure": "media/images/safe_medium_20.png"
+      }
+    },
+    {
+      "id": "safe_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# quote: rm -rf -- \"${dir}\"\n```\n# Review context: `/var/log/golf` slot 21 variant 1\nTOCTOU races mean...",
+      "choices": [
+        "Time-of-check vs time-of-use gaps",
+        "Only timezone bugs",
+        "Only man typos",
+        "Only make -j"
+      ],
+      "answer": 0,
+      "explain": "Check then use races.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_medium_21.mp4",
+        "poster": "media/images/safe_medium_21-frame.png",
+        "figure": "media/images/safe_medium_21.png"
+      }
+    },
+    {
+      "id": "safe_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncommand -v jq >/dev/null || { echo missing; exit 127; }\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\nCreate dirs with `mkdir -p` and modes via...",
+      "choices": [
+        "`mkdir -m` / umask awareness",
+        "chmod 777 always after",
+        "Ignoring modes",
+        "Sticky on /"
+      ],
+      "answer": 0,
+      "explain": "Safe dir create.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_medium_22.mp4",
+        "poster": "media/images/safe_medium_22-frame.png",
+        "figure": "media/images/safe_medium_22.png"
+      }
+    },
+    {
+      "id": "safe_medium_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nset -euo pipefail; f=$(mktemp); echo hi >\"$f\"; rm -f -- \"$f\"\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\nUse `--` to end options before arbitrary filenames.",
+      "answer": true,
+      "explain": "-- stops option parsing.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_medium_23.mp4",
+        "poster": "media/images/safe_medium_23-frame.png",
+        "figure": "media/images/safe_medium_23.png"
+      }
+    },
+    {
+      "id": "safe_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\0' src/* | xargs -0 -n1 echo\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\n`find ... -exec cmd {} +` is often safer/faster than...",
+      "choices": [
+        "Parsing ls | xargs without -0",
+        "Using abs paths",
+        "Using functions",
+        "Using case"
+      ],
+      "answer": 0,
+      "explain": "find -exec batches.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_medium_24.mp4",
+        "poster": "media/images/safe_medium_24-frame.png",
+        "figure": "media/images/safe_medium_24.png"
+      }
+    },
+    {
+      "id": "safe_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# quote: rm -rf -- \"${dir}\"\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nWorld-writable directories + predictable names enable...",
+      "choices": [
+        "Symlink planting attacks",
+        "Faster mktemp",
+        "Safer rm",
+        "Better man"
+      ],
+      "answer": 0,
+      "explain": "Predictable names are risky.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_medium_25.mp4",
+        "poster": "media/images/safe_medium_25-frame.png",
+        "figure": "media/images/safe_medium_25.png"
+      }
+    },
+    {
+      "id": "safe_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncommand -v jq >/dev/null || { echo missing; exit 127; }\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nShellCheck helps by...",
+      "choices": [
+        "Static-linting common shell pitfalls",
+        "Replacing tests",
+        "Formatting disks",
+        "Setting PS1"
+      ],
+      "answer": 0,
+      "explain": "Lint your shell.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_medium_26.mp4",
+        "poster": "media/images/safe_medium_26-frame.png",
+        "figure": "media/images/safe_medium_26.png"
+      }
+    },
+    {
+      "id": "safe_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -euo pipefail; f=$(mktemp); echo hi >\"$f\"; rm -f -- \"$f\"\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nRestrict PATH in privileged scripts to...",
+      "choices": [
+        "Trusted absolute directories",
+        "`.` first",
+        "~/Downloads first",
+        "Empty PATH"
+      ],
+      "answer": 0,
+      "explain": "Trusted PATH.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_medium_27.mp4",
+        "poster": "media/images/safe_medium_27-frame.png",
+        "figure": "media/images/safe_medium_27.png"
+      }
+    },
+    {
+      "id": "safe_medium_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\0' docs/* | xargs -0 -n1 echo\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nQuote here-doc delimiters when embedding untrusted text.",
+      "answer": true,
+      "explain": "Prevent expansion injection.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_medium_28.mp4",
+        "poster": "media/images/safe_medium_28-frame.png",
+        "figure": "media/images/safe_medium_28.png"
+      }
+    },
+    {
+      "id": "safe_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# quote: rm -rf -- \"${dir}\"\n```\n# Review context: `~/bin/golf` slot 29 variant 1\n`trap cleanup EXIT` should be...",
+      "choices": [
+        "Idempotent and signal-safe-ish",
+        "Calling sudo rm -rf /",
+        "Clearing disks",
+        "Disabling networking always"
+      ],
+      "answer": 0,
+      "explain": "Safe cleanup.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_medium_29.mp4",
+        "poster": "media/images/safe_medium_29-frame.png",
+        "figure": "media/images/safe_medium_29.png"
+      }
+    },
+    {
+      "id": "safe_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncommand -v jq >/dev/null || { echo missing; exit 127; }\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nPrefer arrays in bash for lists because...",
+      "choices": [
+        "Avoid IFS splitting hell",
+        "Arrays are POSIX",
+        "Faster than CPU",
+        "They setuid"
+      ],
+      "answer": 0,
+      "explain": "Arrays hold words.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_medium_30.mp4",
+        "poster": "media/images/safe_medium_30-frame.png",
+        "figure": "media/images/safe_medium_30.png"
+      }
+    },
+    {
+      "id": "safe_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# quote: rm -rf -- \"${dir}\"\n```\nprivilege dropping patterns matter when...",
+      "choices": [
+        "Scripts start as root then run untrusted phases",
+        "Always for echo",
+        "Only for ls colors",
+        "Never on Unix"
+      ],
+      "answer": 0,
+      "explain": "Least privilege.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_hard_01.mp4",
+        "poster": "media/images/safe_hard_01-frame.png",
+        "figure": "media/images/safe_hard_01.png"
+      }
+    },
+    {
+      "id": "safe_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncommand -v jq >/dev/null || { echo missing; exit 127; }\n```\nEnvironment sanitization (`env -i`) helps because...",
+      "choices": [
+        "Inherited env can change behavior/security",
+        "Env is unused by shells",
+        "It disables PATH forever usefully without reset",
+        "It clears disks"
+      ],
+      "answer": 0,
+      "explain": "Clean env.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_hard_02.mp4",
+        "poster": "media/images/safe_hard_02-frame.png",
+        "figure": "media/images/safe_hard_02.png"
+      }
+    },
+    {
+      "id": "safe_hard_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nset -euo pipefail; f=$(mktemp); echo hi >\"$f\"; rm -f -- \"$f\"\n```\nAtomic `mv` publish replaces avoid partial reads of outputs.",
+      "answer": true,
+      "explain": "Atomic rename publish.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_hard_03.mp4",
+        "poster": "media/images/safe_hard_03-frame.png",
+        "figure": "media/images/safe_hard_03.png"
+      }
+    },
+    {
+      "id": "safe_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\0' docs/* | xargs -0 -n1 echo\n```\nAuto-yes to prompts (`yes |`) is dangerous when...",
+      "choices": [
+        "Commands have destructive confirmations",
+        "Printing help",
+        "Using pwd",
+        "Reading man"
+      ],
+      "answer": 0,
+      "explain": "Don't blind-confirm.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_hard_04.mp4",
+        "poster": "media/images/safe_hard_04-frame.png",
+        "figure": "media/images/safe_hard_04.png"
+      }
+    },
+    {
+      "id": "safe_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# quote: rm -rf -- \"${dir}\"\n```\nCapability-aware safety means...",
+      "choices": [
+        "Mode bits alone may be insufficient under MAC",
+        "chmod 777 fixes MAC",
+        "SELinux ignores paths",
+        "Root always bypasses hardware"
+      ],
+      "answer": 0,
+      "explain": "Defense layers.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_hard_05.mp4",
+        "poster": "media/images/safe_hard_05-frame.png",
+        "figure": "media/images/safe_hard_05.png"
+      }
+    },
+    {
+      "id": "safe_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncommand -v jq >/dev/null || { echo missing; exit 127; }\n```\nLocale + parsing numbers/files can break when...",
+      "choices": [
+        "User LANG changes decimal/field rules",
+        "C locale only ever",
+        "ASCII digits banned",
+        "UTF-8 absent always"
+      ],
+      "answer": 0,
+      "explain": "Force C locale for parsers.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_hard_06.mp4",
+        "poster": "media/images/safe_hard_06-frame.png",
+        "figure": "media/images/safe_hard_06.png"
+      }
+    },
+    {
+      "id": "safe_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -euo pipefail; f=$(mktemp); echo hi >\"$f\"; rm -f -- \"$f\"\n```\nSecure temp on shared /tmp uses...",
+      "choices": [
+        "mktemp + correct umask + careful cleanup",
+        "Fixed names",
+        "777 dirs with common files",
+        "Symlink to /etc"
+      ],
+      "answer": 0,
+      "explain": "Temp hygiene.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_hard_07.mp4",
+        "poster": "media/images/safe_hard_07-frame.png",
+        "figure": "media/images/safe_hard_07.png"
+      }
+    },
+    {
+      "id": "safe_hard_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\0' src/* | xargs -0 -n1 echo\n```\nArgument vectors remain visible in `ps`; don't put secrets there.",
+      "answer": true,
+      "explain": "ps leaks argv.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_hard_08.mp4",
+        "poster": "media/images/safe_hard_08-frame.png",
+        "figure": "media/images/safe_hard_08.png"
+      }
+    },
+    {
+      "id": "safe_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# quote: rm -rf -- \"${dir}\"\n```\nCI secret masking still requires...",
+      "choices": [
+        "Not echoing secrets / careful debug traces",
+        "set -x always with secrets",
+        "Printing env",
+        "Storing in history"
+      ],
+      "answer": 0,
+      "explain": "Redact debug.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_hard_09.mp4",
+        "poster": "media/images/safe_hard_09-frame.png",
+        "figure": "media/images/safe_hard_09.png"
+      }
+    },
+    {
+      "id": "safe_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncommand -v jq >/dev/null || { echo missing; exit 127; }\n```\nLab mantra: validate, quote, fail fast, least privilege.",
+      "choices": [
+        "Yes",
+        "No: skip quote",
+        "No: ignore status",
+        "No: world write"
+      ],
+      "answer": 0,
+      "explain": "Safe scripting pillars.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_hard_10.mp4",
+        "poster": "media/images/safe_hard_10-frame.png",
+        "figure": "media/images/safe_hard_10.png"
+      }
+    },
+    {
+      "id": "safe_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -euo pipefail; f=$(mktemp); echo hi >\"$f\"; rm -f -- \"$f\"\n```\n# Review context: `~/bin/echo` slot 11 variant 1\nprivilege dropping patterns matter when...",
+      "choices": [
+        "Scripts start as root then run untrusted phases",
+        "Always for echo",
+        "Only for ls colors",
+        "Never on Unix"
+      ],
+      "answer": 0,
+      "explain": "Least privilege.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_hard_11.mp4",
+        "poster": "media/images/safe_hard_11-frame.png",
+        "figure": "media/images/safe_hard_11.png"
+      }
+    },
+    {
+      "id": "safe_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\0' docs/* | xargs -0 -n1 echo\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\nEnvironment sanitization (`env -i`) helps because...",
+      "choices": [
+        "Inherited env can change behavior/security",
+        "Env is unused by shells",
+        "It disables PATH forever usefully without reset",
+        "It clears disks"
+      ],
+      "answer": 0,
+      "explain": "Clean env.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_hard_12.mp4",
+        "poster": "media/images/safe_hard_12-frame.png",
+        "figure": "media/images/safe_hard_12.png"
+      }
+    },
+    {
+      "id": "safe_hard_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# quote: rm -rf -- \"${dir}\"\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\nAtomic `mv` publish replaces avoid partial reads of outputs.",
+      "answer": true,
+      "explain": "Atomic rename publish.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_hard_13.mp4",
+        "poster": "media/images/safe_hard_13-frame.png",
+        "figure": "media/images/safe_hard_13.png"
+      }
+    },
+    {
+      "id": "safe_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncommand -v jq >/dev/null || { echo missing; exit 127; }\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\nAuto-yes to prompts (`yes |`) is dangerous when...",
+      "choices": [
+        "Commands have destructive confirmations",
+        "Printing help",
+        "Using pwd",
+        "Reading man"
+      ],
+      "answer": 0,
+      "explain": "Don't blind-confirm.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_hard_14.mp4",
+        "poster": "media/images/safe_hard_14-frame.png",
+        "figure": "media/images/safe_hard_14.png"
+      }
+    },
+    {
+      "id": "safe_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -euo pipefail; f=$(mktemp); echo hi >\"$f\"; rm -f -- \"$f\"\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nCapability-aware safety means...",
+      "choices": [
+        "Mode bits alone may be insufficient under MAC",
+        "chmod 777 fixes MAC",
+        "SELinux ignores paths",
+        "Root always bypasses hardware"
+      ],
+      "answer": 0,
+      "explain": "Defense layers.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_hard_15.mp4",
+        "poster": "media/images/safe_hard_15-frame.png",
+        "figure": "media/images/safe_hard_15.png"
+      }
+    },
+    {
+      "id": "safe_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\0' src/* | xargs -0 -n1 echo\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nLocale + parsing numbers/files can break when...",
+      "choices": [
+        "User LANG changes decimal/field rules",
+        "C locale only ever",
+        "ASCII digits banned",
+        "UTF-8 absent always"
+      ],
+      "answer": 0,
+      "explain": "Force C locale for parsers.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_hard_16.mp4",
+        "poster": "media/images/safe_hard_16-frame.png",
+        "figure": "media/images/safe_hard_16.png"
+      }
+    },
+    {
+      "id": "safe_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# quote: rm -rf -- \"${dir}\"\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nSecure temp on shared /tmp uses...",
+      "choices": [
+        "mktemp + correct umask + careful cleanup",
+        "Fixed names",
+        "777 dirs with common files",
+        "Symlink to /etc"
+      ],
+      "answer": 0,
+      "explain": "Temp hygiene.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_hard_17.mp4",
+        "poster": "media/images/safe_hard_17-frame.png",
+        "figure": "media/images/safe_hard_17.png"
+      }
+    },
+    {
+      "id": "safe_hard_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ncommand -v jq >/dev/null || { echo missing; exit 127; }\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nArgument vectors remain visible in `ps`; don't put secrets there.",
+      "answer": true,
+      "explain": "ps leaks argv.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_hard_18.mp4",
+        "poster": "media/images/safe_hard_18-frame.png",
+        "figure": "media/images/safe_hard_18.png"
+      }
+    },
+    {
+      "id": "safe_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -euo pipefail; f=$(mktemp); echo hi >\"$f\"; rm -f -- \"$f\"\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nCI secret masking still requires...",
+      "choices": [
+        "Not echoing secrets / careful debug traces",
+        "set -x always with secrets",
+        "Printing env",
+        "Storing in history"
+      ],
+      "answer": 0,
+      "explain": "Redact debug.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_hard_19.mp4",
+        "poster": "media/images/safe_hard_19-frame.png",
+        "figure": "media/images/safe_hard_19.png"
+      }
+    },
+    {
+      "id": "safe_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\0' docs/* | xargs -0 -n1 echo\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\nLab mantra: validate, quote, fail fast, least privilege.",
+      "choices": [
+        "Yes",
+        "No: skip quote",
+        "No: ignore status",
+        "No: world write"
+      ],
+      "answer": 0,
+      "explain": "Safe scripting pillars.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_hard_20.mp4",
+        "poster": "media/images/safe_hard_20-frame.png",
+        "figure": "media/images/safe_hard_20.png"
+      }
+    },
+    {
+      "id": "safe_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# quote: rm -rf -- \"${dir}\"\n```\n# Review context: `/var/log/golf` slot 21 variant 1\nprivilege dropping patterns matter when...",
+      "choices": [
+        "Scripts start as root then run untrusted phases",
+        "Always for echo",
+        "Only for ls colors",
+        "Never on Unix"
+      ],
+      "answer": 0,
+      "explain": "Least privilege.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_hard_21.mp4",
+        "poster": "media/images/safe_hard_21-frame.png",
+        "figure": "media/images/safe_hard_21.png"
+      }
+    },
+    {
+      "id": "safe_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncommand -v jq >/dev/null || { echo missing; exit 127; }\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\nEnvironment sanitization (`env -i`) helps because...",
+      "choices": [
+        "Inherited env can change behavior/security",
+        "Env is unused by shells",
+        "It disables PATH forever usefully without reset",
+        "It clears disks"
+      ],
+      "answer": 0,
+      "explain": "Clean env.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_hard_22.mp4",
+        "poster": "media/images/safe_hard_22-frame.png",
+        "figure": "media/images/safe_hard_22.png"
+      }
+    },
+    {
+      "id": "safe_hard_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nset -euo pipefail; f=$(mktemp); echo hi >\"$f\"; rm -f -- \"$f\"\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\nAtomic `mv` publish replaces avoid partial reads of outputs.",
+      "answer": true,
+      "explain": "Atomic rename publish.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_hard_23.mp4",
+        "poster": "media/images/safe_hard_23-frame.png",
+        "figure": "media/images/safe_hard_23.png"
+      }
+    },
+    {
+      "id": "safe_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\0' src/* | xargs -0 -n1 echo\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nAuto-yes to prompts (`yes |`) is dangerous when...",
+      "choices": [
+        "Commands have destructive confirmations",
+        "Printing help",
+        "Using pwd",
+        "Reading man"
+      ],
+      "answer": 0,
+      "explain": "Don't blind-confirm.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_hard_24.mp4",
+        "poster": "media/images/safe_hard_24-frame.png",
+        "figure": "media/images/safe_hard_24.png"
+      }
+    },
+    {
+      "id": "safe_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# quote: rm -rf -- \"${dir}\"\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nCapability-aware safety means...",
+      "choices": [
+        "Mode bits alone may be insufficient under MAC",
+        "chmod 777 fixes MAC",
+        "SELinux ignores paths",
+        "Root always bypasses hardware"
+      ],
+      "answer": 0,
+      "explain": "Defense layers.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_hard_25.mp4",
+        "poster": "media/images/safe_hard_25-frame.png",
+        "figure": "media/images/safe_hard_25.png"
+      }
+    },
+    {
+      "id": "safe_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncommand -v jq >/dev/null || { echo missing; exit 127; }\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nLocale + parsing numbers/files can break when...",
+      "choices": [
+        "User LANG changes decimal/field rules",
+        "C locale only ever",
+        "ASCII digits banned",
+        "UTF-8 absent always"
+      ],
+      "answer": 0,
+      "explain": "Force C locale for parsers.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_hard_26.mp4",
+        "poster": "media/images/safe_hard_26-frame.png",
+        "figure": "media/images/safe_hard_26.png"
+      }
+    },
+    {
+      "id": "safe_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -euo pipefail; f=$(mktemp); echo hi >\"$f\"; rm -f -- \"$f\"\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nSecure temp on shared /tmp uses...",
+      "choices": [
+        "mktemp + correct umask + careful cleanup",
+        "Fixed names",
+        "777 dirs with common files",
+        "Symlink to /etc"
+      ],
+      "answer": 0,
+      "explain": "Temp hygiene.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_hard_27.mp4",
+        "poster": "media/images/safe_hard_27-frame.png",
+        "figure": "media/images/safe_hard_27.png"
+      }
+    },
+    {
+      "id": "safe_hard_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\0' docs/* | xargs -0 -n1 echo\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nArgument vectors remain visible in `ps`; don't put secrets there.",
+      "answer": true,
+      "explain": "ps leaks argv.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_hard_28.mp4",
+        "poster": "media/images/safe_hard_28-frame.png",
+        "figure": "media/images/safe_hard_28.png"
+      }
+    },
+    {
+      "id": "safe_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# quote: rm -rf -- \"${dir}\"\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nCI secret masking still requires...",
+      "choices": [
+        "Not echoing secrets / careful debug traces",
+        "set -x always with secrets",
+        "Printing env",
+        "Storing in history"
+      ],
+      "answer": 0,
+      "explain": "Redact debug.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_hard_29.mp4",
+        "poster": "media/images/safe_hard_29-frame.png",
+        "figure": "media/images/safe_hard_29.png"
+      }
+    },
+    {
+      "id": "safe_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncommand -v jq >/dev/null || { echo missing; exit 127; }\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nLab mantra: validate, quote, fail fast, least privilege.",
+      "choices": [
+        "Yes",
+        "No: skip quote",
+        "No: ignore status",
+        "No: world write"
+      ],
+      "answer": 0,
+      "explain": "Safe scripting pillars.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/safe_hard_30.mp4",
+        "poster": "media/images/safe_hard_30-frame.png",
+        "figure": "media/images/safe_hard_30.png"
+      }
+    }
+  ]
+}

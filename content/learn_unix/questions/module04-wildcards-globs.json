@@ -1,0 +1,1698 @@
+{
+  "module": "module04-wildcards-globs",
+  "title": "Globs & wildcards",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nshopt -s nullglob; files=(tmp/*); echo ${#files[@]}\n```\nIn a shell glob, * matches...",
+      "choices": [
+        "Exactly one character",
+        "Any sequence of characters (including none)",
+        "Only digits",
+        "Only hidden files"
+      ],
+      "answer": 1,
+      "explain": "Asterisk is \"any sequence,\" including empty.",
+      "difficulty": "easy",
+      "id": "glob_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_easy_01.mp4",
+        "poster": "media/images/glob_easy_01-frame.png",
+        "figure": "media/images/glob_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls build/*.echo 2>/dev/null\n```\ndata_?.log matches which idea?",
+      "choices": [
+        "Any number of characters after data_",
+        "Exactly one character between data_ and .log",
+        "Only the literal string data_?.log",
+        "Every file in the tree"
+      ],
+      "answer": 1,
+      "explain": "Question mark matches exactly one character.",
+      "difficulty": "easy",
+      "id": "glob_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_easy_02.mp4",
+        "poster": "media/images/glob_easy_02-frame.png",
+        "figure": "media/images/glob_easy_02.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nfor f in *.log; do echo \"$f\"; done\n```\nThe shell expands wildcards before the command runs.",
+      "answer": true,
+      "explain": "rm *.log becomes a list of matching names first.",
+      "difficulty": "easy",
+      "id": "glob_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_easy_03.mp4",
+        "poster": "media/images/glob_easy_03-frame.png",
+        "figure": "media/images/glob_easy_03.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\n' scripts/golf[0-9].txt\n```\nls [abc].txt is best described as...",
+      "choices": [
+        "Matching a, b, or c as the basename before .txt",
+        "Matching any three-letter name",
+        "Matching only hidden files",
+        "A relative path from home"
+      ],
+      "answer": 0,
+      "explain": "Brackets match one character from the listed set.",
+      "difficulty": "easy",
+      "id": "glob_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_easy_04.mp4",
+        "poster": "media/images/glob_easy_04-frame.png",
+        "figure": "media/images/glob_easy_04.png"
+      }
+    },
+    {
+      "id": "glob_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nshopt -s nullglob; files=(cfg/*); echo ${#files[@]}\n```\n`*.txt` matches...",
+      "choices": [
+        "Only the literal *.txt file",
+        "Names ending in .txt (glob)",
+        "All binaries",
+        "Only hidden files"
+      ],
+      "answer": 1,
+      "explain": "* globs any string.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_easy_05.mp4",
+        "poster": "media/images/glob_easy_05-frame.png",
+        "figure": "media/images/glob_easy_05.png"
+      }
+    },
+    {
+      "id": "glob_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls bin/*.india 2>/dev/null\n```\n`?` in a glob matches...",
+      "choices": [
+        "Any single character",
+        "Only digits",
+        "Only /",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explain": "? is one character.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_easy_06.mp4",
+        "poster": "media/images/glob_easy_06-frame.png",
+        "figure": "media/images/glob_easy_06.png"
+      }
+    },
+    {
+      "id": "glob_easy_07",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nfor f in *.log; do echo \"$f\"; done\n```\nGlobs are expanded by the shell before most commands run.",
+      "answer": true,
+      "explain": "Expansion is shell-side.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_easy_07.mp4",
+        "poster": "media/images/glob_easy_07-frame.png",
+        "figure": "media/images/glob_easy_07.png"
+      }
+    },
+    {
+      "id": "glob_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\n' logs/alpha[0-9].txt\n```\n`file[123].log` can match...",
+      "choices": [
+        "file1.log file2.log file3.log",
+        "Only file[123].log literal always",
+        "All .c files",
+        "Only dirs"
+      ],
+      "answer": 0,
+      "explain": "Bracket classes list choices.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_easy_08.mp4",
+        "poster": "media/images/glob_easy_08-frame.png",
+        "figure": "media/images/glob_easy_08.png"
+      }
+    },
+    {
+      "id": "glob_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nshopt -s nullglob; files=(tmp/*); echo ${#files[@]}\n```\n`ls dir9/*.log` lists...",
+      "choices": [
+        "Logs under dir9",
+        "Only /var/log",
+        "All processes",
+        "Git blobs"
+      ],
+      "answer": 0,
+      "explain": "Glob limited to that directory pattern.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_easy_09.mp4",
+        "poster": "media/images/glob_easy_09-frame.png",
+        "figure": "media/images/glob_easy_09.png"
+      }
+    },
+    {
+      "id": "glob_easy_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls build/*.charlie 2>/dev/null\n```\nIf a glob matches nothing (nullglob off), bash often...",
+      "choices": [
+        "Passes the literal pattern",
+        "Crashes the kernel",
+        "Deletes /",
+        "Opens man"
+      ],
+      "answer": 0,
+      "explain": "Unmatched glob may stay literal.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_easy_10.mp4",
+        "poster": "media/images/glob_easy_10-frame.png",
+        "figure": "media/images/glob_easy_10.png"
+      }
+    },
+    {
+      "id": "glob_easy_11",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nfor f in *.log; do echo \"$f\"; done\n```\n`*` does not cross `/` in pathname expansion.",
+      "answer": true,
+      "explain": "Each / segment is separate.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_easy_11.mp4",
+        "poster": "media/images/glob_easy_11-frame.png",
+        "figure": "media/images/glob_easy_11.png"
+      }
+    },
+    {
+      "id": "glob_easy_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\n' scripts/echo[0-9].txt\n```\n`.*` matches...",
+      "choices": [
+        "Hidden names starting with . (and often . and .. caveats)",
+        "Only non-hidden",
+        "Only executables",
+        "Only symlinks"
+      ],
+      "answer": 0,
+      "explain": "Dot-globs target hidden names.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_easy_12.mp4",
+        "poster": "media/images/glob_easy_12-frame.png",
+        "figure": "media/images/glob_easy_12.png"
+      }
+    },
+    {
+      "id": "glob_easy_13",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nshopt -s nullglob; files=(cfg/*); echo ${#files[@]}\n```\nQuote `'*.txt'` to...",
+      "choices": [
+        "Force globbing",
+        "Prevent globbing (literal)",
+        "Enable sudo",
+        "Clear PATH"
+      ],
+      "answer": 1,
+      "explain": "Quotes suppress expansion.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_easy_13.mp4",
+        "poster": "media/images/glob_easy_13-frame.png",
+        "figure": "media/images/glob_easy_13.png"
+      }
+    },
+    {
+      "id": "glob_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls bin/*.golf 2>/dev/null\n```\n`rm dir14/*` deletes...",
+      "choices": [
+        "Matching non-hidden entries in dir14 (dangerous!)",
+        "Only empty dirs",
+        "Nothing ever",
+        "Only symlinks"
+      ],
+      "answer": 0,
+      "explain": "Broad globs are hazardous.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_easy_14.mp4",
+        "poster": "media/images/glob_easy_14-frame.png",
+        "figure": "media/images/glob_easy_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nfor f in *.log; do echo \"$f\"; done\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nIn a shell glob, * matches...",
+      "choices": [
+        "Exactly one character",
+        "Any sequence of characters (including none)",
+        "Only digits",
+        "Only hidden files"
+      ],
+      "answer": 1,
+      "explain": "Asterisk is \"any sequence,\" including empty.",
+      "difficulty": "easy",
+      "id": "glob_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_easy_15.mp4",
+        "poster": "media/images/glob_easy_15-frame.png",
+        "figure": "media/images/glob_easy_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\n' logs/india[0-9].txt\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\ndata_?.log matches which idea?",
+      "choices": [
+        "Any number of characters after data_",
+        "Exactly one character between data_ and .log",
+        "Only the literal string data_?.log",
+        "Every file in the tree"
+      ],
+      "answer": 1,
+      "explain": "Question mark matches exactly one character.",
+      "difficulty": "easy",
+      "id": "glob_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_easy_16.mp4",
+        "poster": "media/images/glob_easy_16-frame.png",
+        "figure": "media/images/glob_easy_16.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nshopt -s nullglob; files=(tmp/*); echo ${#files[@]}\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nThe shell expands wildcards before the command runs.",
+      "answer": true,
+      "explain": "rm *.log becomes a list of matching names first.",
+      "difficulty": "easy",
+      "id": "glob_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_easy_17.mp4",
+        "poster": "media/images/glob_easy_17-frame.png",
+        "figure": "media/images/glob_easy_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls build/*.alpha 2>/dev/null\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nls [abc].txt is best described as...",
+      "choices": [
+        "Matching a, b, or c as the basename before .txt",
+        "Matching any three-letter name",
+        "Matching only hidden files",
+        "A relative path from home"
+      ],
+      "answer": 0,
+      "explain": "Brackets match one character from the listed set.",
+      "difficulty": "easy",
+      "id": "glob_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_easy_18.mp4",
+        "poster": "media/images/glob_easy_18-frame.png",
+        "figure": "media/images/glob_easy_18.png"
+      }
+    },
+    {
+      "id": "glob_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nfor f in *.log; do echo \"$f\"; done\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\n`*.txt` matches...",
+      "choices": [
+        "Only the literal *.txt file",
+        "Names ending in .txt (glob)",
+        "All binaries",
+        "Only hidden files"
+      ],
+      "answer": 1,
+      "explain": "* globs any string.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_easy_19.mp4",
+        "poster": "media/images/glob_easy_19-frame.png",
+        "figure": "media/images/glob_easy_19.png"
+      }
+    },
+    {
+      "id": "glob_easy_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\n' scripts/charlie[0-9].txt\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\n`?` in a glob matches...",
+      "choices": [
+        "Any single character",
+        "Only digits",
+        "Only /",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explain": "? is one character.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_easy_20.mp4",
+        "poster": "media/images/glob_easy_20-frame.png",
+        "figure": "media/images/glob_easy_20.png"
+      }
+    },
+    {
+      "id": "glob_easy_21",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nshopt -s nullglob; files=(cfg/*); echo ${#files[@]}\n```\n# Review context: `/var/log/golf` slot 21 variant 1\nGlobs are expanded by the shell before most commands run.",
+      "answer": true,
+      "explain": "Expansion is shell-side.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_easy_21.mp4",
+        "poster": "media/images/glob_easy_21-frame.png",
+        "figure": "media/images/glob_easy_21.png"
+      }
+    },
+    {
+      "id": "glob_easy_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls bin/*.echo 2>/dev/null\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\n`file[123].log` can match...",
+      "choices": [
+        "file1.log file2.log file3.log",
+        "Only file[123].log literal always",
+        "All .c files",
+        "Only dirs"
+      ],
+      "answer": 0,
+      "explain": "Bracket classes list choices.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_easy_22.mp4",
+        "poster": "media/images/glob_easy_22-frame.png",
+        "figure": "media/images/glob_easy_22.png"
+      }
+    },
+    {
+      "id": "glob_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nfor f in *.log; do echo \"$f\"; done\n```\n`ls dir23/*.log` lists...",
+      "choices": [
+        "Logs under dir23",
+        "Only /var/log",
+        "All processes",
+        "Git blobs"
+      ],
+      "answer": 0,
+      "explain": "Glob limited to that directory pattern.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_easy_23.mp4",
+        "poster": "media/images/glob_easy_23-frame.png",
+        "figure": "media/images/glob_easy_23.png"
+      }
+    },
+    {
+      "id": "glob_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\n' logs/golf[0-9].txt\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nIf a glob matches nothing (nullglob off), bash often...",
+      "choices": [
+        "Passes the literal pattern",
+        "Crashes the kernel",
+        "Deletes /",
+        "Opens man"
+      ],
+      "answer": 0,
+      "explain": "Unmatched glob may stay literal.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_easy_24.mp4",
+        "poster": "media/images/glob_easy_24-frame.png",
+        "figure": "media/images/glob_easy_24.png"
+      }
+    },
+    {
+      "id": "glob_easy_25",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nshopt -s nullglob; files=(tmp/*); echo ${#files[@]}\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\n`*` does not cross `/` in pathname expansion.",
+      "answer": true,
+      "explain": "Each / segment is separate.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_easy_25.mp4",
+        "poster": "media/images/glob_easy_25-frame.png",
+        "figure": "media/images/glob_easy_25.png"
+      }
+    },
+    {
+      "id": "glob_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls build/*.india 2>/dev/null\n```\n# Review context: `./scripts/delta` slot 26 variant 1\n`.*` matches...",
+      "choices": [
+        "Hidden names starting with . (and often . and .. caveats)",
+        "Only non-hidden",
+        "Only executables",
+        "Only symlinks"
+      ],
+      "answer": 0,
+      "explain": "Dot-globs target hidden names.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_easy_26.mp4",
+        "poster": "media/images/glob_easy_26-frame.png",
+        "figure": "media/images/glob_easy_26.png"
+      }
+    },
+    {
+      "id": "glob_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nfor f in *.log; do echo \"$f\"; done\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nQuote `'*.txt'` to...",
+      "choices": [
+        "Force globbing",
+        "Prevent globbing (literal)",
+        "Enable sudo",
+        "Clear PATH"
+      ],
+      "answer": 1,
+      "explain": "Quotes suppress expansion.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_easy_27.mp4",
+        "poster": "media/images/glob_easy_27-frame.png",
+        "figure": "media/images/glob_easy_27.png"
+      }
+    },
+    {
+      "id": "glob_easy_28",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\n' scripts/alpha[0-9].txt\n```\n`rm dir28/*` deletes...",
+      "choices": [
+        "Matching non-hidden entries in dir28 (dangerous!)",
+        "Only empty dirs",
+        "Nothing ever",
+        "Only symlinks"
+      ],
+      "answer": 0,
+      "explain": "Broad globs are hazardous.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_easy_28.mp4",
+        "poster": "media/images/glob_easy_28-frame.png",
+        "figure": "media/images/glob_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nshopt -s nullglob; files=(cfg/*); echo ${#files[@]}\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nIn a shell glob, * matches...",
+      "choices": [
+        "Exactly one character",
+        "Any sequence of characters (including none)",
+        "Only digits",
+        "Only hidden files"
+      ],
+      "answer": 1,
+      "explain": "Asterisk is \"any sequence,\" including empty.",
+      "difficulty": "easy",
+      "id": "glob_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_easy_29.mp4",
+        "poster": "media/images/glob_easy_29-frame.png",
+        "figure": "media/images/glob_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls bin/*.charlie 2>/dev/null\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\ndata_?.log matches which idea?",
+      "choices": [
+        "Any number of characters after data_",
+        "Exactly one character between data_ and .log",
+        "Only the literal string data_?.log",
+        "Every file in the tree"
+      ],
+      "answer": 1,
+      "explain": "Question mark matches exactly one character.",
+      "difficulty": "easy",
+      "id": "glob_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_easy_30.mp4",
+        "poster": "media/images/glob_easy_30-frame.png",
+        "figure": "media/images/glob_easy_30.png"
+      }
+    },
+    {
+      "id": "glob_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\n' logs/charlie[0-9].txt\n```\n`**` recursive glob (globstar) ...",
+      "choices": [
+        "May match across directories when enabled",
+        "Is POSIX mandatory everywhere",
+        "Deletes mounts",
+        "Sets umask"
+      ],
+      "answer": 0,
+      "explain": "globstar is a bash option.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_medium_01.mp4",
+        "poster": "media/images/glob_medium_01-frame.png",
+        "figure": "media/images/glob_medium_01.png"
+      }
+    },
+    {
+      "id": "glob_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nshopt -s nullglob; files=(tmp/*); echo ${#files[@]}\n```\n`[!0-9]*` matches names that...",
+      "choices": [
+        "Do not start with a digit",
+        "Are only digits",
+        "Contain /",
+        "Are empty only"
+      ],
+      "answer": 0,
+      "explain": "! negates a class.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_medium_02.mp4",
+        "poster": "media/images/glob_medium_02-frame.png",
+        "figure": "media/images/glob_medium_02.png"
+      }
+    },
+    {
+      "id": "glob_medium_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nls build/*.echo 2>/dev/null\n```\n`set -o nullglob` makes unmatched globs expand to nothing.",
+      "answer": true,
+      "explain": "nullglob drops unmatched patterns.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_medium_03.mp4",
+        "poster": "media/images/glob_medium_03-frame.png",
+        "figure": "media/images/glob_medium_03.png"
+      }
+    },
+    {
+      "id": "glob_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nfor f in *.log; do echo \"$f\"; done\n```\n`failglob` makes unmatched globs...",
+      "choices": [
+        "Error instead of literal",
+        "Silent success always",
+        "Call sudo",
+        "Format disks"
+      ],
+      "answer": 0,
+      "explain": "failglob is strict.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_medium_04.mp4",
+        "poster": "media/images/glob_medium_04-frame.png",
+        "figure": "media/images/glob_medium_04.png"
+      }
+    },
+    {
+      "id": "glob_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\n' scripts/golf[0-9].txt\n```\nBrace expansion `{a,b}{1,2}` is...",
+      "choices": [
+        "Not the same as pathname globbing",
+        "Identical to *",
+        "A man section",
+        "A umask"
+      ],
+      "answer": 0,
+      "explain": "Braces expand textually first.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_medium_05.mp4",
+        "poster": "media/images/glob_medium_05-frame.png",
+        "figure": "media/images/glob_medium_05.png"
+      }
+    },
+    {
+      "id": "glob_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nshopt -s nullglob; files=(cfg/*); echo ${#files[@]}\n```\nTo pass a literal `*` to find's -name, you usually...",
+      "choices": [
+        "Quote the pattern so the shell does not expand it",
+        "Always unquote",
+        "Use sudo",
+        "cd /"
+      ],
+      "answer": 0,
+      "explain": "Quote for the child tool.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_medium_06.mp4",
+        "poster": "media/images/glob_medium_06-frame.png",
+        "figure": "media/images/glob_medium_06.png"
+      }
+    },
+    {
+      "id": "glob_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls bin/*.india 2>/dev/null\n```\n`ls *.{c,h}` relies on...",
+      "choices": [
+        "Brace + glob interplay",
+        "Only cron",
+        "Only zip",
+        "SELinux only"
+      ],
+      "answer": 0,
+      "explain": "Braces produce multiple globs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_medium_07.mp4",
+        "poster": "media/images/glob_medium_07-frame.png",
+        "figure": "media/images/glob_medium_07.png"
+      }
+    },
+    {
+      "id": "glob_medium_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nfor f in *.log; do echo \"$f\"; done\n```\nGlobs do not use regex syntax; `.*` is not 'any chars' like regex.",
+      "answer": true,
+      "explain": "Glob != regex.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_medium_08.mp4",
+        "poster": "media/images/glob_medium_08-frame.png",
+        "figure": "media/images/glob_medium_08.png"
+      }
+    },
+    {
+      "id": "glob_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\n' logs/alpha[0-9].txt\n```\nHidden files and `*` ...",
+      "choices": [
+        "`*` usually skips dotfiles",
+        "Always includes dotfiles",
+        "Deletes them",
+        "Chmods them"
+      ],
+      "answer": 0,
+      "explain": "Default * skips ., .., and many dotfiles.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_medium_09.mp4",
+        "poster": "media/images/glob_medium_09-frame.png",
+        "figure": "media/images/glob_medium_09.png"
+      }
+    },
+    {
+      "id": "glob_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nshopt -s nullglob; files=(tmp/*); echo ${#files[@]}\n```\nSafe pattern iteration: `for f in dir10/*.txt; do ...`",
+      "choices": [
+        "Still handle unmatched literal / nullglob",
+        "Never needs quotes",
+        "Requires root",
+        "Disables errexit"
+      ],
+      "answer": 0,
+      "explain": "Unmatched cases need care.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_medium_10.mp4",
+        "poster": "media/images/glob_medium_10-frame.png",
+        "figure": "media/images/glob_medium_10.png"
+      }
+    },
+    {
+      "id": "glob_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls build/*.charlie 2>/dev/null\n```\n# Review context: `~/bin/echo` slot 11 variant 1\n`**` recursive glob (globstar) ...",
+      "choices": [
+        "May match across directories when enabled",
+        "Is POSIX mandatory everywhere",
+        "Deletes mounts",
+        "Sets umask"
+      ],
+      "answer": 0,
+      "explain": "globstar is a bash option.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_medium_11.mp4",
+        "poster": "media/images/glob_medium_11-frame.png",
+        "figure": "media/images/glob_medium_11.png"
+      }
+    },
+    {
+      "id": "glob_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nfor f in *.log; do echo \"$f\"; done\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\n`[!0-9]*` matches names that...",
+      "choices": [
+        "Do not start with a digit",
+        "Are only digits",
+        "Contain /",
+        "Are empty only"
+      ],
+      "answer": 0,
+      "explain": "! negates a class.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_medium_12.mp4",
+        "poster": "media/images/glob_medium_12-frame.png",
+        "figure": "media/images/glob_medium_12.png"
+      }
+    },
+    {
+      "id": "glob_medium_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\n' scripts/echo[0-9].txt\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\n`set -o nullglob` makes unmatched globs expand to nothing.",
+      "answer": true,
+      "explain": "nullglob drops unmatched patterns.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_medium_13.mp4",
+        "poster": "media/images/glob_medium_13-frame.png",
+        "figure": "media/images/glob_medium_13.png"
+      }
+    },
+    {
+      "id": "glob_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nshopt -s nullglob; files=(cfg/*); echo ${#files[@]}\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\n`failglob` makes unmatched globs...",
+      "choices": [
+        "Error instead of literal",
+        "Silent success always",
+        "Call sudo",
+        "Format disks"
+      ],
+      "answer": 0,
+      "explain": "failglob is strict.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_medium_14.mp4",
+        "poster": "media/images/glob_medium_14-frame.png",
+        "figure": "media/images/glob_medium_14.png"
+      }
+    },
+    {
+      "id": "glob_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls bin/*.golf 2>/dev/null\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nBrace expansion `{a,b}{1,2}` is...",
+      "choices": [
+        "Not the same as pathname globbing",
+        "Identical to *",
+        "A man section",
+        "A umask"
+      ],
+      "answer": 0,
+      "explain": "Braces expand textually first.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_medium_15.mp4",
+        "poster": "media/images/glob_medium_15-frame.png",
+        "figure": "media/images/glob_medium_15.png"
+      }
+    },
+    {
+      "id": "glob_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nfor f in *.log; do echo \"$f\"; done\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nTo pass a literal `*` to find's -name, you usually...",
+      "choices": [
+        "Quote the pattern so the shell does not expand it",
+        "Always unquote",
+        "Use sudo",
+        "cd /"
+      ],
+      "answer": 0,
+      "explain": "Quote for the child tool.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_medium_16.mp4",
+        "poster": "media/images/glob_medium_16-frame.png",
+        "figure": "media/images/glob_medium_16.png"
+      }
+    },
+    {
+      "id": "glob_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\n' logs/india[0-9].txt\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\n`ls *.{c,h}` relies on...",
+      "choices": [
+        "Brace + glob interplay",
+        "Only cron",
+        "Only zip",
+        "SELinux only"
+      ],
+      "answer": 0,
+      "explain": "Braces produce multiple globs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_medium_17.mp4",
+        "poster": "media/images/glob_medium_17-frame.png",
+        "figure": "media/images/glob_medium_17.png"
+      }
+    },
+    {
+      "id": "glob_medium_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nshopt -s nullglob; files=(tmp/*); echo ${#files[@]}\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nGlobs do not use regex syntax; `.*` is not 'any chars' like regex.",
+      "answer": true,
+      "explain": "Glob != regex.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_medium_18.mp4",
+        "poster": "media/images/glob_medium_18-frame.png",
+        "figure": "media/images/glob_medium_18.png"
+      }
+    },
+    {
+      "id": "glob_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls build/*.alpha 2>/dev/null\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nHidden files and `*` ...",
+      "choices": [
+        "`*` usually skips dotfiles",
+        "Always includes dotfiles",
+        "Deletes them",
+        "Chmods them"
+      ],
+      "answer": 0,
+      "explain": "Default * skips ., .., and many dotfiles.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_medium_19.mp4",
+        "poster": "media/images/glob_medium_19-frame.png",
+        "figure": "media/images/glob_medium_19.png"
+      }
+    },
+    {
+      "id": "glob_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nfor f in *.log; do echo \"$f\"; done\n```\nSafe pattern iteration: `for f in dir20/*.txt; do ...`",
+      "choices": [
+        "Still handle unmatched literal / nullglob",
+        "Never needs quotes",
+        "Requires root",
+        "Disables errexit"
+      ],
+      "answer": 0,
+      "explain": "Unmatched cases need care.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_medium_20.mp4",
+        "poster": "media/images/glob_medium_20-frame.png",
+        "figure": "media/images/glob_medium_20.png"
+      }
+    },
+    {
+      "id": "glob_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\n' scripts/charlie[0-9].txt\n```\n# Review context: `/var/log/golf` slot 21 variant 1\n`**` recursive glob (globstar) ...",
+      "choices": [
+        "May match across directories when enabled",
+        "Is POSIX mandatory everywhere",
+        "Deletes mounts",
+        "Sets umask"
+      ],
+      "answer": 0,
+      "explain": "globstar is a bash option.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_medium_21.mp4",
+        "poster": "media/images/glob_medium_21-frame.png",
+        "figure": "media/images/glob_medium_21.png"
+      }
+    },
+    {
+      "id": "glob_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nshopt -s nullglob; files=(cfg/*); echo ${#files[@]}\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\n`[!0-9]*` matches names that...",
+      "choices": [
+        "Do not start with a digit",
+        "Are only digits",
+        "Contain /",
+        "Are empty only"
+      ],
+      "answer": 0,
+      "explain": "! negates a class.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_medium_22.mp4",
+        "poster": "media/images/glob_medium_22-frame.png",
+        "figure": "media/images/glob_medium_22.png"
+      }
+    },
+    {
+      "id": "glob_medium_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nls bin/*.echo 2>/dev/null\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\n`set -o nullglob` makes unmatched globs expand to nothing.",
+      "answer": true,
+      "explain": "nullglob drops unmatched patterns.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_medium_23.mp4",
+        "poster": "media/images/glob_medium_23-frame.png",
+        "figure": "media/images/glob_medium_23.png"
+      }
+    },
+    {
+      "id": "glob_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nfor f in *.log; do echo \"$f\"; done\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\n`failglob` makes unmatched globs...",
+      "choices": [
+        "Error instead of literal",
+        "Silent success always",
+        "Call sudo",
+        "Format disks"
+      ],
+      "answer": 0,
+      "explain": "failglob is strict.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_medium_24.mp4",
+        "poster": "media/images/glob_medium_24-frame.png",
+        "figure": "media/images/glob_medium_24.png"
+      }
+    },
+    {
+      "id": "glob_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\n' logs/golf[0-9].txt\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nBrace expansion `{a,b}{1,2}` is...",
+      "choices": [
+        "Not the same as pathname globbing",
+        "Identical to *",
+        "A man section",
+        "A umask"
+      ],
+      "answer": 0,
+      "explain": "Braces expand textually first.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_medium_25.mp4",
+        "poster": "media/images/glob_medium_25-frame.png",
+        "figure": "media/images/glob_medium_25.png"
+      }
+    },
+    {
+      "id": "glob_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nshopt -s nullglob; files=(tmp/*); echo ${#files[@]}\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nTo pass a literal `*` to find's -name, you usually...",
+      "choices": [
+        "Quote the pattern so the shell does not expand it",
+        "Always unquote",
+        "Use sudo",
+        "cd /"
+      ],
+      "answer": 0,
+      "explain": "Quote for the child tool.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_medium_26.mp4",
+        "poster": "media/images/glob_medium_26-frame.png",
+        "figure": "media/images/glob_medium_26.png"
+      }
+    },
+    {
+      "id": "glob_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls build/*.india 2>/dev/null\n```\n# Review context: `/var/log/echo` slot 27 variant 1\n`ls *.{c,h}` relies on...",
+      "choices": [
+        "Brace + glob interplay",
+        "Only cron",
+        "Only zip",
+        "SELinux only"
+      ],
+      "answer": 0,
+      "explain": "Braces produce multiple globs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_medium_27.mp4",
+        "poster": "media/images/glob_medium_27-frame.png",
+        "figure": "media/images/glob_medium_27.png"
+      }
+    },
+    {
+      "id": "glob_medium_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nfor f in *.log; do echo \"$f\"; done\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nGlobs do not use regex syntax; `.*` is not 'any chars' like regex.",
+      "answer": true,
+      "explain": "Glob != regex.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_medium_28.mp4",
+        "poster": "media/images/glob_medium_28-frame.png",
+        "figure": "media/images/glob_medium_28.png"
+      }
+    },
+    {
+      "id": "glob_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\n' scripts/alpha[0-9].txt\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nHidden files and `*` ...",
+      "choices": [
+        "`*` usually skips dotfiles",
+        "Always includes dotfiles",
+        "Deletes them",
+        "Chmods them"
+      ],
+      "answer": 0,
+      "explain": "Default * skips ., .., and many dotfiles.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_medium_29.mp4",
+        "poster": "media/images/glob_medium_29-frame.png",
+        "figure": "media/images/glob_medium_29.png"
+      }
+    },
+    {
+      "id": "glob_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nshopt -s nullglob; files=(cfg/*); echo ${#files[@]}\n```\nSafe pattern iteration: `for f in dir30/*.txt; do ...`",
+      "choices": [
+        "Still handle unmatched literal / nullglob",
+        "Never needs quotes",
+        "Requires root",
+        "Disables errexit"
+      ],
+      "answer": 0,
+      "explain": "Unmatched cases need care.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_medium_30.mp4",
+        "poster": "media/images/glob_medium_30-frame.png",
+        "figure": "media/images/glob_medium_30.png"
+      }
+    },
+    {
+      "id": "glob_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\n' logs/charlie[0-9].txt\n```\nGLOBIGNORE can...",
+      "choices": [
+        "Filter which matches are returned",
+        "Replace PATH",
+        "Disable man",
+        "Format ext4"
+      ],
+      "answer": 0,
+      "explain": "GLOBIGNORE excludes patterns.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_hard_01.mp4",
+        "poster": "media/images/glob_hard_01-frame.png",
+        "figure": "media/images/glob_hard_01.png"
+      }
+    },
+    {
+      "id": "glob_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nshopt -s nullglob; files=(tmp/*); echo ${#files[@]}\n```\nLocale collation affects character ranges like `[a-z]` because...",
+      "choices": [
+        "Ranges follow locale order",
+        "Ranges are always ASCII only everywhere",
+        "Globs ignore locale always",
+        "Kernels ban ranges"
+      ],
+      "answer": 0,
+      "explain": "Locales change range meaning.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_hard_02.mp4",
+        "poster": "media/images/glob_hard_02-frame.png",
+        "figure": "media/images/glob_hard_02.png"
+      }
+    },
+    {
+      "id": "glob_hard_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nls build/*.echo 2>/dev/null\n```\n`dotglob` makes `*` include dotfiles (except . and ..).",
+      "answer": true,
+      "explain": "dotglob includes hidden.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_hard_03.mp4",
+        "poster": "media/images/glob_hard_03-frame.png",
+        "figure": "media/images/glob_hard_03.png"
+      }
+    },
+    {
+      "id": "glob_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nfor f in *.log; do echo \"$f\"; done\n```\nNocaseglob makes matches...",
+      "choices": [
+        "Case-insensitive (bash)",
+        "Always regex",
+        "Root-only",
+        "Network-only"
+      ],
+      "answer": 0,
+      "explain": "Case folding for globs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_hard_04.mp4",
+        "poster": "media/images/glob_hard_04-frame.png",
+        "figure": "media/images/glob_hard_04.png"
+      }
+    },
+    {
+      "id": "glob_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\n' scripts/golf[0-9].txt\n```\nEscaping: `\\*` yields...",
+      "choices": [
+        "A literal asterisk for expansion rules",
+        "Recursive delete",
+        "Home",
+        "A pipe"
+      ],
+      "answer": 0,
+      "explain": "Backslash escapes specials.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_hard_05.mp4",
+        "poster": "media/images/glob_hard_05-frame.png",
+        "figure": "media/images/glob_hard_05.png"
+      }
+    },
+    {
+      "id": "glob_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nshopt -s nullglob; files=(cfg/*); echo ${#files[@]}\n```\nWhy `rm -- *.txt` still needs care?",
+      "choices": [
+        "Globs expand before rm; huge lists can overflow",
+        "rm ignores --",
+        "Globs require root",
+        "txt cannot be removed"
+      ],
+      "answer": 0,
+      "explain": "Expansion list length limits.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_hard_06.mp4",
+        "poster": "media/images/glob_hard_06-frame.png",
+        "figure": "media/images/glob_hard_06.png"
+      }
+    },
+    {
+      "id": "glob_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls bin/*.india 2>/dev/null\n```\n`find dir7 -name '*.log'` vs shell glob...",
+      "choices": [
+        "find walks trees; shell expands one level pattern",
+        "Identical always",
+        "find cannot match names",
+        "Shell always recurses"
+      ],
+      "answer": 0,
+      "explain": "Different expansion engines.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_hard_07.mp4",
+        "poster": "media/images/glob_hard_07-frame.png",
+        "figure": "media/images/glob_hard_07.png"
+      }
+    },
+    {
+      "id": "glob_hard_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nfor f in *.log; do echo \"$f\"; done\n```\nextglob enables !(pattern) and other advanced bash globs.",
+      "answer": true,
+      "explain": "extglob adds extended forms.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_hard_08.mp4",
+        "poster": "media/images/glob_hard_08-frame.png",
+        "figure": "media/images/glob_hard_08.png"
+      }
+    },
+    {
+      "id": "glob_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\n' logs/alpha[0-9].txt\n```\nSecurity: untrusted filenames with globs can...",
+      "choices": [
+        "Break scripts via unexpected matches",
+        "Only improve safety",
+        "Disable networking",
+        "Set clocks"
+      ],
+      "answer": 0,
+      "explain": "Hostile names exploit careless globs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_hard_09.mp4",
+        "poster": "media/images/glob_hard_09-frame.png",
+        "figure": "media/images/glob_hard_09.png"
+      }
+    },
+    {
+      "id": "glob_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nshopt -s nullglob; files=(tmp/*); echo ${#files[@]}\n```\nPrefer `find -print0 | xargs -0` over naive `*` when...",
+      "choices": [
+        "Names may contain spaces/newlines",
+        "All names are ASCII single words guaranteed",
+        "Using only echo",
+        "Reading man"
+      ],
+      "answer": 0,
+      "explain": "Null-delimited pipelines are safer.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_hard_10.mp4",
+        "poster": "media/images/glob_hard_10-frame.png",
+        "figure": "media/images/glob_hard_10.png"
+      }
+    },
+    {
+      "id": "glob_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls build/*.charlie 2>/dev/null\n```\n# Review context: `~/bin/echo` slot 11 variant 1\nGLOBIGNORE can...",
+      "choices": [
+        "Filter which matches are returned",
+        "Replace PATH",
+        "Disable man",
+        "Format ext4"
+      ],
+      "answer": 0,
+      "explain": "GLOBIGNORE excludes patterns.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_hard_11.mp4",
+        "poster": "media/images/glob_hard_11-frame.png",
+        "figure": "media/images/glob_hard_11.png"
+      }
+    },
+    {
+      "id": "glob_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nfor f in *.log; do echo \"$f\"; done\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\nLocale collation affects character ranges like `[a-z]` because...",
+      "choices": [
+        "Ranges follow locale order",
+        "Ranges are always ASCII only everywhere",
+        "Globs ignore locale always",
+        "Kernels ban ranges"
+      ],
+      "answer": 0,
+      "explain": "Locales change range meaning.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_hard_12.mp4",
+        "poster": "media/images/glob_hard_12-frame.png",
+        "figure": "media/images/glob_hard_12.png"
+      }
+    },
+    {
+      "id": "glob_hard_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\n' scripts/echo[0-9].txt\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\n`dotglob` makes `*` include dotfiles (except . and ..).",
+      "answer": true,
+      "explain": "dotglob includes hidden.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_hard_13.mp4",
+        "poster": "media/images/glob_hard_13-frame.png",
+        "figure": "media/images/glob_hard_13.png"
+      }
+    },
+    {
+      "id": "glob_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nshopt -s nullglob; files=(cfg/*); echo ${#files[@]}\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\nNocaseglob makes matches...",
+      "choices": [
+        "Case-insensitive (bash)",
+        "Always regex",
+        "Root-only",
+        "Network-only"
+      ],
+      "answer": 0,
+      "explain": "Case folding for globs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_hard_14.mp4",
+        "poster": "media/images/glob_hard_14-frame.png",
+        "figure": "media/images/glob_hard_14.png"
+      }
+    },
+    {
+      "id": "glob_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls bin/*.golf 2>/dev/null\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nEscaping: `\\*` yields...",
+      "choices": [
+        "A literal asterisk for expansion rules",
+        "Recursive delete",
+        "Home",
+        "A pipe"
+      ],
+      "answer": 0,
+      "explain": "Backslash escapes specials.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_hard_15.mp4",
+        "poster": "media/images/glob_hard_15-frame.png",
+        "figure": "media/images/glob_hard_15.png"
+      }
+    },
+    {
+      "id": "glob_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nfor f in *.log; do echo \"$f\"; done\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nWhy `rm -- *.txt` still needs care?",
+      "choices": [
+        "Globs expand before rm; huge lists can overflow",
+        "rm ignores --",
+        "Globs require root",
+        "txt cannot be removed"
+      ],
+      "answer": 0,
+      "explain": "Expansion list length limits.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_hard_16.mp4",
+        "poster": "media/images/glob_hard_16-frame.png",
+        "figure": "media/images/glob_hard_16.png"
+      }
+    },
+    {
+      "id": "glob_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\n' logs/india[0-9].txt\n```\n`find dir17 -name '*.log'` vs shell glob...",
+      "choices": [
+        "find walks trees; shell expands one level pattern",
+        "Identical always",
+        "find cannot match names",
+        "Shell always recurses"
+      ],
+      "answer": 0,
+      "explain": "Different expansion engines.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_hard_17.mp4",
+        "poster": "media/images/glob_hard_17-frame.png",
+        "figure": "media/images/glob_hard_17.png"
+      }
+    },
+    {
+      "id": "glob_hard_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nshopt -s nullglob; files=(tmp/*); echo ${#files[@]}\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nextglob enables !(pattern) and other advanced bash globs.",
+      "answer": true,
+      "explain": "extglob adds extended forms.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_hard_18.mp4",
+        "poster": "media/images/glob_hard_18-frame.png",
+        "figure": "media/images/glob_hard_18.png"
+      }
+    },
+    {
+      "id": "glob_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls build/*.alpha 2>/dev/null\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nSecurity: untrusted filenames with globs can...",
+      "choices": [
+        "Break scripts via unexpected matches",
+        "Only improve safety",
+        "Disable networking",
+        "Set clocks"
+      ],
+      "answer": 0,
+      "explain": "Hostile names exploit careless globs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_hard_19.mp4",
+        "poster": "media/images/glob_hard_19-frame.png",
+        "figure": "media/images/glob_hard_19.png"
+      }
+    },
+    {
+      "id": "glob_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nfor f in *.log; do echo \"$f\"; done\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\nPrefer `find -print0 | xargs -0` over naive `*` when...",
+      "choices": [
+        "Names may contain spaces/newlines",
+        "All names are ASCII single words guaranteed",
+        "Using only echo",
+        "Reading man"
+      ],
+      "answer": 0,
+      "explain": "Null-delimited pipelines are safer.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_hard_20.mp4",
+        "poster": "media/images/glob_hard_20-frame.png",
+        "figure": "media/images/glob_hard_20.png"
+      }
+    },
+    {
+      "id": "glob_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\n' scripts/charlie[0-9].txt\n```\n# Review context: `/var/log/golf` slot 21 variant 1\nGLOBIGNORE can...",
+      "choices": [
+        "Filter which matches are returned",
+        "Replace PATH",
+        "Disable man",
+        "Format ext4"
+      ],
+      "answer": 0,
+      "explain": "GLOBIGNORE excludes patterns.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_hard_21.mp4",
+        "poster": "media/images/glob_hard_21-frame.png",
+        "figure": "media/images/glob_hard_21.png"
+      }
+    },
+    {
+      "id": "glob_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nshopt -s nullglob; files=(cfg/*); echo ${#files[@]}\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\nLocale collation affects character ranges like `[a-z]` because...",
+      "choices": [
+        "Ranges follow locale order",
+        "Ranges are always ASCII only everywhere",
+        "Globs ignore locale always",
+        "Kernels ban ranges"
+      ],
+      "answer": 0,
+      "explain": "Locales change range meaning.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_hard_22.mp4",
+        "poster": "media/images/glob_hard_22-frame.png",
+        "figure": "media/images/glob_hard_22.png"
+      }
+    },
+    {
+      "id": "glob_hard_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nls bin/*.echo 2>/dev/null\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\n`dotglob` makes `*` include dotfiles (except . and ..).",
+      "answer": true,
+      "explain": "dotglob includes hidden.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_hard_23.mp4",
+        "poster": "media/images/glob_hard_23-frame.png",
+        "figure": "media/images/glob_hard_23.png"
+      }
+    },
+    {
+      "id": "glob_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nfor f in *.log; do echo \"$f\"; done\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nNocaseglob makes matches...",
+      "choices": [
+        "Case-insensitive (bash)",
+        "Always regex",
+        "Root-only",
+        "Network-only"
+      ],
+      "answer": 0,
+      "explain": "Case folding for globs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_hard_24.mp4",
+        "poster": "media/images/glob_hard_24-frame.png",
+        "figure": "media/images/glob_hard_24.png"
+      }
+    },
+    {
+      "id": "glob_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\n' logs/golf[0-9].txt\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nEscaping: `\\*` yields...",
+      "choices": [
+        "A literal asterisk for expansion rules",
+        "Recursive delete",
+        "Home",
+        "A pipe"
+      ],
+      "answer": 0,
+      "explain": "Backslash escapes specials.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_hard_25.mp4",
+        "poster": "media/images/glob_hard_25-frame.png",
+        "figure": "media/images/glob_hard_25.png"
+      }
+    },
+    {
+      "id": "glob_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nshopt -s nullglob; files=(tmp/*); echo ${#files[@]}\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nWhy `rm -- *.txt` still needs care?",
+      "choices": [
+        "Globs expand before rm; huge lists can overflow",
+        "rm ignores --",
+        "Globs require root",
+        "txt cannot be removed"
+      ],
+      "answer": 0,
+      "explain": "Expansion list length limits.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_hard_26.mp4",
+        "poster": "media/images/glob_hard_26-frame.png",
+        "figure": "media/images/glob_hard_26.png"
+      }
+    },
+    {
+      "id": "glob_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls build/*.india 2>/dev/null\n```\n`find dir27 -name '*.log'` vs shell glob...",
+      "choices": [
+        "find walks trees; shell expands one level pattern",
+        "Identical always",
+        "find cannot match names",
+        "Shell always recurses"
+      ],
+      "answer": 0,
+      "explain": "Different expansion engines.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_hard_27.mp4",
+        "poster": "media/images/glob_hard_27-frame.png",
+        "figure": "media/images/glob_hard_27.png"
+      }
+    },
+    {
+      "id": "glob_hard_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nfor f in *.log; do echo \"$f\"; done\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nextglob enables !(pattern) and other advanced bash globs.",
+      "answer": true,
+      "explain": "extglob adds extended forms.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_hard_28.mp4",
+        "poster": "media/images/glob_hard_28-frame.png",
+        "figure": "media/images/glob_hard_28.png"
+      }
+    },
+    {
+      "id": "glob_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf '%s\\n' scripts/alpha[0-9].txt\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nSecurity: untrusted filenames with globs can...",
+      "choices": [
+        "Break scripts via unexpected matches",
+        "Only improve safety",
+        "Disable networking",
+        "Set clocks"
+      ],
+      "answer": 0,
+      "explain": "Hostile names exploit careless globs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_hard_29.mp4",
+        "poster": "media/images/glob_hard_29-frame.png",
+        "figure": "media/images/glob_hard_29.png"
+      }
+    },
+    {
+      "id": "glob_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nshopt -s nullglob; files=(cfg/*); echo ${#files[@]}\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nPrefer `find -print0 | xargs -0` over naive `*` when...",
+      "choices": [
+        "Names may contain spaces/newlines",
+        "All names are ASCII single words guaranteed",
+        "Using only echo",
+        "Reading man"
+      ],
+      "answer": 0,
+      "explain": "Null-delimited pipelines are safer.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/glob_hard_30.mp4",
+        "poster": "media/images/glob_hard_30-frame.png",
+        "figure": "media/images/glob_hard_30.png"
+      }
+    }
+  ]
+}

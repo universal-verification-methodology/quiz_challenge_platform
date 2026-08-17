@@ -1,0 +1,1698 @@
+{
+  "module": "module12-sort-uniq-cut",
+  "title": "sort / uniq / cut",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -u tmp/delta.txt | wc -l\n```\nuniq removes duplicates that are...",
+      "choices": [
+        "Anywhere in the file automatically",
+        "Adjacent (next to each other)",
+        "Only on even lines",
+        "Only numeric lines"
+      ],
+      "answer": 1,
+      "explain": "uniq collapses adjacent duplicates - sort first for full dedupe.",
+      "difficulty": "easy",
+      "id": "sort_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_easy_01.mp4",
+        "poster": "media/images/sort_easy_01-frame.png",
+        "figure": "media/images/sort_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort build/echo.txt | uniq -c | sort -nr | head\n```\nsort -n is for...",
+      "choices": [
+        "Case-insensitive text only",
+        "Numeric ordering of lines",
+        "Network sort",
+        "Reversing bytes"
+      ],
+      "answer": 1,
+      "explain": "Numeric sort orders 1, 2, 10 correctly.",
+      "difficulty": "easy",
+      "id": "sort_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_easy_02.mp4",
+        "poster": "media/images/sort_easy_02-frame.png",
+        "figure": "media/images/sort_easy_02.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ncut -d, -f1,3 docs/foxtrot.csv | head\n```\nsort file | uniq -c prints each unique line with a count of how often it appeared.",
+      "answer": true,
+      "explain": "uniq -c prefixes counts after duplicates are adjacent via sort.",
+      "difficulty": "easy",
+      "id": "sort_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_easy_03.mp4",
+        "poster": "media/images/sort_easy_03-frame.png",
+        "figure": "media/images/sort_easy_03.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -k2,2n scripts/golf.tsv\n```\ncut -d',' -f1,3 file typically...",
+      "choices": [
+        "Deletes columns 1 and 3",
+        "Prints fields 1 and 3 using comma as delimiter",
+        "Sorts by field 1",
+        "Counts unique fields"
+      ],
+      "answer": 1,
+      "explain": "-d sets the delimiter; -f selects fields.",
+      "difficulty": "easy",
+      "id": "sort_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_easy_04.mp4",
+        "poster": "media/images/sort_easy_04-frame.png",
+        "figure": "media/images/sort_easy_04.png"
+      }
+    },
+    {
+      "id": "sort_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -u cfg/hotel.txt | wc -l\n```\n`sort file5.txt` sorts...",
+      "choices": [
+        "Lines of file5.txt",
+        "Only filenames in PATH",
+        "Signals",
+        "Users by uid only"
+      ],
+      "answer": 0,
+      "explain": "sort orders lines.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_easy_05.mp4",
+        "poster": "media/images/sort_easy_05-frame.png",
+        "figure": "media/images/sort_easy_05.png"
+      }
+    },
+    {
+      "id": "sort_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort bin/india.txt | uniq -c | sort -nr | head\n```\n`uniq` usually expects...",
+      "choices": [
+        "Adjacent duplicate lines (often after sort)",
+        "Random order always fine",
+        "Binary only",
+        "Zip only"
+      ],
+      "answer": 0,
+      "explain": "uniq collapses neighbors.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_easy_06.mp4",
+        "poster": "media/images/sort_easy_06-frame.png",
+        "figure": "media/images/sort_easy_06.png"
+      }
+    },
+    {
+      "id": "sort_easy_07",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ncut -d, -f1,3 src/juliet.csv | head\n```\n`sort | uniq` is a common unique-lines pipeline.",
+      "answer": true,
+      "explain": "Sort then uniq.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_easy_07.mp4",
+        "poster": "media/images/sort_easy_07-frame.png",
+        "figure": "media/images/sort_easy_07.png"
+      }
+    },
+    {
+      "id": "sort_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -k2,2n logs/alpha.tsv\n```\n`cut -d, -f1 file8.txt` takes...",
+      "choices": [
+        "Field 1 with comma delimiter",
+        "First byte only always",
+        "Last line",
+        "Inode"
+      ],
+      "answer": 0,
+      "explain": "cut selects fields.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_easy_08.mp4",
+        "poster": "media/images/sort_easy_08-frame.png",
+        "figure": "media/images/sort_easy_08.png"
+      }
+    },
+    {
+      "id": "sort_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -u tmp/bravo.txt | wc -l\n```\n`sort -n` sorts...",
+      "choices": [
+        "Numerically",
+        "By file size on disk only",
+        "By mtime only",
+        "Randomly"
+      ],
+      "answer": 0,
+      "explain": "Numeric sort.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_easy_09.mp4",
+        "poster": "media/images/sort_easy_09-frame.png",
+        "figure": "media/images/sort_easy_09.png"
+      }
+    },
+    {
+      "id": "sort_easy_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort build/charlie.txt | uniq -c | sort -nr | head\n```\n`sort -r` ...",
+      "choices": [
+        "Reverses order",
+        "Removes duplicates",
+        "Recurses dirs",
+        "Rewrites PATH"
+      ],
+      "answer": 0,
+      "explain": "Reverse.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_easy_10.mp4",
+        "poster": "media/images/sort_easy_10-frame.png",
+        "figure": "media/images/sort_easy_10.png"
+      }
+    },
+    {
+      "id": "sort_easy_11",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ncut -d, -f1,3 docs/delta.csv | head\n```\n`uniq -c` prefixes counts of adjacent duplicates.",
+      "answer": true,
+      "explain": "Count mode.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_easy_11.mp4",
+        "poster": "media/images/sort_easy_11-frame.png",
+        "figure": "media/images/sort_easy_11.png"
+      }
+    },
+    {
+      "id": "sort_easy_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -k2,2n scripts/echo.tsv\n```\n`cut -c1-3` selects...",
+      "choices": [
+        "Characters 1-3",
+        "Fields 1-3 always",
+        "Lines 1-3",
+        "PIDs"
+      ],
+      "answer": 0,
+      "explain": "Character ranges.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_easy_12.mp4",
+        "poster": "media/images/sort_easy_12-frame.png",
+        "figure": "media/images/sort_easy_12.png"
+      }
+    },
+    {
+      "id": "sort_easy_13",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -u cfg/foxtrot.txt | wc -l\n```\nTo unique without caring about adjacent requirement use...",
+      "choices": [
+        "`sort -u`",
+        "Only uniq alone on random",
+        "chmod",
+        "pwd"
+      ],
+      "answer": 0,
+      "explain": "sort -u unique sorts.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_easy_13.mp4",
+        "poster": "media/images/sort_easy_13-frame.png",
+        "figure": "media/images/sort_easy_13.png"
+      }
+    },
+    {
+      "id": "sort_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort bin/golf.txt | uniq -c | sort -nr | head\n```\n`sort -k2 file14.txt` sorts by...",
+      "choices": [
+        "Key starting at field 2",
+        "Only filename",
+        "Only inode",
+        "Only mode"
+      ],
+      "answer": 0,
+      "explain": "Key fields.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_easy_14.mp4",
+        "poster": "media/images/sort_easy_14-frame.png",
+        "figure": "media/images/sort_easy_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncut -d, -f1,3 src/hotel.csv | head\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nuniq removes duplicates that are...",
+      "choices": [
+        "Anywhere in the file automatically",
+        "Adjacent (next to each other)",
+        "Only on even lines",
+        "Only numeric lines"
+      ],
+      "answer": 1,
+      "explain": "uniq collapses adjacent duplicates - sort first for full dedupe.",
+      "difficulty": "easy",
+      "id": "sort_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_easy_15.mp4",
+        "poster": "media/images/sort_easy_15-frame.png",
+        "figure": "media/images/sort_easy_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -k2,2n logs/india.tsv\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nsort -n is for...",
+      "choices": [
+        "Case-insensitive text only",
+        "Numeric ordering of lines",
+        "Network sort",
+        "Reversing bytes"
+      ],
+      "answer": 1,
+      "explain": "Numeric sort orders 1, 2, 10 correctly.",
+      "difficulty": "easy",
+      "id": "sort_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_easy_16.mp4",
+        "poster": "media/images/sort_easy_16-frame.png",
+        "figure": "media/images/sort_easy_16.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nsort -u tmp/juliet.txt | wc -l\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nsort file | uniq -c prints each unique line with a count of how often it appeared.",
+      "answer": true,
+      "explain": "uniq -c prefixes counts after duplicates are adjacent via sort.",
+      "difficulty": "easy",
+      "id": "sort_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_easy_17.mp4",
+        "poster": "media/images/sort_easy_17-frame.png",
+        "figure": "media/images/sort_easy_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort build/alpha.txt | uniq -c | sort -nr | head\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\ncut -d',' -f1,3 file typically...",
+      "choices": [
+        "Deletes columns 1 and 3",
+        "Prints fields 1 and 3 using comma as delimiter",
+        "Sorts by field 1",
+        "Counts unique fields"
+      ],
+      "answer": 1,
+      "explain": "-d sets the delimiter; -f selects fields.",
+      "difficulty": "easy",
+      "id": "sort_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_easy_18.mp4",
+        "poster": "media/images/sort_easy_18-frame.png",
+        "figure": "media/images/sort_easy_18.png"
+      }
+    },
+    {
+      "id": "sort_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncut -d, -f1,3 docs/bravo.csv | head\n```\n`sort file19.txt` sorts...",
+      "choices": [
+        "Lines of file19.txt",
+        "Only filenames in PATH",
+        "Signals",
+        "Users by uid only"
+      ],
+      "answer": 0,
+      "explain": "sort orders lines.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_easy_19.mp4",
+        "poster": "media/images/sort_easy_19-frame.png",
+        "figure": "media/images/sort_easy_19.png"
+      }
+    },
+    {
+      "id": "sort_easy_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -k2,2n scripts/charlie.tsv\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\n`uniq` usually expects...",
+      "choices": [
+        "Adjacent duplicate lines (often after sort)",
+        "Random order always fine",
+        "Binary only",
+        "Zip only"
+      ],
+      "answer": 0,
+      "explain": "uniq collapses neighbors.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_easy_20.mp4",
+        "poster": "media/images/sort_easy_20-frame.png",
+        "figure": "media/images/sort_easy_20.png"
+      }
+    },
+    {
+      "id": "sort_easy_21",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nsort -u cfg/delta.txt | wc -l\n```\n# Review context: `/var/log/golf` slot 21 variant 1\n`sort | uniq` is a common unique-lines pipeline.",
+      "answer": true,
+      "explain": "Sort then uniq.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_easy_21.mp4",
+        "poster": "media/images/sort_easy_21-frame.png",
+        "figure": "media/images/sort_easy_21.png"
+      }
+    },
+    {
+      "id": "sort_easy_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort bin/echo.txt | uniq -c | sort -nr | head\n```\n`cut -d, -f1 file22.txt` takes...",
+      "choices": [
+        "Field 1 with comma delimiter",
+        "First byte only always",
+        "Last line",
+        "Inode"
+      ],
+      "answer": 0,
+      "explain": "cut selects fields.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_easy_22.mp4",
+        "poster": "media/images/sort_easy_22-frame.png",
+        "figure": "media/images/sort_easy_22.png"
+      }
+    },
+    {
+      "id": "sort_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncut -d, -f1,3 src/foxtrot.csv | head\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\n`sort -n` sorts...",
+      "choices": [
+        "Numerically",
+        "By file size on disk only",
+        "By mtime only",
+        "Randomly"
+      ],
+      "answer": 0,
+      "explain": "Numeric sort.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_easy_23.mp4",
+        "poster": "media/images/sort_easy_23-frame.png",
+        "figure": "media/images/sort_easy_23.png"
+      }
+    },
+    {
+      "id": "sort_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -k2,2n logs/golf.tsv\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\n`sort -r` ...",
+      "choices": [
+        "Reverses order",
+        "Removes duplicates",
+        "Recurses dirs",
+        "Rewrites PATH"
+      ],
+      "answer": 0,
+      "explain": "Reverse.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_easy_24.mp4",
+        "poster": "media/images/sort_easy_24-frame.png",
+        "figure": "media/images/sort_easy_24.png"
+      }
+    },
+    {
+      "id": "sort_easy_25",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nsort -u tmp/hotel.txt | wc -l\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\n`uniq -c` prefixes counts of adjacent duplicates.",
+      "answer": true,
+      "explain": "Count mode.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_easy_25.mp4",
+        "poster": "media/images/sort_easy_25-frame.png",
+        "figure": "media/images/sort_easy_25.png"
+      }
+    },
+    {
+      "id": "sort_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort build/india.txt | uniq -c | sort -nr | head\n```\n# Review context: `./scripts/delta` slot 26 variant 1\n`cut -c1-3` selects...",
+      "choices": [
+        "Characters 1-3",
+        "Fields 1-3 always",
+        "Lines 1-3",
+        "PIDs"
+      ],
+      "answer": 0,
+      "explain": "Character ranges.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_easy_26.mp4",
+        "poster": "media/images/sort_easy_26-frame.png",
+        "figure": "media/images/sort_easy_26.png"
+      }
+    },
+    {
+      "id": "sort_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncut -d, -f1,3 docs/juliet.csv | head\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nTo unique without caring about adjacent requirement use...",
+      "choices": [
+        "`sort -u`",
+        "Only uniq alone on random",
+        "chmod",
+        "pwd"
+      ],
+      "answer": 0,
+      "explain": "sort -u unique sorts.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_easy_27.mp4",
+        "poster": "media/images/sort_easy_27-frame.png",
+        "figure": "media/images/sort_easy_27.png"
+      }
+    },
+    {
+      "id": "sort_easy_28",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -k2,2n scripts/alpha.tsv\n```\n`sort -k2 file28.txt` sorts by...",
+      "choices": [
+        "Key starting at field 2",
+        "Only filename",
+        "Only inode",
+        "Only mode"
+      ],
+      "answer": 0,
+      "explain": "Key fields.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_easy_28.mp4",
+        "poster": "media/images/sort_easy_28-frame.png",
+        "figure": "media/images/sort_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -u cfg/bravo.txt | wc -l\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nuniq removes duplicates that are...",
+      "choices": [
+        "Anywhere in the file automatically",
+        "Adjacent (next to each other)",
+        "Only on even lines",
+        "Only numeric lines"
+      ],
+      "answer": 1,
+      "explain": "uniq collapses adjacent duplicates - sort first for full dedupe.",
+      "difficulty": "easy",
+      "id": "sort_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_easy_29.mp4",
+        "poster": "media/images/sort_easy_29-frame.png",
+        "figure": "media/images/sort_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort bin/charlie.txt | uniq -c | sort -nr | head\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nsort -n is for...",
+      "choices": [
+        "Case-insensitive text only",
+        "Numeric ordering of lines",
+        "Network sort",
+        "Reversing bytes"
+      ],
+      "answer": 1,
+      "explain": "Numeric sort orders 1, 2, 10 correctly.",
+      "difficulty": "easy",
+      "id": "sort_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_easy_30.mp4",
+        "poster": "media/images/sort_easy_30-frame.png",
+        "figure": "media/images/sort_easy_30.png"
+      }
+    },
+    {
+      "id": "sort_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -k2,2n logs/charlie.tsv\n```\n`sort -t: -k3,3n /etc/passwd` sorts by...",
+      "choices": [
+        "UID numeric with : delimiter",
+        "Username only",
+        "Shell only",
+        "GECOS only"
+      ],
+      "answer": 0,
+      "explain": "Field+numeric keys.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_medium_01.mp4",
+        "poster": "media/images/sort_medium_01-frame.png",
+        "figure": "media/images/sort_medium_01.png"
+      }
+    },
+    {
+      "id": "sort_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -u tmp/delta.txt | wc -l\n```\n`uniq -d` shows...",
+      "choices": [
+        "Only duplicated adjacent lines",
+        "All unique lines",
+        "Only empty",
+        "Only numbers"
+      ],
+      "answer": 0,
+      "explain": "Duplicate reporters.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_medium_02.mp4",
+        "poster": "media/images/sort_medium_02-frame.png",
+        "figure": "media/images/sort_medium_02.png"
+      }
+    },
+    {
+      "id": "sort_medium_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nsort build/echo.txt | uniq -c | sort -nr | head\n```\n`LC_ALL=C sort` often gives byte-wise stable tooling behavior.",
+      "answer": true,
+      "explain": "C locale = byte order.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_medium_03.mp4",
+        "poster": "media/images/sort_medium_03-frame.png",
+        "figure": "media/images/sort_medium_03.png"
+      }
+    },
+    {
+      "id": "sort_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncut -d, -f1,3 docs/foxtrot.csv | head\n```\n`cut` cannot easily re-order fields like awk because...",
+      "choices": [
+        "cut selects; awk is a fuller language",
+        "cut sorts",
+        "cut kills PIDs",
+        "cut mounts"
+      ],
+      "answer": 0,
+      "explain": "Use awk for complex field ops.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_medium_04.mp4",
+        "poster": "media/images/sort_medium_04-frame.png",
+        "figure": "media/images/sort_medium_04.png"
+      }
+    },
+    {
+      "id": "sort_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -k2,2n scripts/golf.tsv\n```\n`sort -u` vs `sort | uniq` ...",
+      "choices": [
+        "Often similar unique outcome; options differ",
+        "Opposite",
+        "One deletes files",
+        "One needs root"
+      ],
+      "answer": 0,
+      "explain": "Related uniqueness tools.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_medium_05.mp4",
+        "poster": "media/images/sort_medium_05-frame.png",
+        "figure": "media/images/sort_medium_05.png"
+      }
+    },
+    {
+      "id": "sort_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -u cfg/hotel.txt | wc -l\n```\n`sort -z` / `uniq -z` deal with...",
+      "choices": [
+        "NUL-terminated records",
+        "Only zip",
+        "Only gzip",
+        "Only tar"
+      ],
+      "answer": 0,
+      "explain": "Zero-terminated lines.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_medium_06.mp4",
+        "poster": "media/images/sort_medium_06-frame.png",
+        "figure": "media/images/sort_medium_06.png"
+      }
+    },
+    {
+      "id": "sort_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort bin/india.txt | uniq -c | sort -nr | head\n```\nStable sort (`sort -s`) preserves...",
+      "choices": [
+        "Order of equal keys",
+        "File modes",
+        "Symlinks",
+        "PIDs"
+      ],
+      "answer": 0,
+      "explain": "Stability.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_medium_07.mp4",
+        "poster": "media/images/sort_medium_07-frame.png",
+        "figure": "media/images/sort_medium_07.png"
+      }
+    },
+    {
+      "id": "sort_medium_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ncut -d, -f1,3 src/juliet.csv | head\n```\n`comm` compares two sorted files column-wise.",
+      "answer": true,
+      "explain": "comm needs sorted inputs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_medium_08.mp4",
+        "poster": "media/images/sort_medium_08-frame.png",
+        "figure": "media/images/sort_medium_08.png"
+      }
+    },
+    {
+      "id": "sort_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -k2,2n logs/alpha.tsv\n```\nHuge sorts may use...",
+      "choices": [
+        "Temp files under $TMPDIR",
+        "Only RAM forever always",
+        "Only /boot",
+        "Only GPU"
+      ],
+      "answer": 0,
+      "explain": "External sort spills.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_medium_09.mp4",
+        "poster": "media/images/sort_medium_09-frame.png",
+        "figure": "media/images/sort_medium_09.png"
+      }
+    },
+    {
+      "id": "sort_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -u tmp/bravo.txt | wc -l\n```\n`paste` / `join` complement cut when...",
+      "choices": [
+        "Merging columns/files",
+        "Killing jobs",
+        "Setting umask",
+        "Reading man only"
+      ],
+      "answer": 0,
+      "explain": "Column merge tools.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_medium_10.mp4",
+        "poster": "media/images/sort_medium_10-frame.png",
+        "figure": "media/images/sort_medium_10.png"
+      }
+    },
+    {
+      "id": "sort_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort build/charlie.txt | uniq -c | sort -nr | head\n```\n# Review context: `~/bin/echo` slot 11 variant 1\n`sort -t: -k3,3n /etc/passwd` sorts by...",
+      "choices": [
+        "UID numeric with : delimiter",
+        "Username only",
+        "Shell only",
+        "GECOS only"
+      ],
+      "answer": 0,
+      "explain": "Field+numeric keys.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_medium_11.mp4",
+        "poster": "media/images/sort_medium_11-frame.png",
+        "figure": "media/images/sort_medium_11.png"
+      }
+    },
+    {
+      "id": "sort_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncut -d, -f1,3 docs/delta.csv | head\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\n`uniq -d` shows...",
+      "choices": [
+        "Only duplicated adjacent lines",
+        "All unique lines",
+        "Only empty",
+        "Only numbers"
+      ],
+      "answer": 0,
+      "explain": "Duplicate reporters.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_medium_12.mp4",
+        "poster": "media/images/sort_medium_12-frame.png",
+        "figure": "media/images/sort_medium_12.png"
+      }
+    },
+    {
+      "id": "sort_medium_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nsort -k2,2n scripts/echo.tsv\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\n`LC_ALL=C sort` often gives byte-wise stable tooling behavior.",
+      "answer": true,
+      "explain": "C locale = byte order.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_medium_13.mp4",
+        "poster": "media/images/sort_medium_13-frame.png",
+        "figure": "media/images/sort_medium_13.png"
+      }
+    },
+    {
+      "id": "sort_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -u cfg/foxtrot.txt | wc -l\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\n`cut` cannot easily re-order fields like awk because...",
+      "choices": [
+        "cut selects; awk is a fuller language",
+        "cut sorts",
+        "cut kills PIDs",
+        "cut mounts"
+      ],
+      "answer": 0,
+      "explain": "Use awk for complex field ops.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_medium_14.mp4",
+        "poster": "media/images/sort_medium_14-frame.png",
+        "figure": "media/images/sort_medium_14.png"
+      }
+    },
+    {
+      "id": "sort_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort bin/golf.txt | uniq -c | sort -nr | head\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\n`sort -u` vs `sort | uniq` ...",
+      "choices": [
+        "Often similar unique outcome; options differ",
+        "Opposite",
+        "One deletes files",
+        "One needs root"
+      ],
+      "answer": 0,
+      "explain": "Related uniqueness tools.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_medium_15.mp4",
+        "poster": "media/images/sort_medium_15-frame.png",
+        "figure": "media/images/sort_medium_15.png"
+      }
+    },
+    {
+      "id": "sort_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncut -d, -f1,3 src/hotel.csv | head\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\n`sort -z` / `uniq -z` deal with...",
+      "choices": [
+        "NUL-terminated records",
+        "Only zip",
+        "Only gzip",
+        "Only tar"
+      ],
+      "answer": 0,
+      "explain": "Zero-terminated lines.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_medium_16.mp4",
+        "poster": "media/images/sort_medium_16-frame.png",
+        "figure": "media/images/sort_medium_16.png"
+      }
+    },
+    {
+      "id": "sort_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -k2,2n logs/india.tsv\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nStable sort (`sort -s`) preserves...",
+      "choices": [
+        "Order of equal keys",
+        "File modes",
+        "Symlinks",
+        "PIDs"
+      ],
+      "answer": 0,
+      "explain": "Stability.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_medium_17.mp4",
+        "poster": "media/images/sort_medium_17-frame.png",
+        "figure": "media/images/sort_medium_17.png"
+      }
+    },
+    {
+      "id": "sort_medium_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nsort -u tmp/juliet.txt | wc -l\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\n`comm` compares two sorted files column-wise.",
+      "answer": true,
+      "explain": "comm needs sorted inputs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_medium_18.mp4",
+        "poster": "media/images/sort_medium_18-frame.png",
+        "figure": "media/images/sort_medium_18.png"
+      }
+    },
+    {
+      "id": "sort_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort build/alpha.txt | uniq -c | sort -nr | head\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nHuge sorts may use...",
+      "choices": [
+        "Temp files under $TMPDIR",
+        "Only RAM forever always",
+        "Only /boot",
+        "Only GPU"
+      ],
+      "answer": 0,
+      "explain": "External sort spills.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_medium_19.mp4",
+        "poster": "media/images/sort_medium_19-frame.png",
+        "figure": "media/images/sort_medium_19.png"
+      }
+    },
+    {
+      "id": "sort_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncut -d, -f1,3 docs/bravo.csv | head\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\n`paste` / `join` complement cut when...",
+      "choices": [
+        "Merging columns/files",
+        "Killing jobs",
+        "Setting umask",
+        "Reading man only"
+      ],
+      "answer": 0,
+      "explain": "Column merge tools.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_medium_20.mp4",
+        "poster": "media/images/sort_medium_20-frame.png",
+        "figure": "media/images/sort_medium_20.png"
+      }
+    },
+    {
+      "id": "sort_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -k2,2n scripts/charlie.tsv\n```\n# Review context: `/var/log/golf` slot 21 variant 1\n`sort -t: -k3,3n /etc/passwd` sorts by...",
+      "choices": [
+        "UID numeric with : delimiter",
+        "Username only",
+        "Shell only",
+        "GECOS only"
+      ],
+      "answer": 0,
+      "explain": "Field+numeric keys.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_medium_21.mp4",
+        "poster": "media/images/sort_medium_21-frame.png",
+        "figure": "media/images/sort_medium_21.png"
+      }
+    },
+    {
+      "id": "sort_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -u cfg/delta.txt | wc -l\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\n`uniq -d` shows...",
+      "choices": [
+        "Only duplicated adjacent lines",
+        "All unique lines",
+        "Only empty",
+        "Only numbers"
+      ],
+      "answer": 0,
+      "explain": "Duplicate reporters.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_medium_22.mp4",
+        "poster": "media/images/sort_medium_22-frame.png",
+        "figure": "media/images/sort_medium_22.png"
+      }
+    },
+    {
+      "id": "sort_medium_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nsort bin/echo.txt | uniq -c | sort -nr | head\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\n`LC_ALL=C sort` often gives byte-wise stable tooling behavior.",
+      "answer": true,
+      "explain": "C locale = byte order.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_medium_23.mp4",
+        "poster": "media/images/sort_medium_23-frame.png",
+        "figure": "media/images/sort_medium_23.png"
+      }
+    },
+    {
+      "id": "sort_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncut -d, -f1,3 src/foxtrot.csv | head\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\n`cut` cannot easily re-order fields like awk because...",
+      "choices": [
+        "cut selects; awk is a fuller language",
+        "cut sorts",
+        "cut kills PIDs",
+        "cut mounts"
+      ],
+      "answer": 0,
+      "explain": "Use awk for complex field ops.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_medium_24.mp4",
+        "poster": "media/images/sort_medium_24-frame.png",
+        "figure": "media/images/sort_medium_24.png"
+      }
+    },
+    {
+      "id": "sort_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -k2,2n logs/golf.tsv\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\n`sort -u` vs `sort | uniq` ...",
+      "choices": [
+        "Often similar unique outcome; options differ",
+        "Opposite",
+        "One deletes files",
+        "One needs root"
+      ],
+      "answer": 0,
+      "explain": "Related uniqueness tools.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_medium_25.mp4",
+        "poster": "media/images/sort_medium_25-frame.png",
+        "figure": "media/images/sort_medium_25.png"
+      }
+    },
+    {
+      "id": "sort_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -u tmp/hotel.txt | wc -l\n```\n# Review context: `./scripts/delta` slot 26 variant 1\n`sort -z` / `uniq -z` deal with...",
+      "choices": [
+        "NUL-terminated records",
+        "Only zip",
+        "Only gzip",
+        "Only tar"
+      ],
+      "answer": 0,
+      "explain": "Zero-terminated lines.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_medium_26.mp4",
+        "poster": "media/images/sort_medium_26-frame.png",
+        "figure": "media/images/sort_medium_26.png"
+      }
+    },
+    {
+      "id": "sort_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort build/india.txt | uniq -c | sort -nr | head\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nStable sort (`sort -s`) preserves...",
+      "choices": [
+        "Order of equal keys",
+        "File modes",
+        "Symlinks",
+        "PIDs"
+      ],
+      "answer": 0,
+      "explain": "Stability.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_medium_27.mp4",
+        "poster": "media/images/sort_medium_27-frame.png",
+        "figure": "media/images/sort_medium_27.png"
+      }
+    },
+    {
+      "id": "sort_medium_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ncut -d, -f1,3 docs/juliet.csv | head\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\n`comm` compares two sorted files column-wise.",
+      "answer": true,
+      "explain": "comm needs sorted inputs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_medium_28.mp4",
+        "poster": "media/images/sort_medium_28-frame.png",
+        "figure": "media/images/sort_medium_28.png"
+      }
+    },
+    {
+      "id": "sort_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -k2,2n scripts/alpha.tsv\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nHuge sorts may use...",
+      "choices": [
+        "Temp files under $TMPDIR",
+        "Only RAM forever always",
+        "Only /boot",
+        "Only GPU"
+      ],
+      "answer": 0,
+      "explain": "External sort spills.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_medium_29.mp4",
+        "poster": "media/images/sort_medium_29-frame.png",
+        "figure": "media/images/sort_medium_29.png"
+      }
+    },
+    {
+      "id": "sort_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -u cfg/bravo.txt | wc -l\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\n`paste` / `join` complement cut when...",
+      "choices": [
+        "Merging columns/files",
+        "Killing jobs",
+        "Setting umask",
+        "Reading man only"
+      ],
+      "answer": 0,
+      "explain": "Column merge tools.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_medium_30.mp4",
+        "poster": "media/images/sort_medium_30-frame.png",
+        "figure": "media/images/sort_medium_30.png"
+      }
+    },
+    {
+      "id": "sort_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -k2,2n logs/charlie.tsv\n```\nLocale-aware sort can surprise because...",
+      "choices": [
+        "Letters order differently than byte order",
+        "sort ignores locale always",
+        "Numbers never sort",
+        "UTF-8 banned"
+      ],
+      "answer": 0,
+      "explain": "Locales change collation.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_hard_01.mp4",
+        "poster": "media/images/sort_hard_01-frame.png",
+        "figure": "media/images/sort_hard_01.png"
+      }
+    },
+    {
+      "id": "sort_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -u tmp/delta.txt | wc -l\n```\n`sort -V` version sort helps with...",
+      "choices": [
+        "names like v2 vs v10",
+        "Only PIDs",
+        "Only modes",
+        "Only zip methods"
+      ],
+      "answer": 0,
+      "explain": "Version sorting.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_hard_02.mp4",
+        "poster": "media/images/sort_hard_02-frame.png",
+        "figure": "media/images/sort_hard_02.png"
+      }
+    },
+    {
+      "id": "sort_hard_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nsort build/echo.txt | uniq -c | sort -nr | head\n```\n`uniq` without sort can miss duplicates that are not adjacent.",
+      "answer": true,
+      "explain": "Adjacency requirement.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_hard_03.mp4",
+        "poster": "media/images/sort_hard_03-frame.png",
+        "figure": "media/images/sort_hard_03.png"
+      }
+    },
+    {
+      "id": "sort_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncut -d, -f1,3 docs/foxtrot.csv | head\n```\nMemory blow-ups from `sort` huge logs: mitigate by...",
+      "choices": [
+        "Filtering first / parallel chunk strategies",
+        "Always loading whole GUI",
+        "Disabling TMPDIR",
+        "Using ls"
+      ],
+      "answer": 0,
+      "explain": "Reduce then sort.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_hard_04.mp4",
+        "poster": "media/images/sort_hard_04-frame.png",
+        "figure": "media/images/sort_hard_04.png"
+      }
+    },
+    {
+      "id": "sort_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -k2,2n scripts/golf.tsv\n```\n`cut -d ''` empty delim issues show...",
+      "choices": [
+        "cut delimiter limitations; use awk sometimes",
+        "cut supports regex always",
+        "cut sorts",
+        "cut kills"
+      ],
+      "answer": 0,
+      "explain": "Know cut limits.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_hard_05.mp4",
+        "poster": "media/images/sort_hard_05-frame.png",
+        "figure": "media/images/sort_hard_05.png"
+      }
+    },
+    {
+      "id": "sort_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -u cfg/hotel.txt | wc -l\n```\nKey ranges `-k2,2` vs `-k2` differ because...",
+      "choices": [
+        "End field bounds the key",
+        "Identical always",
+        "One needs root",
+        "One disables locale"
+      ],
+      "answer": 0,
+      "explain": "Specify end field.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_hard_06.mp4",
+        "poster": "media/images/sort_hard_06-frame.png",
+        "figure": "media/images/sort_hard_06.png"
+      }
+    },
+    {
+      "id": "sort_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort bin/india.txt | uniq -c | sort -nr | head\n```\nBinary safety: classic line tools break on...",
+      "choices": [
+        "Embedded NULs / non-text",
+        "ASCII digits",
+        "LF-only text",
+        "Short lines"
+      ],
+      "answer": 0,
+      "explain": "Text model assumptions.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_hard_07.mp4",
+        "poster": "media/images/sort_hard_07-frame.png",
+        "figure": "media/images/sort_hard_07.png"
+      }
+    },
+    {
+      "id": "sort_hard_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ncut -d, -f1,3 src/juliet.csv | head\n```\n`sort --parallel` can speed CPU-bound sorts when I/O allows.",
+      "answer": true,
+      "explain": "Parallel sort option.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_hard_08.mp4",
+        "poster": "media/images/sort_hard_08-frame.png",
+        "figure": "media/images/sort_hard_08.png"
+      }
+    },
+    {
+      "id": "sort_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -k2,2n logs/alpha.tsv\n```\nDeterministic builds want...",
+      "choices": [
+        "C locale + explicit sort keys",
+        "Random LANG",
+        "Skip sort",
+        "Rely on ls order"
+      ],
+      "answer": 0,
+      "explain": "Reproducible ordering.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_hard_09.mp4",
+        "poster": "media/images/sort_hard_09-frame.png",
+        "figure": "media/images/sort_hard_09.png"
+      }
+    },
+    {
+      "id": "sort_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -u tmp/bravo.txt | wc -l\n```\nLab tip: validate with `sort file10.txt | uniq -c | sort -nr | head`.",
+      "choices": [
+        "Yes: frequency triage pattern",
+        "No: random",
+        "No: chmod first",
+        "No: kill"
+      ],
+      "answer": 0,
+      "explain": "Classic triage pipe.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_hard_10.mp4",
+        "poster": "media/images/sort_hard_10-frame.png",
+        "figure": "media/images/sort_hard_10.png"
+      }
+    },
+    {
+      "id": "sort_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort build/charlie.txt | uniq -c | sort -nr | head\n```\n# Review context: `~/bin/echo` slot 11 variant 1\nLocale-aware sort can surprise because...",
+      "choices": [
+        "Letters order differently than byte order",
+        "sort ignores locale always",
+        "Numbers never sort",
+        "UTF-8 banned"
+      ],
+      "answer": 0,
+      "explain": "Locales change collation.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_hard_11.mp4",
+        "poster": "media/images/sort_hard_11-frame.png",
+        "figure": "media/images/sort_hard_11.png"
+      }
+    },
+    {
+      "id": "sort_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncut -d, -f1,3 docs/delta.csv | head\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\n`sort -V` version sort helps with...",
+      "choices": [
+        "names like v2 vs v10",
+        "Only PIDs",
+        "Only modes",
+        "Only zip methods"
+      ],
+      "answer": 0,
+      "explain": "Version sorting.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_hard_12.mp4",
+        "poster": "media/images/sort_hard_12-frame.png",
+        "figure": "media/images/sort_hard_12.png"
+      }
+    },
+    {
+      "id": "sort_hard_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nsort -k2,2n scripts/echo.tsv\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\n`uniq` without sort can miss duplicates that are not adjacent.",
+      "answer": true,
+      "explain": "Adjacency requirement.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_hard_13.mp4",
+        "poster": "media/images/sort_hard_13-frame.png",
+        "figure": "media/images/sort_hard_13.png"
+      }
+    },
+    {
+      "id": "sort_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -u cfg/foxtrot.txt | wc -l\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\nMemory blow-ups from `sort` huge logs: mitigate by...",
+      "choices": [
+        "Filtering first / parallel chunk strategies",
+        "Always loading whole GUI",
+        "Disabling TMPDIR",
+        "Using ls"
+      ],
+      "answer": 0,
+      "explain": "Reduce then sort.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_hard_14.mp4",
+        "poster": "media/images/sort_hard_14-frame.png",
+        "figure": "media/images/sort_hard_14.png"
+      }
+    },
+    {
+      "id": "sort_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort bin/golf.txt | uniq -c | sort -nr | head\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\n`cut -d ''` empty delim issues show...",
+      "choices": [
+        "cut delimiter limitations; use awk sometimes",
+        "cut supports regex always",
+        "cut sorts",
+        "cut kills"
+      ],
+      "answer": 0,
+      "explain": "Know cut limits.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_hard_15.mp4",
+        "poster": "media/images/sort_hard_15-frame.png",
+        "figure": "media/images/sort_hard_15.png"
+      }
+    },
+    {
+      "id": "sort_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncut -d, -f1,3 src/hotel.csv | head\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nKey ranges `-k2,2` vs `-k2` differ because...",
+      "choices": [
+        "End field bounds the key",
+        "Identical always",
+        "One needs root",
+        "One disables locale"
+      ],
+      "answer": 0,
+      "explain": "Specify end field.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_hard_16.mp4",
+        "poster": "media/images/sort_hard_16-frame.png",
+        "figure": "media/images/sort_hard_16.png"
+      }
+    },
+    {
+      "id": "sort_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -k2,2n logs/india.tsv\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nBinary safety: classic line tools break on...",
+      "choices": [
+        "Embedded NULs / non-text",
+        "ASCII digits",
+        "LF-only text",
+        "Short lines"
+      ],
+      "answer": 0,
+      "explain": "Text model assumptions.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_hard_17.mp4",
+        "poster": "media/images/sort_hard_17-frame.png",
+        "figure": "media/images/sort_hard_17.png"
+      }
+    },
+    {
+      "id": "sort_hard_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nsort -u tmp/juliet.txt | wc -l\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\n`sort --parallel` can speed CPU-bound sorts when I/O allows.",
+      "answer": true,
+      "explain": "Parallel sort option.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_hard_18.mp4",
+        "poster": "media/images/sort_hard_18-frame.png",
+        "figure": "media/images/sort_hard_18.png"
+      }
+    },
+    {
+      "id": "sort_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort build/alpha.txt | uniq -c | sort -nr | head\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nDeterministic builds want...",
+      "choices": [
+        "C locale + explicit sort keys",
+        "Random LANG",
+        "Skip sort",
+        "Rely on ls order"
+      ],
+      "answer": 0,
+      "explain": "Reproducible ordering.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_hard_19.mp4",
+        "poster": "media/images/sort_hard_19-frame.png",
+        "figure": "media/images/sort_hard_19.png"
+      }
+    },
+    {
+      "id": "sort_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncut -d, -f1,3 docs/bravo.csv | head\n```\nLab tip: validate with `sort file20.txt | uniq -c | sort -nr | head`.",
+      "choices": [
+        "Yes: frequency triage pattern",
+        "No: random",
+        "No: chmod first",
+        "No: kill"
+      ],
+      "answer": 0,
+      "explain": "Classic triage pipe.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_hard_20.mp4",
+        "poster": "media/images/sort_hard_20-frame.png",
+        "figure": "media/images/sort_hard_20.png"
+      }
+    },
+    {
+      "id": "sort_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -k2,2n scripts/charlie.tsv\n```\n# Review context: `/var/log/golf` slot 21 variant 1\nLocale-aware sort can surprise because...",
+      "choices": [
+        "Letters order differently than byte order",
+        "sort ignores locale always",
+        "Numbers never sort",
+        "UTF-8 banned"
+      ],
+      "answer": 0,
+      "explain": "Locales change collation.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_hard_21.mp4",
+        "poster": "media/images/sort_hard_21-frame.png",
+        "figure": "media/images/sort_hard_21.png"
+      }
+    },
+    {
+      "id": "sort_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -u cfg/delta.txt | wc -l\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\n`sort -V` version sort helps with...",
+      "choices": [
+        "names like v2 vs v10",
+        "Only PIDs",
+        "Only modes",
+        "Only zip methods"
+      ],
+      "answer": 0,
+      "explain": "Version sorting.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_hard_22.mp4",
+        "poster": "media/images/sort_hard_22-frame.png",
+        "figure": "media/images/sort_hard_22.png"
+      }
+    },
+    {
+      "id": "sort_hard_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nsort bin/echo.txt | uniq -c | sort -nr | head\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\n`uniq` without sort can miss duplicates that are not adjacent.",
+      "answer": true,
+      "explain": "Adjacency requirement.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_hard_23.mp4",
+        "poster": "media/images/sort_hard_23-frame.png",
+        "figure": "media/images/sort_hard_23.png"
+      }
+    },
+    {
+      "id": "sort_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncut -d, -f1,3 src/foxtrot.csv | head\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nMemory blow-ups from `sort` huge logs: mitigate by...",
+      "choices": [
+        "Filtering first / parallel chunk strategies",
+        "Always loading whole GUI",
+        "Disabling TMPDIR",
+        "Using ls"
+      ],
+      "answer": 0,
+      "explain": "Reduce then sort.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_hard_24.mp4",
+        "poster": "media/images/sort_hard_24-frame.png",
+        "figure": "media/images/sort_hard_24.png"
+      }
+    },
+    {
+      "id": "sort_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -k2,2n logs/golf.tsv\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\n`cut -d ''` empty delim issues show...",
+      "choices": [
+        "cut delimiter limitations; use awk sometimes",
+        "cut supports regex always",
+        "cut sorts",
+        "cut kills"
+      ],
+      "answer": 0,
+      "explain": "Know cut limits.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_hard_25.mp4",
+        "poster": "media/images/sort_hard_25-frame.png",
+        "figure": "media/images/sort_hard_25.png"
+      }
+    },
+    {
+      "id": "sort_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -u tmp/hotel.txt | wc -l\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nKey ranges `-k2,2` vs `-k2` differ because...",
+      "choices": [
+        "End field bounds the key",
+        "Identical always",
+        "One needs root",
+        "One disables locale"
+      ],
+      "answer": 0,
+      "explain": "Specify end field.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_hard_26.mp4",
+        "poster": "media/images/sort_hard_26-frame.png",
+        "figure": "media/images/sort_hard_26.png"
+      }
+    },
+    {
+      "id": "sort_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort build/india.txt | uniq -c | sort -nr | head\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nBinary safety: classic line tools break on...",
+      "choices": [
+        "Embedded NULs / non-text",
+        "ASCII digits",
+        "LF-only text",
+        "Short lines"
+      ],
+      "answer": 0,
+      "explain": "Text model assumptions.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_hard_27.mp4",
+        "poster": "media/images/sort_hard_27-frame.png",
+        "figure": "media/images/sort_hard_27.png"
+      }
+    },
+    {
+      "id": "sort_hard_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ncut -d, -f1,3 docs/juliet.csv | head\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\n`sort --parallel` can speed CPU-bound sorts when I/O allows.",
+      "answer": true,
+      "explain": "Parallel sort option.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_hard_28.mp4",
+        "poster": "media/images/sort_hard_28-frame.png",
+        "figure": "media/images/sort_hard_28.png"
+      }
+    },
+    {
+      "id": "sort_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -k2,2n scripts/alpha.tsv\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nDeterministic builds want...",
+      "choices": [
+        "C locale + explicit sort keys",
+        "Random LANG",
+        "Skip sort",
+        "Rely on ls order"
+      ],
+      "answer": 0,
+      "explain": "Reproducible ordering.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_hard_29.mp4",
+        "poster": "media/images/sort_hard_29-frame.png",
+        "figure": "media/images/sort_hard_29.png"
+      }
+    },
+    {
+      "id": "sort_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsort -u cfg/bravo.txt | wc -l\n```\nLab tip: validate with `sort file30.txt | uniq -c | sort -nr | head`.",
+      "choices": [
+        "Yes: frequency triage pattern",
+        "No: random",
+        "No: chmod first",
+        "No: kill"
+      ],
+      "answer": 0,
+      "explain": "Classic triage pipe.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sort_hard_30.mp4",
+        "poster": "media/images/sort_hard_30-frame.png",
+        "figure": "media/images/sort_hard_30.png"
+      }
+    }
+  ]
+}

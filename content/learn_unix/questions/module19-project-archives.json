@@ -1,0 +1,1698 @@
+{
+  "module": "module19-project-archives",
+  "title": "Project layout, archives, sed & diff",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -tzf /tmp/delta.tar.gz | head\n```\nIn a typical RTL layout, generated objects and logs belong in...",
+      "choices": [
+        "src/",
+        "tb/",
+        "build/ (or similar)",
+        "docs/ only"
+      ],
+      "answer": 2,
+      "explain": "Keep generated artifacts in build/out and often exclude them from archives.",
+      "difficulty": "easy",
+      "id": "proj_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_easy_01.mp4",
+        "poster": "media/images/proj_easy_01-frame.png",
+        "figure": "media/images/proj_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/echo5.tar.gz build\n```\ngrep -Rn PATTERN . means...",
+      "choices": [
+        "Find filenames only",
+        "Recursive content search with line numbers",
+        "Delete matching lines",
+        "Create a tar archive"
+      ],
+      "answer": 1,
+      "explain": "-R is recursive; -n prints line numbers.",
+      "difficulty": "easy",
+      "id": "proj_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_easy_02.mp4",
+        "poster": "media/images/proj_easy_02-frame.png",
+        "figure": "media/images/proj_easy_02.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ndiff -u docs/foxtrot.old docs/foxtrot.new | head\n```\nsed 's/old/new/g' file prints a substituted stream by default and does not edit the file unless you use in-place flags.",
+      "answer": true,
+      "explain": "Test on stdout first; use -i only when ready.",
+      "difficulty": "easy",
+      "id": "proj_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_easy_03.mp4",
+        "poster": "media/images/proj_easy_03-frame.png",
+        "figure": "media/images/proj_easy_03.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsed 's/foo/bar/' scripts/golf.txt | head\n```\ndiff -u is useful because...",
+      "choices": [
+        "It deletes both files",
+        "It produces unified diffs suitable for patches / similar to git diff",
+        "It only works on binary files",
+        "It replaces find"
+      ],
+      "answer": 1,
+      "explain": "Unified diff is the usual format for review and patch.",
+      "difficulty": "easy",
+      "id": "proj_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_easy_04.mp4",
+        "poster": "media/images/proj_easy_04-frame.png",
+        "figure": "media/images/proj_easy_04.png"
+      }
+    },
+    {
+      "id": "proj_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -tzf /tmp/hotel.tar.gz | head\n```\nA clear project layout helps...",
+      "choices": [
+        "Find sources, tests, docs, scripts",
+        "Speed the CPU clock",
+        "Disable git",
+        "Replace make"
+      ],
+      "answer": 0,
+      "explain": "Layout = navigability.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_easy_05.mp4",
+        "poster": "media/images/proj_easy_05-frame.png",
+        "figure": "media/images/proj_easy_05.png"
+      }
+    },
+    {
+      "id": "proj_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/india9.tar.gz bin\n```\n`tar -czf archive6.tar.gz dir6` typically...",
+      "choices": [
+        "Creates a gzip-compressed archive of dir6",
+        "Deletes dir6",
+        "Formats disk",
+        "Starts a server"
+      ],
+      "answer": 0,
+      "explain": "Create tar.gz.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_easy_06.mp4",
+        "poster": "media/images/proj_easy_06-frame.png",
+        "figure": "media/images/proj_easy_06.png"
+      }
+    },
+    {
+      "id": "proj_easy_07",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ndiff -u src/juliet.old src/juliet.new | head\n```\n`diff -u a b` shows a unified diff.",
+      "answer": true,
+      "explain": "Unified diff format.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_easy_07.mp4",
+        "poster": "media/images/proj_easy_07-frame.png",
+        "figure": "media/images/proj_easy_07.png"
+      }
+    },
+    {
+      "id": "proj_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsed 's/foo/bar/' logs/alpha.txt | head\n```\n`sed 's/foo/bar/' file8.txt` ...",
+      "choices": [
+        "Replaces first foo with bar per line (default)",
+        "Compiles foo",
+        "Chmods bar",
+        "Mounts foo"
+      ],
+      "answer": 0,
+      "explain": "Basic sed substitute.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_easy_08.mp4",
+        "poster": "media/images/proj_easy_08-frame.png",
+        "figure": "media/images/proj_easy_08.png"
+      }
+    },
+    {
+      "id": "proj_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -tzf /tmp/bravo.tar.gz | head\n```\nREADME at repo root should explain...",
+      "choices": [
+        "How to build/run/test",
+        "Only authors' birthdays",
+        "Only CPU temps",
+        "Only secrets"
+      ],
+      "answer": 0,
+      "explain": "Onboarding docs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_easy_09.mp4",
+        "poster": "media/images/proj_easy_09-frame.png",
+        "figure": "media/images/proj_easy_09.png"
+      }
+    },
+    {
+      "id": "proj_easy_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/charlie13.tar.gz build\n```\n`tar -tzf archive10.tar.gz` lists...",
+      "choices": [
+        "Archive contents",
+        "Only PIDs",
+        "Only users",
+        "Only mounts"
+      ],
+      "answer": 0,
+      "explain": "List tarball.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_easy_10.mp4",
+        "poster": "media/images/proj_easy_10-frame.png",
+        "figure": "media/images/proj_easy_10.png"
+      }
+    },
+    {
+      "id": "proj_easy_11",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ndiff -u docs/delta.old docs/delta.new | head\n```\n`patch` applies diff output to update files.",
+      "answer": true,
+      "explain": "patch consumes diffs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_easy_11.mp4",
+        "poster": "media/images/proj_easy_11-frame.png",
+        "figure": "media/images/proj_easy_11.png"
+      }
+    },
+    {
+      "id": "proj_easy_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsed 's/foo/bar/' scripts/echo.txt | head\n```\nKeeping build outputs out of git usually uses...",
+      "choices": [
+        ".gitignore",
+        "chmod 000",
+        "disabling PATH",
+        "sticky on /"
+      ],
+      "answer": 0,
+      "explain": "Ignore artifacts.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_easy_12.mp4",
+        "poster": "media/images/proj_easy_12-frame.png",
+        "figure": "media/images/proj_easy_12.png"
+      }
+    },
+    {
+      "id": "proj_easy_13",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -tzf /tmp/foxtrot.tar.gz | head\n```\n`sed -i` (GNU) edits...",
+      "choices": [
+        "Files in place (carefully)",
+        "Only stdout forever",
+        "Only man",
+        "Only zip"
+      ],
+      "answer": 0,
+      "explain": "In-place sed.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_easy_13.mp4",
+        "poster": "media/images/proj_easy_13-frame.png",
+        "figure": "media/images/proj_easy_13.png"
+      }
+    },
+    {
+      "id": "proj_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/golf17.tar.gz bin\n```\nsrc/ tests/ docs/ scripts/ is a...",
+      "choices": [
+        "Common layout pattern",
+        "Kernel requirement",
+        "Zip-only tree",
+        "Forbidden structure"
+      ],
+      "answer": 0,
+      "explain": "Conventional dirs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_easy_14.mp4",
+        "poster": "media/images/proj_easy_14-frame.png",
+        "figure": "media/images/proj_easy_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ndiff -u src/hotel.old src/hotel.new | head\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nIn a typical RTL layout, generated objects and logs belong in...",
+      "choices": [
+        "src/",
+        "tb/",
+        "build/ (or similar)",
+        "docs/ only"
+      ],
+      "answer": 2,
+      "explain": "Keep generated artifacts in build/out and often exclude them from archives.",
+      "difficulty": "easy",
+      "id": "proj_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_easy_15.mp4",
+        "poster": "media/images/proj_easy_15-frame.png",
+        "figure": "media/images/proj_easy_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsed 's/foo/bar/' logs/india.txt | head\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\ngrep -Rn PATTERN . means...",
+      "choices": [
+        "Find filenames only",
+        "Recursive content search with line numbers",
+        "Delete matching lines",
+        "Create a tar archive"
+      ],
+      "answer": 1,
+      "explain": "-R is recursive; -n prints line numbers.",
+      "difficulty": "easy",
+      "id": "proj_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_easy_16.mp4",
+        "poster": "media/images/proj_easy_16-frame.png",
+        "figure": "media/images/proj_easy_16.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntar -tzf /tmp/juliet.tar.gz | head\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nsed 's/old/new/g' file prints a substituted stream by default and does not edit the file unless you use in-place flags.",
+      "answer": true,
+      "explain": "Test on stdout first; use -i only when ready.",
+      "difficulty": "easy",
+      "id": "proj_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_easy_17.mp4",
+        "poster": "media/images/proj_easy_17-frame.png",
+        "figure": "media/images/proj_easy_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/alpha21.tar.gz build\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\ndiff -u is useful because...",
+      "choices": [
+        "It deletes both files",
+        "It produces unified diffs suitable for patches / similar to git diff",
+        "It only works on binary files",
+        "It replaces find"
+      ],
+      "answer": 1,
+      "explain": "Unified diff is the usual format for review and patch.",
+      "difficulty": "easy",
+      "id": "proj_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_easy_18.mp4",
+        "poster": "media/images/proj_easy_18-frame.png",
+        "figure": "media/images/proj_easy_18.png"
+      }
+    },
+    {
+      "id": "proj_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ndiff -u docs/bravo.old docs/bravo.new | head\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nA clear project layout helps...",
+      "choices": [
+        "Find sources, tests, docs, scripts",
+        "Speed the CPU clock",
+        "Disable git",
+        "Replace make"
+      ],
+      "answer": 0,
+      "explain": "Layout = navigability.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_easy_19.mp4",
+        "poster": "media/images/proj_easy_19-frame.png",
+        "figure": "media/images/proj_easy_19.png"
+      }
+    },
+    {
+      "id": "proj_easy_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsed 's/foo/bar/' scripts/charlie.txt | head\n```\n`tar -czf archive20.tar.gz dir20` typically...",
+      "choices": [
+        "Creates a gzip-compressed archive of dir20",
+        "Deletes dir20",
+        "Formats disk",
+        "Starts a server"
+      ],
+      "answer": 0,
+      "explain": "Create tar.gz.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_easy_20.mp4",
+        "poster": "media/images/proj_easy_20-frame.png",
+        "figure": "media/images/proj_easy_20.png"
+      }
+    },
+    {
+      "id": "proj_easy_21",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntar -tzf /tmp/delta.tar.gz | head\n```\n# Review context: `/var/log/golf` slot 21 variant 1\n`diff -u a b` shows a unified diff.",
+      "answer": true,
+      "explain": "Unified diff format.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_easy_21.mp4",
+        "poster": "media/images/proj_easy_21-frame.png",
+        "figure": "media/images/proj_easy_21.png"
+      }
+    },
+    {
+      "id": "proj_easy_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/echo25.tar.gz bin\n```\n`sed 's/foo/bar/' file22.txt` ...",
+      "choices": [
+        "Replaces first foo with bar per line (default)",
+        "Compiles foo",
+        "Chmods bar",
+        "Mounts foo"
+      ],
+      "answer": 0,
+      "explain": "Basic sed substitute.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_easy_22.mp4",
+        "poster": "media/images/proj_easy_22-frame.png",
+        "figure": "media/images/proj_easy_22.png"
+      }
+    },
+    {
+      "id": "proj_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ndiff -u src/foxtrot.old src/foxtrot.new | head\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\nREADME at repo root should explain...",
+      "choices": [
+        "How to build/run/test",
+        "Only authors' birthdays",
+        "Only CPU temps",
+        "Only secrets"
+      ],
+      "answer": 0,
+      "explain": "Onboarding docs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_easy_23.mp4",
+        "poster": "media/images/proj_easy_23-frame.png",
+        "figure": "media/images/proj_easy_23.png"
+      }
+    },
+    {
+      "id": "proj_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsed 's/foo/bar/' logs/golf.txt | head\n```\n`tar -tzf archive24.tar.gz` lists...",
+      "choices": [
+        "Archive contents",
+        "Only PIDs",
+        "Only users",
+        "Only mounts"
+      ],
+      "answer": 0,
+      "explain": "List tarball.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_easy_24.mp4",
+        "poster": "media/images/proj_easy_24-frame.png",
+        "figure": "media/images/proj_easy_24.png"
+      }
+    },
+    {
+      "id": "proj_easy_25",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntar -tzf /tmp/hotel.tar.gz | head\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\n`patch` applies diff output to update files.",
+      "answer": true,
+      "explain": "patch consumes diffs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_easy_25.mp4",
+        "poster": "media/images/proj_easy_25-frame.png",
+        "figure": "media/images/proj_easy_25.png"
+      }
+    },
+    {
+      "id": "proj_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/india29.tar.gz build\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nKeeping build outputs out of git usually uses...",
+      "choices": [
+        ".gitignore",
+        "chmod 000",
+        "disabling PATH",
+        "sticky on /"
+      ],
+      "answer": 0,
+      "explain": "Ignore artifacts.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_easy_26.mp4",
+        "poster": "media/images/proj_easy_26-frame.png",
+        "figure": "media/images/proj_easy_26.png"
+      }
+    },
+    {
+      "id": "proj_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ndiff -u docs/juliet.old docs/juliet.new | head\n```\n# Review context: `/var/log/echo` slot 27 variant 1\n`sed -i` (GNU) edits...",
+      "choices": [
+        "Files in place (carefully)",
+        "Only stdout forever",
+        "Only man",
+        "Only zip"
+      ],
+      "answer": 0,
+      "explain": "In-place sed.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_easy_27.mp4",
+        "poster": "media/images/proj_easy_27-frame.png",
+        "figure": "media/images/proj_easy_27.png"
+      }
+    },
+    {
+      "id": "proj_easy_28",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsed 's/foo/bar/' scripts/alpha.txt | head\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nsrc/ tests/ docs/ scripts/ is a...",
+      "choices": [
+        "Common layout pattern",
+        "Kernel requirement",
+        "Zip-only tree",
+        "Forbidden structure"
+      ],
+      "answer": 0,
+      "explain": "Conventional dirs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_easy_28.mp4",
+        "poster": "media/images/proj_easy_28-frame.png",
+        "figure": "media/images/proj_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -tzf /tmp/bravo.tar.gz | head\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nIn a typical RTL layout, generated objects and logs belong in...",
+      "choices": [
+        "src/",
+        "tb/",
+        "build/ (or similar)",
+        "docs/ only"
+      ],
+      "answer": 2,
+      "explain": "Keep generated artifacts in build/out and often exclude them from archives.",
+      "difficulty": "easy",
+      "id": "proj_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_easy_29.mp4",
+        "poster": "media/images/proj_easy_29-frame.png",
+        "figure": "media/images/proj_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/charlie33.tar.gz bin\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\ngrep -Rn PATTERN . means...",
+      "choices": [
+        "Find filenames only",
+        "Recursive content search with line numbers",
+        "Delete matching lines",
+        "Create a tar archive"
+      ],
+      "answer": 1,
+      "explain": "-R is recursive; -n prints line numbers.",
+      "difficulty": "easy",
+      "id": "proj_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_easy_30.mp4",
+        "poster": "media/images/proj_easy_30-frame.png",
+        "figure": "media/images/proj_easy_30.png"
+      }
+    },
+    {
+      "id": "proj_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsed 's/foo/bar/' logs/charlie.txt | head\n```\n`diff -ruN old/ new/` is useful for...",
+      "choices": [
+        "Directory trees / missing files treated helpfully",
+        "Only binary identical",
+        "Killing jobs",
+        "Setting PS1"
+      ],
+      "answer": 0,
+      "explain": "Recursive diff.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_medium_01.mp4",
+        "poster": "media/images/proj_medium_01-frame.png",
+        "figure": "media/images/proj_medium_01.png"
+      }
+    },
+    {
+      "id": "proj_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -tzf /tmp/delta.tar.gz | head\n```\n`tar --exclude` helps omit...",
+      "choices": [
+        "build/ or secrets from archives",
+        "All files always",
+        "Only README",
+        "Only Makefile"
+      ],
+      "answer": 0,
+      "explain": "Exclude patterns.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_medium_02.mp4",
+        "poster": "media/images/proj_medium_02-frame.png",
+        "figure": "media/images/proj_medium_02.png"
+      }
+    },
+    {
+      "id": "proj_medium_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/echo5.tar.gz build\n```\n`sed -E` enables extended regex on many sed builds.",
+      "answer": true,
+      "explain": "Extended regex flag.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_medium_03.mp4",
+        "poster": "media/images/proj_medium_03-frame.png",
+        "figure": "media/images/proj_medium_03.png"
+      }
+    },
+    {
+      "id": "proj_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ndiff -u docs/foxtrot.old docs/foxtrot.new | head\n```\nCanonical project scripts live under...",
+      "choices": [
+        "scripts/ or tools/ with --help",
+        "Random /tmp only",
+        "Only ~/.cache",
+        "Only /proc"
+      ],
+      "answer": 0,
+      "explain": "Discoverable scripts.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_medium_04.mp4",
+        "poster": "media/images/proj_medium_04-frame.png",
+        "figure": "media/images/proj_medium_04.png"
+      }
+    },
+    {
+      "id": "proj_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsed 's/foo/bar/' scripts/golf.txt | head\n```\n`git apply` vs `patch` ...",
+      "choices": [
+        "Different tools; know which your workflow uses",
+        "Identical always",
+        "One formats disks",
+        "One clears PATH"
+      ],
+      "answer": 0,
+      "explain": "Tool choice.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_medium_05.mp4",
+        "poster": "media/images/proj_medium_05-frame.png",
+        "figure": "media/images/proj_medium_05.png"
+      }
+    },
+    {
+      "id": "proj_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -tzf /tmp/hotel.tar.gz | head\n```\nReproducible archives may need...",
+      "choices": [
+        "Sorted file order + stable timestamps (tools permitting)",
+        "Random order",
+        "Including .git always",
+        "World secrets"
+      ],
+      "answer": 0,
+      "explain": "Reproducible tarballs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_medium_06.mp4",
+        "poster": "media/images/proj_medium_06-frame.png",
+        "figure": "media/images/proj_medium_06.png"
+      }
+    },
+    {
+      "id": "proj_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/india9.tar.gz bin\n```\n`diff` exit status 1 often means...",
+      "choices": [
+        "Differences found",
+        "Identical files",
+        "Crash",
+        "Permission ok only"
+      ],
+      "answer": 0,
+      "explain": "1 = differ.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_medium_07.mp4",
+        "poster": "media/images/proj_medium_07-frame.png",
+        "figure": "media/images/proj_medium_07.png"
+      }
+    },
+    {
+      "id": "proj_medium_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ndiff -u src/juliet.old src/juliet.new | head\n```\nBinary files need specialized diff tooling; text diff may junk.",
+      "answer": true,
+      "explain": "Binary != text diff.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_medium_08.mp4",
+        "poster": "media/images/proj_medium_08-frame.png",
+        "figure": "media/images/proj_medium_08.png"
+      }
+    },
+    {
+      "id": "proj_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsed 's/foo/bar/' logs/alpha.txt | head\n```\nKeep generated code documented so that...",
+      "choices": [
+        "Contributors know not to hand-edit",
+        "Git bans them",
+        "make ignores them",
+        "sed deletes them"
+      ],
+      "answer": 0,
+      "explain": "Generated vs source.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_medium_09.mp4",
+        "poster": "media/images/proj_medium_09-frame.png",
+        "figure": "media/images/proj_medium_09.png"
+      }
+    },
+    {
+      "id": "proj_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -tzf /tmp/bravo.tar.gz | head\n```\n`rsync -a` for project sync preserves...",
+      "choices": [
+        "Permissions/times/symlinks better than naive cp",
+        "Only names",
+        "Only zip methods",
+        "Only owners if root always"
+      ],
+      "answer": 0,
+      "explain": "Archive rsync.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_medium_10.mp4",
+        "poster": "media/images/proj_medium_10-frame.png",
+        "figure": "media/images/proj_medium_10.png"
+      }
+    },
+    {
+      "id": "proj_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/charlie13.tar.gz build\n```\n# Review context: `~/bin/echo` slot 11 variant 1\n`diff -ruN old/ new/` is useful for...",
+      "choices": [
+        "Directory trees / missing files treated helpfully",
+        "Only binary identical",
+        "Killing jobs",
+        "Setting PS1"
+      ],
+      "answer": 0,
+      "explain": "Recursive diff.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_medium_11.mp4",
+        "poster": "media/images/proj_medium_11-frame.png",
+        "figure": "media/images/proj_medium_11.png"
+      }
+    },
+    {
+      "id": "proj_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ndiff -u docs/delta.old docs/delta.new | head\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\n`tar --exclude` helps omit...",
+      "choices": [
+        "build/ or secrets from archives",
+        "All files always",
+        "Only README",
+        "Only Makefile"
+      ],
+      "answer": 0,
+      "explain": "Exclude patterns.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_medium_12.mp4",
+        "poster": "media/images/proj_medium_12-frame.png",
+        "figure": "media/images/proj_medium_12.png"
+      }
+    },
+    {
+      "id": "proj_medium_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nsed 's/foo/bar/' scripts/echo.txt | head\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\n`sed -E` enables extended regex on many sed builds.",
+      "answer": true,
+      "explain": "Extended regex flag.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_medium_13.mp4",
+        "poster": "media/images/proj_medium_13-frame.png",
+        "figure": "media/images/proj_medium_13.png"
+      }
+    },
+    {
+      "id": "proj_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -tzf /tmp/foxtrot.tar.gz | head\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\nCanonical project scripts live under...",
+      "choices": [
+        "scripts/ or tools/ with --help",
+        "Random /tmp only",
+        "Only ~/.cache",
+        "Only /proc"
+      ],
+      "answer": 0,
+      "explain": "Discoverable scripts.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_medium_14.mp4",
+        "poster": "media/images/proj_medium_14-frame.png",
+        "figure": "media/images/proj_medium_14.png"
+      }
+    },
+    {
+      "id": "proj_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/golf17.tar.gz bin\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\n`git apply` vs `patch` ...",
+      "choices": [
+        "Different tools; know which your workflow uses",
+        "Identical always",
+        "One formats disks",
+        "One clears PATH"
+      ],
+      "answer": 0,
+      "explain": "Tool choice.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_medium_15.mp4",
+        "poster": "media/images/proj_medium_15-frame.png",
+        "figure": "media/images/proj_medium_15.png"
+      }
+    },
+    {
+      "id": "proj_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ndiff -u src/hotel.old src/hotel.new | head\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nReproducible archives may need...",
+      "choices": [
+        "Sorted file order + stable timestamps (tools permitting)",
+        "Random order",
+        "Including .git always",
+        "World secrets"
+      ],
+      "answer": 0,
+      "explain": "Reproducible tarballs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_medium_16.mp4",
+        "poster": "media/images/proj_medium_16-frame.png",
+        "figure": "media/images/proj_medium_16.png"
+      }
+    },
+    {
+      "id": "proj_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsed 's/foo/bar/' logs/india.txt | head\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\n`diff` exit status 1 often means...",
+      "choices": [
+        "Differences found",
+        "Identical files",
+        "Crash",
+        "Permission ok only"
+      ],
+      "answer": 0,
+      "explain": "1 = differ.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_medium_17.mp4",
+        "poster": "media/images/proj_medium_17-frame.png",
+        "figure": "media/images/proj_medium_17.png"
+      }
+    },
+    {
+      "id": "proj_medium_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntar -tzf /tmp/juliet.tar.gz | head\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nBinary files need specialized diff tooling; text diff may junk.",
+      "answer": true,
+      "explain": "Binary != text diff.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_medium_18.mp4",
+        "poster": "media/images/proj_medium_18-frame.png",
+        "figure": "media/images/proj_medium_18.png"
+      }
+    },
+    {
+      "id": "proj_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/alpha21.tar.gz build\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nKeep generated code documented so that...",
+      "choices": [
+        "Contributors know not to hand-edit",
+        "Git bans them",
+        "make ignores them",
+        "sed deletes them"
+      ],
+      "answer": 0,
+      "explain": "Generated vs source.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_medium_19.mp4",
+        "poster": "media/images/proj_medium_19-frame.png",
+        "figure": "media/images/proj_medium_19.png"
+      }
+    },
+    {
+      "id": "proj_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ndiff -u docs/bravo.old docs/bravo.new | head\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\n`rsync -a` for project sync preserves...",
+      "choices": [
+        "Permissions/times/symlinks better than naive cp",
+        "Only names",
+        "Only zip methods",
+        "Only owners if root always"
+      ],
+      "answer": 0,
+      "explain": "Archive rsync.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_medium_20.mp4",
+        "poster": "media/images/proj_medium_20-frame.png",
+        "figure": "media/images/proj_medium_20.png"
+      }
+    },
+    {
+      "id": "proj_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsed 's/foo/bar/' scripts/charlie.txt | head\n```\n# Review context: `/var/log/golf` slot 21 variant 1\n`diff -ruN old/ new/` is useful for...",
+      "choices": [
+        "Directory trees / missing files treated helpfully",
+        "Only binary identical",
+        "Killing jobs",
+        "Setting PS1"
+      ],
+      "answer": 0,
+      "explain": "Recursive diff.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_medium_21.mp4",
+        "poster": "media/images/proj_medium_21-frame.png",
+        "figure": "media/images/proj_medium_21.png"
+      }
+    },
+    {
+      "id": "proj_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -tzf /tmp/delta.tar.gz | head\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\n`tar --exclude` helps omit...",
+      "choices": [
+        "build/ or secrets from archives",
+        "All files always",
+        "Only README",
+        "Only Makefile"
+      ],
+      "answer": 0,
+      "explain": "Exclude patterns.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_medium_22.mp4",
+        "poster": "media/images/proj_medium_22-frame.png",
+        "figure": "media/images/proj_medium_22.png"
+      }
+    },
+    {
+      "id": "proj_medium_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/echo25.tar.gz bin\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\n`sed -E` enables extended regex on many sed builds.",
+      "answer": true,
+      "explain": "Extended regex flag.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_medium_23.mp4",
+        "poster": "media/images/proj_medium_23-frame.png",
+        "figure": "media/images/proj_medium_23.png"
+      }
+    },
+    {
+      "id": "proj_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ndiff -u src/foxtrot.old src/foxtrot.new | head\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nCanonical project scripts live under...",
+      "choices": [
+        "scripts/ or tools/ with --help",
+        "Random /tmp only",
+        "Only ~/.cache",
+        "Only /proc"
+      ],
+      "answer": 0,
+      "explain": "Discoverable scripts.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_medium_24.mp4",
+        "poster": "media/images/proj_medium_24-frame.png",
+        "figure": "media/images/proj_medium_24.png"
+      }
+    },
+    {
+      "id": "proj_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsed 's/foo/bar/' logs/golf.txt | head\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\n`git apply` vs `patch` ...",
+      "choices": [
+        "Different tools; know which your workflow uses",
+        "Identical always",
+        "One formats disks",
+        "One clears PATH"
+      ],
+      "answer": 0,
+      "explain": "Tool choice.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_medium_25.mp4",
+        "poster": "media/images/proj_medium_25-frame.png",
+        "figure": "media/images/proj_medium_25.png"
+      }
+    },
+    {
+      "id": "proj_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -tzf /tmp/hotel.tar.gz | head\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nReproducible archives may need...",
+      "choices": [
+        "Sorted file order + stable timestamps (tools permitting)",
+        "Random order",
+        "Including .git always",
+        "World secrets"
+      ],
+      "answer": 0,
+      "explain": "Reproducible tarballs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_medium_26.mp4",
+        "poster": "media/images/proj_medium_26-frame.png",
+        "figure": "media/images/proj_medium_26.png"
+      }
+    },
+    {
+      "id": "proj_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/india29.tar.gz build\n```\n# Review context: `/var/log/echo` slot 27 variant 1\n`diff` exit status 1 often means...",
+      "choices": [
+        "Differences found",
+        "Identical files",
+        "Crash",
+        "Permission ok only"
+      ],
+      "answer": 0,
+      "explain": "1 = differ.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_medium_27.mp4",
+        "poster": "media/images/proj_medium_27-frame.png",
+        "figure": "media/images/proj_medium_27.png"
+      }
+    },
+    {
+      "id": "proj_medium_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ndiff -u docs/juliet.old docs/juliet.new | head\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nBinary files need specialized diff tooling; text diff may junk.",
+      "answer": true,
+      "explain": "Binary != text diff.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_medium_28.mp4",
+        "poster": "media/images/proj_medium_28-frame.png",
+        "figure": "media/images/proj_medium_28.png"
+      }
+    },
+    {
+      "id": "proj_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsed 's/foo/bar/' scripts/alpha.txt | head\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nKeep generated code documented so that...",
+      "choices": [
+        "Contributors know not to hand-edit",
+        "Git bans them",
+        "make ignores them",
+        "sed deletes them"
+      ],
+      "answer": 0,
+      "explain": "Generated vs source.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_medium_29.mp4",
+        "poster": "media/images/proj_medium_29-frame.png",
+        "figure": "media/images/proj_medium_29.png"
+      }
+    },
+    {
+      "id": "proj_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -tzf /tmp/bravo.tar.gz | head\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\n`rsync -a` for project sync preserves...",
+      "choices": [
+        "Permissions/times/symlinks better than naive cp",
+        "Only names",
+        "Only zip methods",
+        "Only owners if root always"
+      ],
+      "answer": 0,
+      "explain": "Archive rsync.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_medium_30.mp4",
+        "poster": "media/images/proj_medium_30-frame.png",
+        "figure": "media/images/proj_medium_30.png"
+      }
+    },
+    {
+      "id": "proj_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsed 's/foo/bar/' logs/charlie.txt | head\n```\nPatch fuzz failures often mean...",
+      "choices": [
+        "Context drifted; rebase/regenerate diff",
+        "Disk full only",
+        "umask wrong only",
+        "PATH empty only"
+      ],
+      "answer": 0,
+      "explain": "Context mismatch.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_hard_01.mp4",
+        "poster": "media/images/proj_hard_01-frame.png",
+        "figure": "media/images/proj_hard_01.png"
+      }
+    },
+    {
+      "id": "proj_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -tzf /tmp/delta.tar.gz | head\n```\nSed in-place without backup on macOS/BSD differs because...",
+      "choices": [
+        "-i requires backup-suffix args differently",
+        "sed identical everywhere",
+        "GNU required by POSIX",
+        "-i bans files"
+      ],
+      "answer": 0,
+      "explain": "Portable -i is tricky.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_hard_02.mp4",
+        "poster": "media/images/proj_hard_02-frame.png",
+        "figure": "media/images/proj_hard_02.png"
+      }
+    },
+    {
+      "id": "proj_hard_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/echo5.tar.gz build\n```\nTar bombs extract many files into cwd; inspect with -t first.",
+      "answer": true,
+      "explain": "List before extract.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_hard_03.mp4",
+        "poster": "media/images/proj_hard_03-frame.png",
+        "figure": "media/images/proj_hard_03.png"
+      }
+    },
+    {
+      "id": "proj_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ndiff -u docs/foxtrot.old docs/foxtrot.new | head\n```\nSBOM / license files belong in layout because...",
+      "choices": [
+        "Compliance and reuse clarity",
+        "They speed make -j",
+        "They replace README",
+        "They clear secrets"
+      ],
+      "answer": 0,
+      "explain": "Legal hygiene.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_hard_04.mp4",
+        "poster": "media/images/proj_hard_04-frame.png",
+        "figure": "media/images/proj_hard_04.png"
+      }
+    },
+    {
+      "id": "proj_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsed 's/foo/bar/' scripts/golf.txt | head\n```\nLarge media should use...",
+      "choices": [
+        "LFS/external storage patterns, not giant git blobs",
+        "Always commit raw 4GB",
+        "Only tar in git",
+        "Only zip in git"
+      ],
+      "answer": 0,
+      "explain": "Store large assets wisely.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_hard_05.mp4",
+        "poster": "media/images/proj_hard_05-frame.png",
+        "figure": "media/images/proj_hard_05.png"
+      }
+    },
+    {
+      "id": "proj_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -tzf /tmp/hotel.tar.gz | head\n```\nUnified diffs with enough context help...",
+      "choices": [
+        "Humans and patch apply robustness",
+        "Shrink files always",
+        "Hide changes",
+        "Disable review"
+      ],
+      "answer": 0,
+      "explain": "Context is clarity.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_hard_06.mp4",
+        "poster": "media/images/proj_hard_06-frame.png",
+        "figure": "media/images/proj_hard_06.png"
+      }
+    },
+    {
+      "id": "proj_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/india9.tar.gz bin\n```\nDeterministic `sed` transforms in CI should...",
+      "choices": [
+        "Pin inputs/locale and fail on mismatch",
+        "Rely on random LANG",
+        "Ignore exit status",
+        "Pipe to true always"
+      ],
+      "answer": 0,
+      "explain": "Deterministic edits.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_hard_07.mp4",
+        "poster": "media/images/proj_hard_07-frame.png",
+        "figure": "media/images/proj_hard_07.png"
+      }
+    },
+    {
+      "id": "proj_hard_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ndiff -u src/juliet.old src/juliet.new | head\n```\nArchive signing/checksums protect integrity beyond mere compression.",
+      "answer": true,
+      "explain": "Integrity layer.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_hard_08.mp4",
+        "poster": "media/images/proj_hard_08-frame.png",
+        "figure": "media/images/proj_hard_08.png"
+      }
+    },
+    {
+      "id": "proj_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsed 's/foo/bar/' logs/alpha.txt | head\n```\nMonorepo layouts need...",
+      "choices": [
+        "Clear package boundaries + tool docs",
+        "One flat directory of 10k files only",
+        "No README",
+        "Secrets in root"
+      ],
+      "answer": 0,
+      "explain": "Scale structure.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_hard_09.mp4",
+        "poster": "media/images/proj_hard_09-frame.png",
+        "figure": "media/images/proj_hard_09.png"
+      }
+    },
+    {
+      "id": "proj_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -tzf /tmp/bravo.tar.gz | head\n```\nLab: generate a unified diff, apply to a copy, re-diff empty.",
+      "choices": [
+        "Yes: round-trip validates",
+        "No: skip verify",
+        "No: use rm",
+        "No: chmod 777"
+      ],
+      "answer": 0,
+      "explain": "Diff round-trip.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_hard_10.mp4",
+        "poster": "media/images/proj_hard_10-frame.png",
+        "figure": "media/images/proj_hard_10.png"
+      }
+    },
+    {
+      "id": "proj_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/charlie13.tar.gz build\n```\n# Review context: `~/bin/echo` slot 11 variant 1\nPatch fuzz failures often mean...",
+      "choices": [
+        "Context drifted; rebase/regenerate diff",
+        "Disk full only",
+        "umask wrong only",
+        "PATH empty only"
+      ],
+      "answer": 0,
+      "explain": "Context mismatch.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_hard_11.mp4",
+        "poster": "media/images/proj_hard_11-frame.png",
+        "figure": "media/images/proj_hard_11.png"
+      }
+    },
+    {
+      "id": "proj_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ndiff -u docs/delta.old docs/delta.new | head\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\nSed in-place without backup on macOS/BSD differs because...",
+      "choices": [
+        "-i requires backup-suffix args differently",
+        "sed identical everywhere",
+        "GNU required by POSIX",
+        "-i bans files"
+      ],
+      "answer": 0,
+      "explain": "Portable -i is tricky.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_hard_12.mp4",
+        "poster": "media/images/proj_hard_12-frame.png",
+        "figure": "media/images/proj_hard_12.png"
+      }
+    },
+    {
+      "id": "proj_hard_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nsed 's/foo/bar/' scripts/echo.txt | head\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\nTar bombs extract many files into cwd; inspect with -t first.",
+      "answer": true,
+      "explain": "List before extract.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_hard_13.mp4",
+        "poster": "media/images/proj_hard_13-frame.png",
+        "figure": "media/images/proj_hard_13.png"
+      }
+    },
+    {
+      "id": "proj_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -tzf /tmp/foxtrot.tar.gz | head\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\nSBOM / license files belong in layout because...",
+      "choices": [
+        "Compliance and reuse clarity",
+        "They speed make -j",
+        "They replace README",
+        "They clear secrets"
+      ],
+      "answer": 0,
+      "explain": "Legal hygiene.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_hard_14.mp4",
+        "poster": "media/images/proj_hard_14-frame.png",
+        "figure": "media/images/proj_hard_14.png"
+      }
+    },
+    {
+      "id": "proj_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/golf17.tar.gz bin\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nLarge media should use...",
+      "choices": [
+        "LFS/external storage patterns, not giant git blobs",
+        "Always commit raw 4GB",
+        "Only tar in git",
+        "Only zip in git"
+      ],
+      "answer": 0,
+      "explain": "Store large assets wisely.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_hard_15.mp4",
+        "poster": "media/images/proj_hard_15-frame.png",
+        "figure": "media/images/proj_hard_15.png"
+      }
+    },
+    {
+      "id": "proj_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ndiff -u src/hotel.old src/hotel.new | head\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nUnified diffs with enough context help...",
+      "choices": [
+        "Humans and patch apply robustness",
+        "Shrink files always",
+        "Hide changes",
+        "Disable review"
+      ],
+      "answer": 0,
+      "explain": "Context is clarity.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_hard_16.mp4",
+        "poster": "media/images/proj_hard_16-frame.png",
+        "figure": "media/images/proj_hard_16.png"
+      }
+    },
+    {
+      "id": "proj_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsed 's/foo/bar/' logs/india.txt | head\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nDeterministic `sed` transforms in CI should...",
+      "choices": [
+        "Pin inputs/locale and fail on mismatch",
+        "Rely on random LANG",
+        "Ignore exit status",
+        "Pipe to true always"
+      ],
+      "answer": 0,
+      "explain": "Deterministic edits.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_hard_17.mp4",
+        "poster": "media/images/proj_hard_17-frame.png",
+        "figure": "media/images/proj_hard_17.png"
+      }
+    },
+    {
+      "id": "proj_hard_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntar -tzf /tmp/juliet.tar.gz | head\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nArchive signing/checksums protect integrity beyond mere compression.",
+      "answer": true,
+      "explain": "Integrity layer.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_hard_18.mp4",
+        "poster": "media/images/proj_hard_18-frame.png",
+        "figure": "media/images/proj_hard_18.png"
+      }
+    },
+    {
+      "id": "proj_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/alpha21.tar.gz build\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nMonorepo layouts need...",
+      "choices": [
+        "Clear package boundaries + tool docs",
+        "One flat directory of 10k files only",
+        "No README",
+        "Secrets in root"
+      ],
+      "answer": 0,
+      "explain": "Scale structure.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_hard_19.mp4",
+        "poster": "media/images/proj_hard_19-frame.png",
+        "figure": "media/images/proj_hard_19.png"
+      }
+    },
+    {
+      "id": "proj_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ndiff -u docs/bravo.old docs/bravo.new | head\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\nLab: generate a unified diff, apply to a copy, re-diff empty.",
+      "choices": [
+        "Yes: round-trip validates",
+        "No: skip verify",
+        "No: use rm",
+        "No: chmod 777"
+      ],
+      "answer": 0,
+      "explain": "Diff round-trip.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_hard_20.mp4",
+        "poster": "media/images/proj_hard_20-frame.png",
+        "figure": "media/images/proj_hard_20.png"
+      }
+    },
+    {
+      "id": "proj_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsed 's/foo/bar/' scripts/charlie.txt | head\n```\n# Review context: `/var/log/golf` slot 21 variant 1\nPatch fuzz failures often mean...",
+      "choices": [
+        "Context drifted; rebase/regenerate diff",
+        "Disk full only",
+        "umask wrong only",
+        "PATH empty only"
+      ],
+      "answer": 0,
+      "explain": "Context mismatch.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_hard_21.mp4",
+        "poster": "media/images/proj_hard_21-frame.png",
+        "figure": "media/images/proj_hard_21.png"
+      }
+    },
+    {
+      "id": "proj_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -tzf /tmp/delta.tar.gz | head\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\nSed in-place without backup on macOS/BSD differs because...",
+      "choices": [
+        "-i requires backup-suffix args differently",
+        "sed identical everywhere",
+        "GNU required by POSIX",
+        "-i bans files"
+      ],
+      "answer": 0,
+      "explain": "Portable -i is tricky.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_hard_22.mp4",
+        "poster": "media/images/proj_hard_22-frame.png",
+        "figure": "media/images/proj_hard_22.png"
+      }
+    },
+    {
+      "id": "proj_hard_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/echo25.tar.gz bin\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\nTar bombs extract many files into cwd; inspect with -t first.",
+      "answer": true,
+      "explain": "List before extract.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_hard_23.mp4",
+        "poster": "media/images/proj_hard_23-frame.png",
+        "figure": "media/images/proj_hard_23.png"
+      }
+    },
+    {
+      "id": "proj_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ndiff -u src/foxtrot.old src/foxtrot.new | head\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nSBOM / license files belong in layout because...",
+      "choices": [
+        "Compliance and reuse clarity",
+        "They speed make -j",
+        "They replace README",
+        "They clear secrets"
+      ],
+      "answer": 0,
+      "explain": "Legal hygiene.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_hard_24.mp4",
+        "poster": "media/images/proj_hard_24-frame.png",
+        "figure": "media/images/proj_hard_24.png"
+      }
+    },
+    {
+      "id": "proj_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsed 's/foo/bar/' logs/golf.txt | head\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nLarge media should use...",
+      "choices": [
+        "LFS/external storage patterns, not giant git blobs",
+        "Always commit raw 4GB",
+        "Only tar in git",
+        "Only zip in git"
+      ],
+      "answer": 0,
+      "explain": "Store large assets wisely.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_hard_25.mp4",
+        "poster": "media/images/proj_hard_25-frame.png",
+        "figure": "media/images/proj_hard_25.png"
+      }
+    },
+    {
+      "id": "proj_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -tzf /tmp/hotel.tar.gz | head\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nUnified diffs with enough context help...",
+      "choices": [
+        "Humans and patch apply robustness",
+        "Shrink files always",
+        "Hide changes",
+        "Disable review"
+      ],
+      "answer": 0,
+      "explain": "Context is clarity.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_hard_26.mp4",
+        "poster": "media/images/proj_hard_26-frame.png",
+        "figure": "media/images/proj_hard_26.png"
+      }
+    },
+    {
+      "id": "proj_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/india29.tar.gz build\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nDeterministic `sed` transforms in CI should...",
+      "choices": [
+        "Pin inputs/locale and fail on mismatch",
+        "Rely on random LANG",
+        "Ignore exit status",
+        "Pipe to true always"
+      ],
+      "answer": 0,
+      "explain": "Deterministic edits.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_hard_27.mp4",
+        "poster": "media/images/proj_hard_27-frame.png",
+        "figure": "media/images/proj_hard_27.png"
+      }
+    },
+    {
+      "id": "proj_hard_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ndiff -u docs/juliet.old docs/juliet.new | head\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nArchive signing/checksums protect integrity beyond mere compression.",
+      "answer": true,
+      "explain": "Integrity layer.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_hard_28.mp4",
+        "poster": "media/images/proj_hard_28-frame.png",
+        "figure": "media/images/proj_hard_28.png"
+      }
+    },
+    {
+      "id": "proj_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsed 's/foo/bar/' scripts/alpha.txt | head\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nMonorepo layouts need...",
+      "choices": [
+        "Clear package boundaries + tool docs",
+        "One flat directory of 10k files only",
+        "No README",
+        "Secrets in root"
+      ],
+      "answer": 0,
+      "explain": "Scale structure.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_hard_29.mp4",
+        "poster": "media/images/proj_hard_29-frame.png",
+        "figure": "media/images/proj_hard_29.png"
+      }
+    },
+    {
+      "id": "proj_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -tzf /tmp/bravo.tar.gz | head\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nLab: generate a unified diff, apply to a copy, re-diff empty.",
+      "choices": [
+        "Yes: round-trip validates",
+        "No: skip verify",
+        "No: use rm",
+        "No: chmod 777"
+      ],
+      "answer": 0,
+      "explain": "Diff round-trip.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/proj_hard_30.mp4",
+        "poster": "media/images/proj_hard_30-frame.png",
+        "figure": "media/images/proj_hard_30.png"
+      }
+    }
+  ]
+}

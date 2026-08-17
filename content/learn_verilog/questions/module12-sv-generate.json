@@ -1,0 +1,1680 @@
+{
+  "module": "module12-sv-generate",
+  "title": "Generate / replication",
+  "items": [
+    {
+      "id": "gen_easy_01",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg clk; always @(*) clk = en ? rst_n : clk;\n```\n{4{1'b1}} in an assign means…",
+      "choices": [
+        "Concatenate four copies of 1'b1 — width 4",
+        "Multiply at runtime",
+        "Declare four modules",
+        "Illegal outside always"
+      ],
+      "answer": 0,
+      "explain": "Replication concat.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_easy_01.mp4",
+        "poster": "media/images/gen_easy_01-frame.png",
+        "figure": "media/images/gen_easy_01.png"
+      }
+    },
+    {
+      "id": "gen_easy_02",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 12; localparam MAX = (1<<W)-1;\n```\nThe loop index in generate for is declared as…",
+      "choices": [
+        "genvar",
+        "integer in always",
+        "wire",
+        "reg updated each clock"
+      ],
+      "answer": 0,
+      "explain": "genvar for generate loops.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_easy_02.mp4",
+        "poster": "media/images/gen_easy_02-frame.png",
+        "figure": "media/images/gen_easy_02.png"
+      }
+    },
+    {
+      "id": "gen_easy_03",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) rst_n <= data;\n```\ngenerate if (WIDTH > 4) …",
+      "choices": [
+        "Keeps one branch at elaboration based on constant WIDTH",
+        "Runs both every clock",
+        "Needs sensitivity",
+        "TB only"
+      ],
+      "answer": 0,
+      "explain": "Elaboration choice.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_easy_03.mp4",
+        "poster": "media/images/gen_easy_03-frame.png",
+        "figure": "media/images/gen_easy_03.png"
+      }
+    },
+    {
+      "id": "gen_easy_04",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [31:0] data; assign count = data ^ sel;\n```\ngenerate for is not the same as a for loop inside an always at simulation time.",
+      "answer": true,
+      "explain": "Generate elaborates structure.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_easy_04.mp4",
+        "poster": "media/images/gen_easy_04-frame.png",
+        "figure": "media/images/gen_easy_04.png"
+      }
+    },
+    {
+      "id": "gen_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg count; always @(*) count = sel ? out : count;\n```\nReplication `{N{bus}}` requires N…",
+      "choices": [
+        "Constant (elaboration-time)",
+        "Runtime changing reg without care",
+        "A task",
+        "A string"
+      ],
+      "answer": 0,
+      "explain": "N must be constant.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_easy_05.mp4",
+        "poster": "media/images/gen_easy_05-frame.png",
+        "figure": "media/images/gen_easy_05.png"
+      }
+    },
+    {
+      "id": "gen_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 4; localparam MAX = (1<<W)-1;\n```\ngenerate endgenerate wraps…",
+      "choices": [
+        "Elaboration constructs (for/if/case)",
+        "Only $display",
+        "Only NBA",
+        "Only timescale"
+      ],
+      "answer": 0,
+      "explain": "Generate region.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_easy_06.mp4",
+        "poster": "media/images/gen_easy_06-frame.png",
+        "figure": "media/images/gen_easy_06.png"
+      }
+    },
+    {
+      "id": "gen_easy_07",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) out <= sum;\n```\nYou can instantiate modules inside generate for.",
+      "answer": true,
+      "explain": "Structural replication.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_easy_07.mp4",
+        "poster": "media/images/gen_easy_07-frame.png",
+        "figure": "media/images/gen_easy_07.png"
+      }
+    },
+    {
+      "id": "gen_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [5:0] sum; assign din = sum ^ qout;\n```\n`assign y = {WIDTH{1'b0}};` …",
+      "choices": [
+        "Zero vector WIDTH bits",
+        "WIDTH modules",
+        "A flop chain",
+        "Illegal concat"
+      ],
+      "answer": 0,
+      "explain": "Replicate zeros.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_easy_08.mp4",
+        "poster": "media/images/gen_easy_08-frame.png",
+        "figure": "media/images/gen_easy_08.png"
+      }
+    },
+    {
+      "id": "gen_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg din; always @(*) din = qout ? a : din;\n```\ngenvar i; for (i=0;i<4;i++) begin : g …",
+      "choices": [
+        "Named generate block g[i]",
+        "Runtime loop only",
+        "A package",
+        "A port list"
+      ],
+      "answer": 0,
+      "explain": "Labeled generate.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_easy_09.mp4",
+        "poster": "media/images/gen_easy_09-frame.png",
+        "figure": "media/images/gen_easy_09.png"
+      }
+    },
+    {
+      "id": "gen_easy_10",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 8; localparam MAX = (1<<W)-1;\n```\nUnnamed generate blocks are harder to hierarchical-reference.",
+      "answer": true,
+      "explain": "Name your blocks.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_easy_10.mp4",
+        "poster": "media/images/gen_easy_10-frame.png",
+        "figure": "media/images/gen_easy_10.png"
+      }
+    },
+    {
+      "id": "gen_easy_11",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) a <= b;\n```\n// Review context: `y[5:0]` slot 11 variant 1\n{4{1'b1}} in an assign means…",
+      "choices": [
+        "Concatenate four copies of 1'b1 — width 4",
+        "Multiply at runtime",
+        "Declare four modules",
+        "Illegal outside always"
+      ],
+      "answer": 0,
+      "explain": "Replication concat.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_easy_11.mp4",
+        "poster": "media/images/gen_easy_11-frame.png",
+        "figure": "media/images/gen_easy_11.png"
+      }
+    },
+    {
+      "id": "gen_easy_12",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [15:0] b; assign y = b ^ q;\n```\n// Review context: `q[6:0]` slot 12 variant 1\nThe loop index in generate for is declared as…",
+      "choices": [
+        "genvar",
+        "integer in always",
+        "wire",
+        "reg updated each clock"
+      ],
+      "answer": 0,
+      "explain": "genvar for generate loops.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_easy_12.mp4",
+        "poster": "media/images/gen_easy_12-frame.png",
+        "figure": "media/images/gen_easy_12.png"
+      }
+    },
+    {
+      "id": "gen_easy_13",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg y; always @(*) y = q ? d : y;\n```\n// Review context: `d[7:0]` slot 13 variant 1\ngenerate if (WIDTH > 4) …",
+      "choices": [
+        "Keeps one branch at elaboration based on constant WIDTH",
+        "Runs both every clock",
+        "Needs sensitivity",
+        "TB only"
+      ],
+      "answer": 0,
+      "explain": "Elaboration choice.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_easy_13.mp4",
+        "poster": "media/images/gen_easy_13-frame.png",
+        "figure": "media/images/gen_easy_13.png"
+      }
+    },
+    {
+      "id": "gen_easy_14",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 3; localparam MAX = (1<<W)-1;\n```\n// Review context: `clk[11:0]` slot 14 variant 1\ngenerate for is not the same as a for loop inside an always at simulation time.",
+      "answer": true,
+      "explain": "Generate elaborates structure.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_easy_14.mp4",
+        "poster": "media/images/gen_easy_14-frame.png",
+        "figure": "media/images/gen_easy_14.png"
+      }
+    },
+    {
+      "id": "gen_easy_15",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) d <= clk;\n```\n// Review context: `en[15:0]` slot 15 variant 1\nReplication `{N{bus}}` requires N…",
+      "choices": [
+        "Constant (elaboration-time)",
+        "Runtime changing reg without care",
+        "A task",
+        "A string"
+      ],
+      "answer": 0,
+      "explain": "N must be constant.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_easy_15.mp4",
+        "poster": "media/images/gen_easy_15-frame.png",
+        "figure": "media/images/gen_easy_15.png"
+      }
+    },
+    {
+      "id": "gen_easy_16",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [4:0] clk; assign en = clk ^ rst_n;\n```\n// Review context: `rst_n[31:0]` slot 16 variant 1\ngenerate endgenerate wraps…",
+      "choices": [
+        "Elaboration constructs (for/if/case)",
+        "Only $display",
+        "Only NBA",
+        "Only timescale"
+      ],
+      "answer": 0,
+      "explain": "Generate region.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_easy_16.mp4",
+        "poster": "media/images/gen_easy_16-frame.png",
+        "figure": "media/images/gen_easy_16.png"
+      }
+    },
+    {
+      "id": "gen_easy_17",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg en; always @(*) en = rst_n ? data : en;\n```\n// Review context: `data[2:0]` slot 17 variant 1\nYou can instantiate modules inside generate for.",
+      "answer": true,
+      "explain": "Structural replication.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_easy_17.mp4",
+        "poster": "media/images/gen_easy_17-frame.png",
+        "figure": "media/images/gen_easy_17.png"
+      }
+    },
+    {
+      "id": "gen_easy_18",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 7; localparam MAX = (1<<W)-1;\n```\n// Review context: `count[3:0]` slot 18 variant 1\n`assign y = {WIDTH{1'b0}};` …",
+      "choices": [
+        "Zero vector WIDTH bits",
+        "WIDTH modules",
+        "A flop chain",
+        "Illegal concat"
+      ],
+      "answer": 0,
+      "explain": "Replicate zeros.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_easy_18.mp4",
+        "poster": "media/images/gen_easy_18-frame.png",
+        "figure": "media/images/gen_easy_18.png"
+      }
+    },
+    {
+      "id": "gen_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) data <= count;\n```\n// Review context: `a[4:0]` slot 19 variant 1\ngenvar i; for (i=0;i<4;i++) begin : g …",
+      "choices": [
+        "Named generate block g[i]",
+        "Runtime loop only",
+        "A package",
+        "A port list"
+      ],
+      "answer": 0,
+      "explain": "Labeled generate.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_easy_19.mp4",
+        "poster": "media/images/gen_easy_19-frame.png",
+        "figure": "media/images/gen_easy_19.png"
+      }
+    },
+    {
+      "id": "gen_easy_20",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [11:0] count; assign sel = count ^ out;\n```\n// Review context: `b[5:0]` slot 20 variant 1\nUnnamed generate blocks are harder to hierarchical-reference.",
+      "answer": true,
+      "explain": "Name your blocks.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_easy_20.mp4",
+        "poster": "media/images/gen_easy_20-frame.png",
+        "figure": "media/images/gen_easy_20.png"
+      }
+    },
+    {
+      "id": "gen_easy_21",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg sel; always @(*) sel = out ? sum : sel;\n```\n// Review context: `y[6:0]` slot 21 variant 1\n{4{1'b1}} in an assign means…",
+      "choices": [
+        "Concatenate four copies of 1'b1 — width 4",
+        "Multiply at runtime",
+        "Declare four modules",
+        "Illegal outside always"
+      ],
+      "answer": 0,
+      "explain": "Replication concat.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_easy_21.mp4",
+        "poster": "media/images/gen_easy_21-frame.png",
+        "figure": "media/images/gen_easy_21.png"
+      }
+    },
+    {
+      "id": "gen_easy_22",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 32; localparam MAX = (1<<W)-1;\n```\n// Review context: `q[7:0]` slot 22 variant 1\nThe loop index in generate for is declared as…",
+      "choices": [
+        "genvar",
+        "integer in always",
+        "wire",
+        "reg updated each clock"
+      ],
+      "answer": 0,
+      "explain": "genvar for generate loops.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_easy_22.mp4",
+        "poster": "media/images/gen_easy_22-frame.png",
+        "figure": "media/images/gen_easy_22.png"
+      }
+    },
+    {
+      "id": "gen_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) sum <= din;\n```\n// Review context: `d[11:0]` slot 23 variant 1\ngenerate if (WIDTH > 4) …",
+      "choices": [
+        "Keeps one branch at elaboration based on constant WIDTH",
+        "Runs both every clock",
+        "Needs sensitivity",
+        "TB only"
+      ],
+      "answer": 0,
+      "explain": "Elaboration choice.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_easy_23.mp4",
+        "poster": "media/images/gen_easy_23-frame.png",
+        "figure": "media/images/gen_easy_23.png"
+      }
+    },
+    {
+      "id": "gen_easy_24",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [3:0] din; assign qout = din ^ a;\n```\n// Review context: `clk[15:0]` slot 24 variant 1\ngenerate for is not the same as a for loop inside an always at simulation time.",
+      "answer": true,
+      "explain": "Generate elaborates structure.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_easy_24.mp4",
+        "poster": "media/images/gen_easy_24-frame.png",
+        "figure": "media/images/gen_easy_24.png"
+      }
+    },
+    {
+      "id": "gen_easy_25",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg qout; always @(*) qout = a ? b : qout;\n```\n// Review context: `en[31:0]` slot 25 variant 1\nReplication `{N{bus}}` requires N…",
+      "choices": [
+        "Constant (elaboration-time)",
+        "Runtime changing reg without care",
+        "A task",
+        "A string"
+      ],
+      "answer": 0,
+      "explain": "N must be constant.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_easy_25.mp4",
+        "poster": "media/images/gen_easy_25-frame.png",
+        "figure": "media/images/gen_easy_25.png"
+      }
+    },
+    {
+      "id": "gen_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 6; localparam MAX = (1<<W)-1;\n```\n// Review context: `rst_n[2:0]` slot 26 variant 1\ngenerate endgenerate wraps…",
+      "choices": [
+        "Elaboration constructs (for/if/case)",
+        "Only $display",
+        "Only NBA",
+        "Only timescale"
+      ],
+      "answer": 0,
+      "explain": "Generate region.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_easy_26.mp4",
+        "poster": "media/images/gen_easy_26-frame.png",
+        "figure": "media/images/gen_easy_26.png"
+      }
+    },
+    {
+      "id": "gen_easy_27",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) b <= y;\n```\n// Review context: `data[3:0]` slot 27 variant 1\nYou can instantiate modules inside generate for.",
+      "answer": true,
+      "explain": "Structural replication.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_easy_27.mp4",
+        "poster": "media/images/gen_easy_27-frame.png",
+        "figure": "media/images/gen_easy_27.png"
+      }
+    },
+    {
+      "id": "gen_easy_28",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [7:0] y; assign q = y ^ d;\n```\n// Review context: `count[4:0]` slot 28 variant 1\n`assign y = {WIDTH{1'b0}};` …",
+      "choices": [
+        "Zero vector WIDTH bits",
+        "WIDTH modules",
+        "A flop chain",
+        "Illegal concat"
+      ],
+      "answer": 0,
+      "explain": "Replicate zeros.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_easy_28.mp4",
+        "poster": "media/images/gen_easy_28-frame.png",
+        "figure": "media/images/gen_easy_28.png"
+      }
+    },
+    {
+      "id": "gen_easy_29",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg q; always @(*) q = d ? clk : q;\n```\n// Review context: `a[5:0]` slot 29 variant 1\ngenvar i; for (i=0;i<4;i++) begin : g …",
+      "choices": [
+        "Named generate block g[i]",
+        "Runtime loop only",
+        "A package",
+        "A port list"
+      ],
+      "answer": 0,
+      "explain": "Labeled generate.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_easy_29.mp4",
+        "poster": "media/images/gen_easy_29-frame.png",
+        "figure": "media/images/gen_easy_29.png"
+      }
+    },
+    {
+      "id": "gen_easy_30",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 16; localparam MAX = (1<<W)-1;\n```\n// Review context: `b[6:0]` slot 30 variant 1\nUnnamed generate blocks are harder to hierarchical-reference.",
+      "answer": true,
+      "explain": "Name your blocks.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_easy_30.mp4",
+        "poster": "media/images/gen_easy_30-frame.png",
+        "figure": "media/images/gen_easy_30.png"
+      }
+    },
+    {
+      "id": "gen_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #3: combo block drives y\n```\ngenerate case (WIDTH) …",
+      "choices": [
+        "Selects structure by constant WIDTH",
+        "Runtime case like always",
+        "Needs @(*)",
+        "Is localparam keyword"
+      ],
+      "answer": 0,
+      "explain": "Generate case.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_medium_01.mp4",
+        "poster": "media/images/gen_medium_01-frame.png",
+        "figure": "media/images/gen_medium_01.png"
+      }
+    },
+    {
+      "id": "gen_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign q = (d & clk) | (d ^ clk);\n```\nHierarchy `g[2].u1.q` …",
+      "choices": [
+        "References instance inside generate index 2",
+        "Is a localparam",
+        "Is only TB $finish",
+        "Is ANSI port"
+      ],
+      "answer": 0,
+      "explain": "Generate hierarchy paths.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_medium_02.mp4",
+        "poster": "media/images/gen_medium_02-frame.png",
+        "figure": "media/images/gen_medium_02.png"
+      }
+    },
+    {
+      "id": "gen_medium_03",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) d <= 0; else d <= clk;\n```\nGenerate if false branch is not elaborated into hardware.",
+      "answer": true,
+      "explain": "Dead branch gone.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_medium_03.mp4",
+        "poster": "media/images/gen_medium_03-frame.png",
+        "figure": "media/images/gen_medium_03.png"
+      }
+    },
+    {
+      "id": "gen_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g6 end\n```\nRuntime for-loop in always vs generate for…",
+      "choices": [
+        "always for is sequential/combo procedural; generate builds instances",
+        "Identical",
+        "Both ban modules",
+        "Both need genvar"
+      ],
+      "answer": 0,
+      "explain": "Different mechanisms.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_medium_04.mp4",
+        "poster": "media/images/gen_medium_04-frame.png",
+        "figure": "media/images/gen_medium_04.png"
+      }
+    },
+    {
+      "id": "gen_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #7: combo block drives en\n```\nParameterizing number of pipeline stages with generate…",
+      "choices": [
+        "Common structural pattern",
+        "Illegal",
+        "Only for TB",
+        "Requires force"
+      ],
+      "answer": 0,
+      "explain": "Generate pipelines.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_medium_05.mp4",
+        "poster": "media/images/gen_medium_05-frame.png",
+        "figure": "media/images/gen_medium_05.png"
+      }
+    },
+    {
+      "id": "gen_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign rst_n = (data & count) | (data ^ count);\n```\nMissing begin/end labels in nested generate…",
+      "choices": [
+        "Can cause confusing hierarchy / tool issues",
+        "Required unnamed",
+        "Faster STA",
+        "Fixes CDC"
+      ],
+      "answer": 0,
+      "explain": "Label blocks.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_medium_06.mp4",
+        "poster": "media/images/gen_medium_06-frame.png",
+        "figure": "media/images/gen_medium_06.png"
+      }
+    },
+    {
+      "id": "gen_medium_07",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) data <= 0; else data <= count;\n```\nReplication is orthogonal to generate — both are elaboration helpers.",
+      "answer": true,
+      "explain": "Both structural.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_medium_07.mp4",
+        "poster": "media/images/gen_medium_07-frame.png",
+        "figure": "media/images/gen_medium_07.png"
+      }
+    },
+    {
+      "id": "gen_medium_08",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g10 end\n```\nConditional module instantiation via generate if…",
+      "choices": [
+        "Chooses which submodule exists",
+        "Runs both modules every cycle",
+        "Needs NBA",
+        "Needs $finish"
+      ],
+      "answer": 0,
+      "explain": "Optional instances.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_medium_08.mp4",
+        "poster": "media/images/gen_medium_08-frame.png",
+        "figure": "media/images/gen_medium_08.png"
+      }
+    },
+    {
+      "id": "gen_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #11: combo block drives sel\n```\ngenvar cannot be…",
+      "choices": [
+        "Assigned in an always like a normal integer counter for sim loops casually",
+        "Used as generate index",
+        "Declared",
+        "Compared to WIDTH"
+      ],
+      "answer": 0,
+      "explain": "genvar role is generate.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_medium_09.mp4",
+        "poster": "media/images/gen_medium_09-frame.png",
+        "figure": "media/images/gen_medium_09.png"
+      }
+    },
+    {
+      "id": "gen_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign out = (sum & din) | (sum ^ din);\n```\n`{2{4'hA}}` width is…",
+      "choices": [
+        "8",
+        "4",
+        "2",
+        "16"
+      ],
+      "answer": 0,
+      "explain": "2*4 bits.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_medium_10.mp4",
+        "poster": "media/images/gen_medium_10-frame.png",
+        "figure": "media/images/gen_medium_10.png"
+      }
+    },
+    {
+      "id": "gen_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) sum <= 0; else sum <= din;\n```\n// Review context: `y[5:0]` slot 11 variant 1\ngenerate case (WIDTH) …",
+      "choices": [
+        "Selects structure by constant WIDTH",
+        "Runtime case like always",
+        "Needs @(*)",
+        "Is localparam keyword"
+      ],
+      "answer": 0,
+      "explain": "Generate case.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_medium_11.mp4",
+        "poster": "media/images/gen_medium_11-frame.png",
+        "figure": "media/images/gen_medium_11.png"
+      }
+    },
+    {
+      "id": "gen_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g14 end\n```\n// Review context: `q[6:0]` slot 12 variant 1\nHierarchy `g[2].u1.q` …",
+      "choices": [
+        "References instance inside generate index 2",
+        "Is a localparam",
+        "Is only TB $finish",
+        "Is ANSI port"
+      ],
+      "answer": 0,
+      "explain": "Generate hierarchy paths.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_medium_12.mp4",
+        "poster": "media/images/gen_medium_12-frame.png",
+        "figure": "media/images/gen_medium_12.png"
+      }
+    },
+    {
+      "id": "gen_medium_13",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #15: combo block drives qout\n```\n// Review context: `d[7:0]` slot 13 variant 1\nGenerate if false branch is not elaborated into hardware.",
+      "answer": true,
+      "explain": "Dead branch gone.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_medium_13.mp4",
+        "poster": "media/images/gen_medium_13-frame.png",
+        "figure": "media/images/gen_medium_13.png"
+      }
+    },
+    {
+      "id": "gen_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign a = (b & y) | (b ^ y);\n```\n// Review context: `clk[11:0]` slot 14 variant 1\nRuntime for-loop in always vs generate for…",
+      "choices": [
+        "always for is sequential/combo procedural; generate builds instances",
+        "Identical",
+        "Both ban modules",
+        "Both need genvar"
+      ],
+      "answer": 0,
+      "explain": "Different mechanisms.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_medium_14.mp4",
+        "poster": "media/images/gen_medium_14-frame.png",
+        "figure": "media/images/gen_medium_14.png"
+      }
+    },
+    {
+      "id": "gen_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) b <= 0; else b <= y;\n```\n// Review context: `en[15:0]` slot 15 variant 1\nParameterizing number of pipeline stages with generate…",
+      "choices": [
+        "Common structural pattern",
+        "Illegal",
+        "Only for TB",
+        "Requires force"
+      ],
+      "answer": 0,
+      "explain": "Generate pipelines.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_medium_15.mp4",
+        "poster": "media/images/gen_medium_15-frame.png",
+        "figure": "media/images/gen_medium_15.png"
+      }
+    },
+    {
+      "id": "gen_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g18 end\n```\n// Review context: `rst_n[31:0]` slot 16 variant 1\nMissing begin/end labels in nested generate…",
+      "choices": [
+        "Can cause confusing hierarchy / tool issues",
+        "Required unnamed",
+        "Faster STA",
+        "Fixes CDC"
+      ],
+      "answer": 0,
+      "explain": "Label blocks.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_medium_16.mp4",
+        "poster": "media/images/gen_medium_16-frame.png",
+        "figure": "media/images/gen_medium_16.png"
+      }
+    },
+    {
+      "id": "gen_medium_17",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #19: combo block drives q\n```\n// Review context: `data[2:0]` slot 17 variant 1\nReplication is orthogonal to generate — both are elaboration helpers.",
+      "answer": true,
+      "explain": "Both structural.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_medium_17.mp4",
+        "poster": "media/images/gen_medium_17-frame.png",
+        "figure": "media/images/gen_medium_17.png"
+      }
+    },
+    {
+      "id": "gen_medium_18",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign d = (clk & en) | (clk ^ en);\n```\n// Review context: `count[3:0]` slot 18 variant 1\nConditional module instantiation via generate if…",
+      "choices": [
+        "Chooses which submodule exists",
+        "Runs both modules every cycle",
+        "Needs NBA",
+        "Needs $finish"
+      ],
+      "answer": 0,
+      "explain": "Optional instances.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_medium_18.mp4",
+        "poster": "media/images/gen_medium_18-frame.png",
+        "figure": "media/images/gen_medium_18.png"
+      }
+    },
+    {
+      "id": "gen_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) clk <= 0; else clk <= en;\n```\n// Review context: `a[4:0]` slot 19 variant 1\ngenvar cannot be…",
+      "choices": [
+        "Assigned in an always like a normal integer counter for sim loops casually",
+        "Used as generate index",
+        "Declared",
+        "Compared to WIDTH"
+      ],
+      "answer": 0,
+      "explain": "genvar role is generate.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_medium_19.mp4",
+        "poster": "media/images/gen_medium_19-frame.png",
+        "figure": "media/images/gen_medium_19.png"
+      }
+    },
+    {
+      "id": "gen_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g22 end\n```\n// Review context: `b[5:0]` slot 20 variant 1\n`{2{4'hA}}` width is…",
+      "choices": [
+        "8",
+        "4",
+        "2",
+        "16"
+      ],
+      "answer": 0,
+      "explain": "2*4 bits.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_medium_20.mp4",
+        "poster": "media/images/gen_medium_20-frame.png",
+        "figure": "media/images/gen_medium_20.png"
+      }
+    },
+    {
+      "id": "gen_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #23: combo block drives rst_n\n```\n// Review context: `y[6:0]` slot 21 variant 1\ngenerate case (WIDTH) …",
+      "choices": [
+        "Selects structure by constant WIDTH",
+        "Runtime case like always",
+        "Needs @(*)",
+        "Is localparam keyword"
+      ],
+      "answer": 0,
+      "explain": "Generate case.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_medium_21.mp4",
+        "poster": "media/images/gen_medium_21-frame.png",
+        "figure": "media/images/gen_medium_21.png"
+      }
+    },
+    {
+      "id": "gen_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign data = (count & sel) | (count ^ sel);\n```\n// Review context: `q[7:0]` slot 22 variant 1\nHierarchy `g[2].u1.q` …",
+      "choices": [
+        "References instance inside generate index 2",
+        "Is a localparam",
+        "Is only TB $finish",
+        "Is ANSI port"
+      ],
+      "answer": 0,
+      "explain": "Generate hierarchy paths.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_medium_22.mp4",
+        "poster": "media/images/gen_medium_22-frame.png",
+        "figure": "media/images/gen_medium_22.png"
+      }
+    },
+    {
+      "id": "gen_medium_23",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) count <= 0; else count <= sel;\n```\n// Review context: `d[11:0]` slot 23 variant 1\nGenerate if false branch is not elaborated into hardware.",
+      "answer": true,
+      "explain": "Dead branch gone.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_medium_23.mp4",
+        "poster": "media/images/gen_medium_23-frame.png",
+        "figure": "media/images/gen_medium_23.png"
+      }
+    },
+    {
+      "id": "gen_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g26 end\n```\n// Review context: `clk[15:0]` slot 24 variant 1\nRuntime for-loop in always vs generate for…",
+      "choices": [
+        "always for is sequential/combo procedural; generate builds instances",
+        "Identical",
+        "Both ban modules",
+        "Both need genvar"
+      ],
+      "answer": 0,
+      "explain": "Different mechanisms.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_medium_24.mp4",
+        "poster": "media/images/gen_medium_24-frame.png",
+        "figure": "media/images/gen_medium_24.png"
+      }
+    },
+    {
+      "id": "gen_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #27: combo block drives out\n```\n// Review context: `en[31:0]` slot 25 variant 1\nParameterizing number of pipeline stages with generate…",
+      "choices": [
+        "Common structural pattern",
+        "Illegal",
+        "Only for TB",
+        "Requires force"
+      ],
+      "answer": 0,
+      "explain": "Generate pipelines.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_medium_25.mp4",
+        "poster": "media/images/gen_medium_25-frame.png",
+        "figure": "media/images/gen_medium_25.png"
+      }
+    },
+    {
+      "id": "gen_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign sum = (din & qout) | (din ^ qout);\n```\n// Review context: `rst_n[2:0]` slot 26 variant 1\nMissing begin/end labels in nested generate…",
+      "choices": [
+        "Can cause confusing hierarchy / tool issues",
+        "Required unnamed",
+        "Faster STA",
+        "Fixes CDC"
+      ],
+      "answer": 0,
+      "explain": "Label blocks.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_medium_26.mp4",
+        "poster": "media/images/gen_medium_26-frame.png",
+        "figure": "media/images/gen_medium_26.png"
+      }
+    },
+    {
+      "id": "gen_medium_27",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) din <= 0; else din <= qout;\n```\n// Review context: `data[3:0]` slot 27 variant 1\nReplication is orthogonal to generate — both are elaboration helpers.",
+      "answer": true,
+      "explain": "Both structural.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_medium_27.mp4",
+        "poster": "media/images/gen_medium_27-frame.png",
+        "figure": "media/images/gen_medium_27.png"
+      }
+    },
+    {
+      "id": "gen_medium_28",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g30 end\n```\n// Review context: `count[4:0]` slot 28 variant 1\nConditional module instantiation via generate if…",
+      "choices": [
+        "Chooses which submodule exists",
+        "Runs both modules every cycle",
+        "Needs NBA",
+        "Needs $finish"
+      ],
+      "answer": 0,
+      "explain": "Optional instances.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_medium_28.mp4",
+        "poster": "media/images/gen_medium_28-frame.png",
+        "figure": "media/images/gen_medium_28.png"
+      }
+    },
+    {
+      "id": "gen_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #31: combo block drives a\n```\n// Review context: `a[5:0]` slot 29 variant 1\ngenvar cannot be…",
+      "choices": [
+        "Assigned in an always like a normal integer counter for sim loops casually",
+        "Used as generate index",
+        "Declared",
+        "Compared to WIDTH"
+      ],
+      "answer": 0,
+      "explain": "genvar role is generate.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_medium_29.mp4",
+        "poster": "media/images/gen_medium_29-frame.png",
+        "figure": "media/images/gen_medium_29.png"
+      }
+    },
+    {
+      "id": "gen_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign b = (y & q) | (y ^ q);\n```\n// Review context: `b[6:0]` slot 30 variant 1\n`{2{4'hA}}` width is…",
+      "choices": [
+        "8",
+        "4",
+        "2",
+        "16"
+      ],
+      "answer": 0,
+      "explain": "2*4 bits.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_medium_30.mp4",
+        "poster": "media/images/gen_medium_30-frame.png",
+        "figure": "media/images/gen_medium_30.png"
+      }
+    },
+    {
+      "id": "gen_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) d <= d + 1'b1; end\n```\nGenerate loop with non-genvar integer…",
+      "choices": [
+        "Wrong — use genvar for generate for",
+        "Preferred",
+        "Required in 1995 only",
+        "Same as always for"
+      ],
+      "answer": 0,
+      "explain": "genvar required.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_hard_01.mp4",
+        "poster": "media/images/gen_hard_01-frame.png",
+        "figure": "media/images/gen_hard_01.png"
+      }
+    },
+    {
+      "id": "gen_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 6: do not sample clk multi-bit raw\n```\nElaboration recursion / huge generate…",
+      "choices": [
+        "Can explode compile/area — bound carefully",
+        "Always free",
+        "Ban parameters",
+        "Only affects fonts"
+      ],
+      "answer": 0,
+      "explain": "Complexity cost.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_hard_02.mp4",
+        "poster": "media/images/gen_hard_02-frame.png",
+        "figure": "media/images/gen_hard_02.png"
+      }
+    },
+    {
+      "id": "gen_hard_03",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (en) /* full case required */\n```\nYou cannot use a non-constant reg value as a generate if condition.",
+      "answer": true,
+      "explain": "Must be constant.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_hard_03.mp4",
+        "poster": "media/images/gen_hard_03-frame.png",
+        "figure": "media/images/gen_hard_03.png"
+      }
+    },
+    {
+      "id": "gen_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p8; @(posedge clk) rst_n |-> ##1 data; endproperty\n```\nDefparam inside generate…",
+      "choices": [
+        "Legacy mess — avoid",
+        "Modern best practice",
+        "Required for genvar",
+        "Same as localparam"
+      ],
+      "answer": 0,
+      "explain": "Avoid defparam.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_hard_04.mp4",
+        "poster": "media/images/gen_hard_04-frame.png",
+        "figure": "media/images/gen_hard_04.png"
+      }
+    },
+    {
+      "id": "gen_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) data <= data + 1'b1; end\n```\nExternally referencing unnamed generate…",
+      "choices": [
+        "Tool-dependent / fragile — name blocks",
+        "Stable across all tools always",
+        "Illegal to instantiate inside",
+        "Requires wire only"
+      ],
+      "answer": 0,
+      "explain": "Name them.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_hard_05.mp4",
+        "poster": "media/images/gen_hard_05-frame.png",
+        "figure": "media/images/gen_hard_05.png"
+      }
+    },
+    {
+      "id": "gen_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 10: do not sample count multi-bit raw\n```\nMixing generate and manual instance arrays…",
+      "choices": [
+        "Either pattern OK; don't confuse readers",
+        "Illegal always",
+        "Required together",
+        "Only for latches"
+      ],
+      "answer": 0,
+      "explain": "Pick clear style.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_hard_06.mp4",
+        "poster": "media/images/gen_hard_06-frame.png",
+        "figure": "media/images/gen_hard_06.png"
+      }
+    },
+    {
+      "id": "gen_hard_07",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (sel) /* full case required */\n```\nGenerate case must cover or have default for legal elaboration in strict use.",
+      "answer": true,
+      "explain": "Complete generate case.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_hard_07.mp4",
+        "poster": "media/images/gen_hard_07-frame.png",
+        "figure": "media/images/gen_hard_07.png"
+      }
+    },
+    {
+      "id": "gen_hard_08",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p12; @(posedge clk) out |-> ##1 sum; endproperty\n```\nUsing generate to optional scan logic…",
+      "choices": [
+        "Common with parameter ENABLE_SCAN",
+        "Requires two clocks always",
+        "Needs casex",
+        "Needs force"
+      ],
+      "answer": 0,
+      "explain": "Feature flags.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_hard_08.mp4",
+        "poster": "media/images/gen_hard_08-frame.png",
+        "figure": "media/images/gen_hard_08.png"
+      }
+    },
+    {
+      "id": "gen_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) sum <= sum + 1'b1; end\n```\nBit-blasting N AND gates with generate for…",
+      "choices": [
+        "Structural teaching pattern",
+        "Same as reduction & automatically",
+        "Bans assign",
+        "Needs TB $monitor only"
+      ],
+      "answer": 0,
+      "explain": "Structural replicate.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_hard_09.mp4",
+        "poster": "media/images/gen_hard_09-frame.png",
+        "figure": "media/images/gen_hard_09.png"
+      }
+    },
+    {
+      "id": "gen_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 14: do not sample din multi-bit raw\n```\nBest review ask…",
+      "choices": [
+        "Is the generate condition truly constant and bounded?",
+        "What color is the GUI?",
+        "Which emoji?",
+        "Which music?"
+      ],
+      "answer": 0,
+      "explain": "Check elaboration assumptions.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_hard_10.mp4",
+        "poster": "media/images/gen_hard_10-frame.png",
+        "figure": "media/images/gen_hard_10.png"
+      }
+    },
+    {
+      "id": "gen_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (qout) /* full case required */\n```\n// Review context: `y[5:0]` slot 11 variant 1\nGenerate loop with non-genvar integer…",
+      "choices": [
+        "Wrong — use genvar for generate for",
+        "Preferred",
+        "Required in 1995 only",
+        "Same as always for"
+      ],
+      "answer": 0,
+      "explain": "genvar required.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_hard_11.mp4",
+        "poster": "media/images/gen_hard_11-frame.png",
+        "figure": "media/images/gen_hard_11.png"
+      }
+    },
+    {
+      "id": "gen_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p16; @(posedge clk) a |-> ##1 b; endproperty\n```\n// Review context: `q[6:0]` slot 12 variant 1\nElaboration recursion / huge generate…",
+      "choices": [
+        "Can explode compile/area — bound carefully",
+        "Always free",
+        "Ban parameters",
+        "Only affects fonts"
+      ],
+      "answer": 0,
+      "explain": "Complexity cost.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_hard_12.mp4",
+        "poster": "media/images/gen_hard_12-frame.png",
+        "figure": "media/images/gen_hard_12.png"
+      }
+    },
+    {
+      "id": "gen_hard_13",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) b <= b + 1'b1; end\n```\n// Review context: `d[7:0]` slot 13 variant 1\nYou cannot use a non-constant reg value as a generate if condition.",
+      "answer": true,
+      "explain": "Must be constant.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_hard_13.mp4",
+        "poster": "media/images/gen_hard_13-frame.png",
+        "figure": "media/images/gen_hard_13.png"
+      }
+    },
+    {
+      "id": "gen_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 18: do not sample y multi-bit raw\n```\n// Review context: `clk[11:0]` slot 14 variant 1\nDefparam inside generate…",
+      "choices": [
+        "Legacy mess — avoid",
+        "Modern best practice",
+        "Required for genvar",
+        "Same as localparam"
+      ],
+      "answer": 0,
+      "explain": "Avoid defparam.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_hard_14.mp4",
+        "poster": "media/images/gen_hard_14-frame.png",
+        "figure": "media/images/gen_hard_14.png"
+      }
+    },
+    {
+      "id": "gen_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (q) /* full case required */\n```\n// Review context: `en[15:0]` slot 15 variant 1\nExternally referencing unnamed generate…",
+      "choices": [
+        "Tool-dependent / fragile — name blocks",
+        "Stable across all tools always",
+        "Illegal to instantiate inside",
+        "Requires wire only"
+      ],
+      "answer": 0,
+      "explain": "Name them.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_hard_15.mp4",
+        "poster": "media/images/gen_hard_15-frame.png",
+        "figure": "media/images/gen_hard_15.png"
+      }
+    },
+    {
+      "id": "gen_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p20; @(posedge clk) d |-> ##1 clk; endproperty\n```\n// Review context: `rst_n[31:0]` slot 16 variant 1\nMixing generate and manual instance arrays…",
+      "choices": [
+        "Either pattern OK; don't confuse readers",
+        "Illegal always",
+        "Required together",
+        "Only for latches"
+      ],
+      "answer": 0,
+      "explain": "Pick clear style.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_hard_16.mp4",
+        "poster": "media/images/gen_hard_16-frame.png",
+        "figure": "media/images/gen_hard_16.png"
+      }
+    },
+    {
+      "id": "gen_hard_17",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) clk <= clk + 1'b1; end\n```\n// Review context: `data[2:0]` slot 17 variant 1\nGenerate case must cover or have default for legal elaboration in strict use.",
+      "answer": true,
+      "explain": "Complete generate case.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_hard_17.mp4",
+        "poster": "media/images/gen_hard_17-frame.png",
+        "figure": "media/images/gen_hard_17.png"
+      }
+    },
+    {
+      "id": "gen_hard_18",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 22: do not sample en multi-bit raw\n```\n// Review context: `count[3:0]` slot 18 variant 1\nUsing generate to optional scan logic…",
+      "choices": [
+        "Common with parameter ENABLE_SCAN",
+        "Requires two clocks always",
+        "Needs casex",
+        "Needs force"
+      ],
+      "answer": 0,
+      "explain": "Feature flags.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_hard_18.mp4",
+        "poster": "media/images/gen_hard_18-frame.png",
+        "figure": "media/images/gen_hard_18.png"
+      }
+    },
+    {
+      "id": "gen_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (rst_n) /* full case required */\n```\n// Review context: `a[4:0]` slot 19 variant 1\nBit-blasting N AND gates with generate for…",
+      "choices": [
+        "Structural teaching pattern",
+        "Same as reduction & automatically",
+        "Bans assign",
+        "Needs TB $monitor only"
+      ],
+      "answer": 0,
+      "explain": "Structural replicate.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_hard_19.mp4",
+        "poster": "media/images/gen_hard_19-frame.png",
+        "figure": "media/images/gen_hard_19.png"
+      }
+    },
+    {
+      "id": "gen_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p24; @(posedge clk) data |-> ##1 count; endproperty\n```\n// Review context: `b[5:0]` slot 20 variant 1\nBest review ask…",
+      "choices": [
+        "Is the generate condition truly constant and bounded?",
+        "What color is the GUI?",
+        "Which emoji?",
+        "Which music?"
+      ],
+      "answer": 0,
+      "explain": "Check elaboration assumptions.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_hard_20.mp4",
+        "poster": "media/images/gen_hard_20-frame.png",
+        "figure": "media/images/gen_hard_20.png"
+      }
+    },
+    {
+      "id": "gen_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) count <= count + 1'b1; end\n```\n// Review context: `y[6:0]` slot 21 variant 1\nGenerate loop with non-genvar integer…",
+      "choices": [
+        "Wrong — use genvar for generate for",
+        "Preferred",
+        "Required in 1995 only",
+        "Same as always for"
+      ],
+      "answer": 0,
+      "explain": "genvar required.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_hard_21.mp4",
+        "poster": "media/images/gen_hard_21-frame.png",
+        "figure": "media/images/gen_hard_21.png"
+      }
+    },
+    {
+      "id": "gen_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 26: do not sample sel multi-bit raw\n```\n// Review context: `q[7:0]` slot 22 variant 1\nElaboration recursion / huge generate…",
+      "choices": [
+        "Can explode compile/area — bound carefully",
+        "Always free",
+        "Ban parameters",
+        "Only affects fonts"
+      ],
+      "answer": 0,
+      "explain": "Complexity cost.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_hard_22.mp4",
+        "poster": "media/images/gen_hard_22-frame.png",
+        "figure": "media/images/gen_hard_22.png"
+      }
+    },
+    {
+      "id": "gen_hard_23",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (out) /* full case required */\n```\n// Review context: `d[11:0]` slot 23 variant 1\nYou cannot use a non-constant reg value as a generate if condition.",
+      "answer": true,
+      "explain": "Must be constant.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_hard_23.mp4",
+        "poster": "media/images/gen_hard_23-frame.png",
+        "figure": "media/images/gen_hard_23.png"
+      }
+    },
+    {
+      "id": "gen_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p28; @(posedge clk) sum |-> ##1 din; endproperty\n```\n// Review context: `clk[15:0]` slot 24 variant 1\nDefparam inside generate…",
+      "choices": [
+        "Legacy mess — avoid",
+        "Modern best practice",
+        "Required for genvar",
+        "Same as localparam"
+      ],
+      "answer": 0,
+      "explain": "Avoid defparam.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_hard_24.mp4",
+        "poster": "media/images/gen_hard_24-frame.png",
+        "figure": "media/images/gen_hard_24.png"
+      }
+    },
+    {
+      "id": "gen_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) din <= din + 1'b1; end\n```\n// Review context: `en[31:0]` slot 25 variant 1\nExternally referencing unnamed generate…",
+      "choices": [
+        "Tool-dependent / fragile — name blocks",
+        "Stable across all tools always",
+        "Illegal to instantiate inside",
+        "Requires wire only"
+      ],
+      "answer": 0,
+      "explain": "Name them.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_hard_25.mp4",
+        "poster": "media/images/gen_hard_25-frame.png",
+        "figure": "media/images/gen_hard_25.png"
+      }
+    },
+    {
+      "id": "gen_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 30: do not sample qout multi-bit raw\n```\n// Review context: `rst_n[2:0]` slot 26 variant 1\nMixing generate and manual instance arrays…",
+      "choices": [
+        "Either pattern OK; don't confuse readers",
+        "Illegal always",
+        "Required together",
+        "Only for latches"
+      ],
+      "answer": 0,
+      "explain": "Pick clear style.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_hard_26.mp4",
+        "poster": "media/images/gen_hard_26-frame.png",
+        "figure": "media/images/gen_hard_26.png"
+      }
+    },
+    {
+      "id": "gen_hard_27",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (a) /* full case required */\n```\n// Review context: `data[3:0]` slot 27 variant 1\nGenerate case must cover or have default for legal elaboration in strict use.",
+      "answer": true,
+      "explain": "Complete generate case.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_hard_27.mp4",
+        "poster": "media/images/gen_hard_27-frame.png",
+        "figure": "media/images/gen_hard_27.png"
+      }
+    },
+    {
+      "id": "gen_hard_28",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p32; @(posedge clk) b |-> ##1 y; endproperty\n```\n// Review context: `count[4:0]` slot 28 variant 1\nUsing generate to optional scan logic…",
+      "choices": [
+        "Common with parameter ENABLE_SCAN",
+        "Requires two clocks always",
+        "Needs casex",
+        "Needs force"
+      ],
+      "answer": 0,
+      "explain": "Feature flags.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_hard_28.mp4",
+        "poster": "media/images/gen_hard_28-frame.png",
+        "figure": "media/images/gen_hard_28.png"
+      }
+    },
+    {
+      "id": "gen_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) y <= y + 1'b1; end\n```\n// Review context: `a[5:0]` slot 29 variant 1\nBit-blasting N AND gates with generate for…",
+      "choices": [
+        "Structural teaching pattern",
+        "Same as reduction & automatically",
+        "Bans assign",
+        "Needs TB $monitor only"
+      ],
+      "answer": 0,
+      "explain": "Structural replicate.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_hard_29.mp4",
+        "poster": "media/images/gen_hard_29-frame.png",
+        "figure": "media/images/gen_hard_29.png"
+      }
+    },
+    {
+      "id": "gen_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 34: do not sample q multi-bit raw\n```\n// Review context: `b[6:0]` slot 30 variant 1\nBest review ask…",
+      "choices": [
+        "Is the generate condition truly constant and bounded?",
+        "What color is the GUI?",
+        "Which emoji?",
+        "Which music?"
+      ],
+      "answer": 0,
+      "explain": "Check elaboration assumptions.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/gen_hard_30.mp4",
+        "poster": "media/images/gen_hard_30-frame.png",
+        "figure": "media/images/gen_hard_30.png"
+      }
+    }
+  ]
+}

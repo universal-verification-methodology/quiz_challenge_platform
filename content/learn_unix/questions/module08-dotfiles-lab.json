@@ -1,0 +1,1698 @@
+{
+  "module": "module08-dotfiles-lab",
+  "title": "Dotfiles & config homes",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# XDG: ${XDG_CONFIG_HOME:-$HOME/.config}/delta\n```\nA file whose name starts with . is usually...",
+      "choices": [
+        "Deleted by ls",
+        "Hidden from plain ls (shown with ls -a)",
+        "Always executable",
+        "Only usable by root"
+      ],
+      "answer": 1,
+      "explain": "Dot-prefixed names are hidden unless you list with -a / -la.",
+      "difficulty": "easy",
+      "id": "dot_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_easy_01.mp4",
+        "poster": "media/images/dot_easy_01-frame.png",
+        "figure": "media/images/dot_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls -a ~ | head; test -f ~/.bashrc && echo has_bashrc\n```\nWhich command reveals .bashrc in a directory listing?",
+      "choices": [
+        "ls",
+        "ls -a",
+        "pwd",
+        "cd .."
+      ],
+      "answer": 1,
+      "explain": "ls -a (or ls -la) includes hidden names.",
+      "difficulty": "easy",
+      "id": "dot_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_easy_02.mp4",
+        "poster": "media/images/dot_easy_02-frame.png",
+        "figure": "media/images/dot_easy_02.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nmkdir -p ~/.config/foxtrot\n```\nIt is safer to inspect shell config with cat or less before editing it.",
+      "answer": true,
+      "explain": "Read first; a bad edit can break new interactive shells.",
+      "difficulty": "easy",
+      "id": "dot_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_easy_03.mp4",
+        "poster": "media/images/dot_easy_03-frame.png",
+        "figure": "media/images/dot_easy_03.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nchmod 600 ~/.ssh/id_rsa 2>/dev/null\n```\n.gitignore is typically...",
+      "choices": [
+        "A visible README",
+        "A project dotfile telling Git what to ignore",
+        "A required PATH entry",
+        "A umask setting"
+      ],
+      "answer": 1,
+      "explain": ".gitignore is a hidden project file used by Git.",
+      "difficulty": "easy",
+      "id": "dot_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_easy_04.mp4",
+        "poster": "media/images/dot_easy_04-frame.png",
+        "figure": "media/images/dot_easy_04.png"
+      }
+    },
+    {
+      "id": "dot_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# XDG: ${XDG_CONFIG_HOME:-$HOME/.config}/hotel\n```\nDotfiles are typically named like...",
+      "choices": [
+        ".bashrc / .config/...",
+        "only README.md",
+        "only /etc/passwd",
+        "only Makefile"
+      ],
+      "answer": 0,
+      "explain": "Leading dot hides by default.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_easy_05.mp4",
+        "poster": "media/images/dot_easy_05-frame.png",
+        "figure": "media/images/dot_easy_05.png"
+      }
+    },
+    {
+      "id": "dot_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls -a ~ | head; test -f ~/.bashrc && echo has_bashrc\n```\n`ls` without `-a` usually hides...",
+      "choices": [
+        "Dotfiles",
+        "All executables",
+        "All directories",
+        "All symlinks"
+      ],
+      "answer": 0,
+      "explain": "Default ls skips many dot names.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_easy_06.mp4",
+        "poster": "media/images/dot_easy_06-frame.png",
+        "figure": "media/images/dot_easy_06.png"
+      }
+    },
+    {
+      "id": "dot_easy_07",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nmkdir -p ~/.config/juliet\n```\nMany tools store user config under ~/.config (XDG).",
+      "answer": true,
+      "explain": "XDG config home is common.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_easy_07.mp4",
+        "poster": "media/images/dot_easy_07-frame.png",
+        "figure": "media/images/dot_easy_07.png"
+      }
+    },
+    {
+      "id": "dot_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nchmod 600 ~/.ssh/id_rsa 2>/dev/null\n```\n`.gitignore` is a...",
+      "choices": [
+        "Dotfile that can configure Git ignore rules",
+        "Kernel module",
+        "man section 9",
+        "Block device"
+      ],
+      "answer": 0,
+      "explain": "Project dotfiles exist too.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_easy_08.mp4",
+        "poster": "media/images/dot_easy_08-frame.png",
+        "figure": "media/images/dot_easy_08.png"
+      }
+    },
+    {
+      "id": "dot_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# XDG: ${XDG_CONFIG_HOME:-$HOME/.config}/bravo\n```\nEditing `~/.bashrc` affects...",
+      "choices": [
+        "Interactive bash startup (typically)",
+        "The kernel scheduler",
+        "Only cron on Linux always",
+        "Only zip"
+      ],
+      "answer": 0,
+      "explain": "Shell rc files configure shells.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_easy_09.mp4",
+        "poster": "media/images/dot_easy_09-frame.png",
+        "figure": "media/images/dot_easy_09.png"
+      }
+    },
+    {
+      "id": "dot_easy_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls -a ~ | head; test -f ~/.bashrc && echo has_bashrc\n```\n`cd ~` goes to...",
+      "choices": [
+        "Your home directory",
+        "/",
+        "/tmp",
+        "Git root always"
+      ],
+      "answer": 0,
+      "explain": "~ is home.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_easy_10.mp4",
+        "poster": "media/images/dot_easy_10-frame.png",
+        "figure": "media/images/dot_easy_10.png"
+      }
+    },
+    {
+      "id": "dot_easy_11",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nmkdir -p ~/.config/delta\n```\nDot directories like `.git` hold tool state.",
+      "answer": true,
+      "explain": "Hidden dirs store metadata.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_easy_11.mp4",
+        "poster": "media/images/dot_easy_11-frame.png",
+        "figure": "media/images/dot_easy_11.png"
+      }
+    },
+    {
+      "id": "dot_easy_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nchmod 600 ~/.ssh/id_rsa 2>/dev/null\n```\nXDG `~/.cache` is meant for...",
+      "choices": [
+        "Disposable caches",
+        "Only SSH keys",
+        "Only passwords",
+        "Only kernels"
+      ],
+      "answer": 0,
+      "explain": "Cache vs config vs data.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_easy_12.mp4",
+        "poster": "media/images/dot_easy_12-frame.png",
+        "figure": "media/images/dot_easy_12.png"
+      }
+    },
+    {
+      "id": "dot_easy_13",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# XDG: ${XDG_CONFIG_HOME:-$HOME/.config}/foxtrot\n```\nCopying a project with `cp -r` may miss...",
+      "choices": [
+        "Nothing if you include hidden; naive tools sometimes skip dots",
+        "All regular files always",
+        "Only Makefiles",
+        "Only READMEs"
+      ],
+      "answer": 0,
+      "explain": "Watch hidden inclusion.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_easy_13.mp4",
+        "poster": "media/images/dot_easy_13-frame.png",
+        "figure": "media/images/dot_easy_13.png"
+      }
+    },
+    {
+      "id": "dot_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls -a ~ | head; test -f ~/.bashrc && echo has_bashrc\n```\n`mv file14.txt .file14.txt` ...",
+      "choices": [
+        "Renames to a hidden name",
+        "Deletes permanently",
+        "Sets uid",
+        "Mounts nfs"
+      ],
+      "answer": 0,
+      "explain": "Leading dot hides.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_easy_14.mp4",
+        "poster": "media/images/dot_easy_14-frame.png",
+        "figure": "media/images/dot_easy_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmkdir -p ~/.config/hotel\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nA file whose name starts with . is usually...",
+      "choices": [
+        "Deleted by ls",
+        "Hidden from plain ls (shown with ls -a)",
+        "Always executable",
+        "Only usable by root"
+      ],
+      "answer": 1,
+      "explain": "Dot-prefixed names are hidden unless you list with -a / -la.",
+      "difficulty": "easy",
+      "id": "dot_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_easy_15.mp4",
+        "poster": "media/images/dot_easy_15-frame.png",
+        "figure": "media/images/dot_easy_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nchmod 600 ~/.ssh/id_rsa 2>/dev/null\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nWhich command reveals .bashrc in a directory listing?",
+      "choices": [
+        "ls",
+        "ls -a",
+        "pwd",
+        "cd .."
+      ],
+      "answer": 1,
+      "explain": "ls -a (or ls -la) includes hidden names.",
+      "difficulty": "easy",
+      "id": "dot_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_easy_16.mp4",
+        "poster": "media/images/dot_easy_16-frame.png",
+        "figure": "media/images/dot_easy_16.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# XDG: ${XDG_CONFIG_HOME:-$HOME/.config}/juliet\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nIt is safer to inspect shell config with cat or less before editing it.",
+      "answer": true,
+      "explain": "Read first; a bad edit can break new interactive shells.",
+      "difficulty": "easy",
+      "id": "dot_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_easy_17.mp4",
+        "poster": "media/images/dot_easy_17-frame.png",
+        "figure": "media/images/dot_easy_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls -a ~ | head; test -f ~/.bashrc && echo has_bashrc\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\n.gitignore is typically...",
+      "choices": [
+        "A visible README",
+        "A project dotfile telling Git what to ignore",
+        "A required PATH entry",
+        "A umask setting"
+      ],
+      "answer": 1,
+      "explain": ".gitignore is a hidden project file used by Git.",
+      "difficulty": "easy",
+      "id": "dot_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_easy_18.mp4",
+        "poster": "media/images/dot_easy_18-frame.png",
+        "figure": "media/images/dot_easy_18.png"
+      }
+    },
+    {
+      "id": "dot_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmkdir -p ~/.config/bravo\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nDotfiles are typically named like...",
+      "choices": [
+        ".bashrc / .config/...",
+        "only README.md",
+        "only /etc/passwd",
+        "only Makefile"
+      ],
+      "answer": 0,
+      "explain": "Leading dot hides by default.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_easy_19.mp4",
+        "poster": "media/images/dot_easy_19-frame.png",
+        "figure": "media/images/dot_easy_19.png"
+      }
+    },
+    {
+      "id": "dot_easy_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nchmod 600 ~/.ssh/id_rsa 2>/dev/null\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\n`ls` without `-a` usually hides...",
+      "choices": [
+        "Dotfiles",
+        "All executables",
+        "All directories",
+        "All symlinks"
+      ],
+      "answer": 0,
+      "explain": "Default ls skips many dot names.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_easy_20.mp4",
+        "poster": "media/images/dot_easy_20-frame.png",
+        "figure": "media/images/dot_easy_20.png"
+      }
+    },
+    {
+      "id": "dot_easy_21",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# XDG: ${XDG_CONFIG_HOME:-$HOME/.config}/delta\n```\n# Review context: `/var/log/golf` slot 21 variant 1\nMany tools store user config under ~/.config (XDG).",
+      "answer": true,
+      "explain": "XDG config home is common.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_easy_21.mp4",
+        "poster": "media/images/dot_easy_21-frame.png",
+        "figure": "media/images/dot_easy_21.png"
+      }
+    },
+    {
+      "id": "dot_easy_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls -a ~ | head; test -f ~/.bashrc && echo has_bashrc\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\n`.gitignore` is a...",
+      "choices": [
+        "Dotfile that can configure Git ignore rules",
+        "Kernel module",
+        "man section 9",
+        "Block device"
+      ],
+      "answer": 0,
+      "explain": "Project dotfiles exist too.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_easy_22.mp4",
+        "poster": "media/images/dot_easy_22-frame.png",
+        "figure": "media/images/dot_easy_22.png"
+      }
+    },
+    {
+      "id": "dot_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmkdir -p ~/.config/foxtrot\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\nEditing `~/.bashrc` affects...",
+      "choices": [
+        "Interactive bash startup (typically)",
+        "The kernel scheduler",
+        "Only cron on Linux always",
+        "Only zip"
+      ],
+      "answer": 0,
+      "explain": "Shell rc files configure shells.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_easy_23.mp4",
+        "poster": "media/images/dot_easy_23-frame.png",
+        "figure": "media/images/dot_easy_23.png"
+      }
+    },
+    {
+      "id": "dot_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nchmod 600 ~/.ssh/id_rsa 2>/dev/null\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\n`cd ~` goes to...",
+      "choices": [
+        "Your home directory",
+        "/",
+        "/tmp",
+        "Git root always"
+      ],
+      "answer": 0,
+      "explain": "~ is home.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_easy_24.mp4",
+        "poster": "media/images/dot_easy_24-frame.png",
+        "figure": "media/images/dot_easy_24.png"
+      }
+    },
+    {
+      "id": "dot_easy_25",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# XDG: ${XDG_CONFIG_HOME:-$HOME/.config}/hotel\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nDot directories like `.git` hold tool state.",
+      "answer": true,
+      "explain": "Hidden dirs store metadata.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_easy_25.mp4",
+        "poster": "media/images/dot_easy_25-frame.png",
+        "figure": "media/images/dot_easy_25.png"
+      }
+    },
+    {
+      "id": "dot_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls -a ~ | head; test -f ~/.bashrc && echo has_bashrc\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nXDG `~/.cache` is meant for...",
+      "choices": [
+        "Disposable caches",
+        "Only SSH keys",
+        "Only passwords",
+        "Only kernels"
+      ],
+      "answer": 0,
+      "explain": "Cache vs config vs data.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_easy_26.mp4",
+        "poster": "media/images/dot_easy_26-frame.png",
+        "figure": "media/images/dot_easy_26.png"
+      }
+    },
+    {
+      "id": "dot_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmkdir -p ~/.config/juliet\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nCopying a project with `cp -r` may miss...",
+      "choices": [
+        "Nothing if you include hidden; naive tools sometimes skip dots",
+        "All regular files always",
+        "Only Makefiles",
+        "Only READMEs"
+      ],
+      "answer": 0,
+      "explain": "Watch hidden inclusion.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_easy_27.mp4",
+        "poster": "media/images/dot_easy_27-frame.png",
+        "figure": "media/images/dot_easy_27.png"
+      }
+    },
+    {
+      "id": "dot_easy_28",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nchmod 600 ~/.ssh/id_rsa 2>/dev/null\n```\n`mv file28.txt .file28.txt` ...",
+      "choices": [
+        "Renames to a hidden name",
+        "Deletes permanently",
+        "Sets uid",
+        "Mounts nfs"
+      ],
+      "answer": 0,
+      "explain": "Leading dot hides.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_easy_28.mp4",
+        "poster": "media/images/dot_easy_28-frame.png",
+        "figure": "media/images/dot_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# XDG: ${XDG_CONFIG_HOME:-$HOME/.config}/bravo\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nA file whose name starts with . is usually...",
+      "choices": [
+        "Deleted by ls",
+        "Hidden from plain ls (shown with ls -a)",
+        "Always executable",
+        "Only usable by root"
+      ],
+      "answer": 1,
+      "explain": "Dot-prefixed names are hidden unless you list with -a / -la.",
+      "difficulty": "easy",
+      "id": "dot_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_easy_29.mp4",
+        "poster": "media/images/dot_easy_29-frame.png",
+        "figure": "media/images/dot_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls -a ~ | head; test -f ~/.bashrc && echo has_bashrc\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nWhich command reveals .bashrc in a directory listing?",
+      "choices": [
+        "ls",
+        "ls -a",
+        "pwd",
+        "cd .."
+      ],
+      "answer": 1,
+      "explain": "ls -a (or ls -la) includes hidden names.",
+      "difficulty": "easy",
+      "id": "dot_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_easy_30.mp4",
+        "poster": "media/images/dot_easy_30-frame.png",
+        "figure": "media/images/dot_easy_30.png"
+      }
+    },
+    {
+      "id": "dot_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nchmod 600 ~/.ssh/id_rsa 2>/dev/null\n```\n`ls -a` vs `ls -A` difference often is...",
+      "choices": [
+        "-A hides . and .. but shows other dots",
+        "No difference ever",
+        "-A shows only sockets",
+        "-a deletes dots"
+      ],
+      "answer": 0,
+      "explain": "-A omits . and ..",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_medium_01.mp4",
+        "poster": "media/images/dot_medium_01-frame.png",
+        "figure": "media/images/dot_medium_01.png"
+      }
+    },
+    {
+      "id": "dot_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# XDG: ${XDG_CONFIG_HOME:-$HOME/.config}/delta\n```\n`$XDG_CONFIG_HOME` defaults to...",
+      "choices": [
+        "~/.config when unset",
+        "/etc always",
+        "/tmp",
+        "/var/log"
+      ],
+      "answer": 0,
+      "explain": "XDG default config home.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_medium_02.mp4",
+        "poster": "media/images/dot_medium_02-frame.png",
+        "figure": "media/images/dot_medium_02.png"
+      }
+    },
+    {
+      "id": "dot_medium_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nls -a ~ | head; test -f ~/.bashrc && echo has_bashrc\n```\nLogin vs interactive vs non-interactive shells source different files.",
+      "answer": true,
+      "explain": "bash startup is layered.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_medium_03.mp4",
+        "poster": "media/images/dot_medium_03-frame.png",
+        "figure": "media/images/dot_medium_03.png"
+      }
+    },
+    {
+      "id": "dot_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmkdir -p ~/.config/foxtrot\n```\nPutting secrets in `~/.bashrc` is risky because...",
+      "choices": [
+        "It may be readable/shared/backed up carelessly",
+        "bash cannot read it",
+        "It disables PATH",
+        "It clears umask"
+      ],
+      "answer": 0,
+      "explain": "Prefer restricted secret stores.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_medium_04.mp4",
+        "poster": "media/images/dot_medium_04-frame.png",
+        "figure": "media/images/dot_medium_04.png"
+      }
+    },
+    {
+      "id": "dot_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nchmod 600 ~/.ssh/id_rsa 2>/dev/null\n```\nDotfile managers sync...",
+      "choices": [
+        "Config repos into home carefully",
+        "Only /boot",
+        "Only man db",
+        "Only zip central dirs"
+      ],
+      "answer": 0,
+      "explain": "Manage configs as code.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_medium_05.mp4",
+        "poster": "media/images/dot_medium_05-frame.png",
+        "figure": "media/images/dot_medium_05.png"
+      }
+    },
+    {
+      "id": "dot_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# XDG: ${XDG_CONFIG_HOME:-$HOME/.config}/hotel\n```\n`chmod 600 ~/.ssh/id_rsa` matters because...",
+      "choices": [
+        "SSH refuses overly open private keys",
+        "SSH requires 777",
+        "It sets PATH",
+        "It disables keys"
+      ],
+      "answer": 0,
+      "explain": "Key permissions are checked.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_medium_06.mp4",
+        "poster": "media/images/dot_medium_06-frame.png",
+        "figure": "media/images/dot_medium_06.png"
+      }
+    },
+    {
+      "id": "dot_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls -a ~ | head; test -f ~/.bashrc && echo has_bashrc\n```\nProject-local `.env` vs home dotfiles...",
+      "choices": [
+        "Different scopes: project secrets vs user prefs",
+        "Identical always",
+        "Both are kernels",
+        "Both must be executable"
+      ],
+      "answer": 0,
+      "explain": "Scope separation.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_medium_07.mp4",
+        "poster": "media/images/dot_medium_07-frame.png",
+        "figure": "media/images/dot_medium_07.png"
+      }
+    },
+    {
+      "id": "dot_medium_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nmkdir -p ~/.config/juliet\n```\n`rsync -a` can include dotfiles when copying trees.",
+      "answer": true,
+      "explain": "Archive mode includes them.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_medium_08.mp4",
+        "poster": "media/images/dot_medium_08-frame.png",
+        "figure": "media/images/dot_medium_08.png"
+      }
+    },
+    {
+      "id": "dot_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nchmod 600 ~/.ssh/id_rsa 2>/dev/null\n```\n`DIR/*` skipping dots means backups might...",
+      "choices": [
+        "Miss critical .env/.git configs unless handled",
+        "Always include them",
+        "Delete them",
+        "Compress them only"
+      ],
+      "answer": 0,
+      "explain": "Explicit include rules.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_medium_09.mp4",
+        "poster": "media/images/dot_medium_09-frame.png",
+        "figure": "media/images/dot_medium_09.png"
+      }
+    },
+    {
+      "id": "dot_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# XDG: ${XDG_CONFIG_HOME:-$HOME/.config}/bravo\n```\nTroubleshooting 'config ignored' first check...",
+      "choices": [
+        "Which file the tool actually reads + precedence",
+        "Only CPU temp",
+        "Only make -j",
+        "Only zip -l"
+      ],
+      "answer": 0,
+      "explain": "Precedence docs matter.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_medium_10.mp4",
+        "poster": "media/images/dot_medium_10-frame.png",
+        "figure": "media/images/dot_medium_10.png"
+      }
+    },
+    {
+      "id": "dot_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls -a ~ | head; test -f ~/.bashrc && echo has_bashrc\n```\n# Review context: `~/bin/echo` slot 11 variant 1\n`ls -a` vs `ls -A` difference often is...",
+      "choices": [
+        "-A hides . and .. but shows other dots",
+        "No difference ever",
+        "-A shows only sockets",
+        "-a deletes dots"
+      ],
+      "answer": 0,
+      "explain": "-A omits . and ..",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_medium_11.mp4",
+        "poster": "media/images/dot_medium_11-frame.png",
+        "figure": "media/images/dot_medium_11.png"
+      }
+    },
+    {
+      "id": "dot_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmkdir -p ~/.config/delta\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\n`$XDG_CONFIG_HOME` defaults to...",
+      "choices": [
+        "~/.config when unset",
+        "/etc always",
+        "/tmp",
+        "/var/log"
+      ],
+      "answer": 0,
+      "explain": "XDG default config home.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_medium_12.mp4",
+        "poster": "media/images/dot_medium_12-frame.png",
+        "figure": "media/images/dot_medium_12.png"
+      }
+    },
+    {
+      "id": "dot_medium_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nchmod 600 ~/.ssh/id_rsa 2>/dev/null\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\nLogin vs interactive vs non-interactive shells source different files.",
+      "answer": true,
+      "explain": "bash startup is layered.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_medium_13.mp4",
+        "poster": "media/images/dot_medium_13-frame.png",
+        "figure": "media/images/dot_medium_13.png"
+      }
+    },
+    {
+      "id": "dot_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# XDG: ${XDG_CONFIG_HOME:-$HOME/.config}/foxtrot\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\nPutting secrets in `~/.bashrc` is risky because...",
+      "choices": [
+        "It may be readable/shared/backed up carelessly",
+        "bash cannot read it",
+        "It disables PATH",
+        "It clears umask"
+      ],
+      "answer": 0,
+      "explain": "Prefer restricted secret stores.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_medium_14.mp4",
+        "poster": "media/images/dot_medium_14-frame.png",
+        "figure": "media/images/dot_medium_14.png"
+      }
+    },
+    {
+      "id": "dot_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls -a ~ | head; test -f ~/.bashrc && echo has_bashrc\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nDotfile managers sync...",
+      "choices": [
+        "Config repos into home carefully",
+        "Only /boot",
+        "Only man db",
+        "Only zip central dirs"
+      ],
+      "answer": 0,
+      "explain": "Manage configs as code.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_medium_15.mp4",
+        "poster": "media/images/dot_medium_15-frame.png",
+        "figure": "media/images/dot_medium_15.png"
+      }
+    },
+    {
+      "id": "dot_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmkdir -p ~/.config/hotel\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\n`chmod 600 ~/.ssh/id_rsa` matters because...",
+      "choices": [
+        "SSH refuses overly open private keys",
+        "SSH requires 777",
+        "It sets PATH",
+        "It disables keys"
+      ],
+      "answer": 0,
+      "explain": "Key permissions are checked.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_medium_16.mp4",
+        "poster": "media/images/dot_medium_16-frame.png",
+        "figure": "media/images/dot_medium_16.png"
+      }
+    },
+    {
+      "id": "dot_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nchmod 600 ~/.ssh/id_rsa 2>/dev/null\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nProject-local `.env` vs home dotfiles...",
+      "choices": [
+        "Different scopes: project secrets vs user prefs",
+        "Identical always",
+        "Both are kernels",
+        "Both must be executable"
+      ],
+      "answer": 0,
+      "explain": "Scope separation.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_medium_17.mp4",
+        "poster": "media/images/dot_medium_17-frame.png",
+        "figure": "media/images/dot_medium_17.png"
+      }
+    },
+    {
+      "id": "dot_medium_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# XDG: ${XDG_CONFIG_HOME:-$HOME/.config}/juliet\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\n`rsync -a` can include dotfiles when copying trees.",
+      "answer": true,
+      "explain": "Archive mode includes them.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_medium_18.mp4",
+        "poster": "media/images/dot_medium_18-frame.png",
+        "figure": "media/images/dot_medium_18.png"
+      }
+    },
+    {
+      "id": "dot_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls -a ~ | head; test -f ~/.bashrc && echo has_bashrc\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\n`DIR/*` skipping dots means backups might...",
+      "choices": [
+        "Miss critical .env/.git configs unless handled",
+        "Always include them",
+        "Delete them",
+        "Compress them only"
+      ],
+      "answer": 0,
+      "explain": "Explicit include rules.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_medium_19.mp4",
+        "poster": "media/images/dot_medium_19-frame.png",
+        "figure": "media/images/dot_medium_19.png"
+      }
+    },
+    {
+      "id": "dot_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmkdir -p ~/.config/bravo\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\nTroubleshooting 'config ignored' first check...",
+      "choices": [
+        "Which file the tool actually reads + precedence",
+        "Only CPU temp",
+        "Only make -j",
+        "Only zip -l"
+      ],
+      "answer": 0,
+      "explain": "Precedence docs matter.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_medium_20.mp4",
+        "poster": "media/images/dot_medium_20-frame.png",
+        "figure": "media/images/dot_medium_20.png"
+      }
+    },
+    {
+      "id": "dot_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nchmod 600 ~/.ssh/id_rsa 2>/dev/null\n```\n# Review context: `/var/log/golf` slot 21 variant 1\n`ls -a` vs `ls -A` difference often is...",
+      "choices": [
+        "-A hides . and .. but shows other dots",
+        "No difference ever",
+        "-A shows only sockets",
+        "-a deletes dots"
+      ],
+      "answer": 0,
+      "explain": "-A omits . and ..",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_medium_21.mp4",
+        "poster": "media/images/dot_medium_21-frame.png",
+        "figure": "media/images/dot_medium_21.png"
+      }
+    },
+    {
+      "id": "dot_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# XDG: ${XDG_CONFIG_HOME:-$HOME/.config}/delta\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\n`$XDG_CONFIG_HOME` defaults to...",
+      "choices": [
+        "~/.config when unset",
+        "/etc always",
+        "/tmp",
+        "/var/log"
+      ],
+      "answer": 0,
+      "explain": "XDG default config home.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_medium_22.mp4",
+        "poster": "media/images/dot_medium_22-frame.png",
+        "figure": "media/images/dot_medium_22.png"
+      }
+    },
+    {
+      "id": "dot_medium_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nls -a ~ | head; test -f ~/.bashrc && echo has_bashrc\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\nLogin vs interactive vs non-interactive shells source different files.",
+      "answer": true,
+      "explain": "bash startup is layered.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_medium_23.mp4",
+        "poster": "media/images/dot_medium_23-frame.png",
+        "figure": "media/images/dot_medium_23.png"
+      }
+    },
+    {
+      "id": "dot_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmkdir -p ~/.config/foxtrot\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nPutting secrets in `~/.bashrc` is risky because...",
+      "choices": [
+        "It may be readable/shared/backed up carelessly",
+        "bash cannot read it",
+        "It disables PATH",
+        "It clears umask"
+      ],
+      "answer": 0,
+      "explain": "Prefer restricted secret stores.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_medium_24.mp4",
+        "poster": "media/images/dot_medium_24-frame.png",
+        "figure": "media/images/dot_medium_24.png"
+      }
+    },
+    {
+      "id": "dot_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nchmod 600 ~/.ssh/id_rsa 2>/dev/null\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nDotfile managers sync...",
+      "choices": [
+        "Config repos into home carefully",
+        "Only /boot",
+        "Only man db",
+        "Only zip central dirs"
+      ],
+      "answer": 0,
+      "explain": "Manage configs as code.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_medium_25.mp4",
+        "poster": "media/images/dot_medium_25-frame.png",
+        "figure": "media/images/dot_medium_25.png"
+      }
+    },
+    {
+      "id": "dot_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# XDG: ${XDG_CONFIG_HOME:-$HOME/.config}/hotel\n```\n# Review context: `./scripts/delta` slot 26 variant 1\n`chmod 600 ~/.ssh/id_rsa` matters because...",
+      "choices": [
+        "SSH refuses overly open private keys",
+        "SSH requires 777",
+        "It sets PATH",
+        "It disables keys"
+      ],
+      "answer": 0,
+      "explain": "Key permissions are checked.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_medium_26.mp4",
+        "poster": "media/images/dot_medium_26-frame.png",
+        "figure": "media/images/dot_medium_26.png"
+      }
+    },
+    {
+      "id": "dot_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls -a ~ | head; test -f ~/.bashrc && echo has_bashrc\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nProject-local `.env` vs home dotfiles...",
+      "choices": [
+        "Different scopes: project secrets vs user prefs",
+        "Identical always",
+        "Both are kernels",
+        "Both must be executable"
+      ],
+      "answer": 0,
+      "explain": "Scope separation.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_medium_27.mp4",
+        "poster": "media/images/dot_medium_27-frame.png",
+        "figure": "media/images/dot_medium_27.png"
+      }
+    },
+    {
+      "id": "dot_medium_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nmkdir -p ~/.config/juliet\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\n`rsync -a` can include dotfiles when copying trees.",
+      "answer": true,
+      "explain": "Archive mode includes them.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_medium_28.mp4",
+        "poster": "media/images/dot_medium_28-frame.png",
+        "figure": "media/images/dot_medium_28.png"
+      }
+    },
+    {
+      "id": "dot_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nchmod 600 ~/.ssh/id_rsa 2>/dev/null\n```\n# Review context: `~/bin/golf` slot 29 variant 1\n`DIR/*` skipping dots means backups might...",
+      "choices": [
+        "Miss critical .env/.git configs unless handled",
+        "Always include them",
+        "Delete them",
+        "Compress them only"
+      ],
+      "answer": 0,
+      "explain": "Explicit include rules.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_medium_29.mp4",
+        "poster": "media/images/dot_medium_29-frame.png",
+        "figure": "media/images/dot_medium_29.png"
+      }
+    },
+    {
+      "id": "dot_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# XDG: ${XDG_CONFIG_HOME:-$HOME/.config}/bravo\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nTroubleshooting 'config ignored' first check...",
+      "choices": [
+        "Which file the tool actually reads + precedence",
+        "Only CPU temp",
+        "Only make -j",
+        "Only zip -l"
+      ],
+      "answer": 0,
+      "explain": "Precedence docs matter.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_medium_30.mp4",
+        "poster": "media/images/dot_medium_30-frame.png",
+        "figure": "media/images/dot_medium_30.png"
+      }
+    },
+    {
+      "id": "dot_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nchmod 600 ~/.ssh/id_rsa 2>/dev/null\n```\nXDG Base Directory Spec separates...",
+      "choices": [
+        "config, data, cache, state",
+        "Only PATH entries",
+        "Only man sections",
+        "Only GIDs"
+      ],
+      "answer": 0,
+      "explain": "Four+ homes with roles.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_hard_01.mp4",
+        "poster": "media/images/dot_hard_01-frame.png",
+        "figure": "media/images/dot_hard_01.png"
+      }
+    },
+    {
+      "id": "dot_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# XDG: ${XDG_CONFIG_HOME:-$HOME/.config}/delta\n```\nSystemd user units often live under...",
+      "choices": [
+        "~/.config/systemd/user",
+        "/proc only",
+        "/boot only",
+        "~/.cache only"
+      ],
+      "answer": 0,
+      "explain": "User unit paths.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_hard_02.mp4",
+        "poster": "media/images/dot_hard_02-frame.png",
+        "figure": "media/images/dot_hard_02.png"
+      }
+    },
+    {
+      "id": "dot_hard_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nls -a ~ | head; test -f ~/.bashrc && echo has_bashrc\n```\nSome GUIs still use legacy ~/.<app> instead of XDG.",
+      "answer": true,
+      "explain": "Legacy paths persist.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_hard_03.mp4",
+        "poster": "media/images/dot_hard_03-frame.png",
+        "figure": "media/images/dot_hard_03.png"
+      }
+    },
+    {
+      "id": "dot_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmkdir -p ~/.config/foxtrot\n```\nSecure deletion of a dot secret should consider...",
+      "choices": [
+        "Backups, shell history, and editor swap files",
+        "Only rm once without sync",
+        "Only chmod +x",
+        "Only renaming"
+      ],
+      "answer": 0,
+      "explain": "Secrets leak into side channels.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_hard_04.mp4",
+        "poster": "media/images/dot_hard_04-frame.png",
+        "figure": "media/images/dot_hard_04.png"
+      }
+    },
+    {
+      "id": "dot_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nchmod 600 ~/.ssh/id_rsa 2>/dev/null\n```\nNFS home dotfiles can cause...",
+      "choices": [
+        "Latency and lock issues on frequent shell starts",
+        "Faster always",
+        "No side effects",
+        "Disabled bash"
+      ],
+      "answer": 0,
+      "explain": "Network homes hurt rc churn.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_hard_05.mp4",
+        "poster": "media/images/dot_hard_05-frame.png",
+        "figure": "media/images/dot_hard_05.png"
+      }
+    },
+    {
+      "id": "dot_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# XDG: ${XDG_CONFIG_HOME:-$HOME/.config}/hotel\n```\nConditional includes in bashrc based on interactive tests prevent...",
+      "choices": [
+        "Breaking scp/sftp with stdout noise",
+        "All networking",
+        "man pages",
+        "umask"
+      ],
+      "answer": 0,
+      "explain": "Guard interactive-only code.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_hard_06.mp4",
+        "poster": "media/images/dot_hard_06-frame.png",
+        "figure": "media/images/dot_hard_06.png"
+      }
+    },
+    {
+      "id": "dot_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls -a ~ | head; test -f ~/.bashrc && echo has_bashrc\n```\nConfig precedence wars (env > flags > files) require...",
+      "choices": [
+        "Reading the tool's order docs",
+        "Guessing",
+        "Always sudo",
+        "Deleting configs"
+      ],
+      "answer": 0,
+      "explain": "Documented precedence.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_hard_07.mp4",
+        "poster": "media/images/dot_hard_07-frame.png",
+        "figure": "media/images/dot_hard_07.png"
+      }
+    },
+    {
+      "id": "dot_hard_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nmkdir -p ~/.config/juliet\n```\nStoring machine-local paths in shared dotfiles breaks portability.",
+      "answer": true,
+      "explain": "Parameterize hosts.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_hard_08.mp4",
+        "poster": "media/images/dot_hard_08-frame.png",
+        "figure": "media/images/dot_hard_08.png"
+      }
+    },
+    {
+      "id": "dot_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nchmod 600 ~/.ssh/id_rsa 2>/dev/null\n```\nHomedir encryption + mistimed mounts can make apps...",
+      "choices": [
+        "Create fresh empty configs on the blank mount",
+        "Always wait quietly forever",
+        "Disable ls",
+        "Fix mounts"
+      ],
+      "answer": 0,
+      "explain": "Empty home illusions.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_hard_09.mp4",
+        "poster": "media/images/dot_hard_09-frame.png",
+        "figure": "media/images/dot_hard_09.png"
+      }
+    },
+    {
+      "id": "dot_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# XDG: ${XDG_CONFIG_HOME:-$HOME/.config}/bravo\n```\nLab habit: before editing a dotfile...",
+      "choices": [
+        "Backup + know which shell session will load it",
+        "chmod 777 first",
+        "Delete $HOME",
+        "Disable networking"
+      ],
+      "answer": 0,
+      "explain": "Safe edit loop.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_hard_10.mp4",
+        "poster": "media/images/dot_hard_10-frame.png",
+        "figure": "media/images/dot_hard_10.png"
+      }
+    },
+    {
+      "id": "dot_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls -a ~ | head; test -f ~/.bashrc && echo has_bashrc\n```\n# Review context: `~/bin/echo` slot 11 variant 1\nXDG Base Directory Spec separates...",
+      "choices": [
+        "config, data, cache, state",
+        "Only PATH entries",
+        "Only man sections",
+        "Only GIDs"
+      ],
+      "answer": 0,
+      "explain": "Four+ homes with roles.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_hard_11.mp4",
+        "poster": "media/images/dot_hard_11-frame.png",
+        "figure": "media/images/dot_hard_11.png"
+      }
+    },
+    {
+      "id": "dot_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmkdir -p ~/.config/delta\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\nSystemd user units often live under...",
+      "choices": [
+        "~/.config/systemd/user",
+        "/proc only",
+        "/boot only",
+        "~/.cache only"
+      ],
+      "answer": 0,
+      "explain": "User unit paths.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_hard_12.mp4",
+        "poster": "media/images/dot_hard_12-frame.png",
+        "figure": "media/images/dot_hard_12.png"
+      }
+    },
+    {
+      "id": "dot_hard_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nchmod 600 ~/.ssh/id_rsa 2>/dev/null\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\nSome GUIs still use legacy ~/.<app> instead of XDG.",
+      "answer": true,
+      "explain": "Legacy paths persist.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_hard_13.mp4",
+        "poster": "media/images/dot_hard_13-frame.png",
+        "figure": "media/images/dot_hard_13.png"
+      }
+    },
+    {
+      "id": "dot_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# XDG: ${XDG_CONFIG_HOME:-$HOME/.config}/foxtrot\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\nSecure deletion of a dot secret should consider...",
+      "choices": [
+        "Backups, shell history, and editor swap files",
+        "Only rm once without sync",
+        "Only chmod +x",
+        "Only renaming"
+      ],
+      "answer": 0,
+      "explain": "Secrets leak into side channels.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_hard_14.mp4",
+        "poster": "media/images/dot_hard_14-frame.png",
+        "figure": "media/images/dot_hard_14.png"
+      }
+    },
+    {
+      "id": "dot_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls -a ~ | head; test -f ~/.bashrc && echo has_bashrc\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nNFS home dotfiles can cause...",
+      "choices": [
+        "Latency and lock issues on frequent shell starts",
+        "Faster always",
+        "No side effects",
+        "Disabled bash"
+      ],
+      "answer": 0,
+      "explain": "Network homes hurt rc churn.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_hard_15.mp4",
+        "poster": "media/images/dot_hard_15-frame.png",
+        "figure": "media/images/dot_hard_15.png"
+      }
+    },
+    {
+      "id": "dot_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmkdir -p ~/.config/hotel\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nConditional includes in bashrc based on interactive tests prevent...",
+      "choices": [
+        "Breaking scp/sftp with stdout noise",
+        "All networking",
+        "man pages",
+        "umask"
+      ],
+      "answer": 0,
+      "explain": "Guard interactive-only code.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_hard_16.mp4",
+        "poster": "media/images/dot_hard_16-frame.png",
+        "figure": "media/images/dot_hard_16.png"
+      }
+    },
+    {
+      "id": "dot_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nchmod 600 ~/.ssh/id_rsa 2>/dev/null\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nConfig precedence wars (env > flags > files) require...",
+      "choices": [
+        "Reading the tool's order docs",
+        "Guessing",
+        "Always sudo",
+        "Deleting configs"
+      ],
+      "answer": 0,
+      "explain": "Documented precedence.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_hard_17.mp4",
+        "poster": "media/images/dot_hard_17-frame.png",
+        "figure": "media/images/dot_hard_17.png"
+      }
+    },
+    {
+      "id": "dot_hard_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# XDG: ${XDG_CONFIG_HOME:-$HOME/.config}/juliet\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nStoring machine-local paths in shared dotfiles breaks portability.",
+      "answer": true,
+      "explain": "Parameterize hosts.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_hard_18.mp4",
+        "poster": "media/images/dot_hard_18-frame.png",
+        "figure": "media/images/dot_hard_18.png"
+      }
+    },
+    {
+      "id": "dot_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls -a ~ | head; test -f ~/.bashrc && echo has_bashrc\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nHomedir encryption + mistimed mounts can make apps...",
+      "choices": [
+        "Create fresh empty configs on the blank mount",
+        "Always wait quietly forever",
+        "Disable ls",
+        "Fix mounts"
+      ],
+      "answer": 0,
+      "explain": "Empty home illusions.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_hard_19.mp4",
+        "poster": "media/images/dot_hard_19-frame.png",
+        "figure": "media/images/dot_hard_19.png"
+      }
+    },
+    {
+      "id": "dot_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmkdir -p ~/.config/bravo\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\nLab habit: before editing a dotfile...",
+      "choices": [
+        "Backup + know which shell session will load it",
+        "chmod 777 first",
+        "Delete $HOME",
+        "Disable networking"
+      ],
+      "answer": 0,
+      "explain": "Safe edit loop.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_hard_20.mp4",
+        "poster": "media/images/dot_hard_20-frame.png",
+        "figure": "media/images/dot_hard_20.png"
+      }
+    },
+    {
+      "id": "dot_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nchmod 600 ~/.ssh/id_rsa 2>/dev/null\n```\n# Review context: `/var/log/golf` slot 21 variant 1\nXDG Base Directory Spec separates...",
+      "choices": [
+        "config, data, cache, state",
+        "Only PATH entries",
+        "Only man sections",
+        "Only GIDs"
+      ],
+      "answer": 0,
+      "explain": "Four+ homes with roles.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_hard_21.mp4",
+        "poster": "media/images/dot_hard_21-frame.png",
+        "figure": "media/images/dot_hard_21.png"
+      }
+    },
+    {
+      "id": "dot_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# XDG: ${XDG_CONFIG_HOME:-$HOME/.config}/delta\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\nSystemd user units often live under...",
+      "choices": [
+        "~/.config/systemd/user",
+        "/proc only",
+        "/boot only",
+        "~/.cache only"
+      ],
+      "answer": 0,
+      "explain": "User unit paths.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_hard_22.mp4",
+        "poster": "media/images/dot_hard_22-frame.png",
+        "figure": "media/images/dot_hard_22.png"
+      }
+    },
+    {
+      "id": "dot_hard_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nls -a ~ | head; test -f ~/.bashrc && echo has_bashrc\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\nSome GUIs still use legacy ~/.<app> instead of XDG.",
+      "answer": true,
+      "explain": "Legacy paths persist.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_hard_23.mp4",
+        "poster": "media/images/dot_hard_23-frame.png",
+        "figure": "media/images/dot_hard_23.png"
+      }
+    },
+    {
+      "id": "dot_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmkdir -p ~/.config/foxtrot\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nSecure deletion of a dot secret should consider...",
+      "choices": [
+        "Backups, shell history, and editor swap files",
+        "Only rm once without sync",
+        "Only chmod +x",
+        "Only renaming"
+      ],
+      "answer": 0,
+      "explain": "Secrets leak into side channels.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_hard_24.mp4",
+        "poster": "media/images/dot_hard_24-frame.png",
+        "figure": "media/images/dot_hard_24.png"
+      }
+    },
+    {
+      "id": "dot_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nchmod 600 ~/.ssh/id_rsa 2>/dev/null\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nNFS home dotfiles can cause...",
+      "choices": [
+        "Latency and lock issues on frequent shell starts",
+        "Faster always",
+        "No side effects",
+        "Disabled bash"
+      ],
+      "answer": 0,
+      "explain": "Network homes hurt rc churn.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_hard_25.mp4",
+        "poster": "media/images/dot_hard_25-frame.png",
+        "figure": "media/images/dot_hard_25.png"
+      }
+    },
+    {
+      "id": "dot_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# XDG: ${XDG_CONFIG_HOME:-$HOME/.config}/hotel\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nConditional includes in bashrc based on interactive tests prevent...",
+      "choices": [
+        "Breaking scp/sftp with stdout noise",
+        "All networking",
+        "man pages",
+        "umask"
+      ],
+      "answer": 0,
+      "explain": "Guard interactive-only code.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_hard_26.mp4",
+        "poster": "media/images/dot_hard_26-frame.png",
+        "figure": "media/images/dot_hard_26.png"
+      }
+    },
+    {
+      "id": "dot_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls -a ~ | head; test -f ~/.bashrc && echo has_bashrc\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nConfig precedence wars (env > flags > files) require...",
+      "choices": [
+        "Reading the tool's order docs",
+        "Guessing",
+        "Always sudo",
+        "Deleting configs"
+      ],
+      "answer": 0,
+      "explain": "Documented precedence.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_hard_27.mp4",
+        "poster": "media/images/dot_hard_27-frame.png",
+        "figure": "media/images/dot_hard_27.png"
+      }
+    },
+    {
+      "id": "dot_hard_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nmkdir -p ~/.config/juliet\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nStoring machine-local paths in shared dotfiles breaks portability.",
+      "answer": true,
+      "explain": "Parameterize hosts.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_hard_28.mp4",
+        "poster": "media/images/dot_hard_28-frame.png",
+        "figure": "media/images/dot_hard_28.png"
+      }
+    },
+    {
+      "id": "dot_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nchmod 600 ~/.ssh/id_rsa 2>/dev/null\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nHomedir encryption + mistimed mounts can make apps...",
+      "choices": [
+        "Create fresh empty configs on the blank mount",
+        "Always wait quietly forever",
+        "Disable ls",
+        "Fix mounts"
+      ],
+      "answer": 0,
+      "explain": "Empty home illusions.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_hard_29.mp4",
+        "poster": "media/images/dot_hard_29-frame.png",
+        "figure": "media/images/dot_hard_29.png"
+      }
+    },
+    {
+      "id": "dot_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# XDG: ${XDG_CONFIG_HOME:-$HOME/.config}/bravo\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nLab habit: before editing a dotfile...",
+      "choices": [
+        "Backup + know which shell session will load it",
+        "chmod 777 first",
+        "Delete $HOME",
+        "Disable networking"
+      ],
+      "answer": 0,
+      "explain": "Safe edit loop.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/dot_hard_30.mp4",
+        "poster": "media/images/dot_hard_30-frame.png",
+        "figure": "media/images/dot_hard_30.png"
+      }
+    }
+  ]
+}

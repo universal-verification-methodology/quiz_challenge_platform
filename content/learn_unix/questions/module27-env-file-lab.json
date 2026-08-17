@@ -1,0 +1,1698 @@
+{
+  "module": "module27-env-file-lab",
+  "title": ".env literacy",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# gitignore .env; commit .env.example\n```\nWhat does source sample.env do?",
+      "choices": [
+        "Deletes the file",
+        "Runs the file in the current shell so KEY=value lines become variables",
+        "Commits secrets to Git",
+        "Formats the disk"
+      ],
+      "answer": 1,
+      "explain": "source (or .) executes the file in the current shell, setting variables.",
+      "difficulty": "easy",
+      "id": "env_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_easy_01.mp4",
+        "poster": "media/images/env_easy_01-frame.png",
+        "figure": "media/images/env_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -a; [ -f .env ] && . ./.env; set +a; echo \"${ECHO:-unset}\"\n```\nWhich file is usually safe to commit?",
+      "choices": [
+        ".env with API tokens",
+        ".env.example with documented keys and safe defaults",
+        "Any file named secret.env",
+        "Only binary .env files"
+      ],
+      "answer": 1,
+      "explain": "Commit the example template; gitignore real .env / .env.local with secrets.",
+      "difficulty": "easy",
+      "id": "env_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_easy_02.mp4",
+        "poster": "media/images/env_easy_02-frame.png",
+        "figure": "media/images/env_easy_02.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -E '^[A-Z0-9_]+=' .env.example | cut -d= -f1\n```\nKEY=value lines should not have spaces around the equals sign.",
+      "answer": true,
+      "explain": "Spaces break simple KEY=value parsing when sourcing.",
+      "difficulty": "easy",
+      "id": "env_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_easy_03.mp4",
+        "poster": "media/images/env_easy_03-frame.png",
+        "figure": "media/images/env_easy_03.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nexport GOLF=7; printenv GOLF\n```\nIf make fails with TOOLS unset, a good first step is...",
+      "choices": [
+        "Rewrite all RTL",
+        "Source or export the project env (TOOLS path) then retry",
+        "rm -rf .git",
+        "Disable Make forever"
+      ],
+      "answer": 1,
+      "explain": "Missing TOOLS is an env literacy issue-load the file before blaming design.",
+      "difficulty": "easy",
+      "id": "env_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_easy_04.mp4",
+        "poster": "media/images/env_easy_04-frame.png",
+        "figure": "media/images/env_easy_04.png"
+      }
+    },
+    {
+      "id": "env_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# gitignore .env; commit .env.example\n```\nA `.env` file typically stores...",
+      "choices": [
+        "Key=value configuration for apps",
+        "Compiled binaries",
+        "Man pages",
+        "Kernel modules"
+      ],
+      "answer": 0,
+      "explain": ".env = config pairs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_easy_05.mp4",
+        "poster": "media/images/env_easy_05-frame.png",
+        "figure": "media/images/env_easy_05.png"
+      }
+    },
+    {
+      "id": "env_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -a; [ -f .env ] && . ./.env; set +a; echo \"${INDIA:-unset}\"\n```\n`.env` should usually be...",
+      "choices": [
+        "Gitignored if it holds secrets",
+        "Committed with production secrets",
+        "World-executable",
+        "Named Makefile"
+      ],
+      "answer": 0,
+      "explain": "Don't commit secrets.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_easy_06.mp4",
+        "poster": "media/images/env_easy_06-frame.png",
+        "figure": "media/images/env_easy_06.png"
+      }
+    },
+    {
+      "id": "env_easy_07",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -E '^[A-Z0-9_]+=' .env.example | cut -d= -f1\n```\n`.env.example` documents required keys without secret values.",
+      "answer": true,
+      "explain": "Template without secrets.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_easy_07.mp4",
+        "poster": "media/images/env_easy_07-frame.png",
+        "figure": "media/images/env_easy_07.png"
+      }
+    },
+    {
+      "id": "env_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nexport ALPHA=11; printenv ALPHA\n```\n`export KEY8=val8` sets...",
+      "choices": [
+        "An environment variable in the shell",
+        "A man section",
+        "A umask only",
+        "A signal"
+      ],
+      "answer": 0,
+      "explain": "export publishes env.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_easy_08.mp4",
+        "poster": "media/images/env_easy_08-frame.png",
+        "figure": "media/images/env_easy_08.png"
+      }
+    },
+    {
+      "id": "env_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# gitignore .env; commit .env.example\n```\n`echo $KEY9` prints...",
+      "choices": [
+        "The value of KEY9",
+        "Only PID",
+        "Only cwd",
+        "Only mode"
+      ],
+      "answer": 0,
+      "explain": "Expand env/shell var.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_easy_09.mp4",
+        "poster": "media/images/env_easy_09-frame.png",
+        "figure": "media/images/env_easy_09.png"
+      }
+    },
+    {
+      "id": "env_easy_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -a; [ -f .env ] && . ./.env; set +a; echo \"${CHARLIE:-unset}\"\n```\nApps often load `.env` via...",
+      "choices": [
+        "Libraries/loaders, not magic by the kernel",
+        "The CPU microcode",
+        "man automatically",
+        "zip central directory"
+      ],
+      "answer": 0,
+      "explain": "Loaders read .env.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_easy_10.mp4",
+        "poster": "media/images/env_easy_10-frame.png",
+        "figure": "media/images/env_easy_10.png"
+      }
+    },
+    {
+      "id": "env_easy_11",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -E '^[A-Z0-9_]+=' .env.example | cut -d= -f1\n```\nEnvironment variables are process state inherited by children.",
+      "answer": true,
+      "explain": "Inheritance model.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_easy_11.mp4",
+        "poster": "media/images/env_easy_11-frame.png",
+        "figure": "media/images/env_easy_11.png"
+      }
+    },
+    {
+      "id": "env_easy_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nexport ECHO=15; printenv ECHO\n```\nSpaces in values usually need...",
+      "choices": [
+        "Quotes",
+        "Tabs only",
+        "Root",
+        "Sticky bit"
+      ],
+      "answer": 0,
+      "explain": "Quote values.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_easy_12.mp4",
+        "poster": "media/images/env_easy_12-frame.png",
+        "figure": "media/images/env_easy_12.png"
+      }
+    },
+    {
+      "id": "env_easy_13",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# gitignore .env; commit .env.example\n```\n`unset KEY13` removes...",
+      "choices": [
+        "Variable KEY13 from the environment/shell",
+        "A file named KEY13",
+        "User KEY13",
+        "Signal KEY13"
+      ],
+      "answer": 0,
+      "explain": "unset clears.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_easy_13.mp4",
+        "poster": "media/images/env_easy_13-frame.png",
+        "figure": "media/images/env_easy_13.png"
+      }
+    },
+    {
+      "id": "env_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -a; [ -f .env ] && . ./.env; set +a; echo \"${GOLF:-unset}\"\n```\nPrefer `.env.example` keys matching...",
+      "choices": [
+        "What the app actually reads",
+        "Random old keys",
+        "Only PATH",
+        "Only HOME"
+      ],
+      "answer": 0,
+      "explain": "Keep templates accurate.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_easy_14.mp4",
+        "poster": "media/images/env_easy_14-frame.png",
+        "figure": "media/images/env_easy_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -E '^[A-Z0-9_]+=' .env.example | cut -d= -f1\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nWhat does source sample.env do?",
+      "choices": [
+        "Deletes the file",
+        "Runs the file in the current shell so KEY=value lines become variables",
+        "Commits secrets to Git",
+        "Formats the disk"
+      ],
+      "answer": 1,
+      "explain": "source (or .) executes the file in the current shell, setting variables.",
+      "difficulty": "easy",
+      "id": "env_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_easy_15.mp4",
+        "poster": "media/images/env_easy_15-frame.png",
+        "figure": "media/images/env_easy_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nexport INDIA=19; printenv INDIA\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nWhich file is usually safe to commit?",
+      "choices": [
+        ".env with API tokens",
+        ".env.example with documented keys and safe defaults",
+        "Any file named secret.env",
+        "Only binary .env files"
+      ],
+      "answer": 1,
+      "explain": "Commit the example template; gitignore real .env / .env.local with secrets.",
+      "difficulty": "easy",
+      "id": "env_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_easy_16.mp4",
+        "poster": "media/images/env_easy_16-frame.png",
+        "figure": "media/images/env_easy_16.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# gitignore .env; commit .env.example\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nKEY=value lines should not have spaces around the equals sign.",
+      "answer": true,
+      "explain": "Spaces break simple KEY=value parsing when sourcing.",
+      "difficulty": "easy",
+      "id": "env_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_easy_17.mp4",
+        "poster": "media/images/env_easy_17-frame.png",
+        "figure": "media/images/env_easy_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -a; [ -f .env ] && . ./.env; set +a; echo \"${ALPHA:-unset}\"\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nIf make fails with TOOLS unset, a good first step is...",
+      "choices": [
+        "Rewrite all RTL",
+        "Source or export the project env (TOOLS path) then retry",
+        "rm -rf .git",
+        "Disable Make forever"
+      ],
+      "answer": 1,
+      "explain": "Missing TOOLS is an env literacy issue-load the file before blaming design.",
+      "difficulty": "easy",
+      "id": "env_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_easy_18.mp4",
+        "poster": "media/images/env_easy_18-frame.png",
+        "figure": "media/images/env_easy_18.png"
+      }
+    },
+    {
+      "id": "env_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -E '^[A-Z0-9_]+=' .env.example | cut -d= -f1\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nA `.env` file typically stores...",
+      "choices": [
+        "Key=value configuration for apps",
+        "Compiled binaries",
+        "Man pages",
+        "Kernel modules"
+      ],
+      "answer": 0,
+      "explain": ".env = config pairs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_easy_19.mp4",
+        "poster": "media/images/env_easy_19-frame.png",
+        "figure": "media/images/env_easy_19.png"
+      }
+    },
+    {
+      "id": "env_easy_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nexport CHARLIE=23; printenv CHARLIE\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\n`.env` should usually be...",
+      "choices": [
+        "Gitignored if it holds secrets",
+        "Committed with production secrets",
+        "World-executable",
+        "Named Makefile"
+      ],
+      "answer": 0,
+      "explain": "Don't commit secrets.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_easy_20.mp4",
+        "poster": "media/images/env_easy_20-frame.png",
+        "figure": "media/images/env_easy_20.png"
+      }
+    },
+    {
+      "id": "env_easy_21",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# gitignore .env; commit .env.example\n```\n# Review context: `/var/log/golf` slot 21 variant 1\n`.env.example` documents required keys without secret values.",
+      "answer": true,
+      "explain": "Template without secrets.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_easy_21.mp4",
+        "poster": "media/images/env_easy_21-frame.png",
+        "figure": "media/images/env_easy_21.png"
+      }
+    },
+    {
+      "id": "env_easy_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -a; [ -f .env ] && . ./.env; set +a; echo \"${ECHO:-unset}\"\n```\n`export KEY22=val22` sets...",
+      "choices": [
+        "An environment variable in the shell",
+        "A man section",
+        "A umask only",
+        "A signal"
+      ],
+      "answer": 0,
+      "explain": "export publishes env.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_easy_22.mp4",
+        "poster": "media/images/env_easy_22-frame.png",
+        "figure": "media/images/env_easy_22.png"
+      }
+    },
+    {
+      "id": "env_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -E '^[A-Z0-9_]+=' .env.example | cut -d= -f1\n```\n`echo $KEY23` prints...",
+      "choices": [
+        "The value of KEY23",
+        "Only PID",
+        "Only cwd",
+        "Only mode"
+      ],
+      "answer": 0,
+      "explain": "Expand env/shell var.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_easy_23.mp4",
+        "poster": "media/images/env_easy_23-frame.png",
+        "figure": "media/images/env_easy_23.png"
+      }
+    },
+    {
+      "id": "env_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nexport GOLF=27; printenv GOLF\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nApps often load `.env` via...",
+      "choices": [
+        "Libraries/loaders, not magic by the kernel",
+        "The CPU microcode",
+        "man automatically",
+        "zip central directory"
+      ],
+      "answer": 0,
+      "explain": "Loaders read .env.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_easy_24.mp4",
+        "poster": "media/images/env_easy_24-frame.png",
+        "figure": "media/images/env_easy_24.png"
+      }
+    },
+    {
+      "id": "env_easy_25",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# gitignore .env; commit .env.example\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nEnvironment variables are process state inherited by children.",
+      "answer": true,
+      "explain": "Inheritance model.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_easy_25.mp4",
+        "poster": "media/images/env_easy_25-frame.png",
+        "figure": "media/images/env_easy_25.png"
+      }
+    },
+    {
+      "id": "env_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -a; [ -f .env ] && . ./.env; set +a; echo \"${INDIA:-unset}\"\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nSpaces in values usually need...",
+      "choices": [
+        "Quotes",
+        "Tabs only",
+        "Root",
+        "Sticky bit"
+      ],
+      "answer": 0,
+      "explain": "Quote values.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_easy_26.mp4",
+        "poster": "media/images/env_easy_26-frame.png",
+        "figure": "media/images/env_easy_26.png"
+      }
+    },
+    {
+      "id": "env_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -E '^[A-Z0-9_]+=' .env.example | cut -d= -f1\n```\n`unset KEY27` removes...",
+      "choices": [
+        "Variable KEY27 from the environment/shell",
+        "A file named KEY27",
+        "User KEY27",
+        "Signal KEY27"
+      ],
+      "answer": 0,
+      "explain": "unset clears.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_easy_27.mp4",
+        "poster": "media/images/env_easy_27-frame.png",
+        "figure": "media/images/env_easy_27.png"
+      }
+    },
+    {
+      "id": "env_easy_28",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nexport ALPHA=31; printenv ALPHA\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nPrefer `.env.example` keys matching...",
+      "choices": [
+        "What the app actually reads",
+        "Random old keys",
+        "Only PATH",
+        "Only HOME"
+      ],
+      "answer": 0,
+      "explain": "Keep templates accurate.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_easy_28.mp4",
+        "poster": "media/images/env_easy_28-frame.png",
+        "figure": "media/images/env_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# gitignore .env; commit .env.example\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nWhat does source sample.env do?",
+      "choices": [
+        "Deletes the file",
+        "Runs the file in the current shell so KEY=value lines become variables",
+        "Commits secrets to Git",
+        "Formats the disk"
+      ],
+      "answer": 1,
+      "explain": "source (or .) executes the file in the current shell, setting variables.",
+      "difficulty": "easy",
+      "id": "env_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_easy_29.mp4",
+        "poster": "media/images/env_easy_29-frame.png",
+        "figure": "media/images/env_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -a; [ -f .env ] && . ./.env; set +a; echo \"${CHARLIE:-unset}\"\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nWhich file is usually safe to commit?",
+      "choices": [
+        ".env with API tokens",
+        ".env.example with documented keys and safe defaults",
+        "Any file named secret.env",
+        "Only binary .env files"
+      ],
+      "answer": 1,
+      "explain": "Commit the example template; gitignore real .env / .env.local with secrets.",
+      "difficulty": "easy",
+      "id": "env_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_easy_30.mp4",
+        "poster": "media/images/env_easy_30-frame.png",
+        "figure": "media/images/env_easy_30.png"
+      }
+    },
+    {
+      "id": "env_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nexport CHARLIE=3; printenv CHARLIE\n```\nPrecedence often is...",
+      "choices": [
+        "Process env / flags override file defaults (tool-specific)",
+        "File always wins",
+        "Random",
+        "Only Makefile"
+      ],
+      "answer": 0,
+      "explain": "Know override order.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_medium_01.mp4",
+        "poster": "media/images/env_medium_01-frame.png",
+        "figure": "media/images/env_medium_01.png"
+      }
+    },
+    {
+      "id": "env_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# gitignore .env; commit .env.example\n```\nMultiline values in `.env` are...",
+      "choices": [
+        "Tool-dependent; check your loader",
+        "Universal identical",
+        "Forbidden by kernels",
+        "Stored in PATH"
+      ],
+      "answer": 0,
+      "explain": "Dialect differences.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_medium_02.mp4",
+        "poster": "media/images/env_medium_02-frame.png",
+        "figure": "media/images/env_medium_02.png"
+      }
+    },
+    {
+      "id": "env_medium_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nset -a; [ -f .env ] && . ./.env; set +a; echo \"${ECHO:-unset}\"\n```\n`set -a; source .env; set +a` can export sourced vars (careful).",
+      "answer": true,
+      "explain": "allexport pattern.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_medium_03.mp4",
+        "poster": "media/images/env_medium_03-frame.png",
+        "figure": "media/images/env_medium_03.png"
+      }
+    },
+    {
+      "id": "env_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -E '^[A-Z0-9_]+=' .env.example | cut -d= -f1\n```\nNever `source` untrusted `.env` because...",
+      "choices": [
+        "It can execute shell code if not a strict parser",
+        "source only reads integers",
+        "env files cannot harm",
+        "bash ignores source"
+      ],
+      "answer": 0,
+      "explain": "Parsing vs sourcing.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_medium_04.mp4",
+        "poster": "media/images/env_medium_04-frame.png",
+        "figure": "media/images/env_medium_04.png"
+      }
+    },
+    {
+      "id": "env_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nexport GOLF=7; printenv GOLF\n```\nDocker `--env-file` loads...",
+      "choices": [
+        "Env pairs into the container",
+        "Tar archives",
+        "Man pages",
+        "Make rules"
+      ],
+      "answer": 0,
+      "explain": "Container env files.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_medium_05.mp4",
+        "poster": "media/images/env_medium_05-frame.png",
+        "figure": "media/images/env_medium_05.png"
+      }
+    },
+    {
+      "id": "env_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# gitignore .env; commit .env.example\n```\nDifferentiate config vs secrets by...",
+      "choices": [
+        "Separate stores / permissions / injection methods",
+        "Putting both in README",
+        "Using the same 777 file",
+        "Exporting in PS1"
+      ],
+      "answer": 0,
+      "explain": "Split secret handling.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_medium_06.mp4",
+        "poster": "media/images/env_medium_06-frame.png",
+        "figure": "media/images/env_medium_06.png"
+      }
+    },
+    {
+      "id": "env_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -a; [ -f .env ] && . ./.env; set +a; echo \"${INDIA:-unset}\"\n```\nEmpty string vs unset can...",
+      "choices": [
+        "Change app behavior differently",
+        "Always identical",
+        "Crash kernel",
+        "Clear disks"
+      ],
+      "answer": 0,
+      "explain": "Empty != unset.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_medium_07.mp4",
+        "poster": "media/images/env_medium_07-frame.png",
+        "figure": "media/images/env_medium_07.png"
+      }
+    },
+    {
+      "id": "env_medium_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -E '^[A-Z0-9_]+=' .env.example | cut -d= -f1\n```\nShell startup files exporting secrets risk leakage to child processes.",
+      "answer": true,
+      "explain": "Broad inheritance.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_medium_08.mp4",
+        "poster": "media/images/env_medium_08-frame.png",
+        "figure": "media/images/env_medium_08.png"
+      }
+    },
+    {
+      "id": "env_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nexport ALPHA=11; printenv ALPHA\n```\n`env` command runs a program with...",
+      "choices": [
+        "A modified environment",
+        "Only root",
+        "Cleared disks",
+        "Disabled networking always"
+      ],
+      "answer": 0,
+      "explain": "env wrapper.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_medium_09.mp4",
+        "poster": "media/images/env_medium_09-frame.png",
+        "figure": "media/images/env_medium_09.png"
+      }
+    },
+    {
+      "id": "env_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# gitignore .env; commit .env.example\n```\nCI secret variables should be...",
+      "choices": [
+        "Masked/scoped, not printed",
+        "Echoed in logs for debug always",
+        "Committed",
+        "World-readable files"
+      ],
+      "answer": 0,
+      "explain": "CI secret hygiene.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_medium_10.mp4",
+        "poster": "media/images/env_medium_10-frame.png",
+        "figure": "media/images/env_medium_10.png"
+      }
+    },
+    {
+      "id": "env_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -a; [ -f .env ] && . ./.env; set +a; echo \"${CHARLIE:-unset}\"\n```\n# Review context: `~/bin/echo` slot 11 variant 1\nPrecedence often is...",
+      "choices": [
+        "Process env / flags override file defaults (tool-specific)",
+        "File always wins",
+        "Random",
+        "Only Makefile"
+      ],
+      "answer": 0,
+      "explain": "Know override order.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_medium_11.mp4",
+        "poster": "media/images/env_medium_11-frame.png",
+        "figure": "media/images/env_medium_11.png"
+      }
+    },
+    {
+      "id": "env_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -E '^[A-Z0-9_]+=' .env.example | cut -d= -f1\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\nMultiline values in `.env` are...",
+      "choices": [
+        "Tool-dependent; check your loader",
+        "Universal identical",
+        "Forbidden by kernels",
+        "Stored in PATH"
+      ],
+      "answer": 0,
+      "explain": "Dialect differences.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_medium_12.mp4",
+        "poster": "media/images/env_medium_12-frame.png",
+        "figure": "media/images/env_medium_12.png"
+      }
+    },
+    {
+      "id": "env_medium_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nexport ECHO=15; printenv ECHO\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\n`set -a; source .env; set +a` can export sourced vars (careful).",
+      "answer": true,
+      "explain": "allexport pattern.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_medium_13.mp4",
+        "poster": "media/images/env_medium_13-frame.png",
+        "figure": "media/images/env_medium_13.png"
+      }
+    },
+    {
+      "id": "env_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# gitignore .env; commit .env.example\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\nNever `source` untrusted `.env` because...",
+      "choices": [
+        "It can execute shell code if not a strict parser",
+        "source only reads integers",
+        "env files cannot harm",
+        "bash ignores source"
+      ],
+      "answer": 0,
+      "explain": "Parsing vs sourcing.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_medium_14.mp4",
+        "poster": "media/images/env_medium_14-frame.png",
+        "figure": "media/images/env_medium_14.png"
+      }
+    },
+    {
+      "id": "env_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -a; [ -f .env ] && . ./.env; set +a; echo \"${GOLF:-unset}\"\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nDocker `--env-file` loads...",
+      "choices": [
+        "Env pairs into the container",
+        "Tar archives",
+        "Man pages",
+        "Make rules"
+      ],
+      "answer": 0,
+      "explain": "Container env files.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_medium_15.mp4",
+        "poster": "media/images/env_medium_15-frame.png",
+        "figure": "media/images/env_medium_15.png"
+      }
+    },
+    {
+      "id": "env_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -E '^[A-Z0-9_]+=' .env.example | cut -d= -f1\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nDifferentiate config vs secrets by...",
+      "choices": [
+        "Separate stores / permissions / injection methods",
+        "Putting both in README",
+        "Using the same 777 file",
+        "Exporting in PS1"
+      ],
+      "answer": 0,
+      "explain": "Split secret handling.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_medium_16.mp4",
+        "poster": "media/images/env_medium_16-frame.png",
+        "figure": "media/images/env_medium_16.png"
+      }
+    },
+    {
+      "id": "env_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nexport INDIA=19; printenv INDIA\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nEmpty string vs unset can...",
+      "choices": [
+        "Change app behavior differently",
+        "Always identical",
+        "Crash kernel",
+        "Clear disks"
+      ],
+      "answer": 0,
+      "explain": "Empty != unset.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_medium_17.mp4",
+        "poster": "media/images/env_medium_17-frame.png",
+        "figure": "media/images/env_medium_17.png"
+      }
+    },
+    {
+      "id": "env_medium_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# gitignore .env; commit .env.example\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nShell startup files exporting secrets risk leakage to child processes.",
+      "answer": true,
+      "explain": "Broad inheritance.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_medium_18.mp4",
+        "poster": "media/images/env_medium_18-frame.png",
+        "figure": "media/images/env_medium_18.png"
+      }
+    },
+    {
+      "id": "env_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -a; [ -f .env ] && . ./.env; set +a; echo \"${ALPHA:-unset}\"\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\n`env` command runs a program with...",
+      "choices": [
+        "A modified environment",
+        "Only root",
+        "Cleared disks",
+        "Disabled networking always"
+      ],
+      "answer": 0,
+      "explain": "env wrapper.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_medium_19.mp4",
+        "poster": "media/images/env_medium_19-frame.png",
+        "figure": "media/images/env_medium_19.png"
+      }
+    },
+    {
+      "id": "env_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -E '^[A-Z0-9_]+=' .env.example | cut -d= -f1\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\nCI secret variables should be...",
+      "choices": [
+        "Masked/scoped, not printed",
+        "Echoed in logs for debug always",
+        "Committed",
+        "World-readable files"
+      ],
+      "answer": 0,
+      "explain": "CI secret hygiene.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_medium_20.mp4",
+        "poster": "media/images/env_medium_20-frame.png",
+        "figure": "media/images/env_medium_20.png"
+      }
+    },
+    {
+      "id": "env_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nexport CHARLIE=23; printenv CHARLIE\n```\n# Review context: `/var/log/golf` slot 21 variant 1\nPrecedence often is...",
+      "choices": [
+        "Process env / flags override file defaults (tool-specific)",
+        "File always wins",
+        "Random",
+        "Only Makefile"
+      ],
+      "answer": 0,
+      "explain": "Know override order.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_medium_21.mp4",
+        "poster": "media/images/env_medium_21-frame.png",
+        "figure": "media/images/env_medium_21.png"
+      }
+    },
+    {
+      "id": "env_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# gitignore .env; commit .env.example\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\nMultiline values in `.env` are...",
+      "choices": [
+        "Tool-dependent; check your loader",
+        "Universal identical",
+        "Forbidden by kernels",
+        "Stored in PATH"
+      ],
+      "answer": 0,
+      "explain": "Dialect differences.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_medium_22.mp4",
+        "poster": "media/images/env_medium_22-frame.png",
+        "figure": "media/images/env_medium_22.png"
+      }
+    },
+    {
+      "id": "env_medium_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nset -a; [ -f .env ] && . ./.env; set +a; echo \"${ECHO:-unset}\"\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\n`set -a; source .env; set +a` can export sourced vars (careful).",
+      "answer": true,
+      "explain": "allexport pattern.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_medium_23.mp4",
+        "poster": "media/images/env_medium_23-frame.png",
+        "figure": "media/images/env_medium_23.png"
+      }
+    },
+    {
+      "id": "env_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -E '^[A-Z0-9_]+=' .env.example | cut -d= -f1\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nNever `source` untrusted `.env` because...",
+      "choices": [
+        "It can execute shell code if not a strict parser",
+        "source only reads integers",
+        "env files cannot harm",
+        "bash ignores source"
+      ],
+      "answer": 0,
+      "explain": "Parsing vs sourcing.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_medium_24.mp4",
+        "poster": "media/images/env_medium_24-frame.png",
+        "figure": "media/images/env_medium_24.png"
+      }
+    },
+    {
+      "id": "env_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nexport GOLF=27; printenv GOLF\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nDocker `--env-file` loads...",
+      "choices": [
+        "Env pairs into the container",
+        "Tar archives",
+        "Man pages",
+        "Make rules"
+      ],
+      "answer": 0,
+      "explain": "Container env files.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_medium_25.mp4",
+        "poster": "media/images/env_medium_25-frame.png",
+        "figure": "media/images/env_medium_25.png"
+      }
+    },
+    {
+      "id": "env_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# gitignore .env; commit .env.example\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nDifferentiate config vs secrets by...",
+      "choices": [
+        "Separate stores / permissions / injection methods",
+        "Putting both in README",
+        "Using the same 777 file",
+        "Exporting in PS1"
+      ],
+      "answer": 0,
+      "explain": "Split secret handling.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_medium_26.mp4",
+        "poster": "media/images/env_medium_26-frame.png",
+        "figure": "media/images/env_medium_26.png"
+      }
+    },
+    {
+      "id": "env_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -a; [ -f .env ] && . ./.env; set +a; echo \"${INDIA:-unset}\"\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nEmpty string vs unset can...",
+      "choices": [
+        "Change app behavior differently",
+        "Always identical",
+        "Crash kernel",
+        "Clear disks"
+      ],
+      "answer": 0,
+      "explain": "Empty != unset.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_medium_27.mp4",
+        "poster": "media/images/env_medium_27-frame.png",
+        "figure": "media/images/env_medium_27.png"
+      }
+    },
+    {
+      "id": "env_medium_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -E '^[A-Z0-9_]+=' .env.example | cut -d= -f1\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nShell startup files exporting secrets risk leakage to child processes.",
+      "answer": true,
+      "explain": "Broad inheritance.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_medium_28.mp4",
+        "poster": "media/images/env_medium_28-frame.png",
+        "figure": "media/images/env_medium_28.png"
+      }
+    },
+    {
+      "id": "env_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nexport ALPHA=31; printenv ALPHA\n```\n# Review context: `~/bin/golf` slot 29 variant 1\n`env` command runs a program with...",
+      "choices": [
+        "A modified environment",
+        "Only root",
+        "Cleared disks",
+        "Disabled networking always"
+      ],
+      "answer": 0,
+      "explain": "env wrapper.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_medium_29.mp4",
+        "poster": "media/images/env_medium_29-frame.png",
+        "figure": "media/images/env_medium_29.png"
+      }
+    },
+    {
+      "id": "env_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# gitignore .env; commit .env.example\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nCI secret variables should be...",
+      "choices": [
+        "Masked/scoped, not printed",
+        "Echoed in logs for debug always",
+        "Committed",
+        "World-readable files"
+      ],
+      "answer": 0,
+      "explain": "CI secret hygiene.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_medium_30.mp4",
+        "poster": "media/images/env_medium_30-frame.png",
+        "figure": "media/images/env_medium_30.png"
+      }
+    },
+    {
+      "id": "env_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nexport CHARLIE=3; printenv CHARLIE\n```\n12-factor style prefers env config because...",
+      "choices": [
+        "Deploy-time binding without rebuild",
+        "It replaces all files",
+        "It disables 12-factor",
+        "It bans Docker"
+      ],
+      "answer": 0,
+      "explain": "Env as config.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_hard_01.mp4",
+        "poster": "media/images/env_hard_01-frame.png",
+        "figure": "media/images/env_hard_01.png"
+      }
+    },
+    {
+      "id": "env_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# gitignore .env; commit .env.example\n```\nEnv size limits can break...",
+      "choices": [
+        "Large values / many keys",
+        "Only short ASCII",
+        "Only PATH",
+        "Only HOME"
+      ],
+      "answer": 0,
+      "explain": "ARG_MAX/env limits.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_hard_02.mp4",
+        "poster": "media/images/env_hard_02-frame.png",
+        "figure": "media/images/env_hard_02.png"
+      }
+    },
+    {
+      "id": "env_hard_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nset -a; [ -f .env ] && . ./.env; set +a; echo \"${ECHO:-unset}\"\n```\nDotenv parsers disagree on export keyword, comments, and expansion.",
+      "answer": true,
+      "explain": "Dialect hell.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_hard_03.mp4",
+        "poster": "media/images/env_hard_03-frame.png",
+        "figure": "media/images/env_hard_03.png"
+      }
+    },
+    {
+      "id": "env_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -E '^[A-Z0-9_]+=' .env.example | cut -d= -f1\n```\nSecret managers inject at runtime to avoid...",
+      "choices": [
+        "Long-lived plaintext .env on disk",
+        "All configuration",
+        "TLS",
+        "IAM"
+      ],
+      "answer": 0,
+      "explain": "Runtime inject.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_hard_04.mp4",
+        "poster": "media/images/env_hard_04-frame.png",
+        "figure": "media/images/env_hard_04.png"
+      }
+    },
+    {
+      "id": "env_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nexport GOLF=7; printenv GOLF\n```\nWindows vs Unix env case sensitivity means...",
+      "choices": [
+        "Portability bugs on key case",
+        "Identical always",
+        "Bash ignores case always",
+        "Make bans env"
+      ],
+      "answer": 0,
+      "explain": "Case rules differ.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_hard_05.mp4",
+        "poster": "media/images/env_hard_05-frame.png",
+        "figure": "media/images/env_hard_05.png"
+      }
+    },
+    {
+      "id": "env_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# gitignore .env; commit .env.example\n```\nCleaning env for tests (`env -i`) needs...",
+      "choices": [
+        "Re-supplying required vars explicitly",
+        "No vars ever",
+        "Only HOME deleted",
+        "Only PATH deleted"
+      ],
+      "answer": 0,
+      "explain": "Minimal + explicit.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_hard_06.mp4",
+        "poster": "media/images/env_hard_06-frame.png",
+        "figure": "media/images/env_hard_06.png"
+      }
+    },
+    {
+      "id": "env_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -a; [ -f .env ] && . ./.env; set +a; echo \"${INDIA:-unset}\"\n```\nExpansion of `$OTHER` inside .env values may...",
+      "choices": [
+        "Happen in some loaders, not others",
+        "Always happen identically",
+        "Never happen",
+        "Only in make"
+      ],
+      "answer": 0,
+      "explain": "Expansion divergence.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_hard_07.mp4",
+        "poster": "media/images/env_hard_07-frame.png",
+        "figure": "media/images/env_hard_07.png"
+      }
+    },
+    {
+      "id": "env_hard_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -E '^[A-Z0-9_]+=' .env.example | cut -d= -f1\n```\nLeaking env via `/proc/self/environ` is a reason to drop secrets after read.",
+      "answer": true,
+      "explain": "Proc environ visibility.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_hard_08.mp4",
+        "poster": "media/images/env_hard_08-frame.png",
+        "figure": "media/images/env_hard_08.png"
+      }
+    },
+    {
+      "id": "env_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nexport ALPHA=11; printenv ALPHA\n```\nFeature flags in env should be...",
+      "choices": [
+        "Documented typed values, not tribal lore",
+        "Random strings undocumented",
+        "Only in chat",
+        "Only in history"
+      ],
+      "answer": 0,
+      "explain": "Document flags.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_hard_09.mp4",
+        "poster": "media/images/env_hard_09-frame.png",
+        "figure": "media/images/env_hard_09.png"
+      }
+    },
+    {
+      "id": "env_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# gitignore .env; commit .env.example\n```\nLab: create `.env.example`, gitignore `.env`, load safely in a script.",
+      "choices": [
+        "Yes: complete literacy loop",
+        "No: commit secrets",
+        "No: source blindly untrusted",
+        "No: skip example"
+      ],
+      "answer": 0,
+      "explain": "End-to-end env literacy.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_hard_10.mp4",
+        "poster": "media/images/env_hard_10-frame.png",
+        "figure": "media/images/env_hard_10.png"
+      }
+    },
+    {
+      "id": "env_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -a; [ -f .env ] && . ./.env; set +a; echo \"${CHARLIE:-unset}\"\n```\n# Review context: `~/bin/echo` slot 11 variant 1\n12-factor style prefers env config because...",
+      "choices": [
+        "Deploy-time binding without rebuild",
+        "It replaces all files",
+        "It disables 12-factor",
+        "It bans Docker"
+      ],
+      "answer": 0,
+      "explain": "Env as config.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_hard_11.mp4",
+        "poster": "media/images/env_hard_11-frame.png",
+        "figure": "media/images/env_hard_11.png"
+      }
+    },
+    {
+      "id": "env_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -E '^[A-Z0-9_]+=' .env.example | cut -d= -f1\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\nEnv size limits can break...",
+      "choices": [
+        "Large values / many keys",
+        "Only short ASCII",
+        "Only PATH",
+        "Only HOME"
+      ],
+      "answer": 0,
+      "explain": "ARG_MAX/env limits.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_hard_12.mp4",
+        "poster": "media/images/env_hard_12-frame.png",
+        "figure": "media/images/env_hard_12.png"
+      }
+    },
+    {
+      "id": "env_hard_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nexport ECHO=15; printenv ECHO\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\nDotenv parsers disagree on export keyword, comments, and expansion.",
+      "answer": true,
+      "explain": "Dialect hell.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_hard_13.mp4",
+        "poster": "media/images/env_hard_13-frame.png",
+        "figure": "media/images/env_hard_13.png"
+      }
+    },
+    {
+      "id": "env_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# gitignore .env; commit .env.example\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\nSecret managers inject at runtime to avoid...",
+      "choices": [
+        "Long-lived plaintext .env on disk",
+        "All configuration",
+        "TLS",
+        "IAM"
+      ],
+      "answer": 0,
+      "explain": "Runtime inject.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_hard_14.mp4",
+        "poster": "media/images/env_hard_14-frame.png",
+        "figure": "media/images/env_hard_14.png"
+      }
+    },
+    {
+      "id": "env_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -a; [ -f .env ] && . ./.env; set +a; echo \"${GOLF:-unset}\"\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nWindows vs Unix env case sensitivity means...",
+      "choices": [
+        "Portability bugs on key case",
+        "Identical always",
+        "Bash ignores case always",
+        "Make bans env"
+      ],
+      "answer": 0,
+      "explain": "Case rules differ.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_hard_15.mp4",
+        "poster": "media/images/env_hard_15-frame.png",
+        "figure": "media/images/env_hard_15.png"
+      }
+    },
+    {
+      "id": "env_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -E '^[A-Z0-9_]+=' .env.example | cut -d= -f1\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nCleaning env for tests (`env -i`) needs...",
+      "choices": [
+        "Re-supplying required vars explicitly",
+        "No vars ever",
+        "Only HOME deleted",
+        "Only PATH deleted"
+      ],
+      "answer": 0,
+      "explain": "Minimal + explicit.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_hard_16.mp4",
+        "poster": "media/images/env_hard_16-frame.png",
+        "figure": "media/images/env_hard_16.png"
+      }
+    },
+    {
+      "id": "env_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nexport INDIA=19; printenv INDIA\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nExpansion of `$OTHER` inside .env values may...",
+      "choices": [
+        "Happen in some loaders, not others",
+        "Always happen identically",
+        "Never happen",
+        "Only in make"
+      ],
+      "answer": 0,
+      "explain": "Expansion divergence.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_hard_17.mp4",
+        "poster": "media/images/env_hard_17-frame.png",
+        "figure": "media/images/env_hard_17.png"
+      }
+    },
+    {
+      "id": "env_hard_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# gitignore .env; commit .env.example\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nLeaking env via `/proc/self/environ` is a reason to drop secrets after read.",
+      "answer": true,
+      "explain": "Proc environ visibility.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_hard_18.mp4",
+        "poster": "media/images/env_hard_18-frame.png",
+        "figure": "media/images/env_hard_18.png"
+      }
+    },
+    {
+      "id": "env_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -a; [ -f .env ] && . ./.env; set +a; echo \"${ALPHA:-unset}\"\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nFeature flags in env should be...",
+      "choices": [
+        "Documented typed values, not tribal lore",
+        "Random strings undocumented",
+        "Only in chat",
+        "Only in history"
+      ],
+      "answer": 0,
+      "explain": "Document flags.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_hard_19.mp4",
+        "poster": "media/images/env_hard_19-frame.png",
+        "figure": "media/images/env_hard_19.png"
+      }
+    },
+    {
+      "id": "env_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -E '^[A-Z0-9_]+=' .env.example | cut -d= -f1\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\nLab: create `.env.example`, gitignore `.env`, load safely in a script.",
+      "choices": [
+        "Yes: complete literacy loop",
+        "No: commit secrets",
+        "No: source blindly untrusted",
+        "No: skip example"
+      ],
+      "answer": 0,
+      "explain": "End-to-end env literacy.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_hard_20.mp4",
+        "poster": "media/images/env_hard_20-frame.png",
+        "figure": "media/images/env_hard_20.png"
+      }
+    },
+    {
+      "id": "env_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nexport CHARLIE=23; printenv CHARLIE\n```\n# Review context: `/var/log/golf` slot 21 variant 1\n12-factor style prefers env config because...",
+      "choices": [
+        "Deploy-time binding without rebuild",
+        "It replaces all files",
+        "It disables 12-factor",
+        "It bans Docker"
+      ],
+      "answer": 0,
+      "explain": "Env as config.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_hard_21.mp4",
+        "poster": "media/images/env_hard_21-frame.png",
+        "figure": "media/images/env_hard_21.png"
+      }
+    },
+    {
+      "id": "env_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# gitignore .env; commit .env.example\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\nEnv size limits can break...",
+      "choices": [
+        "Large values / many keys",
+        "Only short ASCII",
+        "Only PATH",
+        "Only HOME"
+      ],
+      "answer": 0,
+      "explain": "ARG_MAX/env limits.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_hard_22.mp4",
+        "poster": "media/images/env_hard_22-frame.png",
+        "figure": "media/images/env_hard_22.png"
+      }
+    },
+    {
+      "id": "env_hard_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nset -a; [ -f .env ] && . ./.env; set +a; echo \"${ECHO:-unset}\"\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\nDotenv parsers disagree on export keyword, comments, and expansion.",
+      "answer": true,
+      "explain": "Dialect hell.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_hard_23.mp4",
+        "poster": "media/images/env_hard_23-frame.png",
+        "figure": "media/images/env_hard_23.png"
+      }
+    },
+    {
+      "id": "env_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -E '^[A-Z0-9_]+=' .env.example | cut -d= -f1\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nSecret managers inject at runtime to avoid...",
+      "choices": [
+        "Long-lived plaintext .env on disk",
+        "All configuration",
+        "TLS",
+        "IAM"
+      ],
+      "answer": 0,
+      "explain": "Runtime inject.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_hard_24.mp4",
+        "poster": "media/images/env_hard_24-frame.png",
+        "figure": "media/images/env_hard_24.png"
+      }
+    },
+    {
+      "id": "env_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nexport GOLF=27; printenv GOLF\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nWindows vs Unix env case sensitivity means...",
+      "choices": [
+        "Portability bugs on key case",
+        "Identical always",
+        "Bash ignores case always",
+        "Make bans env"
+      ],
+      "answer": 0,
+      "explain": "Case rules differ.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_hard_25.mp4",
+        "poster": "media/images/env_hard_25-frame.png",
+        "figure": "media/images/env_hard_25.png"
+      }
+    },
+    {
+      "id": "env_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# gitignore .env; commit .env.example\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nCleaning env for tests (`env -i`) needs...",
+      "choices": [
+        "Re-supplying required vars explicitly",
+        "No vars ever",
+        "Only HOME deleted",
+        "Only PATH deleted"
+      ],
+      "answer": 0,
+      "explain": "Minimal + explicit.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_hard_26.mp4",
+        "poster": "media/images/env_hard_26-frame.png",
+        "figure": "media/images/env_hard_26.png"
+      }
+    },
+    {
+      "id": "env_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -a; [ -f .env ] && . ./.env; set +a; echo \"${INDIA:-unset}\"\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nExpansion of `$OTHER` inside .env values may...",
+      "choices": [
+        "Happen in some loaders, not others",
+        "Always happen identically",
+        "Never happen",
+        "Only in make"
+      ],
+      "answer": 0,
+      "explain": "Expansion divergence.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_hard_27.mp4",
+        "poster": "media/images/env_hard_27-frame.png",
+        "figure": "media/images/env_hard_27.png"
+      }
+    },
+    {
+      "id": "env_hard_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -E '^[A-Z0-9_]+=' .env.example | cut -d= -f1\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nLeaking env via `/proc/self/environ` is a reason to drop secrets after read.",
+      "answer": true,
+      "explain": "Proc environ visibility.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_hard_28.mp4",
+        "poster": "media/images/env_hard_28-frame.png",
+        "figure": "media/images/env_hard_28.png"
+      }
+    },
+    {
+      "id": "env_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nexport ALPHA=31; printenv ALPHA\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nFeature flags in env should be...",
+      "choices": [
+        "Documented typed values, not tribal lore",
+        "Random strings undocumented",
+        "Only in chat",
+        "Only in history"
+      ],
+      "answer": 0,
+      "explain": "Document flags.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_hard_29.mp4",
+        "poster": "media/images/env_hard_29-frame.png",
+        "figure": "media/images/env_hard_29.png"
+      }
+    },
+    {
+      "id": "env_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# gitignore .env; commit .env.example\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nLab: create `.env.example`, gitignore `.env`, load safely in a script.",
+      "choices": [
+        "Yes: complete literacy loop",
+        "No: commit secrets",
+        "No: source blindly untrusted",
+        "No: skip example"
+      ],
+      "answer": 0,
+      "explain": "End-to-end env literacy.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/env_hard_30.mp4",
+        "poster": "media/images/env_hard_30-frame.png",
+        "figure": "media/images/env_hard_30.png"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1680 @@
+{
+  "module": "module07-latch-risk",
+  "title": "Latch risk",
+  "items": [
+    {
+      "id": "latch_easy_01",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg clk; always @(*) clk = en ? rst_n : clk;\n```\nA latch in combinational RTL usually means…",
+      "choices": [
+        "The output can hold its previous value when inputs change",
+        "Every input combo drives every cycle",
+        "No sensitivity list",
+        "assign illegal"
+      ],
+      "answer": 0,
+      "explain": "Storage when enable/incomplete.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_easy_01.mp4",
+        "poster": "media/images/latch_easy_01-frame.png",
+        "figure": "media/images/latch_easy_01.png"
+      }
+    },
+    {
+      "id": "latch_easy_02",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 12; localparam MAX = (1<<W)-1;\n```\nassign Y = S ? D1 : D0; is latch-free because…",
+      "choices": [
+        "Every input combination has a defined Y",
+        "assign only works on reg",
+        "S must be a clock",
+        "D0/D1 constants"
+      ],
+      "answer": 0,
+      "explain": "Total function — always drives.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_easy_02.mp4",
+        "poster": "media/images/latch_easy_02-frame.png",
+        "figure": "media/images/latch_easy_02.png"
+      }
+    },
+    {
+      "id": "latch_easy_03",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) rst_n <= data;\n```\nalways @(*) if (S) Y = D1; with no else…",
+      "choices": [
+        "Y may not be assigned when S=0 → latch risk",
+        "Y is always combo",
+        "@(*) prevents any latch",
+        "Illegal Verilog"
+      ],
+      "answer": 0,
+      "explain": "Incomplete assignment.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_easy_03.mp4",
+        "poster": "media/images/latch_easy_03-frame.png",
+        "figure": "media/images/latch_easy_03.png"
+      }
+    },
+    {
+      "id": "latch_easy_04",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [31:0] data; assign count = data ^ sel;\n```\nA case without default can infer a latch like a missing else.",
+      "answer": true,
+      "explain": "Incomplete case → hold.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_easy_04.mp4",
+        "poster": "media/images/latch_easy_04-frame.png",
+        "figure": "media/images/latch_easy_04.png"
+      }
+    },
+    {
+      "id": "latch_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg count; always @(*) count = sel ? out : count;\n```\nTo avoid latches in combo if/else…",
+      "choices": [
+        "Cover all paths / default assignments",
+        "Remove @(*)",
+        "Use only #delay",
+        "Ban ternary"
+      ],
+      "answer": 0,
+      "explain": "Complete assignments.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_easy_05.mp4",
+        "poster": "media/images/latch_easy_05-frame.png",
+        "figure": "media/images/latch_easy_05.png"
+      }
+    },
+    {
+      "id": "latch_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 4; localparam MAX = (1<<W)-1;\n```\nIntentional latch enable style is…",
+      "choices": [
+        "when enable is low, hold; when high, pass input",
+        "always posedge",
+        "Only assign #5",
+        "Parameter override"
+      ],
+      "answer": 0,
+      "explain": "Level-sensitive storage.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_easy_06.mp4",
+        "poster": "media/images/latch_easy_06-frame.png",
+        "figure": "media/images/latch_easy_06.png"
+      }
+    },
+    {
+      "id": "latch_easy_07",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) out <= sum;\n```\nLatches are always bugs — never intentional.",
+      "answer": false,
+      "explain": "Sometimes intentional, often accidental in FPGA flows.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_easy_07.mp4",
+        "poster": "media/images/latch_easy_07-frame.png",
+        "figure": "media/images/latch_easy_07.png"
+      }
+    },
+    {
+      "id": "latch_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [5:0] sum; assign din = sum ^ qout;\n```\nDefault Y=0 before if-tree…",
+      "choices": [
+        "Helps ensure every path assigns Y",
+        "Creates dual-edge FF",
+        "Removes clocks",
+        "Forces Z"
+      ],
+      "answer": 0,
+      "explain": "Pre-assign pattern.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_easy_08.mp4",
+        "poster": "media/images/latch_easy_08-frame.png",
+        "figure": "media/images/latch_easy_08.png"
+      }
+    },
+    {
+      "id": "latch_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg din; always @(*) din = qout ? a : din;\n```\ncase (s) 2'b00: y=a; 2'b01: y=b; endcase without default…",
+      "choices": [
+        "Latch risk for other s values",
+        "Full combo always",
+        "A flop",
+        "Illegal case"
+      ],
+      "answer": 0,
+      "explain": "Uncovered items hold.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_easy_09.mp4",
+        "poster": "media/images/latch_easy_09-frame.png",
+        "figure": "media/images/latch_easy_09.png"
+      }
+    },
+    {
+      "id": "latch_easy_10",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 8; localparam MAX = (1<<W)-1;\n```\nFull-case / parallel-case pragmas need careful understanding — not magic safety.",
+      "answer": true,
+      "explain": "Pragmas can hide issues.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_easy_10.mp4",
+        "poster": "media/images/latch_easy_10-frame.png",
+        "figure": "media/images/latch_easy_10.png"
+      }
+    },
+    {
+      "id": "latch_easy_11",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) a <= b;\n```\n// Review context: `y[5:0]` slot 11 variant 1\nA latch in combinational RTL usually means…",
+      "choices": [
+        "The output can hold its previous value when inputs change",
+        "Every input combo drives every cycle",
+        "No sensitivity list",
+        "assign illegal"
+      ],
+      "answer": 0,
+      "explain": "Storage when enable/incomplete.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_easy_11.mp4",
+        "poster": "media/images/latch_easy_11-frame.png",
+        "figure": "media/images/latch_easy_11.png"
+      }
+    },
+    {
+      "id": "latch_easy_12",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [15:0] b; assign y = b ^ q;\n```\n// Review context: `q[6:0]` slot 12 variant 1\nassign Y = S ? D1 : D0; is latch-free because…",
+      "choices": [
+        "Every input combination has a defined Y",
+        "assign only works on reg",
+        "S must be a clock",
+        "D0/D1 constants"
+      ],
+      "answer": 0,
+      "explain": "Total function — always drives.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_easy_12.mp4",
+        "poster": "media/images/latch_easy_12-frame.png",
+        "figure": "media/images/latch_easy_12.png"
+      }
+    },
+    {
+      "id": "latch_easy_13",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg y; always @(*) y = q ? d : y;\n```\n// Review context: `d[7:0]` slot 13 variant 1\nalways @(*) if (S) Y = D1; with no else…",
+      "choices": [
+        "Y may not be assigned when S=0 → latch risk",
+        "Y is always combo",
+        "@(*) prevents any latch",
+        "Illegal Verilog"
+      ],
+      "answer": 0,
+      "explain": "Incomplete assignment.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_easy_13.mp4",
+        "poster": "media/images/latch_easy_13-frame.png",
+        "figure": "media/images/latch_easy_13.png"
+      }
+    },
+    {
+      "id": "latch_easy_14",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 3; localparam MAX = (1<<W)-1;\n```\n// Review context: `clk[11:0]` slot 14 variant 1\nA case without default can infer a latch like a missing else.",
+      "answer": true,
+      "explain": "Incomplete case → hold.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_easy_14.mp4",
+        "poster": "media/images/latch_easy_14-frame.png",
+        "figure": "media/images/latch_easy_14.png"
+      }
+    },
+    {
+      "id": "latch_easy_15",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) d <= clk;\n```\n// Review context: `en[15:0]` slot 15 variant 1\nTo avoid latches in combo if/else…",
+      "choices": [
+        "Cover all paths / default assignments",
+        "Remove @(*)",
+        "Use only #delay",
+        "Ban ternary"
+      ],
+      "answer": 0,
+      "explain": "Complete assignments.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_easy_15.mp4",
+        "poster": "media/images/latch_easy_15-frame.png",
+        "figure": "media/images/latch_easy_15.png"
+      }
+    },
+    {
+      "id": "latch_easy_16",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [4:0] clk; assign en = clk ^ rst_n;\n```\n// Review context: `rst_n[31:0]` slot 16 variant 1\nIntentional latch enable style is…",
+      "choices": [
+        "when enable is low, hold; when high, pass input",
+        "always posedge",
+        "Only assign #5",
+        "Parameter override"
+      ],
+      "answer": 0,
+      "explain": "Level-sensitive storage.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_easy_16.mp4",
+        "poster": "media/images/latch_easy_16-frame.png",
+        "figure": "media/images/latch_easy_16.png"
+      }
+    },
+    {
+      "id": "latch_easy_17",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg en; always @(*) en = rst_n ? data : en;\n```\n// Review context: `data[2:0]` slot 17 variant 1\nLatches are always bugs — never intentional.",
+      "answer": false,
+      "explain": "Sometimes intentional, often accidental in FPGA flows.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_easy_17.mp4",
+        "poster": "media/images/latch_easy_17-frame.png",
+        "figure": "media/images/latch_easy_17.png"
+      }
+    },
+    {
+      "id": "latch_easy_18",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 7; localparam MAX = (1<<W)-1;\n```\n// Review context: `count[3:0]` slot 18 variant 1\nDefault Y=0 before if-tree…",
+      "choices": [
+        "Helps ensure every path assigns Y",
+        "Creates dual-edge FF",
+        "Removes clocks",
+        "Forces Z"
+      ],
+      "answer": 0,
+      "explain": "Pre-assign pattern.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_easy_18.mp4",
+        "poster": "media/images/latch_easy_18-frame.png",
+        "figure": "media/images/latch_easy_18.png"
+      }
+    },
+    {
+      "id": "latch_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) data <= count;\n```\n// Review context: `a[4:0]` slot 19 variant 1\ncase (s) 2'b00: y=a; 2'b01: y=b; endcase without default…",
+      "choices": [
+        "Latch risk for other s values",
+        "Full combo always",
+        "A flop",
+        "Illegal case"
+      ],
+      "answer": 0,
+      "explain": "Uncovered items hold.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_easy_19.mp4",
+        "poster": "media/images/latch_easy_19-frame.png",
+        "figure": "media/images/latch_easy_19.png"
+      }
+    },
+    {
+      "id": "latch_easy_20",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [11:0] count; assign sel = count ^ out;\n```\n// Review context: `b[5:0]` slot 20 variant 1\nFull-case / parallel-case pragmas need careful understanding — not magic safety.",
+      "answer": true,
+      "explain": "Pragmas can hide issues.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_easy_20.mp4",
+        "poster": "media/images/latch_easy_20-frame.png",
+        "figure": "media/images/latch_easy_20.png"
+      }
+    },
+    {
+      "id": "latch_easy_21",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg sel; always @(*) sel = out ? sum : sel;\n```\n// Review context: `y[6:0]` slot 21 variant 1\nA latch in combinational RTL usually means…",
+      "choices": [
+        "The output can hold its previous value when inputs change",
+        "Every input combo drives every cycle",
+        "No sensitivity list",
+        "assign illegal"
+      ],
+      "answer": 0,
+      "explain": "Storage when enable/incomplete.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_easy_21.mp4",
+        "poster": "media/images/latch_easy_21-frame.png",
+        "figure": "media/images/latch_easy_21.png"
+      }
+    },
+    {
+      "id": "latch_easy_22",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 32; localparam MAX = (1<<W)-1;\n```\n// Review context: `q[7:0]` slot 22 variant 1\nassign Y = S ? D1 : D0; is latch-free because…",
+      "choices": [
+        "Every input combination has a defined Y",
+        "assign only works on reg",
+        "S must be a clock",
+        "D0/D1 constants"
+      ],
+      "answer": 0,
+      "explain": "Total function — always drives.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_easy_22.mp4",
+        "poster": "media/images/latch_easy_22-frame.png",
+        "figure": "media/images/latch_easy_22.png"
+      }
+    },
+    {
+      "id": "latch_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) sum <= din;\n```\n// Review context: `d[11:0]` slot 23 variant 1\nalways @(*) if (S) Y = D1; with no else…",
+      "choices": [
+        "Y may not be assigned when S=0 → latch risk",
+        "Y is always combo",
+        "@(*) prevents any latch",
+        "Illegal Verilog"
+      ],
+      "answer": 0,
+      "explain": "Incomplete assignment.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_easy_23.mp4",
+        "poster": "media/images/latch_easy_23-frame.png",
+        "figure": "media/images/latch_easy_23.png"
+      }
+    },
+    {
+      "id": "latch_easy_24",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [3:0] din; assign qout = din ^ a;\n```\n// Review context: `clk[15:0]` slot 24 variant 1\nA case without default can infer a latch like a missing else.",
+      "answer": true,
+      "explain": "Incomplete case → hold.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_easy_24.mp4",
+        "poster": "media/images/latch_easy_24-frame.png",
+        "figure": "media/images/latch_easy_24.png"
+      }
+    },
+    {
+      "id": "latch_easy_25",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg qout; always @(*) qout = a ? b : qout;\n```\n// Review context: `en[31:0]` slot 25 variant 1\nTo avoid latches in combo if/else…",
+      "choices": [
+        "Cover all paths / default assignments",
+        "Remove @(*)",
+        "Use only #delay",
+        "Ban ternary"
+      ],
+      "answer": 0,
+      "explain": "Complete assignments.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_easy_25.mp4",
+        "poster": "media/images/latch_easy_25-frame.png",
+        "figure": "media/images/latch_easy_25.png"
+      }
+    },
+    {
+      "id": "latch_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 6; localparam MAX = (1<<W)-1;\n```\n// Review context: `rst_n[2:0]` slot 26 variant 1\nIntentional latch enable style is…",
+      "choices": [
+        "when enable is low, hold; when high, pass input",
+        "always posedge",
+        "Only assign #5",
+        "Parameter override"
+      ],
+      "answer": 0,
+      "explain": "Level-sensitive storage.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_easy_26.mp4",
+        "poster": "media/images/latch_easy_26-frame.png",
+        "figure": "media/images/latch_easy_26.png"
+      }
+    },
+    {
+      "id": "latch_easy_27",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) b <= y;\n```\n// Review context: `data[3:0]` slot 27 variant 1\nLatches are always bugs — never intentional.",
+      "answer": false,
+      "explain": "Sometimes intentional, often accidental in FPGA flows.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_easy_27.mp4",
+        "poster": "media/images/latch_easy_27-frame.png",
+        "figure": "media/images/latch_easy_27.png"
+      }
+    },
+    {
+      "id": "latch_easy_28",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [7:0] y; assign q = y ^ d;\n```\n// Review context: `count[4:0]` slot 28 variant 1\nDefault Y=0 before if-tree…",
+      "choices": [
+        "Helps ensure every path assigns Y",
+        "Creates dual-edge FF",
+        "Removes clocks",
+        "Forces Z"
+      ],
+      "answer": 0,
+      "explain": "Pre-assign pattern.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_easy_28.mp4",
+        "poster": "media/images/latch_easy_28-frame.png",
+        "figure": "media/images/latch_easy_28.png"
+      }
+    },
+    {
+      "id": "latch_easy_29",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg q; always @(*) q = d ? clk : q;\n```\n// Review context: `a[5:0]` slot 29 variant 1\ncase (s) 2'b00: y=a; 2'b01: y=b; endcase without default…",
+      "choices": [
+        "Latch risk for other s values",
+        "Full combo always",
+        "A flop",
+        "Illegal case"
+      ],
+      "answer": 0,
+      "explain": "Uncovered items hold.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_easy_29.mp4",
+        "poster": "media/images/latch_easy_29-frame.png",
+        "figure": "media/images/latch_easy_29.png"
+      }
+    },
+    {
+      "id": "latch_easy_30",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 16; localparam MAX = (1<<W)-1;\n```\n// Review context: `b[6:0]` slot 30 variant 1\nFull-case / parallel-case pragmas need careful understanding — not magic safety.",
+      "answer": true,
+      "explain": "Pragmas can hide issues.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_easy_30.mp4",
+        "poster": "media/images/latch_easy_30-frame.png",
+        "figure": "media/images/latch_easy_30.png"
+      }
+    },
+    {
+      "id": "latch_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #3: combo block drives y\n```\nMux with assign is latch-free when…",
+      "choices": [
+        "The expression always provides a value",
+        "It uses NBA",
+        "It lists posedge",
+        "It is in initial"
+      ],
+      "answer": 0,
+      "explain": "Total function.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_medium_01.mp4",
+        "poster": "media/images/latch_medium_01-frame.png",
+        "figure": "media/images/latch_medium_01.png"
+      }
+    },
+    {
+      "id": "latch_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign q = (d & clk) | (d ^ clk);\n```\nAccidental latch vs flop…",
+      "choices": [
+        "Latch is level-sensitive storage; flop is edge-triggered",
+        "Identical",
+        "Latch needs two clocks",
+        "Flop means wire"
+      ],
+      "answer": 0,
+      "explain": "Different storage semantics.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_medium_02.mp4",
+        "poster": "media/images/latch_medium_02-frame.png",
+        "figure": "media/images/latch_medium_02.png"
+      }
+    },
+    {
+      "id": "latch_medium_03",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) d <= 0; else d <= clk;\n```\nIncomplete reset clause in a combo decode can latch.",
+      "answer": true,
+      "explain": "Same incomplete rule.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_medium_03.mp4",
+        "poster": "media/images/latch_medium_03-frame.png",
+        "figure": "media/images/latch_medium_03.png"
+      }
+    },
+    {
+      "id": "latch_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g6 end\n```\nTool reports 'inferred latch'…",
+      "choices": [
+        "Incomplete combo assignment likely",
+        "Too many flops",
+        "Missing module",
+        "Only lint style names"
+      ],
+      "answer": 0,
+      "explain": "Classic lint.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_medium_04.mp4",
+        "poster": "media/images/latch_medium_04-frame.png",
+        "figure": "media/images/latch_medium_04.png"
+      }
+    },
+    {
+      "id": "latch_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #7: combo block drives en\n```\nif (en) q = d; else q = q; …",
+      "choices": [
+        "Explicit hold — latch/hold intent",
+        "Pure wire",
+        "Async FIFO",
+        "Parameter"
+      ],
+      "answer": 0,
+      "explain": "Hold path shown.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_medium_05.mp4",
+        "poster": "media/images/latch_medium_05-frame.png",
+        "figure": "media/images/latch_medium_05.png"
+      }
+    },
+    {
+      "id": "latch_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign rst_n = (data & count) | (data ^ count);\n```\nUsing a clock edge in a block meant to be combo…",
+      "choices": [
+        "You built sequential logic instead",
+        "Removes latches always",
+        "Is @(*)",
+        "Is ANSI"
+      ],
+      "answer": 0,
+      "explain": "Wrong template.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_medium_06.mp4",
+        "poster": "media/images/latch_medium_06-frame.png",
+        "figure": "media/images/latch_medium_06.png"
+      }
+    },
+    {
+      "id": "latch_medium_07",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) data <= 0; else data <= count;\n```\nCovering all enum/case items removes latch risk for that output.",
+      "answer": true,
+      "explain": "Completeness matters.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_medium_07.mp4",
+        "poster": "media/images/latch_medium_07-frame.png",
+        "figure": "media/images/latch_medium_07.png"
+      }
+    },
+    {
+      "id": "latch_medium_08",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g10 end\n```\nMultiple outputs in one always: one incomplete…",
+      "choices": [
+        "Can latch only the incomplete nets",
+        "Latches all clocks",
+        "Deletes sensitivity",
+        "Forces X on clk"
+      ],
+      "answer": 0,
+      "explain": "Per-output completeness.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_medium_08.mp4",
+        "poster": "media/images/latch_medium_08-frame.png",
+        "figure": "media/images/latch_medium_08.png"
+      }
+    },
+    {
+      "id": "latch_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #11: combo block drives sel\n```\nFPGA tip: accidental latches are…",
+      "choices": [
+        "Often undesirable vs registered style",
+        "Required for every mux",
+        "Identical to BRAM",
+        "Only in packages"
+      ],
+      "answer": 0,
+      "explain": "Prefer registered FPGA style.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_medium_09.mp4",
+        "poster": "media/images/latch_medium_09-frame.png",
+        "figure": "media/images/latch_medium_09.png"
+      }
+    },
+    {
+      "id": "latch_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign out = (sum & din) | (sum ^ din);\n```\ndefault: y = '0; in case…",
+      "choices": [
+        "Closes uncovered items for y",
+        "Creates dual clock",
+        "Is non-ANSI only",
+        "Removes ports"
+      ],
+      "answer": 0,
+      "explain": "Default assignment.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_medium_10.mp4",
+        "poster": "media/images/latch_medium_10-frame.png",
+        "figure": "media/images/latch_medium_10.png"
+      }
+    },
+    {
+      "id": "latch_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) sum <= 0; else sum <= din;\n```\n// Review context: `y[5:0]` slot 11 variant 1\nMux with assign is latch-free when…",
+      "choices": [
+        "The expression always provides a value",
+        "It uses NBA",
+        "It lists posedge",
+        "It is in initial"
+      ],
+      "answer": 0,
+      "explain": "Total function.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_medium_11.mp4",
+        "poster": "media/images/latch_medium_11-frame.png",
+        "figure": "media/images/latch_medium_11.png"
+      }
+    },
+    {
+      "id": "latch_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g14 end\n```\n// Review context: `q[6:0]` slot 12 variant 1\nAccidental latch vs flop…",
+      "choices": [
+        "Latch is level-sensitive storage; flop is edge-triggered",
+        "Identical",
+        "Latch needs two clocks",
+        "Flop means wire"
+      ],
+      "answer": 0,
+      "explain": "Different storage semantics.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_medium_12.mp4",
+        "poster": "media/images/latch_medium_12-frame.png",
+        "figure": "media/images/latch_medium_12.png"
+      }
+    },
+    {
+      "id": "latch_medium_13",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #15: combo block drives qout\n```\n// Review context: `d[7:0]` slot 13 variant 1\nIncomplete reset clause in a combo decode can latch.",
+      "answer": true,
+      "explain": "Same incomplete rule.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_medium_13.mp4",
+        "poster": "media/images/latch_medium_13-frame.png",
+        "figure": "media/images/latch_medium_13.png"
+      }
+    },
+    {
+      "id": "latch_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign a = (b & y) | (b ^ y);\n```\n// Review context: `clk[11:0]` slot 14 variant 1\nTool reports 'inferred latch'…",
+      "choices": [
+        "Incomplete combo assignment likely",
+        "Too many flops",
+        "Missing module",
+        "Only lint style names"
+      ],
+      "answer": 0,
+      "explain": "Classic lint.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_medium_14.mp4",
+        "poster": "media/images/latch_medium_14-frame.png",
+        "figure": "media/images/latch_medium_14.png"
+      }
+    },
+    {
+      "id": "latch_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) b <= 0; else b <= y;\n```\n// Review context: `en[15:0]` slot 15 variant 1\nif (en) q = d; else q = q; …",
+      "choices": [
+        "Explicit hold — latch/hold intent",
+        "Pure wire",
+        "Async FIFO",
+        "Parameter"
+      ],
+      "answer": 0,
+      "explain": "Hold path shown.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_medium_15.mp4",
+        "poster": "media/images/latch_medium_15-frame.png",
+        "figure": "media/images/latch_medium_15.png"
+      }
+    },
+    {
+      "id": "latch_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g18 end\n```\n// Review context: `rst_n[31:0]` slot 16 variant 1\nUsing a clock edge in a block meant to be combo…",
+      "choices": [
+        "You built sequential logic instead",
+        "Removes latches always",
+        "Is @(*)",
+        "Is ANSI"
+      ],
+      "answer": 0,
+      "explain": "Wrong template.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_medium_16.mp4",
+        "poster": "media/images/latch_medium_16-frame.png",
+        "figure": "media/images/latch_medium_16.png"
+      }
+    },
+    {
+      "id": "latch_medium_17",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #19: combo block drives q\n```\n// Review context: `data[2:0]` slot 17 variant 1\nCovering all enum/case items removes latch risk for that output.",
+      "answer": true,
+      "explain": "Completeness matters.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_medium_17.mp4",
+        "poster": "media/images/latch_medium_17-frame.png",
+        "figure": "media/images/latch_medium_17.png"
+      }
+    },
+    {
+      "id": "latch_medium_18",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign d = (clk & en) | (clk ^ en);\n```\n// Review context: `count[3:0]` slot 18 variant 1\nMultiple outputs in one always: one incomplete…",
+      "choices": [
+        "Can latch only the incomplete nets",
+        "Latches all clocks",
+        "Deletes sensitivity",
+        "Forces X on clk"
+      ],
+      "answer": 0,
+      "explain": "Per-output completeness.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_medium_18.mp4",
+        "poster": "media/images/latch_medium_18-frame.png",
+        "figure": "media/images/latch_medium_18.png"
+      }
+    },
+    {
+      "id": "latch_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) clk <= 0; else clk <= en;\n```\n// Review context: `a[4:0]` slot 19 variant 1\nFPGA tip: accidental latches are…",
+      "choices": [
+        "Often undesirable vs registered style",
+        "Required for every mux",
+        "Identical to BRAM",
+        "Only in packages"
+      ],
+      "answer": 0,
+      "explain": "Prefer registered FPGA style.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_medium_19.mp4",
+        "poster": "media/images/latch_medium_19-frame.png",
+        "figure": "media/images/latch_medium_19.png"
+      }
+    },
+    {
+      "id": "latch_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g22 end\n```\n// Review context: `b[5:0]` slot 20 variant 1\ndefault: y = '0; in case…",
+      "choices": [
+        "Closes uncovered items for y",
+        "Creates dual clock",
+        "Is non-ANSI only",
+        "Removes ports"
+      ],
+      "answer": 0,
+      "explain": "Default assignment.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_medium_20.mp4",
+        "poster": "media/images/latch_medium_20-frame.png",
+        "figure": "media/images/latch_medium_20.png"
+      }
+    },
+    {
+      "id": "latch_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #23: combo block drives rst_n\n```\n// Review context: `y[6:0]` slot 21 variant 1\nMux with assign is latch-free when…",
+      "choices": [
+        "The expression always provides a value",
+        "It uses NBA",
+        "It lists posedge",
+        "It is in initial"
+      ],
+      "answer": 0,
+      "explain": "Total function.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_medium_21.mp4",
+        "poster": "media/images/latch_medium_21-frame.png",
+        "figure": "media/images/latch_medium_21.png"
+      }
+    },
+    {
+      "id": "latch_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign data = (count & sel) | (count ^ sel);\n```\n// Review context: `q[7:0]` slot 22 variant 1\nAccidental latch vs flop…",
+      "choices": [
+        "Latch is level-sensitive storage; flop is edge-triggered",
+        "Identical",
+        "Latch needs two clocks",
+        "Flop means wire"
+      ],
+      "answer": 0,
+      "explain": "Different storage semantics.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_medium_22.mp4",
+        "poster": "media/images/latch_medium_22-frame.png",
+        "figure": "media/images/latch_medium_22.png"
+      }
+    },
+    {
+      "id": "latch_medium_23",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) count <= 0; else count <= sel;\n```\n// Review context: `d[11:0]` slot 23 variant 1\nIncomplete reset clause in a combo decode can latch.",
+      "answer": true,
+      "explain": "Same incomplete rule.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_medium_23.mp4",
+        "poster": "media/images/latch_medium_23-frame.png",
+        "figure": "media/images/latch_medium_23.png"
+      }
+    },
+    {
+      "id": "latch_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g26 end\n```\n// Review context: `clk[15:0]` slot 24 variant 1\nTool reports 'inferred latch'…",
+      "choices": [
+        "Incomplete combo assignment likely",
+        "Too many flops",
+        "Missing module",
+        "Only lint style names"
+      ],
+      "answer": 0,
+      "explain": "Classic lint.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_medium_24.mp4",
+        "poster": "media/images/latch_medium_24-frame.png",
+        "figure": "media/images/latch_medium_24.png"
+      }
+    },
+    {
+      "id": "latch_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #27: combo block drives out\n```\n// Review context: `en[31:0]` slot 25 variant 1\nif (en) q = d; else q = q; …",
+      "choices": [
+        "Explicit hold — latch/hold intent",
+        "Pure wire",
+        "Async FIFO",
+        "Parameter"
+      ],
+      "answer": 0,
+      "explain": "Hold path shown.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_medium_25.mp4",
+        "poster": "media/images/latch_medium_25-frame.png",
+        "figure": "media/images/latch_medium_25.png"
+      }
+    },
+    {
+      "id": "latch_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign sum = (din & qout) | (din ^ qout);\n```\n// Review context: `rst_n[2:0]` slot 26 variant 1\nUsing a clock edge in a block meant to be combo…",
+      "choices": [
+        "You built sequential logic instead",
+        "Removes latches always",
+        "Is @(*)",
+        "Is ANSI"
+      ],
+      "answer": 0,
+      "explain": "Wrong template.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_medium_26.mp4",
+        "poster": "media/images/latch_medium_26-frame.png",
+        "figure": "media/images/latch_medium_26.png"
+      }
+    },
+    {
+      "id": "latch_medium_27",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) din <= 0; else din <= qout;\n```\n// Review context: `data[3:0]` slot 27 variant 1\nCovering all enum/case items removes latch risk for that output.",
+      "answer": true,
+      "explain": "Completeness matters.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_medium_27.mp4",
+        "poster": "media/images/latch_medium_27-frame.png",
+        "figure": "media/images/latch_medium_27.png"
+      }
+    },
+    {
+      "id": "latch_medium_28",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g30 end\n```\n// Review context: `count[4:0]` slot 28 variant 1\nMultiple outputs in one always: one incomplete…",
+      "choices": [
+        "Can latch only the incomplete nets",
+        "Latches all clocks",
+        "Deletes sensitivity",
+        "Forces X on clk"
+      ],
+      "answer": 0,
+      "explain": "Per-output completeness.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_medium_28.mp4",
+        "poster": "media/images/latch_medium_28-frame.png",
+        "figure": "media/images/latch_medium_28.png"
+      }
+    },
+    {
+      "id": "latch_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #31: combo block drives a\n```\n// Review context: `a[5:0]` slot 29 variant 1\nFPGA tip: accidental latches are…",
+      "choices": [
+        "Often undesirable vs registered style",
+        "Required for every mux",
+        "Identical to BRAM",
+        "Only in packages"
+      ],
+      "answer": 0,
+      "explain": "Prefer registered FPGA style.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_medium_29.mp4",
+        "poster": "media/images/latch_medium_29-frame.png",
+        "figure": "media/images/latch_medium_29.png"
+      }
+    },
+    {
+      "id": "latch_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign b = (y & q) | (y ^ q);\n```\n// Review context: `b[6:0]` slot 30 variant 1\ndefault: y = '0; in case…",
+      "choices": [
+        "Closes uncovered items for y",
+        "Creates dual clock",
+        "Is non-ANSI only",
+        "Removes ports"
+      ],
+      "answer": 0,
+      "explain": "Default assignment.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_medium_30.mp4",
+        "poster": "media/images/latch_medium_30-frame.png",
+        "figure": "media/images/latch_medium_30.png"
+      }
+    },
+    {
+      "id": "latch_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) d <= d + 1'b1; end\n```\nPartial bit assigns: always @* if (en) y[0]=d; …",
+      "choices": [
+        "Other bits of y may latch/hold",
+        "All bits clear always",
+        "Illegal always",
+        "Forces wire y"
+      ],
+      "answer": 0,
+      "explain": "Assign all bits you mean.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_hard_01.mp4",
+        "poster": "media/images/latch_hard_01-frame.png",
+        "figure": "media/images/latch_hard_01.png"
+      }
+    },
+    {
+      "id": "latch_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 6: do not sample clk multi-bit raw\n```\nUnique case (SV) vs latch…",
+      "choices": [
+        "unique adds checking; still need complete outputs",
+        "unique removes clocks",
+        "unique is a net",
+        "unique bans @(*)"
+      ],
+      "answer": 0,
+      "explain": "Checks ≠ auto-complete.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_hard_02.mp4",
+        "poster": "media/images/latch_hard_02-frame.png",
+        "figure": "media/images/latch_hard_02.png"
+      }
+    },
+    {
+      "id": "latch_hard_03",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (en) /* full case required */\n```\nA ternary that references y on a path can still create feedback/hold behavior.",
+      "answer": true,
+      "explain": "y = en ? d : y is latchy.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_hard_03.mp4",
+        "poster": "media/images/latch_hard_03-frame.png",
+        "figure": "media/images/latch_hard_03.png"
+      }
+    },
+    {
+      "id": "latch_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p8; @(posedge clk) rst_n |-> ##1 data; endproperty\n```\nSynth 'latch' on a flop enable mistake…",
+      "choices": [
+        "Sometimes mis-coded enable looks level-sensitive",
+        "Means you need more X",
+        "Means ANSI wrong",
+        "Means no TB"
+      ],
+      "answer": 0,
+      "explain": "Review enable coding.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_hard_04.mp4",
+        "poster": "media/images/latch_hard_04-frame.png",
+        "figure": "media/images/latch_hard_04.png"
+      }
+    },
+    {
+      "id": "latch_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) data <= data + 1'b1; end\n```\nIntentional transparent latch in ASIC…",
+      "choices": [
+        "Uses enable/level templates deliberately",
+        "Uses only $finish",
+        "Uses only parameters",
+        "Uses only initial"
+      ],
+      "answer": 0,
+      "explain": "Deliberate level storage.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_hard_05.mp4",
+        "poster": "media/images/latch_hard_05-frame.png",
+        "figure": "media/images/latch_hard_05.png"
+      }
+    },
+    {
+      "id": "latch_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 10: do not sample count multi-bit raw\n```\ncasex/casez incompleteness…",
+      "choices": [
+        "Still can latch if not all paths assign",
+        "Always full",
+        "Bans defaults",
+        "Only for TB displays"
+      ],
+      "answer": 0,
+      "explain": "Same completeness rule.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_hard_06.mp4",
+        "poster": "media/images/latch_hard_06-frame.png",
+        "figure": "media/images/latch_hard_06.png"
+      }
+    },
+    {
+      "id": "latch_hard_07",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (sel) /* full case required */\n```\nAssigning y in every branch including else/default avoids combo latch on y.",
+      "answer": true,
+      "explain": "Complete drive.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_hard_07.mp4",
+        "poster": "media/images/latch_hard_07-frame.png",
+        "figure": "media/images/latch_hard_07.png"
+      }
+    },
+    {
+      "id": "latch_hard_08",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p12; @(posedge clk) out |-> ##1 sum; endproperty\n```\nLatches on decoded one-hot with holes…",
+      "choices": [
+        "Uncovered encodings hold prior y",
+        "Auto gray-code",
+        "Force NBA",
+        "Disable lint forever"
+      ],
+      "answer": 0,
+      "explain": "Cover or default.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_hard_08.mp4",
+        "poster": "media/images/latch_hard_08-frame.png",
+        "figure": "media/images/latch_hard_08.png"
+      }
+    },
+    {
+      "id": "latch_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) sum <= sum + 1'b1; end\n```\nBest review question when latch inferred…",
+      "choices": [
+        "Which path fails to assign this output?",
+        "Which color is the waveform?",
+        "Which Git branch?",
+        "Which font?"
+      ],
+      "answer": 0,
+      "explain": "Find the hole.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_hard_09.mp4",
+        "poster": "media/images/latch_hard_09-frame.png",
+        "figure": "media/images/latch_hard_09.png"
+      }
+    },
+    {
+      "id": "latch_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 14: do not sample din multi-bit raw\n```\nBreaking a huge combo always into functions…",
+      "choices": [
+        "Still need every output assigned on all paths",
+        "Automatically removes latches",
+        "Removes need for @(*)",
+        "Forces flops"
+      ],
+      "answer": 0,
+      "explain": "Completeness still required.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_hard_10.mp4",
+        "poster": "media/images/latch_hard_10-frame.png",
+        "figure": "media/images/latch_hard_10.png"
+      }
+    },
+    {
+      "id": "latch_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (qout) /* full case required */\n```\n// Review context: `y[5:0]` slot 11 variant 1\nPartial bit assigns: always @* if (en) y[0]=d; …",
+      "choices": [
+        "Other bits of y may latch/hold",
+        "All bits clear always",
+        "Illegal always",
+        "Forces wire y"
+      ],
+      "answer": 0,
+      "explain": "Assign all bits you mean.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_hard_11.mp4",
+        "poster": "media/images/latch_hard_11-frame.png",
+        "figure": "media/images/latch_hard_11.png"
+      }
+    },
+    {
+      "id": "latch_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p16; @(posedge clk) a |-> ##1 b; endproperty\n```\n// Review context: `q[6:0]` slot 12 variant 1\nUnique case (SV) vs latch…",
+      "choices": [
+        "unique adds checking; still need complete outputs",
+        "unique removes clocks",
+        "unique is a net",
+        "unique bans @(*)"
+      ],
+      "answer": 0,
+      "explain": "Checks ≠ auto-complete.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_hard_12.mp4",
+        "poster": "media/images/latch_hard_12-frame.png",
+        "figure": "media/images/latch_hard_12.png"
+      }
+    },
+    {
+      "id": "latch_hard_13",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) b <= b + 1'b1; end\n```\n// Review context: `d[7:0]` slot 13 variant 1\nA ternary that references y on a path can still create feedback/hold behavior.",
+      "answer": true,
+      "explain": "y = en ? d : y is latchy.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_hard_13.mp4",
+        "poster": "media/images/latch_hard_13-frame.png",
+        "figure": "media/images/latch_hard_13.png"
+      }
+    },
+    {
+      "id": "latch_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 18: do not sample y multi-bit raw\n```\n// Review context: `clk[11:0]` slot 14 variant 1\nSynth 'latch' on a flop enable mistake…",
+      "choices": [
+        "Sometimes mis-coded enable looks level-sensitive",
+        "Means you need more X",
+        "Means ANSI wrong",
+        "Means no TB"
+      ],
+      "answer": 0,
+      "explain": "Review enable coding.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_hard_14.mp4",
+        "poster": "media/images/latch_hard_14-frame.png",
+        "figure": "media/images/latch_hard_14.png"
+      }
+    },
+    {
+      "id": "latch_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (q) /* full case required */\n```\n// Review context: `en[15:0]` slot 15 variant 1\nIntentional transparent latch in ASIC…",
+      "choices": [
+        "Uses enable/level templates deliberately",
+        "Uses only $finish",
+        "Uses only parameters",
+        "Uses only initial"
+      ],
+      "answer": 0,
+      "explain": "Deliberate level storage.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_hard_15.mp4",
+        "poster": "media/images/latch_hard_15-frame.png",
+        "figure": "media/images/latch_hard_15.png"
+      }
+    },
+    {
+      "id": "latch_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p20; @(posedge clk) d |-> ##1 clk; endproperty\n```\n// Review context: `rst_n[31:0]` slot 16 variant 1\ncasex/casez incompleteness…",
+      "choices": [
+        "Still can latch if not all paths assign",
+        "Always full",
+        "Bans defaults",
+        "Only for TB displays"
+      ],
+      "answer": 0,
+      "explain": "Same completeness rule.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_hard_16.mp4",
+        "poster": "media/images/latch_hard_16-frame.png",
+        "figure": "media/images/latch_hard_16.png"
+      }
+    },
+    {
+      "id": "latch_hard_17",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) clk <= clk + 1'b1; end\n```\n// Review context: `data[2:0]` slot 17 variant 1\nAssigning y in every branch including else/default avoids combo latch on y.",
+      "answer": true,
+      "explain": "Complete drive.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_hard_17.mp4",
+        "poster": "media/images/latch_hard_17-frame.png",
+        "figure": "media/images/latch_hard_17.png"
+      }
+    },
+    {
+      "id": "latch_hard_18",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 22: do not sample en multi-bit raw\n```\n// Review context: `count[3:0]` slot 18 variant 1\nLatches on decoded one-hot with holes…",
+      "choices": [
+        "Uncovered encodings hold prior y",
+        "Auto gray-code",
+        "Force NBA",
+        "Disable lint forever"
+      ],
+      "answer": 0,
+      "explain": "Cover or default.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_hard_18.mp4",
+        "poster": "media/images/latch_hard_18-frame.png",
+        "figure": "media/images/latch_hard_18.png"
+      }
+    },
+    {
+      "id": "latch_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (rst_n) /* full case required */\n```\n// Review context: `a[4:0]` slot 19 variant 1\nBest review question when latch inferred…",
+      "choices": [
+        "Which path fails to assign this output?",
+        "Which color is the waveform?",
+        "Which Git branch?",
+        "Which font?"
+      ],
+      "answer": 0,
+      "explain": "Find the hole.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_hard_19.mp4",
+        "poster": "media/images/latch_hard_19-frame.png",
+        "figure": "media/images/latch_hard_19.png"
+      }
+    },
+    {
+      "id": "latch_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p24; @(posedge clk) data |-> ##1 count; endproperty\n```\n// Review context: `b[5:0]` slot 20 variant 1\nBreaking a huge combo always into functions…",
+      "choices": [
+        "Still need every output assigned on all paths",
+        "Automatically removes latches",
+        "Removes need for @(*)",
+        "Forces flops"
+      ],
+      "answer": 0,
+      "explain": "Completeness still required.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_hard_20.mp4",
+        "poster": "media/images/latch_hard_20-frame.png",
+        "figure": "media/images/latch_hard_20.png"
+      }
+    },
+    {
+      "id": "latch_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) count <= count + 1'b1; end\n```\n// Review context: `y[6:0]` slot 21 variant 1\nPartial bit assigns: always @* if (en) y[0]=d; …",
+      "choices": [
+        "Other bits of y may latch/hold",
+        "All bits clear always",
+        "Illegal always",
+        "Forces wire y"
+      ],
+      "answer": 0,
+      "explain": "Assign all bits you mean.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_hard_21.mp4",
+        "poster": "media/images/latch_hard_21-frame.png",
+        "figure": "media/images/latch_hard_21.png"
+      }
+    },
+    {
+      "id": "latch_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 26: do not sample sel multi-bit raw\n```\n// Review context: `q[7:0]` slot 22 variant 1\nUnique case (SV) vs latch…",
+      "choices": [
+        "unique adds checking; still need complete outputs",
+        "unique removes clocks",
+        "unique is a net",
+        "unique bans @(*)"
+      ],
+      "answer": 0,
+      "explain": "Checks ≠ auto-complete.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_hard_22.mp4",
+        "poster": "media/images/latch_hard_22-frame.png",
+        "figure": "media/images/latch_hard_22.png"
+      }
+    },
+    {
+      "id": "latch_hard_23",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (out) /* full case required */\n```\n// Review context: `d[11:0]` slot 23 variant 1\nA ternary that references y on a path can still create feedback/hold behavior.",
+      "answer": true,
+      "explain": "y = en ? d : y is latchy.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_hard_23.mp4",
+        "poster": "media/images/latch_hard_23-frame.png",
+        "figure": "media/images/latch_hard_23.png"
+      }
+    },
+    {
+      "id": "latch_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p28; @(posedge clk) sum |-> ##1 din; endproperty\n```\n// Review context: `clk[15:0]` slot 24 variant 1\nSynth 'latch' on a flop enable mistake…",
+      "choices": [
+        "Sometimes mis-coded enable looks level-sensitive",
+        "Means you need more X",
+        "Means ANSI wrong",
+        "Means no TB"
+      ],
+      "answer": 0,
+      "explain": "Review enable coding.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_hard_24.mp4",
+        "poster": "media/images/latch_hard_24-frame.png",
+        "figure": "media/images/latch_hard_24.png"
+      }
+    },
+    {
+      "id": "latch_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) din <= din + 1'b1; end\n```\n// Review context: `en[31:0]` slot 25 variant 1\nIntentional transparent latch in ASIC…",
+      "choices": [
+        "Uses enable/level templates deliberately",
+        "Uses only $finish",
+        "Uses only parameters",
+        "Uses only initial"
+      ],
+      "answer": 0,
+      "explain": "Deliberate level storage.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_hard_25.mp4",
+        "poster": "media/images/latch_hard_25-frame.png",
+        "figure": "media/images/latch_hard_25.png"
+      }
+    },
+    {
+      "id": "latch_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 30: do not sample qout multi-bit raw\n```\n// Review context: `rst_n[2:0]` slot 26 variant 1\ncasex/casez incompleteness…",
+      "choices": [
+        "Still can latch if not all paths assign",
+        "Always full",
+        "Bans defaults",
+        "Only for TB displays"
+      ],
+      "answer": 0,
+      "explain": "Same completeness rule.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_hard_26.mp4",
+        "poster": "media/images/latch_hard_26-frame.png",
+        "figure": "media/images/latch_hard_26.png"
+      }
+    },
+    {
+      "id": "latch_hard_27",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (a) /* full case required */\n```\n// Review context: `data[3:0]` slot 27 variant 1\nAssigning y in every branch including else/default avoids combo latch on y.",
+      "answer": true,
+      "explain": "Complete drive.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_hard_27.mp4",
+        "poster": "media/images/latch_hard_27-frame.png",
+        "figure": "media/images/latch_hard_27.png"
+      }
+    },
+    {
+      "id": "latch_hard_28",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p32; @(posedge clk) b |-> ##1 y; endproperty\n```\n// Review context: `count[4:0]` slot 28 variant 1\nLatches on decoded one-hot with holes…",
+      "choices": [
+        "Uncovered encodings hold prior y",
+        "Auto gray-code",
+        "Force NBA",
+        "Disable lint forever"
+      ],
+      "answer": 0,
+      "explain": "Cover or default.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_hard_28.mp4",
+        "poster": "media/images/latch_hard_28-frame.png",
+        "figure": "media/images/latch_hard_28.png"
+      }
+    },
+    {
+      "id": "latch_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) y <= y + 1'b1; end\n```\n// Review context: `a[5:0]` slot 29 variant 1\nBest review question when latch inferred…",
+      "choices": [
+        "Which path fails to assign this output?",
+        "Which color is the waveform?",
+        "Which Git branch?",
+        "Which font?"
+      ],
+      "answer": 0,
+      "explain": "Find the hole.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_hard_29.mp4",
+        "poster": "media/images/latch_hard_29-frame.png",
+        "figure": "media/images/latch_hard_29.png"
+      }
+    },
+    {
+      "id": "latch_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 34: do not sample q multi-bit raw\n```\n// Review context: `b[6:0]` slot 30 variant 1\nBreaking a huge combo always into functions…",
+      "choices": [
+        "Still need every output assigned on all paths",
+        "Automatically removes latches",
+        "Removes need for @(*)",
+        "Forces flops"
+      ],
+      "answer": 0,
+      "explain": "Completeness still required.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/latch_hard_30.mp4",
+        "poster": "media/images/latch_hard_30-frame.png",
+        "figure": "media/images/latch_hard_30.png"
+      }
+    }
+  ]
+}

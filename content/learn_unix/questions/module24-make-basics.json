@@ -1,0 +1,1698 @@
+{
+  "module": "module24-make-basics",
+  "title": "Makefile basics",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"target=$@ deps=$^\"\n```\nWhat does Make primarily read to decide what to run?",
+      "choices": [
+        "A random shell history file",
+        "A Makefile with targets, deps, and recipes",
+        "Only the PATH variable",
+        "Git commit messages"
+      ],
+      "answer": 1,
+      "explain": "Make executes rules from a Makefile based on targets and dependencies.",
+      "difficulty": "easy",
+      "id": "make_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_easy_01.mp4",
+        "poster": "media/images/make_easy_01-frame.png",
+        "figure": "media/images/make_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n echo\n```\nWhy mark clean as .PHONY?",
+      "choices": [
+        "So Make ignores the target forever",
+        "So Make always runs the recipe even if a file named clean exists",
+        "So tabs become spaces",
+        "So make help is disabled"
+      ],
+      "answer": 1,
+      "explain": ".PHONY marks names that are actions, not real output files.",
+      "difficulty": "easy",
+      "id": "make_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_easy_02.mp4",
+        "poster": "media/images/make_easy_02-frame.png",
+        "figure": "media/images/make_easy_02.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n.PHONY: clean; clean:\\n\\trm -rf build/\n```\nRunning make with no arguments usually builds the default (often first or all) target.",
+      "answer": true,
+      "explain": "Bare make runs the default goal-commonly all or the first target listed.",
+      "difficulty": "easy",
+      "id": "make_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_easy_03.mp4",
+        "poster": "media/images/make_easy_03-frame.png",
+        "figure": "media/images/make_easy_03.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -j5 all\n```\nRecipe lines under a Makefile rule must be indented with...",
+      "choices": [
+        "Two spaces only",
+        "A real tab character",
+        "Markdown backticks",
+        "No indentation at all"
+      ],
+      "answer": 1,
+      "explain": "Make requires a tab before each recipe command (spaces alone fail).",
+      "difficulty": "easy",
+      "id": "make_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_easy_04.mp4",
+        "poster": "media/images/make_easy_04-frame.png",
+        "figure": "media/images/make_easy_04.png"
+      }
+    },
+    {
+      "id": "make_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"target=$@ deps=$^\"\n```\nMake primarily reads...",
+      "choices": [
+        "A Makefile with targets, deps, recipes",
+        "Only PATH",
+        "Only git messages",
+        "Only history"
+      ],
+      "answer": 0,
+      "explain": "Makefile drives make.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_easy_05.mp4",
+        "poster": "media/images/make_easy_05-frame.png",
+        "figure": "media/images/make_easy_05.png"
+      }
+    },
+    {
+      "id": "make_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n india\n```\nMark `clean` as `.PHONY` so that...",
+      "choices": [
+        "Make runs it even if a file named clean exists",
+        "Make ignores it forever",
+        "Tabs become spaces",
+        "help disables"
+      ],
+      "answer": 0,
+      "explain": "PHONY = action targets.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_easy_06.mp4",
+        "poster": "media/images/make_easy_06-frame.png",
+        "figure": "media/images/make_easy_06.png"
+      }
+    },
+    {
+      "id": "make_easy_07",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n.PHONY: clean; clean:\\n\\trm -rf build/\n```\nBare `make` builds the default goal (often first/all).",
+      "answer": true,
+      "explain": "Default goal.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_easy_07.mp4",
+        "poster": "media/images/make_easy_07-frame.png",
+        "figure": "media/images/make_easy_07.png"
+      }
+    },
+    {
+      "id": "make_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -j5 all\n```\nRecipe lines must be indented with...",
+      "choices": [
+        "A real tab",
+        "Two spaces only",
+        "Markdown backticks",
+        "No indent"
+      ],
+      "answer": 0,
+      "explain": "Tab required.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_easy_08.mp4",
+        "poster": "media/images/make_easy_08-frame.png",
+        "figure": "media/images/make_easy_08.png"
+      }
+    },
+    {
+      "id": "make_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"target=$@ deps=$^\"\n```\n`target: deps` means...",
+      "choices": [
+        "Build target when older than deps / missing",
+        "Always delete deps",
+        "Ignore deps",
+        "Only link"
+      ],
+      "answer": 0,
+      "explain": "Dependency rule.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_easy_09.mp4",
+        "poster": "media/images/make_easy_09-frame.png",
+        "figure": "media/images/make_easy_09.png"
+      }
+    },
+    {
+      "id": "make_easy_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n charlie\n```\n`make -n` / `--dry-run` ...",
+      "choices": [
+        "Prints recipes without running them",
+        "Formats disks",
+        "Deletes targets",
+        "Requires root"
+      ],
+      "answer": 0,
+      "explain": "Dry run.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_easy_10.mp4",
+        "poster": "media/images/make_easy_10-frame.png",
+        "figure": "media/images/make_easy_10.png"
+      }
+    },
+    {
+      "id": "make_easy_11",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n.PHONY: clean; clean:\\n\\trm -rf build/\n```\nVariables like `CC=gcc` parameterize toolchains.",
+      "answer": true,
+      "explain": "Make variables.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_easy_11.mp4",
+        "poster": "media/images/make_easy_11-frame.png",
+        "figure": "media/images/make_easy_11.png"
+      }
+    },
+    {
+      "id": "make_easy_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -j5 all\n```\n`$@` in a recipe is...",
+      "choices": [
+        "The target name",
+        "All deps",
+        "First dep only",
+        "The Makefile path"
+      ],
+      "answer": 0,
+      "explain": "Automatic var $@.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_easy_12.mp4",
+        "poster": "media/images/make_easy_12-frame.png",
+        "figure": "media/images/make_easy_12.png"
+      }
+    },
+    {
+      "id": "make_easy_13",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"target=$@ deps=$^\"\n```\n`$^` typically expands to...",
+      "choices": [
+        "All prerequisites",
+        "Only the target",
+        "Only the first source stem",
+        "The shell PID"
+      ],
+      "answer": 0,
+      "explain": "$^ all prereqs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_easy_13.mp4",
+        "poster": "media/images/make_easy_13-frame.png",
+        "figure": "media/images/make_easy_13.png"
+      }
+    },
+    {
+      "id": "make_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n golf\n```\n`make target14` builds...",
+      "choices": [
+        "Target target14",
+        "Only clean",
+        "Only help",
+        "Only zip"
+      ],
+      "answer": 0,
+      "explain": "Named target.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_easy_14.mp4",
+        "poster": "media/images/make_easy_14-frame.png",
+        "figure": "media/images/make_easy_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n.PHONY: clean; clean:\\n\\trm -rf build/\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nWhat does Make primarily read to decide what to run?",
+      "choices": [
+        "A random shell history file",
+        "A Makefile with targets, deps, and recipes",
+        "Only the PATH variable",
+        "Git commit messages"
+      ],
+      "answer": 1,
+      "explain": "Make executes rules from a Makefile based on targets and dependencies.",
+      "difficulty": "easy",
+      "id": "make_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_easy_15.mp4",
+        "poster": "media/images/make_easy_15-frame.png",
+        "figure": "media/images/make_easy_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -j5 all\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nWhy mark clean as .PHONY?",
+      "choices": [
+        "So Make ignores the target forever",
+        "So Make always runs the recipe even if a file named clean exists",
+        "So tabs become spaces",
+        "So make help is disabled"
+      ],
+      "answer": 1,
+      "explain": ".PHONY marks names that are actions, not real output files.",
+      "difficulty": "easy",
+      "id": "make_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_easy_16.mp4",
+        "poster": "media/images/make_easy_16-frame.png",
+        "figure": "media/images/make_easy_16.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\necho \"target=$@ deps=$^\"\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nRunning make with no arguments usually builds the default (often first or all) target.",
+      "answer": true,
+      "explain": "Bare make runs the default goal-commonly all or the first target listed.",
+      "difficulty": "easy",
+      "id": "make_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_easy_17.mp4",
+        "poster": "media/images/make_easy_17-frame.png",
+        "figure": "media/images/make_easy_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n alpha\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nRecipe lines under a Makefile rule must be indented with...",
+      "choices": [
+        "Two spaces only",
+        "A real tab character",
+        "Markdown backticks",
+        "No indentation at all"
+      ],
+      "answer": 1,
+      "explain": "Make requires a tab before each recipe command (spaces alone fail).",
+      "difficulty": "easy",
+      "id": "make_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_easy_18.mp4",
+        "poster": "media/images/make_easy_18-frame.png",
+        "figure": "media/images/make_easy_18.png"
+      }
+    },
+    {
+      "id": "make_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n.PHONY: clean; clean:\\n\\trm -rf build/\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nMake primarily reads...",
+      "choices": [
+        "A Makefile with targets, deps, recipes",
+        "Only PATH",
+        "Only git messages",
+        "Only history"
+      ],
+      "answer": 0,
+      "explain": "Makefile drives make.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_easy_19.mp4",
+        "poster": "media/images/make_easy_19-frame.png",
+        "figure": "media/images/make_easy_19.png"
+      }
+    },
+    {
+      "id": "make_easy_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -j5 all\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\nMark `clean` as `.PHONY` so that...",
+      "choices": [
+        "Make runs it even if a file named clean exists",
+        "Make ignores it forever",
+        "Tabs become spaces",
+        "help disables"
+      ],
+      "answer": 0,
+      "explain": "PHONY = action targets.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_easy_20.mp4",
+        "poster": "media/images/make_easy_20-frame.png",
+        "figure": "media/images/make_easy_20.png"
+      }
+    },
+    {
+      "id": "make_easy_21",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\necho \"target=$@ deps=$^\"\n```\n# Review context: `/var/log/golf` slot 21 variant 1\nBare `make` builds the default goal (often first/all).",
+      "answer": true,
+      "explain": "Default goal.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_easy_21.mp4",
+        "poster": "media/images/make_easy_21-frame.png",
+        "figure": "media/images/make_easy_21.png"
+      }
+    },
+    {
+      "id": "make_easy_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n echo\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\nRecipe lines must be indented with...",
+      "choices": [
+        "A real tab",
+        "Two spaces only",
+        "Markdown backticks",
+        "No indent"
+      ],
+      "answer": 0,
+      "explain": "Tab required.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_easy_22.mp4",
+        "poster": "media/images/make_easy_22-frame.png",
+        "figure": "media/images/make_easy_22.png"
+      }
+    },
+    {
+      "id": "make_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n.PHONY: clean; clean:\\n\\trm -rf build/\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\n`target: deps` means...",
+      "choices": [
+        "Build target when older than deps / missing",
+        "Always delete deps",
+        "Ignore deps",
+        "Only link"
+      ],
+      "answer": 0,
+      "explain": "Dependency rule.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_easy_23.mp4",
+        "poster": "media/images/make_easy_23-frame.png",
+        "figure": "media/images/make_easy_23.png"
+      }
+    },
+    {
+      "id": "make_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -j5 all\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\n`make -n` / `--dry-run` ...",
+      "choices": [
+        "Prints recipes without running them",
+        "Formats disks",
+        "Deletes targets",
+        "Requires root"
+      ],
+      "answer": 0,
+      "explain": "Dry run.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_easy_24.mp4",
+        "poster": "media/images/make_easy_24-frame.png",
+        "figure": "media/images/make_easy_24.png"
+      }
+    },
+    {
+      "id": "make_easy_25",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\necho \"target=$@ deps=$^\"\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nVariables like `CC=gcc` parameterize toolchains.",
+      "answer": true,
+      "explain": "Make variables.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_easy_25.mp4",
+        "poster": "media/images/make_easy_25-frame.png",
+        "figure": "media/images/make_easy_25.png"
+      }
+    },
+    {
+      "id": "make_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n india\n```\n# Review context: `./scripts/delta` slot 26 variant 1\n`$@` in a recipe is...",
+      "choices": [
+        "The target name",
+        "All deps",
+        "First dep only",
+        "The Makefile path"
+      ],
+      "answer": 0,
+      "explain": "Automatic var $@.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_easy_26.mp4",
+        "poster": "media/images/make_easy_26-frame.png",
+        "figure": "media/images/make_easy_26.png"
+      }
+    },
+    {
+      "id": "make_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n.PHONY: clean; clean:\\n\\trm -rf build/\n```\n# Review context: `/var/log/echo` slot 27 variant 1\n`$^` typically expands to...",
+      "choices": [
+        "All prerequisites",
+        "Only the target",
+        "Only the first source stem",
+        "The shell PID"
+      ],
+      "answer": 0,
+      "explain": "$^ all prereqs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_easy_27.mp4",
+        "poster": "media/images/make_easy_27-frame.png",
+        "figure": "media/images/make_easy_27.png"
+      }
+    },
+    {
+      "id": "make_easy_28",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -j5 all\n```\n`make target28` builds...",
+      "choices": [
+        "Target target28",
+        "Only clean",
+        "Only help",
+        "Only zip"
+      ],
+      "answer": 0,
+      "explain": "Named target.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_easy_28.mp4",
+        "poster": "media/images/make_easy_28-frame.png",
+        "figure": "media/images/make_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"target=$@ deps=$^\"\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nWhat does Make primarily read to decide what to run?",
+      "choices": [
+        "A random shell history file",
+        "A Makefile with targets, deps, and recipes",
+        "Only the PATH variable",
+        "Git commit messages"
+      ],
+      "answer": 1,
+      "explain": "Make executes rules from a Makefile based on targets and dependencies.",
+      "difficulty": "easy",
+      "id": "make_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_easy_29.mp4",
+        "poster": "media/images/make_easy_29-frame.png",
+        "figure": "media/images/make_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n charlie\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nWhy mark clean as .PHONY?",
+      "choices": [
+        "So Make ignores the target forever",
+        "So Make always runs the recipe even if a file named clean exists",
+        "So tabs become spaces",
+        "So make help is disabled"
+      ],
+      "answer": 1,
+      "explain": ".PHONY marks names that are actions, not real output files.",
+      "difficulty": "easy",
+      "id": "make_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_easy_30.mp4",
+        "poster": "media/images/make_easy_30-frame.png",
+        "figure": "media/images/make_easy_30.png"
+      }
+    },
+    {
+      "id": "make_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -j5 all\n```\nPattern rule `%.o: %.c` teaches Make how to...",
+      "choices": [
+        "Build objects from C sources",
+        "Zip files",
+        "Kill jobs",
+        "Set umask"
+      ],
+      "answer": 0,
+      "explain": "Pattern rules.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_medium_01.mp4",
+        "poster": "media/images/make_medium_01-frame.png",
+        "figure": "media/images/make_medium_01.png"
+      }
+    },
+    {
+      "id": "make_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"target=$@ deps=$^\"\n```\n`make -j4` runs...",
+      "choices": [
+        "Up to 4 jobs in parallel",
+        "Exactly one recipe forever",
+        "Only clean",
+        "Only help"
+      ],
+      "answer": 0,
+      "explain": "Parallel make.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_medium_02.mp4",
+        "poster": "media/images/make_medium_02-frame.png",
+        "figure": "media/images/make_medium_02.png"
+      }
+    },
+    {
+      "id": "make_medium_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n echo\n```\n`$(MAKE)` recursive invocation is preferred over bare `make`.",
+      "answer": true,
+      "explain": "Use $(MAKE).",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_medium_03.mp4",
+        "poster": "media/images/make_medium_03-frame.png",
+        "figure": "media/images/make_medium_03.png"
+      }
+    },
+    {
+      "id": "make_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n.PHONY: clean; clean:\\n\\trm -rf build/\n```\nOrder-only prerequisites `|` are for...",
+      "choices": [
+        "Deps that shouldn't force rebuild by timestamp alone",
+        "Phony only",
+        "Deleting targets",
+        "Setting PATH"
+      ],
+      "answer": 0,
+      "explain": "Order-only.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_medium_04.mp4",
+        "poster": "media/images/make_medium_04-frame.png",
+        "figure": "media/images/make_medium_04.png"
+      }
+    },
+    {
+      "id": "make_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -j5 all\n```\n`VPATH` / `vpath` search for...",
+      "choices": [
+        "Prerequisites in other dirs",
+        "Man pages",
+        "Only libraries in /lib forever",
+        "History"
+      ],
+      "answer": 0,
+      "explain": "VPATH search.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_medium_05.mp4",
+        "poster": "media/images/make_medium_05-frame.png",
+        "figure": "media/images/make_medium_05.png"
+      }
+    },
+    {
+      "id": "make_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"target=$@ deps=$^\"\n```\nImmediate vs deferred expansion (`:=` vs `=`) matters when...",
+      "choices": [
+        "RHS has costly/functions side effects",
+        "Names are short",
+        "Using tabs",
+        "Using PHONY"
+      ],
+      "answer": 0,
+      "explain": "Expansion timing.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_medium_06.mp4",
+        "poster": "media/images/make_medium_06-frame.png",
+        "figure": "media/images/make_medium_06.png"
+      }
+    },
+    {
+      "id": "make_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n india\n```\n`include` other makefiles to...",
+      "choices": [
+        "Share rules/config",
+        "Disable make",
+        "Clear targets",
+        "Force zip"
+      ],
+      "answer": 0,
+      "explain": "include.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_medium_07.mp4",
+        "poster": "media/images/make_medium_07-frame.png",
+        "figure": "media/images/make_medium_07.png"
+      }
+    },
+    {
+      "id": "make_medium_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n.PHONY: clean; clean:\\n\\trm -rf build/\n```\nA missing include can be tolerated with `-include`.",
+      "answer": true,
+      "explain": "Optional include.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_medium_08.mp4",
+        "poster": "media/images/make_medium_08-frame.png",
+        "figure": "media/images/make_medium_08.png"
+      }
+    },
+    {
+      "id": "make_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -j5 all\n```\nSecondary expansion / complex eval is...",
+      "choices": [
+        "Powerful but easy to overcomplicate",
+        "Required for hello world",
+        "Faster always",
+        "POSIX mandatory everywhere"
+      ],
+      "answer": 0,
+      "explain": "Keep makefiles readable.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_medium_09.mp4",
+        "poster": "media/images/make_medium_09-frame.png",
+        "figure": "media/images/make_medium_09.png"
+      }
+    },
+    {
+      "id": "make_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"target=$@ deps=$^\"\n```\nSilent recipes start with `@` to...",
+      "choices": [
+        "Suppress echo of the command",
+        "Disable errors",
+        "Force -j",
+        "Skip deps"
+      ],
+      "answer": 0,
+      "explain": "@ silences.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_medium_10.mp4",
+        "poster": "media/images/make_medium_10-frame.png",
+        "figure": "media/images/make_medium_10.png"
+      }
+    },
+    {
+      "id": "make_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n charlie\n```\n# Review context: `~/bin/echo` slot 11 variant 1\nPattern rule `%.o: %.c` teaches Make how to...",
+      "choices": [
+        "Build objects from C sources",
+        "Zip files",
+        "Kill jobs",
+        "Set umask"
+      ],
+      "answer": 0,
+      "explain": "Pattern rules.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_medium_11.mp4",
+        "poster": "media/images/make_medium_11-frame.png",
+        "figure": "media/images/make_medium_11.png"
+      }
+    },
+    {
+      "id": "make_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n.PHONY: clean; clean:\\n\\trm -rf build/\n```\n`make -j7` runs...",
+      "choices": [
+        "Up to 7 jobs in parallel",
+        "Exactly one recipe forever",
+        "Only clean",
+        "Only help"
+      ],
+      "answer": 0,
+      "explain": "Parallel make.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_medium_12.mp4",
+        "poster": "media/images/make_medium_12-frame.png",
+        "figure": "media/images/make_medium_12.png"
+      }
+    },
+    {
+      "id": "make_medium_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nmake -j5 all\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\n`$(MAKE)` recursive invocation is preferred over bare `make`.",
+      "answer": true,
+      "explain": "Use $(MAKE).",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_medium_13.mp4",
+        "poster": "media/images/make_medium_13-frame.png",
+        "figure": "media/images/make_medium_13.png"
+      }
+    },
+    {
+      "id": "make_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"target=$@ deps=$^\"\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\nOrder-only prerequisites `|` are for...",
+      "choices": [
+        "Deps that shouldn't force rebuild by timestamp alone",
+        "Phony only",
+        "Deleting targets",
+        "Setting PATH"
+      ],
+      "answer": 0,
+      "explain": "Order-only.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_medium_14.mp4",
+        "poster": "media/images/make_medium_14-frame.png",
+        "figure": "media/images/make_medium_14.png"
+      }
+    },
+    {
+      "id": "make_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n golf\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\n`VPATH` / `vpath` search for...",
+      "choices": [
+        "Prerequisites in other dirs",
+        "Man pages",
+        "Only libraries in /lib forever",
+        "History"
+      ],
+      "answer": 0,
+      "explain": "VPATH search.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_medium_15.mp4",
+        "poster": "media/images/make_medium_15-frame.png",
+        "figure": "media/images/make_medium_15.png"
+      }
+    },
+    {
+      "id": "make_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n.PHONY: clean; clean:\\n\\trm -rf build/\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nImmediate vs deferred expansion (`:=` vs `=`) matters when...",
+      "choices": [
+        "RHS has costly/functions side effects",
+        "Names are short",
+        "Using tabs",
+        "Using PHONY"
+      ],
+      "answer": 0,
+      "explain": "Expansion timing.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_medium_16.mp4",
+        "poster": "media/images/make_medium_16-frame.png",
+        "figure": "media/images/make_medium_16.png"
+      }
+    },
+    {
+      "id": "make_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -j5 all\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\n`include` other makefiles to...",
+      "choices": [
+        "Share rules/config",
+        "Disable make",
+        "Clear targets",
+        "Force zip"
+      ],
+      "answer": 0,
+      "explain": "include.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_medium_17.mp4",
+        "poster": "media/images/make_medium_17-frame.png",
+        "figure": "media/images/make_medium_17.png"
+      }
+    },
+    {
+      "id": "make_medium_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\necho \"target=$@ deps=$^\"\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nA missing include can be tolerated with `-include`.",
+      "answer": true,
+      "explain": "Optional include.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_medium_18.mp4",
+        "poster": "media/images/make_medium_18-frame.png",
+        "figure": "media/images/make_medium_18.png"
+      }
+    },
+    {
+      "id": "make_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n alpha\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nSecondary expansion / complex eval is...",
+      "choices": [
+        "Powerful but easy to overcomplicate",
+        "Required for hello world",
+        "Faster always",
+        "POSIX mandatory everywhere"
+      ],
+      "answer": 0,
+      "explain": "Keep makefiles readable.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_medium_19.mp4",
+        "poster": "media/images/make_medium_19-frame.png",
+        "figure": "media/images/make_medium_19.png"
+      }
+    },
+    {
+      "id": "make_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n.PHONY: clean; clean:\\n\\trm -rf build/\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\nSilent recipes start with `@` to...",
+      "choices": [
+        "Suppress echo of the command",
+        "Disable errors",
+        "Force -j",
+        "Skip deps"
+      ],
+      "answer": 0,
+      "explain": "@ silences.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_medium_20.mp4",
+        "poster": "media/images/make_medium_20-frame.png",
+        "figure": "media/images/make_medium_20.png"
+      }
+    },
+    {
+      "id": "make_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -j5 all\n```\n# Review context: `/var/log/golf` slot 21 variant 1\nPattern rule `%.o: %.c` teaches Make how to...",
+      "choices": [
+        "Build objects from C sources",
+        "Zip files",
+        "Kill jobs",
+        "Set umask"
+      ],
+      "answer": 0,
+      "explain": "Pattern rules.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_medium_21.mp4",
+        "poster": "media/images/make_medium_21-frame.png",
+        "figure": "media/images/make_medium_21.png"
+      }
+    },
+    {
+      "id": "make_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"target=$@ deps=$^\"\n```\n`make -j3` runs...",
+      "choices": [
+        "Up to 3 jobs in parallel",
+        "Exactly one recipe forever",
+        "Only clean",
+        "Only help"
+      ],
+      "answer": 0,
+      "explain": "Parallel make.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_medium_22.mp4",
+        "poster": "media/images/make_medium_22-frame.png",
+        "figure": "media/images/make_medium_22.png"
+      }
+    },
+    {
+      "id": "make_medium_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n echo\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\n`$(MAKE)` recursive invocation is preferred over bare `make`.",
+      "answer": true,
+      "explain": "Use $(MAKE).",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_medium_23.mp4",
+        "poster": "media/images/make_medium_23-frame.png",
+        "figure": "media/images/make_medium_23.png"
+      }
+    },
+    {
+      "id": "make_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n.PHONY: clean; clean:\\n\\trm -rf build/\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nOrder-only prerequisites `|` are for...",
+      "choices": [
+        "Deps that shouldn't force rebuild by timestamp alone",
+        "Phony only",
+        "Deleting targets",
+        "Setting PATH"
+      ],
+      "answer": 0,
+      "explain": "Order-only.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_medium_24.mp4",
+        "poster": "media/images/make_medium_24-frame.png",
+        "figure": "media/images/make_medium_24.png"
+      }
+    },
+    {
+      "id": "make_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -j5 all\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\n`VPATH` / `vpath` search for...",
+      "choices": [
+        "Prerequisites in other dirs",
+        "Man pages",
+        "Only libraries in /lib forever",
+        "History"
+      ],
+      "answer": 0,
+      "explain": "VPATH search.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_medium_25.mp4",
+        "poster": "media/images/make_medium_25-frame.png",
+        "figure": "media/images/make_medium_25.png"
+      }
+    },
+    {
+      "id": "make_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"target=$@ deps=$^\"\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nImmediate vs deferred expansion (`:=` vs `=`) matters when...",
+      "choices": [
+        "RHS has costly/functions side effects",
+        "Names are short",
+        "Using tabs",
+        "Using PHONY"
+      ],
+      "answer": 0,
+      "explain": "Expansion timing.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_medium_26.mp4",
+        "poster": "media/images/make_medium_26-frame.png",
+        "figure": "media/images/make_medium_26.png"
+      }
+    },
+    {
+      "id": "make_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n india\n```\n# Review context: `/var/log/echo` slot 27 variant 1\n`include` other makefiles to...",
+      "choices": [
+        "Share rules/config",
+        "Disable make",
+        "Clear targets",
+        "Force zip"
+      ],
+      "answer": 0,
+      "explain": "include.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_medium_27.mp4",
+        "poster": "media/images/make_medium_27-frame.png",
+        "figure": "media/images/make_medium_27.png"
+      }
+    },
+    {
+      "id": "make_medium_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n.PHONY: clean; clean:\\n\\trm -rf build/\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nA missing include can be tolerated with `-include`.",
+      "answer": true,
+      "explain": "Optional include.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_medium_28.mp4",
+        "poster": "media/images/make_medium_28-frame.png",
+        "figure": "media/images/make_medium_28.png"
+      }
+    },
+    {
+      "id": "make_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -j5 all\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nSecondary expansion / complex eval is...",
+      "choices": [
+        "Powerful but easy to overcomplicate",
+        "Required for hello world",
+        "Faster always",
+        "POSIX mandatory everywhere"
+      ],
+      "answer": 0,
+      "explain": "Keep makefiles readable.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_medium_29.mp4",
+        "poster": "media/images/make_medium_29-frame.png",
+        "figure": "media/images/make_medium_29.png"
+      }
+    },
+    {
+      "id": "make_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"target=$@ deps=$^\"\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nSilent recipes start with `@` to...",
+      "choices": [
+        "Suppress echo of the command",
+        "Disable errors",
+        "Force -j",
+        "Skip deps"
+      ],
+      "answer": 0,
+      "explain": "@ silences.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_medium_30.mp4",
+        "poster": "media/images/make_medium_30-frame.png",
+        "figure": "media/images/make_medium_30.png"
+      }
+    },
+    {
+      "id": "make_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -j5 all\n```\nCorrect parallel builds require...",
+      "choices": [
+        "Complete dependency edges",
+        "More -j only",
+        "Disabling PHONY",
+        "Ignoring headers"
+      ],
+      "answer": 0,
+      "explain": "Deps enable -j.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_hard_01.mp4",
+        "poster": "media/images/make_hard_01-frame.png",
+        "figure": "media/images/make_hard_01.png"
+      }
+    },
+    {
+      "id": "make_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"target=$@ deps=$^\"\n```\nGenerated headers need careful rules to avoid...",
+      "choices": [
+        "Incomplete first builds / races",
+        "Faster rebuilds only",
+        "Smaller logs",
+        "Better colors"
+      ],
+      "answer": 0,
+      "explain": "Genfile deps.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_hard_02.mp4",
+        "poster": "media/images/make_hard_02-frame.png",
+        "figure": "media/images/make_hard_02.png"
+      }
+    },
+    {
+      "id": "make_hard_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n echo\n```\n`make -B` forces rebuild ignoring timestamps.",
+      "answer": true,
+      "explain": "Unconditional remake.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_hard_03.mp4",
+        "poster": "media/images/make_hard_03-frame.png",
+        "figure": "media/images/make_hard_03.png"
+      }
+    },
+    {
+      "id": "make_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n.PHONY: clean; clean:\\n\\trm -rf build/\n```\nRecursive make considered harmful often because...",
+      "choices": [
+        "Lost global dependency graph",
+        "It is faster always",
+        "It bans VPATH",
+        "It clears PHONY"
+      ],
+      "answer": 0,
+      "explain": "Non-recursive patterns preferred.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_hard_04.mp4",
+        "poster": "media/images/make_hard_04-frame.png",
+        "figure": "media/images/make_hard_04.png"
+      }
+    },
+    {
+      "id": "make_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -j5 all\n```\n`$(wildcard ...)` evaluated at parse can miss...",
+      "choices": [
+        "Files created later during the build",
+        "All existing files",
+        "Only dirs",
+        "Only PHONY"
+      ],
+      "answer": 0,
+      "explain": "Wildcard timing.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_hard_05.mp4",
+        "poster": "media/images/make_hard_05-frame.png",
+        "figure": "media/images/make_hard_05.png"
+      }
+    },
+    {
+      "id": "make_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"target=$@ deps=$^\"\n```\nJobserver protocols matter when...",
+      "choices": [
+        "Nested makes share -j tokens",
+        "Using only -j1",
+        "No recursion",
+        "Only cmake"
+      ],
+      "answer": 0,
+      "explain": "Jobserver.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_hard_06.mp4",
+        "poster": "media/images/make_hard_06-frame.png",
+        "figure": "media/images/make_hard_06.png"
+      }
+    },
+    {
+      "id": "make_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n india\n```\nRemaking makefiles themselves can cause...",
+      "choices": [
+        "Restart of make with updated rules",
+        "Kernel panic always",
+        "Deleted sources",
+        "Disabled PATH"
+      ],
+      "answer": 0,
+      "explain": "Makefile remake.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_hard_07.mp4",
+        "poster": "media/images/make_hard_07-frame.png",
+        "figure": "media/images/make_hard_07.png"
+      }
+    },
+    {
+      "id": "make_hard_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n.PHONY: clean; clean:\\n\\trm -rf build/\n```\nPOSIX make is a subset; GNU extensions need documentation.",
+      "answer": true,
+      "explain": "Portability note.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_hard_08.mp4",
+        "poster": "media/images/make_hard_08-frame.png",
+        "figure": "media/images/make_hard_08.png"
+      }
+    },
+    {
+      "id": "make_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -j5 all\n```\nEnsuring recipes fail correctly uses...",
+      "choices": [
+        "set -e in shell / make's fail-on-error defaults awareness",
+        "Appending `|| true` everywhere",
+        "Ignoring statuses",
+        "Using -k always in CI"
+      ],
+      "answer": 0,
+      "explain": "Fail loud.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_hard_09.mp4",
+        "poster": "media/images/make_hard_09-frame.png",
+        "figure": "media/images/make_hard_09.png"
+      }
+    },
+    {
+      "id": "make_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"target=$@ deps=$^\"\n```\nLab: add a `help` target that greps ## comments.",
+      "choices": [
+        "Yes: self-documenting Makefile",
+        "No: hide targets",
+        "No: only README",
+        "No: skip"
+      ],
+      "answer": 0,
+      "explain": "Document targets.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_hard_10.mp4",
+        "poster": "media/images/make_hard_10-frame.png",
+        "figure": "media/images/make_hard_10.png"
+      }
+    },
+    {
+      "id": "make_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n charlie\n```\n# Review context: `~/bin/echo` slot 11 variant 1\nCorrect parallel builds require...",
+      "choices": [
+        "Complete dependency edges",
+        "More -j only",
+        "Disabling PHONY",
+        "Ignoring headers"
+      ],
+      "answer": 0,
+      "explain": "Deps enable -j.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_hard_11.mp4",
+        "poster": "media/images/make_hard_11-frame.png",
+        "figure": "media/images/make_hard_11.png"
+      }
+    },
+    {
+      "id": "make_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n.PHONY: clean; clean:\\n\\trm -rf build/\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\nGenerated headers need careful rules to avoid...",
+      "choices": [
+        "Incomplete first builds / races",
+        "Faster rebuilds only",
+        "Smaller logs",
+        "Better colors"
+      ],
+      "answer": 0,
+      "explain": "Genfile deps.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_hard_12.mp4",
+        "poster": "media/images/make_hard_12-frame.png",
+        "figure": "media/images/make_hard_12.png"
+      }
+    },
+    {
+      "id": "make_hard_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nmake -j5 all\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\n`make -B` forces rebuild ignoring timestamps.",
+      "answer": true,
+      "explain": "Unconditional remake.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_hard_13.mp4",
+        "poster": "media/images/make_hard_13-frame.png",
+        "figure": "media/images/make_hard_13.png"
+      }
+    },
+    {
+      "id": "make_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"target=$@ deps=$^\"\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\nRecursive make considered harmful often because...",
+      "choices": [
+        "Lost global dependency graph",
+        "It is faster always",
+        "It bans VPATH",
+        "It clears PHONY"
+      ],
+      "answer": 0,
+      "explain": "Non-recursive patterns preferred.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_hard_14.mp4",
+        "poster": "media/images/make_hard_14-frame.png",
+        "figure": "media/images/make_hard_14.png"
+      }
+    },
+    {
+      "id": "make_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n golf\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\n`$(wildcard ...)` evaluated at parse can miss...",
+      "choices": [
+        "Files created later during the build",
+        "All existing files",
+        "Only dirs",
+        "Only PHONY"
+      ],
+      "answer": 0,
+      "explain": "Wildcard timing.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_hard_15.mp4",
+        "poster": "media/images/make_hard_15-frame.png",
+        "figure": "media/images/make_hard_15.png"
+      }
+    },
+    {
+      "id": "make_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n.PHONY: clean; clean:\\n\\trm -rf build/\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nJobserver protocols matter when...",
+      "choices": [
+        "Nested makes share -j tokens",
+        "Using only -j1",
+        "No recursion",
+        "Only cmake"
+      ],
+      "answer": 0,
+      "explain": "Jobserver.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_hard_16.mp4",
+        "poster": "media/images/make_hard_16-frame.png",
+        "figure": "media/images/make_hard_16.png"
+      }
+    },
+    {
+      "id": "make_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -j5 all\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nRemaking makefiles themselves can cause...",
+      "choices": [
+        "Restart of make with updated rules",
+        "Kernel panic always",
+        "Deleted sources",
+        "Disabled PATH"
+      ],
+      "answer": 0,
+      "explain": "Makefile remake.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_hard_17.mp4",
+        "poster": "media/images/make_hard_17-frame.png",
+        "figure": "media/images/make_hard_17.png"
+      }
+    },
+    {
+      "id": "make_hard_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\necho \"target=$@ deps=$^\"\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nPOSIX make is a subset; GNU extensions need documentation.",
+      "answer": true,
+      "explain": "Portability note.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_hard_18.mp4",
+        "poster": "media/images/make_hard_18-frame.png",
+        "figure": "media/images/make_hard_18.png"
+      }
+    },
+    {
+      "id": "make_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n alpha\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nEnsuring recipes fail correctly uses...",
+      "choices": [
+        "set -e in shell / make's fail-on-error defaults awareness",
+        "Appending `|| true` everywhere",
+        "Ignoring statuses",
+        "Using -k always in CI"
+      ],
+      "answer": 0,
+      "explain": "Fail loud.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_hard_19.mp4",
+        "poster": "media/images/make_hard_19-frame.png",
+        "figure": "media/images/make_hard_19.png"
+      }
+    },
+    {
+      "id": "make_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n.PHONY: clean; clean:\\n\\trm -rf build/\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\nLab: add a `help` target that greps ## comments.",
+      "choices": [
+        "Yes: self-documenting Makefile",
+        "No: hide targets",
+        "No: only README",
+        "No: skip"
+      ],
+      "answer": 0,
+      "explain": "Document targets.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_hard_20.mp4",
+        "poster": "media/images/make_hard_20-frame.png",
+        "figure": "media/images/make_hard_20.png"
+      }
+    },
+    {
+      "id": "make_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -j5 all\n```\n# Review context: `/var/log/golf` slot 21 variant 1\nCorrect parallel builds require...",
+      "choices": [
+        "Complete dependency edges",
+        "More -j only",
+        "Disabling PHONY",
+        "Ignoring headers"
+      ],
+      "answer": 0,
+      "explain": "Deps enable -j.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_hard_21.mp4",
+        "poster": "media/images/make_hard_21-frame.png",
+        "figure": "media/images/make_hard_21.png"
+      }
+    },
+    {
+      "id": "make_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"target=$@ deps=$^\"\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\nGenerated headers need careful rules to avoid...",
+      "choices": [
+        "Incomplete first builds / races",
+        "Faster rebuilds only",
+        "Smaller logs",
+        "Better colors"
+      ],
+      "answer": 0,
+      "explain": "Genfile deps.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_hard_22.mp4",
+        "poster": "media/images/make_hard_22-frame.png",
+        "figure": "media/images/make_hard_22.png"
+      }
+    },
+    {
+      "id": "make_hard_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n echo\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\n`make -B` forces rebuild ignoring timestamps.",
+      "answer": true,
+      "explain": "Unconditional remake.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_hard_23.mp4",
+        "poster": "media/images/make_hard_23-frame.png",
+        "figure": "media/images/make_hard_23.png"
+      }
+    },
+    {
+      "id": "make_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n.PHONY: clean; clean:\\n\\trm -rf build/\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nRecursive make considered harmful often because...",
+      "choices": [
+        "Lost global dependency graph",
+        "It is faster always",
+        "It bans VPATH",
+        "It clears PHONY"
+      ],
+      "answer": 0,
+      "explain": "Non-recursive patterns preferred.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_hard_24.mp4",
+        "poster": "media/images/make_hard_24-frame.png",
+        "figure": "media/images/make_hard_24.png"
+      }
+    },
+    {
+      "id": "make_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -j5 all\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\n`$(wildcard ...)` evaluated at parse can miss...",
+      "choices": [
+        "Files created later during the build",
+        "All existing files",
+        "Only dirs",
+        "Only PHONY"
+      ],
+      "answer": 0,
+      "explain": "Wildcard timing.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_hard_25.mp4",
+        "poster": "media/images/make_hard_25-frame.png",
+        "figure": "media/images/make_hard_25.png"
+      }
+    },
+    {
+      "id": "make_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"target=$@ deps=$^\"\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nJobserver protocols matter when...",
+      "choices": [
+        "Nested makes share -j tokens",
+        "Using only -j1",
+        "No recursion",
+        "Only cmake"
+      ],
+      "answer": 0,
+      "explain": "Jobserver.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_hard_26.mp4",
+        "poster": "media/images/make_hard_26-frame.png",
+        "figure": "media/images/make_hard_26.png"
+      }
+    },
+    {
+      "id": "make_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n india\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nRemaking makefiles themselves can cause...",
+      "choices": [
+        "Restart of make with updated rules",
+        "Kernel panic always",
+        "Deleted sources",
+        "Disabled PATH"
+      ],
+      "answer": 0,
+      "explain": "Makefile remake.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_hard_27.mp4",
+        "poster": "media/images/make_hard_27-frame.png",
+        "figure": "media/images/make_hard_27.png"
+      }
+    },
+    {
+      "id": "make_hard_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n.PHONY: clean; clean:\\n\\trm -rf build/\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nPOSIX make is a subset; GNU extensions need documentation.",
+      "answer": true,
+      "explain": "Portability note.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_hard_28.mp4",
+        "poster": "media/images/make_hard_28-frame.png",
+        "figure": "media/images/make_hard_28.png"
+      }
+    },
+    {
+      "id": "make_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -j5 all\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nEnsuring recipes fail correctly uses...",
+      "choices": [
+        "set -e in shell / make's fail-on-error defaults awareness",
+        "Appending `|| true` everywhere",
+        "Ignoring statuses",
+        "Using -k always in CI"
+      ],
+      "answer": 0,
+      "explain": "Fail loud.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_hard_29.mp4",
+        "poster": "media/images/make_hard_29-frame.png",
+        "figure": "media/images/make_hard_29.png"
+      }
+    },
+    {
+      "id": "make_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"target=$@ deps=$^\"\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nLab: add a `help` target that greps ## comments.",
+      "choices": [
+        "Yes: self-documenting Makefile",
+        "No: hide targets",
+        "No: only README",
+        "No: skip"
+      ],
+      "answer": 0,
+      "explain": "Document targets.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/make_hard_30.mp4",
+        "poster": "media/images/make_hard_30-frame.png",
+        "figure": "media/images/make_hard_30.png"
+      }
+    }
+  ]
+}

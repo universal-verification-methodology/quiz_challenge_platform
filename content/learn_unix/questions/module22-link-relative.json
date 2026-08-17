@@ -1,0 +1,1698 @@
+{
+  "module": "module22-link-relative",
+  "title": "Relative symlink pitfalls",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# move tree and watch relative link break\n```\nA relative symlink's target is resolved from...",
+      "choices": [
+        "Always the user's home directory",
+        "The directory containing the symlink",
+        "Only /tmp",
+        "Git's remote URL"
+      ],
+      "answer": 1,
+      "explain": "Relative targets are relative to the link's location, not your cwd when you typed ln.",
+      "difficulty": "easy",
+      "id": "link_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_easy_01.mp4",
+        "poster": "media/images/link_easy_01-frame.png",
+        "figure": "media/images/link_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -s ../foxtrot/tool build/echo-link\n```\nMoving an entire project tree to a new prefix usually keeps...",
+      "choices": [
+        "Only absolute links",
+        "Relative links whose relative path between link and target is unchanged",
+        "No links at all",
+        "Broken pipes"
+      ],
+      "answer": 1,
+      "explain": "Relative links survive whole-tree moves; absolute links often still point at the old prefix.",
+      "difficulty": "easy",
+      "id": "link_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_easy_02.mp4",
+        "poster": "media/images/link_easy_02-frame.png",
+        "figure": "media/images/link_easy_02.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nreadlink docs/foxtrot-link; realpath docs/foxtrot-link || true\n```\nMoving only a relative symlink to a different directory often breaks it.",
+      "answer": true,
+      "explain": "The stored relative path no longer reaches the target from the new location.",
+      "difficulty": "easy",
+      "id": "link_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_easy_03.mp4",
+        "poster": "media/images/link_easy_03-frame.png",
+        "figure": "media/images/link_easy_03.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -sfr scripts/golf /tmp/hotel-link7 2>/dev/null || ln -s $(realpath scripts/golf) /tmp/hotel-link7\n```\nreadlink path shows...",
+      "choices": [
+        "Only file permissions",
+        "The symlink's stored target string",
+        "Git blame",
+        "Disk free space"
+      ],
+      "answer": 1,
+      "explain": "readlink prints the link text (relative or absolute).",
+      "difficulty": "easy",
+      "id": "link_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_easy_04.mp4",
+        "poster": "media/images/link_easy_04-frame.png",
+        "figure": "media/images/link_easy_04.png"
+      }
+    },
+    {
+      "id": "link_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# move tree and watch relative link break\n```\nA relative symlink target is resolved from...",
+      "choices": [
+        "The directory containing the symlink",
+        "Your cwd only always",
+        "$HOME only",
+        "/tmp only"
+      ],
+      "answer": 0,
+      "explain": "Link's directory is the base.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_easy_05.mp4",
+        "poster": "media/images/link_easy_05-frame.png",
+        "figure": "media/images/link_easy_05.png"
+      }
+    },
+    {
+      "id": "link_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -s ../juliet/tool bin/india-link\n```\n`ln -s ../bin/tool target6` stores...",
+      "choices": [
+        "The text `../bin/tool`",
+        "An absolute resolved path always",
+        "A hard link inode only",
+        "A copy of bytes"
+      ],
+      "answer": 0,
+      "explain": "Stores path text.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_easy_06.mp4",
+        "poster": "media/images/link_easy_06-frame.png",
+        "figure": "media/images/link_easy_06.png"
+      }
+    },
+    {
+      "id": "link_easy_07",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nreadlink src/juliet-link; realpath src/juliet-link || true\n```\nMoving a relative symlink can break it if the target path no longer lines up.",
+      "answer": true,
+      "explain": "Relative links are location-sensitive.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_easy_07.mp4",
+        "poster": "media/images/link_easy_07-frame.png",
+        "figure": "media/images/link_easy_07.png"
+      }
+    },
+    {
+      "id": "link_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -sfr logs/alpha /tmp/bravo-link11 2>/dev/null || ln -s $(realpath logs/alpha) /tmp/bravo-link11\n```\nAbsolute symlink targets start with...",
+      "choices": [
+        "/",
+        "./",
+        "../",
+        "~ always expanded in the link text by ln"
+      ],
+      "answer": 0,
+      "explain": "Absolute link text.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_easy_08.mp4",
+        "poster": "media/images/link_easy_08-frame.png",
+        "figure": "media/images/link_easy_08.png"
+      }
+    },
+    {
+      "id": "link_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# move tree and watch relative link break\n```\n`readlink target9` helps debug by showing...",
+      "choices": [
+        "Stored target text",
+        "Only final file bytes",
+        "Owner only",
+        "umask"
+      ],
+      "answer": 0,
+      "explain": "See the text.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_easy_09.mp4",
+        "poster": "media/images/link_easy_09-frame.png",
+        "figure": "media/images/link_easy_09.png"
+      }
+    },
+    {
+      "id": "link_easy_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -s ../delta/tool build/charlie-link\n```\nDangling link means...",
+      "choices": [
+        "Target missing",
+        "Too many hard links",
+        "Directory sticky",
+        "SUID"
+      ],
+      "answer": 0,
+      "explain": "Broken pointer.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_easy_10.mp4",
+        "poster": "media/images/link_easy_10-frame.png",
+        "figure": "media/images/link_easy_10.png"
+      }
+    },
+    {
+      "id": "link_easy_11",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nreadlink docs/delta-link; realpath docs/delta-link || true\n```\n`ls -l` shows arrow to target for symlinks.",
+      "answer": true,
+      "explain": "Long listing shows target.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_easy_11.mp4",
+        "poster": "media/images/link_easy_11-frame.png",
+        "figure": "media/images/link_easy_11.png"
+      }
+    },
+    {
+      "id": "link_easy_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -sfr scripts/echo /tmp/foxtrot-link15 2>/dev/null || ln -s $(realpath scripts/echo) /tmp/foxtrot-link15\n```\nPrefer relative links inside repos when...",
+      "choices": [
+        "The whole tree moves together",
+        "Links must survive any rearrange of parents differently",
+        "Crossing to /usr always",
+        "Pointing to /etc"
+      ],
+      "answer": 0,
+      "explain": "Repo-relative portability.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_easy_12.mp4",
+        "poster": "media/images/link_easy_12-frame.png",
+        "figure": "media/images/link_easy_12.png"
+      }
+    },
+    {
+      "id": "link_easy_13",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# move tree and watch relative link break\n```\nPrefer absolute links when...",
+      "choices": [
+        "Target is a fixed system path",
+        "The repo relocates often as a unit",
+        "You only have relative dirs",
+        "You hate realpath"
+      ],
+      "answer": 0,
+      "explain": "Fixed system targets.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_easy_13.mp4",
+        "poster": "media/images/link_easy_13-frame.png",
+        "figure": "media/images/link_easy_13.png"
+      }
+    },
+    {
+      "id": "link_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -s ../hotel/tool bin/golf-link\n```\n`realpath target14` after linking checks...",
+      "choices": [
+        "Final resolved path",
+        "Only link text",
+        "Only mode",
+        "Only owner"
+      ],
+      "answer": 0,
+      "explain": "Verify resolution.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_easy_14.mp4",
+        "poster": "media/images/link_easy_14-frame.png",
+        "figure": "media/images/link_easy_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nreadlink src/hotel-link; realpath src/hotel-link || true\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nA relative symlink's target is resolved from...",
+      "choices": [
+        "Always the user's home directory",
+        "The directory containing the symlink",
+        "Only /tmp",
+        "Git's remote URL"
+      ],
+      "answer": 1,
+      "explain": "Relative targets are relative to the link's location, not your cwd when you typed ln.",
+      "difficulty": "easy",
+      "id": "link_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_easy_15.mp4",
+        "poster": "media/images/link_easy_15-frame.png",
+        "figure": "media/images/link_easy_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -sfr logs/india /tmp/juliet-link19 2>/dev/null || ln -s $(realpath logs/india) /tmp/juliet-link19\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nMoving an entire project tree to a new prefix usually keeps...",
+      "choices": [
+        "Only absolute links",
+        "Relative links whose relative path between link and target is unchanged",
+        "No links at all",
+        "Broken pipes"
+      ],
+      "answer": 1,
+      "explain": "Relative links survive whole-tree moves; absolute links often still point at the old prefix.",
+      "difficulty": "easy",
+      "id": "link_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_easy_16.mp4",
+        "poster": "media/images/link_easy_16-frame.png",
+        "figure": "media/images/link_easy_16.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# move tree and watch relative link break\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nMoving only a relative symlink to a different directory often breaks it.",
+      "answer": true,
+      "explain": "The stored relative path no longer reaches the target from the new location.",
+      "difficulty": "easy",
+      "id": "link_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_easy_17.mp4",
+        "poster": "media/images/link_easy_17-frame.png",
+        "figure": "media/images/link_easy_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -s ../bravo/tool build/alpha-link\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nreadlink path shows...",
+      "choices": [
+        "Only file permissions",
+        "The symlink's stored target string",
+        "Git blame",
+        "Disk free space"
+      ],
+      "answer": 1,
+      "explain": "readlink prints the link text (relative or absolute).",
+      "difficulty": "easy",
+      "id": "link_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_easy_18.mp4",
+        "poster": "media/images/link_easy_18-frame.png",
+        "figure": "media/images/link_easy_18.png"
+      }
+    },
+    {
+      "id": "link_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nreadlink docs/bravo-link; realpath docs/bravo-link || true\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nA relative symlink target is resolved from...",
+      "choices": [
+        "The directory containing the symlink",
+        "Your cwd only always",
+        "$HOME only",
+        "/tmp only"
+      ],
+      "answer": 0,
+      "explain": "Link's directory is the base.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_easy_19.mp4",
+        "poster": "media/images/link_easy_19-frame.png",
+        "figure": "media/images/link_easy_19.png"
+      }
+    },
+    {
+      "id": "link_easy_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -sfr scripts/charlie /tmp/delta-link23 2>/dev/null || ln -s $(realpath scripts/charlie) /tmp/delta-link23\n```\n`ln -s ../bin/tool target20` stores...",
+      "choices": [
+        "The text `../bin/tool`",
+        "An absolute resolved path always",
+        "A hard link inode only",
+        "A copy of bytes"
+      ],
+      "answer": 0,
+      "explain": "Stores path text.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_easy_20.mp4",
+        "poster": "media/images/link_easy_20-frame.png",
+        "figure": "media/images/link_easy_20.png"
+      }
+    },
+    {
+      "id": "link_easy_21",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# move tree and watch relative link break\n```\n# Review context: `/var/log/golf` slot 21 variant 1\nMoving a relative symlink can break it if the target path no longer lines up.",
+      "answer": true,
+      "explain": "Relative links are location-sensitive.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_easy_21.mp4",
+        "poster": "media/images/link_easy_21-frame.png",
+        "figure": "media/images/link_easy_21.png"
+      }
+    },
+    {
+      "id": "link_easy_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -s ../foxtrot/tool bin/echo-link\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\nAbsolute symlink targets start with...",
+      "choices": [
+        "/",
+        "./",
+        "../",
+        "~ always expanded in the link text by ln"
+      ],
+      "answer": 0,
+      "explain": "Absolute link text.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_easy_22.mp4",
+        "poster": "media/images/link_easy_22-frame.png",
+        "figure": "media/images/link_easy_22.png"
+      }
+    },
+    {
+      "id": "link_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nreadlink src/foxtrot-link; realpath src/foxtrot-link || true\n```\n`readlink target23` helps debug by showing...",
+      "choices": [
+        "Stored target text",
+        "Only final file bytes",
+        "Owner only",
+        "umask"
+      ],
+      "answer": 0,
+      "explain": "See the text.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_easy_23.mp4",
+        "poster": "media/images/link_easy_23-frame.png",
+        "figure": "media/images/link_easy_23.png"
+      }
+    },
+    {
+      "id": "link_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -sfr logs/golf /tmp/hotel-link27 2>/dev/null || ln -s $(realpath logs/golf) /tmp/hotel-link27\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nDangling link means...",
+      "choices": [
+        "Target missing",
+        "Too many hard links",
+        "Directory sticky",
+        "SUID"
+      ],
+      "answer": 0,
+      "explain": "Broken pointer.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_easy_24.mp4",
+        "poster": "media/images/link_easy_24-frame.png",
+        "figure": "media/images/link_easy_24.png"
+      }
+    },
+    {
+      "id": "link_easy_25",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# move tree and watch relative link break\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\n`ls -l` shows arrow to target for symlinks.",
+      "answer": true,
+      "explain": "Long listing shows target.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_easy_25.mp4",
+        "poster": "media/images/link_easy_25-frame.png",
+        "figure": "media/images/link_easy_25.png"
+      }
+    },
+    {
+      "id": "link_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -s ../juliet/tool build/india-link\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nPrefer relative links inside repos when...",
+      "choices": [
+        "The whole tree moves together",
+        "Links must survive any rearrange of parents differently",
+        "Crossing to /usr always",
+        "Pointing to /etc"
+      ],
+      "answer": 0,
+      "explain": "Repo-relative portability.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_easy_26.mp4",
+        "poster": "media/images/link_easy_26-frame.png",
+        "figure": "media/images/link_easy_26.png"
+      }
+    },
+    {
+      "id": "link_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nreadlink docs/juliet-link; realpath docs/juliet-link || true\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nPrefer absolute links when...",
+      "choices": [
+        "Target is a fixed system path",
+        "The repo relocates often as a unit",
+        "You only have relative dirs",
+        "You hate realpath"
+      ],
+      "answer": 0,
+      "explain": "Fixed system targets.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_easy_27.mp4",
+        "poster": "media/images/link_easy_27-frame.png",
+        "figure": "media/images/link_easy_27.png"
+      }
+    },
+    {
+      "id": "link_easy_28",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -sfr scripts/alpha /tmp/bravo-link31 2>/dev/null || ln -s $(realpath scripts/alpha) /tmp/bravo-link31\n```\n`realpath target28` after linking checks...",
+      "choices": [
+        "Final resolved path",
+        "Only link text",
+        "Only mode",
+        "Only owner"
+      ],
+      "answer": 0,
+      "explain": "Verify resolution.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_easy_28.mp4",
+        "poster": "media/images/link_easy_28-frame.png",
+        "figure": "media/images/link_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# move tree and watch relative link break\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nA relative symlink's target is resolved from...",
+      "choices": [
+        "Always the user's home directory",
+        "The directory containing the symlink",
+        "Only /tmp",
+        "Git's remote URL"
+      ],
+      "answer": 1,
+      "explain": "Relative targets are relative to the link's location, not your cwd when you typed ln.",
+      "difficulty": "easy",
+      "id": "link_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_easy_29.mp4",
+        "poster": "media/images/link_easy_29-frame.png",
+        "figure": "media/images/link_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -s ../delta/tool bin/charlie-link\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nMoving an entire project tree to a new prefix usually keeps...",
+      "choices": [
+        "Only absolute links",
+        "Relative links whose relative path between link and target is unchanged",
+        "No links at all",
+        "Broken pipes"
+      ],
+      "answer": 1,
+      "explain": "Relative links survive whole-tree moves; absolute links often still point at the old prefix.",
+      "difficulty": "easy",
+      "id": "link_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_easy_30.mp4",
+        "poster": "media/images/link_easy_30-frame.png",
+        "figure": "media/images/link_easy_30.png"
+      }
+    },
+    {
+      "id": "link_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -sfr logs/charlie /tmp/delta-link3 2>/dev/null || ln -s $(realpath logs/charlie) /tmp/delta-link3\n```\nCreating `ln -s file1.txt target1` while cwd differs from link dir...",
+      "choices": [
+        "Still stores the string you typed; may not be what you meant",
+        "Auto-rewrites to absolute always",
+        "Fails always",
+        "Converts to hard link"
+      ],
+      "answer": 0,
+      "explain": "String is literal.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_medium_01.mp4",
+        "poster": "media/images/link_medium_01-frame.png",
+        "figure": "media/images/link_medium_01.png"
+      }
+    },
+    {
+      "id": "link_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# move tree and watch relative link break\n```\n`ln -sr` (GNU) can create...",
+      "choices": [
+        "Relative links computed for you",
+        "Only hard links",
+        "Only absolute",
+        "Only directories"
+      ],
+      "answer": 0,
+      "explain": "Relative smart link.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_medium_02.mp4",
+        "poster": "media/images/link_medium_02-frame.png",
+        "figure": "media/images/link_medium_02.png"
+      }
+    },
+    {
+      "id": "link_medium_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nln -s ../foxtrot/tool build/echo-link\n```\nPackaging that relocates prefix breaks careless absolute links.",
+      "answer": true,
+      "explain": "Prefixes move.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_medium_03.mp4",
+        "poster": "media/images/link_medium_03-frame.png",
+        "figure": "media/images/link_medium_03.png"
+      }
+    },
+    {
+      "id": "link_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nreadlink docs/foxtrot-link; realpath docs/foxtrot-link || true\n```\nSymlink farms for version switches often use...",
+      "choices": [
+        "`current` -> versioned dir pattern",
+        "Hard links only",
+        "Duplicate full trees only",
+        "Only PATH edits"
+      ],
+      "answer": 0,
+      "explain": "current pointer pattern.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_medium_04.mp4",
+        "poster": "media/images/link_medium_04-frame.png",
+        "figure": "media/images/link_medium_04.png"
+      }
+    },
+    {
+      "id": "link_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -sfr scripts/golf /tmp/hotel-link7 2>/dev/null || ln -s $(realpath scripts/golf) /tmp/hotel-link7\n```\nWindows/mac vs Linux symlink privileges differ; tests should...",
+      "choices": [
+        "Run on the target OS",
+        "Assume identical",
+        "Skip links",
+        "Use only hard links"
+      ],
+      "answer": 0,
+      "explain": "Platform differences.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_medium_05.mp4",
+        "poster": "media/images/link_medium_05-frame.png",
+        "figure": "media/images/link_medium_05.png"
+      }
+    },
+    {
+      "id": "link_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# move tree and watch relative link break\n```\nBackup tools may copy link text or follow; know flags because...",
+      "choices": [
+        "Restores can explode or preserve intent differently",
+        "All tools identical",
+        "Links cannot be backed up",
+        "Tar bans links"
+      ],
+      "answer": 0,
+      "explain": "Follow vs preserve.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_medium_06.mp4",
+        "poster": "media/images/link_medium_06-frame.png",
+        "figure": "media/images/link_medium_06.png"
+      }
+    },
+    {
+      "id": "link_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -s ../juliet/tool bin/india-link\n```\n`chmod` on symlink without -h often affects...",
+      "choices": [
+        "The target, not the link (platform-dependent nuances)",
+        "Only the link mode always",
+        "Neither",
+        "Only directories"
+      ],
+      "answer": 0,
+      "explain": "chmod follows by default often.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_medium_07.mp4",
+        "poster": "media/images/link_medium_07-frame.png",
+        "figure": "media/images/link_medium_07.png"
+      }
+    },
+    {
+      "id": "link_medium_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nreadlink src/juliet-link; realpath src/juliet-link || true\n```\nRelative links with many `../` are hard to review; prefer shorter forms.",
+      "answer": true,
+      "explain": "Readable beats clever.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_medium_08.mp4",
+        "poster": "media/images/link_medium_08-frame.png",
+        "figure": "media/images/link_medium_08.png"
+      }
+    },
+    {
+      "id": "link_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -sfr logs/alpha /tmp/bravo-link11 2>/dev/null || ln -s $(realpath logs/alpha) /tmp/bravo-link11\n```\nDetect cycles with...",
+      "choices": [
+        "realpath/readlink loops detection / find -L care",
+        "Only ls colors",
+        "Only pwd",
+        "Only du"
+      ],
+      "answer": 0,
+      "explain": "Cycle detection.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_medium_09.mp4",
+        "poster": "media/images/link_medium_09-frame.png",
+        "figure": "media/images/link_medium_09.png"
+      }
+    },
+    {
+      "id": "link_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# move tree and watch relative link break\n```\nWhen publishing dirs, rewrite links if...",
+      "choices": [
+        "Install prefix differs from build layout",
+        "Names are short",
+        "Using tar",
+        "Using zip"
+      ],
+      "answer": 0,
+      "explain": "Relocate-aware links.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_medium_10.mp4",
+        "poster": "media/images/link_medium_10-frame.png",
+        "figure": "media/images/link_medium_10.png"
+      }
+    },
+    {
+      "id": "link_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -s ../delta/tool build/charlie-link\n```\nCreating `ln -s file11.txt target11` while cwd differs from link dir...",
+      "choices": [
+        "Still stores the string you typed; may not be what you meant",
+        "Auto-rewrites to absolute always",
+        "Fails always",
+        "Converts to hard link"
+      ],
+      "answer": 0,
+      "explain": "String is literal.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_medium_11.mp4",
+        "poster": "media/images/link_medium_11-frame.png",
+        "figure": "media/images/link_medium_11.png"
+      }
+    },
+    {
+      "id": "link_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nreadlink docs/delta-link; realpath docs/delta-link || true\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\n`ln -sr` (GNU) can create...",
+      "choices": [
+        "Relative links computed for you",
+        "Only hard links",
+        "Only absolute",
+        "Only directories"
+      ],
+      "answer": 0,
+      "explain": "Relative smart link.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_medium_12.mp4",
+        "poster": "media/images/link_medium_12-frame.png",
+        "figure": "media/images/link_medium_12.png"
+      }
+    },
+    {
+      "id": "link_medium_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nln -sfr scripts/echo /tmp/foxtrot-link15 2>/dev/null || ln -s $(realpath scripts/echo) /tmp/foxtrot-link15\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\nPackaging that relocates prefix breaks careless absolute links.",
+      "answer": true,
+      "explain": "Prefixes move.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_medium_13.mp4",
+        "poster": "media/images/link_medium_13-frame.png",
+        "figure": "media/images/link_medium_13.png"
+      }
+    },
+    {
+      "id": "link_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# move tree and watch relative link break\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\nSymlink farms for version switches often use...",
+      "choices": [
+        "`current` -> versioned dir pattern",
+        "Hard links only",
+        "Duplicate full trees only",
+        "Only PATH edits"
+      ],
+      "answer": 0,
+      "explain": "current pointer pattern.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_medium_14.mp4",
+        "poster": "media/images/link_medium_14-frame.png",
+        "figure": "media/images/link_medium_14.png"
+      }
+    },
+    {
+      "id": "link_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -s ../hotel/tool bin/golf-link\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nWindows/mac vs Linux symlink privileges differ; tests should...",
+      "choices": [
+        "Run on the target OS",
+        "Assume identical",
+        "Skip links",
+        "Use only hard links"
+      ],
+      "answer": 0,
+      "explain": "Platform differences.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_medium_15.mp4",
+        "poster": "media/images/link_medium_15-frame.png",
+        "figure": "media/images/link_medium_15.png"
+      }
+    },
+    {
+      "id": "link_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nreadlink src/hotel-link; realpath src/hotel-link || true\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nBackup tools may copy link text or follow; know flags because...",
+      "choices": [
+        "Restores can explode or preserve intent differently",
+        "All tools identical",
+        "Links cannot be backed up",
+        "Tar bans links"
+      ],
+      "answer": 0,
+      "explain": "Follow vs preserve.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_medium_16.mp4",
+        "poster": "media/images/link_medium_16-frame.png",
+        "figure": "media/images/link_medium_16.png"
+      }
+    },
+    {
+      "id": "link_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -sfr logs/india /tmp/juliet-link19 2>/dev/null || ln -s $(realpath logs/india) /tmp/juliet-link19\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\n`chmod` on symlink without -h often affects...",
+      "choices": [
+        "The target, not the link (platform-dependent nuances)",
+        "Only the link mode always",
+        "Neither",
+        "Only directories"
+      ],
+      "answer": 0,
+      "explain": "chmod follows by default often.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_medium_17.mp4",
+        "poster": "media/images/link_medium_17-frame.png",
+        "figure": "media/images/link_medium_17.png"
+      }
+    },
+    {
+      "id": "link_medium_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# move tree and watch relative link break\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nRelative links with many `../` are hard to review; prefer shorter forms.",
+      "answer": true,
+      "explain": "Readable beats clever.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_medium_18.mp4",
+        "poster": "media/images/link_medium_18-frame.png",
+        "figure": "media/images/link_medium_18.png"
+      }
+    },
+    {
+      "id": "link_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -s ../bravo/tool build/alpha-link\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nDetect cycles with...",
+      "choices": [
+        "realpath/readlink loops detection / find -L care",
+        "Only ls colors",
+        "Only pwd",
+        "Only du"
+      ],
+      "answer": 0,
+      "explain": "Cycle detection.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_medium_19.mp4",
+        "poster": "media/images/link_medium_19-frame.png",
+        "figure": "media/images/link_medium_19.png"
+      }
+    },
+    {
+      "id": "link_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nreadlink docs/bravo-link; realpath docs/bravo-link || true\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\nWhen publishing dirs, rewrite links if...",
+      "choices": [
+        "Install prefix differs from build layout",
+        "Names are short",
+        "Using tar",
+        "Using zip"
+      ],
+      "answer": 0,
+      "explain": "Relocate-aware links.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_medium_20.mp4",
+        "poster": "media/images/link_medium_20-frame.png",
+        "figure": "media/images/link_medium_20.png"
+      }
+    },
+    {
+      "id": "link_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -sfr scripts/charlie /tmp/delta-link23 2>/dev/null || ln -s $(realpath scripts/charlie) /tmp/delta-link23\n```\nCreating `ln -s file21.txt target21` while cwd differs from link dir...",
+      "choices": [
+        "Still stores the string you typed; may not be what you meant",
+        "Auto-rewrites to absolute always",
+        "Fails always",
+        "Converts to hard link"
+      ],
+      "answer": 0,
+      "explain": "String is literal.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_medium_21.mp4",
+        "poster": "media/images/link_medium_21-frame.png",
+        "figure": "media/images/link_medium_21.png"
+      }
+    },
+    {
+      "id": "link_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# move tree and watch relative link break\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\n`ln -sr` (GNU) can create...",
+      "choices": [
+        "Relative links computed for you",
+        "Only hard links",
+        "Only absolute",
+        "Only directories"
+      ],
+      "answer": 0,
+      "explain": "Relative smart link.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_medium_22.mp4",
+        "poster": "media/images/link_medium_22-frame.png",
+        "figure": "media/images/link_medium_22.png"
+      }
+    },
+    {
+      "id": "link_medium_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nln -s ../foxtrot/tool bin/echo-link\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\nPackaging that relocates prefix breaks careless absolute links.",
+      "answer": true,
+      "explain": "Prefixes move.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_medium_23.mp4",
+        "poster": "media/images/link_medium_23-frame.png",
+        "figure": "media/images/link_medium_23.png"
+      }
+    },
+    {
+      "id": "link_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nreadlink src/foxtrot-link; realpath src/foxtrot-link || true\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nSymlink farms for version switches often use...",
+      "choices": [
+        "`current` -> versioned dir pattern",
+        "Hard links only",
+        "Duplicate full trees only",
+        "Only PATH edits"
+      ],
+      "answer": 0,
+      "explain": "current pointer pattern.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_medium_24.mp4",
+        "poster": "media/images/link_medium_24-frame.png",
+        "figure": "media/images/link_medium_24.png"
+      }
+    },
+    {
+      "id": "link_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -sfr logs/golf /tmp/hotel-link27 2>/dev/null || ln -s $(realpath logs/golf) /tmp/hotel-link27\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nWindows/mac vs Linux symlink privileges differ; tests should...",
+      "choices": [
+        "Run on the target OS",
+        "Assume identical",
+        "Skip links",
+        "Use only hard links"
+      ],
+      "answer": 0,
+      "explain": "Platform differences.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_medium_25.mp4",
+        "poster": "media/images/link_medium_25-frame.png",
+        "figure": "media/images/link_medium_25.png"
+      }
+    },
+    {
+      "id": "link_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# move tree and watch relative link break\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nBackup tools may copy link text or follow; know flags because...",
+      "choices": [
+        "Restores can explode or preserve intent differently",
+        "All tools identical",
+        "Links cannot be backed up",
+        "Tar bans links"
+      ],
+      "answer": 0,
+      "explain": "Follow vs preserve.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_medium_26.mp4",
+        "poster": "media/images/link_medium_26-frame.png",
+        "figure": "media/images/link_medium_26.png"
+      }
+    },
+    {
+      "id": "link_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -s ../juliet/tool build/india-link\n```\n# Review context: `/var/log/echo` slot 27 variant 1\n`chmod` on symlink without -h often affects...",
+      "choices": [
+        "The target, not the link (platform-dependent nuances)",
+        "Only the link mode always",
+        "Neither",
+        "Only directories"
+      ],
+      "answer": 0,
+      "explain": "chmod follows by default often.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_medium_27.mp4",
+        "poster": "media/images/link_medium_27-frame.png",
+        "figure": "media/images/link_medium_27.png"
+      }
+    },
+    {
+      "id": "link_medium_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nreadlink docs/juliet-link; realpath docs/juliet-link || true\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nRelative links with many `../` are hard to review; prefer shorter forms.",
+      "answer": true,
+      "explain": "Readable beats clever.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_medium_28.mp4",
+        "poster": "media/images/link_medium_28-frame.png",
+        "figure": "media/images/link_medium_28.png"
+      }
+    },
+    {
+      "id": "link_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -sfr scripts/alpha /tmp/bravo-link31 2>/dev/null || ln -s $(realpath scripts/alpha) /tmp/bravo-link31\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nDetect cycles with...",
+      "choices": [
+        "realpath/readlink loops detection / find -L care",
+        "Only ls colors",
+        "Only pwd",
+        "Only du"
+      ],
+      "answer": 0,
+      "explain": "Cycle detection.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_medium_29.mp4",
+        "poster": "media/images/link_medium_29-frame.png",
+        "figure": "media/images/link_medium_29.png"
+      }
+    },
+    {
+      "id": "link_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# move tree and watch relative link break\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nWhen publishing dirs, rewrite links if...",
+      "choices": [
+        "Install prefix differs from build layout",
+        "Names are short",
+        "Using tar",
+        "Using zip"
+      ],
+      "answer": 0,
+      "explain": "Relocate-aware links.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_medium_30.mp4",
+        "poster": "media/images/link_medium_30-frame.png",
+        "figure": "media/images/link_medium_30.png"
+      }
+    },
+    {
+      "id": "link_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -sfr logs/charlie /tmp/delta-link3 2>/dev/null || ln -s $(realpath logs/charlie) /tmp/delta-link3\n```\nRace replacing a symlink atomically uses...",
+      "choices": [
+        "`ln -sfn` into place / rename swap patterns",
+        "rm then ln with gaps",
+        "chmod only",
+        "touch only"
+      ],
+      "answer": 0,
+      "explain": "Atomic symlink replace.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_hard_01.mp4",
+        "poster": "media/images/link_hard_01-frame.png",
+        "figure": "media/images/link_hard_01.png"
+      }
+    },
+    {
+      "id": "link_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# move tree and watch relative link break\n```\nSecurity: luring through attacker-controlled symlink can...",
+      "choices": [
+        "Redirect writes to sensitive targets",
+        "Only slow IO",
+        "Only change colors",
+        "Only affect man"
+      ],
+      "answer": 0,
+      "explain": "Symlink attacks.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_hard_02.mp4",
+        "poster": "media/images/link_hard_02-frame.png",
+        "figure": "media/images/link_hard_02.png"
+      }
+    },
+    {
+      "id": "link_hard_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nln -s ../foxtrot/tool build/echo-link\n```\n`openat` + `O_NOFOLLOW` mitigates some symlink follow races.",
+      "answer": true,
+      "explain": "Safe open flags.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_hard_03.mp4",
+        "poster": "media/images/link_hard_03-frame.png",
+        "figure": "media/images/link_hard_03.png"
+      }
+    },
+    {
+      "id": "link_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nreadlink docs/foxtrot-link; realpath docs/foxtrot-link || true\n```\nContainer bind mounts + symlinks escaping...",
+      "choices": [
+        "Can surprise path confinement",
+        "Are impossible",
+        "Only affect zip",
+        "Only affect make"
+      ],
+      "answer": 0,
+      "explain": "Escape via links.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_hard_04.mp4",
+        "poster": "media/images/link_hard_04-frame.png",
+        "figure": "media/images/link_hard_04.png"
+      }
+    },
+    {
+      "id": "link_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -sfr scripts/golf /tmp/hotel-link7 2>/dev/null || ln -s $(realpath scripts/golf) /tmp/hotel-link7\n```\nGit and symlinks: on Windows clones may...",
+      "choices": [
+        "Materialize as text files depending on settings",
+        "Always be real links",
+        "Become hard links",
+        "Be deleted"
+      ],
+      "answer": 0,
+      "explain": "core.symlinks behavior.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_hard_05.mp4",
+        "poster": "media/images/link_hard_05-frame.png",
+        "figure": "media/images/link_hard_05.png"
+      }
+    },
+    {
+      "id": "link_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# move tree and watch relative link break\n```\nBuild systems recording symlink digests must decide...",
+      "choices": [
+        "Hash text vs referent content",
+        "Always skip",
+        "Always follow network",
+        "Always use size 0"
+      ],
+      "answer": 0,
+      "explain": "Hash policy.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_hard_06.mp4",
+        "poster": "media/images/link_hard_06-frame.png",
+        "figure": "media/images/link_hard_06.png"
+      }
+    },
+    {
+      "id": "link_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -s ../juliet/tool bin/india-link\n```\nRecursive delete following links can...",
+      "choices": [
+        "Destroy targets outside the tree",
+        "Only delete link text files harmlessly always",
+        "Never follow",
+        "Only clear modes"
+      ],
+      "answer": 0,
+      "explain": "Dangerous follow deletes.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_hard_07.mp4",
+        "poster": "media/images/link_hard_07-frame.png",
+        "figure": "media/images/link_hard_07.png"
+      }
+    },
+    {
+      "id": "link_hard_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nreadlink src/juliet-link; realpath src/juliet-link || true\n```\nRelative link correctness can be unit-tested via temp trees + realpath.",
+      "answer": true,
+      "explain": "Test link layouts.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_hard_08.mp4",
+        "poster": "media/images/link_hard_08-frame.png",
+        "figure": "media/images/link_hard_08.png"
+      }
+    },
+    {
+      "id": "link_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -sfr logs/alpha /tmp/bravo-link11 2>/dev/null || ln -s $(realpath logs/alpha) /tmp/bravo-link11\n```\nTooling that canonicalizes before storing may...",
+      "choices": [
+        "Convert intentional relatives to absolutes unexpectedly",
+        "Improve portability always",
+        "Disable links",
+        "Clear targets"
+      ],
+      "answer": 0,
+      "explain": "Preserve intent.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_hard_09.mp4",
+        "poster": "media/images/link_hard_09-frame.png",
+        "figure": "media/images/link_hard_09.png"
+      }
+    },
+    {
+      "id": "link_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# move tree and watch relative link break\n```\nLab: move a directory containing relative links and watch breaks.",
+      "choices": [
+        "Yes: feel the pitfall",
+        "No: only read docs",
+        "No: use absolute only always without understanding",
+        "No: skip"
+      ],
+      "answer": 0,
+      "explain": "Experience the break.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_hard_10.mp4",
+        "poster": "media/images/link_hard_10-frame.png",
+        "figure": "media/images/link_hard_10.png"
+      }
+    },
+    {
+      "id": "link_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -s ../delta/tool build/charlie-link\n```\n# Review context: `~/bin/echo` slot 11 variant 1\nRace replacing a symlink atomically uses...",
+      "choices": [
+        "`ln -sfn` into place / rename swap patterns",
+        "rm then ln with gaps",
+        "chmod only",
+        "touch only"
+      ],
+      "answer": 0,
+      "explain": "Atomic symlink replace.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_hard_11.mp4",
+        "poster": "media/images/link_hard_11-frame.png",
+        "figure": "media/images/link_hard_11.png"
+      }
+    },
+    {
+      "id": "link_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nreadlink docs/delta-link; realpath docs/delta-link || true\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\nSecurity: luring through attacker-controlled symlink can...",
+      "choices": [
+        "Redirect writes to sensitive targets",
+        "Only slow IO",
+        "Only change colors",
+        "Only affect man"
+      ],
+      "answer": 0,
+      "explain": "Symlink attacks.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_hard_12.mp4",
+        "poster": "media/images/link_hard_12-frame.png",
+        "figure": "media/images/link_hard_12.png"
+      }
+    },
+    {
+      "id": "link_hard_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nln -sfr scripts/echo /tmp/foxtrot-link15 2>/dev/null || ln -s $(realpath scripts/echo) /tmp/foxtrot-link15\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\n`openat` + `O_NOFOLLOW` mitigates some symlink follow races.",
+      "answer": true,
+      "explain": "Safe open flags.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_hard_13.mp4",
+        "poster": "media/images/link_hard_13-frame.png",
+        "figure": "media/images/link_hard_13.png"
+      }
+    },
+    {
+      "id": "link_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# move tree and watch relative link break\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\nContainer bind mounts + symlinks escaping...",
+      "choices": [
+        "Can surprise path confinement",
+        "Are impossible",
+        "Only affect zip",
+        "Only affect make"
+      ],
+      "answer": 0,
+      "explain": "Escape via links.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_hard_14.mp4",
+        "poster": "media/images/link_hard_14-frame.png",
+        "figure": "media/images/link_hard_14.png"
+      }
+    },
+    {
+      "id": "link_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -s ../hotel/tool bin/golf-link\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nGit and symlinks: on Windows clones may...",
+      "choices": [
+        "Materialize as text files depending on settings",
+        "Always be real links",
+        "Become hard links",
+        "Be deleted"
+      ],
+      "answer": 0,
+      "explain": "core.symlinks behavior.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_hard_15.mp4",
+        "poster": "media/images/link_hard_15-frame.png",
+        "figure": "media/images/link_hard_15.png"
+      }
+    },
+    {
+      "id": "link_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nreadlink src/hotel-link; realpath src/hotel-link || true\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nBuild systems recording symlink digests must decide...",
+      "choices": [
+        "Hash text vs referent content",
+        "Always skip",
+        "Always follow network",
+        "Always use size 0"
+      ],
+      "answer": 0,
+      "explain": "Hash policy.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_hard_16.mp4",
+        "poster": "media/images/link_hard_16-frame.png",
+        "figure": "media/images/link_hard_16.png"
+      }
+    },
+    {
+      "id": "link_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -sfr logs/india /tmp/juliet-link19 2>/dev/null || ln -s $(realpath logs/india) /tmp/juliet-link19\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nRecursive delete following links can...",
+      "choices": [
+        "Destroy targets outside the tree",
+        "Only delete link text files harmlessly always",
+        "Never follow",
+        "Only clear modes"
+      ],
+      "answer": 0,
+      "explain": "Dangerous follow deletes.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_hard_17.mp4",
+        "poster": "media/images/link_hard_17-frame.png",
+        "figure": "media/images/link_hard_17.png"
+      }
+    },
+    {
+      "id": "link_hard_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# move tree and watch relative link break\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nRelative link correctness can be unit-tested via temp trees + realpath.",
+      "answer": true,
+      "explain": "Test link layouts.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_hard_18.mp4",
+        "poster": "media/images/link_hard_18-frame.png",
+        "figure": "media/images/link_hard_18.png"
+      }
+    },
+    {
+      "id": "link_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -s ../bravo/tool build/alpha-link\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nTooling that canonicalizes before storing may...",
+      "choices": [
+        "Convert intentional relatives to absolutes unexpectedly",
+        "Improve portability always",
+        "Disable links",
+        "Clear targets"
+      ],
+      "answer": 0,
+      "explain": "Preserve intent.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_hard_19.mp4",
+        "poster": "media/images/link_hard_19-frame.png",
+        "figure": "media/images/link_hard_19.png"
+      }
+    },
+    {
+      "id": "link_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nreadlink docs/bravo-link; realpath docs/bravo-link || true\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\nLab: move a directory containing relative links and watch breaks.",
+      "choices": [
+        "Yes: feel the pitfall",
+        "No: only read docs",
+        "No: use absolute only always without understanding",
+        "No: skip"
+      ],
+      "answer": 0,
+      "explain": "Experience the break.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_hard_20.mp4",
+        "poster": "media/images/link_hard_20-frame.png",
+        "figure": "media/images/link_hard_20.png"
+      }
+    },
+    {
+      "id": "link_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -sfr scripts/charlie /tmp/delta-link23 2>/dev/null || ln -s $(realpath scripts/charlie) /tmp/delta-link23\n```\n# Review context: `/var/log/golf` slot 21 variant 1\nRace replacing a symlink atomically uses...",
+      "choices": [
+        "`ln -sfn` into place / rename swap patterns",
+        "rm then ln with gaps",
+        "chmod only",
+        "touch only"
+      ],
+      "answer": 0,
+      "explain": "Atomic symlink replace.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_hard_21.mp4",
+        "poster": "media/images/link_hard_21-frame.png",
+        "figure": "media/images/link_hard_21.png"
+      }
+    },
+    {
+      "id": "link_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# move tree and watch relative link break\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\nSecurity: luring through attacker-controlled symlink can...",
+      "choices": [
+        "Redirect writes to sensitive targets",
+        "Only slow IO",
+        "Only change colors",
+        "Only affect man"
+      ],
+      "answer": 0,
+      "explain": "Symlink attacks.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_hard_22.mp4",
+        "poster": "media/images/link_hard_22-frame.png",
+        "figure": "media/images/link_hard_22.png"
+      }
+    },
+    {
+      "id": "link_hard_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nln -s ../foxtrot/tool bin/echo-link\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\n`openat` + `O_NOFOLLOW` mitigates some symlink follow races.",
+      "answer": true,
+      "explain": "Safe open flags.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_hard_23.mp4",
+        "poster": "media/images/link_hard_23-frame.png",
+        "figure": "media/images/link_hard_23.png"
+      }
+    },
+    {
+      "id": "link_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nreadlink src/foxtrot-link; realpath src/foxtrot-link || true\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nContainer bind mounts + symlinks escaping...",
+      "choices": [
+        "Can surprise path confinement",
+        "Are impossible",
+        "Only affect zip",
+        "Only affect make"
+      ],
+      "answer": 0,
+      "explain": "Escape via links.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_hard_24.mp4",
+        "poster": "media/images/link_hard_24-frame.png",
+        "figure": "media/images/link_hard_24.png"
+      }
+    },
+    {
+      "id": "link_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -sfr logs/golf /tmp/hotel-link27 2>/dev/null || ln -s $(realpath logs/golf) /tmp/hotel-link27\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nGit and symlinks: on Windows clones may...",
+      "choices": [
+        "Materialize as text files depending on settings",
+        "Always be real links",
+        "Become hard links",
+        "Be deleted"
+      ],
+      "answer": 0,
+      "explain": "core.symlinks behavior.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_hard_25.mp4",
+        "poster": "media/images/link_hard_25-frame.png",
+        "figure": "media/images/link_hard_25.png"
+      }
+    },
+    {
+      "id": "link_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# move tree and watch relative link break\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nBuild systems recording symlink digests must decide...",
+      "choices": [
+        "Hash text vs referent content",
+        "Always skip",
+        "Always follow network",
+        "Always use size 0"
+      ],
+      "answer": 0,
+      "explain": "Hash policy.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_hard_26.mp4",
+        "poster": "media/images/link_hard_26-frame.png",
+        "figure": "media/images/link_hard_26.png"
+      }
+    },
+    {
+      "id": "link_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -s ../juliet/tool build/india-link\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nRecursive delete following links can...",
+      "choices": [
+        "Destroy targets outside the tree",
+        "Only delete link text files harmlessly always",
+        "Never follow",
+        "Only clear modes"
+      ],
+      "answer": 0,
+      "explain": "Dangerous follow deletes.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_hard_27.mp4",
+        "poster": "media/images/link_hard_27-frame.png",
+        "figure": "media/images/link_hard_27.png"
+      }
+    },
+    {
+      "id": "link_hard_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nreadlink docs/juliet-link; realpath docs/juliet-link || true\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nRelative link correctness can be unit-tested via temp trees + realpath.",
+      "answer": true,
+      "explain": "Test link layouts.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_hard_28.mp4",
+        "poster": "media/images/link_hard_28-frame.png",
+        "figure": "media/images/link_hard_28.png"
+      }
+    },
+    {
+      "id": "link_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nln -sfr scripts/alpha /tmp/bravo-link31 2>/dev/null || ln -s $(realpath scripts/alpha) /tmp/bravo-link31\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nTooling that canonicalizes before storing may...",
+      "choices": [
+        "Convert intentional relatives to absolutes unexpectedly",
+        "Improve portability always",
+        "Disable links",
+        "Clear targets"
+      ],
+      "answer": 0,
+      "explain": "Preserve intent.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_hard_29.mp4",
+        "poster": "media/images/link_hard_29-frame.png",
+        "figure": "media/images/link_hard_29.png"
+      }
+    },
+    {
+      "id": "link_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# move tree and watch relative link break\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nLab: move a directory containing relative links and watch breaks.",
+      "choices": [
+        "Yes: feel the pitfall",
+        "No: only read docs",
+        "No: use absolute only always without understanding",
+        "No: skip"
+      ],
+      "answer": 0,
+      "explain": "Experience the break.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/link_hard_30.mp4",
+        "poster": "media/images/link_hard_30-frame.png",
+        "figure": "media/images/link_hard_30.png"
+      }
+    }
+  ]
+}

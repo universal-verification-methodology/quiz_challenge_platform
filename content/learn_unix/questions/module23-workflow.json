@@ -1,0 +1,1698 @@
+{
+  "module": "module23-workflow",
+  "title": "Pre-push / Make / env checklist",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake help 2>/dev/null | head || grep -E '^[a-z].*:' Makefile | head\n```\nBefore git push, a useful first check is...",
+      "choices": [
+        "Delete .git",
+        "git status (and commit/stash if dirty)",
+        "Format the disk",
+        "Disable Make"
+      ],
+      "answer": 1,
+      "explain": "A clean (or intentional) tree avoids pushing half-finished work by accident.",
+      "difficulty": "easy",
+      "id": "flow_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_easy_01.mp4",
+        "poster": "media/images/flow_easy_01-frame.png",
+        "figure": "media/images/flow_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake test && make lint && git status -sb\n```\nIf make test fails with TOOLS not set, you should first...",
+      "choices": [
+        "Rewrite all RTL",
+        "Fix or source the environment / .env (TOOLS path)",
+        "rm -rf src",
+        "Ignore exit codes forever"
+      ],
+      "answer": 1,
+      "explain": "Env and Make must agree; missing TOOLS is an env checklist item.",
+      "difficulty": "easy",
+      "id": "flow_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_easy_02.mp4",
+        "poster": "media/images/flow_easy_02-frame.png",
+        "figure": "media/images/flow_easy_02.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntest -f .env.example && echo env_template_ok\n```\ncheck_ready.sh exiting non-zero when git status is dirty is intentional.",
+      "answer": true,
+      "explain": "Non-zero exit blocks a careless push until you commit or stash.",
+      "difficulty": "easy",
+      "id": "flow_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_easy_03.mp4",
+        "poster": "media/images/flow_easy_03-frame.png",
+        "figure": "media/images/flow_easy_03.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# pre-push: unit tests + secret scan\n```\nPrefer dry-run before a destructive clean because...",
+      "choices": [
+        "It compresses better",
+        "You can see what would be removed before deleting",
+        "Git requires it",
+        "It disables PATH"
+      ],
+      "answer": 1,
+      "explain": "Dry-run (or make -n) reduces accidental deletes.",
+      "difficulty": "easy",
+      "id": "flow_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_easy_04.mp4",
+        "poster": "media/images/flow_easy_04-frame.png",
+        "figure": "media/images/flow_easy_04.png"
+      }
+    },
+    {
+      "id": "flow_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake help 2>/dev/null | head || grep -E '^[a-z].*:' Makefile | head\n```\nA pre-push checklist often includes...",
+      "choices": [
+        "Tests/lint/build sanity",
+        "Only wallpaper choice",
+        "Only reboot",
+        "Only zip -r /"
+      ],
+      "answer": 0,
+      "explain": "Verify before push.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_easy_05.mp4",
+        "poster": "media/images/flow_easy_05-frame.png",
+        "figure": "media/images/flow_easy_05.png"
+      }
+    },
+    {
+      "id": "flow_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake test && make lint && git status -sb\n```\n`make` in a workflow usually...",
+      "choices": [
+        "Builds/tests via documented targets",
+        "Replaces git",
+        "Formats the kernel",
+        "Clears $HOME"
+      ],
+      "answer": 0,
+      "explain": "Make as task runner.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_easy_06.mp4",
+        "poster": "media/images/flow_easy_06-frame.png",
+        "figure": "media/images/flow_easy_06.png"
+      }
+    },
+    {
+      "id": "flow_easy_07",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntest -f .env.example && echo env_template_ok\n```\nChecking `.env.example` exists helps onboard env expectations.",
+      "answer": true,
+      "explain": "Env template.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_easy_07.mp4",
+        "poster": "media/images/flow_easy_07-frame.png",
+        "figure": "media/images/flow_easy_07.png"
+      }
+    },
+    {
+      "id": "flow_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# pre-push: unit tests + secret scan\n```\nBefore push, `git status` shows...",
+      "choices": [
+        "Uncommitted/untracked changes",
+        "Only remote CPU",
+        "Only man",
+        "Only zip"
+      ],
+      "answer": 0,
+      "explain": "Status first.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_easy_08.mp4",
+        "poster": "media/images/flow_easy_08-frame.png",
+        "figure": "media/images/flow_easy_08.png"
+      }
+    },
+    {
+      "id": "flow_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake help 2>/dev/null | head || grep -E '^[a-z].*:' Makefile | head\n```\nDocument required tools in...",
+      "choices": [
+        "README / CONTRIBUTING",
+        "Only binary blobs",
+        "Only /proc",
+        "Only sticky /tmp"
+      ],
+      "answer": 0,
+      "explain": "Tooling docs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_easy_09.mp4",
+        "poster": "media/images/flow_easy_09-frame.png",
+        "figure": "media/images/flow_easy_09.png"
+      }
+    },
+    {
+      "id": "flow_easy_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake test && make lint && git status -sb\n```\nFast feedback loops prefer...",
+      "choices": [
+        "Local tests before remote CI wait",
+        "Only cloud",
+        "Skipping tests",
+        "Pushing secrets"
+      ],
+      "answer": 0,
+      "explain": "Shift left.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_easy_10.mp4",
+        "poster": "media/images/flow_easy_10-frame.png",
+        "figure": "media/images/flow_easy_10.png"
+      }
+    },
+    {
+      "id": "flow_easy_11",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntest -f .env.example && echo env_template_ok\n```\nMake targets like `test` / `lint` standardize commands.",
+      "answer": true,
+      "explain": "Common verbs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_easy_11.mp4",
+        "poster": "media/images/flow_easy_11-frame.png",
+        "figure": "media/images/flow_easy_11.png"
+      }
+    },
+    {
+      "id": "flow_easy_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# pre-push: unit tests + secret scan\n```\nEnv checklist includes...",
+      "choices": [
+        "Required variables present (not necessarily secret values in git)",
+        "Committing all secrets",
+        "Disabling PATH",
+        "Deleting README"
+      ],
+      "answer": 0,
+      "explain": "Vars present.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_easy_12.mp4",
+        "poster": "media/images/flow_easy_12-frame.png",
+        "figure": "media/images/flow_easy_12.png"
+      }
+    },
+    {
+      "id": "flow_easy_13",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake help 2>/dev/null | head || grep -E '^[a-z].*:' Makefile | head\n```\n`make help` (if provided) lists...",
+      "choices": [
+        "Available targets",
+        "Only PIDs",
+        "Only users",
+        "Only signals"
+      ],
+      "answer": 0,
+      "explain": "Self-documenting make.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_easy_13.mp4",
+        "poster": "media/images/flow_easy_13-frame.png",
+        "figure": "media/images/flow_easy_13.png"
+      }
+    },
+    {
+      "id": "flow_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake test && make lint && git status -sb\n```\nPre-push hooks can...",
+      "choices": [
+        "Block bad pushes locally",
+        "Replace CI entirely always",
+        "Format disks",
+        "Clear remotes"
+      ],
+      "answer": 0,
+      "explain": "Local gates.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_easy_14.mp4",
+        "poster": "media/images/flow_easy_14-frame.png",
+        "figure": "media/images/flow_easy_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -f .env.example && echo env_template_ok\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nBefore git push, a useful first check is...",
+      "choices": [
+        "Delete .git",
+        "git status (and commit/stash if dirty)",
+        "Format the disk",
+        "Disable Make"
+      ],
+      "answer": 1,
+      "explain": "A clean (or intentional) tree avoids pushing half-finished work by accident.",
+      "difficulty": "easy",
+      "id": "flow_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_easy_15.mp4",
+        "poster": "media/images/flow_easy_15-frame.png",
+        "figure": "media/images/flow_easy_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# pre-push: unit tests + secret scan\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nIf make test fails with TOOLS not set, you should first...",
+      "choices": [
+        "Rewrite all RTL",
+        "Fix or source the environment / .env (TOOLS path)",
+        "rm -rf src",
+        "Ignore exit codes forever"
+      ],
+      "answer": 1,
+      "explain": "Env and Make must agree; missing TOOLS is an env checklist item.",
+      "difficulty": "easy",
+      "id": "flow_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_easy_16.mp4",
+        "poster": "media/images/flow_easy_16-frame.png",
+        "figure": "media/images/flow_easy_16.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nmake help 2>/dev/null | head || grep -E '^[a-z].*:' Makefile | head\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\ncheck_ready.sh exiting non-zero when git status is dirty is intentional.",
+      "answer": true,
+      "explain": "Non-zero exit blocks a careless push until you commit or stash.",
+      "difficulty": "easy",
+      "id": "flow_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_easy_17.mp4",
+        "poster": "media/images/flow_easy_17-frame.png",
+        "figure": "media/images/flow_easy_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake test && make lint && git status -sb\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nPrefer dry-run before a destructive clean because...",
+      "choices": [
+        "It compresses better",
+        "You can see what would be removed before deleting",
+        "Git requires it",
+        "It disables PATH"
+      ],
+      "answer": 1,
+      "explain": "Dry-run (or make -n) reduces accidental deletes.",
+      "difficulty": "easy",
+      "id": "flow_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_easy_18.mp4",
+        "poster": "media/images/flow_easy_18-frame.png",
+        "figure": "media/images/flow_easy_18.png"
+      }
+    },
+    {
+      "id": "flow_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -f .env.example && echo env_template_ok\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nA pre-push checklist often includes...",
+      "choices": [
+        "Tests/lint/build sanity",
+        "Only wallpaper choice",
+        "Only reboot",
+        "Only zip -r /"
+      ],
+      "answer": 0,
+      "explain": "Verify before push.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_easy_19.mp4",
+        "poster": "media/images/flow_easy_19-frame.png",
+        "figure": "media/images/flow_easy_19.png"
+      }
+    },
+    {
+      "id": "flow_easy_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# pre-push: unit tests + secret scan\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\n`make` in a workflow usually...",
+      "choices": [
+        "Builds/tests via documented targets",
+        "Replaces git",
+        "Formats the kernel",
+        "Clears $HOME"
+      ],
+      "answer": 0,
+      "explain": "Make as task runner.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_easy_20.mp4",
+        "poster": "media/images/flow_easy_20-frame.png",
+        "figure": "media/images/flow_easy_20.png"
+      }
+    },
+    {
+      "id": "flow_easy_21",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nmake help 2>/dev/null | head || grep -E '^[a-z].*:' Makefile | head\n```\n# Review context: `/var/log/golf` slot 21 variant 1\nChecking `.env.example` exists helps onboard env expectations.",
+      "answer": true,
+      "explain": "Env template.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_easy_21.mp4",
+        "poster": "media/images/flow_easy_21-frame.png",
+        "figure": "media/images/flow_easy_21.png"
+      }
+    },
+    {
+      "id": "flow_easy_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake test && make lint && git status -sb\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\nBefore push, `git status` shows...",
+      "choices": [
+        "Uncommitted/untracked changes",
+        "Only remote CPU",
+        "Only man",
+        "Only zip"
+      ],
+      "answer": 0,
+      "explain": "Status first.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_easy_22.mp4",
+        "poster": "media/images/flow_easy_22-frame.png",
+        "figure": "media/images/flow_easy_22.png"
+      }
+    },
+    {
+      "id": "flow_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -f .env.example && echo env_template_ok\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\nDocument required tools in...",
+      "choices": [
+        "README / CONTRIBUTING",
+        "Only binary blobs",
+        "Only /proc",
+        "Only sticky /tmp"
+      ],
+      "answer": 0,
+      "explain": "Tooling docs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_easy_23.mp4",
+        "poster": "media/images/flow_easy_23-frame.png",
+        "figure": "media/images/flow_easy_23.png"
+      }
+    },
+    {
+      "id": "flow_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# pre-push: unit tests + secret scan\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nFast feedback loops prefer...",
+      "choices": [
+        "Local tests before remote CI wait",
+        "Only cloud",
+        "Skipping tests",
+        "Pushing secrets"
+      ],
+      "answer": 0,
+      "explain": "Shift left.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_easy_24.mp4",
+        "poster": "media/images/flow_easy_24-frame.png",
+        "figure": "media/images/flow_easy_24.png"
+      }
+    },
+    {
+      "id": "flow_easy_25",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nmake help 2>/dev/null | head || grep -E '^[a-z].*:' Makefile | head\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nMake targets like `test` / `lint` standardize commands.",
+      "answer": true,
+      "explain": "Common verbs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_easy_25.mp4",
+        "poster": "media/images/flow_easy_25-frame.png",
+        "figure": "media/images/flow_easy_25.png"
+      }
+    },
+    {
+      "id": "flow_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake test && make lint && git status -sb\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nEnv checklist includes...",
+      "choices": [
+        "Required variables present (not necessarily secret values in git)",
+        "Committing all secrets",
+        "Disabling PATH",
+        "Deleting README"
+      ],
+      "answer": 0,
+      "explain": "Vars present.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_easy_26.mp4",
+        "poster": "media/images/flow_easy_26-frame.png",
+        "figure": "media/images/flow_easy_26.png"
+      }
+    },
+    {
+      "id": "flow_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -f .env.example && echo env_template_ok\n```\n# Review context: `/var/log/echo` slot 27 variant 1\n`make help` (if provided) lists...",
+      "choices": [
+        "Available targets",
+        "Only PIDs",
+        "Only users",
+        "Only signals"
+      ],
+      "answer": 0,
+      "explain": "Self-documenting make.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_easy_27.mp4",
+        "poster": "media/images/flow_easy_27-frame.png",
+        "figure": "media/images/flow_easy_27.png"
+      }
+    },
+    {
+      "id": "flow_easy_28",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# pre-push: unit tests + secret scan\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nPre-push hooks can...",
+      "choices": [
+        "Block bad pushes locally",
+        "Replace CI entirely always",
+        "Format disks",
+        "Clear remotes"
+      ],
+      "answer": 0,
+      "explain": "Local gates.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_easy_28.mp4",
+        "poster": "media/images/flow_easy_28-frame.png",
+        "figure": "media/images/flow_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake help 2>/dev/null | head || grep -E '^[a-z].*:' Makefile | head\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nBefore git push, a useful first check is...",
+      "choices": [
+        "Delete .git",
+        "git status (and commit/stash if dirty)",
+        "Format the disk",
+        "Disable Make"
+      ],
+      "answer": 1,
+      "explain": "A clean (or intentional) tree avoids pushing half-finished work by accident.",
+      "difficulty": "easy",
+      "id": "flow_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_easy_29.mp4",
+        "poster": "media/images/flow_easy_29-frame.png",
+        "figure": "media/images/flow_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake test && make lint && git status -sb\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nIf make test fails with TOOLS not set, you should first...",
+      "choices": [
+        "Rewrite all RTL",
+        "Fix or source the environment / .env (TOOLS path)",
+        "rm -rf src",
+        "Ignore exit codes forever"
+      ],
+      "answer": 1,
+      "explain": "Env and Make must agree; missing TOOLS is an env checklist item.",
+      "difficulty": "easy",
+      "id": "flow_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_easy_30.mp4",
+        "poster": "media/images/flow_easy_30-frame.png",
+        "figure": "media/images/flow_easy_30.png"
+      }
+    },
+    {
+      "id": "flow_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# pre-push: unit tests + secret scan\n```\nCI should mirror local `make test` to avoid...",
+      "choices": [
+        "Works-on-my-machine drift",
+        "Faster laptops",
+        "Better docs",
+        "More aliases"
+      ],
+      "answer": 0,
+      "explain": "Parity.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_medium_01.mp4",
+        "poster": "media/images/flow_medium_01-frame.png",
+        "figure": "media/images/flow_medium_01.png"
+      }
+    },
+    {
+      "id": "flow_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake help 2>/dev/null | head || grep -E '^[a-z].*:' Makefile | head\n```\nCaching in CI must still allow...",
+      "choices": [
+        "Clean rebuild paths when needed",
+        "Infinite stale caches",
+        "Skipping locks",
+        "Secret prints"
+      ],
+      "answer": 0,
+      "explain": "Cache + clean.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_medium_02.mp4",
+        "poster": "media/images/flow_medium_02-frame.png",
+        "figure": "media/images/flow_medium_02.png"
+      }
+    },
+    {
+      "id": "flow_medium_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nmake test && make lint && git status -sb\n```\nPin tool versions for reproducible workflows.",
+      "answer": true,
+      "explain": "Version pins.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_medium_03.mp4",
+        "poster": "media/images/flow_medium_03-frame.png",
+        "figure": "media/images/flow_medium_03.png"
+      }
+    },
+    {
+      "id": "flow_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -f .env.example && echo env_template_ok\n```\nChangelog / PR checklist items catch...",
+      "choices": [
+        "Human process gaps automation misses",
+        "CPU bugs only",
+        "Disk firmware only",
+        "GPU only"
+      ],
+      "answer": 0,
+      "explain": "Process checks.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_medium_04.mp4",
+        "poster": "media/images/flow_medium_04-frame.png",
+        "figure": "media/images/flow_medium_04.png"
+      }
+    },
+    {
+      "id": "flow_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# pre-push: unit tests + secret scan\n```\nFeature flags in env let you...",
+      "choices": [
+        "Toggle behavior without recompile sometimes",
+        "Hide README",
+        "Disable make",
+        "Clear git"
+      ],
+      "answer": 0,
+      "explain": "Env toggles.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_medium_05.mp4",
+        "poster": "media/images/flow_medium_05-frame.png",
+        "figure": "media/images/flow_medium_05.png"
+      }
+    },
+    {
+      "id": "flow_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake help 2>/dev/null | head || grep -E '^[a-z].*:' Makefile | head\n```\nSecret scanning pre-push helps stop...",
+      "choices": [
+        "Accidental credential commits",
+        "All bugs",
+        "Slow tests",
+        "Large binaries only"
+      ],
+      "answer": 0,
+      "explain": "Scan secrets.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_medium_06.mp4",
+        "poster": "media/images/flow_medium_06-frame.png",
+        "figure": "media/images/flow_medium_06.png"
+      }
+    },
+    {
+      "id": "flow_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake test && make lint && git status -sb\n```\nMatrix testing across versions belongs in...",
+      "choices": [
+        "CI workflow config",
+        "Only local once",
+        "Only README emoji",
+        "Only tar"
+      ],
+      "answer": 0,
+      "explain": "CI matrices.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_medium_07.mp4",
+        "poster": "media/images/flow_medium_07-frame.png",
+        "figure": "media/images/flow_medium_07.png"
+      }
+    },
+    {
+      "id": "flow_medium_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntest -f .env.example && echo env_template_ok\n```\nDocumenting required umask/file modes is rare but matters for tools.",
+      "answer": true,
+      "explain": "Environment assumptions.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_medium_08.mp4",
+        "poster": "media/images/flow_medium_08-frame.png",
+        "figure": "media/images/flow_medium_08.png"
+      }
+    },
+    {
+      "id": "flow_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# pre-push: unit tests + secret scan\n```\nFailing fast locally with `make lint` reduces...",
+      "choices": [
+        "Round-trips to CI",
+        "Code quality",
+        "Test coverage needs",
+        "README size"
+      ],
+      "answer": 0,
+      "explain": "Local lint.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_medium_09.mp4",
+        "poster": "media/images/flow_medium_09-frame.png",
+        "figure": "media/images/flow_medium_09.png"
+      }
+    },
+    {
+      "id": "flow_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake help 2>/dev/null | head || grep -E '^[a-z].*:' Makefile | head\n```\nWorkflow diagrams should show...",
+      "choices": [
+        "Build -> test -> package -> deploy gates",
+        "Only editor themes",
+        "Only office seats",
+        "Only snack schedule"
+      ],
+      "answer": 0,
+      "explain": "Stage gates.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_medium_10.mp4",
+        "poster": "media/images/flow_medium_10-frame.png",
+        "figure": "media/images/flow_medium_10.png"
+      }
+    },
+    {
+      "id": "flow_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake test && make lint && git status -sb\n```\n# Review context: `~/bin/echo` slot 11 variant 1\nCI should mirror local `make test` to avoid...",
+      "choices": [
+        "Works-on-my-machine drift",
+        "Faster laptops",
+        "Better docs",
+        "More aliases"
+      ],
+      "answer": 0,
+      "explain": "Parity.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_medium_11.mp4",
+        "poster": "media/images/flow_medium_11-frame.png",
+        "figure": "media/images/flow_medium_11.png"
+      }
+    },
+    {
+      "id": "flow_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -f .env.example && echo env_template_ok\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\nCaching in CI must still allow...",
+      "choices": [
+        "Clean rebuild paths when needed",
+        "Infinite stale caches",
+        "Skipping locks",
+        "Secret prints"
+      ],
+      "answer": 0,
+      "explain": "Cache + clean.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_medium_12.mp4",
+        "poster": "media/images/flow_medium_12-frame.png",
+        "figure": "media/images/flow_medium_12.png"
+      }
+    },
+    {
+      "id": "flow_medium_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# pre-push: unit tests + secret scan\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\nPin tool versions for reproducible workflows.",
+      "answer": true,
+      "explain": "Version pins.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_medium_13.mp4",
+        "poster": "media/images/flow_medium_13-frame.png",
+        "figure": "media/images/flow_medium_13.png"
+      }
+    },
+    {
+      "id": "flow_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake help 2>/dev/null | head || grep -E '^[a-z].*:' Makefile | head\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\nChangelog / PR checklist items catch...",
+      "choices": [
+        "Human process gaps automation misses",
+        "CPU bugs only",
+        "Disk firmware only",
+        "GPU only"
+      ],
+      "answer": 0,
+      "explain": "Process checks.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_medium_14.mp4",
+        "poster": "media/images/flow_medium_14-frame.png",
+        "figure": "media/images/flow_medium_14.png"
+      }
+    },
+    {
+      "id": "flow_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake test && make lint && git status -sb\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nFeature flags in env let you...",
+      "choices": [
+        "Toggle behavior without recompile sometimes",
+        "Hide README",
+        "Disable make",
+        "Clear git"
+      ],
+      "answer": 0,
+      "explain": "Env toggles.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_medium_15.mp4",
+        "poster": "media/images/flow_medium_15-frame.png",
+        "figure": "media/images/flow_medium_15.png"
+      }
+    },
+    {
+      "id": "flow_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -f .env.example && echo env_template_ok\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nSecret scanning pre-push helps stop...",
+      "choices": [
+        "Accidental credential commits",
+        "All bugs",
+        "Slow tests",
+        "Large binaries only"
+      ],
+      "answer": 0,
+      "explain": "Scan secrets.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_medium_16.mp4",
+        "poster": "media/images/flow_medium_16-frame.png",
+        "figure": "media/images/flow_medium_16.png"
+      }
+    },
+    {
+      "id": "flow_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# pre-push: unit tests + secret scan\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nMatrix testing across versions belongs in...",
+      "choices": [
+        "CI workflow config",
+        "Only local once",
+        "Only README emoji",
+        "Only tar"
+      ],
+      "answer": 0,
+      "explain": "CI matrices.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_medium_17.mp4",
+        "poster": "media/images/flow_medium_17-frame.png",
+        "figure": "media/images/flow_medium_17.png"
+      }
+    },
+    {
+      "id": "flow_medium_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nmake help 2>/dev/null | head || grep -E '^[a-z].*:' Makefile | head\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nDocumenting required umask/file modes is rare but matters for tools.",
+      "answer": true,
+      "explain": "Environment assumptions.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_medium_18.mp4",
+        "poster": "media/images/flow_medium_18-frame.png",
+        "figure": "media/images/flow_medium_18.png"
+      }
+    },
+    {
+      "id": "flow_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake test && make lint && git status -sb\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nFailing fast locally with `make lint` reduces...",
+      "choices": [
+        "Round-trips to CI",
+        "Code quality",
+        "Test coverage needs",
+        "README size"
+      ],
+      "answer": 0,
+      "explain": "Local lint.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_medium_19.mp4",
+        "poster": "media/images/flow_medium_19-frame.png",
+        "figure": "media/images/flow_medium_19.png"
+      }
+    },
+    {
+      "id": "flow_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -f .env.example && echo env_template_ok\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\nWorkflow diagrams should show...",
+      "choices": [
+        "Build -> test -> package -> deploy gates",
+        "Only editor themes",
+        "Only office seats",
+        "Only snack schedule"
+      ],
+      "answer": 0,
+      "explain": "Stage gates.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_medium_20.mp4",
+        "poster": "media/images/flow_medium_20-frame.png",
+        "figure": "media/images/flow_medium_20.png"
+      }
+    },
+    {
+      "id": "flow_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# pre-push: unit tests + secret scan\n```\n# Review context: `/var/log/golf` slot 21 variant 1\nCI should mirror local `make test` to avoid...",
+      "choices": [
+        "Works-on-my-machine drift",
+        "Faster laptops",
+        "Better docs",
+        "More aliases"
+      ],
+      "answer": 0,
+      "explain": "Parity.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_medium_21.mp4",
+        "poster": "media/images/flow_medium_21-frame.png",
+        "figure": "media/images/flow_medium_21.png"
+      }
+    },
+    {
+      "id": "flow_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake help 2>/dev/null | head || grep -E '^[a-z].*:' Makefile | head\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\nCaching in CI must still allow...",
+      "choices": [
+        "Clean rebuild paths when needed",
+        "Infinite stale caches",
+        "Skipping locks",
+        "Secret prints"
+      ],
+      "answer": 0,
+      "explain": "Cache + clean.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_medium_22.mp4",
+        "poster": "media/images/flow_medium_22-frame.png",
+        "figure": "media/images/flow_medium_22.png"
+      }
+    },
+    {
+      "id": "flow_medium_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nmake test && make lint && git status -sb\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\nPin tool versions for reproducible workflows.",
+      "answer": true,
+      "explain": "Version pins.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_medium_23.mp4",
+        "poster": "media/images/flow_medium_23-frame.png",
+        "figure": "media/images/flow_medium_23.png"
+      }
+    },
+    {
+      "id": "flow_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -f .env.example && echo env_template_ok\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nChangelog / PR checklist items catch...",
+      "choices": [
+        "Human process gaps automation misses",
+        "CPU bugs only",
+        "Disk firmware only",
+        "GPU only"
+      ],
+      "answer": 0,
+      "explain": "Process checks.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_medium_24.mp4",
+        "poster": "media/images/flow_medium_24-frame.png",
+        "figure": "media/images/flow_medium_24.png"
+      }
+    },
+    {
+      "id": "flow_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# pre-push: unit tests + secret scan\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nFeature flags in env let you...",
+      "choices": [
+        "Toggle behavior without recompile sometimes",
+        "Hide README",
+        "Disable make",
+        "Clear git"
+      ],
+      "answer": 0,
+      "explain": "Env toggles.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_medium_25.mp4",
+        "poster": "media/images/flow_medium_25-frame.png",
+        "figure": "media/images/flow_medium_25.png"
+      }
+    },
+    {
+      "id": "flow_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake help 2>/dev/null | head || grep -E '^[a-z].*:' Makefile | head\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nSecret scanning pre-push helps stop...",
+      "choices": [
+        "Accidental credential commits",
+        "All bugs",
+        "Slow tests",
+        "Large binaries only"
+      ],
+      "answer": 0,
+      "explain": "Scan secrets.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_medium_26.mp4",
+        "poster": "media/images/flow_medium_26-frame.png",
+        "figure": "media/images/flow_medium_26.png"
+      }
+    },
+    {
+      "id": "flow_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake test && make lint && git status -sb\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nMatrix testing across versions belongs in...",
+      "choices": [
+        "CI workflow config",
+        "Only local once",
+        "Only README emoji",
+        "Only tar"
+      ],
+      "answer": 0,
+      "explain": "CI matrices.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_medium_27.mp4",
+        "poster": "media/images/flow_medium_27-frame.png",
+        "figure": "media/images/flow_medium_27.png"
+      }
+    },
+    {
+      "id": "flow_medium_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntest -f .env.example && echo env_template_ok\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nDocumenting required umask/file modes is rare but matters for tools.",
+      "answer": true,
+      "explain": "Environment assumptions.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_medium_28.mp4",
+        "poster": "media/images/flow_medium_28-frame.png",
+        "figure": "media/images/flow_medium_28.png"
+      }
+    },
+    {
+      "id": "flow_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# pre-push: unit tests + secret scan\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nFailing fast locally with `make lint` reduces...",
+      "choices": [
+        "Round-trips to CI",
+        "Code quality",
+        "Test coverage needs",
+        "README size"
+      ],
+      "answer": 0,
+      "explain": "Local lint.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_medium_29.mp4",
+        "poster": "media/images/flow_medium_29-frame.png",
+        "figure": "media/images/flow_medium_29.png"
+      }
+    },
+    {
+      "id": "flow_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake help 2>/dev/null | head || grep -E '^[a-z].*:' Makefile | head\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nWorkflow diagrams should show...",
+      "choices": [
+        "Build -> test -> package -> deploy gates",
+        "Only editor themes",
+        "Only office seats",
+        "Only snack schedule"
+      ],
+      "answer": 0,
+      "explain": "Stage gates.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_medium_30.mp4",
+        "poster": "media/images/flow_medium_30-frame.png",
+        "figure": "media/images/flow_medium_30.png"
+      }
+    },
+    {
+      "id": "flow_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# pre-push: unit tests + secret scan\n```\nHermetic builds aim to...",
+      "choices": [
+        "Control inputs so outputs reproduce",
+        "Maximize network fetches always",
+        "Rely on ambient tools only",
+        "Skip lockfiles"
+      ],
+      "answer": 0,
+      "explain": "Hermeticity.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_hard_01.mp4",
+        "poster": "media/images/flow_hard_01-frame.png",
+        "figure": "media/images/flow_hard_01.png"
+      }
+    },
+    {
+      "id": "flow_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake help 2>/dev/null | head || grep -E '^[a-z].*:' Makefile | head\n```\nPolicy-as-code gates (OPA etc.) extend checklists by...",
+      "choices": [
+        "Automating compliance rules",
+        "Replacing tests",
+        "Deleting make",
+        "Hiding logs"
+      ],
+      "answer": 0,
+      "explain": "Automated policy.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_hard_02.mp4",
+        "poster": "media/images/flow_hard_02-frame.png",
+        "figure": "media/images/flow_hard_02.png"
+      }
+    },
+    {
+      "id": "flow_hard_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nmake test && make lint && git status -sb\n```\nSupply-chain attestations pair with release workflows.",
+      "answer": true,
+      "explain": "Attest artifacts.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_hard_03.mp4",
+        "poster": "media/images/flow_hard_03-frame.png",
+        "figure": "media/images/flow_hard_03.png"
+      }
+    },
+    {
+      "id": "flow_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -f .env.example && echo env_template_ok\n```\nFlaky tests undermine checklists because...",
+      "choices": [
+        "They train people to ignore failures",
+        "They speed CI",
+        "They improve signal",
+        "They pin versions"
+      ],
+      "answer": 0,
+      "explain": "Fix flakes.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_hard_04.mp4",
+        "poster": "media/images/flow_hard_04-frame.png",
+        "figure": "media/images/flow_hard_04.png"
+      }
+    },
+    {
+      "id": "flow_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# pre-push: unit tests + secret scan\n```\nMonorepo affected-target selection must...",
+      "choices": [
+        "Still allow full builds periodically",
+        "Only build nothing",
+        "Skip tests always",
+        "Ignore deps"
+      ],
+      "answer": 0,
+      "explain": "Selective + periodic full.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_hard_05.mp4",
+        "poster": "media/images/flow_hard_05-frame.png",
+        "figure": "media/images/flow_hard_05.png"
+      }
+    },
+    {
+      "id": "flow_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake help 2>/dev/null | head || grep -E '^[a-z].*:' Makefile | head\n```\nEmergency hotfix workflow should still...",
+      "choices": [
+        "Record exceptions and follow-up CI",
+        "Skip all reviews forever",
+        "Disable logging",
+        "Push --force to main casually"
+      ],
+      "answer": 0,
+      "explain": "Controlled exceptions.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_hard_06.mp4",
+        "poster": "media/images/flow_hard_06-frame.png",
+        "figure": "media/images/flow_hard_06.png"
+      }
+    },
+    {
+      "id": "flow_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake test && make lint && git status -sb\n```\nEnv var sprawl is managed by...",
+      "choices": [
+        "Namespacing, docs, and validation schemas",
+        "Exporting everything global",
+        "Putting secrets in PS1",
+        "Committing .env with values"
+      ],
+      "answer": 0,
+      "explain": "Govern env surface.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_hard_07.mp4",
+        "poster": "media/images/flow_hard_07-frame.png",
+        "figure": "media/images/flow_hard_07.png"
+      }
+    },
+    {
+      "id": "flow_hard_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntest -f .env.example && echo env_template_ok\n```\nReproducible release tags include tool versions and content hashes.",
+      "answer": true,
+      "explain": "Release metadata.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_hard_08.mp4",
+        "poster": "media/images/flow_hard_08-frame.png",
+        "figure": "media/images/flow_hard_08.png"
+      }
+    },
+    {
+      "id": "flow_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# pre-push: unit tests + secret scan\n```\nLocal hooks vs CI: defense in depth means...",
+      "choices": [
+        "Both; either can be bypassed alone",
+        "Only hooks",
+        "Only CI",
+        "Neither"
+      ],
+      "answer": 0,
+      "explain": "Multiple gates.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_hard_09.mp4",
+        "poster": "media/images/flow_hard_09-frame.png",
+        "figure": "media/images/flow_hard_09.png"
+      }
+    },
+    {
+      "id": "flow_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake help 2>/dev/null | head || grep -E '^[a-z].*:' Makefile | head\n```\nLab: write a 5-line pre-push checklist and run it once for real.",
+      "choices": [
+        "Yes: practice the gate",
+        "No: memorize only",
+        "No: skip",
+        "No: automate secretly without docs"
+      ],
+      "answer": 0,
+      "explain": "Habit formation.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_hard_10.mp4",
+        "poster": "media/images/flow_hard_10-frame.png",
+        "figure": "media/images/flow_hard_10.png"
+      }
+    },
+    {
+      "id": "flow_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake test && make lint && git status -sb\n```\n# Review context: `~/bin/echo` slot 11 variant 1\nHermetic builds aim to...",
+      "choices": [
+        "Control inputs so outputs reproduce",
+        "Maximize network fetches always",
+        "Rely on ambient tools only",
+        "Skip lockfiles"
+      ],
+      "answer": 0,
+      "explain": "Hermeticity.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_hard_11.mp4",
+        "poster": "media/images/flow_hard_11-frame.png",
+        "figure": "media/images/flow_hard_11.png"
+      }
+    },
+    {
+      "id": "flow_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -f .env.example && echo env_template_ok\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\nPolicy-as-code gates (OPA etc.) extend checklists by...",
+      "choices": [
+        "Automating compliance rules",
+        "Replacing tests",
+        "Deleting make",
+        "Hiding logs"
+      ],
+      "answer": 0,
+      "explain": "Automated policy.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_hard_12.mp4",
+        "poster": "media/images/flow_hard_12-frame.png",
+        "figure": "media/images/flow_hard_12.png"
+      }
+    },
+    {
+      "id": "flow_hard_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# pre-push: unit tests + secret scan\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\nSupply-chain attestations pair with release workflows.",
+      "answer": true,
+      "explain": "Attest artifacts.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_hard_13.mp4",
+        "poster": "media/images/flow_hard_13-frame.png",
+        "figure": "media/images/flow_hard_13.png"
+      }
+    },
+    {
+      "id": "flow_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake help 2>/dev/null | head || grep -E '^[a-z].*:' Makefile | head\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\nFlaky tests undermine checklists because...",
+      "choices": [
+        "They train people to ignore failures",
+        "They speed CI",
+        "They improve signal",
+        "They pin versions"
+      ],
+      "answer": 0,
+      "explain": "Fix flakes.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_hard_14.mp4",
+        "poster": "media/images/flow_hard_14-frame.png",
+        "figure": "media/images/flow_hard_14.png"
+      }
+    },
+    {
+      "id": "flow_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake test && make lint && git status -sb\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nMonorepo affected-target selection must...",
+      "choices": [
+        "Still allow full builds periodically",
+        "Only build nothing",
+        "Skip tests always",
+        "Ignore deps"
+      ],
+      "answer": 0,
+      "explain": "Selective + periodic full.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_hard_15.mp4",
+        "poster": "media/images/flow_hard_15-frame.png",
+        "figure": "media/images/flow_hard_15.png"
+      }
+    },
+    {
+      "id": "flow_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -f .env.example && echo env_template_ok\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nEmergency hotfix workflow should still...",
+      "choices": [
+        "Record exceptions and follow-up CI",
+        "Skip all reviews forever",
+        "Disable logging",
+        "Push --force to main casually"
+      ],
+      "answer": 0,
+      "explain": "Controlled exceptions.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_hard_16.mp4",
+        "poster": "media/images/flow_hard_16-frame.png",
+        "figure": "media/images/flow_hard_16.png"
+      }
+    },
+    {
+      "id": "flow_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# pre-push: unit tests + secret scan\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nEnv var sprawl is managed by...",
+      "choices": [
+        "Namespacing, docs, and validation schemas",
+        "Exporting everything global",
+        "Putting secrets in PS1",
+        "Committing .env with values"
+      ],
+      "answer": 0,
+      "explain": "Govern env surface.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_hard_17.mp4",
+        "poster": "media/images/flow_hard_17-frame.png",
+        "figure": "media/images/flow_hard_17.png"
+      }
+    },
+    {
+      "id": "flow_hard_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nmake help 2>/dev/null | head || grep -E '^[a-z].*:' Makefile | head\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nReproducible release tags include tool versions and content hashes.",
+      "answer": true,
+      "explain": "Release metadata.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_hard_18.mp4",
+        "poster": "media/images/flow_hard_18-frame.png",
+        "figure": "media/images/flow_hard_18.png"
+      }
+    },
+    {
+      "id": "flow_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake test && make lint && git status -sb\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nLocal hooks vs CI: defense in depth means...",
+      "choices": [
+        "Both; either can be bypassed alone",
+        "Only hooks",
+        "Only CI",
+        "Neither"
+      ],
+      "answer": 0,
+      "explain": "Multiple gates.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_hard_19.mp4",
+        "poster": "media/images/flow_hard_19-frame.png",
+        "figure": "media/images/flow_hard_19.png"
+      }
+    },
+    {
+      "id": "flow_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -f .env.example && echo env_template_ok\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\nLab: write a 5-line pre-push checklist and run it once for real.",
+      "choices": [
+        "Yes: practice the gate",
+        "No: memorize only",
+        "No: skip",
+        "No: automate secretly without docs"
+      ],
+      "answer": 0,
+      "explain": "Habit formation.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_hard_20.mp4",
+        "poster": "media/images/flow_hard_20-frame.png",
+        "figure": "media/images/flow_hard_20.png"
+      }
+    },
+    {
+      "id": "flow_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# pre-push: unit tests + secret scan\n```\n# Review context: `/var/log/golf` slot 21 variant 1\nHermetic builds aim to...",
+      "choices": [
+        "Control inputs so outputs reproduce",
+        "Maximize network fetches always",
+        "Rely on ambient tools only",
+        "Skip lockfiles"
+      ],
+      "answer": 0,
+      "explain": "Hermeticity.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_hard_21.mp4",
+        "poster": "media/images/flow_hard_21-frame.png",
+        "figure": "media/images/flow_hard_21.png"
+      }
+    },
+    {
+      "id": "flow_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake help 2>/dev/null | head || grep -E '^[a-z].*:' Makefile | head\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\nPolicy-as-code gates (OPA etc.) extend checklists by...",
+      "choices": [
+        "Automating compliance rules",
+        "Replacing tests",
+        "Deleting make",
+        "Hiding logs"
+      ],
+      "answer": 0,
+      "explain": "Automated policy.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_hard_22.mp4",
+        "poster": "media/images/flow_hard_22-frame.png",
+        "figure": "media/images/flow_hard_22.png"
+      }
+    },
+    {
+      "id": "flow_hard_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nmake test && make lint && git status -sb\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\nSupply-chain attestations pair with release workflows.",
+      "answer": true,
+      "explain": "Attest artifacts.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_hard_23.mp4",
+        "poster": "media/images/flow_hard_23-frame.png",
+        "figure": "media/images/flow_hard_23.png"
+      }
+    },
+    {
+      "id": "flow_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -f .env.example && echo env_template_ok\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nFlaky tests undermine checklists because...",
+      "choices": [
+        "They train people to ignore failures",
+        "They speed CI",
+        "They improve signal",
+        "They pin versions"
+      ],
+      "answer": 0,
+      "explain": "Fix flakes.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_hard_24.mp4",
+        "poster": "media/images/flow_hard_24-frame.png",
+        "figure": "media/images/flow_hard_24.png"
+      }
+    },
+    {
+      "id": "flow_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# pre-push: unit tests + secret scan\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nMonorepo affected-target selection must...",
+      "choices": [
+        "Still allow full builds periodically",
+        "Only build nothing",
+        "Skip tests always",
+        "Ignore deps"
+      ],
+      "answer": 0,
+      "explain": "Selective + periodic full.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_hard_25.mp4",
+        "poster": "media/images/flow_hard_25-frame.png",
+        "figure": "media/images/flow_hard_25.png"
+      }
+    },
+    {
+      "id": "flow_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake help 2>/dev/null | head || grep -E '^[a-z].*:' Makefile | head\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nEmergency hotfix workflow should still...",
+      "choices": [
+        "Record exceptions and follow-up CI",
+        "Skip all reviews forever",
+        "Disable logging",
+        "Push --force to main casually"
+      ],
+      "answer": 0,
+      "explain": "Controlled exceptions.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_hard_26.mp4",
+        "poster": "media/images/flow_hard_26-frame.png",
+        "figure": "media/images/flow_hard_26.png"
+      }
+    },
+    {
+      "id": "flow_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake test && make lint && git status -sb\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nEnv var sprawl is managed by...",
+      "choices": [
+        "Namespacing, docs, and validation schemas",
+        "Exporting everything global",
+        "Putting secrets in PS1",
+        "Committing .env with values"
+      ],
+      "answer": 0,
+      "explain": "Govern env surface.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_hard_27.mp4",
+        "poster": "media/images/flow_hard_27-frame.png",
+        "figure": "media/images/flow_hard_27.png"
+      }
+    },
+    {
+      "id": "flow_hard_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntest -f .env.example && echo env_template_ok\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nReproducible release tags include tool versions and content hashes.",
+      "answer": true,
+      "explain": "Release metadata.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_hard_28.mp4",
+        "poster": "media/images/flow_hard_28-frame.png",
+        "figure": "media/images/flow_hard_28.png"
+      }
+    },
+    {
+      "id": "flow_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# pre-push: unit tests + secret scan\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nLocal hooks vs CI: defense in depth means...",
+      "choices": [
+        "Both; either can be bypassed alone",
+        "Only hooks",
+        "Only CI",
+        "Neither"
+      ],
+      "answer": 0,
+      "explain": "Multiple gates.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_hard_29.mp4",
+        "poster": "media/images/flow_hard_29-frame.png",
+        "figure": "media/images/flow_hard_29.png"
+      }
+    },
+    {
+      "id": "flow_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake help 2>/dev/null | head || grep -E '^[a-z].*:' Makefile | head\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nLab: write a 5-line pre-push checklist and run it once for real.",
+      "choices": [
+        "Yes: practice the gate",
+        "No: memorize only",
+        "No: skip",
+        "No: automate secretly without docs"
+      ],
+      "answer": 0,
+      "explain": "Habit formation.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/flow_hard_30.mp4",
+        "poster": "media/images/flow_hard_30-frame.png",
+        "figure": "media/images/flow_hard_30.png"
+      }
+    }
+  ]
+}

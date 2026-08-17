@@ -1,0 +1,1698 @@
+{
+  "module": "module02-man-help-lab",
+  "title": "man / --help discoverability",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\napropos delta 2>/dev/null | head\n```\nFor a full command manual, you usually run...",
+      "choices": [
+        "whatis command",
+        "man command",
+        "apropos command only",
+        "pwd command"
+      ],
+      "answer": 1,
+      "explain": "man opens the manual page for a command.",
+      "difficulty": "easy",
+      "id": "man_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_easy_01.mp4",
+        "poster": "media/images/man_easy_01-frame.png",
+        "figure": "media/images/man_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nman echo | head -n 10\n```\nA quick reminder of flags is often...",
+      "choices": [
+        "command --help",
+        "cd --manual",
+        "git only",
+        "rm -rf /"
+      ],
+      "answer": 0,
+      "explain": "Many commands print a short usage summary with --help.",
+      "difficulty": "easy",
+      "id": "man_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_easy_02.mp4",
+        "poster": "media/images/man_easy_02-frame.png",
+        "figure": "media/images/man_easy_02.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nfoxtrot --help | grep -i usage\n```\napropos searches for commands by keyword in their descriptions.",
+      "answer": true,
+      "explain": "apropos (and man -k) match keywords against short descriptions.",
+      "difficulty": "easy",
+      "id": "man_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_easy_03.mp4",
+        "poster": "media/images/man_easy_03-frame.png",
+        "figure": "media/images/man_easy_03.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nwhatis ls; man 1 ls\n```\nwhatis is best for...",
+      "choices": [
+        "Deleting files",
+        "A one-line summary of a command",
+        "Compiling Verilog",
+        "Changing directories permanently"
+      ],
+      "answer": 1,
+      "explain": "whatis prints a short one-line description when the database is available.",
+      "difficulty": "easy",
+      "id": "man_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_easy_04.mp4",
+        "poster": "media/images/man_easy_04-frame.png",
+        "figure": "media/images/man_easy_04.png"
+      }
+    },
+    {
+      "id": "man_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\napropos hotel 2>/dev/null | head\n```\n`cmd --help` usually...",
+      "choices": [
+        "Formats the disk",
+        "Prints a short usage summary",
+        "Opens vim",
+        "Disables PATH"
+      ],
+      "answer": 1,
+      "explain": "--help is the quick built-in summary.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_easy_05.mp4",
+        "poster": "media/images/man_easy_05-frame.png",
+        "figure": "media/images/man_easy_05.png"
+      }
+    },
+    {
+      "id": "man_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nman india | head -n 14\n```\n`man ls` opens...",
+      "choices": [
+        "The password file",
+        "The ls manual page",
+        "A compiler",
+        "Git blame"
+      ],
+      "answer": 1,
+      "explain": "man shows the manual.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_easy_06.mp4",
+        "poster": "media/images/man_easy_06-frame.png",
+        "figure": "media/images/man_easy_06.png"
+      }
+    },
+    {
+      "id": "man_easy_07",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\njuliet --help | grep -i usage\n```\nman pages are often longer and more complete than --help.",
+      "answer": true,
+      "explain": "man is the deeper reference.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_easy_07.mp4",
+        "poster": "media/images/man_easy_07-frame.png",
+        "figure": "media/images/man_easy_07.png"
+      }
+    },
+    {
+      "id": "man_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nwhatis ls; man 1 ls\n```\nSection 1 of man typically covers...",
+      "choices": [
+        "Kernel syscalls only",
+        "User commands",
+        "Only C library",
+        "Only devices"
+      ],
+      "answer": 1,
+      "explain": "Section 1 is user commands.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_easy_08.mp4",
+        "poster": "media/images/man_easy_08-frame.png",
+        "figure": "media/images/man_easy_08.png"
+      }
+    },
+    {
+      "id": "man_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\napropos bravo 2>/dev/null | head\n```\nIf `man mod9` fails, try...",
+      "choices": [
+        "rm -rf /",
+        "`mod9 --help` or search docs",
+        "Reboot only",
+        "chmod 000"
+      ],
+      "answer": 1,
+      "explain": "Fallback to --help/docs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_easy_09.mp4",
+        "poster": "media/images/man_easy_09-frame.png",
+        "figure": "media/images/man_easy_09.png"
+      }
+    },
+    {
+      "id": "man_easy_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nman charlie | head -n 18\n```\n`whatis ls` (where available) gives...",
+      "choices": [
+        "A one-line description",
+        "Full source code",
+        "Process list",
+        "Disk usage"
+      ],
+      "answer": 0,
+      "explain": "whatis is a short summary.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_easy_10.mp4",
+        "poster": "media/images/man_easy_10-frame.png",
+        "figure": "media/images/man_easy_10.png"
+      }
+    },
+    {
+      "id": "man_easy_11",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ndelta --help | grep -i usage\n```\nScrolling in man often uses less-like keys (q to quit).",
+      "answer": true,
+      "explain": "Pagers use q to exit.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_easy_11.mp4",
+        "poster": "media/images/man_easy_11-frame.png",
+        "figure": "media/images/man_easy_11.png"
+      }
+    },
+    {
+      "id": "man_easy_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nwhatis ls; man 1 ls\n```\nSYNOPSIS in a man page shows...",
+      "choices": [
+        "Only license text",
+        "Typical invocation patterns",
+        "CPU temperature",
+        "Git remotes"
+      ],
+      "answer": 1,
+      "explain": "SYNOPSIS is usage shapes.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_easy_12.mp4",
+        "poster": "media/images/man_easy_12-frame.png",
+        "figure": "media/images/man_easy_12.png"
+      }
+    },
+    {
+      "id": "man_easy_13",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\napropos foxtrot 2>/dev/null | head\n```\nFlags like `-a` are documented in...",
+      "choices": [
+        "Random tweets only",
+        "OPTIONS / DESCRIPTION sections",
+        "Only /etc/passwd",
+        "Makefile PHONY"
+      ],
+      "answer": 1,
+      "explain": "Options live in the manual.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_easy_13.mp4",
+        "poster": "media/images/man_easy_13-frame.png",
+        "figure": "media/images/man_easy_13.png"
+      }
+    },
+    {
+      "id": "man_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nman golf | head -n 22\n```\n`man man` teaches...",
+      "choices": [
+        "How to use the man system",
+        "Only networking",
+        "Only make",
+        "Disk partitioning only"
+      ],
+      "answer": 0,
+      "explain": "man documents itself.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_easy_14.mp4",
+        "poster": "media/images/man_easy_14-frame.png",
+        "figure": "media/images/man_easy_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nhotel --help | grep -i usage\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nFor a full command manual, you usually run...",
+      "choices": [
+        "whatis command",
+        "man command",
+        "apropos command only",
+        "pwd command"
+      ],
+      "answer": 1,
+      "explain": "man opens the manual page for a command.",
+      "difficulty": "easy",
+      "id": "man_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_easy_15.mp4",
+        "poster": "media/images/man_easy_15-frame.png",
+        "figure": "media/images/man_easy_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nwhatis ls; man 1 ls\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nA quick reminder of flags is often...",
+      "choices": [
+        "command --help",
+        "cd --manual",
+        "git only",
+        "rm -rf /"
+      ],
+      "answer": 0,
+      "explain": "Many commands print a short usage summary with --help.",
+      "difficulty": "easy",
+      "id": "man_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_easy_16.mp4",
+        "poster": "media/images/man_easy_16-frame.png",
+        "figure": "media/images/man_easy_16.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\napropos juliet 2>/dev/null | head\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\napropos searches for commands by keyword in their descriptions.",
+      "answer": true,
+      "explain": "apropos (and man -k) match keywords against short descriptions.",
+      "difficulty": "easy",
+      "id": "man_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_easy_17.mp4",
+        "poster": "media/images/man_easy_17-frame.png",
+        "figure": "media/images/man_easy_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nman alpha | head -n 6\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nwhatis is best for...",
+      "choices": [
+        "Deleting files",
+        "A one-line summary of a command",
+        "Compiling Verilog",
+        "Changing directories permanently"
+      ],
+      "answer": 1,
+      "explain": "whatis prints a short one-line description when the database is available.",
+      "difficulty": "easy",
+      "id": "man_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_easy_18.mp4",
+        "poster": "media/images/man_easy_18-frame.png",
+        "figure": "media/images/man_easy_18.png"
+      }
+    },
+    {
+      "id": "man_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nbravo --help | grep -i usage\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\n`cmd --help` usually...",
+      "choices": [
+        "Formats the disk",
+        "Prints a short usage summary",
+        "Opens vim",
+        "Disables PATH"
+      ],
+      "answer": 1,
+      "explain": "--help is the quick built-in summary.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_easy_19.mp4",
+        "poster": "media/images/man_easy_19-frame.png",
+        "figure": "media/images/man_easy_19.png"
+      }
+    },
+    {
+      "id": "man_easy_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nwhatis ls; man 1 ls\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\n`man ls` opens...",
+      "choices": [
+        "The password file",
+        "The ls manual page",
+        "A compiler",
+        "Git blame"
+      ],
+      "answer": 1,
+      "explain": "man shows the manual.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_easy_20.mp4",
+        "poster": "media/images/man_easy_20-frame.png",
+        "figure": "media/images/man_easy_20.png"
+      }
+    },
+    {
+      "id": "man_easy_21",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\napropos delta 2>/dev/null | head\n```\n# Review context: `/var/log/golf` slot 21 variant 1\nman pages are often longer and more complete than --help.",
+      "answer": true,
+      "explain": "man is the deeper reference.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_easy_21.mp4",
+        "poster": "media/images/man_easy_21-frame.png",
+        "figure": "media/images/man_easy_21.png"
+      }
+    },
+    {
+      "id": "man_easy_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nman echo | head -n 10\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\nSection 1 of man typically covers...",
+      "choices": [
+        "Kernel syscalls only",
+        "User commands",
+        "Only C library",
+        "Only devices"
+      ],
+      "answer": 1,
+      "explain": "Section 1 is user commands.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_easy_22.mp4",
+        "poster": "media/images/man_easy_22-frame.png",
+        "figure": "media/images/man_easy_22.png"
+      }
+    },
+    {
+      "id": "man_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nfoxtrot --help | grep -i usage\n```\nIf `man mod23` fails, try...",
+      "choices": [
+        "rm -rf /",
+        "`mod23 --help` or search docs",
+        "Reboot only",
+        "chmod 000"
+      ],
+      "answer": 1,
+      "explain": "Fallback to --help/docs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_easy_23.mp4",
+        "poster": "media/images/man_easy_23-frame.png",
+        "figure": "media/images/man_easy_23.png"
+      }
+    },
+    {
+      "id": "man_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nwhatis ls; man 1 ls\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\n`whatis ls` (where available) gives...",
+      "choices": [
+        "A one-line description",
+        "Full source code",
+        "Process list",
+        "Disk usage"
+      ],
+      "answer": 0,
+      "explain": "whatis is a short summary.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_easy_24.mp4",
+        "poster": "media/images/man_easy_24-frame.png",
+        "figure": "media/images/man_easy_24.png"
+      }
+    },
+    {
+      "id": "man_easy_25",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\napropos hotel 2>/dev/null | head\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nScrolling in man often uses less-like keys (q to quit).",
+      "answer": true,
+      "explain": "Pagers use q to exit.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_easy_25.mp4",
+        "poster": "media/images/man_easy_25-frame.png",
+        "figure": "media/images/man_easy_25.png"
+      }
+    },
+    {
+      "id": "man_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nman india | head -n 14\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nSYNOPSIS in a man page shows...",
+      "choices": [
+        "Only license text",
+        "Typical invocation patterns",
+        "CPU temperature",
+        "Git remotes"
+      ],
+      "answer": 1,
+      "explain": "SYNOPSIS is usage shapes.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_easy_26.mp4",
+        "poster": "media/images/man_easy_26-frame.png",
+        "figure": "media/images/man_easy_26.png"
+      }
+    },
+    {
+      "id": "man_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\njuliet --help | grep -i usage\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nFlags like `-a` are documented in...",
+      "choices": [
+        "Random tweets only",
+        "OPTIONS / DESCRIPTION sections",
+        "Only /etc/passwd",
+        "Makefile PHONY"
+      ],
+      "answer": 1,
+      "explain": "Options live in the manual.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_easy_27.mp4",
+        "poster": "media/images/man_easy_27-frame.png",
+        "figure": "media/images/man_easy_27.png"
+      }
+    },
+    {
+      "id": "man_easy_28",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nwhatis ls; man 1 ls\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\n`man man` teaches...",
+      "choices": [
+        "How to use the man system",
+        "Only networking",
+        "Only make",
+        "Disk partitioning only"
+      ],
+      "answer": 0,
+      "explain": "man documents itself.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_easy_28.mp4",
+        "poster": "media/images/man_easy_28-frame.png",
+        "figure": "media/images/man_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\napropos bravo 2>/dev/null | head\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nFor a full command manual, you usually run...",
+      "choices": [
+        "whatis command",
+        "man command",
+        "apropos command only",
+        "pwd command"
+      ],
+      "answer": 1,
+      "explain": "man opens the manual page for a command.",
+      "difficulty": "easy",
+      "id": "man_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_easy_29.mp4",
+        "poster": "media/images/man_easy_29-frame.png",
+        "figure": "media/images/man_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nman charlie | head -n 18\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nA quick reminder of flags is often...",
+      "choices": [
+        "command --help",
+        "cd --manual",
+        "git only",
+        "rm -rf /"
+      ],
+      "answer": 0,
+      "explain": "Many commands print a short usage summary with --help.",
+      "difficulty": "easy",
+      "id": "man_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_easy_30.mp4",
+        "poster": "media/images/man_easy_30-frame.png",
+        "figure": "media/images/man_easy_30.png"
+      }
+    },
+    {
+      "id": "man_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nwhatis ls; man 1 ls\n```\n`man 5 passwd` targets...",
+      "choices": [
+        "User command passwd",
+        "File format docs in section 5",
+        "Section 1 only",
+        "A zip archive"
+      ],
+      "answer": 1,
+      "explain": "Section number selects topic class.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_medium_01.mp4",
+        "poster": "media/images/man_medium_01-frame.png",
+        "figure": "media/images/man_medium_01.png"
+      }
+    },
+    {
+      "id": "man_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\napropos delta 2>/dev/null | head\n```\n`man -k copy` / apropos typically...",
+      "choices": [
+        "Deletes files named copy",
+        "Searches short descriptions for keywords",
+        "Compiles kernels",
+        "Sets umask"
+      ],
+      "answer": 1,
+      "explain": "Keyword search across pages.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_medium_02.mp4",
+        "poster": "media/images/man_medium_02-frame.png",
+        "figure": "media/images/man_medium_02.png"
+      }
+    },
+    {
+      "id": "man_medium_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nman echo | head -n 10\n```\nSome tools ship only --help and no local man page.",
+      "answer": true,
+      "explain": "Not every binary has man installed.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_medium_03.mp4",
+        "poster": "media/images/man_medium_03-frame.png",
+        "figure": "media/images/man_medium_03.png"
+      }
+    },
+    {
+      "id": "man_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nfoxtrot --help | grep -i usage\n```\nSEE ALSO points you to...",
+      "choices": [
+        "Related commands/pages",
+        "Only your email",
+        "Only CPU flags",
+        "Trash"
+      ],
+      "answer": 0,
+      "explain": "Cross-references nearby tools.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_medium_04.mp4",
+        "poster": "media/images/man_medium_04-frame.png",
+        "figure": "media/images/man_medium_04.png"
+      }
+    },
+    {
+      "id": "man_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nwhatis ls; man 1 ls\n```\nWhen --help and man disagree, prefer...",
+      "choices": [
+        "Whichever is newer/installed for that build + release notes",
+        "Always ignore both",
+        "Only Reddit",
+        "Random"
+      ],
+      "answer": 0,
+      "explain": "Match the installed version.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_medium_05.mp4",
+        "poster": "media/images/man_medium_05-frame.png",
+        "figure": "media/images/man_medium_05.png"
+      }
+    },
+    {
+      "id": "man_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\napropos hotel 2>/dev/null | head\n```\n`info` pages (GNU) are...",
+      "choices": [
+        "Always identical to man",
+        "Another hypertext doc system some tools use",
+        "Only for zip",
+        "Disabled by PATH"
+      ],
+      "answer": 1,
+      "explain": "info is a parallel doc system.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_medium_06.mp4",
+        "poster": "media/images/man_medium_06-frame.png",
+        "figure": "media/images/man_medium_06.png"
+      }
+    },
+    {
+      "id": "man_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nman india | head -n 14\n```\nExit codes in man EXIT STATUS help you...",
+      "choices": [
+        "Pick wallpaper",
+        "Interpret automation success/failure",
+        "Set hostname",
+        "Format ext4"
+      ],
+      "answer": 1,
+      "explain": "Documented statuses aid scripts.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_medium_07.mp4",
+        "poster": "media/images/man_medium_07-frame.png",
+        "figure": "media/images/man_medium_07.png"
+      }
+    },
+    {
+      "id": "man_medium_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\njuliet --help | grep -i usage\n```\nLocale can change man language if translations are installed.",
+      "answer": true,
+      "explain": "MANLANG/LANG affect pages.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_medium_08.mp4",
+        "poster": "media/images/man_medium_08-frame.png",
+        "figure": "media/images/man_medium_08.png"
+      }
+    },
+    {
+      "id": "man_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nwhatis ls; man 1 ls\n```\nTruncated --help often means...",
+      "choices": [
+        "Full detail is in man/info/docs",
+        "The command is broken always",
+        "You must reboot",
+        "Disable shell"
+      ],
+      "answer": 0,
+      "explain": "Help is a teaser; man is deeper.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_medium_09.mp4",
+        "poster": "media/images/man_medium_09-frame.png",
+        "figure": "media/images/man_medium_09.png"
+      }
+    },
+    {
+      "id": "man_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\napropos bravo 2>/dev/null | head\n```\nSearching inside a man pager commonly uses...",
+      "choices": [
+        "/",
+        "sudo",
+        "chmod +t",
+        "tar -c"
+      ],
+      "answer": 0,
+      "explain": "/ starts a search in less.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_medium_10.mp4",
+        "poster": "media/images/man_medium_10-frame.png",
+        "figure": "media/images/man_medium_10.png"
+      }
+    },
+    {
+      "id": "man_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nman charlie | head -n 18\n```\n# Review context: `~/bin/echo` slot 11 variant 1\n`man 5 passwd` targets...",
+      "choices": [
+        "User command passwd",
+        "File format docs in section 5",
+        "Section 1 only",
+        "A zip archive"
+      ],
+      "answer": 1,
+      "explain": "Section number selects topic class.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_medium_11.mp4",
+        "poster": "media/images/man_medium_11-frame.png",
+        "figure": "media/images/man_medium_11.png"
+      }
+    },
+    {
+      "id": "man_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ndelta --help | grep -i usage\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\n`man -k copy` / apropos typically...",
+      "choices": [
+        "Deletes files named copy",
+        "Searches short descriptions for keywords",
+        "Compiles kernels",
+        "Sets umask"
+      ],
+      "answer": 1,
+      "explain": "Keyword search across pages.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_medium_12.mp4",
+        "poster": "media/images/man_medium_12-frame.png",
+        "figure": "media/images/man_medium_12.png"
+      }
+    },
+    {
+      "id": "man_medium_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nwhatis ls; man 1 ls\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\nSome tools ship only --help and no local man page.",
+      "answer": true,
+      "explain": "Not every binary has man installed.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_medium_13.mp4",
+        "poster": "media/images/man_medium_13-frame.png",
+        "figure": "media/images/man_medium_13.png"
+      }
+    },
+    {
+      "id": "man_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\napropos foxtrot 2>/dev/null | head\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\nSEE ALSO points you to...",
+      "choices": [
+        "Related commands/pages",
+        "Only your email",
+        "Only CPU flags",
+        "Trash"
+      ],
+      "answer": 0,
+      "explain": "Cross-references nearby tools.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_medium_14.mp4",
+        "poster": "media/images/man_medium_14-frame.png",
+        "figure": "media/images/man_medium_14.png"
+      }
+    },
+    {
+      "id": "man_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nman golf | head -n 22\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nWhen --help and man disagree, prefer...",
+      "choices": [
+        "Whichever is newer/installed for that build + release notes",
+        "Always ignore both",
+        "Only Reddit",
+        "Random"
+      ],
+      "answer": 0,
+      "explain": "Match the installed version.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_medium_15.mp4",
+        "poster": "media/images/man_medium_15-frame.png",
+        "figure": "media/images/man_medium_15.png"
+      }
+    },
+    {
+      "id": "man_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nhotel --help | grep -i usage\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\n`info` pages (GNU) are...",
+      "choices": [
+        "Always identical to man",
+        "Another hypertext doc system some tools use",
+        "Only for zip",
+        "Disabled by PATH"
+      ],
+      "answer": 1,
+      "explain": "info is a parallel doc system.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_medium_16.mp4",
+        "poster": "media/images/man_medium_16-frame.png",
+        "figure": "media/images/man_medium_16.png"
+      }
+    },
+    {
+      "id": "man_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nwhatis ls; man 1 ls\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nExit codes in man EXIT STATUS help you...",
+      "choices": [
+        "Pick wallpaper",
+        "Interpret automation success/failure",
+        "Set hostname",
+        "Format ext4"
+      ],
+      "answer": 1,
+      "explain": "Documented statuses aid scripts.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_medium_17.mp4",
+        "poster": "media/images/man_medium_17-frame.png",
+        "figure": "media/images/man_medium_17.png"
+      }
+    },
+    {
+      "id": "man_medium_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\napropos juliet 2>/dev/null | head\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nLocale can change man language if translations are installed.",
+      "answer": true,
+      "explain": "MANLANG/LANG affect pages.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_medium_18.mp4",
+        "poster": "media/images/man_medium_18-frame.png",
+        "figure": "media/images/man_medium_18.png"
+      }
+    },
+    {
+      "id": "man_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nman alpha | head -n 6\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nTruncated --help often means...",
+      "choices": [
+        "Full detail is in man/info/docs",
+        "The command is broken always",
+        "You must reboot",
+        "Disable shell"
+      ],
+      "answer": 0,
+      "explain": "Help is a teaser; man is deeper.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_medium_19.mp4",
+        "poster": "media/images/man_medium_19-frame.png",
+        "figure": "media/images/man_medium_19.png"
+      }
+    },
+    {
+      "id": "man_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nbravo --help | grep -i usage\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\nSearching inside a man pager commonly uses...",
+      "choices": [
+        "/",
+        "sudo",
+        "chmod +t",
+        "tar -c"
+      ],
+      "answer": 0,
+      "explain": "/ starts a search in less.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_medium_20.mp4",
+        "poster": "media/images/man_medium_20-frame.png",
+        "figure": "media/images/man_medium_20.png"
+      }
+    },
+    {
+      "id": "man_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nwhatis ls; man 1 ls\n```\n# Review context: `/var/log/golf` slot 21 variant 1\n`man 5 passwd` targets...",
+      "choices": [
+        "User command passwd",
+        "File format docs in section 5",
+        "Section 1 only",
+        "A zip archive"
+      ],
+      "answer": 1,
+      "explain": "Section number selects topic class.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_medium_21.mp4",
+        "poster": "media/images/man_medium_21-frame.png",
+        "figure": "media/images/man_medium_21.png"
+      }
+    },
+    {
+      "id": "man_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\napropos delta 2>/dev/null | head\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\n`man -k copy` / apropos typically...",
+      "choices": [
+        "Deletes files named copy",
+        "Searches short descriptions for keywords",
+        "Compiles kernels",
+        "Sets umask"
+      ],
+      "answer": 1,
+      "explain": "Keyword search across pages.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_medium_22.mp4",
+        "poster": "media/images/man_medium_22-frame.png",
+        "figure": "media/images/man_medium_22.png"
+      }
+    },
+    {
+      "id": "man_medium_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nman echo | head -n 10\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\nSome tools ship only --help and no local man page.",
+      "answer": true,
+      "explain": "Not every binary has man installed.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_medium_23.mp4",
+        "poster": "media/images/man_medium_23-frame.png",
+        "figure": "media/images/man_medium_23.png"
+      }
+    },
+    {
+      "id": "man_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nfoxtrot --help | grep -i usage\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nSEE ALSO points you to...",
+      "choices": [
+        "Related commands/pages",
+        "Only your email",
+        "Only CPU flags",
+        "Trash"
+      ],
+      "answer": 0,
+      "explain": "Cross-references nearby tools.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_medium_24.mp4",
+        "poster": "media/images/man_medium_24-frame.png",
+        "figure": "media/images/man_medium_24.png"
+      }
+    },
+    {
+      "id": "man_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nwhatis ls; man 1 ls\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nWhen --help and man disagree, prefer...",
+      "choices": [
+        "Whichever is newer/installed for that build + release notes",
+        "Always ignore both",
+        "Only Reddit",
+        "Random"
+      ],
+      "answer": 0,
+      "explain": "Match the installed version.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_medium_25.mp4",
+        "poster": "media/images/man_medium_25-frame.png",
+        "figure": "media/images/man_medium_25.png"
+      }
+    },
+    {
+      "id": "man_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\napropos hotel 2>/dev/null | head\n```\n# Review context: `./scripts/delta` slot 26 variant 1\n`info` pages (GNU) are...",
+      "choices": [
+        "Always identical to man",
+        "Another hypertext doc system some tools use",
+        "Only for zip",
+        "Disabled by PATH"
+      ],
+      "answer": 1,
+      "explain": "info is a parallel doc system.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_medium_26.mp4",
+        "poster": "media/images/man_medium_26-frame.png",
+        "figure": "media/images/man_medium_26.png"
+      }
+    },
+    {
+      "id": "man_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nman india | head -n 14\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nExit codes in man EXIT STATUS help you...",
+      "choices": [
+        "Pick wallpaper",
+        "Interpret automation success/failure",
+        "Set hostname",
+        "Format ext4"
+      ],
+      "answer": 1,
+      "explain": "Documented statuses aid scripts.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_medium_27.mp4",
+        "poster": "media/images/man_medium_27-frame.png",
+        "figure": "media/images/man_medium_27.png"
+      }
+    },
+    {
+      "id": "man_medium_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\njuliet --help | grep -i usage\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nLocale can change man language if translations are installed.",
+      "answer": true,
+      "explain": "MANLANG/LANG affect pages.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_medium_28.mp4",
+        "poster": "media/images/man_medium_28-frame.png",
+        "figure": "media/images/man_medium_28.png"
+      }
+    },
+    {
+      "id": "man_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nwhatis ls; man 1 ls\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nTruncated --help often means...",
+      "choices": [
+        "Full detail is in man/info/docs",
+        "The command is broken always",
+        "You must reboot",
+        "Disable shell"
+      ],
+      "answer": 0,
+      "explain": "Help is a teaser; man is deeper.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_medium_29.mp4",
+        "poster": "media/images/man_medium_29-frame.png",
+        "figure": "media/images/man_medium_29.png"
+      }
+    },
+    {
+      "id": "man_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\napropos bravo 2>/dev/null | head\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nSearching inside a man pager commonly uses...",
+      "choices": [
+        "/",
+        "sudo",
+        "chmod +t",
+        "tar -c"
+      ],
+      "answer": 0,
+      "explain": "/ starts a search in less.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_medium_30.mp4",
+        "poster": "media/images/man_medium_30-frame.png",
+        "figure": "media/images/man_medium_30.png"
+      }
+    },
+    {
+      "id": "man_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nwhatis ls; man 1 ls\n```\nPOSIX vs GNU man differences matter when...",
+      "choices": [
+        "Writing portable scripts/flags",
+        "Choosing fonts",
+        "Naming hosts only",
+        "Buying RAM"
+      ],
+      "answer": 0,
+      "explain": "Flag sets differ across systems.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_hard_01.mp4",
+        "poster": "media/images/man_hard_01-frame.png",
+        "figure": "media/images/man_hard_01.png"
+      }
+    },
+    {
+      "id": "man_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\napropos delta 2>/dev/null | head\n```\n`MANPATH` overrides...",
+      "choices": [
+        "Where man searches for pages",
+        "Your $HOME always",
+        "umask",
+        "Git user.name"
+      ],
+      "answer": 0,
+      "explain": "MANPATH controls page locations.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_hard_02.mp4",
+        "poster": "media/images/man_hard_02-frame.png",
+        "figure": "media/images/man_hard_02.png"
+      }
+    },
+    {
+      "id": "man_hard_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nman echo | head -n 10\n```\nBuilt-in shell help (`help cd`) differs from external `man cd`.",
+      "answer": true,
+      "explain": "Shell builtins have shell help.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_hard_03.mp4",
+        "poster": "media/images/man_hard_03-frame.png",
+        "figure": "media/images/man_hard_03.png"
+      }
+    },
+    {
+      "id": "man_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nfoxtrot --help | grep -i usage\n```\nVendor pages under /opt may need...",
+      "choices": [
+        "Deleting /usr",
+        "Adding their man path / modules",
+        "Disabling less",
+        "Root-only ls"
+      ],
+      "answer": 1,
+      "explain": "Third-party trees need MANPATH/modules.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_hard_04.mp4",
+        "poster": "media/images/man_hard_04-frame.png",
+        "figure": "media/images/man_hard_04.png"
+      }
+    },
+    {
+      "id": "man_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nwhatis ls; man 1 ls\n```\nFor CI, documenting `tool --help` snapshots helps because...",
+      "choices": [
+        "man may be absent in slim images",
+        "It replaces tests",
+        "It disables networking",
+        "It sets umask"
+      ],
+      "answer": 0,
+      "explain": "Minimal images often lack man-db.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_hard_05.mp4",
+        "poster": "media/images/man_hard_05-frame.png",
+        "figure": "media/images/man_hard_05.png"
+      }
+    },
+    {
+      "id": "man_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\napropos hotel 2>/dev/null | head\n```\nAmbiguous names (printf builtin vs /usr/bin/printf) require...",
+      "choices": [
+        "Knowing which one you invoked",
+        "Always sudo",
+        "Always reboot",
+        "Ignoring docs"
+      ],
+      "answer": 0,
+      "explain": "Builtins shadow externals.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_hard_06.mp4",
+        "poster": "media/images/man_hard_06-frame.png",
+        "figure": "media/images/man_hard_06.png"
+      }
+    },
+    {
+      "id": "man_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nman india | head -n 14\n```\nCompressed pages (.gz) are...",
+      "choices": [
+        "Normal; man decompresses via pipeline",
+        "Corrupt always",
+        "Only for zip tools",
+        "Ignored forever"
+      ],
+      "answer": 0,
+      "explain": "man handles gzipped pages.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_hard_07.mp4",
+        "poster": "media/images/man_hard_07-frame.png",
+        "figure": "media/images/man_hard_07.png"
+      }
+    },
+    {
+      "id": "man_hard_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\njuliet --help | grep -i usage\n```\nReading EXAMPLES sections often beats memorizing every flag.",
+      "answer": true,
+      "explain": "Examples encode common usage.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_hard_08.mp4",
+        "poster": "media/images/man_hard_08-frame.png",
+        "figure": "media/images/man_hard_08.png"
+      }
+    },
+    {
+      "id": "man_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nwhatis ls; man 1 ls\n```\nWhen packaging a CLI, provide...",
+      "choices": [
+        "--help, man/markdown, and exit-status docs",
+        "Only a logo",
+        "Only a GUI",
+        "Only emoji"
+      ],
+      "answer": 0,
+      "explain": "Discoverability stack.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_hard_09.mp4",
+        "poster": "media/images/man_hard_09-frame.png",
+        "figure": "media/images/man_hard_09.png"
+      }
+    },
+    {
+      "id": "man_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\napropos bravo 2>/dev/null | head\n```\nOffline labs still matter because...",
+      "choices": [
+        "Networks fail; local docs remain",
+        "man requires cloud GPUs",
+        "Shells cannot run offline",
+        "pwd needs DNS"
+      ],
+      "answer": 0,
+      "explain": "Local docs are resilient.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_hard_10.mp4",
+        "poster": "media/images/man_hard_10-frame.png",
+        "figure": "media/images/man_hard_10.png"
+      }
+    },
+    {
+      "id": "man_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nman charlie | head -n 18\n```\n# Review context: `~/bin/echo` slot 11 variant 1\nPOSIX vs GNU man differences matter when...",
+      "choices": [
+        "Writing portable scripts/flags",
+        "Choosing fonts",
+        "Naming hosts only",
+        "Buying RAM"
+      ],
+      "answer": 0,
+      "explain": "Flag sets differ across systems.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_hard_11.mp4",
+        "poster": "media/images/man_hard_11-frame.png",
+        "figure": "media/images/man_hard_11.png"
+      }
+    },
+    {
+      "id": "man_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ndelta --help | grep -i usage\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\n`MANPATH` overrides...",
+      "choices": [
+        "Where man searches for pages",
+        "Your $HOME always",
+        "umask",
+        "Git user.name"
+      ],
+      "answer": 0,
+      "explain": "MANPATH controls page locations.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_hard_12.mp4",
+        "poster": "media/images/man_hard_12-frame.png",
+        "figure": "media/images/man_hard_12.png"
+      }
+    },
+    {
+      "id": "man_hard_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nwhatis ls; man 1 ls\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\nBuilt-in shell help (`help cd`) differs from external `man cd`.",
+      "answer": true,
+      "explain": "Shell builtins have shell help.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_hard_13.mp4",
+        "poster": "media/images/man_hard_13-frame.png",
+        "figure": "media/images/man_hard_13.png"
+      }
+    },
+    {
+      "id": "man_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\napropos foxtrot 2>/dev/null | head\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\nVendor pages under /opt may need...",
+      "choices": [
+        "Deleting /usr",
+        "Adding their man path / modules",
+        "Disabling less",
+        "Root-only ls"
+      ],
+      "answer": 1,
+      "explain": "Third-party trees need MANPATH/modules.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_hard_14.mp4",
+        "poster": "media/images/man_hard_14-frame.png",
+        "figure": "media/images/man_hard_14.png"
+      }
+    },
+    {
+      "id": "man_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nman golf | head -n 22\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nFor CI, documenting `tool --help` snapshots helps because...",
+      "choices": [
+        "man may be absent in slim images",
+        "It replaces tests",
+        "It disables networking",
+        "It sets umask"
+      ],
+      "answer": 0,
+      "explain": "Minimal images often lack man-db.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_hard_15.mp4",
+        "poster": "media/images/man_hard_15-frame.png",
+        "figure": "media/images/man_hard_15.png"
+      }
+    },
+    {
+      "id": "man_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nhotel --help | grep -i usage\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nAmbiguous names (printf builtin vs /usr/bin/printf) require...",
+      "choices": [
+        "Knowing which one you invoked",
+        "Always sudo",
+        "Always reboot",
+        "Ignoring docs"
+      ],
+      "answer": 0,
+      "explain": "Builtins shadow externals.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_hard_16.mp4",
+        "poster": "media/images/man_hard_16-frame.png",
+        "figure": "media/images/man_hard_16.png"
+      }
+    },
+    {
+      "id": "man_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nwhatis ls; man 1 ls\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nCompressed pages (.gz) are...",
+      "choices": [
+        "Normal; man decompresses via pipeline",
+        "Corrupt always",
+        "Only for zip tools",
+        "Ignored forever"
+      ],
+      "answer": 0,
+      "explain": "man handles gzipped pages.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_hard_17.mp4",
+        "poster": "media/images/man_hard_17-frame.png",
+        "figure": "media/images/man_hard_17.png"
+      }
+    },
+    {
+      "id": "man_hard_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\napropos juliet 2>/dev/null | head\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nReading EXAMPLES sections often beats memorizing every flag.",
+      "answer": true,
+      "explain": "Examples encode common usage.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_hard_18.mp4",
+        "poster": "media/images/man_hard_18-frame.png",
+        "figure": "media/images/man_hard_18.png"
+      }
+    },
+    {
+      "id": "man_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nman alpha | head -n 6\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nWhen packaging a CLI, provide...",
+      "choices": [
+        "--help, man/markdown, and exit-status docs",
+        "Only a logo",
+        "Only a GUI",
+        "Only emoji"
+      ],
+      "answer": 0,
+      "explain": "Discoverability stack.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_hard_19.mp4",
+        "poster": "media/images/man_hard_19-frame.png",
+        "figure": "media/images/man_hard_19.png"
+      }
+    },
+    {
+      "id": "man_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nbravo --help | grep -i usage\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\nOffline labs still matter because...",
+      "choices": [
+        "Networks fail; local docs remain",
+        "man requires cloud GPUs",
+        "Shells cannot run offline",
+        "pwd needs DNS"
+      ],
+      "answer": 0,
+      "explain": "Local docs are resilient.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_hard_20.mp4",
+        "poster": "media/images/man_hard_20-frame.png",
+        "figure": "media/images/man_hard_20.png"
+      }
+    },
+    {
+      "id": "man_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nwhatis ls; man 1 ls\n```\n# Review context: `/var/log/golf` slot 21 variant 1\nPOSIX vs GNU man differences matter when...",
+      "choices": [
+        "Writing portable scripts/flags",
+        "Choosing fonts",
+        "Naming hosts only",
+        "Buying RAM"
+      ],
+      "answer": 0,
+      "explain": "Flag sets differ across systems.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_hard_21.mp4",
+        "poster": "media/images/man_hard_21-frame.png",
+        "figure": "media/images/man_hard_21.png"
+      }
+    },
+    {
+      "id": "man_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\napropos delta 2>/dev/null | head\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\n`MANPATH` overrides...",
+      "choices": [
+        "Where man searches for pages",
+        "Your $HOME always",
+        "umask",
+        "Git user.name"
+      ],
+      "answer": 0,
+      "explain": "MANPATH controls page locations.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_hard_22.mp4",
+        "poster": "media/images/man_hard_22-frame.png",
+        "figure": "media/images/man_hard_22.png"
+      }
+    },
+    {
+      "id": "man_hard_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nman echo | head -n 10\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\nBuilt-in shell help (`help cd`) differs from external `man cd`.",
+      "answer": true,
+      "explain": "Shell builtins have shell help.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_hard_23.mp4",
+        "poster": "media/images/man_hard_23-frame.png",
+        "figure": "media/images/man_hard_23.png"
+      }
+    },
+    {
+      "id": "man_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nfoxtrot --help | grep -i usage\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nVendor pages under /opt may need...",
+      "choices": [
+        "Deleting /usr",
+        "Adding their man path / modules",
+        "Disabling less",
+        "Root-only ls"
+      ],
+      "answer": 1,
+      "explain": "Third-party trees need MANPATH/modules.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_hard_24.mp4",
+        "poster": "media/images/man_hard_24-frame.png",
+        "figure": "media/images/man_hard_24.png"
+      }
+    },
+    {
+      "id": "man_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nwhatis ls; man 1 ls\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nFor CI, documenting `tool --help` snapshots helps because...",
+      "choices": [
+        "man may be absent in slim images",
+        "It replaces tests",
+        "It disables networking",
+        "It sets umask"
+      ],
+      "answer": 0,
+      "explain": "Minimal images often lack man-db.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_hard_25.mp4",
+        "poster": "media/images/man_hard_25-frame.png",
+        "figure": "media/images/man_hard_25.png"
+      }
+    },
+    {
+      "id": "man_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\napropos hotel 2>/dev/null | head\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nAmbiguous names (printf builtin vs /usr/bin/printf) require...",
+      "choices": [
+        "Knowing which one you invoked",
+        "Always sudo",
+        "Always reboot",
+        "Ignoring docs"
+      ],
+      "answer": 0,
+      "explain": "Builtins shadow externals.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_hard_26.mp4",
+        "poster": "media/images/man_hard_26-frame.png",
+        "figure": "media/images/man_hard_26.png"
+      }
+    },
+    {
+      "id": "man_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nman india | head -n 14\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nCompressed pages (.gz) are...",
+      "choices": [
+        "Normal; man decompresses via pipeline",
+        "Corrupt always",
+        "Only for zip tools",
+        "Ignored forever"
+      ],
+      "answer": 0,
+      "explain": "man handles gzipped pages.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_hard_27.mp4",
+        "poster": "media/images/man_hard_27-frame.png",
+        "figure": "media/images/man_hard_27.png"
+      }
+    },
+    {
+      "id": "man_hard_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\njuliet --help | grep -i usage\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nReading EXAMPLES sections often beats memorizing every flag.",
+      "answer": true,
+      "explain": "Examples encode common usage.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_hard_28.mp4",
+        "poster": "media/images/man_hard_28-frame.png",
+        "figure": "media/images/man_hard_28.png"
+      }
+    },
+    {
+      "id": "man_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nwhatis ls; man 1 ls\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nWhen packaging a CLI, provide...",
+      "choices": [
+        "--help, man/markdown, and exit-status docs",
+        "Only a logo",
+        "Only a GUI",
+        "Only emoji"
+      ],
+      "answer": 0,
+      "explain": "Discoverability stack.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_hard_29.mp4",
+        "poster": "media/images/man_hard_29-frame.png",
+        "figure": "media/images/man_hard_29.png"
+      }
+    },
+    {
+      "id": "man_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\napropos bravo 2>/dev/null | head\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nOffline labs still matter because...",
+      "choices": [
+        "Networks fail; local docs remain",
+        "man requires cloud GPUs",
+        "Shells cannot run offline",
+        "pwd needs DNS"
+      ],
+      "answer": 0,
+      "explain": "Local docs are resilient.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/man_hard_30.mp4",
+        "poster": "media/images/man_hard_30-frame.png",
+        "figure": "media/images/man_hard_30.png"
+      }
+    }
+  ]
+}

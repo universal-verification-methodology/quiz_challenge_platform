@@ -1,0 +1,300 @@
+{
+  "id": "learn_unix",
+  "title": "Unix Shell Quest",
+  "version": 1,
+  "source_course": "learn_unix",
+  "ux": {
+    "reveal_modules_during_quiz": false,
+    "feedback": "report_only",
+    "module_order": "random",
+    "within_module": "easy_to_hard_clearance",
+    "embed_tools": true,
+    "tool_embed_height_px": 3600
+  },
+  "timing": {
+    "enabled": true,
+    "limits_s": {
+      "easy": 30,
+      "medium": 45,
+      "hard": 60
+    },
+    "warn_before_s": 10,
+    "on_timeout": "incorrect",
+    "keep_counting_when_hidden": true
+  },
+  "progress": {
+    "unit": "module",
+    "difficulties": [
+      "easy",
+      "medium",
+      "hard"
+    ],
+    "need_correct_per_difficulty": 1,
+    "max_attempts_per_difficulty": 10,
+    "bank_multiplier": 3,
+    "advance": "difficulties_cleared_or_exhausted"
+  },
+  "profiles": {
+    "test": {
+      "title": "Unix Shell Quest (Short)",
+      "module_count": 1,
+      "difficulties": [
+        "easy",
+        "medium",
+        "hard"
+      ],
+      "need_correct_per_difficulty": 2,
+      "max_attempts_per_difficulty": 6,
+      "prefer_video_stems": true
+    }
+  },
+  "media_policy": {
+    "download": false,
+    "screenshot_ok": true
+  },
+  "modules": [
+    {
+      "id": "module01-vfs-terminal",
+      "order": 1,
+      "title": "Virtual filesystem terminal",
+      "toolId": "vfs-terminal",
+      "questions": "questions/module01-vfs-terminal.json",
+      "source_quiz": "module01-vfs-terminal/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module02-man-help-lab",
+      "order": 2,
+      "title": "man / --help discoverability",
+      "toolId": "man-help-lab",
+      "questions": "questions/module02-man-help-lab.json",
+      "source_quiz": "module02-man-help-lab/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module03-path-abs-rel",
+      "order": 3,
+      "title": "Absolute vs relative paths",
+      "toolId": "path-abs-rel",
+      "questions": "questions/module03-path-abs-rel.json",
+      "source_quiz": "module03-path-abs-rel/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module04-wildcards-globs",
+      "order": 4,
+      "title": "Globs & wildcards",
+      "toolId": "wildcards-globs",
+      "questions": "questions/module04-wildcards-globs.json",
+      "source_quiz": "module04-wildcards-globs/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module05-file-types-lab",
+      "order": 5,
+      "title": "File types & links",
+      "toolId": "file-types-lab",
+      "questions": "questions/module05-file-types-lab.json",
+      "source_quiz": "module05-file-types-lab/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module06-realpath-resolve",
+      "order": 6,
+      "title": "realpath / readlink",
+      "toolId": "realpath-resolve",
+      "questions": "questions/module06-realpath-resolve.json",
+      "source_quiz": "module06-realpath-resolve/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module07-permissions",
+      "order": 7,
+      "title": "Permissions, umask, PATH",
+      "toolId": "permissions",
+      "questions": "questions/module07-permissions.json",
+      "source_quiz": "module07-permissions/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module08-dotfiles-lab",
+      "order": 8,
+      "title": "Dotfiles & config homes",
+      "toolId": "dotfiles-lab",
+      "questions": "questions/module08-dotfiles-lab.json",
+      "source_quiz": "module08-dotfiles-lab/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module09-ps-kill-lab",
+      "order": 9,
+      "title": "Process list & signals",
+      "toolId": "ps-kill-lab",
+      "questions": "questions/module09-ps-kill-lab.json",
+      "source_quiz": "module09-ps-kill-lab/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module10-job-control-lab",
+      "order": 10,
+      "title": "Job control",
+      "toolId": "job-control-lab",
+      "questions": "questions/module10-job-control-lab.json",
+      "source_quiz": "module10-job-control-lab/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module11-pipes",
+      "order": 11,
+      "title": "Pipes, redirection, xargs",
+      "toolId": "pipes",
+      "questions": "questions/module11-pipes.json",
+      "source_quiz": "module11-pipes/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module12-sort-uniq-cut",
+      "order": 12,
+      "title": "sort / uniq / cut",
+      "toolId": "sort-uniq-cut",
+      "questions": "questions/module12-sort-uniq-cut.json",
+      "source_quiz": "module12-sort-uniq-cut/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module13-here-doc-lab",
+      "order": 13,
+      "title": "Here-doc / here-string",
+      "toolId": "here-doc-lab",
+      "questions": "questions/module13-here-doc-lab.json",
+      "source_quiz": "module13-here-doc-lab/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module14-shell-history",
+      "order": 14,
+      "title": "Shell history & reverse-search",
+      "toolId": "shell-history",
+      "questions": "questions/module14-shell-history.json",
+      "source_quiz": "module14-shell-history/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module15-alias-lab",
+      "order": 15,
+      "title": "Alias & functions",
+      "toolId": "alias-lab",
+      "questions": "questions/module15-alias-lab.json",
+      "source_quiz": "module15-alias-lab/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module16-scripting",
+      "order": 16,
+      "title": "Script control flow",
+      "toolId": "scripting",
+      "questions": "questions/module16-scripting.json",
+      "source_quiz": "module16-scripting/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module17-exit-status-lab",
+      "order": 17,
+      "title": "Exit status & && / ||",
+      "toolId": "exit-status-lab",
+      "questions": "questions/module17-exit-status-lab.json",
+      "source_quiz": "module17-exit-status-lab/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module18-safe-scripting",
+      "order": 18,
+      "title": "Safe scripting",
+      "toolId": "safe-scripting",
+      "questions": "questions/module18-safe-scripting.json",
+      "source_quiz": "module18-safe-scripting/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module19-project-archives",
+      "order": 19,
+      "title": "Project layout, archives, sed & diff",
+      "toolId": "project-archives",
+      "questions": "questions/module19-project-archives.json",
+      "source_quiz": "module19-project-archives/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module20-zip-vs-tar",
+      "order": 20,
+      "title": "tar vs zip",
+      "toolId": "zip-vs-tar",
+      "questions": "questions/module20-zip-vs-tar.json",
+      "source_quiz": "module20-zip-vs-tar/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module21-backup-clean",
+      "order": 21,
+      "title": "Backup & clean-build",
+      "toolId": "backup-clean",
+      "questions": "questions/module21-backup-clean.json",
+      "source_quiz": "module21-backup-clean/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module22-link-relative",
+      "order": 22,
+      "title": "Relative symlink pitfalls",
+      "toolId": "link-relative",
+      "questions": "questions/module22-link-relative.json",
+      "source_quiz": "module22-link-relative/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module23-workflow",
+      "order": 23,
+      "title": "Pre-push / Make / env checklist",
+      "toolId": "workflow",
+      "questions": "questions/module23-workflow.json",
+      "source_quiz": "module23-workflow/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module24-make-basics",
+      "order": 24,
+      "title": "Makefile basics",
+      "toolId": "make-basics",
+      "questions": "questions/module24-make-basics.json",
+      "source_quiz": "module24-make-basics/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module25-dry-run-lab",
+      "order": 25,
+      "title": "Dry-run mindset",
+      "toolId": "dry-run-lab",
+      "questions": "questions/module25-dry-run-lab.json",
+      "source_quiz": "module25-dry-run-lab/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module26-log-triage",
+      "order": 26,
+      "title": "Log / failure triage",
+      "toolId": "log-triage",
+      "questions": "questions/module26-log-triage.json",
+      "source_quiz": "module26-log-triage/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module27-env-file-lab",
+      "order": 27,
+      "title": ".env literacy",
+      "toolId": "env-file-lab",
+      "questions": "questions/module27-env-file-lab.json",
+      "source_quiz": "module27-env-file-lab/quiz.json",
+      "video_stems": true
+    }
+  ]
+}

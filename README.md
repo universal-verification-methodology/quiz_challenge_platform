@@ -6,7 +6,7 @@
 [![Org](https://img.shields.io/badge/org-universal--verification--methodology-0A9EDC)](https://github.com/universal-verification-methodology)
 [![Domain](https://img.shields.io/badge/domain-adaptive%20quiz%20%7C%20digital%20design-purple)](https://github.com/universal-verification-methodology/quiz_challenge_platform)
 
-**quiz_challenge_platform** is a standalone **variable-length**, module-mapped quiz challenge — blind quest, silent grading mid-run, analytical report at the end. Demo packs: Digital Foundations (`learn_digital`) and Verilog RTL (`learn_verilog`); the runtime is content-agnostic and merge-ready with `digital_learning`.
+**quiz_challenge_platform** is a standalone **variable-length**, module-mapped quiz challenge — blind quest, silent grading mid-run, analytical report at the end. Demo packs: Digital Foundations (`learn_digital`), Verilog RTL (`learn_verilog`), and Unix Foundations (`learn_unix`); the runtime is content-agnostic and merge-ready with `digital_learning`.
 
 Learners usually **open the live site** or clone and serve locally. Authors edit banks under `content/<course_id>/`, regenerate if needed, and push; Cloudflare / Pages Actions publish from `main`.
 
@@ -35,7 +35,8 @@ quiz_challenge_platform/
 │   └── site.json           # certificate labels + results endpoints
 ├── content/
 │   ├── learn_digital/      # Digital Foundations (01–49)
-│   └── learn_verilog/     # Verilog RTL Quest (01–17)
+│   ├── learn_verilog/     # Verilog RTL Quest (01–17)
+│   └── learn_unix/        # Unix Foundations Quest (01–27)
 │       ├── content.json    # modules, timing, progress, profiles
 │       ├── questions/      # one JSON bank per module
 │       └── media/          # optional stem images / video
@@ -79,7 +80,7 @@ Open http://127.0.0.1:18080/ and pick a course, then **Full Quest** or **Short Q
 | **Full Quest** | Home → course → **Full Quest**, or `challenge.html?course=<id>&restart=1` | All modules in that course pack |
 | **Short Quest** | Home → course → **Short Quest**, or `challenge.html?course=<id>&short=1&restart=1` | **1 random module**, all 3 levels, **2 correct** per level (max 6 attempts/level) → best **6** / worst **18** questions |
 
-`?test=1` is an alias for Short Quest. Profile `profiles.test` in `content.json` sets `module_count` (demo: **1**). Full and Short boards stay separate on the leaderboard. Course packs: `learn_digital` (49 modules), `learn_verilog` (17 modules).
+`?test=1` is an alias for Short Quest. Profile `profiles.test` in `content.json` sets `module_count` (demo: **1**). Full and Short boards stay separate on the leaderboard. Course packs: `learn_digital` (49 modules), `learn_verilog` (17 modules), `learn_unix` (27 modules).
 
 Recommended path: Short Quest to feel the loop → Full Quest for the complete challenge → report / certificate.
 
@@ -100,6 +101,8 @@ Regenerate banks:
 py -3 scripts/generate_difficulty_banks.py          # learn_digital
 py -3 scripts/generate_verilog_banks.py             # learn_verilog
 py -3 scripts/enrich_verilog_prompts.py             # unique RTL snippets (learn_verilog)
+py -3 scripts/generate_unix_banks.py                # learn_unix
+py -3 scripts/enrich_unix_prompts.py                # unique shell snippets (learn_unix)
 ```
 
 Verilog stem videos (see `.cursor/skills/question-video/`):

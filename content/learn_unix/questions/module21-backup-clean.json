@@ -1,0 +1,1698 @@
+{
+  "module": "module21-backup-clean",
+  "title": "Backup & clean-build",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# backup then: rm -rf build/\n```\nA good order of operations is...",
+      "choices": [
+        "Clean first, then maybe backup",
+        "Backup (or dry-run list), then clean generated dirs",
+        "Delete the whole home directory",
+        "Skip listing and use rm -rf $"
+      ],
+      "answer": 1,
+      "explain": "Backup first; list clean targets; only then delete.",
+      "difficulty": "easy",
+      "id": "bak_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_easy_01.mp4",
+        "poster": "media/images/bak_easy_01-frame.png",
+        "figure": "media/images/bak_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncp -a build /tmp/backup-echo-5\n```\nTimestamped archive names help because...",
+      "choices": [
+        "They compress better",
+        "You can keep multiple versions without overwriting",
+        "tar requires dates",
+        "They disable set -e"
+      ],
+      "answer": 1,
+      "explain": "date stamps avoid clobbering earlier backups.",
+      "difficulty": "easy",
+      "id": "bak_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_easy_02.mp4",
+        "poster": "media/images/bak_easy_02-frame.png",
+        "figure": "media/images/bak_easy_02.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n clean; ls docs\n```\nExcluding build/ and logs/ from a source backup keeps archives smaller and more shareable.",
+      "answer": true,
+      "explain": "Generated artifacts are rebuildable; sources are what you need to restore.",
+      "difficulty": "easy",
+      "id": "bak_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_easy_03.mp4",
+        "poster": "media/images/bak_easy_03-frame.png",
+        "figure": "media/images/bak_easy_03.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nrsync -a --dry-run scripts/ /tmp/golf-bak/\n```\nBefore find ... -delete on build/, you should...",
+      "choices": [
+        "List the files first with find (no -delete)",
+        "Always sudo",
+        "Delete src/ first",
+        "Disable tar"
+      ],
+      "answer": 0,
+      "explain": "List to confirm paths; delete only when sure.",
+      "difficulty": "easy",
+      "id": "bak_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_easy_04.mp4",
+        "poster": "media/images/bak_easy_04-frame.png",
+        "figure": "media/images/bak_easy_04.png"
+      }
+    },
+    {
+      "id": "bak_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# backup then: rm -rf build/\n```\nA backup before clean-build helps you...",
+      "choices": [
+        "Recover if clean deletes needed artifacts",
+        "Speed make always",
+        "Disable git",
+        "Skip tests"
+      ],
+      "answer": 0,
+      "explain": "Safety copy first.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_easy_05.mp4",
+        "poster": "media/images/bak_easy_05-frame.png",
+        "figure": "media/images/bak_easy_05.png"
+      }
+    },
+    {
+      "id": "bak_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncp -a bin /tmp/backup-india-9\n```\n`make clean` typically...",
+      "choices": [
+        "Removes build outputs",
+        "Deletes source forever by design always",
+        "Formats disk",
+        "Creates users"
+      ],
+      "answer": 0,
+      "explain": "Clean target removes products.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_easy_06.mp4",
+        "poster": "media/images/bak_easy_06-frame.png",
+        "figure": "media/images/bak_easy_06.png"
+      }
+    },
+    {
+      "id": "bak_easy_07",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n clean; ls src\n```\nVersion control is not a full substitute for backup of uncommitted work.",
+      "answer": true,
+      "explain": "Uncommitted data needs care.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_easy_07.mp4",
+        "poster": "media/images/bak_easy_07-frame.png",
+        "figure": "media/images/bak_easy_07.png"
+      }
+    },
+    {
+      "id": "bak_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nrsync -a --dry-run logs/ /tmp/alpha-bak/\n```\n`cp -a dir8 backup8` copies...",
+      "choices": [
+        "Tree with attributes more carefully",
+        "Only names",
+        "Only empty dirs",
+        "Only symlinks text as files always"
+      ],
+      "answer": 0,
+      "explain": "Archive copy.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_easy_08.mp4",
+        "poster": "media/images/bak_easy_08-frame.png",
+        "figure": "media/images/bak_easy_08.png"
+      }
+    },
+    {
+      "id": "bak_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# backup then: rm -rf build/\n```\nClean-build means...",
+      "choices": [
+        "Remove outputs then rebuild from sources",
+        "Only reboot",
+        "Only chmod",
+        "Only zip"
+      ],
+      "answer": 0,
+      "explain": "From-scratch build.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_easy_09.mp4",
+        "poster": "media/images/bak_easy_09-frame.png",
+        "figure": "media/images/bak_easy_09.png"
+      }
+    },
+    {
+      "id": "bak_easy_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncp -a build /tmp/backup-charlie-13\n```\nBefore `rm -rf build/`, consider...",
+      "choices": [
+        "Dry-run listing / backups",
+        "Skipping ls",
+        "Using sudo always",
+        "Disabling networking"
+      ],
+      "answer": 0,
+      "explain": "Look before delete.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_easy_10.mp4",
+        "poster": "media/images/bak_easy_10-frame.png",
+        "figure": "media/images/bak_easy_10.png"
+      }
+    },
+    {
+      "id": "bak_easy_11",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n clean; ls docs\n```\nTimestamped backup dirs reduce overwrite risk.",
+      "answer": true,
+      "explain": "Unique backup names.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_easy_11.mp4",
+        "poster": "media/images/bak_easy_11-frame.png",
+        "figure": "media/images/bak_easy_11.png"
+      }
+    },
+    {
+      "id": "bak_easy_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nrsync -a --dry-run scripts/ /tmp/echo-bak/\n```\n`rsync -a --delete` is powerful because...",
+      "choices": [
+        "It can mirror deletions too",
+        "It never deletes",
+        "It only zips",
+        "It clears PATH"
+      ],
+      "answer": 0,
+      "explain": "Mirror sync danger/power.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_easy_12.mp4",
+        "poster": "media/images/bak_easy_12-frame.png",
+        "figure": "media/images/bak_easy_12.png"
+      }
+    },
+    {
+      "id": "bak_easy_13",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# backup then: rm -rf build/\n```\nKeep backups off the same failing disk when possible to...",
+      "choices": [
+        "Survive disk loss",
+        "Speed CPU",
+        "Skip checksums",
+        "Avoid man"
+      ],
+      "answer": 0,
+      "explain": "Separate media.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_easy_13.mp4",
+        "poster": "media/images/bak_easy_13-frame.png",
+        "figure": "media/images/bak_easy_13.png"
+      }
+    },
+    {
+      "id": "bak_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncp -a bin /tmp/backup-golf-17\n```\n`make distclean` (when provided) often removes...",
+      "choices": [
+        "More generated files than clean",
+        "Only README",
+        "Only .git",
+        "Only /usr"
+      ],
+      "answer": 0,
+      "explain": "Deeper clean.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_easy_14.mp4",
+        "poster": "media/images/bak_easy_14-frame.png",
+        "figure": "media/images/bak_easy_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n clean; ls src\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nA good order of operations is...",
+      "choices": [
+        "Clean first, then maybe backup",
+        "Backup (or dry-run list), then clean generated dirs",
+        "Delete the whole home directory",
+        "Skip listing and use rm -rf $"
+      ],
+      "answer": 1,
+      "explain": "Backup first; list clean targets; only then delete.",
+      "difficulty": "easy",
+      "id": "bak_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_easy_15.mp4",
+        "poster": "media/images/bak_easy_15-frame.png",
+        "figure": "media/images/bak_easy_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nrsync -a --dry-run logs/ /tmp/india-bak/\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nTimestamped archive names help because...",
+      "choices": [
+        "They compress better",
+        "You can keep multiple versions without overwriting",
+        "tar requires dates",
+        "They disable set -e"
+      ],
+      "answer": 1,
+      "explain": "date stamps avoid clobbering earlier backups.",
+      "difficulty": "easy",
+      "id": "bak_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_easy_16.mp4",
+        "poster": "media/images/bak_easy_16-frame.png",
+        "figure": "media/images/bak_easy_16.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# backup then: rm -rf build/\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nExcluding build/ and logs/ from a source backup keeps archives smaller and more shareable.",
+      "answer": true,
+      "explain": "Generated artifacts are rebuildable; sources are what you need to restore.",
+      "difficulty": "easy",
+      "id": "bak_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_easy_17.mp4",
+        "poster": "media/images/bak_easy_17-frame.png",
+        "figure": "media/images/bak_easy_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncp -a build /tmp/backup-alpha-21\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nBefore find ... -delete on build/, you should...",
+      "choices": [
+        "List the files first with find (no -delete)",
+        "Always sudo",
+        "Delete src/ first",
+        "Disable tar"
+      ],
+      "answer": 0,
+      "explain": "List to confirm paths; delete only when sure.",
+      "difficulty": "easy",
+      "id": "bak_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_easy_18.mp4",
+        "poster": "media/images/bak_easy_18-frame.png",
+        "figure": "media/images/bak_easy_18.png"
+      }
+    },
+    {
+      "id": "bak_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n clean; ls docs\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nA backup before clean-build helps you...",
+      "choices": [
+        "Recover if clean deletes needed artifacts",
+        "Speed make always",
+        "Disable git",
+        "Skip tests"
+      ],
+      "answer": 0,
+      "explain": "Safety copy first.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_easy_19.mp4",
+        "poster": "media/images/bak_easy_19-frame.png",
+        "figure": "media/images/bak_easy_19.png"
+      }
+    },
+    {
+      "id": "bak_easy_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nrsync -a --dry-run scripts/ /tmp/charlie-bak/\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\n`make clean` typically...",
+      "choices": [
+        "Removes build outputs",
+        "Deletes source forever by design always",
+        "Formats disk",
+        "Creates users"
+      ],
+      "answer": 0,
+      "explain": "Clean target removes products.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_easy_20.mp4",
+        "poster": "media/images/bak_easy_20-frame.png",
+        "figure": "media/images/bak_easy_20.png"
+      }
+    },
+    {
+      "id": "bak_easy_21",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# backup then: rm -rf build/\n```\n# Review context: `/var/log/golf` slot 21 variant 1\nVersion control is not a full substitute for backup of uncommitted work.",
+      "answer": true,
+      "explain": "Uncommitted data needs care.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_easy_21.mp4",
+        "poster": "media/images/bak_easy_21-frame.png",
+        "figure": "media/images/bak_easy_21.png"
+      }
+    },
+    {
+      "id": "bak_easy_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncp -a bin /tmp/backup-echo-25\n```\n`cp -a dir22 backup22` copies...",
+      "choices": [
+        "Tree with attributes more carefully",
+        "Only names",
+        "Only empty dirs",
+        "Only symlinks text as files always"
+      ],
+      "answer": 0,
+      "explain": "Archive copy.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_easy_22.mp4",
+        "poster": "media/images/bak_easy_22-frame.png",
+        "figure": "media/images/bak_easy_22.png"
+      }
+    },
+    {
+      "id": "bak_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n clean; ls src\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\nClean-build means...",
+      "choices": [
+        "Remove outputs then rebuild from sources",
+        "Only reboot",
+        "Only chmod",
+        "Only zip"
+      ],
+      "answer": 0,
+      "explain": "From-scratch build.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_easy_23.mp4",
+        "poster": "media/images/bak_easy_23-frame.png",
+        "figure": "media/images/bak_easy_23.png"
+      }
+    },
+    {
+      "id": "bak_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nrsync -a --dry-run logs/ /tmp/golf-bak/\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nBefore `rm -rf build/`, consider...",
+      "choices": [
+        "Dry-run listing / backups",
+        "Skipping ls",
+        "Using sudo always",
+        "Disabling networking"
+      ],
+      "answer": 0,
+      "explain": "Look before delete.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_easy_24.mp4",
+        "poster": "media/images/bak_easy_24-frame.png",
+        "figure": "media/images/bak_easy_24.png"
+      }
+    },
+    {
+      "id": "bak_easy_25",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# backup then: rm -rf build/\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nTimestamped backup dirs reduce overwrite risk.",
+      "answer": true,
+      "explain": "Unique backup names.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_easy_25.mp4",
+        "poster": "media/images/bak_easy_25-frame.png",
+        "figure": "media/images/bak_easy_25.png"
+      }
+    },
+    {
+      "id": "bak_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncp -a build /tmp/backup-india-29\n```\n# Review context: `./scripts/delta` slot 26 variant 1\n`rsync -a --delete` is powerful because...",
+      "choices": [
+        "It can mirror deletions too",
+        "It never deletes",
+        "It only zips",
+        "It clears PATH"
+      ],
+      "answer": 0,
+      "explain": "Mirror sync danger/power.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_easy_26.mp4",
+        "poster": "media/images/bak_easy_26-frame.png",
+        "figure": "media/images/bak_easy_26.png"
+      }
+    },
+    {
+      "id": "bak_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n clean; ls docs\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nKeep backups off the same failing disk when possible to...",
+      "choices": [
+        "Survive disk loss",
+        "Speed CPU",
+        "Skip checksums",
+        "Avoid man"
+      ],
+      "answer": 0,
+      "explain": "Separate media.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_easy_27.mp4",
+        "poster": "media/images/bak_easy_27-frame.png",
+        "figure": "media/images/bak_easy_27.png"
+      }
+    },
+    {
+      "id": "bak_easy_28",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nrsync -a --dry-run scripts/ /tmp/alpha-bak/\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\n`make distclean` (when provided) often removes...",
+      "choices": [
+        "More generated files than clean",
+        "Only README",
+        "Only .git",
+        "Only /usr"
+      ],
+      "answer": 0,
+      "explain": "Deeper clean.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_easy_28.mp4",
+        "poster": "media/images/bak_easy_28-frame.png",
+        "figure": "media/images/bak_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# backup then: rm -rf build/\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nA good order of operations is...",
+      "choices": [
+        "Clean first, then maybe backup",
+        "Backup (or dry-run list), then clean generated dirs",
+        "Delete the whole home directory",
+        "Skip listing and use rm -rf $"
+      ],
+      "answer": 1,
+      "explain": "Backup first; list clean targets; only then delete.",
+      "difficulty": "easy",
+      "id": "bak_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_easy_29.mp4",
+        "poster": "media/images/bak_easy_29-frame.png",
+        "figure": "media/images/bak_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncp -a bin /tmp/backup-charlie-33\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nTimestamped archive names help because...",
+      "choices": [
+        "They compress better",
+        "You can keep multiple versions without overwriting",
+        "tar requires dates",
+        "They disable set -e"
+      ],
+      "answer": 1,
+      "explain": "date stamps avoid clobbering earlier backups.",
+      "difficulty": "easy",
+      "id": "bak_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_easy_30.mp4",
+        "poster": "media/images/bak_easy_30-frame.png",
+        "figure": "media/images/bak_easy_30.png"
+      }
+    },
+    {
+      "id": "bak_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nrsync -a --dry-run logs/ /tmp/charlie-bak/\n```\nIncremental backups differ from full by...",
+      "choices": [
+        "Storing changes since a baseline",
+        "Always copying everything identically",
+        "Deleting sources",
+        "Skipping checksums always"
+      ],
+      "answer": 0,
+      "explain": "Incremental strategy.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_medium_01.mp4",
+        "poster": "media/images/bak_medium_01-frame.png",
+        "figure": "media/images/bak_medium_01.png"
+      }
+    },
+    {
+      "id": "bak_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# backup then: rm -rf build/\n```\nVerify backups with...",
+      "choices": [
+        "Test restore / checksums",
+        "Only ls the backup name",
+        "Only trust cp exit 0",
+        "Only zip size vibes"
+      ],
+      "answer": 0,
+      "explain": "Restore tests.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_medium_02.mp4",
+        "poster": "media/images/bak_medium_02-frame.png",
+        "figure": "media/images/bak_medium_02.png"
+      }
+    },
+    {
+      "id": "bak_medium_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ncp -a build /tmp/backup-echo-5\n```\nClean builds catch missing generated-file commits.",
+      "answer": true,
+      "explain": "Fresh tree reveals gaps.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_medium_03.mp4",
+        "poster": "media/images/bak_medium_03-frame.png",
+        "figure": "media/images/bak_medium_03.png"
+      }
+    },
+    {
+      "id": "bak_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n clean; ls docs\n```\n`git clean -fdx` is dangerous because...",
+      "choices": [
+        "It deletes untracked files including ignored",
+        "It only lists",
+        "It commits",
+        "It pushes"
+      ],
+      "answer": 0,
+      "explain": "Know git clean flags.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_medium_04.mp4",
+        "poster": "media/images/bak_medium_04-frame.png",
+        "figure": "media/images/bak_medium_04.png"
+      }
+    },
+    {
+      "id": "bak_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nrsync -a --dry-run scripts/ /tmp/golf-bak/\n```\nBackup exclusion lists should omit...",
+      "choices": [
+        "Secrets carefully policy-wise + huge caches intentionally",
+        "All source",
+        "All docs",
+        "All tests"
+      ],
+      "answer": 0,
+      "explain": "Exclude thoughtfully.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_medium_05.mp4",
+        "poster": "media/images/bak_medium_05-frame.png",
+        "figure": "media/images/bak_medium_05.png"
+      }
+    },
+    {
+      "id": "bak_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# backup then: rm -rf build/\n```\nAtomic backup publish uses...",
+      "choices": [
+        "Write to temp then rename",
+        "Partial overwrite in place",
+        "Appending randomly",
+        "chmod 777 first"
+      ],
+      "answer": 0,
+      "explain": "Atomic replace.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_medium_06.mp4",
+        "poster": "media/images/bak_medium_06-frame.png",
+        "figure": "media/images/bak_medium_06.png"
+      }
+    },
+    {
+      "id": "bak_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncp -a bin /tmp/backup-india-9\n```\nOut-of-tree builds help clean by...",
+      "choices": [
+        "Keeping objects outside sources",
+        "Deleting sources",
+        "Disabling make",
+        "Forcing zip"
+      ],
+      "answer": 0,
+      "explain": "Separate build dir.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_medium_07.mp4",
+        "poster": "media/images/bak_medium_07-frame.png",
+        "figure": "media/images/bak_medium_07.png"
+      }
+    },
+    {
+      "id": "bak_medium_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n clean; ls src\n```\nSnapshots (zfs/lvm/cloud) are another backup class.",
+      "answer": true,
+      "explain": "System snapshots.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_medium_08.mp4",
+        "poster": "media/images/bak_medium_08-frame.png",
+        "figure": "media/images/bak_medium_08.png"
+      }
+    },
+    {
+      "id": "bak_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nrsync -a --dry-run logs/ /tmp/alpha-bak/\n```\nRetention policies decide...",
+      "choices": [
+        "How long backups are kept",
+        "CPU governor",
+        "PS1 color",
+        "Man width"
+      ],
+      "answer": 0,
+      "explain": "Retention.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_medium_09.mp4",
+        "poster": "media/images/bak_medium_09-frame.png",
+        "figure": "media/images/bak_medium_09.png"
+      }
+    },
+    {
+      "id": "bak_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# backup then: rm -rf build/\n```\nBefore deleting `backup10`, confirm...",
+      "choices": [
+        "Newest good backup exists elsewhere",
+        "Nothing",
+        "Only that name is long",
+        "That rm is aliased"
+      ],
+      "answer": 0,
+      "explain": "Never delete last copy.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_medium_10.mp4",
+        "poster": "media/images/bak_medium_10-frame.png",
+        "figure": "media/images/bak_medium_10.png"
+      }
+    },
+    {
+      "id": "bak_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncp -a build /tmp/backup-charlie-13\n```\n# Review context: `~/bin/echo` slot 11 variant 1\nIncremental backups differ from full by...",
+      "choices": [
+        "Storing changes since a baseline",
+        "Always copying everything identically",
+        "Deleting sources",
+        "Skipping checksums always"
+      ],
+      "answer": 0,
+      "explain": "Incremental strategy.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_medium_11.mp4",
+        "poster": "media/images/bak_medium_11-frame.png",
+        "figure": "media/images/bak_medium_11.png"
+      }
+    },
+    {
+      "id": "bak_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n clean; ls docs\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\nVerify backups with...",
+      "choices": [
+        "Test restore / checksums",
+        "Only ls the backup name",
+        "Only trust cp exit 0",
+        "Only zip size vibes"
+      ],
+      "answer": 0,
+      "explain": "Restore tests.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_medium_12.mp4",
+        "poster": "media/images/bak_medium_12-frame.png",
+        "figure": "media/images/bak_medium_12.png"
+      }
+    },
+    {
+      "id": "bak_medium_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nrsync -a --dry-run scripts/ /tmp/echo-bak/\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\nClean builds catch missing generated-file commits.",
+      "answer": true,
+      "explain": "Fresh tree reveals gaps.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_medium_13.mp4",
+        "poster": "media/images/bak_medium_13-frame.png",
+        "figure": "media/images/bak_medium_13.png"
+      }
+    },
+    {
+      "id": "bak_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# backup then: rm -rf build/\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\n`git clean -fdx` is dangerous because...",
+      "choices": [
+        "It deletes untracked files including ignored",
+        "It only lists",
+        "It commits",
+        "It pushes"
+      ],
+      "answer": 0,
+      "explain": "Know git clean flags.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_medium_14.mp4",
+        "poster": "media/images/bak_medium_14-frame.png",
+        "figure": "media/images/bak_medium_14.png"
+      }
+    },
+    {
+      "id": "bak_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncp -a bin /tmp/backup-golf-17\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nBackup exclusion lists should omit...",
+      "choices": [
+        "Secrets carefully policy-wise + huge caches intentionally",
+        "All source",
+        "All docs",
+        "All tests"
+      ],
+      "answer": 0,
+      "explain": "Exclude thoughtfully.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_medium_15.mp4",
+        "poster": "media/images/bak_medium_15-frame.png",
+        "figure": "media/images/bak_medium_15.png"
+      }
+    },
+    {
+      "id": "bak_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n clean; ls src\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nAtomic backup publish uses...",
+      "choices": [
+        "Write to temp then rename",
+        "Partial overwrite in place",
+        "Appending randomly",
+        "chmod 777 first"
+      ],
+      "answer": 0,
+      "explain": "Atomic replace.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_medium_16.mp4",
+        "poster": "media/images/bak_medium_16-frame.png",
+        "figure": "media/images/bak_medium_16.png"
+      }
+    },
+    {
+      "id": "bak_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nrsync -a --dry-run logs/ /tmp/india-bak/\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nOut-of-tree builds help clean by...",
+      "choices": [
+        "Keeping objects outside sources",
+        "Deleting sources",
+        "Disabling make",
+        "Forcing zip"
+      ],
+      "answer": 0,
+      "explain": "Separate build dir.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_medium_17.mp4",
+        "poster": "media/images/bak_medium_17-frame.png",
+        "figure": "media/images/bak_medium_17.png"
+      }
+    },
+    {
+      "id": "bak_medium_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# backup then: rm -rf build/\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nSnapshots (zfs/lvm/cloud) are another backup class.",
+      "answer": true,
+      "explain": "System snapshots.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_medium_18.mp4",
+        "poster": "media/images/bak_medium_18-frame.png",
+        "figure": "media/images/bak_medium_18.png"
+      }
+    },
+    {
+      "id": "bak_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncp -a build /tmp/backup-alpha-21\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nRetention policies decide...",
+      "choices": [
+        "How long backups are kept",
+        "CPU governor",
+        "PS1 color",
+        "Man width"
+      ],
+      "answer": 0,
+      "explain": "Retention.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_medium_19.mp4",
+        "poster": "media/images/bak_medium_19-frame.png",
+        "figure": "media/images/bak_medium_19.png"
+      }
+    },
+    {
+      "id": "bak_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n clean; ls docs\n```\nBefore deleting `backup20`, confirm...",
+      "choices": [
+        "Newest good backup exists elsewhere",
+        "Nothing",
+        "Only that name is long",
+        "That rm is aliased"
+      ],
+      "answer": 0,
+      "explain": "Never delete last copy.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_medium_20.mp4",
+        "poster": "media/images/bak_medium_20-frame.png",
+        "figure": "media/images/bak_medium_20.png"
+      }
+    },
+    {
+      "id": "bak_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nrsync -a --dry-run scripts/ /tmp/charlie-bak/\n```\n# Review context: `/var/log/golf` slot 21 variant 1\nIncremental backups differ from full by...",
+      "choices": [
+        "Storing changes since a baseline",
+        "Always copying everything identically",
+        "Deleting sources",
+        "Skipping checksums always"
+      ],
+      "answer": 0,
+      "explain": "Incremental strategy.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_medium_21.mp4",
+        "poster": "media/images/bak_medium_21-frame.png",
+        "figure": "media/images/bak_medium_21.png"
+      }
+    },
+    {
+      "id": "bak_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# backup then: rm -rf build/\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\nVerify backups with...",
+      "choices": [
+        "Test restore / checksums",
+        "Only ls the backup name",
+        "Only trust cp exit 0",
+        "Only zip size vibes"
+      ],
+      "answer": 0,
+      "explain": "Restore tests.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_medium_22.mp4",
+        "poster": "media/images/bak_medium_22-frame.png",
+        "figure": "media/images/bak_medium_22.png"
+      }
+    },
+    {
+      "id": "bak_medium_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ncp -a bin /tmp/backup-echo-25\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\nClean builds catch missing generated-file commits.",
+      "answer": true,
+      "explain": "Fresh tree reveals gaps.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_medium_23.mp4",
+        "poster": "media/images/bak_medium_23-frame.png",
+        "figure": "media/images/bak_medium_23.png"
+      }
+    },
+    {
+      "id": "bak_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n clean; ls src\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\n`git clean -fdx` is dangerous because...",
+      "choices": [
+        "It deletes untracked files including ignored",
+        "It only lists",
+        "It commits",
+        "It pushes"
+      ],
+      "answer": 0,
+      "explain": "Know git clean flags.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_medium_24.mp4",
+        "poster": "media/images/bak_medium_24-frame.png",
+        "figure": "media/images/bak_medium_24.png"
+      }
+    },
+    {
+      "id": "bak_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nrsync -a --dry-run logs/ /tmp/golf-bak/\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nBackup exclusion lists should omit...",
+      "choices": [
+        "Secrets carefully policy-wise + huge caches intentionally",
+        "All source",
+        "All docs",
+        "All tests"
+      ],
+      "answer": 0,
+      "explain": "Exclude thoughtfully.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_medium_25.mp4",
+        "poster": "media/images/bak_medium_25-frame.png",
+        "figure": "media/images/bak_medium_25.png"
+      }
+    },
+    {
+      "id": "bak_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# backup then: rm -rf build/\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nAtomic backup publish uses...",
+      "choices": [
+        "Write to temp then rename",
+        "Partial overwrite in place",
+        "Appending randomly",
+        "chmod 777 first"
+      ],
+      "answer": 0,
+      "explain": "Atomic replace.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_medium_26.mp4",
+        "poster": "media/images/bak_medium_26-frame.png",
+        "figure": "media/images/bak_medium_26.png"
+      }
+    },
+    {
+      "id": "bak_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncp -a build /tmp/backup-india-29\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nOut-of-tree builds help clean by...",
+      "choices": [
+        "Keeping objects outside sources",
+        "Deleting sources",
+        "Disabling make",
+        "Forcing zip"
+      ],
+      "answer": 0,
+      "explain": "Separate build dir.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_medium_27.mp4",
+        "poster": "media/images/bak_medium_27-frame.png",
+        "figure": "media/images/bak_medium_27.png"
+      }
+    },
+    {
+      "id": "bak_medium_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n clean; ls docs\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nSnapshots (zfs/lvm/cloud) are another backup class.",
+      "answer": true,
+      "explain": "System snapshots.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_medium_28.mp4",
+        "poster": "media/images/bak_medium_28-frame.png",
+        "figure": "media/images/bak_medium_28.png"
+      }
+    },
+    {
+      "id": "bak_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nrsync -a --dry-run scripts/ /tmp/alpha-bak/\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nRetention policies decide...",
+      "choices": [
+        "How long backups are kept",
+        "CPU governor",
+        "PS1 color",
+        "Man width"
+      ],
+      "answer": 0,
+      "explain": "Retention.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_medium_29.mp4",
+        "poster": "media/images/bak_medium_29-frame.png",
+        "figure": "media/images/bak_medium_29.png"
+      }
+    },
+    {
+      "id": "bak_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# backup then: rm -rf build/\n```\nBefore deleting `backup30`, confirm...",
+      "choices": [
+        "Newest good backup exists elsewhere",
+        "Nothing",
+        "Only that name is long",
+        "That rm is aliased"
+      ],
+      "answer": 0,
+      "explain": "Never delete last copy.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_medium_30.mp4",
+        "poster": "media/images/bak_medium_30-frame.png",
+        "figure": "media/images/bak_medium_30.png"
+      }
+    },
+    {
+      "id": "bak_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nrsync -a --dry-run logs/ /tmp/charlie-bak/\n```\nBackup consistency for live DBs may need...",
+      "choices": [
+        "Quiesce/snapshots/agent-aware dumps",
+        "Only cp -r while writing",
+        "Only tar without locks",
+        "Only zip -r data/"
+      ],
+      "answer": 0,
+      "explain": "Consistent images.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_hard_01.mp4",
+        "poster": "media/images/bak_hard_01-frame.png",
+        "figure": "media/images/bak_hard_01.png"
+      }
+    },
+    {
+      "id": "bak_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# backup then: rm -rf build/\n```\nRansomware resilience includes...",
+      "choices": [
+        "Offline/immutable backup copies",
+        "Only local world-writable shares",
+        "Only one NAS share mounted RW everywhere",
+        "Disabling checksums"
+      ],
+      "answer": 0,
+      "explain": "Offline copies.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_hard_02.mp4",
+        "poster": "media/images/bak_hard_02-frame.png",
+        "figure": "media/images/bak_hard_02.png"
+      }
+    },
+    {
+      "id": "bak_hard_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ncp -a build /tmp/backup-echo-5\n```\nClean rebuild + artifact hashes detects non-reproducible builds.",
+      "answer": true,
+      "explain": "Hash compare.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_hard_03.mp4",
+        "poster": "media/images/bak_hard_03-frame.png",
+        "figure": "media/images/bak_hard_03.png"
+      }
+    },
+    {
+      "id": "bak_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n clean; ls docs\n```\n`make clean` that deletes `$(HOME)` due to bad vars shows why...",
+      "choices": [
+        "Expand/echo recipes before rm",
+        "Variables are safe always",
+        "clean should use sudo",
+        "PATH must include ."
+      ],
+      "answer": 0,
+      "explain": "Echo destructive paths.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_hard_04.mp4",
+        "poster": "media/images/bak_hard_04-frame.png",
+        "figure": "media/images/bak_hard_04.png"
+      }
+    },
+    {
+      "id": "bak_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nrsync -a --dry-run scripts/ /tmp/golf-bak/\n```\nCross-region backup lag means RPO/RTO...",
+      "choices": [
+        "Define acceptable data loss/time-to-restore",
+        "Are font settings",
+        "Are umask aliases",
+        "Are man sections"
+      ],
+      "answer": 0,
+      "explain": "Disaster metrics.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_hard_05.mp4",
+        "poster": "media/images/bak_hard_05-frame.png",
+        "figure": "media/images/bak_hard_05.png"
+      }
+    },
+    {
+      "id": "bak_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# backup then: rm -rf build/\n```\nDeduplicating backup systems still need...",
+      "choices": [
+        "Periodic full restore drills",
+        "No restores ever",
+        "Only incremental forever without checks",
+        "Disabled auth"
+      ],
+      "answer": 0,
+      "explain": "Drill restores.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_hard_06.mp4",
+        "poster": "media/images/bak_hard_06-frame.png",
+        "figure": "media/images/bak_hard_06.png"
+      }
+    },
+    {
+      "id": "bak_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncp -a bin /tmp/backup-india-9\n```\nContainer layers vs host backups...",
+      "choices": [
+        "Different contents; back up volumes explicitly",
+        "Image backup includes all volumes always",
+        "Host backup unused",
+        "Skip both"
+      ],
+      "answer": 0,
+      "explain": "Volume awareness.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_hard_07.mp4",
+        "poster": "media/images/bak_hard_07-frame.png",
+        "figure": "media/images/bak_hard_07.png"
+      }
+    },
+    {
+      "id": "bak_hard_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n clean; ls src\n```\nEncryption at rest for backups protects stolen media.",
+      "answer": true,
+      "explain": "Encrypt backups.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_hard_08.mp4",
+        "poster": "media/images/bak_hard_08-frame.png",
+        "figure": "media/images/bak_hard_08.png"
+      }
+    },
+    {
+      "id": "bak_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nrsync -a --dry-run logs/ /tmp/alpha-bak/\n```\nCI cache clearing is a form of clean-build that...",
+      "choices": [
+        "Surfaces hidden cache dependencies",
+        "Should be never done",
+        "Replaces unit tests",
+        "Formats runners' disks randomly"
+      ],
+      "answer": 0,
+      "explain": "Cache hygiene.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_hard_09.mp4",
+        "poster": "media/images/bak_hard_09-frame.png",
+        "figure": "media/images/bak_hard_09.png"
+      }
+    },
+    {
+      "id": "bak_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# backup then: rm -rf build/\n```\nLab: backup `dir10`, run clean, restore, diff.",
+      "choices": [
+        "Yes: prove the loop",
+        "No: trust clean",
+        "No: skip restore",
+        "No: rm backup first"
+      ],
+      "answer": 0,
+      "explain": "Backup-clean-restore.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_hard_10.mp4",
+        "poster": "media/images/bak_hard_10-frame.png",
+        "figure": "media/images/bak_hard_10.png"
+      }
+    },
+    {
+      "id": "bak_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncp -a build /tmp/backup-charlie-13\n```\n# Review context: `~/bin/echo` slot 11 variant 1\nBackup consistency for live DBs may need...",
+      "choices": [
+        "Quiesce/snapshots/agent-aware dumps",
+        "Only cp -r while writing",
+        "Only tar without locks",
+        "Only zip -r data/"
+      ],
+      "answer": 0,
+      "explain": "Consistent images.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_hard_11.mp4",
+        "poster": "media/images/bak_hard_11-frame.png",
+        "figure": "media/images/bak_hard_11.png"
+      }
+    },
+    {
+      "id": "bak_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n clean; ls docs\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\nRansomware resilience includes...",
+      "choices": [
+        "Offline/immutable backup copies",
+        "Only local world-writable shares",
+        "Only one NAS share mounted RW everywhere",
+        "Disabling checksums"
+      ],
+      "answer": 0,
+      "explain": "Offline copies.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_hard_12.mp4",
+        "poster": "media/images/bak_hard_12-frame.png",
+        "figure": "media/images/bak_hard_12.png"
+      }
+    },
+    {
+      "id": "bak_hard_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nrsync -a --dry-run scripts/ /tmp/echo-bak/\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\nClean rebuild + artifact hashes detects non-reproducible builds.",
+      "answer": true,
+      "explain": "Hash compare.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_hard_13.mp4",
+        "poster": "media/images/bak_hard_13-frame.png",
+        "figure": "media/images/bak_hard_13.png"
+      }
+    },
+    {
+      "id": "bak_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# backup then: rm -rf build/\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\n`make clean` that deletes `$(HOME)` due to bad vars shows why...",
+      "choices": [
+        "Expand/echo recipes before rm",
+        "Variables are safe always",
+        "clean should use sudo",
+        "PATH must include ."
+      ],
+      "answer": 0,
+      "explain": "Echo destructive paths.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_hard_14.mp4",
+        "poster": "media/images/bak_hard_14-frame.png",
+        "figure": "media/images/bak_hard_14.png"
+      }
+    },
+    {
+      "id": "bak_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncp -a bin /tmp/backup-golf-17\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nCross-region backup lag means RPO/RTO...",
+      "choices": [
+        "Define acceptable data loss/time-to-restore",
+        "Are font settings",
+        "Are umask aliases",
+        "Are man sections"
+      ],
+      "answer": 0,
+      "explain": "Disaster metrics.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_hard_15.mp4",
+        "poster": "media/images/bak_hard_15-frame.png",
+        "figure": "media/images/bak_hard_15.png"
+      }
+    },
+    {
+      "id": "bak_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n clean; ls src\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nDeduplicating backup systems still need...",
+      "choices": [
+        "Periodic full restore drills",
+        "No restores ever",
+        "Only incremental forever without checks",
+        "Disabled auth"
+      ],
+      "answer": 0,
+      "explain": "Drill restores.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_hard_16.mp4",
+        "poster": "media/images/bak_hard_16-frame.png",
+        "figure": "media/images/bak_hard_16.png"
+      }
+    },
+    {
+      "id": "bak_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nrsync -a --dry-run logs/ /tmp/india-bak/\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nContainer layers vs host backups...",
+      "choices": [
+        "Different contents; back up volumes explicitly",
+        "Image backup includes all volumes always",
+        "Host backup unused",
+        "Skip both"
+      ],
+      "answer": 0,
+      "explain": "Volume awareness.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_hard_17.mp4",
+        "poster": "media/images/bak_hard_17-frame.png",
+        "figure": "media/images/bak_hard_17.png"
+      }
+    },
+    {
+      "id": "bak_hard_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# backup then: rm -rf build/\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nEncryption at rest for backups protects stolen media.",
+      "answer": true,
+      "explain": "Encrypt backups.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_hard_18.mp4",
+        "poster": "media/images/bak_hard_18-frame.png",
+        "figure": "media/images/bak_hard_18.png"
+      }
+    },
+    {
+      "id": "bak_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncp -a build /tmp/backup-alpha-21\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nCI cache clearing is a form of clean-build that...",
+      "choices": [
+        "Surfaces hidden cache dependencies",
+        "Should be never done",
+        "Replaces unit tests",
+        "Formats runners' disks randomly"
+      ],
+      "answer": 0,
+      "explain": "Cache hygiene.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_hard_19.mp4",
+        "poster": "media/images/bak_hard_19-frame.png",
+        "figure": "media/images/bak_hard_19.png"
+      }
+    },
+    {
+      "id": "bak_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n clean; ls docs\n```\nLab: backup `dir20`, run clean, restore, diff.",
+      "choices": [
+        "Yes: prove the loop",
+        "No: trust clean",
+        "No: skip restore",
+        "No: rm backup first"
+      ],
+      "answer": 0,
+      "explain": "Backup-clean-restore.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_hard_20.mp4",
+        "poster": "media/images/bak_hard_20-frame.png",
+        "figure": "media/images/bak_hard_20.png"
+      }
+    },
+    {
+      "id": "bak_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nrsync -a --dry-run scripts/ /tmp/charlie-bak/\n```\n# Review context: `/var/log/golf` slot 21 variant 1\nBackup consistency for live DBs may need...",
+      "choices": [
+        "Quiesce/snapshots/agent-aware dumps",
+        "Only cp -r while writing",
+        "Only tar without locks",
+        "Only zip -r data/"
+      ],
+      "answer": 0,
+      "explain": "Consistent images.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_hard_21.mp4",
+        "poster": "media/images/bak_hard_21-frame.png",
+        "figure": "media/images/bak_hard_21.png"
+      }
+    },
+    {
+      "id": "bak_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# backup then: rm -rf build/\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\nRansomware resilience includes...",
+      "choices": [
+        "Offline/immutable backup copies",
+        "Only local world-writable shares",
+        "Only one NAS share mounted RW everywhere",
+        "Disabling checksums"
+      ],
+      "answer": 0,
+      "explain": "Offline copies.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_hard_22.mp4",
+        "poster": "media/images/bak_hard_22-frame.png",
+        "figure": "media/images/bak_hard_22.png"
+      }
+    },
+    {
+      "id": "bak_hard_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ncp -a bin /tmp/backup-echo-25\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\nClean rebuild + artifact hashes detects non-reproducible builds.",
+      "answer": true,
+      "explain": "Hash compare.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_hard_23.mp4",
+        "poster": "media/images/bak_hard_23-frame.png",
+        "figure": "media/images/bak_hard_23.png"
+      }
+    },
+    {
+      "id": "bak_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n clean; ls src\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\n`make clean` that deletes `$(HOME)` due to bad vars shows why...",
+      "choices": [
+        "Expand/echo recipes before rm",
+        "Variables are safe always",
+        "clean should use sudo",
+        "PATH must include ."
+      ],
+      "answer": 0,
+      "explain": "Echo destructive paths.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_hard_24.mp4",
+        "poster": "media/images/bak_hard_24-frame.png",
+        "figure": "media/images/bak_hard_24.png"
+      }
+    },
+    {
+      "id": "bak_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nrsync -a --dry-run logs/ /tmp/golf-bak/\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nCross-region backup lag means RPO/RTO...",
+      "choices": [
+        "Define acceptable data loss/time-to-restore",
+        "Are font settings",
+        "Are umask aliases",
+        "Are man sections"
+      ],
+      "answer": 0,
+      "explain": "Disaster metrics.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_hard_25.mp4",
+        "poster": "media/images/bak_hard_25-frame.png",
+        "figure": "media/images/bak_hard_25.png"
+      }
+    },
+    {
+      "id": "bak_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# backup then: rm -rf build/\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nDeduplicating backup systems still need...",
+      "choices": [
+        "Periodic full restore drills",
+        "No restores ever",
+        "Only incremental forever without checks",
+        "Disabled auth"
+      ],
+      "answer": 0,
+      "explain": "Drill restores.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_hard_26.mp4",
+        "poster": "media/images/bak_hard_26-frame.png",
+        "figure": "media/images/bak_hard_26.png"
+      }
+    },
+    {
+      "id": "bak_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncp -a build /tmp/backup-india-29\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nContainer layers vs host backups...",
+      "choices": [
+        "Different contents; back up volumes explicitly",
+        "Image backup includes all volumes always",
+        "Host backup unused",
+        "Skip both"
+      ],
+      "answer": 0,
+      "explain": "Volume awareness.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_hard_27.mp4",
+        "poster": "media/images/bak_hard_27-frame.png",
+        "figure": "media/images/bak_hard_27.png"
+      }
+    },
+    {
+      "id": "bak_hard_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nmake -n clean; ls docs\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nEncryption at rest for backups protects stolen media.",
+      "answer": true,
+      "explain": "Encrypt backups.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_hard_28.mp4",
+        "poster": "media/images/bak_hard_28-frame.png",
+        "figure": "media/images/bak_hard_28.png"
+      }
+    },
+    {
+      "id": "bak_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nrsync -a --dry-run scripts/ /tmp/alpha-bak/\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nCI cache clearing is a form of clean-build that...",
+      "choices": [
+        "Surfaces hidden cache dependencies",
+        "Should be never done",
+        "Replaces unit tests",
+        "Formats runners' disks randomly"
+      ],
+      "answer": 0,
+      "explain": "Cache hygiene.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_hard_29.mp4",
+        "poster": "media/images/bak_hard_29-frame.png",
+        "figure": "media/images/bak_hard_29.png"
+      }
+    },
+    {
+      "id": "bak_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# backup then: rm -rf build/\n```\nLab: backup `dir30`, run clean, restore, diff.",
+      "choices": [
+        "Yes: prove the loop",
+        "No: trust clean",
+        "No: skip restore",
+        "No: rm backup first"
+      ],
+      "answer": 0,
+      "explain": "Backup-clean-restore.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/bak_hard_30.mp4",
+        "poster": "media/images/bak_hard_30-frame.png",
+        "figure": "media/images/bak_hard_30.png"
+      }
+    }
+  ]
+}

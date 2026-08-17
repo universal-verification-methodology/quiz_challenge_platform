@@ -1,0 +1,1698 @@
+{
+  "module": "module17-exit-status-lab",
+  "title": "Exit status & && / ||",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -d tmp && exit 0 || exit 1\n```\nBy convention, exit status 0 means...",
+      "choices": [
+        "Failure",
+        "Success",
+        "Permission denied",
+        "Command not found"
+      ],
+      "answer": 1,
+      "explain": "Zero is success; non-zero is failure or a specific error.",
+      "difficulty": "easy",
+      "id": "exit_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_easy_01.mp4",
+        "poster": "media/images/exit_easy_01-frame.png",
+        "figure": "media/images/exit_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntrue && echo ok; false || echo fail; echo status=$?\n```\n$? is...",
+      "choices": [
+        "The current username",
+        "The exit status of the previous command",
+        "Always equal to $1",
+        "The shell's PID only"
+      ],
+      "answer": 1,
+      "explain": "Check $? immediately; the next command overwrites it.",
+      "difficulty": "easy",
+      "id": "exit_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_easy_02.mp4",
+        "poster": "media/images/exit_easy_02-frame.png",
+        "figure": "media/images/exit_easy_02.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { return 0; }; cmd; echo $?\n```\ncmd1 && cmd2 runs cmd2 only if cmd1 succeeded (exit 0).",
+      "answer": true,
+      "explain": "&& is success short-circuit; || runs the next command on failure.",
+      "difficulty": "easy",
+      "id": "exit_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_easy_03.mp4",
+        "poster": "media/images/exit_easy_03-frame.png",
+        "figure": "media/images/exit_easy_03.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -o pipefail; false | true; echo $?\n```\nfalse || echo fallback typically...",
+      "choices": [
+        "Skips echo because false failed",
+        "Runs echo because false failed (non-zero)",
+        "Deletes the file named fallback",
+        "Always exits the shell"
+      ],
+      "answer": 1,
+      "explain": "|| runs the right-hand command when the left-hand status is non-zero.",
+      "difficulty": "easy",
+      "id": "exit_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_easy_04.mp4",
+        "poster": "media/images/exit_easy_04-frame.png",
+        "figure": "media/images/exit_easy_04.png"
+      }
+    },
+    {
+      "id": "exit_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -d cfg && exit 0 || exit 1\n```\nExit status 0 usually means...",
+      "choices": [
+        "Success",
+        "Failure",
+        "Signal 0 only",
+        "Permission denied"
+      ],
+      "answer": 0,
+      "explain": "0 = success.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_easy_05.mp4",
+        "poster": "media/images/exit_easy_05-frame.png",
+        "figure": "media/images/exit_easy_05.png"
+      }
+    },
+    {
+      "id": "exit_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntrue && echo ok; false || echo fail; echo status=$?\n```\n`echo $?` prints...",
+      "choices": [
+        "Exit status of the previous command",
+        "PID",
+        "UID",
+        "umask"
+      ],
+      "answer": 0,
+      "explain": "$? is last status.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_easy_06.mp4",
+        "poster": "media/images/exit_easy_06-frame.png",
+        "figure": "media/images/exit_easy_06.png"
+      }
+    },
+    {
+      "id": "exit_easy_07",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { return 1; }; cmd; echo $?\n```\n`cmd1 && cmd2` runs cmd2 only if cmd1 succeeds.",
+      "answer": true,
+      "explain": "Short-circuit AND.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_easy_07.mp4",
+        "poster": "media/images/exit_easy_07-frame.png",
+        "figure": "media/images/exit_easy_07.png"
+      }
+    },
+    {
+      "id": "exit_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -o pipefail; false | true; echo $?\n```\n`cmd1 || cmd2` runs cmd2 when...",
+      "choices": [
+        "cmd1 fails",
+        "cmd1 succeeds",
+        "Always",
+        "Never"
+      ],
+      "answer": 0,
+      "explain": "Short-circuit OR.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_easy_08.mp4",
+        "poster": "media/images/exit_easy_08-frame.png",
+        "figure": "media/images/exit_easy_08.png"
+      }
+    },
+    {
+      "id": "exit_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -d tmp && exit 0 || exit 1\n```\nNon-zero exit typically means...",
+      "choices": [
+        "Failure / not-true condition",
+        "Success",
+        "Need reboot",
+        "Need root always"
+      ],
+      "answer": 0,
+      "explain": "Non-zero = fail.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_easy_09.mp4",
+        "poster": "media/images/exit_easy_09-frame.png",
+        "figure": "media/images/exit_easy_09.png"
+      }
+    },
+    {
+      "id": "exit_easy_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntrue && echo ok; false || echo fail; echo status=$?\n```\n`false; echo $?` often shows...",
+      "choices": [
+        "1",
+        "0",
+        "127",
+        "255 always"
+      ],
+      "answer": 0,
+      "explain": "false fails.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_easy_10.mp4",
+        "poster": "media/images/exit_easy_10-frame.png",
+        "figure": "media/images/exit_easy_10.png"
+      }
+    },
+    {
+      "id": "exit_easy_11",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { return 2; }; cmd; echo $?\n```\n`true` exits 0.",
+      "answer": true,
+      "explain": "true succeeds.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_easy_11.mp4",
+        "poster": "media/images/exit_easy_11-frame.png",
+        "figure": "media/images/exit_easy_11.png"
+      }
+    },
+    {
+      "id": "exit_easy_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -o pipefail; false | true; echo $?\n```\nIn `if cmd; then`, the if tests...",
+      "choices": [
+        "cmd's exit status",
+        "cmd's stdout only",
+        "cmd's name",
+        "PATH"
+      ],
+      "answer": 0,
+      "explain": "if uses status.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_easy_12.mp4",
+        "poster": "media/images/exit_easy_12-frame.png",
+        "figure": "media/images/exit_easy_12.png"
+      }
+    },
+    {
+      "id": "exit_easy_13",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -d cfg && exit 0 || exit 1\n```\n`exit 8` from a script sets...",
+      "choices": [
+        "The script's status to 8",
+        "umask to 8",
+        "UID to 8",
+        "Nice to 8"
+      ],
+      "answer": 0,
+      "explain": "Script exit code.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_easy_13.mp4",
+        "poster": "media/images/exit_easy_13-frame.png",
+        "figure": "media/images/exit_easy_13.png"
+      }
+    },
+    {
+      "id": "exit_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntrue && echo ok; false || echo fail; echo status=$?\n```\nCommand not found often yields status...",
+      "choices": [
+        "127",
+        "0",
+        "1 always only",
+        "2 only for grep"
+      ],
+      "answer": 0,
+      "explain": "127 common for not found.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_easy_14.mp4",
+        "poster": "media/images/exit_easy_14-frame.png",
+        "figure": "media/images/exit_easy_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { return 0; }; cmd; echo $?\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nBy convention, exit status 0 means...",
+      "choices": [
+        "Failure",
+        "Success",
+        "Permission denied",
+        "Command not found"
+      ],
+      "answer": 1,
+      "explain": "Zero is success; non-zero is failure or a specific error.",
+      "difficulty": "easy",
+      "id": "exit_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_easy_15.mp4",
+        "poster": "media/images/exit_easy_15-frame.png",
+        "figure": "media/images/exit_easy_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -o pipefail; false | true; echo $?\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\n$? is...",
+      "choices": [
+        "The current username",
+        "The exit status of the previous command",
+        "Always equal to $1",
+        "The shell's PID only"
+      ],
+      "answer": 1,
+      "explain": "Check $? immediately; the next command overwrites it.",
+      "difficulty": "easy",
+      "id": "exit_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_easy_16.mp4",
+        "poster": "media/images/exit_easy_16-frame.png",
+        "figure": "media/images/exit_easy_16.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntest -d tmp && exit 0 || exit 1\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\ncmd1 && cmd2 runs cmd2 only if cmd1 succeeded (exit 0).",
+      "answer": true,
+      "explain": "&& is success short-circuit; || runs the next command on failure.",
+      "difficulty": "easy",
+      "id": "exit_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_easy_17.mp4",
+        "poster": "media/images/exit_easy_17-frame.png",
+        "figure": "media/images/exit_easy_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntrue && echo ok; false || echo fail; echo status=$?\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nfalse || echo fallback typically...",
+      "choices": [
+        "Skips echo because false failed",
+        "Runs echo because false failed (non-zero)",
+        "Deletes the file named fallback",
+        "Always exits the shell"
+      ],
+      "answer": 1,
+      "explain": "|| runs the right-hand command when the left-hand status is non-zero.",
+      "difficulty": "easy",
+      "id": "exit_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_easy_18.mp4",
+        "poster": "media/images/exit_easy_18-frame.png",
+        "figure": "media/images/exit_easy_18.png"
+      }
+    },
+    {
+      "id": "exit_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { return 1; }; cmd; echo $?\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nExit status 0 usually means...",
+      "choices": [
+        "Success",
+        "Failure",
+        "Signal 0 only",
+        "Permission denied"
+      ],
+      "answer": 0,
+      "explain": "0 = success.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_easy_19.mp4",
+        "poster": "media/images/exit_easy_19-frame.png",
+        "figure": "media/images/exit_easy_19.png"
+      }
+    },
+    {
+      "id": "exit_easy_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -o pipefail; false | true; echo $?\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\n`echo $?` prints...",
+      "choices": [
+        "Exit status of the previous command",
+        "PID",
+        "UID",
+        "umask"
+      ],
+      "answer": 0,
+      "explain": "$? is last status.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_easy_20.mp4",
+        "poster": "media/images/exit_easy_20-frame.png",
+        "figure": "media/images/exit_easy_20.png"
+      }
+    },
+    {
+      "id": "exit_easy_21",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntest -d cfg && exit 0 || exit 1\n```\n# Review context: `/var/log/golf` slot 21 variant 1\n`cmd1 && cmd2` runs cmd2 only if cmd1 succeeds.",
+      "answer": true,
+      "explain": "Short-circuit AND.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_easy_21.mp4",
+        "poster": "media/images/exit_easy_21-frame.png",
+        "figure": "media/images/exit_easy_21.png"
+      }
+    },
+    {
+      "id": "exit_easy_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntrue && echo ok; false || echo fail; echo status=$?\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\n`cmd1 || cmd2` runs cmd2 when...",
+      "choices": [
+        "cmd1 fails",
+        "cmd1 succeeds",
+        "Always",
+        "Never"
+      ],
+      "answer": 0,
+      "explain": "Short-circuit OR.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_easy_22.mp4",
+        "poster": "media/images/exit_easy_22-frame.png",
+        "figure": "media/images/exit_easy_22.png"
+      }
+    },
+    {
+      "id": "exit_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { return 2; }; cmd; echo $?\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\nNon-zero exit typically means...",
+      "choices": [
+        "Failure / not-true condition",
+        "Success",
+        "Need reboot",
+        "Need root always"
+      ],
+      "answer": 0,
+      "explain": "Non-zero = fail.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_easy_23.mp4",
+        "poster": "media/images/exit_easy_23-frame.png",
+        "figure": "media/images/exit_easy_23.png"
+      }
+    },
+    {
+      "id": "exit_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -o pipefail; false | true; echo $?\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\n`false; echo $?` often shows...",
+      "choices": [
+        "1",
+        "0",
+        "127",
+        "255 always"
+      ],
+      "answer": 0,
+      "explain": "false fails.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_easy_24.mp4",
+        "poster": "media/images/exit_easy_24-frame.png",
+        "figure": "media/images/exit_easy_24.png"
+      }
+    },
+    {
+      "id": "exit_easy_25",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntest -d tmp && exit 0 || exit 1\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\n`true` exits 0.",
+      "answer": true,
+      "explain": "true succeeds.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_easy_25.mp4",
+        "poster": "media/images/exit_easy_25-frame.png",
+        "figure": "media/images/exit_easy_25.png"
+      }
+    },
+    {
+      "id": "exit_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntrue && echo ok; false || echo fail; echo status=$?\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nIn `if cmd; then`, the if tests...",
+      "choices": [
+        "cmd's exit status",
+        "cmd's stdout only",
+        "cmd's name",
+        "PATH"
+      ],
+      "answer": 0,
+      "explain": "if uses status.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_easy_26.mp4",
+        "poster": "media/images/exit_easy_26-frame.png",
+        "figure": "media/images/exit_easy_26.png"
+      }
+    },
+    {
+      "id": "exit_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { return 0; }; cmd; echo $?\n```\n# Review context: `/var/log/echo` slot 27 variant 1\n`exit 8` from a script sets...",
+      "choices": [
+        "The script's status to 8",
+        "umask to 8",
+        "UID to 8",
+        "Nice to 8"
+      ],
+      "answer": 0,
+      "explain": "Script exit code.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_easy_27.mp4",
+        "poster": "media/images/exit_easy_27-frame.png",
+        "figure": "media/images/exit_easy_27.png"
+      }
+    },
+    {
+      "id": "exit_easy_28",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -o pipefail; false | true; echo $?\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nCommand not found often yields status...",
+      "choices": [
+        "127",
+        "0",
+        "1 always only",
+        "2 only for grep"
+      ],
+      "answer": 0,
+      "explain": "127 common for not found.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_easy_28.mp4",
+        "poster": "media/images/exit_easy_28-frame.png",
+        "figure": "media/images/exit_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -d cfg && exit 0 || exit 1\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nBy convention, exit status 0 means...",
+      "choices": [
+        "Failure",
+        "Success",
+        "Permission denied",
+        "Command not found"
+      ],
+      "answer": 1,
+      "explain": "Zero is success; non-zero is failure or a specific error.",
+      "difficulty": "easy",
+      "id": "exit_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_easy_29.mp4",
+        "poster": "media/images/exit_easy_29-frame.png",
+        "figure": "media/images/exit_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntrue && echo ok; false || echo fail; echo status=$?\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\n$? is...",
+      "choices": [
+        "The current username",
+        "The exit status of the previous command",
+        "Always equal to $1",
+        "The shell's PID only"
+      ],
+      "answer": 1,
+      "explain": "Check $? immediately; the next command overwrites it.",
+      "difficulty": "easy",
+      "id": "exit_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_easy_30.mp4",
+        "poster": "media/images/exit_easy_30-frame.png",
+        "figure": "media/images/exit_easy_30.png"
+      }
+    },
+    {
+      "id": "exit_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -o pipefail; false | true; echo $?\n```\n`set -e` aborts on...",
+      "choices": [
+        "Failing commands (with many exceptions)",
+        "Successful commands",
+        "Only echoes",
+        "Only aliases"
+      ],
+      "answer": 0,
+      "explain": "errexit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_medium_01.mp4",
+        "poster": "media/images/exit_medium_01-frame.png",
+        "figure": "media/images/exit_medium_01.png"
+      }
+    },
+    {
+      "id": "exit_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -d tmp && exit 0 || exit 1\n```\nPipeline status without pipefail is...",
+      "choices": [
+        "Usually the last command's status",
+        "Always first",
+        "Always 0",
+        "Bitwise OR always"
+      ],
+      "answer": 0,
+      "explain": "Last stage wins by default.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_medium_02.mp4",
+        "poster": "media/images/exit_medium_02-frame.png",
+        "figure": "media/images/exit_medium_02.png"
+      }
+    },
+    {
+      "id": "exit_medium_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntrue && echo ok; false || echo fail; echo status=$?\n```\n`cmd1 && cmd2 || cmd3` can surprise; prefer if/else.",
+      "answer": true,
+      "explain": "Ambiguous chaining.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_medium_03.mp4",
+        "poster": "media/images/exit_medium_03-frame.png",
+        "figure": "media/images/exit_medium_03.png"
+      }
+    },
+    {
+      "id": "exit_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { return 0; }; cmd; echo $?\n```\n`! cmd` negates...",
+      "choices": [
+        "Exit status for the purposes of the shell",
+        "Stdout bytes",
+        "File modes",
+        "PIDs"
+      ],
+      "answer": 0,
+      "explain": "Status negation.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_medium_04.mp4",
+        "poster": "media/images/exit_medium_04-frame.png",
+        "figure": "media/images/exit_medium_04.png"
+      }
+    },
+    {
+      "id": "exit_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -o pipefail; false | true; echo $?\n```\n`return 7` in sourced scripts/functions...",
+      "choices": [
+        "Sets that status without always exiting the login shell",
+        "Always reboots",
+        "Clears PATH",
+        "Formats"
+      ],
+      "answer": 0,
+      "explain": "return vs exit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_medium_05.mp4",
+        "poster": "media/images/exit_medium_05-frame.png",
+        "figure": "media/images/exit_medium_05.png"
+      }
+    },
+    {
+      "id": "exit_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -d cfg && exit 0 || exit 1\n```\nTimeouts killing commands may yield...",
+      "choices": [
+        "Statuses related to signals (e.g. 128+sig)",
+        "Always 0",
+        "Always 1",
+        "Always 127"
+      ],
+      "answer": 0,
+      "explain": "Signal exit encoding.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_medium_06.mp4",
+        "poster": "media/images/exit_medium_06-frame.png",
+        "figure": "media/images/exit_medium_06.png"
+      }
+    },
+    {
+      "id": "exit_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntrue && echo ok; false || echo fail; echo status=$?\n```\n`set -o errexit` is another name for...",
+      "choices": [
+        "set -e",
+        "set -x",
+        "set -u",
+        "set -m"
+      ],
+      "answer": 0,
+      "explain": "errexit alias.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_medium_07.mp4",
+        "poster": "media/images/exit_medium_07-frame.png",
+        "figure": "media/images/exit_medium_07.png"
+      }
+    },
+    {
+      "id": "exit_medium_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { return 1; }; cmd; echo $?\n```\n`if ! cmd; then` runs then-branch when cmd fails.",
+      "answer": true,
+      "explain": "Negated if.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_medium_08.mp4",
+        "poster": "media/images/exit_medium_08-frame.png",
+        "figure": "media/images/exit_medium_08.png"
+      }
+    },
+    {
+      "id": "exit_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -o pipefail; false | true; echo $?\n```\nDocumenting exit codes in --help helps...",
+      "choices": [
+        "Automation handle failures",
+        "CPU turbo",
+        "Font rendering",
+        "Only humans never scripts"
+      ],
+      "answer": 0,
+      "explain": "Contract for callers.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_medium_09.mp4",
+        "poster": "media/images/exit_medium_09-frame.png",
+        "figure": "media/images/exit_medium_09.png"
+      }
+    },
+    {
+      "id": "exit_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -d tmp && exit 0 || exit 1\n```\n`wait $pid; echo $?` reports...",
+      "choices": [
+        "Status of that waited child",
+        "Parent always 0",
+        "umask",
+        "Nice"
+      ],
+      "answer": 0,
+      "explain": "wait status.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_medium_10.mp4",
+        "poster": "media/images/exit_medium_10-frame.png",
+        "figure": "media/images/exit_medium_10.png"
+      }
+    },
+    {
+      "id": "exit_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntrue && echo ok; false || echo fail; echo status=$?\n```\n# Review context: `~/bin/echo` slot 11 variant 1\n`set -e` aborts on...",
+      "choices": [
+        "Failing commands (with many exceptions)",
+        "Successful commands",
+        "Only echoes",
+        "Only aliases"
+      ],
+      "answer": 0,
+      "explain": "errexit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_medium_11.mp4",
+        "poster": "media/images/exit_medium_11-frame.png",
+        "figure": "media/images/exit_medium_11.png"
+      }
+    },
+    {
+      "id": "exit_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { return 2; }; cmd; echo $?\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\nPipeline status without pipefail is...",
+      "choices": [
+        "Usually the last command's status",
+        "Always first",
+        "Always 0",
+        "Bitwise OR always"
+      ],
+      "answer": 0,
+      "explain": "Last stage wins by default.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_medium_12.mp4",
+        "poster": "media/images/exit_medium_12-frame.png",
+        "figure": "media/images/exit_medium_12.png"
+      }
+    },
+    {
+      "id": "exit_medium_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nset -o pipefail; false | true; echo $?\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\n`cmd1 && cmd2 || cmd3` can surprise; prefer if/else.",
+      "answer": true,
+      "explain": "Ambiguous chaining.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_medium_13.mp4",
+        "poster": "media/images/exit_medium_13-frame.png",
+        "figure": "media/images/exit_medium_13.png"
+      }
+    },
+    {
+      "id": "exit_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -d cfg && exit 0 || exit 1\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\n`! cmd` negates...",
+      "choices": [
+        "Exit status for the purposes of the shell",
+        "Stdout bytes",
+        "File modes",
+        "PIDs"
+      ],
+      "answer": 0,
+      "explain": "Status negation.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_medium_14.mp4",
+        "poster": "media/images/exit_medium_14-frame.png",
+        "figure": "media/images/exit_medium_14.png"
+      }
+    },
+    {
+      "id": "exit_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntrue && echo ok; false || echo fail; echo status=$?\n```\n`return 3` in sourced scripts/functions...",
+      "choices": [
+        "Sets that status without always exiting the login shell",
+        "Always reboots",
+        "Clears PATH",
+        "Formats"
+      ],
+      "answer": 0,
+      "explain": "return vs exit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_medium_15.mp4",
+        "poster": "media/images/exit_medium_15-frame.png",
+        "figure": "media/images/exit_medium_15.png"
+      }
+    },
+    {
+      "id": "exit_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { return 0; }; cmd; echo $?\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nTimeouts killing commands may yield...",
+      "choices": [
+        "Statuses related to signals (e.g. 128+sig)",
+        "Always 0",
+        "Always 1",
+        "Always 127"
+      ],
+      "answer": 0,
+      "explain": "Signal exit encoding.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_medium_16.mp4",
+        "poster": "media/images/exit_medium_16-frame.png",
+        "figure": "media/images/exit_medium_16.png"
+      }
+    },
+    {
+      "id": "exit_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -o pipefail; false | true; echo $?\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\n`set -o errexit` is another name for...",
+      "choices": [
+        "set -e",
+        "set -x",
+        "set -u",
+        "set -m"
+      ],
+      "answer": 0,
+      "explain": "errexit alias.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_medium_17.mp4",
+        "poster": "media/images/exit_medium_17-frame.png",
+        "figure": "media/images/exit_medium_17.png"
+      }
+    },
+    {
+      "id": "exit_medium_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntest -d tmp && exit 0 || exit 1\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\n`if ! cmd; then` runs then-branch when cmd fails.",
+      "answer": true,
+      "explain": "Negated if.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_medium_18.mp4",
+        "poster": "media/images/exit_medium_18-frame.png",
+        "figure": "media/images/exit_medium_18.png"
+      }
+    },
+    {
+      "id": "exit_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntrue && echo ok; false || echo fail; echo status=$?\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nDocumenting exit codes in --help helps...",
+      "choices": [
+        "Automation handle failures",
+        "CPU turbo",
+        "Font rendering",
+        "Only humans never scripts"
+      ],
+      "answer": 0,
+      "explain": "Contract for callers.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_medium_19.mp4",
+        "poster": "media/images/exit_medium_19-frame.png",
+        "figure": "media/images/exit_medium_19.png"
+      }
+    },
+    {
+      "id": "exit_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { return 1; }; cmd; echo $?\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\n`wait $pid; echo $?` reports...",
+      "choices": [
+        "Status of that waited child",
+        "Parent always 0",
+        "umask",
+        "Nice"
+      ],
+      "answer": 0,
+      "explain": "wait status.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_medium_20.mp4",
+        "poster": "media/images/exit_medium_20-frame.png",
+        "figure": "media/images/exit_medium_20.png"
+      }
+    },
+    {
+      "id": "exit_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -o pipefail; false | true; echo $?\n```\n# Review context: `/var/log/golf` slot 21 variant 1\n`set -e` aborts on...",
+      "choices": [
+        "Failing commands (with many exceptions)",
+        "Successful commands",
+        "Only echoes",
+        "Only aliases"
+      ],
+      "answer": 0,
+      "explain": "errexit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_medium_21.mp4",
+        "poster": "media/images/exit_medium_21-frame.png",
+        "figure": "media/images/exit_medium_21.png"
+      }
+    },
+    {
+      "id": "exit_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -d cfg && exit 0 || exit 1\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\nPipeline status without pipefail is...",
+      "choices": [
+        "Usually the last command's status",
+        "Always first",
+        "Always 0",
+        "Bitwise OR always"
+      ],
+      "answer": 0,
+      "explain": "Last stage wins by default.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_medium_22.mp4",
+        "poster": "media/images/exit_medium_22-frame.png",
+        "figure": "media/images/exit_medium_22.png"
+      }
+    },
+    {
+      "id": "exit_medium_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntrue && echo ok; false || echo fail; echo status=$?\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\n`cmd1 && cmd2 || cmd3` can surprise; prefer if/else.",
+      "answer": true,
+      "explain": "Ambiguous chaining.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_medium_23.mp4",
+        "poster": "media/images/exit_medium_23-frame.png",
+        "figure": "media/images/exit_medium_23.png"
+      }
+    },
+    {
+      "id": "exit_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { return 2; }; cmd; echo $?\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\n`! cmd` negates...",
+      "choices": [
+        "Exit status for the purposes of the shell",
+        "Stdout bytes",
+        "File modes",
+        "PIDs"
+      ],
+      "answer": 0,
+      "explain": "Status negation.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_medium_24.mp4",
+        "poster": "media/images/exit_medium_24-frame.png",
+        "figure": "media/images/exit_medium_24.png"
+      }
+    },
+    {
+      "id": "exit_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -o pipefail; false | true; echo $?\n```\n`return 6` in sourced scripts/functions...",
+      "choices": [
+        "Sets that status without always exiting the login shell",
+        "Always reboots",
+        "Clears PATH",
+        "Formats"
+      ],
+      "answer": 0,
+      "explain": "return vs exit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_medium_25.mp4",
+        "poster": "media/images/exit_medium_25-frame.png",
+        "figure": "media/images/exit_medium_25.png"
+      }
+    },
+    {
+      "id": "exit_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -d tmp && exit 0 || exit 1\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nTimeouts killing commands may yield...",
+      "choices": [
+        "Statuses related to signals (e.g. 128+sig)",
+        "Always 0",
+        "Always 1",
+        "Always 127"
+      ],
+      "answer": 0,
+      "explain": "Signal exit encoding.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_medium_26.mp4",
+        "poster": "media/images/exit_medium_26-frame.png",
+        "figure": "media/images/exit_medium_26.png"
+      }
+    },
+    {
+      "id": "exit_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntrue && echo ok; false || echo fail; echo status=$?\n```\n# Review context: `/var/log/echo` slot 27 variant 1\n`set -o errexit` is another name for...",
+      "choices": [
+        "set -e",
+        "set -x",
+        "set -u",
+        "set -m"
+      ],
+      "answer": 0,
+      "explain": "errexit alias.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_medium_27.mp4",
+        "poster": "media/images/exit_medium_27-frame.png",
+        "figure": "media/images/exit_medium_27.png"
+      }
+    },
+    {
+      "id": "exit_medium_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { return 0; }; cmd; echo $?\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\n`if ! cmd; then` runs then-branch when cmd fails.",
+      "answer": true,
+      "explain": "Negated if.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_medium_28.mp4",
+        "poster": "media/images/exit_medium_28-frame.png",
+        "figure": "media/images/exit_medium_28.png"
+      }
+    },
+    {
+      "id": "exit_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -o pipefail; false | true; echo $?\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nDocumenting exit codes in --help helps...",
+      "choices": [
+        "Automation handle failures",
+        "CPU turbo",
+        "Font rendering",
+        "Only humans never scripts"
+      ],
+      "answer": 0,
+      "explain": "Contract for callers.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_medium_29.mp4",
+        "poster": "media/images/exit_medium_29-frame.png",
+        "figure": "media/images/exit_medium_29.png"
+      }
+    },
+    {
+      "id": "exit_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -d cfg && exit 0 || exit 1\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\n`wait $pid; echo $?` reports...",
+      "choices": [
+        "Status of that waited child",
+        "Parent always 0",
+        "umask",
+        "Nice"
+      ],
+      "answer": 0,
+      "explain": "wait status.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_medium_30.mp4",
+        "poster": "media/images/exit_medium_30-frame.png",
+        "figure": "media/images/exit_medium_30.png"
+      }
+    },
+    {
+      "id": "exit_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -o pipefail; false | true; echo $?\n```\n`set -e` exceptions include...",
+      "choices": [
+        "Failing commands in `if`/`while` tests etc.",
+        "No exceptions ever",
+        "Only echo",
+        "Only pwd"
+      ],
+      "answer": 0,
+      "explain": "Know errexit nuances.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_hard_01.mp4",
+        "poster": "media/images/exit_hard_01-frame.png",
+        "figure": "media/images/exit_hard_01.png"
+      }
+    },
+    {
+      "id": "exit_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -d tmp && exit 0 || exit 1\n```\nSignal exit status convention often...",
+      "choices": [
+        "128 + signal number",
+        "Always 1",
+        "Always 255",
+        "Negative only"
+      ],
+      "answer": 0,
+      "explain": "128+n pattern.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_hard_02.mp4",
+        "poster": "media/images/exit_hard_02-frame.png",
+        "figure": "media/images/exit_hard_02.png"
+      }
+    },
+    {
+      "id": "exit_hard_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntrue && echo ok; false || echo fail; echo status=$?\n```\n`pipefail` makes failure in any pipeline stage visible.",
+      "answer": true,
+      "explain": "Critical for CI.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_hard_03.mp4",
+        "poster": "media/images/exit_hard_03-frame.png",
+        "figure": "media/images/exit_hard_03.png"
+      }
+    },
+    {
+      "id": "exit_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { return 0; }; cmd; echo $?\n```\n`trap 'cleanup; exit 1' ERR` ties...",
+      "choices": [
+        "Errors to cleanup",
+        "Only signals INT",
+        "Only success",
+        "Only aliases"
+      ],
+      "answer": 0,
+      "explain": "ERR trap patterns.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_hard_04.mp4",
+        "poster": "media/images/exit_hard_04-frame.png",
+        "figure": "media/images/exit_hard_04.png"
+      }
+    },
+    {
+      "id": "exit_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -o pipefail; false | true; echo $?\n```\nSubshell failures `(cmd)` with set -e ...",
+      "choices": [
+        "Have subtle inheritance rules; test explicitly",
+        "Always identical to non-subshell",
+        "Never fail",
+        "Always exit login"
+      ],
+      "answer": 0,
+      "explain": "Subshell+errexit quirks.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_hard_05.mp4",
+        "poster": "media/images/exit_hard_05-frame.png",
+        "figure": "media/images/exit_hard_05.png"
+      }
+    },
+    {
+      "id": "exit_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -d cfg && exit 0 || exit 1\n```\nWhy prefer `cmd || exit 1` at critical steps?",
+      "choices": [
+        "Explicit failure handling readability",
+        "Faster CPU",
+        "Required by ls",
+        "Disables set -e"
+      ],
+      "answer": 0,
+      "explain": "Explicit beats magic.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_hard_06.mp4",
+        "poster": "media/images/exit_hard_06-frame.png",
+        "figure": "media/images/exit_hard_06.png"
+      }
+    },
+    {
+      "id": "exit_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntrue && echo ok; false || echo fail; echo status=$?\n```\nMakefile recipes and shell `set -e` interaction...",
+      "choices": [
+        "Make checks recipe status; shell flags still matter inside",
+        "Make ignores all statuses",
+        "set -e disables make",
+        "Identical to cmake"
+      ],
+      "answer": 0,
+      "explain": "Two layers of status.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_hard_07.mp4",
+        "poster": "media/images/exit_hard_07-frame.png",
+        "figure": "media/images/exit_hard_07.png"
+      }
+    },
+    {
+      "id": "exit_hard_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { return 1; }; cmd; echo $?\n```\nPOSIX leaves some status meanings implementation-defined beyond 0.",
+      "answer": true,
+      "explain": "Portable code treats 0 vs non-0.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_hard_08.mp4",
+        "poster": "media/images/exit_hard_08-frame.png",
+        "figure": "media/images/exit_hard_08.png"
+      }
+    },
+    {
+      "id": "exit_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -o pipefail; false | true; echo $?\n```\nMasking failures with `cmd || true` is OK when...",
+      "choices": [
+        "Failure is expected/ignored intentionally",
+        "Always",
+        "Never documented",
+        "In setuid only"
+      ],
+      "answer": 0,
+      "explain": "Intentional ignore.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_hard_09.mp4",
+        "poster": "media/images/exit_hard_09-frame.png",
+        "figure": "media/images/exit_hard_09.png"
+      }
+    },
+    {
+      "id": "exit_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -d tmp && exit 0 || exit 1\n```\nLab: assert status with `cmd; test $? -eq 0`.",
+      "choices": [
+        "Yes: explicit check",
+        "No: ignore $?",
+        "No: only print",
+        "No: reboot on fail"
+      ],
+      "answer": 0,
+      "explain": "Assert statuses.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_hard_10.mp4",
+        "poster": "media/images/exit_hard_10-frame.png",
+        "figure": "media/images/exit_hard_10.png"
+      }
+    },
+    {
+      "id": "exit_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntrue && echo ok; false || echo fail; echo status=$?\n```\n# Review context: `~/bin/echo` slot 11 variant 1\n`set -e` exceptions include...",
+      "choices": [
+        "Failing commands in `if`/`while` tests etc.",
+        "No exceptions ever",
+        "Only echo",
+        "Only pwd"
+      ],
+      "answer": 0,
+      "explain": "Know errexit nuances.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_hard_11.mp4",
+        "poster": "media/images/exit_hard_11-frame.png",
+        "figure": "media/images/exit_hard_11.png"
+      }
+    },
+    {
+      "id": "exit_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { return 2; }; cmd; echo $?\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\nSignal exit status convention often...",
+      "choices": [
+        "128 + signal number",
+        "Always 1",
+        "Always 255",
+        "Negative only"
+      ],
+      "answer": 0,
+      "explain": "128+n pattern.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_hard_12.mp4",
+        "poster": "media/images/exit_hard_12-frame.png",
+        "figure": "media/images/exit_hard_12.png"
+      }
+    },
+    {
+      "id": "exit_hard_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nset -o pipefail; false | true; echo $?\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\n`pipefail` makes failure in any pipeline stage visible.",
+      "answer": true,
+      "explain": "Critical for CI.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_hard_13.mp4",
+        "poster": "media/images/exit_hard_13-frame.png",
+        "figure": "media/images/exit_hard_13.png"
+      }
+    },
+    {
+      "id": "exit_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -d cfg && exit 0 || exit 1\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\n`trap 'cleanup; exit 1' ERR` ties...",
+      "choices": [
+        "Errors to cleanup",
+        "Only signals INT",
+        "Only success",
+        "Only aliases"
+      ],
+      "answer": 0,
+      "explain": "ERR trap patterns.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_hard_14.mp4",
+        "poster": "media/images/exit_hard_14-frame.png",
+        "figure": "media/images/exit_hard_14.png"
+      }
+    },
+    {
+      "id": "exit_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntrue && echo ok; false || echo fail; echo status=$?\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nSubshell failures `(cmd)` with set -e ...",
+      "choices": [
+        "Have subtle inheritance rules; test explicitly",
+        "Always identical to non-subshell",
+        "Never fail",
+        "Always exit login"
+      ],
+      "answer": 0,
+      "explain": "Subshell+errexit quirks.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_hard_15.mp4",
+        "poster": "media/images/exit_hard_15-frame.png",
+        "figure": "media/images/exit_hard_15.png"
+      }
+    },
+    {
+      "id": "exit_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { return 0; }; cmd; echo $?\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nWhy prefer `cmd || exit 1` at critical steps?",
+      "choices": [
+        "Explicit failure handling readability",
+        "Faster CPU",
+        "Required by ls",
+        "Disables set -e"
+      ],
+      "answer": 0,
+      "explain": "Explicit beats magic.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_hard_16.mp4",
+        "poster": "media/images/exit_hard_16-frame.png",
+        "figure": "media/images/exit_hard_16.png"
+      }
+    },
+    {
+      "id": "exit_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -o pipefail; false | true; echo $?\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nMakefile recipes and shell `set -e` interaction...",
+      "choices": [
+        "Make checks recipe status; shell flags still matter inside",
+        "Make ignores all statuses",
+        "set -e disables make",
+        "Identical to cmake"
+      ],
+      "answer": 0,
+      "explain": "Two layers of status.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_hard_17.mp4",
+        "poster": "media/images/exit_hard_17-frame.png",
+        "figure": "media/images/exit_hard_17.png"
+      }
+    },
+    {
+      "id": "exit_hard_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntest -d tmp && exit 0 || exit 1\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nPOSIX leaves some status meanings implementation-defined beyond 0.",
+      "answer": true,
+      "explain": "Portable code treats 0 vs non-0.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_hard_18.mp4",
+        "poster": "media/images/exit_hard_18-frame.png",
+        "figure": "media/images/exit_hard_18.png"
+      }
+    },
+    {
+      "id": "exit_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntrue && echo ok; false || echo fail; echo status=$?\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nMasking failures with `cmd || true` is OK when...",
+      "choices": [
+        "Failure is expected/ignored intentionally",
+        "Always",
+        "Never documented",
+        "In setuid only"
+      ],
+      "answer": 0,
+      "explain": "Intentional ignore.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_hard_19.mp4",
+        "poster": "media/images/exit_hard_19-frame.png",
+        "figure": "media/images/exit_hard_19.png"
+      }
+    },
+    {
+      "id": "exit_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { return 1; }; cmd; echo $?\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\nLab: assert status with `cmd; test $? -eq 0`.",
+      "choices": [
+        "Yes: explicit check",
+        "No: ignore $?",
+        "No: only print",
+        "No: reboot on fail"
+      ],
+      "answer": 0,
+      "explain": "Assert statuses.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_hard_20.mp4",
+        "poster": "media/images/exit_hard_20-frame.png",
+        "figure": "media/images/exit_hard_20.png"
+      }
+    },
+    {
+      "id": "exit_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -o pipefail; false | true; echo $?\n```\n# Review context: `/var/log/golf` slot 21 variant 1\n`set -e` exceptions include...",
+      "choices": [
+        "Failing commands in `if`/`while` tests etc.",
+        "No exceptions ever",
+        "Only echo",
+        "Only pwd"
+      ],
+      "answer": 0,
+      "explain": "Know errexit nuances.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_hard_21.mp4",
+        "poster": "media/images/exit_hard_21-frame.png",
+        "figure": "media/images/exit_hard_21.png"
+      }
+    },
+    {
+      "id": "exit_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -d cfg && exit 0 || exit 1\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\nSignal exit status convention often...",
+      "choices": [
+        "128 + signal number",
+        "Always 1",
+        "Always 255",
+        "Negative only"
+      ],
+      "answer": 0,
+      "explain": "128+n pattern.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_hard_22.mp4",
+        "poster": "media/images/exit_hard_22-frame.png",
+        "figure": "media/images/exit_hard_22.png"
+      }
+    },
+    {
+      "id": "exit_hard_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntrue && echo ok; false || echo fail; echo status=$?\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\n`pipefail` makes failure in any pipeline stage visible.",
+      "answer": true,
+      "explain": "Critical for CI.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_hard_23.mp4",
+        "poster": "media/images/exit_hard_23-frame.png",
+        "figure": "media/images/exit_hard_23.png"
+      }
+    },
+    {
+      "id": "exit_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { return 2; }; cmd; echo $?\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\n`trap 'cleanup; exit 1' ERR` ties...",
+      "choices": [
+        "Errors to cleanup",
+        "Only signals INT",
+        "Only success",
+        "Only aliases"
+      ],
+      "answer": 0,
+      "explain": "ERR trap patterns.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_hard_24.mp4",
+        "poster": "media/images/exit_hard_24-frame.png",
+        "figure": "media/images/exit_hard_24.png"
+      }
+    },
+    {
+      "id": "exit_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -o pipefail; false | true; echo $?\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nSubshell failures `(cmd)` with set -e ...",
+      "choices": [
+        "Have subtle inheritance rules; test explicitly",
+        "Always identical to non-subshell",
+        "Never fail",
+        "Always exit login"
+      ],
+      "answer": 0,
+      "explain": "Subshell+errexit quirks.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_hard_25.mp4",
+        "poster": "media/images/exit_hard_25-frame.png",
+        "figure": "media/images/exit_hard_25.png"
+      }
+    },
+    {
+      "id": "exit_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -d tmp && exit 0 || exit 1\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nWhy prefer `cmd || exit 1` at critical steps?",
+      "choices": [
+        "Explicit failure handling readability",
+        "Faster CPU",
+        "Required by ls",
+        "Disables set -e"
+      ],
+      "answer": 0,
+      "explain": "Explicit beats magic.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_hard_26.mp4",
+        "poster": "media/images/exit_hard_26-frame.png",
+        "figure": "media/images/exit_hard_26.png"
+      }
+    },
+    {
+      "id": "exit_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntrue && echo ok; false || echo fail; echo status=$?\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nMakefile recipes and shell `set -e` interaction...",
+      "choices": [
+        "Make checks recipe status; shell flags still matter inside",
+        "Make ignores all statuses",
+        "set -e disables make",
+        "Identical to cmake"
+      ],
+      "answer": 0,
+      "explain": "Two layers of status.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_hard_27.mp4",
+        "poster": "media/images/exit_hard_27-frame.png",
+        "figure": "media/images/exit_hard_27.png"
+      }
+    },
+    {
+      "id": "exit_hard_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { return 0; }; cmd; echo $?\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nPOSIX leaves some status meanings implementation-defined beyond 0.",
+      "answer": true,
+      "explain": "Portable code treats 0 vs non-0.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_hard_28.mp4",
+        "poster": "media/images/exit_hard_28-frame.png",
+        "figure": "media/images/exit_hard_28.png"
+      }
+    },
+    {
+      "id": "exit_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nset -o pipefail; false | true; echo $?\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nMasking failures with `cmd || true` is OK when...",
+      "choices": [
+        "Failure is expected/ignored intentionally",
+        "Always",
+        "Never documented",
+        "In setuid only"
+      ],
+      "answer": 0,
+      "explain": "Intentional ignore.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_hard_29.mp4",
+        "poster": "media/images/exit_hard_29-frame.png",
+        "figure": "media/images/exit_hard_29.png"
+      }
+    },
+    {
+      "id": "exit_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntest -d cfg && exit 0 || exit 1\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nLab: assert status with `cmd; test $? -eq 0`.",
+      "choices": [
+        "Yes: explicit check",
+        "No: ignore $?",
+        "No: only print",
+        "No: reboot on fail"
+      ],
+      "answer": 0,
+      "explain": "Assert statuses.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/exit_hard_30.mp4",
+        "poster": "media/images/exit_hard_30-frame.png",
+        "figure": "media/images/exit_hard_30.png"
+      }
+    }
+  ]
+}

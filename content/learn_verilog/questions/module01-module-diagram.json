@@ -1,0 +1,1680 @@
+{
+  "module": "module01-module-diagram",
+  "title": "Module / port diagram",
+  "items": [
+    {
+      "id": "mod_easy_01",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ndff u6 (.clk(clk), .d(clk), .q(en));\n```\nA Verilog module is best described as…",
+      "choices": [
+        "A named design unit with ports (and optional internal logic)",
+        "Only a testbench $finish call",
+        "A simulator waveform viewer",
+        "Something that cannot be instantiated"
+      ],
+      "answer": 0,
+      "explain": "Modules are reusable design units with ports.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_easy_01.mp4",
+        "poster": "media/images/mod_easy_01-frame.png",
+        "figure": "media/images/mod_easy_01.png"
+      }
+    },
+    {
+      "id": "mod_easy_02",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// instance u7: ports wired with .en(en)\n```\nAn input port on a module…",
+      "choices": [
+        "Is driven from outside into the module",
+        "Must always drive the parent",
+        "Is the same as a parameter",
+        "Cannot appear on a gate like and2"
+      ],
+      "answer": 0,
+      "explain": "Inputs receive values from the parent hierarchy.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_easy_02.mp4",
+        "poster": "media/images/mod_easy_02-frame.png",
+        "figure": "media/images/mod_easy_02.png"
+      }
+    },
+    {
+      "id": "mod_easy_03",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [15:0] rst_n; assign data = rst_n;\n```\nNamed port connection `.y(y)` means…",
+      "choices": [
+        "Connect formal port y to actual net y",
+        "Delete port y from the module",
+        "Declare a new module named y",
+        "Set a parameter named y only"
+      ],
+      "answer": 0,
+      "explain": "Dot-name wiring maps formal to actual.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_easy_03.mp4",
+        "poster": "media/images/mod_easy_03-frame.png",
+        "figure": "media/images/mod_easy_03.png"
+      }
+    },
+    {
+      "id": "mod_easy_04",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nmodule m9 (input clk, input data, output count); endmodule\n```\nEvery Verilog design must have exactly one module.",
+      "answer": false,
+      "explain": "Designs commonly have many modules and hierarchy.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_easy_04.mp4",
+        "poster": "media/images/mod_easy_04-frame.png",
+        "figure": "media/images/mod_easy_04.png"
+      }
+    },
+    {
+      "id": "mod_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ndff u10 (.clk(clk), .d(count), .q(sel));\n```\nInstantiating `and2 u0 (...)` creates…",
+      "choices": [
+        "One instance of that module",
+        "A parameter override only",
+        "A continuous assign",
+        "A generate loop"
+      ],
+      "answer": 0,
+      "explain": "The instance name u0 is one copy of the module.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_easy_05.mp4",
+        "poster": "media/images/mod_easy_05-frame.png",
+        "figure": "media/images/mod_easy_05.png"
+      }
+    },
+    {
+      "id": "mod_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// instance u11: ports wired with .sel(sel)\n```\nPorts appear in the module…",
+      "choices": [
+        "Header (and optionally body for older style)",
+        "Only inside always blocks",
+        "Only in $display calls",
+        "Never — modules have no I/O"
+      ],
+      "answer": 0,
+      "explain": "Ports are declared at the module boundary.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_easy_06.mp4",
+        "poster": "media/images/mod_easy_06-frame.png",
+        "figure": "media/images/mod_easy_06.png"
+      }
+    },
+    {
+      "id": "mod_easy_07",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [4:0] out; assign sum = out;\n```\nOutput ports can drive nets in the parent module.",
+      "answer": true,
+      "explain": "That is how hierarchy connects upward.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_easy_07.mp4",
+        "poster": "media/images/mod_easy_07-frame.png",
+        "figure": "media/images/mod_easy_07.png"
+      }
+    },
+    {
+      "id": "mod_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nmodule m13 (input clk, input sum, output din); endmodule\n```\nA module without ports is…",
+      "choices": [
+        "Legal (e.g. top-level wrappers / some test benches)",
+        "Always illegal",
+        "Required to be named top",
+        "Only allowed in SystemVerilog packages"
+      ],
+      "answer": 0,
+      "explain": "Portless modules are allowed.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_easy_08.mp4",
+        "poster": "media/images/mod_easy_08-frame.png",
+        "figure": "media/images/mod_easy_08.png"
+      }
+    },
+    {
+      "id": "mod_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ndff u14 (.clk(clk), .d(din), .q(qout));\n```\nThe instance name in `alu u_alu (...)` is…",
+      "choices": [
+        "u_alu",
+        "alu",
+        "the first port",
+        "a parameter"
+      ],
+      "answer": 0,
+      "explain": "Left of the port list is the instance identifier.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_easy_09.mp4",
+        "poster": "media/images/mod_easy_09-frame.png",
+        "figure": "media/images/mod_easy_09.png"
+      }
+    },
+    {
+      "id": "mod_easy_10",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\n// instance u15: ports wired with .qout(qout)\n```\nBrowser labs replace writing real Verilog you will commit.",
+      "answer": false,
+      "explain": "Labs build intuition; Track A sketches still matter.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_easy_10.mp4",
+        "poster": "media/images/mod_easy_10-frame.png",
+        "figure": "media/images/mod_easy_10.png"
+      }
+    },
+    {
+      "id": "mod_easy_11",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [11:0] a; assign b = a;\n```\n// Review context: `y[5:0]` slot 11 variant 1\nA Verilog module is best described as…",
+      "choices": [
+        "A named design unit with ports (and optional internal logic)",
+        "Only a testbench $finish call",
+        "A simulator waveform viewer",
+        "Something that cannot be instantiated"
+      ],
+      "answer": 0,
+      "explain": "Modules are reusable design units with ports.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_easy_11.mp4",
+        "poster": "media/images/mod_easy_11-frame.png",
+        "figure": "media/images/mod_easy_11.png"
+      }
+    },
+    {
+      "id": "mod_easy_12",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nmodule m17 (input clk, input b, output y); endmodule\n```\n// Review context: `q[6:0]` slot 12 variant 1\nAn input port on a module…",
+      "choices": [
+        "Is driven from outside into the module",
+        "Must always drive the parent",
+        "Is the same as a parameter",
+        "Cannot appear on a gate like and2"
+      ],
+      "answer": 0,
+      "explain": "Inputs receive values from the parent hierarchy.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_easy_12.mp4",
+        "poster": "media/images/mod_easy_12-frame.png",
+        "figure": "media/images/mod_easy_12.png"
+      }
+    },
+    {
+      "id": "mod_easy_13",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ndff u18 (.clk(clk), .d(y), .q(q));\n```\n// Review context: `d[7:0]` slot 13 variant 1\nNamed port connection `.y(y)` means…",
+      "choices": [
+        "Connect formal port y to actual net y",
+        "Delete port y from the module",
+        "Declare a new module named y",
+        "Set a parameter named y only"
+      ],
+      "answer": 0,
+      "explain": "Dot-name wiring maps formal to actual.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_easy_13.mp4",
+        "poster": "media/images/mod_easy_13-frame.png",
+        "figure": "media/images/mod_easy_13.png"
+      }
+    },
+    {
+      "id": "mod_easy_14",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\n// instance u19: ports wired with .q(q)\n```\n// Review context: `clk[11:0]` slot 14 variant 1\nEvery Verilog design must have exactly one module.",
+      "answer": false,
+      "explain": "Designs commonly have many modules and hierarchy.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_easy_14.mp4",
+        "poster": "media/images/mod_easy_14-frame.png",
+        "figure": "media/images/mod_easy_14.png"
+      }
+    },
+    {
+      "id": "mod_easy_15",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [3:0] d; assign clk = d;\n```\nInstantiating `mux2 u0 (...)` creates…",
+      "choices": [
+        "One instance of that module",
+        "A parameter override only",
+        "A continuous assign",
+        "A generate loop"
+      ],
+      "answer": 0,
+      "explain": "The instance name u0 is one copy of the module.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_easy_15.mp4",
+        "poster": "media/images/mod_easy_15-frame.png",
+        "figure": "media/images/mod_easy_15.png"
+      }
+    },
+    {
+      "id": "mod_easy_16",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nmodule m21 (input clk, input clk, output en); endmodule\n```\n// Review context: `rst_n[31:0]` slot 16 variant 1\nPorts appear in the module…",
+      "choices": [
+        "Header (and optionally body for older style)",
+        "Only inside always blocks",
+        "Only in $display calls",
+        "Never — modules have no I/O"
+      ],
+      "answer": 0,
+      "explain": "Ports are declared at the module boundary.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_easy_16.mp4",
+        "poster": "media/images/mod_easy_16-frame.png",
+        "figure": "media/images/mod_easy_16.png"
+      }
+    },
+    {
+      "id": "mod_easy_17",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\ndff u22 (.clk(clk), .d(en), .q(rst_n));\n```\n// Review context: `data[2:0]` slot 17 variant 1\nOutput ports can drive nets in the parent module.",
+      "answer": true,
+      "explain": "That is how hierarchy connects upward.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_easy_17.mp4",
+        "poster": "media/images/mod_easy_17-frame.png",
+        "figure": "media/images/mod_easy_17.png"
+      }
+    },
+    {
+      "id": "mod_easy_18",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// instance u23: ports wired with .rst_n(rst_n)\n```\n// Review context: `count[3:0]` slot 18 variant 1\nA module without ports is…",
+      "choices": [
+        "Legal (e.g. top-level wrappers / some test benches)",
+        "Always illegal",
+        "Required to be named top",
+        "Only allowed in SystemVerilog packages"
+      ],
+      "answer": 0,
+      "explain": "Portless modules are allowed.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_easy_18.mp4",
+        "poster": "media/images/mod_easy_18-frame.png",
+        "figure": "media/images/mod_easy_18.png"
+      }
+    },
+    {
+      "id": "mod_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [7:0] data; assign count = data;\n```\n// Review context: `a[4:0]` slot 19 variant 1\nThe instance name in `alu u_alu (...)` is…",
+      "choices": [
+        "u_alu",
+        "alu",
+        "the first port",
+        "a parameter"
+      ],
+      "answer": 0,
+      "explain": "Left of the port list is the instance identifier.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_easy_19.mp4",
+        "poster": "media/images/mod_easy_19-frame.png",
+        "figure": "media/images/mod_easy_19.png"
+      }
+    },
+    {
+      "id": "mod_easy_20",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nmodule m25 (input clk, input count, output sel); endmodule\n```\n// Review context: `b[5:0]` slot 20 variant 1\nBrowser labs replace writing real Verilog you will commit.",
+      "answer": false,
+      "explain": "Labs build intuition; Track A sketches still matter.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_easy_20.mp4",
+        "poster": "media/images/mod_easy_20-frame.png",
+        "figure": "media/images/mod_easy_20.png"
+      }
+    },
+    {
+      "id": "mod_easy_21",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ndff u26 (.clk(clk), .d(sel), .q(out));\n```\n// Review context: `y[6:0]` slot 21 variant 1\nA Verilog module is best described as…",
+      "choices": [
+        "A named design unit with ports (and optional internal logic)",
+        "Only a testbench $finish call",
+        "A simulator waveform viewer",
+        "Something that cannot be instantiated"
+      ],
+      "answer": 0,
+      "explain": "Modules are reusable design units with ports.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_easy_21.mp4",
+        "poster": "media/images/mod_easy_21-frame.png",
+        "figure": "media/images/mod_easy_21.png"
+      }
+    },
+    {
+      "id": "mod_easy_22",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// instance u27: ports wired with .out(out)\n```\n// Review context: `q[7:0]` slot 22 variant 1\nAn input port on a module…",
+      "choices": [
+        "Is driven from outside into the module",
+        "Must always drive the parent",
+        "Is the same as a parameter",
+        "Cannot appear on a gate like and2"
+      ],
+      "answer": 0,
+      "explain": "Inputs receive values from the parent hierarchy.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_easy_22.mp4",
+        "poster": "media/images/mod_easy_22-frame.png",
+        "figure": "media/images/mod_easy_22.png"
+      }
+    },
+    {
+      "id": "mod_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [2:0] sum; assign din = sum;\n```\n// Review context: `d[11:0]` slot 23 variant 1\nNamed port connection `.y(y)` means…",
+      "choices": [
+        "Connect formal port y to actual net y",
+        "Delete port y from the module",
+        "Declare a new module named y",
+        "Set a parameter named y only"
+      ],
+      "answer": 0,
+      "explain": "Dot-name wiring maps formal to actual.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_easy_23.mp4",
+        "poster": "media/images/mod_easy_23-frame.png",
+        "figure": "media/images/mod_easy_23.png"
+      }
+    },
+    {
+      "id": "mod_easy_24",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nmodule m29 (input clk, input din, output qout); endmodule\n```\n// Review context: `clk[15:0]` slot 24 variant 1\nEvery Verilog design must have exactly one module.",
+      "answer": false,
+      "explain": "Designs commonly have many modules and hierarchy.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_easy_24.mp4",
+        "poster": "media/images/mod_easy_24-frame.png",
+        "figure": "media/images/mod_easy_24.png"
+      }
+    },
+    {
+      "id": "mod_easy_25",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ndff u30 (.clk(clk), .d(qout), .q(a));\n```\n// Review context: `en[31:0]` slot 25 variant 1\nInstantiating `and2 u0 (...)` creates…",
+      "choices": [
+        "One instance of that module",
+        "A parameter override only",
+        "A continuous assign",
+        "A generate loop"
+      ],
+      "answer": 0,
+      "explain": "The instance name u0 is one copy of the module.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_easy_25.mp4",
+        "poster": "media/images/mod_easy_25-frame.png",
+        "figure": "media/images/mod_easy_25.png"
+      }
+    },
+    {
+      "id": "mod_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// instance u31: ports wired with .a(a)\n```\n// Review context: `rst_n[2:0]` slot 26 variant 1\nPorts appear in the module…",
+      "choices": [
+        "Header (and optionally body for older style)",
+        "Only inside always blocks",
+        "Only in $display calls",
+        "Never — modules have no I/O"
+      ],
+      "answer": 0,
+      "explain": "Ports are declared at the module boundary.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_easy_26.mp4",
+        "poster": "media/images/mod_easy_26-frame.png",
+        "figure": "media/images/mod_easy_26.png"
+      }
+    },
+    {
+      "id": "mod_easy_27",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [6:0] b; assign y = b;\n```\n// Review context: `data[3:0]` slot 27 variant 1\nOutput ports can drive nets in the parent module.",
+      "answer": true,
+      "explain": "That is how hierarchy connects upward.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_easy_27.mp4",
+        "poster": "media/images/mod_easy_27-frame.png",
+        "figure": "media/images/mod_easy_27.png"
+      }
+    },
+    {
+      "id": "mod_easy_28",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nmodule m33 (input clk, input y, output q); endmodule\n```\n// Review context: `count[4:0]` slot 28 variant 1\nA module without ports is…",
+      "choices": [
+        "Legal (e.g. top-level wrappers / some test benches)",
+        "Always illegal",
+        "Required to be named top",
+        "Only allowed in SystemVerilog packages"
+      ],
+      "answer": 0,
+      "explain": "Portless modules are allowed.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_easy_28.mp4",
+        "poster": "media/images/mod_easy_28-frame.png",
+        "figure": "media/images/mod_easy_28.png"
+      }
+    },
+    {
+      "id": "mod_easy_29",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ndff u34 (.clk(clk), .d(q), .q(d));\n```\n// Review context: `a[5:0]` slot 29 variant 1\nThe instance name in `alu u_alu (...)` is…",
+      "choices": [
+        "u_alu",
+        "alu",
+        "the first port",
+        "a parameter"
+      ],
+      "answer": 0,
+      "explain": "Left of the port list is the instance identifier.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_easy_29.mp4",
+        "poster": "media/images/mod_easy_29-frame.png",
+        "figure": "media/images/mod_easy_29.png"
+      }
+    },
+    {
+      "id": "mod_easy_30",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\n// instance u35: ports wired with .d(d)\n```\n// Review context: `b[6:0]` slot 30 variant 1\nBrowser labs replace writing real Verilog you will commit.",
+      "answer": false,
+      "explain": "Labs build intuition; Track A sketches still matter.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_easy_30.mp4",
+        "poster": "media/images/mod_easy_30-frame.png",
+        "figure": "media/images/mod_easy_30.png"
+      }
+    },
+    {
+      "id": "mod_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// instance u3: ports wired with .y(y)\n```\n`.clk(clock)` connects…",
+      "choices": [
+        "Formal port clk to actual net clock",
+        "Parameter clk to 1",
+        "Two modules named clk and clock",
+        "Only a wire declaration"
+      ],
+      "answer": 0,
+      "explain": "Named association maps formal→actual.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_medium_01.mp4",
+        "poster": "media/images/mod_medium_01-frame.png",
+        "figure": "media/images/mod_medium_01.png"
+      }
+    },
+    {
+      "id": "mod_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [5:0] q; assign d = q;\n```\nLeaving an input unconnected usually risks…",
+      "choices": [
+        "X / floating behavior in simulation",
+        "Automatic pull-up to 1",
+        "A compile that always fails",
+        "No effect ever"
+      ],
+      "answer": 0,
+      "explain": "Undriven inputs often go X.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_medium_02.mp4",
+        "poster": "media/images/mod_medium_02-frame.png",
+        "figure": "media/images/mod_medium_02.png"
+      }
+    },
+    {
+      "id": "mod_medium_03",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nmodule m5 (input clk, input d, output clk); endmodule\n```\nAn inout port is typically used for…",
+      "choices": [
+        "Bidirectional / tri-state style connections",
+        "Parameters only",
+        "Clock definitions only",
+        "Replacing always_ff"
+      ],
+      "answer": 0,
+      "explain": "inout supports shared bidirectional nets.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_medium_03.mp4",
+        "poster": "media/images/mod_medium_03-frame.png",
+        "figure": "media/images/mod_medium_03.png"
+      }
+    },
+    {
+      "id": "mod_medium_04",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\ndff u6 (.clk(clk), .d(clk), .q(en));\n```\nPositional port order must match the module's port declaration order.",
+      "answer": true,
+      "explain": "Positional mapping is order-based.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_medium_04.mp4",
+        "poster": "media/images/mod_medium_04-frame.png",
+        "figure": "media/images/mod_medium_04.png"
+      }
+    },
+    {
+      "id": "mod_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// instance u7: ports wired with .en(en)\n```\nHierarchical reference `u0.q` means…",
+      "choices": [
+        "Net/port q inside instance u0",
+        "A new module named u0.q",
+        "A localparam only",
+        "Illegal always"
+      ],
+      "answer": 0,
+      "explain": "Dot hierarchy reaches into instances.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_medium_05.mp4",
+        "poster": "media/images/mod_medium_05-frame.png",
+        "figure": "media/images/mod_medium_05.png"
+      }
+    },
+    {
+      "id": "mod_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [15:0] rst_n; assign data = rst_n;\n```\nEmpty port connection `.rst()` typically…",
+      "choices": [
+        "Leaves that port unconnected",
+        "Ties rst to 0",
+        "Deletes the port from RTL",
+        "Forces a parameter"
+      ],
+      "answer": 0,
+      "explain": "Blank named connection is an intentional open.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_medium_06.mp4",
+        "poster": "media/images/mod_medium_06-frame.png",
+        "figure": "media/images/mod_medium_06.png"
+      }
+    },
+    {
+      "id": "mod_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nmodule m9 (input clk, input data, output count); endmodule\n```\nA structural module primarily…",
+      "choices": [
+        "Instantiates other modules / gates and wires them",
+        "Uses only $finish",
+        "Cannot have ports",
+        "Must use only blocking assigns"
+      ],
+      "answer": 0,
+      "explain": "Structural RTL is instance connectivity.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_medium_07.mp4",
+        "poster": "media/images/mod_medium_07-frame.png",
+        "figure": "media/images/mod_medium_07.png"
+      }
+    },
+    {
+      "id": "mod_medium_08",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\ndff u10 (.clk(clk), .d(count), .q(sel));\n```\nModule names and instance names share one namespace and cannot differ.",
+      "answer": false,
+      "explain": "Module type and instance id are separate names.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_medium_08.mp4",
+        "poster": "media/images/mod_medium_08-frame.png",
+        "figure": "media/images/mod_medium_08.png"
+      }
+    },
+    {
+      "id": "mod_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// instance u11: ports wired with .sel(sel)\n```\nPort width mismatch on a 8-bit bus often…",
+      "choices": [
+        "Truncates/extends with tool warnings",
+        "Is always a hard syntax error",
+        "Changes the module name",
+        "Disables simulation clocks"
+      ],
+      "answer": 0,
+      "explain": "Width mismatches are usually semantic warnings.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_medium_09.mp4",
+        "poster": "media/images/mod_medium_09-frame.png",
+        "figure": "media/images/mod_medium_09.png"
+      }
+    },
+    {
+      "id": "mod_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [4:0] out; assign sum = out;\n```\nTop-of-design modules are often identified by…",
+      "choices": [
+        "Being the root instance that is not instantiated elsewhere",
+        "Using only wires",
+        "Having no always blocks",
+        "Filename alone always"
+      ],
+      "answer": 0,
+      "explain": "Top is hierarchical root, not a keyword requirement.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_medium_10.mp4",
+        "poster": "media/images/mod_medium_10-frame.png",
+        "figure": "media/images/mod_medium_10.png"
+      }
+    },
+    {
+      "id": "mod_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nmodule m13 (input clk, input sum, output din); endmodule\n```\n// Review context: `y[5:0]` slot 11 variant 1\n`.clk(clock)` connects…",
+      "choices": [
+        "Formal port clk to actual net clock",
+        "Parameter clk to 1",
+        "Two modules named clk and clock",
+        "Only a wire declaration"
+      ],
+      "answer": 0,
+      "explain": "Named association maps formal→actual.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_medium_11.mp4",
+        "poster": "media/images/mod_medium_11-frame.png",
+        "figure": "media/images/mod_medium_11.png"
+      }
+    },
+    {
+      "id": "mod_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ndff u14 (.clk(clk), .d(din), .q(qout));\n```\n// Review context: `q[6:0]` slot 12 variant 1\nLeaving an input unconnected usually risks…",
+      "choices": [
+        "X / floating behavior in simulation",
+        "Automatic pull-up to 1",
+        "A compile that always fails",
+        "No effect ever"
+      ],
+      "answer": 0,
+      "explain": "Undriven inputs often go X.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_medium_12.mp4",
+        "poster": "media/images/mod_medium_12-frame.png",
+        "figure": "media/images/mod_medium_12.png"
+      }
+    },
+    {
+      "id": "mod_medium_13",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// instance u15: ports wired with .qout(qout)\n```\n// Review context: `d[7:0]` slot 13 variant 1\nAn inout port is typically used for…",
+      "choices": [
+        "Bidirectional / tri-state style connections",
+        "Parameters only",
+        "Clock definitions only",
+        "Replacing always_ff"
+      ],
+      "answer": 0,
+      "explain": "inout supports shared bidirectional nets.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_medium_13.mp4",
+        "poster": "media/images/mod_medium_13-frame.png",
+        "figure": "media/images/mod_medium_13.png"
+      }
+    },
+    {
+      "id": "mod_medium_14",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [11:0] a; assign b = a;\n```\n// Review context: `clk[11:0]` slot 14 variant 1\nPositional port order must match the module's port declaration order.",
+      "answer": true,
+      "explain": "Positional mapping is order-based.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_medium_14.mp4",
+        "poster": "media/images/mod_medium_14-frame.png",
+        "figure": "media/images/mod_medium_14.png"
+      }
+    },
+    {
+      "id": "mod_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nmodule m17 (input clk, input b, output y); endmodule\n```\n// Review context: `en[15:0]` slot 15 variant 1\nHierarchical reference `u0.q` means…",
+      "choices": [
+        "Net/port q inside instance u0",
+        "A new module named u0.q",
+        "A localparam only",
+        "Illegal always"
+      ],
+      "answer": 0,
+      "explain": "Dot hierarchy reaches into instances.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_medium_15.mp4",
+        "poster": "media/images/mod_medium_15-frame.png",
+        "figure": "media/images/mod_medium_15.png"
+      }
+    },
+    {
+      "id": "mod_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ndff u18 (.clk(clk), .d(y), .q(q));\n```\n// Review context: `rst_n[31:0]` slot 16 variant 1\nEmpty port connection `.rst()` typically…",
+      "choices": [
+        "Leaves that port unconnected",
+        "Ties rst to 0",
+        "Deletes the port from RTL",
+        "Forces a parameter"
+      ],
+      "answer": 0,
+      "explain": "Blank named connection is an intentional open.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_medium_16.mp4",
+        "poster": "media/images/mod_medium_16-frame.png",
+        "figure": "media/images/mod_medium_16.png"
+      }
+    },
+    {
+      "id": "mod_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// instance u19: ports wired with .q(q)\n```\n// Review context: `data[2:0]` slot 17 variant 1\nA structural module primarily…",
+      "choices": [
+        "Instantiates other modules / gates and wires them",
+        "Uses only $finish",
+        "Cannot have ports",
+        "Must use only blocking assigns"
+      ],
+      "answer": 0,
+      "explain": "Structural RTL is instance connectivity.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_medium_17.mp4",
+        "poster": "media/images/mod_medium_17-frame.png",
+        "figure": "media/images/mod_medium_17.png"
+      }
+    },
+    {
+      "id": "mod_medium_18",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [3:0] d; assign clk = d;\n```\n// Review context: `count[3:0]` slot 18 variant 1\nModule names and instance names share one namespace and cannot differ.",
+      "answer": false,
+      "explain": "Module type and instance id are separate names.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_medium_18.mp4",
+        "poster": "media/images/mod_medium_18-frame.png",
+        "figure": "media/images/mod_medium_18.png"
+      }
+    },
+    {
+      "id": "mod_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nmodule m21 (input clk, input clk, output en); endmodule\n```\nPort width mismatch on a 10-bit bus often…",
+      "choices": [
+        "Truncates/extends with tool warnings",
+        "Is always a hard syntax error",
+        "Changes the module name",
+        "Disables simulation clocks"
+      ],
+      "answer": 0,
+      "explain": "Width mismatches are usually semantic warnings.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_medium_19.mp4",
+        "poster": "media/images/mod_medium_19-frame.png",
+        "figure": "media/images/mod_medium_19.png"
+      }
+    },
+    {
+      "id": "mod_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ndff u22 (.clk(clk), .d(en), .q(rst_n));\n```\n// Review context: `b[5:0]` slot 20 variant 1\nTop-of-design modules are often identified by…",
+      "choices": [
+        "Being the root instance that is not instantiated elsewhere",
+        "Using only wires",
+        "Having no always blocks",
+        "Filename alone always"
+      ],
+      "answer": 0,
+      "explain": "Top is hierarchical root, not a keyword requirement.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_medium_20.mp4",
+        "poster": "media/images/mod_medium_20-frame.png",
+        "figure": "media/images/mod_medium_20.png"
+      }
+    },
+    {
+      "id": "mod_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// instance u23: ports wired with .rst_n(rst_n)\n```\n// Review context: `y[6:0]` slot 21 variant 1\n`.clk(clock)` connects…",
+      "choices": [
+        "Formal port clk to actual net clock",
+        "Parameter clk to 1",
+        "Two modules named clk and clock",
+        "Only a wire declaration"
+      ],
+      "answer": 0,
+      "explain": "Named association maps formal→actual.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_medium_21.mp4",
+        "poster": "media/images/mod_medium_21-frame.png",
+        "figure": "media/images/mod_medium_21.png"
+      }
+    },
+    {
+      "id": "mod_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [7:0] data; assign count = data;\n```\n// Review context: `q[7:0]` slot 22 variant 1\nLeaving an input unconnected usually risks…",
+      "choices": [
+        "X / floating behavior in simulation",
+        "Automatic pull-up to 1",
+        "A compile that always fails",
+        "No effect ever"
+      ],
+      "answer": 0,
+      "explain": "Undriven inputs often go X.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_medium_22.mp4",
+        "poster": "media/images/mod_medium_22-frame.png",
+        "figure": "media/images/mod_medium_22.png"
+      }
+    },
+    {
+      "id": "mod_medium_23",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nmodule m25 (input clk, input count, output sel); endmodule\n```\n// Review context: `d[11:0]` slot 23 variant 1\nAn inout port is typically used for…",
+      "choices": [
+        "Bidirectional / tri-state style connections",
+        "Parameters only",
+        "Clock definitions only",
+        "Replacing always_ff"
+      ],
+      "answer": 0,
+      "explain": "inout supports shared bidirectional nets.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_medium_23.mp4",
+        "poster": "media/images/mod_medium_23-frame.png",
+        "figure": "media/images/mod_medium_23.png"
+      }
+    },
+    {
+      "id": "mod_medium_24",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\ndff u26 (.clk(clk), .d(sel), .q(out));\n```\n// Review context: `clk[15:0]` slot 24 variant 1\nPositional port order must match the module's port declaration order.",
+      "answer": true,
+      "explain": "Positional mapping is order-based.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_medium_24.mp4",
+        "poster": "media/images/mod_medium_24-frame.png",
+        "figure": "media/images/mod_medium_24.png"
+      }
+    },
+    {
+      "id": "mod_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// instance u27: ports wired with .out(out)\n```\n// Review context: `en[31:0]` slot 25 variant 1\nHierarchical reference `u0.q` means…",
+      "choices": [
+        "Net/port q inside instance u0",
+        "A new module named u0.q",
+        "A localparam only",
+        "Illegal always"
+      ],
+      "answer": 0,
+      "explain": "Dot hierarchy reaches into instances.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_medium_25.mp4",
+        "poster": "media/images/mod_medium_25-frame.png",
+        "figure": "media/images/mod_medium_25.png"
+      }
+    },
+    {
+      "id": "mod_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [2:0] sum; assign din = sum;\n```\n// Review context: `rst_n[2:0]` slot 26 variant 1\nEmpty port connection `.rst()` typically…",
+      "choices": [
+        "Leaves that port unconnected",
+        "Ties rst to 0",
+        "Deletes the port from RTL",
+        "Forces a parameter"
+      ],
+      "answer": 0,
+      "explain": "Blank named connection is an intentional open.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_medium_26.mp4",
+        "poster": "media/images/mod_medium_26-frame.png",
+        "figure": "media/images/mod_medium_26.png"
+      }
+    },
+    {
+      "id": "mod_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nmodule m29 (input clk, input din, output qout); endmodule\n```\n// Review context: `data[3:0]` slot 27 variant 1\nA structural module primarily…",
+      "choices": [
+        "Instantiates other modules / gates and wires them",
+        "Uses only $finish",
+        "Cannot have ports",
+        "Must use only blocking assigns"
+      ],
+      "answer": 0,
+      "explain": "Structural RTL is instance connectivity.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_medium_27.mp4",
+        "poster": "media/images/mod_medium_27-frame.png",
+        "figure": "media/images/mod_medium_27.png"
+      }
+    },
+    {
+      "id": "mod_medium_28",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\ndff u30 (.clk(clk), .d(qout), .q(a));\n```\n// Review context: `count[4:0]` slot 28 variant 1\nModule names and instance names share one namespace and cannot differ.",
+      "answer": false,
+      "explain": "Module type and instance id are separate names.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_medium_28.mp4",
+        "poster": "media/images/mod_medium_28-frame.png",
+        "figure": "media/images/mod_medium_28.png"
+      }
+    },
+    {
+      "id": "mod_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// instance u31: ports wired with .a(a)\n```\n// Review context: `a[5:0]` slot 29 variant 1\nPort width mismatch on a 8-bit bus often…",
+      "choices": [
+        "Truncates/extends with tool warnings",
+        "Is always a hard syntax error",
+        "Changes the module name",
+        "Disables simulation clocks"
+      ],
+      "answer": 0,
+      "explain": "Width mismatches are usually semantic warnings.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_medium_29.mp4",
+        "poster": "media/images/mod_medium_29-frame.png",
+        "figure": "media/images/mod_medium_29.png"
+      }
+    },
+    {
+      "id": "mod_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [6:0] b; assign y = b;\n```\n// Review context: `b[6:0]` slot 30 variant 1\nTop-of-design modules are often identified by…",
+      "choices": [
+        "Being the root instance that is not instantiated elsewhere",
+        "Using only wires",
+        "Having no always blocks",
+        "Filename alone always"
+      ],
+      "answer": 0,
+      "explain": "Top is hierarchical root, not a keyword requirement.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_medium_30.mp4",
+        "poster": "media/images/mod_medium_30-frame.png",
+        "figure": "media/images/mod_medium_30.png"
+      }
+    },
+    {
+      "id": "mod_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nmodule m5 (input clk, input d, output clk); endmodule\n```\nMixing named and positional ports in one instance…",
+      "choices": [
+        "Is illegal / rejected by tools",
+        "Is preferred style",
+        "Only works for clocks",
+        "Silently ignores named ports"
+      ],
+      "answer": 0,
+      "explain": "Do not mix connection styles in one instance.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_hard_01.mp4",
+        "poster": "media/images/mod_hard_01-frame.png",
+        "figure": "media/images/mod_hard_01.png"
+      }
+    },
+    {
+      "id": "mod_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ndff u6 (.clk(clk), .d(clk), .q(en));\n```\nConnecting two output ports together without a resolver…",
+      "choices": [
+        "Creates multi-driver contention risk",
+        "Is the recommended reset style",
+        "Forces wired-AND in all tools",
+        "Is required for FSMs"
+      ],
+      "answer": 0,
+      "explain": "Two outputs fighting is a multi-driver bug.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_hard_02.mp4",
+        "poster": "media/images/mod_hard_02-frame.png",
+        "figure": "media/images/mod_hard_02.png"
+      }
+    },
+    {
+      "id": "mod_hard_03",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// instance u7: ports wired with .en(en)\n```\nUnconnected output ports…",
+      "choices": [
+        "Are usually fine (parent simply ignores them)",
+        "Always float the parent's inputs",
+        "Delete the driving logic",
+        "Force Z on all inputs"
+      ],
+      "answer": 0,
+      "explain": "Unused outputs may be left open.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_hard_03.mp4",
+        "poster": "media/images/mod_hard_03-frame.png",
+        "figure": "media/images/mod_hard_03.png"
+      }
+    },
+    {
+      "id": "mod_hard_04",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [15:0] rst_n; assign data = rst_n;\n```\nA module port list order change can silently break positional instantiations.",
+      "answer": true,
+      "explain": "Positional ties are brittle under refactors.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_hard_04.mp4",
+        "poster": "media/images/mod_hard_04-frame.png",
+        "figure": "media/images/mod_hard_04.png"
+      }
+    },
+    {
+      "id": "mod_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nmodule m9 (input clk, input data, output count); endmodule\n```\n`.y()` vs omitting `.y` entirely…",
+      "choices": [
+        "Both leave y unconnected; explicit empty is clearer intent",
+        "`.y()` drives y to 0",
+        "Omitting always errors",
+        "They select different parameters"
+      ],
+      "answer": 0,
+      "explain": "Both open the port; empty named docs intent.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_hard_05.mp4",
+        "poster": "media/images/mod_hard_05-frame.png",
+        "figure": "media/images/mod_hard_05.png"
+      }
+    },
+    {
+      "id": "mod_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ndff u10 (.clk(clk), .d(count), .q(sel));\n```\nDefparam / hierarchical parameter overrides are…",
+      "choices": [
+        "Legacy/discouraged versus `#(.P(v))` instance overrides",
+        "Required in IEEE 1364-2005",
+        "The only way to set WIDTH",
+        "Identical to localparam"
+      ],
+      "answer": 0,
+      "explain": "Prefer instance parameter overrides.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_hard_06.mp4",
+        "poster": "media/images/mod_hard_06-frame.png",
+        "figure": "media/images/mod_hard_06.png"
+      }
+    },
+    {
+      "id": "mod_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// instance u11: ports wired with .sel(sel)\n```\nCross-module `force` on a port in RTL…",
+      "choices": [
+        "Is testbench-oriented and not synthesizable design style",
+        "Is the standard reset method",
+        "Replaces always_ff",
+        "Is required for named ports"
+      ],
+      "answer": 0,
+      "explain": "force/release belong in TB, not synth RTL.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_hard_07.mp4",
+        "poster": "media/images/mod_hard_07-frame.png",
+        "figure": "media/images/mod_hard_07.png"
+      }
+    },
+    {
+      "id": "mod_hard_08",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [4:0] out; assign sum = out;\n```\nNested module declarations inside another module are classic Verilog style.",
+      "answer": false,
+      "explain": "Nested modules are not classic synthesizable Verilog practice.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_hard_08.mp4",
+        "poster": "media/images/mod_hard_08-frame.png",
+        "figure": "media/images/mod_hard_08.png"
+      }
+    },
+    {
+      "id": "mod_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nmodule m13 (input clk, input sum, output din); endmodule\n```\nArray of instances `mux m[3:0] (...)` creates…",
+      "choices": [
+        "Four mux instances",
+        "One mux with 4-bit ports only",
+        "A generate if",
+        "Illegal syntax always"
+      ],
+      "answer": 0,
+      "explain": "Instance arrays replicate instances.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_hard_09.mp4",
+        "poster": "media/images/mod_hard_09-frame.png",
+        "figure": "media/images/mod_hard_09.png"
+      }
+    },
+    {
+      "id": "mod_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ndff u14 (.clk(clk), .d(din), .q(qout));\n```\nPort coercion of a scalar to a bus bit…",
+      "choices": [
+        "May be legal but is easy to get wrong — prefer explicit bits",
+        "Always errors",
+        "Changes module ANSI style",
+        "Disables timing checks"
+      ],
+      "answer": 0,
+      "explain": "Be explicit with bit selects.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_hard_10.mp4",
+        "poster": "media/images/mod_hard_10-frame.png",
+        "figure": "media/images/mod_hard_10.png"
+      }
+    },
+    {
+      "id": "mod_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// instance u15: ports wired with .qout(qout)\n```\n// Review context: `y[5:0]` slot 11 variant 1\nMixing named and positional ports in one instance…",
+      "choices": [
+        "Is illegal / rejected by tools",
+        "Is preferred style",
+        "Only works for clocks",
+        "Silently ignores named ports"
+      ],
+      "answer": 0,
+      "explain": "Do not mix connection styles in one instance.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_hard_11.mp4",
+        "poster": "media/images/mod_hard_11-frame.png",
+        "figure": "media/images/mod_hard_11.png"
+      }
+    },
+    {
+      "id": "mod_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [11:0] a; assign b = a;\n```\n// Review context: `q[6:0]` slot 12 variant 1\nConnecting two output ports together without a resolver does what?",
+      "choices": [
+        "Creates multi-driver contention risk",
+        "Is the recommended reset style",
+        "Forces wired-AND in all tools",
+        "Is required for FSMs"
+      ],
+      "answer": 0,
+      "explain": "Two outputs fighting is a multi-driver bug.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_hard_12.mp4",
+        "poster": "media/images/mod_hard_12-frame.png",
+        "figure": "media/images/mod_hard_12.png"
+      }
+    },
+    {
+      "id": "mod_hard_13",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nmodule m17 (input clk, input b, output y); endmodule\n```\n// Review context: `d[7:0]` slot 13 variant 1\nUnconnected output ports…",
+      "choices": [
+        "Are usually fine (parent simply ignores them)",
+        "Always float the parent's inputs",
+        "Delete the driving logic",
+        "Force Z on all inputs"
+      ],
+      "answer": 0,
+      "explain": "Unused outputs may be left open.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_hard_13.mp4",
+        "poster": "media/images/mod_hard_13-frame.png",
+        "figure": "media/images/mod_hard_13.png"
+      }
+    },
+    {
+      "id": "mod_hard_14",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\ndff u18 (.clk(clk), .d(y), .q(q));\n```\n// Review context: `clk[11:0]` slot 14 variant 1\nA module port list order change can silently break positional instantiations.",
+      "answer": true,
+      "explain": "Positional ties are brittle under refactors.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_hard_14.mp4",
+        "poster": "media/images/mod_hard_14-frame.png",
+        "figure": "media/images/mod_hard_14.png"
+      }
+    },
+    {
+      "id": "mod_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// instance u19: ports wired with .q(q)\n```\n// Review context: `en[15:0]` slot 15 variant 1\n`.y()` vs omitting `.y` entirely…",
+      "choices": [
+        "Both leave y unconnected; explicit empty is clearer intent",
+        "`.y()` drives y to 0",
+        "Omitting always errors",
+        "They select different parameters"
+      ],
+      "answer": 0,
+      "explain": "Both open the port; empty named docs intent.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_hard_15.mp4",
+        "poster": "media/images/mod_hard_15-frame.png",
+        "figure": "media/images/mod_hard_15.png"
+      }
+    },
+    {
+      "id": "mod_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [3:0] d; assign clk = d;\n```\n// Review context: `rst_n[31:0]` slot 16 variant 1\nDefparam / hierarchical parameter overrides are…",
+      "choices": [
+        "Legacy/discouraged versus `#(.P(v))` instance overrides",
+        "Required in IEEE 1364-2005",
+        "The only way to set WIDTH",
+        "Identical to localparam"
+      ],
+      "answer": 0,
+      "explain": "Prefer instance parameter overrides.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_hard_16.mp4",
+        "poster": "media/images/mod_hard_16-frame.png",
+        "figure": "media/images/mod_hard_16.png"
+      }
+    },
+    {
+      "id": "mod_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nmodule m21 (input clk, input clk, output en); endmodule\n```\n// Review context: `data[2:0]` slot 17 variant 1\nCross-module `force` on a port in RTL…",
+      "choices": [
+        "Is testbench-oriented and not synthesizable design style",
+        "Is the standard reset method",
+        "Replaces always_ff",
+        "Is required for named ports"
+      ],
+      "answer": 0,
+      "explain": "force/release belong in TB, not synth RTL.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_hard_17.mp4",
+        "poster": "media/images/mod_hard_17-frame.png",
+        "figure": "media/images/mod_hard_17.png"
+      }
+    },
+    {
+      "id": "mod_hard_18",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\ndff u22 (.clk(clk), .d(en), .q(rst_n));\n```\n// Review context: `count[3:0]` slot 18 variant 1\nNested module declarations inside another module are classic Verilog style.",
+      "answer": false,
+      "explain": "Nested modules are not classic synthesizable Verilog practice.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_hard_18.mp4",
+        "poster": "media/images/mod_hard_18-frame.png",
+        "figure": "media/images/mod_hard_18.png"
+      }
+    },
+    {
+      "id": "mod_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// instance u23: ports wired with .rst_n(rst_n)\n```\n// Review context: `a[4:0]` slot 19 variant 1\nArray of instances `mux m[3:0] (...)` creates…",
+      "choices": [
+        "Four mux instances",
+        "One mux with 4-bit ports only",
+        "A generate if",
+        "Illegal syntax always"
+      ],
+      "answer": 0,
+      "explain": "Instance arrays replicate instances.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_hard_19.mp4",
+        "poster": "media/images/mod_hard_19-frame.png",
+        "figure": "media/images/mod_hard_19.png"
+      }
+    },
+    {
+      "id": "mod_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [7:0] data; assign count = data;\n```\n// Review context: `b[5:0]` slot 20 variant 1\nPort coercion of a scalar to a bus bit…",
+      "choices": [
+        "May be legal but is easy to get wrong — prefer explicit bits",
+        "Always errors",
+        "Changes module ANSI style",
+        "Disables timing checks"
+      ],
+      "answer": 0,
+      "explain": "Be explicit with bit selects.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_hard_20.mp4",
+        "poster": "media/images/mod_hard_20-frame.png",
+        "figure": "media/images/mod_hard_20.png"
+      }
+    },
+    {
+      "id": "mod_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nmodule m25 (input clk, input count, output sel); endmodule\n```\n// Review context: `y[6:0]` slot 21 variant 1\nMixing named and positional ports in one instance…",
+      "choices": [
+        "Is illegal / rejected by tools",
+        "Is preferred style",
+        "Only works for clocks",
+        "Silently ignores named ports"
+      ],
+      "answer": 0,
+      "explain": "Do not mix connection styles in one instance.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_hard_21.mp4",
+        "poster": "media/images/mod_hard_21-frame.png",
+        "figure": "media/images/mod_hard_21.png"
+      }
+    },
+    {
+      "id": "mod_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ndff u26 (.clk(clk), .d(sel), .q(out));\n```\n// Review context: `q[7:0]` slot 22 variant 1\nConnecting two output ports together without a resolver…",
+      "choices": [
+        "Creates multi-driver contention risk",
+        "Is the recommended reset style",
+        "Forces wired-AND in all tools",
+        "Is required for FSMs"
+      ],
+      "answer": 0,
+      "explain": "Two outputs fighting is a multi-driver bug.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_hard_22.mp4",
+        "poster": "media/images/mod_hard_22-frame.png",
+        "figure": "media/images/mod_hard_22.png"
+      }
+    },
+    {
+      "id": "mod_hard_23",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// instance u27: ports wired with .out(out)\n```\n// Review context: `d[11:0]` slot 23 variant 1\nUnconnected output ports…",
+      "choices": [
+        "Are usually fine (parent simply ignores them)",
+        "Always float the parent's inputs",
+        "Delete the driving logic",
+        "Force Z on all inputs"
+      ],
+      "answer": 0,
+      "explain": "Unused outputs may be left open.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_hard_23.mp4",
+        "poster": "media/images/mod_hard_23-frame.png",
+        "figure": "media/images/mod_hard_23.png"
+      }
+    },
+    {
+      "id": "mod_hard_24",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [2:0] sum; assign din = sum;\n```\n// Review context: `clk[15:0]` slot 24 variant 1\nA module port list order change can silently break positional instantiations.",
+      "answer": true,
+      "explain": "Positional ties are brittle under refactors.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_hard_24.mp4",
+        "poster": "media/images/mod_hard_24-frame.png",
+        "figure": "media/images/mod_hard_24.png"
+      }
+    },
+    {
+      "id": "mod_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nmodule m29 (input clk, input din, output qout); endmodule\n```\n// Review context: `en[31:0]` slot 25 variant 1\n`.y()` vs omitting `.y` entirely…",
+      "choices": [
+        "Both leave y unconnected; explicit empty is clearer intent",
+        "`.y()` drives y to 0",
+        "Omitting always errors",
+        "They select different parameters"
+      ],
+      "answer": 0,
+      "explain": "Both open the port; empty named docs intent.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_hard_25.mp4",
+        "poster": "media/images/mod_hard_25-frame.png",
+        "figure": "media/images/mod_hard_25.png"
+      }
+    },
+    {
+      "id": "mod_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ndff u30 (.clk(clk), .d(qout), .q(a));\n```\n// Review context: `rst_n[2:0]` slot 26 variant 1\nDefparam / hierarchical parameter overrides are…",
+      "choices": [
+        "Legacy/discouraged versus `#(.P(v))` instance overrides",
+        "Required in IEEE 1364-2005",
+        "The only way to set WIDTH",
+        "Identical to localparam"
+      ],
+      "answer": 0,
+      "explain": "Prefer instance parameter overrides.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_hard_26.mp4",
+        "poster": "media/images/mod_hard_26-frame.png",
+        "figure": "media/images/mod_hard_26.png"
+      }
+    },
+    {
+      "id": "mod_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// instance u31: ports wired with .a(a)\n```\n// Review context: `data[3:0]` slot 27 variant 1\nCross-module `force` on a port in RTL…",
+      "choices": [
+        "Is testbench-oriented and not synthesizable design style",
+        "Is the standard reset method",
+        "Replaces always_ff",
+        "Is required for named ports"
+      ],
+      "answer": 0,
+      "explain": "force/release belong in TB, not synth RTL.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_hard_27.mp4",
+        "poster": "media/images/mod_hard_27-frame.png",
+        "figure": "media/images/mod_hard_27.png"
+      }
+    },
+    {
+      "id": "mod_hard_28",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [6:0] b; assign y = b;\n```\n// Review context: `count[4:0]` slot 28 variant 1\nNested module declarations inside another module are classic Verilog style.",
+      "answer": false,
+      "explain": "Nested modules are not classic synthesizable Verilog practice.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_hard_28.mp4",
+        "poster": "media/images/mod_hard_28-frame.png",
+        "figure": "media/images/mod_hard_28.png"
+      }
+    },
+    {
+      "id": "mod_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nmodule m33 (input clk, input y, output q); endmodule\n```\n// Review context: `a[5:0]` slot 29 variant 1\nArray of instances `mux m[3:0] (...)` creates…",
+      "choices": [
+        "Four mux instances",
+        "One mux with 4-bit ports only",
+        "A generate if",
+        "Illegal syntax always"
+      ],
+      "answer": 0,
+      "explain": "Instance arrays replicate instances.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_hard_29.mp4",
+        "poster": "media/images/mod_hard_29-frame.png",
+        "figure": "media/images/mod_hard_29.png"
+      }
+    },
+    {
+      "id": "mod_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ndff u34 (.clk(clk), .d(q), .q(d));\n```\n// Review context: `b[6:0]` slot 30 variant 1\nPort coercion of a scalar to a bus bit…",
+      "choices": [
+        "May be legal but is easy to get wrong — prefer explicit bits",
+        "Always errors",
+        "Changes module ANSI style",
+        "Disables timing checks"
+      ],
+      "answer": 0,
+      "explain": "Be explicit with bit selects.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mod_hard_30.mp4",
+        "poster": "media/images/mod_hard_30-frame.png",
+        "figure": "media/images/mod_hard_30.png"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1680 @@
+{
+  "module": "module10-named-vs-positional",
+  "title": "Named vs positional",
+  "items": [
+    {
+      "id": "ports_easy_01",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg clk; always @(*) clk = en ? rst_n : clk;\n```\nPositional instance dff u(clk, din, qout) connects by…",
+      "choices": [
+        "Port declaration order in the module",
+        "Alphabetical names",
+        "Simulation time",
+        "Parameter list only"
+      ],
+      "answer": 0,
+      "explain": "Order maps ports.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_easy_01.mp4",
+        "poster": "media/images/ports_easy_01-frame.png",
+        "figure": "media/images/ports_easy_01.png"
+      }
+    },
+    {
+      "id": "ports_easy_02",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 12; localparam MAX = (1<<W)-1;\n```\nNamed connection .d(din) means…",
+      "choices": [
+        "Port d is wired to net din",
+        "Net din renamed to d",
+        "Only parameters set",
+        "Widths must match names"
+      ],
+      "answer": 0,
+      "explain": "Formal.d ← actual din.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_easy_02.mp4",
+        "poster": "media/images/ports_easy_02-frame.png",
+        "figure": "media/images/ports_easy_02.png"
+      }
+    },
+    {
+      "id": "ports_easy_03",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) rst_n <= data;\n```\ndff u(clk, qout, din) when ports are (clk, d, q)…",
+      "choices": [
+        "Often compiles but swaps d and q — silent miswire",
+        "Always syntax error",
+        "Same as named",
+        "Only for AND"
+      ],
+      "answer": 0,
+      "explain": "Positional footgun.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_easy_03.mp4",
+        "poster": "media/images/ports_easy_03-frame.png",
+        "figure": "media/images/ports_easy_03.png"
+      }
+    },
+    {
+      "id": "ports_easy_04",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [31:0] data; assign count = data ^ sel;\n```\nNamed port connections are preferred for multi-port modules.",
+      "answer": true,
+      "explain": "Safer maintenance.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_easy_04.mp4",
+        "poster": "media/images/ports_easy_04-frame.png",
+        "figure": "media/images/ports_easy_04.png"
+      }
+    },
+    {
+      "id": "ports_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg count; always @(*) count = sel ? out : count;\n```\n`.clk(clk), .d(d), .q(q)` style is…",
+      "choices": [
+        "Named associations",
+        "Positional only",
+        "Generate",
+        "defparam"
+      ],
+      "answer": 0,
+      "explain": "Named style.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_easy_05.mp4",
+        "poster": "media/images/ports_easy_05-frame.png",
+        "figure": "media/images/ports_easy_05.png"
+      }
+    },
+    {
+      "id": "ports_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 4; localparam MAX = (1<<W)-1;\n```\nEmpty `.q()` means…",
+      "choices": [
+        "Leave port q unconnected",
+        "Tie q to 0",
+        "Delete q",
+        "Set parameter q"
+      ],
+      "answer": 0,
+      "explain": "Explicit open.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_easy_06.mp4",
+        "poster": "media/images/ports_easy_06-frame.png",
+        "figure": "media/images/ports_easy_06.png"
+      }
+    },
+    {
+      "id": "ports_easy_07",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) out <= sum;\n```\nPositional connects can break when someone reorders ports.",
+      "answer": true,
+      "explain": "Brittle.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_easy_07.mp4",
+        "poster": "media/images/ports_easy_07-frame.png",
+        "figure": "media/images/ports_easy_07.png"
+      }
+    },
+    {
+      "id": "ports_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [5:0] sum; assign din = sum ^ qout;\n```\nMixing `.d(d), qout` styles…",
+      "choices": [
+        "Illegal mix in one instance",
+        "Preferred",
+        "Required ANSI",
+        "Only SV"
+      ],
+      "answer": 0,
+      "explain": "Don't mix.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_easy_08.mp4",
+        "poster": "media/images/ports_easy_08-frame.png",
+        "figure": "media/images/ports_easy_08.png"
+      }
+    },
+    {
+      "id": "ports_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg din; always @(*) din = qout ? a : din;\n```\nNamed connects ignore…",
+      "choices": [
+        "Declaration order (names matter)",
+        "Formal names",
+        "Actual nets",
+        "Module existence"
+      ],
+      "answer": 0,
+      "explain": "Order irrelevant for named.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_easy_09.mp4",
+        "poster": "media/images/ports_easy_09-frame.png",
+        "figure": "media/images/ports_easy_09.png"
+      }
+    },
+    {
+      "id": "ports_easy_10",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 8; localparam MAX = (1<<W)-1;\n```\nYou can still use positional for tiny primitive-like instances if careful.",
+      "answer": true,
+      "explain": "OK for small/stable port lists.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_easy_10.mp4",
+        "poster": "media/images/ports_easy_10-frame.png",
+        "figure": "media/images/ports_easy_10.png"
+      }
+    },
+    {
+      "id": "ports_easy_11",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) a <= b;\n```\n// Review context: `y[5:0]` slot 11 variant 1\nPositional instance dff u(clk, din, qout) connects by…",
+      "choices": [
+        "Port declaration order in the module",
+        "Alphabetical names",
+        "Simulation time",
+        "Parameter list only"
+      ],
+      "answer": 0,
+      "explain": "Order maps ports.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_easy_11.mp4",
+        "poster": "media/images/ports_easy_11-frame.png",
+        "figure": "media/images/ports_easy_11.png"
+      }
+    },
+    {
+      "id": "ports_easy_12",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [15:0] b; assign y = b ^ q;\n```\n// Review context: `q[6:0]` slot 12 variant 1\nNamed connection .d(din) means…",
+      "choices": [
+        "Port d is wired to net din",
+        "Net din renamed to d",
+        "Only parameters set",
+        "Widths must match names"
+      ],
+      "answer": 0,
+      "explain": "Formal.d ← actual din.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_easy_12.mp4",
+        "poster": "media/images/ports_easy_12-frame.png",
+        "figure": "media/images/ports_easy_12.png"
+      }
+    },
+    {
+      "id": "ports_easy_13",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg y; always @(*) y = q ? d : y;\n```\n// Review context: `d[7:0]` slot 13 variant 1\ndff u(clk, qout, din) when ports are (clk, d, q)…",
+      "choices": [
+        "Often compiles but swaps d and q — silent miswire",
+        "Always syntax error",
+        "Same as named",
+        "Only for AND"
+      ],
+      "answer": 0,
+      "explain": "Positional footgun.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_easy_13.mp4",
+        "poster": "media/images/ports_easy_13-frame.png",
+        "figure": "media/images/ports_easy_13.png"
+      }
+    },
+    {
+      "id": "ports_easy_14",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 3; localparam MAX = (1<<W)-1;\n```\n// Review context: `clk[11:0]` slot 14 variant 1\nNamed port connections are preferred for multi-port modules.",
+      "answer": true,
+      "explain": "Safer maintenance.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_easy_14.mp4",
+        "poster": "media/images/ports_easy_14-frame.png",
+        "figure": "media/images/ports_easy_14.png"
+      }
+    },
+    {
+      "id": "ports_easy_15",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) d <= clk;\n```\n// Review context: `en[15:0]` slot 15 variant 1\n`.clk(clk), .d(d), .q(q)` style is…",
+      "choices": [
+        "Named associations",
+        "Positional only",
+        "Generate",
+        "defparam"
+      ],
+      "answer": 0,
+      "explain": "Named style.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_easy_15.mp4",
+        "poster": "media/images/ports_easy_15-frame.png",
+        "figure": "media/images/ports_easy_15.png"
+      }
+    },
+    {
+      "id": "ports_easy_16",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [4:0] clk; assign en = clk ^ rst_n;\n```\n// Review context: `rst_n[31:0]` slot 16 variant 1\nEmpty `.q()` means…",
+      "choices": [
+        "Leave port q unconnected",
+        "Tie q to 0",
+        "Delete q",
+        "Set parameter q"
+      ],
+      "answer": 0,
+      "explain": "Explicit open.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_easy_16.mp4",
+        "poster": "media/images/ports_easy_16-frame.png",
+        "figure": "media/images/ports_easy_16.png"
+      }
+    },
+    {
+      "id": "ports_easy_17",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg en; always @(*) en = rst_n ? data : en;\n```\n// Review context: `data[2:0]` slot 17 variant 1\nPositional connects can break when someone reorders ports.",
+      "answer": true,
+      "explain": "Brittle.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_easy_17.mp4",
+        "poster": "media/images/ports_easy_17-frame.png",
+        "figure": "media/images/ports_easy_17.png"
+      }
+    },
+    {
+      "id": "ports_easy_18",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 7; localparam MAX = (1<<W)-1;\n```\n// Review context: `count[3:0]` slot 18 variant 1\nMixing `.d(d), qout` styles…",
+      "choices": [
+        "Illegal mix in one instance",
+        "Preferred",
+        "Required ANSI",
+        "Only SV"
+      ],
+      "answer": 0,
+      "explain": "Don't mix.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_easy_18.mp4",
+        "poster": "media/images/ports_easy_18-frame.png",
+        "figure": "media/images/ports_easy_18.png"
+      }
+    },
+    {
+      "id": "ports_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) data <= count;\n```\n// Review context: `a[4:0]` slot 19 variant 1\nNamed connects ignore…",
+      "choices": [
+        "Declaration order (names matter)",
+        "Formal names",
+        "Actual nets",
+        "Module existence"
+      ],
+      "answer": 0,
+      "explain": "Order irrelevant for named.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_easy_19.mp4",
+        "poster": "media/images/ports_easy_19-frame.png",
+        "figure": "media/images/ports_easy_19.png"
+      }
+    },
+    {
+      "id": "ports_easy_20",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [11:0] count; assign sel = count ^ out;\n```\n// Review context: `b[5:0]` slot 20 variant 1\nYou can still use positional for tiny primitive-like instances if careful.",
+      "answer": true,
+      "explain": "OK for small/stable port lists.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_easy_20.mp4",
+        "poster": "media/images/ports_easy_20-frame.png",
+        "figure": "media/images/ports_easy_20.png"
+      }
+    },
+    {
+      "id": "ports_easy_21",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg sel; always @(*) sel = out ? sum : sel;\n```\n// Review context: `y[6:0]` slot 21 variant 1\nPositional instance dff u(clk, din, qout) connects by…",
+      "choices": [
+        "Port declaration order in the module",
+        "Alphabetical names",
+        "Simulation time",
+        "Parameter list only"
+      ],
+      "answer": 0,
+      "explain": "Order maps ports.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_easy_21.mp4",
+        "poster": "media/images/ports_easy_21-frame.png",
+        "figure": "media/images/ports_easy_21.png"
+      }
+    },
+    {
+      "id": "ports_easy_22",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 32; localparam MAX = (1<<W)-1;\n```\n// Review context: `q[7:0]` slot 22 variant 1\nNamed connection .d(din) means…",
+      "choices": [
+        "Port d is wired to net din",
+        "Net din renamed to d",
+        "Only parameters set",
+        "Widths must match names"
+      ],
+      "answer": 0,
+      "explain": "Formal.d ← actual din.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_easy_22.mp4",
+        "poster": "media/images/ports_easy_22-frame.png",
+        "figure": "media/images/ports_easy_22.png"
+      }
+    },
+    {
+      "id": "ports_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) sum <= din;\n```\n// Review context: `d[11:0]` slot 23 variant 1\ndff u(clk, qout, din) when ports are (clk, d, q)…",
+      "choices": [
+        "Often compiles but swaps d and q — silent miswire",
+        "Always syntax error",
+        "Same as named",
+        "Only for AND"
+      ],
+      "answer": 0,
+      "explain": "Positional footgun.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_easy_23.mp4",
+        "poster": "media/images/ports_easy_23-frame.png",
+        "figure": "media/images/ports_easy_23.png"
+      }
+    },
+    {
+      "id": "ports_easy_24",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [3:0] din; assign qout = din ^ a;\n```\n// Review context: `clk[15:0]` slot 24 variant 1\nNamed port connections are preferred for multi-port modules.",
+      "answer": true,
+      "explain": "Safer maintenance.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_easy_24.mp4",
+        "poster": "media/images/ports_easy_24-frame.png",
+        "figure": "media/images/ports_easy_24.png"
+      }
+    },
+    {
+      "id": "ports_easy_25",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg qout; always @(*) qout = a ? b : qout;\n```\n// Review context: `en[31:0]` slot 25 variant 1\n`.clk(clk), .d(d), .q(q)` style is…",
+      "choices": [
+        "Named associations",
+        "Positional only",
+        "Generate",
+        "defparam"
+      ],
+      "answer": 0,
+      "explain": "Named style.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_easy_25.mp4",
+        "poster": "media/images/ports_easy_25-frame.png",
+        "figure": "media/images/ports_easy_25.png"
+      }
+    },
+    {
+      "id": "ports_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 6; localparam MAX = (1<<W)-1;\n```\n// Review context: `rst_n[2:0]` slot 26 variant 1\nEmpty `.q()` means…",
+      "choices": [
+        "Leave port q unconnected",
+        "Tie q to 0",
+        "Delete q",
+        "Set parameter q"
+      ],
+      "answer": 0,
+      "explain": "Explicit open.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_easy_26.mp4",
+        "poster": "media/images/ports_easy_26-frame.png",
+        "figure": "media/images/ports_easy_26.png"
+      }
+    },
+    {
+      "id": "ports_easy_27",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) b <= y;\n```\n// Review context: `data[3:0]` slot 27 variant 1\nPositional connects can break when someone reorders ports.",
+      "answer": true,
+      "explain": "Brittle.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_easy_27.mp4",
+        "poster": "media/images/ports_easy_27-frame.png",
+        "figure": "media/images/ports_easy_27.png"
+      }
+    },
+    {
+      "id": "ports_easy_28",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [7:0] y; assign q = y ^ d;\n```\n// Review context: `count[4:0]` slot 28 variant 1\nMixing `.d(d), qout` styles…",
+      "choices": [
+        "Illegal mix in one instance",
+        "Preferred",
+        "Required ANSI",
+        "Only SV"
+      ],
+      "answer": 0,
+      "explain": "Don't mix.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_easy_28.mp4",
+        "poster": "media/images/ports_easy_28-frame.png",
+        "figure": "media/images/ports_easy_28.png"
+      }
+    },
+    {
+      "id": "ports_easy_29",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg q; always @(*) q = d ? clk : q;\n```\n// Review context: `a[5:0]` slot 29 variant 1\nNamed connects ignore…",
+      "choices": [
+        "Declaration order (names matter)",
+        "Formal names",
+        "Actual nets",
+        "Module existence"
+      ],
+      "answer": 0,
+      "explain": "Order irrelevant for named.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_easy_29.mp4",
+        "poster": "media/images/ports_easy_29-frame.png",
+        "figure": "media/images/ports_easy_29.png"
+      }
+    },
+    {
+      "id": "ports_easy_30",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 16; localparam MAX = (1<<W)-1;\n```\n// Review context: `b[6:0]` slot 30 variant 1\nYou can still use positional for tiny primitive-like instances if careful.",
+      "answer": true,
+      "explain": "OK for small/stable port lists.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_easy_30.mp4",
+        "poster": "media/images/ports_easy_30-frame.png",
+        "figure": "media/images/ports_easy_30.png"
+      }
+    },
+    {
+      "id": "ports_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #3: combo block drives y\n```\n`.rst_n()` intentionally open on unused reset…",
+      "choices": [
+        "Documents unused port; ensure design allows it",
+        "Ties reset low always",
+        "Deletes flop",
+        "Sets WIDTH"
+      ],
+      "answer": 0,
+      "explain": "Open with care.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_medium_01.mp4",
+        "poster": "media/images/ports_medium_01-frame.png",
+        "figure": "media/images/ports_medium_01.png"
+      }
+    },
+    {
+      "id": "ports_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign q = (d & clk) | (d ^ clk);\n```\nTypo `.clkk(clk)` …",
+      "choices": [
+        "Error: unknown formal port",
+        "Silently creates new port",
+        "Positional map",
+        "Parameter"
+      ],
+      "answer": 0,
+      "explain": "Names must match formals.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_medium_02.mp4",
+        "poster": "media/images/ports_medium_02-frame.png",
+        "figure": "media/images/ports_medium_02.png"
+      }
+    },
+    {
+      "id": "ports_medium_03",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) d <= 0; else d <= clk;\n```\nNamed parameter overrides `#(.W(8))` are analogous safety to named ports.",
+      "answer": true,
+      "explain": "Named beats positional.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_medium_03.mp4",
+        "poster": "media/images/ports_medium_03-frame.png",
+        "figure": "media/images/ports_medium_03.png"
+      }
+    },
+    {
+      "id": "ports_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g6 end\n```\nReordering ports in module header…",
+      "choices": [
+        "Breaks positional instances; named usually OK",
+        "Breaks named always",
+        "Breaks assign",
+        "Breaks $clog2"
+      ],
+      "answer": 0,
+      "explain": "Named survives reorder.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_medium_04.mp4",
+        "poster": "media/images/ports_medium_04-frame.png",
+        "figure": "media/images/ports_medium_04.png"
+      }
+    },
+    {
+      "id": "ports_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #7: combo block drives en\n```\nImplicit `.name` (SV) …",
+      "choices": [
+        "Connects when formal and actual share the name",
+        "Is classic 1995 only",
+        "Is a latch",
+        "Is a package"
+      ],
+      "answer": 0,
+      "explain": "SV .name shorthand.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_medium_05.mp4",
+        "poster": "media/images/ports_medium_05-frame.png",
+        "figure": "media/images/ports_medium_05.png"
+      }
+    },
+    {
+      "id": "ports_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign rst_n = (data & count) | (data ^ count);\n```\nPositional with too few args…",
+      "choices": [
+        "Trailing ports unconnected",
+        "Always error in all tools",
+        "Fills with 1",
+        "Rotates ports"
+      ],
+      "answer": 0,
+      "explain": "Unconnected trailing.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_medium_06.mp4",
+        "poster": "media/images/ports_medium_06-frame.png",
+        "figure": "media/images/ports_medium_06.png"
+      }
+    },
+    {
+      "id": "ports_medium_07",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) data <= 0; else data <= count;\n```\nToo many positional args is an error.",
+      "answer": true,
+      "explain": "Arity must fit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_medium_07.mp4",
+        "poster": "media/images/ports_medium_07-frame.png",
+        "figure": "media/images/ports_medium_07.png"
+      }
+    },
+    {
+      "id": "ports_medium_08",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g10 end\n```\nConnecting a wider actual to a narrow formal…",
+      "choices": [
+        "Truncation/warning risk",
+        "Always hard error",
+        "Changes module name",
+        "Forces NBA"
+      ],
+      "answer": 0,
+      "explain": "Width discipline.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_medium_08.mp4",
+        "poster": "media/images/ports_medium_08-frame.png",
+        "figure": "media/images/ports_medium_08.png"
+      }
+    },
+    {
+      "id": "ports_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #11: combo block drives sel\n```\nWhy reviews ban positional on large IPs…",
+      "choices": [
+        "Silent miswires are costly",
+        "Slower typing named",
+        "Named illegal",
+        "Positional bans clocks"
+      ],
+      "answer": 0,
+      "explain": "Safety.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_medium_09.mp4",
+        "poster": "media/images/ports_medium_09-frame.png",
+        "figure": "media/images/ports_medium_09.png"
+      }
+    },
+    {
+      "id": "ports_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign out = (sum & din) | (sum ^ din);\n```\n`.a(a), .b(b), .c()` with required c driven inside…",
+      "choices": [
+        "May be OK if c is output-only unused",
+        "Always drives c to X from parent",
+        "Deletes c",
+        "Sets param c"
+      ],
+      "answer": 0,
+      "explain": "Outputs may be open.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_medium_10.mp4",
+        "poster": "media/images/ports_medium_10-frame.png",
+        "figure": "media/images/ports_medium_10.png"
+      }
+    },
+    {
+      "id": "ports_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) sum <= 0; else sum <= din;\n```\n// Review context: `y[5:0]` slot 11 variant 1\n`.rst_n()` intentionally open on unused reset…",
+      "choices": [
+        "Documents unused port; ensure design allows it",
+        "Ties reset low always",
+        "Deletes flop",
+        "Sets WIDTH"
+      ],
+      "answer": 0,
+      "explain": "Open with care.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_medium_11.mp4",
+        "poster": "media/images/ports_medium_11-frame.png",
+        "figure": "media/images/ports_medium_11.png"
+      }
+    },
+    {
+      "id": "ports_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g14 end\n```\n// Review context: `q[6:0]` slot 12 variant 1\nTypo `.clkk(clk)` …",
+      "choices": [
+        "Error: unknown formal port",
+        "Silently creates new port",
+        "Positional map",
+        "Parameter"
+      ],
+      "answer": 0,
+      "explain": "Names must match formals.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_medium_12.mp4",
+        "poster": "media/images/ports_medium_12-frame.png",
+        "figure": "media/images/ports_medium_12.png"
+      }
+    },
+    {
+      "id": "ports_medium_13",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #15: combo block drives qout\n```\n// Review context: `d[7:0]` slot 13 variant 1\nNamed parameter overrides `#(.W(8))` are analogous safety to named ports.",
+      "answer": true,
+      "explain": "Named beats positional.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_medium_13.mp4",
+        "poster": "media/images/ports_medium_13-frame.png",
+        "figure": "media/images/ports_medium_13.png"
+      }
+    },
+    {
+      "id": "ports_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign a = (b & y) | (b ^ y);\n```\n// Review context: `clk[11:0]` slot 14 variant 1\nReordering ports in module header…",
+      "choices": [
+        "Breaks positional instances; named usually OK",
+        "Breaks named always",
+        "Breaks assign",
+        "Breaks $clog2"
+      ],
+      "answer": 0,
+      "explain": "Named survives reorder.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_medium_14.mp4",
+        "poster": "media/images/ports_medium_14-frame.png",
+        "figure": "media/images/ports_medium_14.png"
+      }
+    },
+    {
+      "id": "ports_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) b <= 0; else b <= y;\n```\n// Review context: `en[15:0]` slot 15 variant 1\nImplicit `.name` (SV) …",
+      "choices": [
+        "Connects when formal and actual share the name",
+        "Is classic 1995 only",
+        "Is a latch",
+        "Is a package"
+      ],
+      "answer": 0,
+      "explain": "SV .name shorthand.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_medium_15.mp4",
+        "poster": "media/images/ports_medium_15-frame.png",
+        "figure": "media/images/ports_medium_15.png"
+      }
+    },
+    {
+      "id": "ports_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g18 end\n```\n// Review context: `rst_n[31:0]` slot 16 variant 1\nPositional with too few args…",
+      "choices": [
+        "Trailing ports unconnected",
+        "Always error in all tools",
+        "Fills with 1",
+        "Rotates ports"
+      ],
+      "answer": 0,
+      "explain": "Unconnected trailing.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_medium_16.mp4",
+        "poster": "media/images/ports_medium_16-frame.png",
+        "figure": "media/images/ports_medium_16.png"
+      }
+    },
+    {
+      "id": "ports_medium_17",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #19: combo block drives q\n```\n// Review context: `data[2:0]` slot 17 variant 1\nToo many positional args is an error.",
+      "answer": true,
+      "explain": "Arity must fit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_medium_17.mp4",
+        "poster": "media/images/ports_medium_17-frame.png",
+        "figure": "media/images/ports_medium_17.png"
+      }
+    },
+    {
+      "id": "ports_medium_18",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign d = (clk & en) | (clk ^ en);\n```\n// Review context: `count[3:0]` slot 18 variant 1\nConnecting a wider actual to a narrow formal…",
+      "choices": [
+        "Truncation/warning risk",
+        "Always hard error",
+        "Changes module name",
+        "Forces NBA"
+      ],
+      "answer": 0,
+      "explain": "Width discipline.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_medium_18.mp4",
+        "poster": "media/images/ports_medium_18-frame.png",
+        "figure": "media/images/ports_medium_18.png"
+      }
+    },
+    {
+      "id": "ports_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) clk <= 0; else clk <= en;\n```\n// Review context: `a[4:0]` slot 19 variant 1\nWhy reviews ban positional on large IPs…",
+      "choices": [
+        "Silent miswires are costly",
+        "Slower typing named",
+        "Named illegal",
+        "Positional bans clocks"
+      ],
+      "answer": 0,
+      "explain": "Safety.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_medium_19.mp4",
+        "poster": "media/images/ports_medium_19-frame.png",
+        "figure": "media/images/ports_medium_19.png"
+      }
+    },
+    {
+      "id": "ports_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g22 end\n```\n// Review context: `b[5:0]` slot 20 variant 1\n`.a(a), .b(b), .c()` with required c driven inside…",
+      "choices": [
+        "May be OK if c is output-only unused",
+        "Always drives c to X from parent",
+        "Deletes c",
+        "Sets param c"
+      ],
+      "answer": 0,
+      "explain": "Outputs may be open.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_medium_20.mp4",
+        "poster": "media/images/ports_medium_20-frame.png",
+        "figure": "media/images/ports_medium_20.png"
+      }
+    },
+    {
+      "id": "ports_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #23: combo block drives rst_n\n```\n// Review context: `y[6:0]` slot 21 variant 1\n`.rst_n()` intentionally open on unused reset…",
+      "choices": [
+        "Documents unused port; ensure design allows it",
+        "Ties reset low always",
+        "Deletes flop",
+        "Sets WIDTH"
+      ],
+      "answer": 0,
+      "explain": "Open with care.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_medium_21.mp4",
+        "poster": "media/images/ports_medium_21-frame.png",
+        "figure": "media/images/ports_medium_21.png"
+      }
+    },
+    {
+      "id": "ports_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign data = (count & sel) | (count ^ sel);\n```\n// Review context: `q[7:0]` slot 22 variant 1\nTypo `.clkk(clk)` …",
+      "choices": [
+        "Error: unknown formal port",
+        "Silently creates new port",
+        "Positional map",
+        "Parameter"
+      ],
+      "answer": 0,
+      "explain": "Names must match formals.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_medium_22.mp4",
+        "poster": "media/images/ports_medium_22-frame.png",
+        "figure": "media/images/ports_medium_22.png"
+      }
+    },
+    {
+      "id": "ports_medium_23",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) count <= 0; else count <= sel;\n```\n// Review context: `d[11:0]` slot 23 variant 1\nNamed parameter overrides `#(.W(8))` are analogous safety to named ports.",
+      "answer": true,
+      "explain": "Named beats positional.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_medium_23.mp4",
+        "poster": "media/images/ports_medium_23-frame.png",
+        "figure": "media/images/ports_medium_23.png"
+      }
+    },
+    {
+      "id": "ports_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g26 end\n```\n// Review context: `clk[15:0]` slot 24 variant 1\nReordering ports in module header…",
+      "choices": [
+        "Breaks positional instances; named usually OK",
+        "Breaks named always",
+        "Breaks assign",
+        "Breaks $clog2"
+      ],
+      "answer": 0,
+      "explain": "Named survives reorder.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_medium_24.mp4",
+        "poster": "media/images/ports_medium_24-frame.png",
+        "figure": "media/images/ports_medium_24.png"
+      }
+    },
+    {
+      "id": "ports_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #27: combo block drives out\n```\n// Review context: `en[31:0]` slot 25 variant 1\nImplicit `.name` (SV) …",
+      "choices": [
+        "Connects when formal and actual share the name",
+        "Is classic 1995 only",
+        "Is a latch",
+        "Is a package"
+      ],
+      "answer": 0,
+      "explain": "SV .name shorthand.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_medium_25.mp4",
+        "poster": "media/images/ports_medium_25-frame.png",
+        "figure": "media/images/ports_medium_25.png"
+      }
+    },
+    {
+      "id": "ports_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign sum = (din & qout) | (din ^ qout);\n```\n// Review context: `rst_n[2:0]` slot 26 variant 1\nPositional with too few args…",
+      "choices": [
+        "Trailing ports unconnected",
+        "Always error in all tools",
+        "Fills with 1",
+        "Rotates ports"
+      ],
+      "answer": 0,
+      "explain": "Unconnected trailing.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_medium_26.mp4",
+        "poster": "media/images/ports_medium_26-frame.png",
+        "figure": "media/images/ports_medium_26.png"
+      }
+    },
+    {
+      "id": "ports_medium_27",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) din <= 0; else din <= qout;\n```\n// Review context: `data[3:0]` slot 27 variant 1\nToo many positional args is an error.",
+      "answer": true,
+      "explain": "Arity must fit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_medium_27.mp4",
+        "poster": "media/images/ports_medium_27-frame.png",
+        "figure": "media/images/ports_medium_27.png"
+      }
+    },
+    {
+      "id": "ports_medium_28",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g30 end\n```\n// Review context: `count[4:0]` slot 28 variant 1\nConnecting a wider actual to a narrow formal…",
+      "choices": [
+        "Truncation/warning risk",
+        "Always hard error",
+        "Changes module name",
+        "Forces NBA"
+      ],
+      "answer": 0,
+      "explain": "Width discipline.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_medium_28.mp4",
+        "poster": "media/images/ports_medium_28-frame.png",
+        "figure": "media/images/ports_medium_28.png"
+      }
+    },
+    {
+      "id": "ports_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #31: combo block drives a\n```\n// Review context: `a[5:0]` slot 29 variant 1\nWhy reviews ban positional on large IPs…",
+      "choices": [
+        "Silent miswires are costly",
+        "Slower typing named",
+        "Named illegal",
+        "Positional bans clocks"
+      ],
+      "answer": 0,
+      "explain": "Safety.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_medium_29.mp4",
+        "poster": "media/images/ports_medium_29-frame.png",
+        "figure": "media/images/ports_medium_29.png"
+      }
+    },
+    {
+      "id": "ports_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign b = (y & q) | (y ^ q);\n```\n// Review context: `b[6:0]` slot 30 variant 1\n`.a(a), .b(b), .c()` with required c driven inside…",
+      "choices": [
+        "May be OK if c is output-only unused",
+        "Always drives c to X from parent",
+        "Deletes c",
+        "Sets param c"
+      ],
+      "answer": 0,
+      "explain": "Outputs may be open.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_medium_30.mp4",
+        "poster": "media/images/ports_medium_30-frame.png",
+        "figure": "media/images/ports_medium_30.png"
+      }
+    },
+    {
+      "id": "ports_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) d <= d + 1'b1; end\n```\nPort connection `.*` (SV) …",
+      "choices": [
+        "Auto-connects matching names — still verify!",
+        "Classic Verilog 1995",
+        "A sensitivity list",
+        "A nettype"
+      ],
+      "answer": 0,
+      "explain": "SV .* wildcard.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_hard_01.mp4",
+        "poster": "media/images/ports_hard_01-frame.png",
+        "figure": "media/images/ports_hard_01.png"
+      }
+    },
+    {
+      "id": "ports_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 6: do not sample clk multi-bit raw\n```\nNamed connect to a non-existent actual net without declaration…",
+      "choices": [
+        "May create implicit net (hazard) depending on default_nettype",
+        "Always safe",
+        "Always deletes port",
+        "Sets localparam"
+      ],
+      "answer": 0,
+      "explain": "Implicit nets bite.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_hard_02.mp4",
+        "poster": "media/images/ports_hard_02-frame.png",
+        "figure": "media/images/ports_hard_02.png"
+      }
+    },
+    {
+      "id": "ports_hard_03",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (en) /* full case required */\n```\nPositional mapping uses the ANSI/non-ANSI header order of port names.",
+      "answer": true,
+      "explain": "Header order is truth.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_hard_03.mp4",
+        "poster": "media/images/ports_hard_03-frame.png",
+        "figure": "media/images/ports_hard_03.png"
+      }
+    },
+    {
+      "id": "ports_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p8; @(posedge clk) rst_n |-> ##1 data; endproperty\n```\nConnecting inout with named style still needs…",
+      "choices": [
+        "A proper bidirectional net on the actual",
+        "Only a reg without net",
+        "Only initial",
+        "Only $display"
+      ],
+      "answer": 0,
+      "explain": "Net discipline.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_hard_04.mp4",
+        "poster": "media/images/ports_hard_04-frame.png",
+        "figure": "media/images/ports_hard_04.png"
+      }
+    },
+    {
+      "id": "ports_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) data <= data + 1'b1; end\n```\nInstance array with named ports…",
+      "choices": [
+        "Each instance gets the same named mapping pattern",
+        "Bans named",
+        "Requires defparam",
+        "Requires wait"
+      ],
+      "answer": 0,
+      "explain": "Arrays + named OK.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_hard_05.mp4",
+        "poster": "media/images/ports_hard_05-frame.png",
+        "figure": "media/images/ports_hard_05.png"
+      }
+    },
+    {
+      "id": "ports_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 10: do not sample count multi-bit raw\n```\nTool allows positional for UDP primitives often because…",
+      "choices": [
+        "Tiny fixed port lists",
+        "Named illegal on gates",
+        "Gates have no ports",
+        "Only SV"
+      ],
+      "answer": 0,
+      "explain": "Small stable arity.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_hard_06.mp4",
+        "poster": "media/images/ports_hard_06-frame.png",
+        "figure": "media/images/ports_hard_06.png"
+      }
+    },
+    {
+      "id": "ports_hard_07",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (sel) /* full case required */\n```\nChanging a port name breaks named connections that used the old formal.",
+      "answer": true,
+      "explain": "Rename is a breaking API.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_hard_07.mp4",
+        "poster": "media/images/ports_hard_07-frame.png",
+        "figure": "media/images/ports_hard_07.png"
+      }
+    },
+    {
+      "id": "ports_hard_08",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p12; @(posedge clk) out |-> ##1 sum; endproperty\n```\nBest refactor safety…",
+      "choices": [
+        "Named ports + named params + tests",
+        "Only positional",
+        "Only delays",
+        "Only casex"
+      ],
+      "answer": 0,
+      "explain": "Named everything.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_hard_08.mp4",
+        "poster": "media/images/ports_hard_08-frame.png",
+        "figure": "media/images/ports_hard_08.png"
+      }
+    },
+    {
+      "id": "ports_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) sum <= sum + 1'b1; end\n```\nUnconnected input with named omit…",
+      "choices": [
+        "Floating/X risk — tie off intentionally",
+        "Auto 0 always in synth",
+        "Auto 1",
+        "Becomes parameter"
+      ],
+      "answer": 0,
+      "explain": "Tie offs explicitly.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_hard_09.mp4",
+        "poster": "media/images/ports_hard_09-frame.png",
+        "figure": "media/images/ports_hard_09.png"
+      }
+    },
+    {
+      "id": "ports_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 14: do not sample din multi-bit raw\n```\nDocumentation tip…",
+      "choices": [
+        "Show named instance templates in EXAMPLES",
+        "Hide port names",
+        "Only show waveforms",
+        "Ban instances"
+      ],
+      "answer": 0,
+      "explain": "Teach named templates.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_hard_10.mp4",
+        "poster": "media/images/ports_hard_10-frame.png",
+        "figure": "media/images/ports_hard_10.png"
+      }
+    },
+    {
+      "id": "ports_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (qout) /* full case required */\n```\n// Review context: `y[5:0]` slot 11 variant 1\nPort connection `.*` (SV) …",
+      "choices": [
+        "Auto-connects matching names — still verify!",
+        "Classic Verilog 1995",
+        "A sensitivity list",
+        "A nettype"
+      ],
+      "answer": 0,
+      "explain": "SV .* wildcard.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_hard_11.mp4",
+        "poster": "media/images/ports_hard_11-frame.png",
+        "figure": "media/images/ports_hard_11.png"
+      }
+    },
+    {
+      "id": "ports_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p16; @(posedge clk) a |-> ##1 b; endproperty\n```\n// Review context: `q[6:0]` slot 12 variant 1\nNamed connect to a non-existent actual net without declaration…",
+      "choices": [
+        "May create implicit net (hazard) depending on default_nettype",
+        "Always safe",
+        "Always deletes port",
+        "Sets localparam"
+      ],
+      "answer": 0,
+      "explain": "Implicit nets bite.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_hard_12.mp4",
+        "poster": "media/images/ports_hard_12-frame.png",
+        "figure": "media/images/ports_hard_12.png"
+      }
+    },
+    {
+      "id": "ports_hard_13",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) b <= b + 1'b1; end\n```\n// Review context: `d[7:0]` slot 13 variant 1\nPositional mapping uses the ANSI/non-ANSI header order of port names.",
+      "answer": true,
+      "explain": "Header order is truth.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_hard_13.mp4",
+        "poster": "media/images/ports_hard_13-frame.png",
+        "figure": "media/images/ports_hard_13.png"
+      }
+    },
+    {
+      "id": "ports_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 18: do not sample y multi-bit raw\n```\n// Review context: `clk[11:0]` slot 14 variant 1\nConnecting inout with named style still needs…",
+      "choices": [
+        "A proper bidirectional net on the actual",
+        "Only a reg without net",
+        "Only initial",
+        "Only $display"
+      ],
+      "answer": 0,
+      "explain": "Net discipline.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_hard_14.mp4",
+        "poster": "media/images/ports_hard_14-frame.png",
+        "figure": "media/images/ports_hard_14.png"
+      }
+    },
+    {
+      "id": "ports_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (q) /* full case required */\n```\n// Review context: `en[15:0]` slot 15 variant 1\nInstance array with named ports…",
+      "choices": [
+        "Each instance gets the same named mapping pattern",
+        "Bans named",
+        "Requires defparam",
+        "Requires wait"
+      ],
+      "answer": 0,
+      "explain": "Arrays + named OK.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_hard_15.mp4",
+        "poster": "media/images/ports_hard_15-frame.png",
+        "figure": "media/images/ports_hard_15.png"
+      }
+    },
+    {
+      "id": "ports_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p20; @(posedge clk) d |-> ##1 clk; endproperty\n```\n// Review context: `rst_n[31:0]` slot 16 variant 1\nTool allows positional for UDP primitives often because…",
+      "choices": [
+        "Tiny fixed port lists",
+        "Named illegal on gates",
+        "Gates have no ports",
+        "Only SV"
+      ],
+      "answer": 0,
+      "explain": "Small stable arity.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_hard_16.mp4",
+        "poster": "media/images/ports_hard_16-frame.png",
+        "figure": "media/images/ports_hard_16.png"
+      }
+    },
+    {
+      "id": "ports_hard_17",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) clk <= clk + 1'b1; end\n```\n// Review context: `data[2:0]` slot 17 variant 1\nChanging a port name breaks named connections that used the old formal.",
+      "answer": true,
+      "explain": "Rename is a breaking API.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_hard_17.mp4",
+        "poster": "media/images/ports_hard_17-frame.png",
+        "figure": "media/images/ports_hard_17.png"
+      }
+    },
+    {
+      "id": "ports_hard_18",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 22: do not sample en multi-bit raw\n```\n// Review context: `count[3:0]` slot 18 variant 1\nBest refactor safety…",
+      "choices": [
+        "Named ports + named params + tests",
+        "Only positional",
+        "Only delays",
+        "Only casex"
+      ],
+      "answer": 0,
+      "explain": "Named everything.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_hard_18.mp4",
+        "poster": "media/images/ports_hard_18-frame.png",
+        "figure": "media/images/ports_hard_18.png"
+      }
+    },
+    {
+      "id": "ports_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (rst_n) /* full case required */\n```\n// Review context: `a[4:0]` slot 19 variant 1\nUnconnected input with named omit…",
+      "choices": [
+        "Floating/X risk — tie off intentionally",
+        "Auto 0 always in synth",
+        "Auto 1",
+        "Becomes parameter"
+      ],
+      "answer": 0,
+      "explain": "Tie offs explicitly.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_hard_19.mp4",
+        "poster": "media/images/ports_hard_19-frame.png",
+        "figure": "media/images/ports_hard_19.png"
+      }
+    },
+    {
+      "id": "ports_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p24; @(posedge clk) data |-> ##1 count; endproperty\n```\n// Review context: `b[5:0]` slot 20 variant 1\nDocumentation tip…",
+      "choices": [
+        "Show named instance templates in EXAMPLES",
+        "Hide port names",
+        "Only show waveforms",
+        "Ban instances"
+      ],
+      "answer": 0,
+      "explain": "Teach named templates.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_hard_20.mp4",
+        "poster": "media/images/ports_hard_20-frame.png",
+        "figure": "media/images/ports_hard_20.png"
+      }
+    },
+    {
+      "id": "ports_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) count <= count + 1'b1; end\n```\n// Review context: `y[6:0]` slot 21 variant 1\nPort connection `.*` (SV) …",
+      "choices": [
+        "Auto-connects matching names — still verify!",
+        "Classic Verilog 1995",
+        "A sensitivity list",
+        "A nettype"
+      ],
+      "answer": 0,
+      "explain": "SV .* wildcard.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_hard_21.mp4",
+        "poster": "media/images/ports_hard_21-frame.png",
+        "figure": "media/images/ports_hard_21.png"
+      }
+    },
+    {
+      "id": "ports_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 26: do not sample sel multi-bit raw\n```\n// Review context: `q[7:0]` slot 22 variant 1\nNamed connect to a non-existent actual net without declaration…",
+      "choices": [
+        "May create implicit net (hazard) depending on default_nettype",
+        "Always safe",
+        "Always deletes port",
+        "Sets localparam"
+      ],
+      "answer": 0,
+      "explain": "Implicit nets bite.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_hard_22.mp4",
+        "poster": "media/images/ports_hard_22-frame.png",
+        "figure": "media/images/ports_hard_22.png"
+      }
+    },
+    {
+      "id": "ports_hard_23",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (out) /* full case required */\n```\n// Review context: `d[11:0]` slot 23 variant 1\nPositional mapping uses the ANSI/non-ANSI header order of port names.",
+      "answer": true,
+      "explain": "Header order is truth.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_hard_23.mp4",
+        "poster": "media/images/ports_hard_23-frame.png",
+        "figure": "media/images/ports_hard_23.png"
+      }
+    },
+    {
+      "id": "ports_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p28; @(posedge clk) sum |-> ##1 din; endproperty\n```\n// Review context: `clk[15:0]` slot 24 variant 1\nConnecting inout with named style still needs…",
+      "choices": [
+        "A proper bidirectional net on the actual",
+        "Only a reg without net",
+        "Only initial",
+        "Only $display"
+      ],
+      "answer": 0,
+      "explain": "Net discipline.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_hard_24.mp4",
+        "poster": "media/images/ports_hard_24-frame.png",
+        "figure": "media/images/ports_hard_24.png"
+      }
+    },
+    {
+      "id": "ports_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) din <= din + 1'b1; end\n```\n// Review context: `en[31:0]` slot 25 variant 1\nInstance array with named ports…",
+      "choices": [
+        "Each instance gets the same named mapping pattern",
+        "Bans named",
+        "Requires defparam",
+        "Requires wait"
+      ],
+      "answer": 0,
+      "explain": "Arrays + named OK.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_hard_25.mp4",
+        "poster": "media/images/ports_hard_25-frame.png",
+        "figure": "media/images/ports_hard_25.png"
+      }
+    },
+    {
+      "id": "ports_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 30: do not sample qout multi-bit raw\n```\n// Review context: `rst_n[2:0]` slot 26 variant 1\nTool allows positional for UDP primitives often because…",
+      "choices": [
+        "Tiny fixed port lists",
+        "Named illegal on gates",
+        "Gates have no ports",
+        "Only SV"
+      ],
+      "answer": 0,
+      "explain": "Small stable arity.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_hard_26.mp4",
+        "poster": "media/images/ports_hard_26-frame.png",
+        "figure": "media/images/ports_hard_26.png"
+      }
+    },
+    {
+      "id": "ports_hard_27",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (a) /* full case required */\n```\n// Review context: `data[3:0]` slot 27 variant 1\nChanging a port name breaks named connections that used the old formal.",
+      "answer": true,
+      "explain": "Rename is a breaking API.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_hard_27.mp4",
+        "poster": "media/images/ports_hard_27-frame.png",
+        "figure": "media/images/ports_hard_27.png"
+      }
+    },
+    {
+      "id": "ports_hard_28",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p32; @(posedge clk) b |-> ##1 y; endproperty\n```\n// Review context: `count[4:0]` slot 28 variant 1\nBest refactor safety…",
+      "choices": [
+        "Named ports + named params + tests",
+        "Only positional",
+        "Only delays",
+        "Only casex"
+      ],
+      "answer": 0,
+      "explain": "Named everything.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_hard_28.mp4",
+        "poster": "media/images/ports_hard_28-frame.png",
+        "figure": "media/images/ports_hard_28.png"
+      }
+    },
+    {
+      "id": "ports_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) y <= y + 1'b1; end\n```\n// Review context: `a[5:0]` slot 29 variant 1\nUnconnected input with named omit…",
+      "choices": [
+        "Floating/X risk — tie off intentionally",
+        "Auto 0 always in synth",
+        "Auto 1",
+        "Becomes parameter"
+      ],
+      "answer": 0,
+      "explain": "Tie offs explicitly.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_hard_29.mp4",
+        "poster": "media/images/ports_hard_29-frame.png",
+        "figure": "media/images/ports_hard_29.png"
+      }
+    },
+    {
+      "id": "ports_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 34: do not sample q multi-bit raw\n```\n// Review context: `b[6:0]` slot 30 variant 1\nDocumentation tip…",
+      "choices": [
+        "Show named instance templates in EXAMPLES",
+        "Hide port names",
+        "Only show waveforms",
+        "Ban instances"
+      ],
+      "answer": 0,
+      "explain": "Teach named templates.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ports_hard_30.mp4",
+        "poster": "media/images/ports_hard_30-frame.png",
+        "figure": "media/images/ports_hard_30.png"
+      }
+    }
+  ]
+}

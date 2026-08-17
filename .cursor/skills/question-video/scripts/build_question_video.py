@@ -71,27 +71,39 @@ def find_item(bank: dict, item_id: str) -> dict | None:
 
 
 def speakable_verilog(text: str) -> str:
-    """Make Verilog-heavy quiz text easier for TTS (and STT round-trips)."""
+    """Make quiz stem text easier for TTS (Verilog + shell fences)."""
     s = str(text or "").replace("\ufffd", "...")
     s = s.replace("\x0b", "")  # bad-escape artifact before 'verilog'
     s = s.replace("…", "...").replace("↔", " to ").replace("—", " - ").replace("–", "-")
-    # Drop fenced RTL; the slide/figure already shows it.
-    had_fence = "```" in s or bool(re.search(r"(?i)`\s*verilog\b", s))
+    # Drop fenced code; the slide/figure already shows it.
+    had_fence = "```" in s or bool(re.search(r"(?i)`\s*(verilog|bash|sh|shell)\b", s))
     s = re.sub(
-        r"```(?:verilog|systemverilog|sv)?[^\n]*\n.*?```",
+        r"```(?:verilog|systemverilog|sv|bash|sh|shell|zsh)?[^\n]*\n.*?```",
         " ",
         s,
         flags=re.I | re.S,
     )
     # Recover from corrupted single-backtick fences.
-    s = re.sub(r"(?is)`\s*verilog\b.*?`", " ", s)
+    s = re.sub(r"(?is)`\s*(?:verilog|bash|sh|shell)\b.*?`", " ", s)
     # Drop enrichment noise that confuses narration.
     s = re.sub(r"(?m)^\s*//\s*Review context:.*$", " ", s)
     s = re.sub(r"//\s*Review context:[^\n]*", " ", s)
-    if re.search(r"(?i)given this rtl snippet", s) or had_fence:
+    s = re.sub(r"(?m)^\s*#\s*Review context:.*$", " ", s)
+    if re.search(r"(?i)given this rtl snippet", s) or (
+        had_fence and re.search(r"(?i)given this rtl", s)
+    ):
         s = re.sub(
             r"(?i)given this rtl snippet\s*[:.]?\s*",
             "Given the RTL snippet on the slide. ",
+            s,
+            count=1,
+        )
+    if re.search(r"(?i)given this shell snippet", s) or (
+        had_fence and re.search(r"(?i)given this shell", s)
+    ):
+        s = re.sub(
+            r"(?i)given this shell snippet\s*[:.]?\s*",
+            "Given the shell snippet on the slide. ",
             s,
             count=1,
         )
@@ -114,10 +126,44 @@ def speakable_verilog(text: str) -> str:
     s = re.sub(r"(?i)wild equality\s*==\?", "wild equality", s)
     s = s.replace("==?", " wild equality ")
     s = s.replace("!=?", " wild inequality ")
-    s = s.replace("<<", " left shift ")
-    s = s.replace(">>", " right shift ")
-    s = s.replace("&&", " and ")
-    s = s.replace("||", " or ")
+    # Context-aware operators: shell vs Verilog
+    if re.search(r"(?i)\b(bash|shell|chmod|grep|tar|make|pipe|heredoc|stdin|stdout|realpath|clock)\b", s):
+        s = s.replace("2>&1", " stderr to stdout ")
+        s = s.replace("<<", " here-doc ")
+        s = s.replace(">>", " append ")
+        s = s.replace("&&", " and ")
+        s = s.replace("||", " or ")
+
+        def _tar_flags(m: re.Match[str]) -> str:
+            flags = m.group(1).lstrip("-")
+            names = {
+                "c": "create",
+                "x": "extract",
+                "t": "list",
+                "v": "verbose",
+                "z": "gzip",
+                "j": "bzip",
+                "J": "x z",
+                "f": "file",
+                "a": "auto-compress",
+                "C": "change-directory",
+            }
+            parts = [names.get(ch, ch) for ch in flags]
+            return "tar " + " ".join(parts)
+
+        s = re.sub(r"\btar\s+(-?[a-zA-Z]{1,6})\b", _tar_flags, s)
+        s = re.sub(r"(?i)\brealpath\b", "real path", s)
+        s = re.sub(r"(?i)\bclock skew\b", "clock skew", s)
+        # Lone slash path root
+        s = re.sub(r"(?<=\sof)\s*/\s*(?=is\b)", " slash ", s)
+        s = re.sub(r"(?<=\sis)\s*/\s*(?=[.?]|$)", " slash ", s)
+        # Common short flags spoken letter-wise: -k2, -n, -rf
+        s = re.sub(r"-([a-zA-Z])(\d*)\b", lambda m: f" dash {m.group(1)}" + (f" {m.group(2)}" if m.group(2) else ""), s)
+    else:
+        s = s.replace("<<", " left shift ")
+        s = s.replace(">>", " right shift ")
+        s = s.replace("&&", " and ")
+        s = s.replace("||", " or ")
     s = s.replace("~&", " nand ")
     s = s.replace("~|", " nor ")
     s = s.replace("^~", " xnor ")

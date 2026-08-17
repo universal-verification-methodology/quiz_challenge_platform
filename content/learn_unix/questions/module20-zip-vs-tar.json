@@ -1,0 +1,1698 @@
+{
+  "module": "module20-zip-vs-tar",
+  "title": "tar vs zip",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -C /tmp -xzf /tmp/delta.tar.gz\n```\nIn tar czf archive.tar.gz dir/, the z flag means...",
+      "choices": [
+        "Extract",
+        "Gzip compression",
+        "List only",
+        "Zip format"
+      ],
+      "answer": 1,
+      "explain": "z enables gzip; c=create, f=file (archive name).",
+      "difficulty": "easy",
+      "id": "tar_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_easy_01.mp4",
+        "poster": "media/images/tar_easy_01-frame.png",
+        "figure": "media/images/tar_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/echo.tar.gz build; tar -tzf /tmp/echo.tar.gz | head\n```\ntar tzf archive.tar.gz...",
+      "choices": [
+        "Deletes the archive",
+        "Lists contents without extracting",
+        "Converts to zip",
+        "Requires root"
+      ],
+      "answer": 1,
+      "explain": "t = list (table of contents).",
+      "difficulty": "easy",
+      "id": "tar_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_easy_02.mp4",
+        "poster": "media/images/tar_easy_02-frame.png",
+        "figure": "media/images/tar_easy_02.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nzip -r /tmp/foxtrot6.zip docs; unzip -l /tmp/foxtrot6.zip | head\n```\nzip -r packs a directory tree recursively; unzip -l lists a zip without extracting.",
+      "answer": true,
+      "explain": "-r is recursive create; -l lists.",
+      "difficulty": "easy",
+      "id": "tar_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_easy_03.mp4",
+        "poster": "media/images/tar_easy_03-frame.png",
+        "figure": "media/images/tar_easy_03.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# prefer tar.gz for Unix metadata; zip for interop\n```\nPrefer zip over tar.gz when...",
+      "choices": [
+        "You only use Linux and never share",
+        "Sharing with Windows users who expect a .zip",
+        "You need to disable compression always",
+        "You want to edit binary ELF files in place"
+      ],
+      "answer": 1,
+      "explain": "zip is the common cross-platform handoff format.",
+      "difficulty": "easy",
+      "id": "tar_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_easy_04.mp4",
+        "poster": "media/images/tar_easy_04-frame.png",
+        "figure": "media/images/tar_easy_04.png"
+      }
+    },
+    {
+      "id": "tar_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -C /tmp -xzf /tmp/hotel.tar.gz\n```\n`tar` originally packs...",
+      "choices": [
+        "Multiple files into one archive stream",
+        "Only zip encryption",
+        "Only man pages",
+        "Only signals"
+      ],
+      "answer": 0,
+      "explain": "Tape archive tool.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_easy_05.mp4",
+        "poster": "media/images/tar_easy_05-frame.png",
+        "figure": "media/images/tar_easy_05.png"
+      }
+    },
+    {
+      "id": "tar_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/india.tar.gz bin; tar -tzf /tmp/india.tar.gz | head\n```\n`zip bundle6.zip file6.txt` creates...",
+      "choices": [
+        "A zip archive including file6.txt",
+        "A tar only",
+        "A user",
+        "A signal"
+      ],
+      "answer": 0,
+      "explain": "zip creates .zip.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_easy_06.mp4",
+        "poster": "media/images/tar_easy_06-frame.png",
+        "figure": "media/images/tar_easy_06.png"
+      }
+    },
+    {
+      "id": "tar_easy_07",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nzip -r /tmp/juliet10.zip src; unzip -l /tmp/juliet10.zip | head\n```\n`.tar.gz` is often a tar stream compressed with gzip.",
+      "answer": true,
+      "explain": "tarball+gzip.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_easy_07.mp4",
+        "poster": "media/images/tar_easy_07-frame.png",
+        "figure": "media/images/tar_easy_07.png"
+      }
+    },
+    {
+      "id": "tar_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# prefer tar.gz for Unix metadata; zip for interop\n```\n`tar -xzf archive8.tar.gz` typically...",
+      "choices": [
+        "Extracts gzip tar",
+        "Creates zip",
+        "Formats disk",
+        "Kills PID"
+      ],
+      "answer": 0,
+      "explain": "Extract tar.gz.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_easy_08.mp4",
+        "poster": "media/images/tar_easy_08-frame.png",
+        "figure": "media/images/tar_easy_08.png"
+      }
+    },
+    {
+      "id": "tar_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -C /tmp -xzf /tmp/bravo.tar.gz\n```\nZip stores...",
+      "choices": [
+        "Per-member compression commonly",
+        "Only one stream always like tar+gzip",
+        "Only permissions forever identical to tar",
+        "Only symlinks as hard links"
+      ],
+      "answer": 0,
+      "explain": "Zip member model differs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_easy_09.mp4",
+        "poster": "media/images/tar_easy_09-frame.png",
+        "figure": "media/images/tar_easy_09.png"
+      }
+    },
+    {
+      "id": "tar_easy_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/charlie.tar.gz build; tar -tzf /tmp/charlie.tar.gz | head\n```\n`unzip -l bundle10.zip` lists...",
+      "choices": [
+        "Zip contents",
+        "Only PIDs",
+        "Only users",
+        "Only mounts"
+      ],
+      "answer": 0,
+      "explain": "List zip.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_easy_10.mp4",
+        "poster": "media/images/tar_easy_10-frame.png",
+        "figure": "media/images/tar_easy_10.png"
+      }
+    },
+    {
+      "id": "tar_easy_11",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nzip -r /tmp/delta14.zip docs; unzip -l /tmp/delta14.zip | head\n```\nTar preserves Unix permissions/ownership better in many workflows than classic zip.",
+      "answer": true,
+      "explain": "Tar friendlier to Unix metadata.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_easy_11.mp4",
+        "poster": "media/images/tar_easy_11-frame.png",
+        "figure": "media/images/tar_easy_11.png"
+      }
+    },
+    {
+      "id": "tar_easy_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# prefer tar.gz for Unix metadata; zip for interop\n```\nChoose zip when...",
+      "choices": [
+        "Recipients expect .zip / partial extract UX",
+        "You need exact Linux ownership always",
+        "You only have tar",
+        "You ban compression"
+      ],
+      "answer": 0,
+      "explain": "Interop scenarios.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_easy_12.mp4",
+        "poster": "media/images/tar_easy_12-frame.png",
+        "figure": "media/images/tar_easy_12.png"
+      }
+    },
+    {
+      "id": "tar_easy_13",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -C /tmp -xzf /tmp/foxtrot.tar.gz\n```\nChoose tar.gz when...",
+      "choices": [
+        "Unix trees/permissions/symlinks matter",
+        "Only Windows notepad users",
+        "You need per-file password zip features only",
+        "You hate gzip"
+      ],
+      "answer": 0,
+      "explain": "Unix tree shipping.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_easy_13.mp4",
+        "poster": "media/images/tar_easy_13-frame.png",
+        "figure": "media/images/tar_easy_13.png"
+      }
+    },
+    {
+      "id": "tar_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/golf.tar.gz bin; tar -tzf /tmp/golf.tar.gz | head\n```\n`tar -c` means...",
+      "choices": [
+        "Create",
+        "Compress only",
+        "Chmod",
+        "Cat"
+      ],
+      "answer": 0,
+      "explain": "c = create.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_easy_14.mp4",
+        "poster": "media/images/tar_easy_14-frame.png",
+        "figure": "media/images/tar_easy_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nzip -r /tmp/hotel18.zip src; unzip -l /tmp/hotel18.zip | head\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nIn tar czf archive.tar.gz dir/, the z flag means...",
+      "choices": [
+        "Extract",
+        "Gzip compression",
+        "List only",
+        "Zip format"
+      ],
+      "answer": 1,
+      "explain": "z enables gzip; c=create, f=file (archive name).",
+      "difficulty": "easy",
+      "id": "tar_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_easy_15.mp4",
+        "poster": "media/images/tar_easy_15-frame.png",
+        "figure": "media/images/tar_easy_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# prefer tar.gz for Unix metadata; zip for interop\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\ntar tzf archive.tar.gz...",
+      "choices": [
+        "Deletes the archive",
+        "Lists contents without extracting",
+        "Converts to zip",
+        "Requires root"
+      ],
+      "answer": 1,
+      "explain": "t = list (table of contents).",
+      "difficulty": "easy",
+      "id": "tar_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_easy_16.mp4",
+        "poster": "media/images/tar_easy_16-frame.png",
+        "figure": "media/images/tar_easy_16.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntar -C /tmp -xzf /tmp/juliet.tar.gz\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nzip -r packs a directory tree recursively; unzip -l lists a zip without extracting.",
+      "answer": true,
+      "explain": "-r is recursive create; -l lists.",
+      "difficulty": "easy",
+      "id": "tar_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_easy_17.mp4",
+        "poster": "media/images/tar_easy_17-frame.png",
+        "figure": "media/images/tar_easy_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/alpha.tar.gz build; tar -tzf /tmp/alpha.tar.gz | head\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nPrefer zip over tar.gz when...",
+      "choices": [
+        "You only use Linux and never share",
+        "Sharing with Windows users who expect a .zip",
+        "You need to disable compression always",
+        "You want to edit binary ELF files in place"
+      ],
+      "answer": 1,
+      "explain": "zip is the common cross-platform handoff format.",
+      "difficulty": "easy",
+      "id": "tar_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_easy_18.mp4",
+        "poster": "media/images/tar_easy_18-frame.png",
+        "figure": "media/images/tar_easy_18.png"
+      }
+    },
+    {
+      "id": "tar_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nzip -r /tmp/bravo22.zip docs; unzip -l /tmp/bravo22.zip | head\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\n`tar` originally packs...",
+      "choices": [
+        "Multiple files into one archive stream",
+        "Only zip encryption",
+        "Only man pages",
+        "Only signals"
+      ],
+      "answer": 0,
+      "explain": "Tape archive tool.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_easy_19.mp4",
+        "poster": "media/images/tar_easy_19-frame.png",
+        "figure": "media/images/tar_easy_19.png"
+      }
+    },
+    {
+      "id": "tar_easy_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# prefer tar.gz for Unix metadata; zip for interop\n```\n`zip bundle20.zip file20.txt` creates...",
+      "choices": [
+        "A zip archive including file20.txt",
+        "A tar only",
+        "A user",
+        "A signal"
+      ],
+      "answer": 0,
+      "explain": "zip creates .zip.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_easy_20.mp4",
+        "poster": "media/images/tar_easy_20-frame.png",
+        "figure": "media/images/tar_easy_20.png"
+      }
+    },
+    {
+      "id": "tar_easy_21",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntar -C /tmp -xzf /tmp/delta.tar.gz\n```\n# Review context: `/var/log/golf` slot 21 variant 1\n`.tar.gz` is often a tar stream compressed with gzip.",
+      "answer": true,
+      "explain": "tarball+gzip.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_easy_21.mp4",
+        "poster": "media/images/tar_easy_21-frame.png",
+        "figure": "media/images/tar_easy_21.png"
+      }
+    },
+    {
+      "id": "tar_easy_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/echo.tar.gz bin; tar -tzf /tmp/echo.tar.gz | head\n```\n`tar -xzf archive22.tar.gz` typically...",
+      "choices": [
+        "Extracts gzip tar",
+        "Creates zip",
+        "Formats disk",
+        "Kills PID"
+      ],
+      "answer": 0,
+      "explain": "Extract tar.gz.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_easy_22.mp4",
+        "poster": "media/images/tar_easy_22-frame.png",
+        "figure": "media/images/tar_easy_22.png"
+      }
+    },
+    {
+      "id": "tar_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nzip -r /tmp/foxtrot26.zip src; unzip -l /tmp/foxtrot26.zip | head\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\nZip stores...",
+      "choices": [
+        "Per-member compression commonly",
+        "Only one stream always like tar+gzip",
+        "Only permissions forever identical to tar",
+        "Only symlinks as hard links"
+      ],
+      "answer": 0,
+      "explain": "Zip member model differs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_easy_23.mp4",
+        "poster": "media/images/tar_easy_23-frame.png",
+        "figure": "media/images/tar_easy_23.png"
+      }
+    },
+    {
+      "id": "tar_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# prefer tar.gz for Unix metadata; zip for interop\n```\n`unzip -l bundle24.zip` lists...",
+      "choices": [
+        "Zip contents",
+        "Only PIDs",
+        "Only users",
+        "Only mounts"
+      ],
+      "answer": 0,
+      "explain": "List zip.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_easy_24.mp4",
+        "poster": "media/images/tar_easy_24-frame.png",
+        "figure": "media/images/tar_easy_24.png"
+      }
+    },
+    {
+      "id": "tar_easy_25",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntar -C /tmp -xzf /tmp/hotel.tar.gz\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nTar preserves Unix permissions/ownership better in many workflows than classic zip.",
+      "answer": true,
+      "explain": "Tar friendlier to Unix metadata.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_easy_25.mp4",
+        "poster": "media/images/tar_easy_25-frame.png",
+        "figure": "media/images/tar_easy_25.png"
+      }
+    },
+    {
+      "id": "tar_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/india.tar.gz build; tar -tzf /tmp/india.tar.gz | head\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nChoose zip when...",
+      "choices": [
+        "Recipients expect .zip / partial extract UX",
+        "You need exact Linux ownership always",
+        "You only have tar",
+        "You ban compression"
+      ],
+      "answer": 0,
+      "explain": "Interop scenarios.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_easy_26.mp4",
+        "poster": "media/images/tar_easy_26-frame.png",
+        "figure": "media/images/tar_easy_26.png"
+      }
+    },
+    {
+      "id": "tar_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nzip -r /tmp/juliet30.zip docs; unzip -l /tmp/juliet30.zip | head\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nChoose tar.gz when...",
+      "choices": [
+        "Unix trees/permissions/symlinks matter",
+        "Only Windows notepad users",
+        "You need per-file password zip features only",
+        "You hate gzip"
+      ],
+      "answer": 0,
+      "explain": "Unix tree shipping.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_easy_27.mp4",
+        "poster": "media/images/tar_easy_27-frame.png",
+        "figure": "media/images/tar_easy_27.png"
+      }
+    },
+    {
+      "id": "tar_easy_28",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# prefer tar.gz for Unix metadata; zip for interop\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\n`tar -c` means...",
+      "choices": [
+        "Create",
+        "Compress only",
+        "Chmod",
+        "Cat"
+      ],
+      "answer": 0,
+      "explain": "c = create.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_easy_28.mp4",
+        "poster": "media/images/tar_easy_28-frame.png",
+        "figure": "media/images/tar_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -C /tmp -xzf /tmp/bravo.tar.gz\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nIn tar -czf archive.tar.gz dir/, what does the z flag mean?\n",
+      "choices": [
+        "Extract",
+        "Gzip compression",
+        "List only",
+        "Zip format"
+      ],
+      "answer": 1,
+      "explain": "z enables gzip; c=create, f=file (archive name).",
+      "difficulty": "easy",
+      "id": "tar_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_easy_29.mp4",
+        "poster": "media/images/tar_easy_29-frame.png",
+        "figure": "media/images/tar_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/charlie.tar.gz bin; tar -tzf /tmp/charlie.tar.gz | head\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\ntar tzf archive.tar.gz...",
+      "choices": [
+        "Deletes the archive",
+        "Lists contents without extracting",
+        "Converts to zip",
+        "Requires root"
+      ],
+      "answer": 1,
+      "explain": "t = list (table of contents).",
+      "difficulty": "easy",
+      "id": "tar_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_easy_30.mp4",
+        "poster": "media/images/tar_easy_30-frame.png",
+        "figure": "media/images/tar_easy_30.png"
+      }
+    },
+    {
+      "id": "tar_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# prefer tar.gz for Unix metadata; zip for interop\n```\n`tar -C dir1` changes...",
+      "choices": [
+        "Directory before archiving/extracting",
+        "umask",
+        "PATH",
+        "PS1"
+      ],
+      "answer": 0,
+      "explain": "-C chdir.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_medium_01.mp4",
+        "poster": "media/images/tar_medium_01-frame.png",
+        "figure": "media/images/tar_medium_01.png"
+      }
+    },
+    {
+      "id": "tar_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -C /tmp -xzf /tmp/delta.tar.gz\n```\nZip encryption features are...",
+      "choices": [
+        "Common in zip tooling; tar usually relies on outer encryption",
+        "Identical to tar",
+        "Forbidden",
+        "Kernel-only"
+      ],
+      "answer": 0,
+      "explain": "Different crypto UX.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_medium_02.mp4",
+        "poster": "media/images/tar_medium_02-frame.png",
+        "figure": "media/images/tar_medium_02.png"
+      }
+    },
+    {
+      "id": "tar_medium_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/echo.tar.gz build; tar -tzf /tmp/echo.tar.gz | head\n```\n`tar --absolute-names` can be dangerous on extract.",
+      "answer": true,
+      "explain": "Absolute paths in archives risk.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_medium_03.mp4",
+        "poster": "media/images/tar_medium_03-frame.png",
+        "figure": "media/images/tar_medium_03.png"
+      }
+    },
+    {
+      "id": "tar_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nzip -r /tmp/foxtrot6.zip docs; unzip -l /tmp/foxtrot6.zip | head\n```\nSparse files: tar options may...",
+      "choices": [
+        "Preserve holes better than naive zip workflows",
+        "Always destroy holes",
+        "Convert to dirs",
+        "Clear modes"
+      ],
+      "answer": 0,
+      "explain": "Sparse handling.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_medium_04.mp4",
+        "poster": "media/images/tar_medium_04-frame.png",
+        "figure": "media/images/tar_medium_04.png"
+      }
+    },
+    {
+      "id": "tar_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# prefer tar.gz for Unix metadata; zip for interop\n```\n`gzip -k` / separate compress vs `tar -z` ...",
+      "choices": [
+        "Different pipelines; know your flags",
+        "Identical always",
+        "One deletes tar tool",
+        "One requires root"
+      ],
+      "answer": 0,
+      "explain": "Composition styles.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_medium_05.mp4",
+        "poster": "media/images/tar_medium_05-frame.png",
+        "figure": "media/images/tar_medium_05.png"
+      }
+    },
+    {
+      "id": "tar_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -C /tmp -xzf /tmp/hotel.tar.gz\n```\nUpdate vs recreate archives...",
+      "choices": [
+        "Tool-specific; zip update differs from rewriting tar.gz",
+        "Always same",
+        "Forbidden",
+        "Only for man"
+      ],
+      "answer": 0,
+      "explain": "Update semantics differ.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_medium_06.mp4",
+        "poster": "media/images/tar_medium_06-frame.png",
+        "figure": "media/images/tar_medium_06.png"
+      }
+    },
+    {
+      "id": "tar_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/india.tar.gz bin; tar -tzf /tmp/india.tar.gz | head\n```\nSymlinks in zip vs tar...",
+      "choices": [
+        "Support varies; verify on your tools",
+        "Always identical",
+        "Zip always follows",
+        "Tar always ignores"
+      ],
+      "answer": 0,
+      "explain": "Test symlink policies.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_medium_07.mp4",
+        "poster": "media/images/tar_medium_07-frame.png",
+        "figure": "media/images/tar_medium_07.png"
+      }
+    },
+    {
+      "id": "tar_medium_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nzip -r /tmp/juliet10.zip src; unzip -l /tmp/juliet10.zip | head\n```\n`zip -r` recurses directories.",
+      "answer": true,
+      "explain": "Recursive zip.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_medium_08.mp4",
+        "poster": "media/images/tar_medium_08-frame.png",
+        "figure": "media/images/tar_medium_08.png"
+      }
+    },
+    {
+      "id": "tar_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# prefer tar.gz for Unix metadata; zip for interop\n```\nStreaming tar over ssh is common because...",
+      "choices": [
+        "Tar is stream-friendly",
+        "Zip cannot exist on pipes ever",
+        "SSH bans zip",
+        "make requires tar"
+      ],
+      "answer": 0,
+      "explain": "Tar streams well.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_medium_09.mp4",
+        "poster": "media/images/tar_medium_09-frame.png",
+        "figure": "media/images/tar_medium_09.png"
+      }
+    },
+    {
+      "id": "tar_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -C /tmp -xzf /tmp/bravo.tar.gz\n```\nCRC/tests: `zip -T` / tar extract dry checks help...",
+      "choices": [
+        "Validate archives",
+        "Speed CPU",
+        "Clear history",
+        "Setuid"
+      ],
+      "answer": 0,
+      "explain": "Integrity smoke tests.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_medium_10.mp4",
+        "poster": "media/images/tar_medium_10-frame.png",
+        "figure": "media/images/tar_medium_10.png"
+      }
+    },
+    {
+      "id": "tar_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/charlie.tar.gz build; tar -tzf /tmp/charlie.tar.gz | head\n```\n`tar -C dir11` changes...",
+      "choices": [
+        "Directory before archiving/extracting",
+        "umask",
+        "PATH",
+        "PS1"
+      ],
+      "answer": 0,
+      "explain": "-C chdir.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_medium_11.mp4",
+        "poster": "media/images/tar_medium_11-frame.png",
+        "figure": "media/images/tar_medium_11.png"
+      }
+    },
+    {
+      "id": "tar_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nzip -r /tmp/delta14.zip docs; unzip -l /tmp/delta14.zip | head\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\nZip encryption features are...",
+      "choices": [
+        "Common in zip tooling; tar usually relies on outer encryption",
+        "Identical to tar",
+        "Forbidden",
+        "Kernel-only"
+      ],
+      "answer": 0,
+      "explain": "Different crypto UX.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_medium_12.mp4",
+        "poster": "media/images/tar_medium_12-frame.png",
+        "figure": "media/images/tar_medium_12.png"
+      }
+    },
+    {
+      "id": "tar_medium_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# prefer tar.gz for Unix metadata; zip for interop\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\n`tar --absolute-names` can be dangerous on extract.",
+      "answer": true,
+      "explain": "Absolute paths in archives risk.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_medium_13.mp4",
+        "poster": "media/images/tar_medium_13-frame.png",
+        "figure": "media/images/tar_medium_13.png"
+      }
+    },
+    {
+      "id": "tar_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -C /tmp -xzf /tmp/foxtrot.tar.gz\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\nSparse files: tar options may...",
+      "choices": [
+        "Preserve holes better than naive zip workflows",
+        "Always destroy holes",
+        "Convert to dirs",
+        "Clear modes"
+      ],
+      "answer": 0,
+      "explain": "Sparse handling.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_medium_14.mp4",
+        "poster": "media/images/tar_medium_14-frame.png",
+        "figure": "media/images/tar_medium_14.png"
+      }
+    },
+    {
+      "id": "tar_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/golf.tar.gz bin; tar -tzf /tmp/golf.tar.gz | head\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\n`gzip -k` / separate compress vs `tar -z` ...",
+      "choices": [
+        "Different pipelines; know your flags",
+        "Identical always",
+        "One deletes tar tool",
+        "One requires root"
+      ],
+      "answer": 0,
+      "explain": "Composition styles.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_medium_15.mp4",
+        "poster": "media/images/tar_medium_15-frame.png",
+        "figure": "media/images/tar_medium_15.png"
+      }
+    },
+    {
+      "id": "tar_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nzip -r /tmp/hotel18.zip src; unzip -l /tmp/hotel18.zip | head\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nUpdate vs recreate archives...",
+      "choices": [
+        "Tool-specific; zip update differs from rewriting tar.gz",
+        "Always same",
+        "Forbidden",
+        "Only for man"
+      ],
+      "answer": 0,
+      "explain": "Update semantics differ.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_medium_16.mp4",
+        "poster": "media/images/tar_medium_16-frame.png",
+        "figure": "media/images/tar_medium_16.png"
+      }
+    },
+    {
+      "id": "tar_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# prefer tar.gz for Unix metadata; zip for interop\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nSymlinks in zip vs tar...",
+      "choices": [
+        "Support varies; verify on your tools",
+        "Always identical",
+        "Zip always follows",
+        "Tar always ignores"
+      ],
+      "answer": 0,
+      "explain": "Test symlink policies.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_medium_17.mp4",
+        "poster": "media/images/tar_medium_17-frame.png",
+        "figure": "media/images/tar_medium_17.png"
+      }
+    },
+    {
+      "id": "tar_medium_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntar -C /tmp -xzf /tmp/juliet.tar.gz\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\n`zip -r` recurses directories.",
+      "answer": true,
+      "explain": "Recursive zip.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_medium_18.mp4",
+        "poster": "media/images/tar_medium_18-frame.png",
+        "figure": "media/images/tar_medium_18.png"
+      }
+    },
+    {
+      "id": "tar_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/alpha.tar.gz build; tar -tzf /tmp/alpha.tar.gz | head\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nStreaming tar over ssh is common because...",
+      "choices": [
+        "Tar is stream-friendly",
+        "Zip cannot exist on pipes ever",
+        "SSH bans zip",
+        "make requires tar"
+      ],
+      "answer": 0,
+      "explain": "Tar streams well.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_medium_19.mp4",
+        "poster": "media/images/tar_medium_19-frame.png",
+        "figure": "media/images/tar_medium_19.png"
+      }
+    },
+    {
+      "id": "tar_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nzip -r /tmp/bravo22.zip docs; unzip -l /tmp/bravo22.zip | head\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\nCRC/tests: `zip -T` / tar extract dry checks help...",
+      "choices": [
+        "Validate archives",
+        "Speed CPU",
+        "Clear history",
+        "Setuid"
+      ],
+      "answer": 0,
+      "explain": "Integrity smoke tests.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_medium_20.mp4",
+        "poster": "media/images/tar_medium_20-frame.png",
+        "figure": "media/images/tar_medium_20.png"
+      }
+    },
+    {
+      "id": "tar_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# prefer tar.gz for Unix metadata; zip for interop\n```\n`tar -C dir21` changes...",
+      "choices": [
+        "Directory before archiving/extracting",
+        "umask",
+        "PATH",
+        "PS1"
+      ],
+      "answer": 0,
+      "explain": "-C chdir.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_medium_21.mp4",
+        "poster": "media/images/tar_medium_21-frame.png",
+        "figure": "media/images/tar_medium_21.png"
+      }
+    },
+    {
+      "id": "tar_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -C /tmp -xzf /tmp/delta.tar.gz\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\nZip encryption features are...",
+      "choices": [
+        "Common in zip tooling; tar usually relies on outer encryption",
+        "Identical to tar",
+        "Forbidden",
+        "Kernel-only"
+      ],
+      "answer": 0,
+      "explain": "Different crypto UX.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_medium_22.mp4",
+        "poster": "media/images/tar_medium_22-frame.png",
+        "figure": "media/images/tar_medium_22.png"
+      }
+    },
+    {
+      "id": "tar_medium_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/echo.tar.gz bin; tar -tzf /tmp/echo.tar.gz | head\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\n`tar --absolute-names` can be dangerous on extract.",
+      "answer": true,
+      "explain": "Absolute paths in archives risk.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_medium_23.mp4",
+        "poster": "media/images/tar_medium_23-frame.png",
+        "figure": "media/images/tar_medium_23.png"
+      }
+    },
+    {
+      "id": "tar_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nzip -r /tmp/foxtrot26.zip src; unzip -l /tmp/foxtrot26.zip | head\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nSparse files: tar options may...",
+      "choices": [
+        "Preserve holes better than naive zip workflows",
+        "Always destroy holes",
+        "Convert to dirs",
+        "Clear modes"
+      ],
+      "answer": 0,
+      "explain": "Sparse handling.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_medium_24.mp4",
+        "poster": "media/images/tar_medium_24-frame.png",
+        "figure": "media/images/tar_medium_24.png"
+      }
+    },
+    {
+      "id": "tar_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# prefer tar.gz for Unix metadata; zip for interop\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\n`gzip -k` / separate compress vs `tar -z` ...",
+      "choices": [
+        "Different pipelines; know your flags",
+        "Identical always",
+        "One deletes tar tool",
+        "One requires root"
+      ],
+      "answer": 0,
+      "explain": "Composition styles.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_medium_25.mp4",
+        "poster": "media/images/tar_medium_25-frame.png",
+        "figure": "media/images/tar_medium_25.png"
+      }
+    },
+    {
+      "id": "tar_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -C /tmp -xzf /tmp/hotel.tar.gz\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nUpdate vs recreate archives...",
+      "choices": [
+        "Tool-specific; zip update differs from rewriting tar.gz",
+        "Always same",
+        "Forbidden",
+        "Only for man"
+      ],
+      "answer": 0,
+      "explain": "Update semantics differ.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_medium_26.mp4",
+        "poster": "media/images/tar_medium_26-frame.png",
+        "figure": "media/images/tar_medium_26.png"
+      }
+    },
+    {
+      "id": "tar_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/india.tar.gz build; tar -tzf /tmp/india.tar.gz | head\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nSymlinks in zip vs tar...",
+      "choices": [
+        "Support varies; verify on your tools",
+        "Always identical",
+        "Zip always follows",
+        "Tar always ignores"
+      ],
+      "answer": 0,
+      "explain": "Test symlink policies.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_medium_27.mp4",
+        "poster": "media/images/tar_medium_27-frame.png",
+        "figure": "media/images/tar_medium_27.png"
+      }
+    },
+    {
+      "id": "tar_medium_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nzip -r /tmp/juliet30.zip docs; unzip -l /tmp/juliet30.zip | head\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\n`zip -r` recurses directories.",
+      "answer": true,
+      "explain": "Recursive zip.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_medium_28.mp4",
+        "poster": "media/images/tar_medium_28-frame.png",
+        "figure": "media/images/tar_medium_28.png"
+      }
+    },
+    {
+      "id": "tar_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# prefer tar.gz for Unix metadata; zip for interop\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nStreaming tar over ssh is common because...",
+      "choices": [
+        "Tar is stream-friendly",
+        "Zip cannot exist on pipes ever",
+        "SSH bans zip",
+        "make requires tar"
+      ],
+      "answer": 0,
+      "explain": "Tar streams well.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_medium_29.mp4",
+        "poster": "media/images/tar_medium_29-frame.png",
+        "figure": "media/images/tar_medium_29.png"
+      }
+    },
+    {
+      "id": "tar_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -C /tmp -xzf /tmp/bravo.tar.gz\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nCRC/tests: `zip -T` / tar extract dry checks help...",
+      "choices": [
+        "Validate archives",
+        "Speed CPU",
+        "Clear history",
+        "Setuid"
+      ],
+      "answer": 0,
+      "explain": "Integrity smoke tests.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_medium_30.mp4",
+        "poster": "media/images/tar_medium_30-frame.png",
+        "figure": "media/images/tar_medium_30.png"
+      }
+    },
+    {
+      "id": "tar_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# prefer tar.gz for Unix metadata; zip for interop\n```\nZip slip vulnerabilities involve...",
+      "choices": [
+        "Extracting `../` paths outside target dir",
+        "Only slow inflate",
+        "Only missing CRC",
+        "Only large files"
+      ],
+      "answer": 0,
+      "explain": "Path traversal on extract.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_hard_01.mp4",
+        "poster": "media/images/tar_hard_01-frame.png",
+        "figure": "media/images/tar_hard_01.png"
+      }
+    },
+    {
+      "id": "tar_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -C /tmp -xzf /tmp/delta.tar.gz\n```\nReproducible zip/tar needs...",
+      "choices": [
+        "Stable ordering, timestamps, user metadata policies",
+        "Random mtimes",
+        "Including build/ always",
+        "Different uid each run"
+      ],
+      "answer": 0,
+      "explain": "Bit-for-bit archives.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_hard_02.mp4",
+        "poster": "media/images/tar_hard_02-frame.png",
+        "figure": "media/images/tar_hard_02.png"
+      }
+    },
+    {
+      "id": "tar_hard_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/echo.tar.gz build; tar -tzf /tmp/echo.tar.gz | head\n```\npax/ustar/gnu tar formats differ in metadata limits.",
+      "answer": true,
+      "explain": "Format dialects.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_hard_03.mp4",
+        "poster": "media/images/tar_hard_03-frame.png",
+        "figure": "media/images/tar_hard_03.png"
+      }
+    },
+    {
+      "id": "tar_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nzip -r /tmp/foxtrot6.zip docs; unzip -l /tmp/foxtrot6.zip | head\n```\nLong paths / unicode names may...",
+      "choices": [
+        "Break older zip/tar tooling",
+        "Always work identically",
+        "Disable UTF-8",
+        "Require root"
+      ],
+      "answer": 0,
+      "explain": "Name edge cases.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_hard_04.mp4",
+        "poster": "media/images/tar_hard_04-frame.png",
+        "figure": "media/images/tar_hard_04.png"
+      }
+    },
+    {
+      "id": "tar_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# prefer tar.gz for Unix metadata; zip for interop\n```\nSolid compression (some formats) vs zip members...",
+      "choices": [
+        "Changes random-access extract tradeoffs",
+        "Identical",
+        "Only affects man",
+        "Only affects PATH"
+      ],
+      "answer": 0,
+      "explain": "Compression architecture.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_hard_05.mp4",
+        "poster": "media/images/tar_hard_05-frame.png",
+        "figure": "media/images/tar_hard_05.png"
+      }
+    },
+    {
+      "id": "tar_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -C /tmp -xzf /tmp/hotel.tar.gz\n```\nHard links in tar can be stored specially so that...",
+      "choices": [
+        "Extract restores link relations",
+        "They become two full copies always",
+        "They become symlinks always",
+        "They are dropped always"
+      ],
+      "answer": 0,
+      "explain": "Tar hardlink records.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_hard_06.mp4",
+        "poster": "media/images/tar_hard_06-frame.png",
+        "figure": "media/images/tar_hard_06.png"
+      }
+    },
+    {
+      "id": "tar_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/india.tar.gz bin; tar -tzf /tmp/india.tar.gz | head\n```\nWhen distributing to mixed OS teams...",
+      "choices": [
+        "Publish both or document opener tools",
+        "Only tar.gz always",
+        "Only zip always",
+        "Only 7z always"
+      ],
+      "answer": 0,
+      "explain": "Audience-driven format.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_hard_07.mp4",
+        "poster": "media/images/tar_hard_07-frame.png",
+        "figure": "media/images/tar_hard_07.png"
+      }
+    },
+    {
+      "id": "tar_hard_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nzip -r /tmp/juliet10.zip src; unzip -l /tmp/juliet10.zip | head\n```\nOuter `gpg` encryption around tar.gz is a common Unix pattern.",
+      "answer": true,
+      "explain": "Encrypt the stream.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_hard_08.mp4",
+        "poster": "media/images/tar_hard_08-frame.png",
+        "figure": "media/images/tar_hard_08.png"
+      }
+    },
+    {
+      "id": "tar_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# prefer tar.gz for Unix metadata; zip for interop\n```\nBenchmarking zip vs tar+zstd should measure...",
+      "choices": [
+        "Ratio, speed, and metadata needs",
+        "Only file extension aesthetics",
+        "Only man length",
+        "Only GitHub icons"
+      ],
+      "answer": 0,
+      "explain": "Measure real goals.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_hard_09.mp4",
+        "poster": "media/images/tar_hard_09-frame.png",
+        "figure": "media/images/tar_hard_09.png"
+      }
+    },
+    {
+      "id": "tar_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -C /tmp -xzf /tmp/bravo.tar.gz\n```\nLab: create both `archive10.tar.gz` and `bundle10.zip`, compare metadata with list commands.",
+      "choices": [
+        "Yes: compare capabilities",
+        "No: pick randomly",
+        "No: skip list",
+        "No: chmod 777"
+      ],
+      "answer": 0,
+      "explain": "Compare formats hands-on.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_hard_10.mp4",
+        "poster": "media/images/tar_hard_10-frame.png",
+        "figure": "media/images/tar_hard_10.png"
+      }
+    },
+    {
+      "id": "tar_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/charlie.tar.gz build; tar -tzf /tmp/charlie.tar.gz | head\n```\n# Review context: `~/bin/echo` slot 11 variant 1\nZip slip vulnerabilities involve...",
+      "choices": [
+        "Extracting `../` paths outside target dir",
+        "Only slow inflate",
+        "Only missing CRC",
+        "Only large files"
+      ],
+      "answer": 0,
+      "explain": "Path traversal on extract.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_hard_11.mp4",
+        "poster": "media/images/tar_hard_11-frame.png",
+        "figure": "media/images/tar_hard_11.png"
+      }
+    },
+    {
+      "id": "tar_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nzip -r /tmp/delta14.zip docs; unzip -l /tmp/delta14.zip | head\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\nReproducible zip/tar needs...",
+      "choices": [
+        "Stable ordering, timestamps, user metadata policies",
+        "Random mtimes",
+        "Including build/ always",
+        "Different uid each run"
+      ],
+      "answer": 0,
+      "explain": "Bit-for-bit archives.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_hard_12.mp4",
+        "poster": "media/images/tar_hard_12-frame.png",
+        "figure": "media/images/tar_hard_12.png"
+      }
+    },
+    {
+      "id": "tar_hard_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# prefer tar.gz for Unix metadata; zip for interop\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\npax/ustar/gnu tar formats differ in metadata limits.",
+      "answer": true,
+      "explain": "Format dialects.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_hard_13.mp4",
+        "poster": "media/images/tar_hard_13-frame.png",
+        "figure": "media/images/tar_hard_13.png"
+      }
+    },
+    {
+      "id": "tar_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -C /tmp -xzf /tmp/foxtrot.tar.gz\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\nLong paths / unicode names may...",
+      "choices": [
+        "Break older zip/tar tooling",
+        "Always work identically",
+        "Disable UTF-8",
+        "Require root"
+      ],
+      "answer": 0,
+      "explain": "Name edge cases.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_hard_14.mp4",
+        "poster": "media/images/tar_hard_14-frame.png",
+        "figure": "media/images/tar_hard_14.png"
+      }
+    },
+    {
+      "id": "tar_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/golf.tar.gz bin; tar -tzf /tmp/golf.tar.gz | head\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nSolid compression (some formats) vs zip members...",
+      "choices": [
+        "Changes random-access extract tradeoffs",
+        "Identical",
+        "Only affects man",
+        "Only affects PATH"
+      ],
+      "answer": 0,
+      "explain": "Compression architecture.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_hard_15.mp4",
+        "poster": "media/images/tar_hard_15-frame.png",
+        "figure": "media/images/tar_hard_15.png"
+      }
+    },
+    {
+      "id": "tar_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nzip -r /tmp/hotel18.zip src; unzip -l /tmp/hotel18.zip | head\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nHard links in tar can be stored specially so that...",
+      "choices": [
+        "Extract restores link relations",
+        "They become two full copies always",
+        "They become symlinks always",
+        "They are dropped always"
+      ],
+      "answer": 0,
+      "explain": "Tar hardlink records.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_hard_16.mp4",
+        "poster": "media/images/tar_hard_16-frame.png",
+        "figure": "media/images/tar_hard_16.png"
+      }
+    },
+    {
+      "id": "tar_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# prefer tar.gz for Unix metadata; zip for interop\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nWhen distributing to mixed OS teams...",
+      "choices": [
+        "Publish both or document opener tools",
+        "Only tar.gz always",
+        "Only zip always",
+        "Only 7z always"
+      ],
+      "answer": 0,
+      "explain": "Audience-driven format.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_hard_17.mp4",
+        "poster": "media/images/tar_hard_17-frame.png",
+        "figure": "media/images/tar_hard_17.png"
+      }
+    },
+    {
+      "id": "tar_hard_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntar -C /tmp -xzf /tmp/juliet.tar.gz\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nOuter `gpg` encryption around tar.gz is a common Unix pattern.",
+      "answer": true,
+      "explain": "Encrypt the stream.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_hard_18.mp4",
+        "poster": "media/images/tar_hard_18-frame.png",
+        "figure": "media/images/tar_hard_18.png"
+      }
+    },
+    {
+      "id": "tar_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/alpha.tar.gz build; tar -tzf /tmp/alpha.tar.gz | head\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nBenchmarking zip vs tar+zstd should measure...",
+      "choices": [
+        "Ratio, speed, and metadata needs",
+        "Only file extension aesthetics",
+        "Only man length",
+        "Only GitHub icons"
+      ],
+      "answer": 0,
+      "explain": "Measure real goals.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_hard_19.mp4",
+        "poster": "media/images/tar_hard_19-frame.png",
+        "figure": "media/images/tar_hard_19.png"
+      }
+    },
+    {
+      "id": "tar_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nzip -r /tmp/bravo22.zip docs; unzip -l /tmp/bravo22.zip | head\n```\nLab: create both `archive20.tar.gz` and `bundle20.zip`, compare metadata with list commands.",
+      "choices": [
+        "Yes: compare capabilities",
+        "No: pick randomly",
+        "No: skip list",
+        "No: chmod 777"
+      ],
+      "answer": 0,
+      "explain": "Compare formats hands-on.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_hard_20.mp4",
+        "poster": "media/images/tar_hard_20-frame.png",
+        "figure": "media/images/tar_hard_20.png"
+      }
+    },
+    {
+      "id": "tar_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# prefer tar.gz for Unix metadata; zip for interop\n```\n# Review context: `/var/log/golf` slot 21 variant 1\nZip slip vulnerabilities involve...",
+      "choices": [
+        "Extracting `../` paths outside target dir",
+        "Only slow inflate",
+        "Only missing CRC",
+        "Only large files"
+      ],
+      "answer": 0,
+      "explain": "Path traversal on extract.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_hard_21.mp4",
+        "poster": "media/images/tar_hard_21-frame.png",
+        "figure": "media/images/tar_hard_21.png"
+      }
+    },
+    {
+      "id": "tar_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -C /tmp -xzf /tmp/delta.tar.gz\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\nReproducible zip/tar needs...",
+      "choices": [
+        "Stable ordering, timestamps, user metadata policies",
+        "Random mtimes",
+        "Including build/ always",
+        "Different uid each run"
+      ],
+      "answer": 0,
+      "explain": "Bit-for-bit archives.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_hard_22.mp4",
+        "poster": "media/images/tar_hard_22-frame.png",
+        "figure": "media/images/tar_hard_22.png"
+      }
+    },
+    {
+      "id": "tar_hard_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/echo.tar.gz bin; tar -tzf /tmp/echo.tar.gz | head\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\npax/ustar/gnu tar formats differ in metadata limits.",
+      "answer": true,
+      "explain": "Format dialects.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_hard_23.mp4",
+        "poster": "media/images/tar_hard_23-frame.png",
+        "figure": "media/images/tar_hard_23.png"
+      }
+    },
+    {
+      "id": "tar_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nzip -r /tmp/foxtrot26.zip src; unzip -l /tmp/foxtrot26.zip | head\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nLong paths / unicode names may...",
+      "choices": [
+        "Break older zip/tar tooling",
+        "Always work identically",
+        "Disable UTF-8",
+        "Require root"
+      ],
+      "answer": 0,
+      "explain": "Name edge cases.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_hard_24.mp4",
+        "poster": "media/images/tar_hard_24-frame.png",
+        "figure": "media/images/tar_hard_24.png"
+      }
+    },
+    {
+      "id": "tar_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# prefer tar.gz for Unix metadata; zip for interop\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nSolid compression (some formats) vs zip members...",
+      "choices": [
+        "Changes random-access extract tradeoffs",
+        "Identical",
+        "Only affects man",
+        "Only affects PATH"
+      ],
+      "answer": 0,
+      "explain": "Compression architecture.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_hard_25.mp4",
+        "poster": "media/images/tar_hard_25-frame.png",
+        "figure": "media/images/tar_hard_25.png"
+      }
+    },
+    {
+      "id": "tar_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -C /tmp -xzf /tmp/hotel.tar.gz\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nHard links in tar can be stored specially so that...",
+      "choices": [
+        "Extract restores link relations",
+        "They become two full copies always",
+        "They become symlinks always",
+        "They are dropped always"
+      ],
+      "answer": 0,
+      "explain": "Tar hardlink records.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_hard_26.mp4",
+        "poster": "media/images/tar_hard_26-frame.png",
+        "figure": "media/images/tar_hard_26.png"
+      }
+    },
+    {
+      "id": "tar_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -czf /tmp/india.tar.gz build; tar -tzf /tmp/india.tar.gz | head\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nWhen distributing to mixed OS teams...",
+      "choices": [
+        "Publish both or document opener tools",
+        "Only tar.gz always",
+        "Only zip always",
+        "Only 7z always"
+      ],
+      "answer": 0,
+      "explain": "Audience-driven format.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_hard_27.mp4",
+        "poster": "media/images/tar_hard_27-frame.png",
+        "figure": "media/images/tar_hard_27.png"
+      }
+    },
+    {
+      "id": "tar_hard_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nzip -r /tmp/juliet30.zip docs; unzip -l /tmp/juliet30.zip | head\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nOuter `gpg` encryption around tar.gz is a common Unix pattern.",
+      "answer": true,
+      "explain": "Encrypt the stream.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_hard_28.mp4",
+        "poster": "media/images/tar_hard_28-frame.png",
+        "figure": "media/images/tar_hard_28.png"
+      }
+    },
+    {
+      "id": "tar_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# prefer tar.gz for Unix metadata; zip for interop\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nBenchmarking zip vs tar+zstd should measure...",
+      "choices": [
+        "Ratio, speed, and metadata needs",
+        "Only file extension aesthetics",
+        "Only man length",
+        "Only GitHub icons"
+      ],
+      "answer": 0,
+      "explain": "Measure real goals.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_hard_29.mp4",
+        "poster": "media/images/tar_hard_29-frame.png",
+        "figure": "media/images/tar_hard_29.png"
+      }
+    },
+    {
+      "id": "tar_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ntar -C /tmp -xzf /tmp/bravo.tar.gz\n```\nLab: create both `archive30.tar.gz` and `bundle30.zip`, compare metadata with list commands.",
+      "choices": [
+        "Yes: compare capabilities",
+        "No: pick randomly",
+        "No: skip list",
+        "No: chmod 777"
+      ],
+      "answer": 0,
+      "explain": "Compare formats hands-on.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tar_hard_30.mp4",
+        "poster": "media/images/tar_hard_30-frame.png",
+        "figure": "media/images/tar_hard_30.png"
+      }
+    }
+  ]
+}

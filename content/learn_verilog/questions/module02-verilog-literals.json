@@ -1,0 +1,1698 @@
+{
+  "module": "module02-verilog-literals",
+  "title": "Verilog literals",
+  "items": [
+    {
+      "id": "lit_easy_01",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [7:0] x = 8'b1011;\n```\nIn 8'hFF, the 8 means…",
+      "choices": [
+        "The literal is 8 bits wide",
+        "The base is octal",
+        "The value must be signed",
+        "The literal is unsized"
+      ],
+      "answer": 0,
+      "explain": "Size'base form sets bit width.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_easy_01.mp4",
+        "poster": "media/images/lit_easy_01-frame.png",
+        "figure": "media/images/lit_easy_01.png"
+      }
+    },
+    {
+      "id": "lit_easy_02",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W7 = 12; // width knob\n```\n8'h0 has width…",
+      "choices": [
+        "8",
+        "1",
+        "unsized",
+        "64"
+      ],
+      "answer": 0,
+      "explain": "Leading size sets width.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_easy_02.mp4",
+        "poster": "media/images/lit_easy_02-frame.png",
+        "figure": "media/images/lit_easy_02.png"
+      }
+    },
+    {
+      "id": "lit_easy_03",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign y = 16'd8;\n```\nBase letter `h` means…",
+      "choices": [
+        "hexadecimal",
+        "binary",
+        "decimal",
+        "octal"
+      ],
+      "answer": 0,
+      "explain": "h/H = hex.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_easy_03.mp4",
+        "poster": "media/images/lit_easy_03-frame.png",
+        "figure": "media/images/lit_easy_03.png"
+      }
+    },
+    {
+      "id": "lit_easy_04",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nlocalparam VAL9 = 32'hB;\n```\nBase letter `b` means…",
+      "choices": [
+        "binary",
+        "hex",
+        "decimal",
+        "octal"
+      ],
+      "answer": 0,
+      "explain": "b/B = binary.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_easy_04.mp4",
+        "poster": "media/images/lit_easy_04-frame.png",
+        "figure": "media/images/lit_easy_04.png"
+      }
+    },
+    {
+      "id": "lit_easy_05",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [2:0] x = 3'b1111;\n```\nUnderscores inside a literal change its numeric value.",
+      "answer": false,
+      "explain": "Underscores are readability only.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_easy_05.mp4",
+        "poster": "media/images/lit_easy_05-frame.png",
+        "figure": "media/images/lit_easy_05.png"
+      }
+    },
+    {
+      "id": "lit_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W11 = 4; // width knob\n```\n4'b1010 equals decimal…",
+      "choices": [
+        "10",
+        "5",
+        "15",
+        "20"
+      ],
+      "answer": 0,
+      "explain": "8+2=10.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_easy_06.mp4",
+        "poster": "media/images/lit_easy_06-frame.png",
+        "figure": "media/images/lit_easy_06.png"
+      }
+    },
+    {
+      "id": "lit_easy_07",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign y = 5'd12;\n```\n8'h0A equals decimal…",
+      "choices": [
+        "10",
+        "160",
+        "15",
+        "0"
+      ],
+      "answer": 0,
+      "explain": "0x0A = 10.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_easy_07.mp4",
+        "poster": "media/images/lit_easy_07-frame.png",
+        "figure": "media/images/lit_easy_07.png"
+      }
+    },
+    {
+      "id": "lit_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nlocalparam VAL13 = 6'h7;\n```\nUnsized decimal 8 is written as…",
+      "choices": [
+        "8",
+        "8'd8",
+        "h8",
+        "b8"
+      ],
+      "answer": 0,
+      "explain": "Bare decimal is an unsized number.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_easy_08.mp4",
+        "poster": "media/images/lit_easy_08-frame.png",
+        "figure": "media/images/lit_easy_08.png"
+      }
+    },
+    {
+      "id": "lit_easy_09",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [6:0] x = 7'b0011;\n```\nSized literals may use bases b, o, d, or h.",
+      "answer": true,
+      "explain": "Those are the classic bases.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_easy_09.mp4",
+        "poster": "media/images/lit_easy_09-frame.png",
+        "figure": "media/images/lit_easy_09.png"
+      }
+    },
+    {
+      "id": "lit_easy_10",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W15 = 8; // width knob\n```\n16'hDEAD_BEEF truncated discussion aside, underscores…",
+      "choices": [
+        "Do not change value",
+        "Multiply by 16",
+        "Force signed",
+        "Are illegal"
+      ],
+      "answer": 0,
+      "explain": "Separators only.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_easy_10.mp4",
+        "poster": "media/images/lit_easy_10-frame.png",
+        "figure": "media/images/lit_easy_10.png"
+      }
+    },
+    {
+      "id": "lit_easy_11",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign y = 12'd16;\n```\n// Review context: `y[5:0]` slot 11 variant 1\nIn 8'hFF, the 8 means…",
+      "choices": [
+        "The literal is 8 bits wide",
+        "The base is octal",
+        "The value must be signed",
+        "The literal is unsized"
+      ],
+      "answer": 0,
+      "explain": "Size'base form sets bit width.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_easy_11.mp4",
+        "poster": "media/images/lit_easy_11-frame.png",
+        "figure": "media/images/lit_easy_11.png"
+      }
+    },
+    {
+      "id": "lit_easy_12",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nlocalparam VAL17 = 16'h3;\n```\n32'h0 has width…",
+      "choices": [
+        "32",
+        "1",
+        "unsized",
+        "64"
+      ],
+      "answer": 0,
+      "explain": "Leading size sets width.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_easy_12.mp4",
+        "poster": "media/images/lit_easy_12-frame.png",
+        "figure": "media/images/lit_easy_12.png"
+      }
+    },
+    {
+      "id": "lit_easy_13",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [31:0] x = 32'b0111;\n```\n// Review context: `d[7:0]` slot 13 variant 1\nBase letter `h` means…",
+      "choices": [
+        "hexadecimal",
+        "binary",
+        "decimal",
+        "octal"
+      ],
+      "answer": 0,
+      "explain": "h/H = hex.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_easy_13.mp4",
+        "poster": "media/images/lit_easy_13-frame.png",
+        "figure": "media/images/lit_easy_13.png"
+      }
+    },
+    {
+      "id": "lit_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W19 = 3; // width knob\n```\n// Review context: `clk[11:0]` slot 14 variant 1\nBase letter `b` means…",
+      "choices": [
+        "binary",
+        "hex",
+        "decimal",
+        "octal"
+      ],
+      "answer": 0,
+      "explain": "b/B = binary.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_easy_14.mp4",
+        "poster": "media/images/lit_easy_14-frame.png",
+        "figure": "media/images/lit_easy_14.png"
+      }
+    },
+    {
+      "id": "lit_easy_15",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign y = 4'd20;\n```\n// Review context: `en[15:0]` slot 15 variant 1\nUnderscores inside a literal change its numeric value.",
+      "answer": false,
+      "explain": "Underscores are readability only.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_easy_15.mp4",
+        "poster": "media/images/lit_easy_15-frame.png",
+        "figure": "media/images/lit_easy_15.png"
+      }
+    },
+    {
+      "id": "lit_easy_16",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nlocalparam VAL21 = 5'hF;\n```\n// Review context: `rst_n[31:0]` slot 16 variant 1\n4'b1010 equals decimal…",
+      "choices": [
+        "10",
+        "5",
+        "15",
+        "20"
+      ],
+      "answer": 0,
+      "explain": "8+2=10.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_easy_16.mp4",
+        "poster": "media/images/lit_easy_16-frame.png",
+        "figure": "media/images/lit_easy_16.png"
+      }
+    },
+    {
+      "id": "lit_easy_17",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [5:0] x = 6'b1011;\n```\n// Review context: `data[2:0]` slot 17 variant 1\n8'h0A equals decimal…",
+      "choices": [
+        "10",
+        "160",
+        "15",
+        "0"
+      ],
+      "answer": 0,
+      "explain": "0x0A = 10.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_easy_17.mp4",
+        "poster": "media/images/lit_easy_17-frame.png",
+        "figure": "media/images/lit_easy_17.png"
+      }
+    },
+    {
+      "id": "lit_easy_18",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W23 = 7; // width knob\n```\nUnsized decimal 18 is written as…",
+      "choices": [
+        "18",
+        "18'd18",
+        "h18",
+        "b18"
+      ],
+      "answer": 0,
+      "explain": "Bare decimal is an unsized number.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_easy_18.mp4",
+        "poster": "media/images/lit_easy_18-frame.png",
+        "figure": "media/images/lit_easy_18.png"
+      }
+    },
+    {
+      "id": "lit_easy_19",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign y = 8'd24;\n```\n// Review context: `a[4:0]` slot 19 variant 1\nSized literals may use bases b, o, d, or h.",
+      "answer": true,
+      "explain": "Those are the classic bases.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_easy_19.mp4",
+        "poster": "media/images/lit_easy_19-frame.png",
+        "figure": "media/images/lit_easy_19.png"
+      }
+    },
+    {
+      "id": "lit_easy_20",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nlocalparam VAL25 = 12'hB;\n```\n// Review context: `b[5:0]` slot 20 variant 1\n16'hDEAD_BEEF truncated discussion aside, underscores…",
+      "choices": [
+        "Do not change value",
+        "Multiply by 16",
+        "Force signed",
+        "Are illegal"
+      ],
+      "answer": 0,
+      "explain": "Separators only.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_easy_20.mp4",
+        "poster": "media/images/lit_easy_20-frame.png",
+        "figure": "media/images/lit_easy_20.png"
+      }
+    },
+    {
+      "id": "lit_easy_21",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [15:0] x = 16'b1111;\n```\n// Review context: `y[6:0]` slot 21 variant 1\nIn 8'hFF, the 8 means…",
+      "choices": [
+        "The literal is 8 bits wide",
+        "The base is octal",
+        "The value must be signed",
+        "The literal is unsized"
+      ],
+      "answer": 0,
+      "explain": "Size'base form sets bit width.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_easy_21.mp4",
+        "poster": "media/images/lit_easy_21-frame.png",
+        "figure": "media/images/lit_easy_21.png"
+      }
+    },
+    {
+      "id": "lit_easy_22",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W27 = 32; // width knob\n```\n// Review context: `q[7:0]` slot 22 variant 1\n8'h0 has width…",
+      "choices": [
+        "8",
+        "1",
+        "unsized",
+        "64"
+      ],
+      "answer": 0,
+      "explain": "Leading size sets width.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_easy_22.mp4",
+        "poster": "media/images/lit_easy_22-frame.png",
+        "figure": "media/images/lit_easy_22.png"
+      }
+    },
+    {
+      "id": "lit_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign y = 3'd28;\n```\n// Review context: `d[11:0]` slot 23 variant 1\nBase letter `h` means…",
+      "choices": [
+        "hexadecimal",
+        "binary",
+        "decimal",
+        "octal"
+      ],
+      "answer": 0,
+      "explain": "h/H = hex.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_easy_23.mp4",
+        "poster": "media/images/lit_easy_23-frame.png",
+        "figure": "media/images/lit_easy_23.png"
+      }
+    },
+    {
+      "id": "lit_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nlocalparam VAL29 = 4'h7;\n```\n// Review context: `clk[15:0]` slot 24 variant 1\nBase letter `b` means…",
+      "choices": [
+        "binary",
+        "hex",
+        "decimal",
+        "octal"
+      ],
+      "answer": 0,
+      "explain": "b/B = binary.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_easy_24.mp4",
+        "poster": "media/images/lit_easy_24-frame.png",
+        "figure": "media/images/lit_easy_24.png"
+      }
+    },
+    {
+      "id": "lit_easy_25",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [4:0] x = 5'b0011;\n```\n// Review context: `en[31:0]` slot 25 variant 1\nUnderscores inside a literal change its numeric value.",
+      "answer": false,
+      "explain": "Underscores are readability only.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_easy_25.mp4",
+        "poster": "media/images/lit_easy_25-frame.png",
+        "figure": "media/images/lit_easy_25.png"
+      }
+    },
+    {
+      "id": "lit_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W31 = 6; // width knob\n```\n// Review context: `rst_n[2:0]` slot 26 variant 1\n4'b1010 equals decimal…",
+      "choices": [
+        "10",
+        "5",
+        "15",
+        "20"
+      ],
+      "answer": 0,
+      "explain": "8+2=10.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_easy_26.mp4",
+        "poster": "media/images/lit_easy_26-frame.png",
+        "figure": "media/images/lit_easy_26.png"
+      }
+    },
+    {
+      "id": "lit_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign y = 7'd32;\n```\n// Review context: `data[3:0]` slot 27 variant 1\n8'h0A equals decimal…",
+      "choices": [
+        "10",
+        "160",
+        "15",
+        "0"
+      ],
+      "answer": 0,
+      "explain": "0x0A = 10.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_easy_27.mp4",
+        "poster": "media/images/lit_easy_27-frame.png",
+        "figure": "media/images/lit_easy_27.png"
+      }
+    },
+    {
+      "id": "lit_easy_28",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nlocalparam VAL33 = 8'h3;\n```\nHow is unsized decimal 28 written in Verilog?",
+      "choices": [
+        "28",
+        "28'd28",
+        "h28",
+        "b28"
+      ],
+      "answer": 0,
+      "explain": "Bare decimal is an unsized number.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_easy_28.mp4",
+        "poster": "media/images/lit_easy_28-frame.png",
+        "figure": "media/images/lit_easy_28.png"
+      }
+    },
+    {
+      "id": "lit_easy_29",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [11:0] x = 12'b0111;\n```\n// Review context: `a[5:0]` slot 29 variant 1\nSized literals may use bases b, o, d, or h.",
+      "answer": true,
+      "explain": "Those are the classic bases.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_easy_29.mp4",
+        "poster": "media/images/lit_easy_29-frame.png",
+        "figure": "media/images/lit_easy_29.png"
+      }
+    },
+    {
+      "id": "lit_easy_30",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W35 = 16; // width knob\n```\n// Review context: `b[6:0]` slot 30 variant 1\n16'hDEAD_BEEF truncated discussion aside, underscores…",
+      "choices": [
+        "Do not change value",
+        "Multiply by 16",
+        "Force signed",
+        "Are illegal"
+      ],
+      "answer": 0,
+      "explain": "Separators only.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_easy_30.mp4",
+        "poster": "media/images/lit_easy_30-frame.png",
+        "figure": "media/images/lit_easy_30.png"
+      }
+    },
+    {
+      "id": "lit_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W3 = 5; // width knob\n```\n8'sd-1 as an 8-bit signed literal represents…",
+      "choices": [
+        "All ones (−1 in two's complement)",
+        "255 unsigned only",
+        "Illegal always",
+        "A float"
+      ],
+      "answer": 0,
+      "explain": "Signed −1 is 8'hFF.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_medium_01.mp4",
+        "poster": "media/images/lit_medium_01-frame.png",
+        "figure": "media/images/lit_medium_01.png"
+      }
+    },
+    {
+      "id": "lit_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign y = 6'd4;\n```\n4'hFF decoded to four bits becomes…",
+      "choices": [
+        "1111 with truncation of the high nibble intent",
+        "FFFF unchanged",
+        "Only valid in TB",
+        "Same as 32'hFF"
+      ],
+      "answer": 0,
+      "explain": "Value is truncated/padded to the sized width.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_medium_02.mp4",
+        "poster": "media/images/lit_medium_02-frame.png",
+        "figure": "media/images/lit_medium_02.png"
+      }
+    },
+    {
+      "id": "lit_medium_03",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nlocalparam VAL5 = 7'hF;\n```\n32'bx fills bits with…",
+      "choices": [
+        "X",
+        "0",
+        "1",
+        "Z"
+      ],
+      "answer": 0,
+      "explain": "x means unknown.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_medium_03.mp4",
+        "poster": "media/images/lit_medium_03-frame.png",
+        "figure": "media/images/lit_medium_03.png"
+      }
+    },
+    {
+      "id": "lit_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [7:0] x = 8'b1011;\n```\n8'bz is…",
+      "choices": [
+        "high-impedance byte",
+        "signed −1",
+        "decimal 11",
+        "illegal"
+      ],
+      "answer": 0,
+      "explain": "z = Z.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_medium_04.mp4",
+        "poster": "media/images/lit_medium_04-frame.png",
+        "figure": "media/images/lit_medium_04.png"
+      }
+    },
+    {
+      "id": "lit_medium_05",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W7 = 12; // width knob\n```\nA sized hex literal narrower than its digit string truncates high bits.",
+      "answer": true,
+      "explain": "Size wins; excess bits are cut.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_medium_05.mp4",
+        "poster": "media/images/lit_medium_05-frame.png",
+        "figure": "media/images/lit_medium_05.png"
+      }
+    },
+    {
+      "id": "lit_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign y = 16'd8;\n```\n3'b10 is width 3 value…",
+      "choices": [
+        "2",
+        "10",
+        "3",
+        "6"
+      ],
+      "answer": 0,
+      "explain": "Binary 010 = 2.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_medium_06.mp4",
+        "poster": "media/images/lit_medium_06-frame.png",
+        "figure": "media/images/lit_medium_06.png"
+      }
+    },
+    {
+      "id": "lit_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nlocalparam VAL9 = 32'hB;\n```\nSigning marker `s` in 8'shFF means…",
+      "choices": [
+        "Interpret as signed",
+        "Force unsized",
+        "Octal base",
+        "String literal"
+      ],
+      "answer": 0,
+      "explain": "s selects signed interpretation.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_medium_07.mp4",
+        "poster": "media/images/lit_medium_07-frame.png",
+        "figure": "media/images/lit_medium_07.png"
+      }
+    },
+    {
+      "id": "lit_medium_08",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [2:0] x = 3'b1111;\n```\nPadding 4'b1 to 8 bits yields…",
+      "choices": [
+        "8'b0000_0001",
+        "8'b1111_1111",
+        "8'bx",
+        "8'bz"
+      ],
+      "answer": 0,
+      "explain": "Zero-pad toward MSB for unsigned.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_medium_08.mp4",
+        "poster": "media/images/lit_medium_08-frame.png",
+        "figure": "media/images/lit_medium_08.png"
+      }
+    },
+    {
+      "id": "lit_medium_09",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W11 = 4; // width knob\n```\n`'hFF` without a size is an unsized hex literal.",
+      "answer": true,
+      "explain": "Size may be omitted.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_medium_09.mp4",
+        "poster": "media/images/lit_medium_09-frame.png",
+        "figure": "media/images/lit_medium_09.png"
+      }
+    },
+    {
+      "id": "lit_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign y = 5'd12;\n```\nBased literal with too few digits…",
+      "choices": [
+        "Zero-fills toward the MSB",
+        "Sign-extends always",
+        "Errors always",
+        "Becomes Z"
+      ],
+      "answer": 0,
+      "explain": "Missing high digits pad with 0 (or X/Z rules for x/z).",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_medium_10.mp4",
+        "poster": "media/images/lit_medium_10-frame.png",
+        "figure": "media/images/lit_medium_10.png"
+      }
+    },
+    {
+      "id": "lit_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nlocalparam VAL13 = 6'h7;\n```\n// Review context: `y[5:0]` slot 11 variant 1\n8'sd-1 as an 8-bit signed literal represents…",
+      "choices": [
+        "All ones (−1 in two's complement)",
+        "255 unsigned only",
+        "Illegal always",
+        "A float"
+      ],
+      "answer": 0,
+      "explain": "Signed −1 is 8'hFF.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_medium_11.mp4",
+        "poster": "media/images/lit_medium_11-frame.png",
+        "figure": "media/images/lit_medium_11.png"
+      }
+    },
+    {
+      "id": "lit_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [6:0] x = 7'b0011;\n```\n// Review context: `q[6:0]` slot 12 variant 1\n4'hFF decoded to four bits becomes…",
+      "choices": [
+        "1111 with truncation of the high nibble intent",
+        "FFFF unchanged",
+        "Only valid in TB",
+        "Same as 32'hFF"
+      ],
+      "answer": 0,
+      "explain": "Value is truncated/padded to the sized width.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_medium_12.mp4",
+        "poster": "media/images/lit_medium_12-frame.png",
+        "figure": "media/images/lit_medium_12.png"
+      }
+    },
+    {
+      "id": "lit_medium_13",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W15 = 8; // width knob\n```\n8'bx fills bits with…",
+      "choices": [
+        "X",
+        "0",
+        "1",
+        "Z"
+      ],
+      "answer": 0,
+      "explain": "x means unknown.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_medium_13.mp4",
+        "poster": "media/images/lit_medium_13-frame.png",
+        "figure": "media/images/lit_medium_13.png"
+      }
+    },
+    {
+      "id": "lit_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign y = 12'd16;\n```\n// Review context: `clk[11:0]` slot 14 variant 1\n8'bz is…",
+      "choices": [
+        "high-impedance byte",
+        "signed −1",
+        "decimal 11",
+        "illegal"
+      ],
+      "answer": 0,
+      "explain": "z = Z.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_medium_14.mp4",
+        "poster": "media/images/lit_medium_14-frame.png",
+        "figure": "media/images/lit_medium_14.png"
+      }
+    },
+    {
+      "id": "lit_medium_15",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nlocalparam VAL17 = 16'h3;\n```\n// Review context: `en[15:0]` slot 15 variant 1\nA sized hex literal narrower than its digit string truncates high bits.",
+      "answer": true,
+      "explain": "Size wins; excess bits are cut.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_medium_15.mp4",
+        "poster": "media/images/lit_medium_15-frame.png",
+        "figure": "media/images/lit_medium_15.png"
+      }
+    },
+    {
+      "id": "lit_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [31:0] x = 32'b0111;\n```\n// Review context: `rst_n[31:0]` slot 16 variant 1\n3'b10 is width 3 value…",
+      "choices": [
+        "2",
+        "10",
+        "3",
+        "6"
+      ],
+      "answer": 0,
+      "explain": "Binary 010 = 2.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_medium_16.mp4",
+        "poster": "media/images/lit_medium_16-frame.png",
+        "figure": "media/images/lit_medium_16.png"
+      }
+    },
+    {
+      "id": "lit_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W19 = 3; // width knob\n```\n// Review context: `data[2:0]` slot 17 variant 1\nSigning marker `s` in 8'shFF means…",
+      "choices": [
+        "Interpret as signed",
+        "Force unsized",
+        "Octal base",
+        "String literal"
+      ],
+      "answer": 0,
+      "explain": "s selects signed interpretation.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_medium_17.mp4",
+        "poster": "media/images/lit_medium_17-frame.png",
+        "figure": "media/images/lit_medium_17.png"
+      }
+    },
+    {
+      "id": "lit_medium_18",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign y = 4'd20;\n```\n// Review context: `count[3:0]` slot 18 variant 1\nPadding 4'b1 to 8 bits yields…",
+      "choices": [
+        "8'b0000_0001",
+        "8'b1111_1111",
+        "8'bx",
+        "8'bz"
+      ],
+      "answer": 0,
+      "explain": "Zero-pad toward MSB for unsigned.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_medium_18.mp4",
+        "poster": "media/images/lit_medium_18-frame.png",
+        "figure": "media/images/lit_medium_18.png"
+      }
+    },
+    {
+      "id": "lit_medium_19",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nlocalparam VAL21 = 5'hF;\n```\n// Review context: `a[4:0]` slot 19 variant 1\n`'hFF` without a size is an unsized hex literal.",
+      "answer": true,
+      "explain": "Size may be omitted.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_medium_19.mp4",
+        "poster": "media/images/lit_medium_19-frame.png",
+        "figure": "media/images/lit_medium_19.png"
+      }
+    },
+    {
+      "id": "lit_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [5:0] x = 6'b1011;\n```\n// Review context: `b[5:0]` slot 20 variant 1\nBased literal with too few digits…",
+      "choices": [
+        "Zero-fills toward the MSB",
+        "Sign-extends always",
+        "Errors always",
+        "Becomes Z"
+      ],
+      "answer": 0,
+      "explain": "Missing high digits pad with 0 (or X/Z rules for x/z).",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_medium_20.mp4",
+        "poster": "media/images/lit_medium_20-frame.png",
+        "figure": "media/images/lit_medium_20.png"
+      }
+    },
+    {
+      "id": "lit_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W23 = 7; // width knob\n```\n// Review context: `y[6:0]` slot 21 variant 1\n8'sd-1 as an 8-bit signed literal represents…",
+      "choices": [
+        "All ones (−1 in two's complement)",
+        "255 unsigned only",
+        "Illegal always",
+        "A float"
+      ],
+      "answer": 0,
+      "explain": "Signed −1 is 8'hFF.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_medium_21.mp4",
+        "poster": "media/images/lit_medium_21-frame.png",
+        "figure": "media/images/lit_medium_21.png"
+      }
+    },
+    {
+      "id": "lit_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign y = 8'd24;\n```\n// Review context: `q[7:0]` slot 22 variant 1\n4'hFF decoded to four bits becomes…",
+      "choices": [
+        "1111 with truncation of the high nibble intent",
+        "FFFF unchanged",
+        "Only valid in TB",
+        "Same as 32'hFF"
+      ],
+      "answer": 0,
+      "explain": "Value is truncated/padded to the sized width.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_medium_22.mp4",
+        "poster": "media/images/lit_medium_22-frame.png",
+        "figure": "media/images/lit_medium_22.png"
+      }
+    },
+    {
+      "id": "lit_medium_23",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nlocalparam VAL25 = 12'hB;\n```\n// Review context: `d[11:0]` slot 23 variant 1\n32'bx fills bits with…",
+      "choices": [
+        "X",
+        "0",
+        "1",
+        "Z"
+      ],
+      "answer": 0,
+      "explain": "x means unknown.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_medium_23.mp4",
+        "poster": "media/images/lit_medium_23-frame.png",
+        "figure": "media/images/lit_medium_23.png"
+      }
+    },
+    {
+      "id": "lit_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [15:0] x = 16'b1111;\n```\n// Review context: `clk[15:0]` slot 24 variant 1\n8'bz is…",
+      "choices": [
+        "high-impedance byte",
+        "signed −1",
+        "decimal 11",
+        "illegal"
+      ],
+      "answer": 0,
+      "explain": "z = Z.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_medium_24.mp4",
+        "poster": "media/images/lit_medium_24-frame.png",
+        "figure": "media/images/lit_medium_24.png"
+      }
+    },
+    {
+      "id": "lit_medium_25",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W27 = 32; // width knob\n```\n// Review context: `en[31:0]` slot 25 variant 1\nA sized hex literal narrower than its digit string truncates high bits.",
+      "answer": true,
+      "explain": "Size wins; excess bits are cut.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_medium_25.mp4",
+        "poster": "media/images/lit_medium_25-frame.png",
+        "figure": "media/images/lit_medium_25.png"
+      }
+    },
+    {
+      "id": "lit_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign y = 3'd28;\n```\n// Review context: `rst_n[2:0]` slot 26 variant 1\n3'b10 is width 3 value…",
+      "choices": [
+        "2",
+        "10",
+        "3",
+        "6"
+      ],
+      "answer": 0,
+      "explain": "Binary 010 = 2.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_medium_26.mp4",
+        "poster": "media/images/lit_medium_26-frame.png",
+        "figure": "media/images/lit_medium_26.png"
+      }
+    },
+    {
+      "id": "lit_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nlocalparam VAL29 = 4'h7;\n```\n// Review context: `data[3:0]` slot 27 variant 1\nSigning marker `s` in 8'shFF means…",
+      "choices": [
+        "Interpret as signed",
+        "Force unsized",
+        "Octal base",
+        "String literal"
+      ],
+      "answer": 0,
+      "explain": "s selects signed interpretation.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_medium_27.mp4",
+        "poster": "media/images/lit_medium_27-frame.png",
+        "figure": "media/images/lit_medium_27.png"
+      }
+    },
+    {
+      "id": "lit_medium_28",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [4:0] x = 5'b0011;\n```\n// Review context: `count[4:0]` slot 28 variant 1\nPadding 4'b1 to 8 bits yields…",
+      "choices": [
+        "8'b0000_0001",
+        "8'b1111_1111",
+        "8'bx",
+        "8'bz"
+      ],
+      "answer": 0,
+      "explain": "Zero-pad toward MSB for unsigned.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_medium_28.mp4",
+        "poster": "media/images/lit_medium_28-frame.png",
+        "figure": "media/images/lit_medium_28.png"
+      }
+    },
+    {
+      "id": "lit_medium_29",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W31 = 6; // width knob\n```\n// Review context: `a[5:0]` slot 29 variant 1\n`'hFF` without a size is an unsized hex literal.",
+      "answer": true,
+      "explain": "Size may be omitted.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_medium_29.mp4",
+        "poster": "media/images/lit_medium_29-frame.png",
+        "figure": "media/images/lit_medium_29.png"
+      }
+    },
+    {
+      "id": "lit_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign y = 7'd32;\n```\n// Review context: `b[6:0]` slot 30 variant 1\nBased literal with too few digits…",
+      "choices": [
+        "Zero-fills toward the MSB",
+        "Sign-extends always",
+        "Errors always",
+        "Becomes Z"
+      ],
+      "answer": 0,
+      "explain": "Missing high digits pad with 0 (or X/Z rules for x/z).",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_medium_30.mp4",
+        "poster": "media/images/lit_medium_30-frame.png",
+        "figure": "media/images/lit_medium_30.png"
+      }
+    },
+    {
+      "id": "lit_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nlocalparam VAL5 = 7'hF;\n```\nMixing signed and unsigned operands in expressions…",
+      "choices": [
+        "Follows Verilog signedness rules — easy to get surprises",
+        "Is always illegal",
+        "Forces floats",
+        "Disables width"
+      ],
+      "answer": 0,
+      "explain": "Know signed arithmetic rules.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_hard_01.mp4",
+        "poster": "media/images/lit_hard_01-frame.png",
+        "figure": "media/images/lit_hard_01.png"
+      }
+    },
+    {
+      "id": "lit_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [7:0] x = 8'b1011;\n```\n4'sb1000 as signed 4-bit is decimal…",
+      "choices": [
+        "-8",
+        "8",
+        "4",
+        "0"
+      ],
+      "answer": 0,
+      "explain": "MSB set → −8.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_hard_02.mp4",
+        "poster": "media/images/lit_hard_02-frame.png",
+        "figure": "media/images/lit_hard_02.png"
+      }
+    },
+    {
+      "id": "lit_hard_03",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W7 = 12; // width knob\n```\nAssigning 8'hFF to a signed 8-bit reg yields…",
+      "choices": [
+        "−1 if treated as signed two's complement bits",
+        "Only +255 in the reg bits differently",
+        "Float NaN",
+        "Compile error always"
+      ],
+      "answer": 0,
+      "explain": "Same bits; signed view is −1.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_hard_03.mp4",
+        "poster": "media/images/lit_hard_03-frame.png",
+        "figure": "media/images/lit_hard_03.png"
+      }
+    },
+    {
+      "id": "lit_hard_04",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign y = 16'd8;\n```\nUnsized numbers in expressions can widen using tool/context rules.",
+      "answer": true,
+      "explain": "Unsized literals participate in width rules.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_hard_04.mp4",
+        "poster": "media/images/lit_hard_04-frame.png",
+        "figure": "media/images/lit_hard_04.png"
+      }
+    },
+    {
+      "id": "lit_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nlocalparam VAL9 = 32'hB;\n```\nMulti-concat `{2{4'hA}}` equals…",
+      "choices": [
+        "8'hAA",
+        "4'hA",
+        "8'h0A",
+        "16'hA"
+      ],
+      "answer": 0,
+      "explain": "Replicate nibble.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_hard_05.mp4",
+        "poster": "media/images/lit_hard_05-frame.png",
+        "figure": "media/images/lit_hard_05.png"
+      }
+    },
+    {
+      "id": "lit_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [2:0] x = 3'b1111;\n```\nLiteral `32'hxxxx_xxxx` is mainly for…",
+      "choices": [
+        "Unknown bus in TB/sim",
+        "Synthesis ROM init preferred",
+        "Clock definition",
+        "Module ports only"
+      ],
+      "answer": 0,
+      "explain": "X literals are simulation unknowns.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_hard_06.mp4",
+        "poster": "media/images/lit_hard_06-frame.png",
+        "figure": "media/images/lit_hard_06.png"
+      }
+    },
+    {
+      "id": "lit_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W11 = 4; // width knob\n```\nOctal `3'o7` equals binary…",
+      "choices": [
+        "3'b111",
+        "3'b100",
+        "3'b001",
+        "3'b000"
+      ],
+      "answer": 0,
+      "explain": "7₈ = 111₂.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_hard_07.mp4",
+        "poster": "media/images/lit_hard_07-frame.png",
+        "figure": "media/images/lit_hard_07.png"
+      }
+    },
+    {
+      "id": "lit_hard_08",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign y = 5'd12;\n```\nA negative unsized decimal like -3 is always sized to 32 bits in classic Verilog.",
+      "answer": false,
+      "explain": "Unsized negative number width rules are subtle — don't assume casually.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_hard_08.mp4",
+        "poster": "media/images/lit_hard_08-frame.png",
+        "figure": "media/images/lit_hard_08.png"
+      }
+    },
+    {
+      "id": "lit_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nlocalparam VAL13 = 6'h7;\n```\nWriting `8'hGG`…",
+      "choices": [
+        "Is illegal hex",
+        "Means 255",
+        "Means X",
+        "Means Z"
+      ],
+      "answer": 0,
+      "explain": "G is not a hex digit.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_hard_09.mp4",
+        "poster": "media/images/lit_hard_09-frame.png",
+        "figure": "media/images/lit_hard_09.png"
+      }
+    },
+    {
+      "id": "lit_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [6:0] x = 7'b0011;\n```\nBit-select of a literal like `8'hA5[3:0]`…",
+      "choices": [
+        "Yields the low nibble (supported in modern SV; classic Verilog is picky)",
+        "Always errors in all tools",
+        "Changes base to decimal",
+        "Forces signed"
+      ],
+      "answer": 0,
+      "explain": "Prefer named wires for clarity; SV is more permissive.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_hard_10.mp4",
+        "poster": "media/images/lit_hard_10-frame.png",
+        "figure": "media/images/lit_hard_10.png"
+      }
+    },
+    {
+      "id": "lit_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W15 = 8; // width knob\n```\n// Review context: `y[5:0]` slot 11 variant 1\nMixing signed and unsigned operands in expressions…",
+      "choices": [
+        "Follows Verilog signedness rules — easy to get surprises",
+        "Is always illegal",
+        "Forces floats",
+        "Disables width"
+      ],
+      "answer": 0,
+      "explain": "Know signed arithmetic rules.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_hard_11.mp4",
+        "poster": "media/images/lit_hard_11-frame.png",
+        "figure": "media/images/lit_hard_11.png"
+      }
+    },
+    {
+      "id": "lit_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign y = 12'd16;\n```\n// Review context: `q[6:0]` slot 12 variant 1\n4'sb1000 as signed 4-bit is decimal…",
+      "choices": [
+        "-8",
+        "8",
+        "4",
+        "0"
+      ],
+      "answer": 0,
+      "explain": "MSB set → −8.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_hard_12.mp4",
+        "poster": "media/images/lit_hard_12-frame.png",
+        "figure": "media/images/lit_hard_12.png"
+      }
+    },
+    {
+      "id": "lit_hard_13",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nlocalparam VAL17 = 16'h3;\n```\n// Review context: `d[7:0]` slot 13 variant 1\nAssigning 8'hFF to a signed 8-bit reg yields…",
+      "choices": [
+        "−1 if treated as signed two's complement bits",
+        "Only +255 in the reg bits differently",
+        "Float NaN",
+        "Compile error always"
+      ],
+      "answer": 0,
+      "explain": "Same bits; signed view is −1.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_hard_13.mp4",
+        "poster": "media/images/lit_hard_13-frame.png",
+        "figure": "media/images/lit_hard_13.png"
+      }
+    },
+    {
+      "id": "lit_hard_14",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [31:0] x = 32'b0111;\n```\n// Review context: `clk[11:0]` slot 14 variant 1\nUnsized numbers in expressions can widen using tool/context rules.",
+      "answer": true,
+      "explain": "Unsized literals participate in width rules.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_hard_14.mp4",
+        "poster": "media/images/lit_hard_14-frame.png",
+        "figure": "media/images/lit_hard_14.png"
+      }
+    },
+    {
+      "id": "lit_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W19 = 3; // width knob\n```\n// Review context: `en[15:0]` slot 15 variant 1\nMulti-concat `{2{4'hA}}` equals…",
+      "choices": [
+        "8'hAA",
+        "4'hA",
+        "8'h0A",
+        "16'hA"
+      ],
+      "answer": 0,
+      "explain": "Replicate nibble.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_hard_15.mp4",
+        "poster": "media/images/lit_hard_15-frame.png",
+        "figure": "media/images/lit_hard_15.png"
+      }
+    },
+    {
+      "id": "lit_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign y = 4'd20;\n```\n// Review context: `rst_n[31:0]` slot 16 variant 1\nLiteral `32'hxxxx_xxxx` is mainly for…",
+      "choices": [
+        "Unknown bus in TB/sim",
+        "Synthesis ROM init preferred",
+        "Clock definition",
+        "Module ports only"
+      ],
+      "answer": 0,
+      "explain": "X literals are simulation unknowns.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_hard_16.mp4",
+        "poster": "media/images/lit_hard_16-frame.png",
+        "figure": "media/images/lit_hard_16.png"
+      }
+    },
+    {
+      "id": "lit_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nlocalparam VAL21 = 5'hF;\n```\n// Review context: `data[2:0]` slot 17 variant 1\nOctal `3'o7` equals binary…",
+      "choices": [
+        "3'b111",
+        "3'b100",
+        "3'b001",
+        "3'b000"
+      ],
+      "answer": 0,
+      "explain": "7₈ = 111₂.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_hard_17.mp4",
+        "poster": "media/images/lit_hard_17-frame.png",
+        "figure": "media/images/lit_hard_17.png"
+      }
+    },
+    {
+      "id": "lit_hard_18",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [5:0] x = 6'b1011;\n```\n// Review context: `count[3:0]` slot 18 variant 1\nA negative unsized decimal like -3 is always sized to 32 bits in classic Verilog.",
+      "answer": false,
+      "explain": "Unsized negative number width rules are subtle — don't assume casually.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_hard_18.mp4",
+        "poster": "media/images/lit_hard_18-frame.png",
+        "figure": "media/images/lit_hard_18.png"
+      }
+    },
+    {
+      "id": "lit_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W23 = 7; // width knob\n```\n// Review context: `a[4:0]` slot 19 variant 1\nWriting `8'hGG`…",
+      "choices": [
+        "Is illegal hex",
+        "Means 255",
+        "Means X",
+        "Means Z"
+      ],
+      "answer": 0,
+      "explain": "G is not a hex digit.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_hard_19.mp4",
+        "poster": "media/images/lit_hard_19-frame.png",
+        "figure": "media/images/lit_hard_19.png"
+      }
+    },
+    {
+      "id": "lit_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign y = 8'd24;\n```\n// Review context: `b[5:0]` slot 20 variant 1\nBit-select of a literal like `8'hA5[3:0]`…",
+      "choices": [
+        "Yields the low nibble (supported in modern SV; classic Verilog is picky)",
+        "Always errors in all tools",
+        "Changes base to decimal",
+        "Forces signed"
+      ],
+      "answer": 0,
+      "explain": "Prefer named wires for clarity; SV is more permissive.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_hard_20.mp4",
+        "poster": "media/images/lit_hard_20-frame.png",
+        "figure": "media/images/lit_hard_20.png"
+      }
+    },
+    {
+      "id": "lit_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nlocalparam VAL25 = 12'hB;\n```\n// Review context: `y[6:0]` slot 21 variant 1\nMixing signed and unsigned operands in expressions…",
+      "choices": [
+        "Follows Verilog signedness rules — easy to get surprises",
+        "Is always illegal",
+        "Forces floats",
+        "Disables width"
+      ],
+      "answer": 0,
+      "explain": "Know signed arithmetic rules.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_hard_21.mp4",
+        "poster": "media/images/lit_hard_21-frame.png",
+        "figure": "media/images/lit_hard_21.png"
+      }
+    },
+    {
+      "id": "lit_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [15:0] x = 16'b1111;\n```\n// Review context: `q[7:0]` slot 22 variant 1\n4'sb1000 as signed 4-bit is decimal…",
+      "choices": [
+        "-8",
+        "8",
+        "4",
+        "0"
+      ],
+      "answer": 0,
+      "explain": "MSB set → −8.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_hard_22.mp4",
+        "poster": "media/images/lit_hard_22-frame.png",
+        "figure": "media/images/lit_hard_22.png"
+      }
+    },
+    {
+      "id": "lit_hard_23",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W27 = 32; // width knob\n```\n// Review context: `d[11:0]` slot 23 variant 1\nAssigning 8'hFF to a signed 8-bit reg yields…",
+      "choices": [
+        "−1 if treated as signed two's complement bits",
+        "Only +255 in the reg bits differently",
+        "Float NaN",
+        "Compile error always"
+      ],
+      "answer": 0,
+      "explain": "Same bits; signed view is −1.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_hard_23.mp4",
+        "poster": "media/images/lit_hard_23-frame.png",
+        "figure": "media/images/lit_hard_23.png"
+      }
+    },
+    {
+      "id": "lit_hard_24",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign y = 3'd28;\n```\n// Review context: `clk[15:0]` slot 24 variant 1\nUnsized numbers in expressions can widen using tool/context rules.",
+      "answer": true,
+      "explain": "Unsized literals participate in width rules.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_hard_24.mp4",
+        "poster": "media/images/lit_hard_24-frame.png",
+        "figure": "media/images/lit_hard_24.png"
+      }
+    },
+    {
+      "id": "lit_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nlocalparam VAL29 = 4'h7;\n```\n// Review context: `en[31:0]` slot 25 variant 1\nMulti-concat `{2{4'hA}}` equals…",
+      "choices": [
+        "8'hAA",
+        "4'hA",
+        "8'h0A",
+        "16'hA"
+      ],
+      "answer": 0,
+      "explain": "Replicate nibble.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_hard_25.mp4",
+        "poster": "media/images/lit_hard_25-frame.png",
+        "figure": "media/images/lit_hard_25.png"
+      }
+    },
+    {
+      "id": "lit_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [4:0] x = 5'b0011;\n```\n// Review context: `rst_n[2:0]` slot 26 variant 1\nLiteral `32'hxxxx_xxxx` is mainly for…",
+      "choices": [
+        "Unknown bus in TB/sim",
+        "Synthesis ROM init preferred",
+        "Clock definition",
+        "Module ports only"
+      ],
+      "answer": 0,
+      "explain": "X literals are simulation unknowns.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_hard_26.mp4",
+        "poster": "media/images/lit_hard_26-frame.png",
+        "figure": "media/images/lit_hard_26.png"
+      }
+    },
+    {
+      "id": "lit_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W31 = 6; // width knob\n```\n// Review context: `data[3:0]` slot 27 variant 1\nOctal 3'o7 equals which binary value?",
+      "choices": [
+        "3'b111",
+        "3'b100",
+        "3'b001",
+        "3'b000"
+      ],
+      "answer": 0,
+      "explain": "7₈ = 111₂.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_hard_27.mp4",
+        "poster": "media/images/lit_hard_27-frame.png",
+        "figure": "media/images/lit_hard_27.png"
+      }
+    },
+    {
+      "id": "lit_hard_28",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign y = 7'd32;\n```\n// Review context: `count[4:0]` slot 28 variant 1\nA negative unsized decimal like -3 is always sized to 32 bits in classic Verilog.",
+      "answer": false,
+      "explain": "Unsized negative number width rules are subtle — don't assume casually.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_hard_28.mp4",
+        "poster": "media/images/lit_hard_28-frame.png",
+        "figure": "media/images/lit_hard_28.png"
+      }
+    },
+    {
+      "id": "lit_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nlocalparam VAL33 = 8'h3;\n```\n// Review context: `a[5:0]` slot 29 variant 1\nWriting `8'hGG`…",
+      "choices": [
+        "Is illegal hex",
+        "Means 255",
+        "Means X",
+        "Means Z"
+      ],
+      "answer": 0,
+      "explain": "G is not a hex digit.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_hard_29.mp4",
+        "poster": "media/images/lit_hard_29-frame.png",
+        "figure": "media/images/lit_hard_29.png"
+      }
+    },
+    {
+      "id": "lit_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [11:0] x = 12'b0111;\n```\n// Review context: `b[6:0]` slot 30 variant 1\nBit-select of a literal like `8'hA5[3:0]`…",
+      "choices": [
+        "Yields the low nibble (supported in modern SV; classic Verilog is picky)",
+        "Always errors in all tools",
+        "Changes base to decimal",
+        "Forces signed"
+      ],
+      "answer": 0,
+      "explain": "Prefer named wires for clarity; SV is more permissive.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/lit_hard_30.mp4",
+        "poster": "media/images/lit_hard_30-frame.png",
+        "figure": "media/images/lit_hard_30.png"
+      }
+    }
+  ]
+}

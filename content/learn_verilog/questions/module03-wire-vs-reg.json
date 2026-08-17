@@ -1,0 +1,1680 @@
+{
+  "module": "module03-wire-vs-reg",
+  "title": "wire vs reg",
+  "items": [
+    {
+      "id": "wr_easy_01",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg clk; always @(*) clk = en ? rst_n : clk;\n```\nIn classic Verilog, continuous assign drives…",
+      "choices": [
+        "A net (wire)",
+        "Only a reg",
+        "Only parameters",
+        "Nothing — assign is illegal"
+      ],
+      "answer": 0,
+      "explain": "assign targets nets.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_easy_01.mp4",
+        "poster": "media/images/wr_easy_01-frame.png",
+        "figure": "media/images/wr_easy_01.png"
+      }
+    },
+    {
+      "id": "wr_easy_02",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 12; localparam MAX = (1<<W)-1;\n```\nalways @(*) y = a & b; needs y declared as…",
+      "choices": [
+        "reg (a variable)",
+        "wire only",
+        "input",
+        "inout always"
+      ],
+      "answer": 0,
+      "explain": "Procedural assigns need variables.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_easy_02.mp4",
+        "poster": "media/images/wr_easy_02-frame.png",
+        "figure": "media/images/wr_easy_02.png"
+      }
+    },
+    {
+      "id": "wr_easy_03",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) rst_n <= data;\n```\nreg always means a flip-flop in hardware.",
+      "answer": false,
+      "explain": "reg is a variable type; combo regs exist.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_easy_03.mp4",
+        "poster": "media/images/wr_easy_03-frame.png",
+        "figure": "media/images/wr_easy_03.png"
+      }
+    },
+    {
+      "id": "wr_easy_04",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [31:0] data; assign count = data ^ sel;\n```\nassign y = a & b with y declared reg is…",
+      "choices": [
+        "Illegal in classic Verilog",
+        "Required for synthesis",
+        "Only illegal in TB",
+        "Same as always @(*)"
+      ],
+      "answer": 0,
+      "explain": "Cannot assign to reg continuously.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_easy_04.mp4",
+        "poster": "media/images/wr_easy_04-frame.png",
+        "figure": "media/images/wr_easy_04.png"
+      }
+    },
+    {
+      "id": "wr_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg count; always @(*) count = sel ? out : count;\n```\nwire is best thought of as…",
+      "choices": [
+        "A net driven by assign / instance outputs",
+        "Always a flip-flop",
+        "A parameter",
+        "A task"
+      ],
+      "answer": 0,
+      "explain": "Wires are nets.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_easy_05.mp4",
+        "poster": "media/images/wr_easy_05-frame.png",
+        "figure": "media/images/wr_easy_05.png"
+      }
+    },
+    {
+      "id": "wr_easy_06",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 4; localparam MAX = (1<<W)-1;\n```\nVariables (reg) hold values between procedural updates.",
+      "answer": true,
+      "explain": "That is the programming model.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_easy_06.mp4",
+        "poster": "media/images/wr_easy_06-frame.png",
+        "figure": "media/images/wr_easy_06.png"
+      }
+    },
+    {
+      "id": "wr_easy_07",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) out <= sum;\n```\nModule input ports are typically…",
+      "choices": [
+        "Nets driven from outside",
+        "Always reg",
+        "Always latches",
+        "Parameters"
+      ],
+      "answer": 0,
+      "explain": "Inputs connect as nets.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_easy_07.mp4",
+        "poster": "media/images/wr_easy_07-frame.png",
+        "figure": "media/images/wr_easy_07.png"
+      }
+    },
+    {
+      "id": "wr_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [5:0] sum; assign din = sum ^ qout;\n```\nDriving a wire from an always block without a continuous assign…",
+      "choices": [
+        "Is illegal (need a variable)",
+        "Is preferred",
+        "Creates a PLL",
+        "Forces Z"
+      ],
+      "answer": 0,
+      "explain": "Procedural code writes variables.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_easy_08.mp4",
+        "poster": "media/images/wr_easy_08-frame.png",
+        "figure": "media/images/wr_easy_08.png"
+      }
+    },
+    {
+      "id": "wr_easy_09",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg din; always @(*) din = qout ? a : din;\n```\noutput wire q is a legal ANSI-style net output.",
+      "answer": true,
+      "explain": "Outputs may be nets.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_easy_09.mp4",
+        "poster": "media/images/wr_easy_09-frame.png",
+        "figure": "media/images/wr_easy_09.png"
+      }
+    },
+    {
+      "id": "wr_easy_10",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 8; localparam MAX = (1<<W)-1;\n```\ninteger and time are…",
+      "choices": [
+        "Variable types often used in TB/loops",
+        "Net types",
+        "Port directions",
+        "Bases for literals"
+      ],
+      "answer": 0,
+      "explain": "They are variables.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_easy_10.mp4",
+        "poster": "media/images/wr_easy_10-frame.png",
+        "figure": "media/images/wr_easy_10.png"
+      }
+    },
+    {
+      "id": "wr_easy_11",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) a <= b;\n```\n// Review context: `y[5:0]` slot 11 variant 1\nIn classic Verilog, continuous assign drives…",
+      "choices": [
+        "A net (wire)",
+        "Only a reg",
+        "Only parameters",
+        "Nothing — assign is illegal"
+      ],
+      "answer": 0,
+      "explain": "assign targets nets.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_easy_11.mp4",
+        "poster": "media/images/wr_easy_11-frame.png",
+        "figure": "media/images/wr_easy_11.png"
+      }
+    },
+    {
+      "id": "wr_easy_12",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [15:0] b; assign y = b ^ q;\n```\n// Review context: `q[6:0]` slot 12 variant 1\nalways @(*) y = a & b; needs y declared as…",
+      "choices": [
+        "reg (a variable)",
+        "wire only",
+        "input",
+        "inout always"
+      ],
+      "answer": 0,
+      "explain": "Procedural assigns need variables.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_easy_12.mp4",
+        "poster": "media/images/wr_easy_12-frame.png",
+        "figure": "media/images/wr_easy_12.png"
+      }
+    },
+    {
+      "id": "wr_easy_13",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg y; always @(*) y = q ? d : y;\n```\n// Review context: `d[7:0]` slot 13 variant 1\nreg always means a flip-flop in hardware.",
+      "answer": false,
+      "explain": "reg is a variable type; combo regs exist.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_easy_13.mp4",
+        "poster": "media/images/wr_easy_13-frame.png",
+        "figure": "media/images/wr_easy_13.png"
+      }
+    },
+    {
+      "id": "wr_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 3; localparam MAX = (1<<W)-1;\n```\n// Review context: `clk[11:0]` slot 14 variant 1\nassign y = a & b with y declared reg is…",
+      "choices": [
+        "Illegal in classic Verilog",
+        "Required for synthesis",
+        "Only illegal in TB",
+        "Same as always @(*)"
+      ],
+      "answer": 0,
+      "explain": "Cannot assign to reg continuously.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_easy_14.mp4",
+        "poster": "media/images/wr_easy_14-frame.png",
+        "figure": "media/images/wr_easy_14.png"
+      }
+    },
+    {
+      "id": "wr_easy_15",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) d <= clk;\n```\n// Review context: `en[15:0]` slot 15 variant 1\nwire is best thought of as…",
+      "choices": [
+        "A net driven by assign / instance outputs",
+        "Always a flip-flop",
+        "A parameter",
+        "A task"
+      ],
+      "answer": 0,
+      "explain": "Wires are nets.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_easy_15.mp4",
+        "poster": "media/images/wr_easy_15-frame.png",
+        "figure": "media/images/wr_easy_15.png"
+      }
+    },
+    {
+      "id": "wr_easy_16",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [4:0] clk; assign en = clk ^ rst_n;\n```\n// Review context: `rst_n[31:0]` slot 16 variant 1\nVariables (reg) hold values between procedural updates.",
+      "answer": true,
+      "explain": "That is the programming model.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_easy_16.mp4",
+        "poster": "media/images/wr_easy_16-frame.png",
+        "figure": "media/images/wr_easy_16.png"
+      }
+    },
+    {
+      "id": "wr_easy_17",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg en; always @(*) en = rst_n ? data : en;\n```\n// Review context: `data[2:0]` slot 17 variant 1\nModule input ports are typically…",
+      "choices": [
+        "Nets driven from outside",
+        "Always reg",
+        "Always latches",
+        "Parameters"
+      ],
+      "answer": 0,
+      "explain": "Inputs connect as nets.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_easy_17.mp4",
+        "poster": "media/images/wr_easy_17-frame.png",
+        "figure": "media/images/wr_easy_17.png"
+      }
+    },
+    {
+      "id": "wr_easy_18",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 7; localparam MAX = (1<<W)-1;\n```\n// Review context: `count[3:0]` slot 18 variant 1\nDriving a wire from an always block without a continuous assign…",
+      "choices": [
+        "Is illegal (need a variable)",
+        "Is preferred",
+        "Creates a PLL",
+        "Forces Z"
+      ],
+      "answer": 0,
+      "explain": "Procedural code writes variables.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_easy_18.mp4",
+        "poster": "media/images/wr_easy_18-frame.png",
+        "figure": "media/images/wr_easy_18.png"
+      }
+    },
+    {
+      "id": "wr_easy_19",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) data <= count;\n```\n// Review context: `a[4:0]` slot 19 variant 1\noutput wire q is a legal ANSI-style net output.",
+      "answer": true,
+      "explain": "Outputs may be nets.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_easy_19.mp4",
+        "poster": "media/images/wr_easy_19-frame.png",
+        "figure": "media/images/wr_easy_19.png"
+      }
+    },
+    {
+      "id": "wr_easy_20",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [11:0] count; assign sel = count ^ out;\n```\n// Review context: `b[5:0]` slot 20 variant 1\ninteger and time are…",
+      "choices": [
+        "Variable types often used in TB/loops",
+        "Net types",
+        "Port directions",
+        "Bases for literals"
+      ],
+      "answer": 0,
+      "explain": "They are variables.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_easy_20.mp4",
+        "poster": "media/images/wr_easy_20-frame.png",
+        "figure": "media/images/wr_easy_20.png"
+      }
+    },
+    {
+      "id": "wr_easy_21",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg sel; always @(*) sel = out ? sum : sel;\n```\n// Review context: `y[6:0]` slot 21 variant 1\nIn classic Verilog, continuous assign drives…",
+      "choices": [
+        "A net (wire)",
+        "Only a reg",
+        "Only parameters",
+        "Nothing — assign is illegal"
+      ],
+      "answer": 0,
+      "explain": "assign targets nets.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_easy_21.mp4",
+        "poster": "media/images/wr_easy_21-frame.png",
+        "figure": "media/images/wr_easy_21.png"
+      }
+    },
+    {
+      "id": "wr_easy_22",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 32; localparam MAX = (1<<W)-1;\n```\n// Review context: `q[7:0]` slot 22 variant 1\nalways @(*) y = a & b; needs y declared as…",
+      "choices": [
+        "reg (a variable)",
+        "wire only",
+        "input",
+        "inout always"
+      ],
+      "answer": 0,
+      "explain": "Procedural assigns need variables.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_easy_22.mp4",
+        "poster": "media/images/wr_easy_22-frame.png",
+        "figure": "media/images/wr_easy_22.png"
+      }
+    },
+    {
+      "id": "wr_easy_23",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) sum <= din;\n```\n// Review context: `d[11:0]` slot 23 variant 1\nreg always means a flip-flop in hardware.",
+      "answer": false,
+      "explain": "reg is a variable type; combo regs exist.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_easy_23.mp4",
+        "poster": "media/images/wr_easy_23-frame.png",
+        "figure": "media/images/wr_easy_23.png"
+      }
+    },
+    {
+      "id": "wr_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [3:0] din; assign qout = din ^ a;\n```\n// Review context: `clk[15:0]` slot 24 variant 1\nassign y = a & b with y declared reg is…",
+      "choices": [
+        "Illegal in classic Verilog",
+        "Required for synthesis",
+        "Only illegal in TB",
+        "Same as always @(*)"
+      ],
+      "answer": 0,
+      "explain": "Cannot assign to reg continuously.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_easy_24.mp4",
+        "poster": "media/images/wr_easy_24-frame.png",
+        "figure": "media/images/wr_easy_24.png"
+      }
+    },
+    {
+      "id": "wr_easy_25",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg qout; always @(*) qout = a ? b : qout;\n```\n// Review context: `en[31:0]` slot 25 variant 1\nwire is best thought of as…",
+      "choices": [
+        "A net driven by assign / instance outputs",
+        "Always a flip-flop",
+        "A parameter",
+        "A task"
+      ],
+      "answer": 0,
+      "explain": "Wires are nets.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_easy_25.mp4",
+        "poster": "media/images/wr_easy_25-frame.png",
+        "figure": "media/images/wr_easy_25.png"
+      }
+    },
+    {
+      "id": "wr_easy_26",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 6; localparam MAX = (1<<W)-1;\n```\n// Review context: `rst_n[2:0]` slot 26 variant 1\nVariables (reg) hold values between procedural updates.",
+      "answer": true,
+      "explain": "That is the programming model.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_easy_26.mp4",
+        "poster": "media/images/wr_easy_26-frame.png",
+        "figure": "media/images/wr_easy_26.png"
+      }
+    },
+    {
+      "id": "wr_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) b <= y;\n```\n// Review context: `data[3:0]` slot 27 variant 1\nModule input ports are typically…",
+      "choices": [
+        "Nets driven from outside",
+        "Always reg",
+        "Always latches",
+        "Parameters"
+      ],
+      "answer": 0,
+      "explain": "Inputs connect as nets.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_easy_27.mp4",
+        "poster": "media/images/wr_easy_27-frame.png",
+        "figure": "media/images/wr_easy_27.png"
+      }
+    },
+    {
+      "id": "wr_easy_28",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nwire [7:0] y; assign q = y ^ d;\n```\n// Review context: `count[4:0]` slot 28 variant 1\nDriving a wire from an always block without a continuous assign…",
+      "choices": [
+        "Is illegal (need a variable)",
+        "Is preferred",
+        "Creates a PLL",
+        "Forces Z"
+      ],
+      "answer": 0,
+      "explain": "Procedural code writes variables.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_easy_28.mp4",
+        "poster": "media/images/wr_easy_28-frame.png",
+        "figure": "media/images/wr_easy_28.png"
+      }
+    },
+    {
+      "id": "wr_easy_29",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg q; always @(*) q = d ? clk : q;\n```\n// Review context: `a[5:0]` slot 29 variant 1\noutput wire q is a legal ANSI-style net output.",
+      "answer": true,
+      "explain": "Outputs may be nets.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_easy_29.mp4",
+        "poster": "media/images/wr_easy_29-frame.png",
+        "figure": "media/images/wr_easy_29.png"
+      }
+    },
+    {
+      "id": "wr_easy_30",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nparameter W = 16; localparam MAX = (1<<W)-1;\n```\n// Review context: `b[6:0]` slot 30 variant 1\ninteger and time are…",
+      "choices": [
+        "Variable types often used in TB/loops",
+        "Net types",
+        "Port directions",
+        "Bases for literals"
+      ],
+      "answer": 0,
+      "explain": "They are variables.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_easy_30.mp4",
+        "poster": "media/images/wr_easy_30-frame.png",
+        "figure": "media/images/wr_easy_30.png"
+      }
+    },
+    {
+      "id": "wr_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #3: combo block drives y\n```\noutput reg q in a clocked always suggests…",
+      "choices": [
+        "q is updated procedurally (often a flop)",
+        "q must be a wire",
+        "q is a parameter",
+        "q cannot be in ports"
+      ],
+      "answer": 0,
+      "explain": "Procedural output regs commonly map to flops.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_medium_01.mp4",
+        "poster": "media/images/wr_medium_01-frame.png",
+        "figure": "media/images/wr_medium_01.png"
+      }
+    },
+    {
+      "id": "wr_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign q = (d & clk) | (d ^ clk);\n```\nA combo always writing an incomplete reg…",
+      "choices": [
+        "Risks latch inference",
+        "Forces a flop",
+        "Is multi-driver on a wire",
+        "Deletes sensitivity"
+      ],
+      "answer": 0,
+      "explain": "Incomplete combo → latch risk.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_medium_02.mp4",
+        "poster": "media/images/wr_medium_02-frame.png",
+        "figure": "media/images/wr_medium_02.png"
+      }
+    },
+    {
+      "id": "wr_medium_03",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) d <= 0; else d <= clk;\n```\nIn SystemVerilog, logic can replace many wire/reg declarations.",
+      "answer": true,
+      "explain": "logic is a flexible 4-state type.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_medium_03.mp4",
+        "poster": "media/images/wr_medium_03-frame.png",
+        "figure": "media/images/wr_medium_03.png"
+      }
+    },
+    {
+      "id": "wr_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g6 end\n```\nTwo continuous assigns to the same wire…",
+      "choices": [
+        "Multi-driver contention",
+        "Are required",
+        "Create a flop",
+        "Are ignored"
+      ],
+      "answer": 0,
+      "explain": "One net, one structural driver style.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_medium_04.mp4",
+        "poster": "media/images/wr_medium_04-frame.png",
+        "figure": "media/images/wr_medium_04.png"
+      }
+    },
+    {
+      "id": "wr_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #7: combo block drives en\n```\nReading a reg in a continuous assign RHS…",
+      "choices": [
+        "Is legal",
+        "Is illegal always",
+        "Converts reg to wire",
+        "Forces blocking"
+      ],
+      "answer": 0,
+      "explain": "RHS may read variables.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_medium_05.mp4",
+        "poster": "media/images/wr_medium_05-frame.png",
+        "figure": "media/images/wr_medium_05.png"
+      }
+    },
+    {
+      "id": "wr_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign rst_n = (data & count) | (data ^ count);\n```\nWhat are tri-state nets, wired AND nets, and wired OR nets in Verilog?",
+      "choices": [
+        "Net types with resolution functions",
+        "Flip-flop primitives",
+        "Only SV interfaces",
+        "Parameters"
+      ],
+      "answer": 0,
+      "explain": "Resolved nets.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_medium_06.mp4",
+        "poster": "media/images/wr_medium_06-frame.png",
+        "figure": "media/images/wr_medium_06.png"
+      }
+    },
+    {
+      "id": "wr_medium_07",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) data <= 0; else data <= count;\n```\nYou can declare `input reg a` in classic Verilog ports.",
+      "answer": false,
+      "explain": "Inputs are nets, not reg, in classic port rules.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_medium_07.mp4",
+        "poster": "media/images/wr_medium_07-frame.png",
+        "figure": "media/images/wr_medium_07.png"
+      }
+    },
+    {
+      "id": "wr_medium_08",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g10 end\n```\nLatch vs flop distinction comes from…",
+      "choices": [
+        "How you write sequential/combo behavior — not the word reg alone",
+        "Declaring wire",
+        "Filename",
+        "Only $monitor"
+      ],
+      "answer": 0,
+      "explain": "Hardware form follows coding pattern.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_medium_08.mp4",
+        "poster": "media/images/wr_medium_08-frame.png",
+        "figure": "media/images/wr_medium_08.png"
+      }
+    },
+    {
+      "id": "wr_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #11: combo block drives sel\n```\nassign of a bit-select on a wire…",
+      "choices": [
+        "Is a structural continuous drive of that bit",
+        "Requires always_ff",
+        "Needs non-blocking",
+        "Is only for TB"
+      ],
+      "answer": 0,
+      "explain": "Bit/part selects can be assign targets on nets.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_medium_09.mp4",
+        "poster": "media/images/wr_medium_09-frame.png",
+        "figure": "media/images/wr_medium_09.png"
+      }
+    },
+    {
+      "id": "wr_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign out = (sum & din) | (sum ^ din);\n```\nInitial procedural assign to a reg…",
+      "choices": [
+        "Runs once at time 0 (simulation)",
+        "Is synthesizable reset everywhere",
+        "Drives a wire continuously",
+        "Sets a parameter"
+      ],
+      "answer": 0,
+      "explain": "initial is simulation-oriented.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_medium_10.mp4",
+        "poster": "media/images/wr_medium_10-frame.png",
+        "figure": "media/images/wr_medium_10.png"
+      }
+    },
+    {
+      "id": "wr_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) sum <= 0; else sum <= din;\n```\n// Review context: `y[5:0]` slot 11 variant 1\noutput reg q in a clocked always suggests…",
+      "choices": [
+        "q is updated procedurally (often a flop)",
+        "q must be a wire",
+        "q is a parameter",
+        "q cannot be in ports"
+      ],
+      "answer": 0,
+      "explain": "Procedural output regs commonly map to flops.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_medium_11.mp4",
+        "poster": "media/images/wr_medium_11-frame.png",
+        "figure": "media/images/wr_medium_11.png"
+      }
+    },
+    {
+      "id": "wr_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g14 end\n```\n// Review context: `q[6:0]` slot 12 variant 1\nA combo always writing an incomplete reg…",
+      "choices": [
+        "Risks latch inference",
+        "Forces a flop",
+        "Is multi-driver on a wire",
+        "Deletes sensitivity"
+      ],
+      "answer": 0,
+      "explain": "Incomplete combo → latch risk.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_medium_12.mp4",
+        "poster": "media/images/wr_medium_12-frame.png",
+        "figure": "media/images/wr_medium_12.png"
+      }
+    },
+    {
+      "id": "wr_medium_13",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #15: combo block drives qout\n```\n// Review context: `d[7:0]` slot 13 variant 1\nIn SystemVerilog, logic can replace many wire/reg declarations.",
+      "answer": true,
+      "explain": "logic is a flexible 4-state type.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_medium_13.mp4",
+        "poster": "media/images/wr_medium_13-frame.png",
+        "figure": "media/images/wr_medium_13.png"
+      }
+    },
+    {
+      "id": "wr_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign a = (b & y) | (b ^ y);\n```\n// Review context: `clk[11:0]` slot 14 variant 1\nTwo continuous assigns to the same wire…",
+      "choices": [
+        "Multi-driver contention",
+        "Are required",
+        "Create a flop",
+        "Are ignored"
+      ],
+      "answer": 0,
+      "explain": "One net, one structural driver style.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_medium_14.mp4",
+        "poster": "media/images/wr_medium_14-frame.png",
+        "figure": "media/images/wr_medium_14.png"
+      }
+    },
+    {
+      "id": "wr_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) b <= 0; else b <= y;\n```\n// Review context: `en[15:0]` slot 15 variant 1\nReading a reg in a continuous assign RHS…",
+      "choices": [
+        "Is legal",
+        "Is illegal always",
+        "Converts reg to wire",
+        "Forces blocking"
+      ],
+      "answer": 0,
+      "explain": "RHS may read variables.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_medium_15.mp4",
+        "poster": "media/images/wr_medium_15-frame.png",
+        "figure": "media/images/wr_medium_15.png"
+      }
+    },
+    {
+      "id": "wr_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g18 end\n```\n// Review context: `rst_n[31:0]` slot 16 variant 1\ntri / wand / wor are…",
+      "choices": [
+        "Net types with resolution functions",
+        "Flip-flop primitives",
+        "Only SV interfaces",
+        "Parameters"
+      ],
+      "answer": 0,
+      "explain": "Resolved nets.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_medium_16.mp4",
+        "poster": "media/images/wr_medium_16-frame.png",
+        "figure": "media/images/wr_medium_16.png"
+      }
+    },
+    {
+      "id": "wr_medium_17",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #19: combo block drives q\n```\n// Review context: `data[2:0]` slot 17 variant 1\nYou can declare `input reg a` in classic Verilog ports.",
+      "answer": false,
+      "explain": "Inputs are nets, not reg, in classic port rules.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_medium_17.mp4",
+        "poster": "media/images/wr_medium_17-frame.png",
+        "figure": "media/images/wr_medium_17.png"
+      }
+    },
+    {
+      "id": "wr_medium_18",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign d = (clk & en) | (clk ^ en);\n```\n// Review context: `count[3:0]` slot 18 variant 1\nLatch vs flop distinction comes from…",
+      "choices": [
+        "How you write sequential/combo behavior — not the word reg alone",
+        "Declaring wire",
+        "Filename",
+        "Only $monitor"
+      ],
+      "answer": 0,
+      "explain": "Hardware form follows coding pattern.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_medium_18.mp4",
+        "poster": "media/images/wr_medium_18-frame.png",
+        "figure": "media/images/wr_medium_18.png"
+      }
+    },
+    {
+      "id": "wr_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) clk <= 0; else clk <= en;\n```\n// Review context: `a[4:0]` slot 19 variant 1\nassign of a bit-select on a wire…",
+      "choices": [
+        "Is a structural continuous drive of that bit",
+        "Requires always_ff",
+        "Needs non-blocking",
+        "Is only for TB"
+      ],
+      "answer": 0,
+      "explain": "Bit/part selects can be assign targets on nets.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_medium_19.mp4",
+        "poster": "media/images/wr_medium_19-frame.png",
+        "figure": "media/images/wr_medium_19.png"
+      }
+    },
+    {
+      "id": "wr_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g22 end\n```\n// Review context: `b[5:0]` slot 20 variant 1\nInitial procedural assign to a reg…",
+      "choices": [
+        "Runs once at time 0 (simulation)",
+        "Is synthesizable reset everywhere",
+        "Drives a wire continuously",
+        "Sets a parameter"
+      ],
+      "answer": 0,
+      "explain": "initial is simulation-oriented.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_medium_20.mp4",
+        "poster": "media/images/wr_medium_20-frame.png",
+        "figure": "media/images/wr_medium_20.png"
+      }
+    },
+    {
+      "id": "wr_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #23: combo block drives rst_n\n```\n// Review context: `y[6:0]` slot 21 variant 1\noutput reg q in a clocked always suggests…",
+      "choices": [
+        "q is updated procedurally (often a flop)",
+        "q must be a wire",
+        "q is a parameter",
+        "q cannot be in ports"
+      ],
+      "answer": 0,
+      "explain": "Procedural output regs commonly map to flops.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_medium_21.mp4",
+        "poster": "media/images/wr_medium_21-frame.png",
+        "figure": "media/images/wr_medium_21.png"
+      }
+    },
+    {
+      "id": "wr_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign data = (count & sel) | (count ^ sel);\n```\n// Review context: `q[7:0]` slot 22 variant 1\nA combo always writing an incomplete reg…",
+      "choices": [
+        "Risks latch inference",
+        "Forces a flop",
+        "Is multi-driver on a wire",
+        "Deletes sensitivity"
+      ],
+      "answer": 0,
+      "explain": "Incomplete combo → latch risk.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_medium_22.mp4",
+        "poster": "media/images/wr_medium_22-frame.png",
+        "figure": "media/images/wr_medium_22.png"
+      }
+    },
+    {
+      "id": "wr_medium_23",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) count <= 0; else count <= sel;\n```\n// Review context: `d[11:0]` slot 23 variant 1\nIn SystemVerilog, logic can replace many wire/reg declarations.",
+      "answer": true,
+      "explain": "logic is a flexible 4-state type.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_medium_23.mp4",
+        "poster": "media/images/wr_medium_23-frame.png",
+        "figure": "media/images/wr_medium_23.png"
+      }
+    },
+    {
+      "id": "wr_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g26 end\n```\n// Review context: `clk[15:0]` slot 24 variant 1\nTwo continuous assigns to the same wire…",
+      "choices": [
+        "Multi-driver contention",
+        "Are required",
+        "Create a flop",
+        "Are ignored"
+      ],
+      "answer": 0,
+      "explain": "One net, one structural driver style.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_medium_24.mp4",
+        "poster": "media/images/wr_medium_24-frame.png",
+        "figure": "media/images/wr_medium_24.png"
+      }
+    },
+    {
+      "id": "wr_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #27: combo block drives out\n```\n// Review context: `en[31:0]` slot 25 variant 1\nReading a reg in a continuous assign RHS…",
+      "choices": [
+        "Is legal",
+        "Is illegal always",
+        "Converts reg to wire",
+        "Forces blocking"
+      ],
+      "answer": 0,
+      "explain": "RHS may read variables.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_medium_25.mp4",
+        "poster": "media/images/wr_medium_25-frame.png",
+        "figure": "media/images/wr_medium_25.png"
+      }
+    },
+    {
+      "id": "wr_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign sum = (din & qout) | (din ^ qout);\n```\n// Review context: `rst_n[2:0]` slot 26 variant 1\ntri / wand / wor are…",
+      "choices": [
+        "Net types with resolution functions",
+        "Flip-flop primitives",
+        "Only SV interfaces",
+        "Parameters"
+      ],
+      "answer": 0,
+      "explain": "Resolved nets.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_medium_26.mp4",
+        "poster": "media/images/wr_medium_26-frame.png",
+        "figure": "media/images/wr_medium_26.png"
+      }
+    },
+    {
+      "id": "wr_medium_27",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk or negedge rst_n) if (!rst_n) din <= 0; else din <= qout;\n```\n// Review context: `data[3:0]` slot 27 variant 1\nYou can declare `input reg a` in classic Verilog ports.",
+      "answer": false,
+      "explain": "Inputs are nets, not reg, in classic port rules.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_medium_27.mp4",
+        "poster": "media/images/wr_medium_27-frame.png",
+        "figure": "media/images/wr_medium_27.png"
+      }
+    },
+    {
+      "id": "wr_medium_28",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\ngenerate if (W > 4) begin : g30 end\n```\n// Review context: `count[4:0]` slot 28 variant 1\nLatch vs flop distinction comes from…",
+      "choices": [
+        "How you write sequential/combo behavior — not the word reg alone",
+        "Declaring wire",
+        "Filename",
+        "Only $monitor"
+      ],
+      "answer": 0,
+      "explain": "Hardware form follows coding pattern.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_medium_28.mp4",
+        "poster": "media/images/wr_medium_28-frame.png",
+        "figure": "media/images/wr_medium_28.png"
+      }
+    },
+    {
+      "id": "wr_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// lint check #31: combo block drives a\n```\n// Review context: `a[5:0]` slot 29 variant 1\nassign of a bit-select on a wire…",
+      "choices": [
+        "Is a structural continuous drive of that bit",
+        "Requires always_ff",
+        "Needs non-blocking",
+        "Is only for TB"
+      ],
+      "answer": 0,
+      "explain": "Bit/part selects can be assign targets on nets.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_medium_29.mp4",
+        "poster": "media/images/wr_medium_29-frame.png",
+        "figure": "media/images/wr_medium_29.png"
+      }
+    },
+    {
+      "id": "wr_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nassign b = (y & q) | (y ^ q);\n```\n// Review context: `b[6:0]` slot 30 variant 1\nInitial procedural assign to a reg…",
+      "choices": [
+        "Runs once at time 0 (simulation)",
+        "Is synthesizable reset everywhere",
+        "Drives a wire continuously",
+        "Sets a parameter"
+      ],
+      "answer": 0,
+      "explain": "initial is simulation-oriented.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_medium_30.mp4",
+        "poster": "media/images/wr_medium_30-frame.png",
+        "figure": "media/images/wr_medium_30.png"
+      }
+    },
+    {
+      "id": "wr_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) d <= d + 1'b1; end\n```\nMixed wire + procedural drivers on one signal…",
+      "choices": [
+        "Is a classic multi-driver / type error",
+        "Is recommended reset",
+        "Creates generate",
+        "Is required for async FIFO"
+      ],
+      "answer": 0,
+      "explain": "Pick one driver style.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_hard_01.mp4",
+        "poster": "media/images/wr_hard_01-frame.png",
+        "figure": "media/images/wr_hard_01.png"
+      }
+    },
+    {
+      "id": "wr_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 6: do not sample clk multi-bit raw\n```\nforce on a wire in TB…",
+      "choices": [
+        "Overrides drivers temporarily in simulation",
+        "Is synthesizable RTL",
+        "Renames the net",
+        "Sets localparam"
+      ],
+      "answer": 0,
+      "explain": "force/release are sim controls.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_hard_02.mp4",
+        "poster": "media/images/wr_hard_02-frame.png",
+        "figure": "media/images/wr_hard_02.png"
+      }
+    },
+    {
+      "id": "wr_hard_03",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (en) /* full case required */\n```\nA reg used only in combo always @(*) can still synthesize to gates without a flop.",
+      "answer": true,
+      "explain": "Combo reg ≠ flop.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_hard_03.mp4",
+        "poster": "media/images/wr_hard_03-frame.png",
+        "figure": "media/images/wr_hard_03.png"
+      }
+    },
+    {
+      "id": "wr_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p8; @(posedge clk) rst_n |-> ##1 data; endproperty\n```\nContinuous assign with `#` delay…",
+      "choices": [
+        "Is not synthesizable RTL delay modeling",
+        "Creates a PLL",
+        "Is required for flops",
+        "Fixes CDC"
+      ],
+      "answer": 0,
+      "explain": "Hash delays are sim-only for synthesis.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_hard_04.mp4",
+        "poster": "media/images/wr_hard_04-frame.png",
+        "figure": "media/images/wr_hard_04.png"
+      }
+    },
+    {
+      "id": "wr_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) data <= data + 1'b1; end\n```\nInout connected to a reg variable directly…",
+      "choices": [
+        "Needs careful net/variable rules — often a wire + assign/enable pattern",
+        "Is always preferred",
+        "Deletes direction",
+        "Forces signed"
+      ],
+      "answer": 0,
+      "explain": "Bidirectional needs net discipline.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_hard_05.mp4",
+        "poster": "media/images/wr_hard_05-frame.png",
+        "figure": "media/images/wr_hard_05.png"
+      }
+    },
+    {
+      "id": "wr_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 10: do not sample count multi-bit raw\n```\nMultiple always blocks writing the same reg…",
+      "choices": [
+        "Last-write / multi-driver style bug",
+        "Is the standard dual-port RAM idiom without care",
+        "Required for NBA",
+        "Only legal with wire"
+      ],
+      "answer": 0,
+      "explain": "One procedural driver per reg.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_hard_06.mp4",
+        "poster": "media/images/wr_hard_06-frame.png",
+        "figure": "media/images/wr_hard_06.png"
+      }
+    },
+    {
+      "id": "wr_hard_07",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (sel) /* full case required */\n```\n`wire signed` can declare a signed net in Verilog-2001.",
+      "answer": true,
+      "explain": "Signed nets exist.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_hard_07.mp4",
+        "poster": "media/images/wr_hard_07-frame.png",
+        "figure": "media/images/wr_hard_07.png"
+      }
+    },
+    {
+      "id": "wr_hard_08",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p12; @(posedge clk) out |-> ##1 sum; endproperty\n```\nPullup/pulldown on a net…",
+      "choices": [
+        "Are weak continuous drivers (often pads/TB)",
+        "Replace always_ff",
+        "Are parameters",
+        "Force X always"
+      ],
+      "answer": 0,
+      "explain": "Weak net drivers.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_hard_08.mp4",
+        "poster": "media/images/wr_hard_08-frame.png",
+        "figure": "media/images/wr_hard_08.png"
+      }
+    },
+    {
+      "id": "wr_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) sum <= sum + 1'b1; end\n```\nAssigning to an input port from inside the module…",
+      "choices": [
+        "Is illegal / bad — inputs are driven externally",
+        "Is reset style",
+        "Creates a flop",
+        "Sets WIDTH"
+      ],
+      "answer": 0,
+      "explain": "Don't drive inputs from inside.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_hard_09.mp4",
+        "poster": "media/images/wr_hard_09-frame.png",
+        "figure": "media/images/wr_hard_09.png"
+      }
+    },
+    {
+      "id": "wr_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 14: do not sample din multi-bit raw\n```\nnettype / custom resolution (SV)…",
+      "choices": [
+        "Goes beyond classic wire/reg teaching — advanced",
+        "Is required in 1364-1995",
+        "Replaces modules",
+        "Is a sensitivity list"
+      ],
+      "answer": 0,
+      "explain": "Advanced SV nettypes.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_hard_10.mp4",
+        "poster": "media/images/wr_hard_10-frame.png",
+        "figure": "media/images/wr_hard_10.png"
+      }
+    },
+    {
+      "id": "wr_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (qout) /* full case required */\n```\n// Review context: `y[5:0]` slot 11 variant 1\nMixed wire + procedural drivers on one signal…",
+      "choices": [
+        "Is a classic multi-driver / type error",
+        "Is recommended reset",
+        "Creates generate",
+        "Is required for async FIFO"
+      ],
+      "answer": 0,
+      "explain": "Pick one driver style.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_hard_11.mp4",
+        "poster": "media/images/wr_hard_11-frame.png",
+        "figure": "media/images/wr_hard_11.png"
+      }
+    },
+    {
+      "id": "wr_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p16; @(posedge clk) a |-> ##1 b; endproperty\n```\n// Review context: `q[6:0]` slot 12 variant 1\nforce on a wire in TB…",
+      "choices": [
+        "Overrides drivers temporarily in simulation",
+        "Is synthesizable RTL",
+        "Renames the net",
+        "Sets localparam"
+      ],
+      "answer": 0,
+      "explain": "force/release are sim controls.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_hard_12.mp4",
+        "poster": "media/images/wr_hard_12-frame.png",
+        "figure": "media/images/wr_hard_12.png"
+      }
+    },
+    {
+      "id": "wr_hard_13",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) b <= b + 1'b1; end\n```\n// Review context: `d[7:0]` slot 13 variant 1\nA reg used only in combo always @(*) can still synthesize to gates without a flop.",
+      "answer": true,
+      "explain": "Combo reg ≠ flop.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_hard_13.mp4",
+        "poster": "media/images/wr_hard_13-frame.png",
+        "figure": "media/images/wr_hard_13.png"
+      }
+    },
+    {
+      "id": "wr_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 18: do not sample y multi-bit raw\n```\n// Review context: `clk[11:0]` slot 14 variant 1\nContinuous assign with `#` delay…",
+      "choices": [
+        "Is not synthesizable RTL delay modeling",
+        "Creates a PLL",
+        "Is required for flops",
+        "Fixes CDC"
+      ],
+      "answer": 0,
+      "explain": "Hash delays are sim-only for synthesis.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_hard_14.mp4",
+        "poster": "media/images/wr_hard_14-frame.png",
+        "figure": "media/images/wr_hard_14.png"
+      }
+    },
+    {
+      "id": "wr_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (q) /* full case required */\n```\n// Review context: `en[15:0]` slot 15 variant 1\nInout connected to a reg variable directly…",
+      "choices": [
+        "Needs careful net/variable rules — often a wire + assign/enable pattern",
+        "Is always preferred",
+        "Deletes direction",
+        "Forces signed"
+      ],
+      "answer": 0,
+      "explain": "Bidirectional needs net discipline.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_hard_15.mp4",
+        "poster": "media/images/wr_hard_15-frame.png",
+        "figure": "media/images/wr_hard_15.png"
+      }
+    },
+    {
+      "id": "wr_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p20; @(posedge clk) d |-> ##1 clk; endproperty\n```\n// Review context: `rst_n[31:0]` slot 16 variant 1\nMultiple always blocks writing the same reg…",
+      "choices": [
+        "Last-write / multi-driver style bug",
+        "Is the standard dual-port RAM idiom without care",
+        "Required for NBA",
+        "Only legal with wire"
+      ],
+      "answer": 0,
+      "explain": "One procedural driver per reg.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_hard_16.mp4",
+        "poster": "media/images/wr_hard_16-frame.png",
+        "figure": "media/images/wr_hard_16.png"
+      }
+    },
+    {
+      "id": "wr_hard_17",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) clk <= clk + 1'b1; end\n```\n// Review context: `data[2:0]` slot 17 variant 1\n`wire signed` can declare a signed net in Verilog-2001.",
+      "answer": true,
+      "explain": "Signed nets exist.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_hard_17.mp4",
+        "poster": "media/images/wr_hard_17-frame.png",
+        "figure": "media/images/wr_hard_17.png"
+      }
+    },
+    {
+      "id": "wr_hard_18",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 22: do not sample en multi-bit raw\n```\n// Review context: `count[3:0]` slot 18 variant 1\nPullup/pulldown on a net…",
+      "choices": [
+        "Are weak continuous drivers (often pads/TB)",
+        "Replace always_ff",
+        "Are parameters",
+        "Force X always"
+      ],
+      "answer": 0,
+      "explain": "Weak net drivers.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_hard_18.mp4",
+        "poster": "media/images/wr_hard_18-frame.png",
+        "figure": "media/images/wr_hard_18.png"
+      }
+    },
+    {
+      "id": "wr_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (rst_n) /* full case required */\n```\n// Review context: `a[4:0]` slot 19 variant 1\nAssigning to an input port from inside the module…",
+      "choices": [
+        "Is illegal / bad — inputs are driven externally",
+        "Is reset style",
+        "Creates a flop",
+        "Sets WIDTH"
+      ],
+      "answer": 0,
+      "explain": "Don't drive inputs from inside.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_hard_19.mp4",
+        "poster": "media/images/wr_hard_19-frame.png",
+        "figure": "media/images/wr_hard_19.png"
+      }
+    },
+    {
+      "id": "wr_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p24; @(posedge clk) data |-> ##1 count; endproperty\n```\n// Review context: `b[5:0]` slot 20 variant 1\nnettype / custom resolution (SV)…",
+      "choices": [
+        "Goes beyond classic wire/reg teaching — advanced",
+        "Is required in 1364-1995",
+        "Replaces modules",
+        "Is a sensitivity list"
+      ],
+      "answer": 0,
+      "explain": "Advanced SV nettypes.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_hard_20.mp4",
+        "poster": "media/images/wr_hard_20-frame.png",
+        "figure": "media/images/wr_hard_20.png"
+      }
+    },
+    {
+      "id": "wr_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) count <= count + 1'b1; end\n```\n// Review context: `y[6:0]` slot 21 variant 1\nMixed wire + procedural drivers on one signal…",
+      "choices": [
+        "Is a classic multi-driver / type error",
+        "Is recommended reset",
+        "Creates generate",
+        "Is required for async FIFO"
+      ],
+      "answer": 0,
+      "explain": "Pick one driver style.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_hard_21.mp4",
+        "poster": "media/images/wr_hard_21-frame.png",
+        "figure": "media/images/wr_hard_21.png"
+      }
+    },
+    {
+      "id": "wr_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 26: do not sample sel multi-bit raw\n```\n// Review context: `q[7:0]` slot 22 variant 1\nforce on a wire in TB…",
+      "choices": [
+        "Overrides drivers temporarily in simulation",
+        "Is synthesizable RTL",
+        "Renames the net",
+        "Sets localparam"
+      ],
+      "answer": 0,
+      "explain": "force/release are sim controls.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_hard_22.mp4",
+        "poster": "media/images/wr_hard_22-frame.png",
+        "figure": "media/images/wr_hard_22.png"
+      }
+    },
+    {
+      "id": "wr_hard_23",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (out) /* full case required */\n```\n// Review context: `d[11:0]` slot 23 variant 1\nA reg used only in combo always @(*) can still synthesize to gates without a flop.",
+      "answer": true,
+      "explain": "Combo reg ≠ flop.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_hard_23.mp4",
+        "poster": "media/images/wr_hard_23-frame.png",
+        "figure": "media/images/wr_hard_23.png"
+      }
+    },
+    {
+      "id": "wr_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p28; @(posedge clk) sum |-> ##1 din; endproperty\n```\n// Review context: `clk[15:0]` slot 24 variant 1\nContinuous assign with `#` delay…",
+      "choices": [
+        "Is not synthesizable RTL delay modeling",
+        "Creates a PLL",
+        "Is required for flops",
+        "Fixes CDC"
+      ],
+      "answer": 0,
+      "explain": "Hash delays are sim-only for synthesis.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_hard_24.mp4",
+        "poster": "media/images/wr_hard_24-frame.png",
+        "figure": "media/images/wr_hard_24.png"
+      }
+    },
+    {
+      "id": "wr_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) din <= din + 1'b1; end\n```\n// Review context: `en[31:0]` slot 25 variant 1\nInout connected to a reg variable directly…",
+      "choices": [
+        "Needs careful net/variable rules — often a wire + assign/enable pattern",
+        "Is always preferred",
+        "Deletes direction",
+        "Forces signed"
+      ],
+      "answer": 0,
+      "explain": "Bidirectional needs net discipline.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_hard_25.mp4",
+        "poster": "media/images/wr_hard_25-frame.png",
+        "figure": "media/images/wr_hard_25.png"
+      }
+    },
+    {
+      "id": "wr_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 30: do not sample qout multi-bit raw\n```\n// Review context: `rst_n[2:0]` slot 26 variant 1\nMultiple always blocks writing the same reg…",
+      "choices": [
+        "Last-write / multi-driver style bug",
+        "Is the standard dual-port RAM idiom without care",
+        "Required for NBA",
+        "Only legal with wire"
+      ],
+      "answer": 0,
+      "explain": "One procedural driver per reg.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_hard_26.mp4",
+        "poster": "media/images/wr_hard_26-frame.png",
+        "figure": "media/images/wr_hard_26.png"
+      }
+    },
+    {
+      "id": "wr_hard_27",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nunique case (a) /* full case required */\n```\n// Review context: `data[3:0]` slot 27 variant 1\n`wire signed` can declare a signed net in Verilog-2001.",
+      "answer": true,
+      "explain": "Signed nets exist.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_hard_27.mp4",
+        "poster": "media/images/wr_hard_27-frame.png",
+        "figure": "media/images/wr_hard_27.png"
+      }
+    },
+    {
+      "id": "wr_hard_28",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nproperty p32; @(posedge clk) b |-> ##1 y; endproperty\n```\n// Review context: `count[4:0]` slot 28 variant 1\nPullup/pulldown on a net…",
+      "choices": [
+        "Are weak continuous drivers (often pads/TB)",
+        "Replace always_ff",
+        "Are parameters",
+        "Force X always"
+      ],
+      "answer": 0,
+      "explain": "Weak net drivers.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_hard_28.mp4",
+        "poster": "media/images/wr_hard_28-frame.png",
+        "figure": "media/images/wr_hard_28.png"
+      }
+    },
+    {
+      "id": "wr_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways_ff @(posedge clk) begin if (ce) y <= y + 1'b1; end\n```\n// Review context: `a[5:0]` slot 29 variant 1\nAssigning to an input port from inside the module…",
+      "choices": [
+        "Is illegal / bad — inputs are driven externally",
+        "Is reset style",
+        "Creates a flop",
+        "Sets WIDTH"
+      ],
+      "answer": 0,
+      "explain": "Don't drive inputs from inside.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_hard_29.mp4",
+        "poster": "media/images/wr_hard_29-frame.png",
+        "figure": "media/images/wr_hard_29.png"
+      }
+    },
+    {
+      "id": "wr_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\n// CDC note 34: do not sample q multi-bit raw\n```\n// Review context: `b[6:0]` slot 30 variant 1\nnettype / custom resolution (SV)…",
+      "choices": [
+        "Goes beyond classic wire/reg teaching — advanced",
+        "Is required in 1364-1995",
+        "Replaces modules",
+        "Is a sensitivity list"
+      ],
+      "answer": 0,
+      "explain": "Advanced SV nettypes.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/wr_hard_30.mp4",
+        "poster": "media/images/wr_hard_30-frame.png",
+        "figure": "media/images/wr_hard_30.png"
+      }
+    }
+  ]
+}

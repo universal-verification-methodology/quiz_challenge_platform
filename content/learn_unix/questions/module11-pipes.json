@@ -1,0 +1,1698 @@
+{
+  "module": "module11-pipes",
+  "title": "Pipes, redirection, xargs",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls tmp 2>&1 | tee /tmp/delta.log >/dev/null\n```\nIn cmd1 | cmd2, what happens?",
+      "choices": [
+        "cmd2's stdout becomes cmd1's stdin",
+        "cmd1's stdout becomes cmd2's stdin",
+        "Both commands write only to disk",
+        "The pipe deletes cmd1"
+      ],
+      "answer": 1,
+      "explain": "The pipe connects left stdout to right stdin.",
+      "difficulty": "easy",
+      "id": "pipe_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_easy_01.mp4",
+        "poster": "media/images/pipe_easy_01-frame.png",
+        "figure": "media/images/pipe_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -i error build/echo.log | head\n```\ngrep -i error file means...",
+      "choices": [
+        "Only exact lowercase error",
+        "Case-insensitive match for error",
+        "Invert match",
+        "Count only"
+      ],
+      "answer": 1,
+      "explain": "-i ignores case (ERROR, Error, error).",
+      "difficulty": "easy",
+      "id": "pipe_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_easy_02.mp4",
+        "poster": "media/images/pipe_easy_02-frame.png",
+        "figure": "media/images/pipe_easy_02.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { echo hi; }; cmd | tee /tmp/foxtrot6.out\n```\ncommand > file overwrites file with stdout; command >> file appends.",
+      "answer": true,
+      "explain": "> truncates/overwrites; >> appends.",
+      "difficulty": "easy",
+      "id": "pipe_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_easy_03.mp4",
+        "poster": "media/images/pipe_easy_03-frame.png",
+        "figure": "media/images/pipe_easy_03.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf 'a\\nb\\n' | xargs -n1 echo\n```\n2>&1 typically means...",
+      "choices": [
+        "Ignore all errors",
+        "Send stderr to the same place as stdout",
+        "Run two shells",
+        "Disable pipes"
+      ],
+      "answer": 1,
+      "explain": "2>&1 merges stderr into stdout's destination.",
+      "difficulty": "easy",
+      "id": "pipe_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_easy_04.mp4",
+        "poster": "media/images/pipe_easy_04-frame.png",
+        "figure": "media/images/pipe_easy_04.png"
+      }
+    },
+    {
+      "id": "pipe_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls cfg 2>&1 | tee /tmp/hotel.log >/dev/null\n```\nIn `cmd1 | cmd2`, what happens?",
+      "choices": [
+        "cmd2 stdout becomes cmd1 stdin",
+        "cmd1 stdout becomes cmd2 stdin",
+        "Both write only to disk",
+        "Pipe deletes cmd1"
+      ],
+      "answer": 1,
+      "explain": "Left stdout feeds right stdin.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_easy_05.mp4",
+        "poster": "media/images/pipe_easy_05-frame.png",
+        "figure": "media/images/pipe_easy_05.png"
+      }
+    },
+    {
+      "id": "pipe_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -i error bin/india.log | head\n```\n`grep -i error log6.log` means...",
+      "choices": [
+        "Exact lowercase only",
+        "Case-insensitive match for error",
+        "Invert match",
+        "Count only"
+      ],
+      "answer": 1,
+      "explain": "-i ignores case.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_easy_06.mp4",
+        "poster": "media/images/pipe_easy_06-frame.png",
+        "figure": "media/images/pipe_easy_06.png"
+      }
+    },
+    {
+      "id": "pipe_easy_07",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { echo hi; }; cmd | tee /tmp/juliet10.out\n```\n`command > file7.txt` overwrites; `command >> file7.txt` appends.",
+      "answer": true,
+      "explain": "> truncates; >> appends.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_easy_07.mp4",
+        "poster": "media/images/pipe_easy_07-frame.png",
+        "figure": "media/images/pipe_easy_07.png"
+      }
+    },
+    {
+      "id": "pipe_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf 'a\\nb\\n' | xargs -n1 echo\n```\n`2>&1` typically means...",
+      "choices": [
+        "Ignore errors",
+        "Send stderr to the same place as stdout",
+        "Run two shells",
+        "Disable pipes"
+      ],
+      "answer": 1,
+      "explain": "Merge stderr into stdout dest.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_easy_08.mp4",
+        "poster": "media/images/pipe_easy_08-frame.png",
+        "figure": "media/images/pipe_easy_08.png"
+      }
+    },
+    {
+      "id": "pipe_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls tmp 2>&1 | tee /tmp/bravo.log >/dev/null\n```\n`cat file9.txt | cmd` is often replaceable by...",
+      "choices": [
+        "`cmd < file9.txt` or `cmd file9.txt` if supported",
+        "Only tee",
+        "Only zip",
+        "Only sudo"
+      ],
+      "answer": 0,
+      "explain": "Useless cat pattern.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_easy_09.mp4",
+        "poster": "media/images/pipe_easy_09-frame.png",
+        "figure": "media/images/pipe_easy_09.png"
+      }
+    },
+    {
+      "id": "pipe_easy_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -i error build/charlie.log | head\n```\n`tee file10.txt` copies stdin to...",
+      "choices": [
+        "Stdout and file10.txt",
+        "Only stderr",
+        "Only /dev/null",
+        "Only man"
+      ],
+      "answer": 0,
+      "explain": "tee tees.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_easy_10.mp4",
+        "poster": "media/images/pipe_easy_10-frame.png",
+        "figure": "media/images/pipe_easy_10.png"
+      }
+    },
+    {
+      "id": "pipe_easy_11",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { echo hi; }; cmd | tee /tmp/delta14.out\n```\nPipes connect processes, not temporary disk files by default.",
+      "answer": true,
+      "explain": "In-memory/kernel pipe buffers.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_easy_11.mp4",
+        "poster": "media/images/pipe_easy_11-frame.png",
+        "figure": "media/images/pipe_easy_11.png"
+      }
+    },
+    {
+      "id": "pipe_easy_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf 'a\\nb\\n' | xargs -n1 echo\n```\n`cmd > file12.txt 2>&1` redirects...",
+      "choices": [
+        "Both stdout and stderr to file12.txt",
+        "Only stderr",
+        "Only stdout leaving stderr",
+        "Neither"
+      ],
+      "answer": 0,
+      "explain": "Order merges then writes.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_easy_12.mp4",
+        "poster": "media/images/pipe_easy_12-frame.png",
+        "figure": "media/images/pipe_easy_12.png"
+      }
+    },
+    {
+      "id": "pipe_easy_13",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls cfg 2>&1 | tee /tmp/foxtrot.log >/dev/null\n```\n`xargs` turns stdin items into...",
+      "choices": [
+        "Command arguments",
+        "Signals",
+        "Users",
+        "Mounts"
+      ],
+      "answer": 0,
+      "explain": "xargs builds argv.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_easy_13.mp4",
+        "poster": "media/images/pipe_easy_13-frame.png",
+        "figure": "media/images/pipe_easy_13.png"
+      }
+    },
+    {
+      "id": "pipe_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -i error bin/golf.log | head\n```\n`cmd < file14.txt` connects...",
+      "choices": [
+        "file14.txt to cmd stdin",
+        "file14.txt to stdout",
+        "stderr only",
+        "PATH"
+      ],
+      "answer": 0,
+      "explain": "Input redirection.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_easy_14.mp4",
+        "poster": "media/images/pipe_easy_14-frame.png",
+        "figure": "media/images/pipe_easy_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { echo hi; }; cmd | tee /tmp/hotel18.out\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nIn cmd1 | cmd2, what happens?",
+      "choices": [
+        "cmd2's stdout becomes cmd1's stdin",
+        "cmd1's stdout becomes cmd2's stdin",
+        "Both commands write only to disk",
+        "The pipe deletes cmd1"
+      ],
+      "answer": 1,
+      "explain": "The pipe connects left stdout to right stdin.",
+      "difficulty": "easy",
+      "id": "pipe_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_easy_15.mp4",
+        "poster": "media/images/pipe_easy_15-frame.png",
+        "figure": "media/images/pipe_easy_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf 'a\\nb\\n' | xargs -n1 echo\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\ngrep -i error file means...",
+      "choices": [
+        "Only exact lowercase error",
+        "Case-insensitive match for error",
+        "Invert match",
+        "Count only"
+      ],
+      "answer": 1,
+      "explain": "-i ignores case (ERROR, Error, error).",
+      "difficulty": "easy",
+      "id": "pipe_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_easy_16.mp4",
+        "poster": "media/images/pipe_easy_16-frame.png",
+        "figure": "media/images/pipe_easy_16.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nls tmp 2>&1 | tee /tmp/juliet.log >/dev/null\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\ncommand > file overwrites file with stdout; command >> file appends.",
+      "answer": true,
+      "explain": "> truncates/overwrites; >> appends.",
+      "difficulty": "easy",
+      "id": "pipe_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_easy_17.mp4",
+        "poster": "media/images/pipe_easy_17-frame.png",
+        "figure": "media/images/pipe_easy_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -i error build/alpha.log | head\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\n2>&1 typically means...",
+      "choices": [
+        "Ignore all errors",
+        "Send stderr to the same place as stdout",
+        "Run two shells",
+        "Disable pipes"
+      ],
+      "answer": 1,
+      "explain": "2>&1 merges stderr into stdout's destination.",
+      "difficulty": "easy",
+      "id": "pipe_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_easy_18.mp4",
+        "poster": "media/images/pipe_easy_18-frame.png",
+        "figure": "media/images/pipe_easy_18.png"
+      }
+    },
+    {
+      "id": "pipe_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { echo hi; }; cmd | tee /tmp/bravo22.out\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nIn `cmd1 | cmd2`, what happens?",
+      "choices": [
+        "cmd2 stdout becomes cmd1 stdin",
+        "cmd1 stdout becomes cmd2 stdin",
+        "Both write only to disk",
+        "Pipe deletes cmd1"
+      ],
+      "answer": 1,
+      "explain": "Left stdout feeds right stdin.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_easy_19.mp4",
+        "poster": "media/images/pipe_easy_19-frame.png",
+        "figure": "media/images/pipe_easy_19.png"
+      }
+    },
+    {
+      "id": "pipe_easy_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf 'a\\nb\\n' | xargs -n1 echo\n```\n`grep -i error log20.log` means...",
+      "choices": [
+        "Exact lowercase only",
+        "Case-insensitive match for error",
+        "Invert match",
+        "Count only"
+      ],
+      "answer": 1,
+      "explain": "-i ignores case.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_easy_20.mp4",
+        "poster": "media/images/pipe_easy_20-frame.png",
+        "figure": "media/images/pipe_easy_20.png"
+      }
+    },
+    {
+      "id": "pipe_easy_21",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nls cfg 2>&1 | tee /tmp/delta.log >/dev/null\n```\n`command > file21.txt` overwrites; `command >> file21.txt` appends.",
+      "answer": true,
+      "explain": "> truncates; >> appends.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_easy_21.mp4",
+        "poster": "media/images/pipe_easy_21-frame.png",
+        "figure": "media/images/pipe_easy_21.png"
+      }
+    },
+    {
+      "id": "pipe_easy_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -i error bin/echo.log | head\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\n`2>&1` typically means...",
+      "choices": [
+        "Ignore errors",
+        "Send stderr to the same place as stdout",
+        "Run two shells",
+        "Disable pipes"
+      ],
+      "answer": 1,
+      "explain": "Merge stderr into stdout dest.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_easy_22.mp4",
+        "poster": "media/images/pipe_easy_22-frame.png",
+        "figure": "media/images/pipe_easy_22.png"
+      }
+    },
+    {
+      "id": "pipe_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { echo hi; }; cmd | tee /tmp/foxtrot26.out\n```\n`cat file23.txt | cmd` is often replaceable by...",
+      "choices": [
+        "`cmd < file23.txt` or `cmd file23.txt` if supported",
+        "Only tee",
+        "Only zip",
+        "Only sudo"
+      ],
+      "answer": 0,
+      "explain": "Useless cat pattern.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_easy_23.mp4",
+        "poster": "media/images/pipe_easy_23-frame.png",
+        "figure": "media/images/pipe_easy_23.png"
+      }
+    },
+    {
+      "id": "pipe_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf 'a\\nb\\n' | xargs -n1 echo\n```\n`tee file24.txt` copies stdin to...",
+      "choices": [
+        "Stdout and file24.txt",
+        "Only stderr",
+        "Only /dev/null",
+        "Only man"
+      ],
+      "answer": 0,
+      "explain": "tee tees.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_easy_24.mp4",
+        "poster": "media/images/pipe_easy_24-frame.png",
+        "figure": "media/images/pipe_easy_24.png"
+      }
+    },
+    {
+      "id": "pipe_easy_25",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nls tmp 2>&1 | tee /tmp/hotel.log >/dev/null\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nPipes connect processes, not temporary disk files by default.",
+      "answer": true,
+      "explain": "In-memory/kernel pipe buffers.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_easy_25.mp4",
+        "poster": "media/images/pipe_easy_25-frame.png",
+        "figure": "media/images/pipe_easy_25.png"
+      }
+    },
+    {
+      "id": "pipe_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -i error build/india.log | head\n```\n`cmd > file26.txt 2>&1` redirects...",
+      "choices": [
+        "Both stdout and stderr to file26.txt",
+        "Only stderr",
+        "Only stdout leaving stderr",
+        "Neither"
+      ],
+      "answer": 0,
+      "explain": "Order merges then writes.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_easy_26.mp4",
+        "poster": "media/images/pipe_easy_26-frame.png",
+        "figure": "media/images/pipe_easy_26.png"
+      }
+    },
+    {
+      "id": "pipe_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { echo hi; }; cmd | tee /tmp/juliet30.out\n```\n# Review context: `/var/log/echo` slot 27 variant 1\n`xargs` turns stdin items into...",
+      "choices": [
+        "Command arguments",
+        "Signals",
+        "Users",
+        "Mounts"
+      ],
+      "answer": 0,
+      "explain": "xargs builds argv.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_easy_27.mp4",
+        "poster": "media/images/pipe_easy_27-frame.png",
+        "figure": "media/images/pipe_easy_27.png"
+      }
+    },
+    {
+      "id": "pipe_easy_28",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf 'a\\nb\\n' | xargs -n1 echo\n```\n`cmd < file28.txt` connects...",
+      "choices": [
+        "file28.txt to cmd stdin",
+        "file28.txt to stdout",
+        "stderr only",
+        "PATH"
+      ],
+      "answer": 0,
+      "explain": "Input redirection.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_easy_28.mp4",
+        "poster": "media/images/pipe_easy_28-frame.png",
+        "figure": "media/images/pipe_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls cfg 2>&1 | tee /tmp/bravo.log >/dev/null\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nIn cmd1 | cmd2, what happens?",
+      "choices": [
+        "cmd2's stdout becomes cmd1's stdin",
+        "cmd1's stdout becomes cmd2's stdin",
+        "Both commands write only to disk",
+        "The pipe deletes cmd1"
+      ],
+      "answer": 1,
+      "explain": "The pipe connects left stdout to right stdin.",
+      "difficulty": "easy",
+      "id": "pipe_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_easy_29.mp4",
+        "poster": "media/images/pipe_easy_29-frame.png",
+        "figure": "media/images/pipe_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -i error bin/charlie.log | head\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\ngrep -i error file means...",
+      "choices": [
+        "Only exact lowercase error",
+        "Case-insensitive match for error",
+        "Invert match",
+        "Count only"
+      ],
+      "answer": 1,
+      "explain": "-i ignores case (ERROR, Error, error).",
+      "difficulty": "easy",
+      "id": "pipe_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_easy_30.mp4",
+        "poster": "media/images/pipe_easy_30-frame.png",
+        "figure": "media/images/pipe_easy_30.png"
+      }
+    },
+    {
+      "id": "pipe_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf 'a\\nb\\n' | xargs -n1 echo\n```\n`cmd 2>log1.log >file1.txt` vs `>file1.txt 2>&1` differ because...",
+      "choices": [
+        "Redirection order matters",
+        "Order never matters",
+        "Both identical always",
+        "Shell ignores 2>"
+      ],
+      "answer": 0,
+      "explain": "Order is significant.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_medium_01.mp4",
+        "poster": "media/images/pipe_medium_01-frame.png",
+        "figure": "media/images/pipe_medium_01.png"
+      }
+    },
+    {
+      "id": "pipe_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls tmp 2>&1 | tee /tmp/delta.log >/dev/null\n```\n`|&` (bash) pipes...",
+      "choices": [
+        "Stdout and stderr together",
+        "Only signals",
+        "Only exit codes",
+        "Only fds 3+"
+      ],
+      "answer": 0,
+      "explain": "|& = 2>&1 |",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_medium_02.mp4",
+        "poster": "media/images/pipe_medium_02-frame.png",
+        "figure": "media/images/pipe_medium_02.png"
+      }
+    },
+    {
+      "id": "pipe_medium_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -i error build/echo.log | head\n```\n`set -o pipefail` makes pipelines fail if any stage fails (bash).",
+      "answer": true,
+      "explain": "pipefail is not default in bash.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_medium_03.mp4",
+        "poster": "media/images/pipe_medium_03-frame.png",
+        "figure": "media/images/pipe_medium_03.png"
+      }
+    },
+    {
+      "id": "pipe_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { echo hi; }; cmd | tee /tmp/foxtrot6.out\n```\n`xargs -0` pairs with...",
+      "choices": [
+        "NUL-delimited input for safe names",
+        "Only JSON",
+        "Only YAML",
+        "Only tabs"
+      ],
+      "answer": 0,
+      "explain": "Null-safe xargs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_medium_04.mp4",
+        "poster": "media/images/pipe_medium_04-frame.png",
+        "figure": "media/images/pipe_medium_04.png"
+      }
+    },
+    {
+      "id": "pipe_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf 'a\\nb\\n' | xargs -n1 echo\n```\n`cmd1 | cmd2` exit status without pipefail is often...",
+      "choices": [
+        "That of cmd2",
+        "Always cmd1",
+        "Always 0",
+        "Average of both"
+      ],
+      "answer": 0,
+      "explain": "Last command status by default.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_medium_05.mp4",
+        "poster": "media/images/pipe_medium_05-frame.png",
+        "figure": "media/images/pipe_medium_05.png"
+      }
+    },
+    {
+      "id": "pipe_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls cfg 2>&1 | tee /tmp/hotel.log >/dev/null\n```\n`grep -v` inverts match so you can...",
+      "choices": [
+        "Filter out lines",
+        "Enable color only",
+        "Sort",
+        "chmod"
+      ],
+      "answer": 0,
+      "explain": "Invert match.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_medium_06.mp4",
+        "poster": "media/images/pipe_medium_06-frame.png",
+        "figure": "media/images/pipe_medium_06.png"
+      }
+    },
+    {
+      "id": "pipe_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -i error bin/india.log | head\n```\nHere-string `cmd <<< \"$var\"` feeds...",
+      "choices": [
+        "var as stdin",
+        "var as argv only",
+        "stderr",
+        "PATH"
+      ],
+      "answer": 0,
+      "explain": "Here-string stdin.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_medium_07.mp4",
+        "poster": "media/images/pipe_medium_07-frame.png",
+        "figure": "media/images/pipe_medium_07.png"
+      }
+    },
+    {
+      "id": "pipe_medium_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { echo hi; }; cmd | tee /tmp/juliet10.out\n```\n`/dev/null` discards data redirected into it.",
+      "answer": true,
+      "explain": "Bit bucket.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_medium_08.mp4",
+        "poster": "media/images/pipe_medium_08-frame.png",
+        "figure": "media/images/pipe_medium_08.png"
+      }
+    },
+    {
+      "id": "pipe_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf 'a\\nb\\n' | xargs -n1 echo\n```\nDeadlock risk in complex fd redirection appears when...",
+      "choices": [
+        "Processes wait on each other for pipes/FIFOs",
+        "Using only echo",
+        "Using pwd",
+        "Reading man"
+      ],
+      "answer": 0,
+      "explain": "Careful with bidirectional FIFOs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_medium_09.mp4",
+        "poster": "media/images/pipe_medium_09-frame.png",
+        "figure": "media/images/pipe_medium_09.png"
+      }
+    },
+    {
+      "id": "pipe_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls tmp 2>&1 | tee /tmp/bravo.log >/dev/null\n```\n`stdbuf`/`pv` sometimes help when...",
+      "choices": [
+        "Pipeline buffering hides progress",
+        "Disabling CPU",
+        "Clearing umask",
+        "Naming hosts"
+      ],
+      "answer": 0,
+      "explain": "Buffering control.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_medium_10.mp4",
+        "poster": "media/images/pipe_medium_10-frame.png",
+        "figure": "media/images/pipe_medium_10.png"
+      }
+    },
+    {
+      "id": "pipe_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -i error build/charlie.log | head\n```\n`cmd 2>log11.log >file11.txt` vs `>file11.txt 2>&1` differ because...",
+      "choices": [
+        "Redirection order matters",
+        "Order never matters",
+        "Both identical always",
+        "Shell ignores 2>"
+      ],
+      "answer": 0,
+      "explain": "Order is significant.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_medium_11.mp4",
+        "poster": "media/images/pipe_medium_11-frame.png",
+        "figure": "media/images/pipe_medium_11.png"
+      }
+    },
+    {
+      "id": "pipe_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { echo hi; }; cmd | tee /tmp/delta14.out\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\n`|&` (bash) pipes...",
+      "choices": [
+        "Stdout and stderr together",
+        "Only signals",
+        "Only exit codes",
+        "Only fds 3+"
+      ],
+      "answer": 0,
+      "explain": "|& = 2>&1 |",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_medium_12.mp4",
+        "poster": "media/images/pipe_medium_12-frame.png",
+        "figure": "media/images/pipe_medium_12.png"
+      }
+    },
+    {
+      "id": "pipe_medium_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nprintf 'a\\nb\\n' | xargs -n1 echo\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\n`set -o pipefail` makes pipelines fail if any stage fails (bash).",
+      "answer": true,
+      "explain": "pipefail is not default in bash.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_medium_13.mp4",
+        "poster": "media/images/pipe_medium_13-frame.png",
+        "figure": "media/images/pipe_medium_13.png"
+      }
+    },
+    {
+      "id": "pipe_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls cfg 2>&1 | tee /tmp/foxtrot.log >/dev/null\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\n`xargs -0` pairs with...",
+      "choices": [
+        "NUL-delimited input for safe names",
+        "Only JSON",
+        "Only YAML",
+        "Only tabs"
+      ],
+      "answer": 0,
+      "explain": "Null-safe xargs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_medium_14.mp4",
+        "poster": "media/images/pipe_medium_14-frame.png",
+        "figure": "media/images/pipe_medium_14.png"
+      }
+    },
+    {
+      "id": "pipe_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -i error bin/golf.log | head\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\n`cmd1 | cmd2` exit status without pipefail is often...",
+      "choices": [
+        "That of cmd2",
+        "Always cmd1",
+        "Always 0",
+        "Average of both"
+      ],
+      "answer": 0,
+      "explain": "Last command status by default.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_medium_15.mp4",
+        "poster": "media/images/pipe_medium_15-frame.png",
+        "figure": "media/images/pipe_medium_15.png"
+      }
+    },
+    {
+      "id": "pipe_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { echo hi; }; cmd | tee /tmp/hotel18.out\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\n`grep -v` inverts match so you can...",
+      "choices": [
+        "Filter out lines",
+        "Enable color only",
+        "Sort",
+        "chmod"
+      ],
+      "answer": 0,
+      "explain": "Invert match.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_medium_16.mp4",
+        "poster": "media/images/pipe_medium_16-frame.png",
+        "figure": "media/images/pipe_medium_16.png"
+      }
+    },
+    {
+      "id": "pipe_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf 'a\\nb\\n' | xargs -n1 echo\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nHere-string `cmd <<< \"$var\"` feeds...",
+      "choices": [
+        "var as stdin",
+        "var as argv only",
+        "stderr",
+        "PATH"
+      ],
+      "answer": 0,
+      "explain": "Here-string stdin.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_medium_17.mp4",
+        "poster": "media/images/pipe_medium_17-frame.png",
+        "figure": "media/images/pipe_medium_17.png"
+      }
+    },
+    {
+      "id": "pipe_medium_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nls tmp 2>&1 | tee /tmp/juliet.log >/dev/null\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\n`/dev/null` discards data redirected into it.",
+      "answer": true,
+      "explain": "Bit bucket.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_medium_18.mp4",
+        "poster": "media/images/pipe_medium_18-frame.png",
+        "figure": "media/images/pipe_medium_18.png"
+      }
+    },
+    {
+      "id": "pipe_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -i error build/alpha.log | head\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nDeadlock risk in complex fd redirection appears when...",
+      "choices": [
+        "Processes wait on each other for pipes/FIFOs",
+        "Using only echo",
+        "Using pwd",
+        "Reading man"
+      ],
+      "answer": 0,
+      "explain": "Careful with bidirectional FIFOs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_medium_19.mp4",
+        "poster": "media/images/pipe_medium_19-frame.png",
+        "figure": "media/images/pipe_medium_19.png"
+      }
+    },
+    {
+      "id": "pipe_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { echo hi; }; cmd | tee /tmp/bravo22.out\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\n`stdbuf`/`pv` sometimes help when...",
+      "choices": [
+        "Pipeline buffering hides progress",
+        "Disabling CPU",
+        "Clearing umask",
+        "Naming hosts"
+      ],
+      "answer": 0,
+      "explain": "Buffering control.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_medium_20.mp4",
+        "poster": "media/images/pipe_medium_20-frame.png",
+        "figure": "media/images/pipe_medium_20.png"
+      }
+    },
+    {
+      "id": "pipe_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf 'a\\nb\\n' | xargs -n1 echo\n```\n`cmd 2>log21.log >file21.txt` vs `>file21.txt 2>&1` differ because...",
+      "choices": [
+        "Redirection order matters",
+        "Order never matters",
+        "Both identical always",
+        "Shell ignores 2>"
+      ],
+      "answer": 0,
+      "explain": "Order is significant.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_medium_21.mp4",
+        "poster": "media/images/pipe_medium_21-frame.png",
+        "figure": "media/images/pipe_medium_21.png"
+      }
+    },
+    {
+      "id": "pipe_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls cfg 2>&1 | tee /tmp/delta.log >/dev/null\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\n`|&` (bash) pipes...",
+      "choices": [
+        "Stdout and stderr together",
+        "Only signals",
+        "Only exit codes",
+        "Only fds 3+"
+      ],
+      "answer": 0,
+      "explain": "|& = 2>&1 |",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_medium_22.mp4",
+        "poster": "media/images/pipe_medium_22-frame.png",
+        "figure": "media/images/pipe_medium_22.png"
+      }
+    },
+    {
+      "id": "pipe_medium_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -i error bin/echo.log | head\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\n`set -o pipefail` makes pipelines fail if any stage fails (bash).",
+      "answer": true,
+      "explain": "pipefail is not default in bash.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_medium_23.mp4",
+        "poster": "media/images/pipe_medium_23-frame.png",
+        "figure": "media/images/pipe_medium_23.png"
+      }
+    },
+    {
+      "id": "pipe_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { echo hi; }; cmd | tee /tmp/foxtrot26.out\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\n`xargs -0` pairs with...",
+      "choices": [
+        "NUL-delimited input for safe names",
+        "Only JSON",
+        "Only YAML",
+        "Only tabs"
+      ],
+      "answer": 0,
+      "explain": "Null-safe xargs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_medium_24.mp4",
+        "poster": "media/images/pipe_medium_24-frame.png",
+        "figure": "media/images/pipe_medium_24.png"
+      }
+    },
+    {
+      "id": "pipe_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf 'a\\nb\\n' | xargs -n1 echo\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\n`cmd1 | cmd2` exit status without pipefail is often...",
+      "choices": [
+        "That of cmd2",
+        "Always cmd1",
+        "Always 0",
+        "Average of both"
+      ],
+      "answer": 0,
+      "explain": "Last command status by default.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_medium_25.mp4",
+        "poster": "media/images/pipe_medium_25-frame.png",
+        "figure": "media/images/pipe_medium_25.png"
+      }
+    },
+    {
+      "id": "pipe_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls tmp 2>&1 | tee /tmp/hotel.log >/dev/null\n```\n# Review context: `./scripts/delta` slot 26 variant 1\n`grep -v` inverts match so you can...",
+      "choices": [
+        "Filter out lines",
+        "Enable color only",
+        "Sort",
+        "chmod"
+      ],
+      "answer": 0,
+      "explain": "Invert match.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_medium_26.mp4",
+        "poster": "media/images/pipe_medium_26-frame.png",
+        "figure": "media/images/pipe_medium_26.png"
+      }
+    },
+    {
+      "id": "pipe_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -i error build/india.log | head\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nHere-string `cmd <<< \"$var\"` feeds...",
+      "choices": [
+        "var as stdin",
+        "var as argv only",
+        "stderr",
+        "PATH"
+      ],
+      "answer": 0,
+      "explain": "Here-string stdin.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_medium_27.mp4",
+        "poster": "media/images/pipe_medium_27-frame.png",
+        "figure": "media/images/pipe_medium_27.png"
+      }
+    },
+    {
+      "id": "pipe_medium_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { echo hi; }; cmd | tee /tmp/juliet30.out\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\n`/dev/null` discards data redirected into it.",
+      "answer": true,
+      "explain": "Bit bucket.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_medium_28.mp4",
+        "poster": "media/images/pipe_medium_28-frame.png",
+        "figure": "media/images/pipe_medium_28.png"
+      }
+    },
+    {
+      "id": "pipe_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf 'a\\nb\\n' | xargs -n1 echo\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nDeadlock risk in complex fd redirection appears when...",
+      "choices": [
+        "Processes wait on each other for pipes/FIFOs",
+        "Using only echo",
+        "Using pwd",
+        "Reading man"
+      ],
+      "answer": 0,
+      "explain": "Careful with bidirectional FIFOs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_medium_29.mp4",
+        "poster": "media/images/pipe_medium_29-frame.png",
+        "figure": "media/images/pipe_medium_29.png"
+      }
+    },
+    {
+      "id": "pipe_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls cfg 2>&1 | tee /tmp/bravo.log >/dev/null\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\n`stdbuf`/`pv` sometimes help when...",
+      "choices": [
+        "Pipeline buffering hides progress",
+        "Disabling CPU",
+        "Clearing umask",
+        "Naming hosts"
+      ],
+      "answer": 0,
+      "explain": "Buffering control.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_medium_30.mp4",
+        "poster": "media/images/pipe_medium_30-frame.png",
+        "figure": "media/images/pipe_medium_30.png"
+      }
+    },
+    {
+      "id": "pipe_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf 'a\\nb\\n' | xargs -n1 echo\n```\nSIGPIPE happens when...",
+      "choices": [
+        "Writing to a pipe with no readers",
+        "Reading /etc/passwd",
+        "Calling pwd",
+        "Setting PS1"
+      ],
+      "answer": 0,
+      "explain": "Writer gets SIGPIPE.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_hard_01.mp4",
+        "poster": "media/images/pipe_hard_01-frame.png",
+        "figure": "media/images/pipe_hard_01.png"
+      }
+    },
+    {
+      "id": "pipe_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls tmp 2>&1 | tee /tmp/delta.log >/dev/null\n```\n`xargs -P` parallel runs can break tools that...",
+      "choices": [
+        "Are not concurrency-safe on shared outputs",
+        "Only print help",
+        "Use abs paths",
+        "Read man"
+      ],
+      "answer": 0,
+      "explain": "Parallelism needs safe sinks.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_hard_02.mp4",
+        "poster": "media/images/pipe_hard_02-frame.png",
+        "figure": "media/images/pipe_hard_02.png"
+      }
+    },
+    {
+      "id": "pipe_hard_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -i error build/echo.log | head\n```\nProcess substitution `<(cmd)` exposes cmd output as a filename.",
+      "answer": true,
+      "explain": "<( ) is bash process subst.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_hard_03.mp4",
+        "poster": "media/images/pipe_hard_03-frame.png",
+        "figure": "media/images/pipe_hard_03.png"
+      }
+    },
+    {
+      "id": "pipe_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { echo hi; }; cmd | tee /tmp/foxtrot6.out\n```\n`exec >file4.txt 2>&1` in a script...",
+      "choices": [
+        "Redirects the rest of the shell's stdout/stderr",
+        "Only affects one external cmd",
+        "Disables pipes forever globally for all users",
+        "Clears PATH"
+      ],
+      "answer": 0,
+      "explain": "exec can rebind shell fds.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_hard_04.mp4",
+        "poster": "media/images/pipe_hard_04-frame.png",
+        "figure": "media/images/pipe_hard_04.png"
+      }
+    },
+    {
+      "id": "pipe_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf 'a\\nb\\n' | xargs -n1 echo\n```\nAtomic replace patterns use `>tmp && mv` because...",
+      "choices": [
+        "Avoid readers seeing partial files",
+        "Faster always",
+        "Required by POSIX echo",
+        "Disables NFS"
+      ],
+      "answer": 0,
+      "explain": "Publish complete outputs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_hard_05.mp4",
+        "poster": "media/images/pipe_hard_05-frame.png",
+        "figure": "media/images/pipe_hard_05.png"
+      }
+    },
+    {
+      "id": "pipe_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls cfg 2>&1 | tee /tmp/hotel.log >/dev/null\n```\nBinary data through pipes is fine if...",
+      "choices": [
+        "Tools are binary-safe and you avoid newline assumptions",
+        "You always use grep",
+        "You use ls",
+        "You set umask 0"
+      ],
+      "answer": 0,
+      "explain": "Text tools != binary safe.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_hard_06.mp4",
+        "poster": "media/images/pipe_hard_06-frame.png",
+        "figure": "media/images/pipe_hard_06.png"
+      }
+    },
+    {
+      "id": "pipe_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -i error bin/india.log | head\n```\nClosing unused pipe ends in custom programs prevents...",
+      "choices": [
+        "Hangs waiting for EOF",
+        "All networking",
+        "man access",
+        "make"
+      ],
+      "answer": 0,
+      "explain": "EOF needs all writers closed.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_hard_07.mp4",
+        "poster": "media/images/pipe_hard_07-frame.png",
+        "figure": "media/images/pipe_hard_07.png"
+      }
+    },
+    {
+      "id": "pipe_hard_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { echo hi; }; cmd | tee /tmp/juliet10.out\n```\n`coproc` (bash) sets up async pipes to a coprocess.",
+      "answer": true,
+      "explain": "Advanced bidirectional async.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_hard_08.mp4",
+        "poster": "media/images/pipe_hard_08-frame.png",
+        "figure": "media/images/pipe_hard_08.png"
+      }
+    },
+    {
+      "id": "pipe_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf 'a\\nb\\n' | xargs -n1 echo\n```\nWhy `cat huge | grep` may be slower than `grep huge`?",
+      "choices": [
+        "Extra process + copying",
+        "grep cannot read files",
+        "Pipes encrypt",
+        "Kernels ban file grep"
+      ],
+      "answer": 0,
+      "explain": "Avoid useless cats.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_hard_09.mp4",
+        "poster": "media/images/pipe_hard_09-frame.png",
+        "figure": "media/images/pipe_hard_09.png"
+      }
+    },
+    {
+      "id": "pipe_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls tmp 2>&1 | tee /tmp/bravo.log >/dev/null\n```\nLab habit: sketch fd wiring before complex `2>&1 | tee`.",
+      "choices": [
+        "Yes: order and merges confuse",
+        "No: trial only",
+        "No: skip stderr",
+        "No: always -9"
+      ],
+      "answer": 0,
+      "explain": "Draw the fds.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_hard_10.mp4",
+        "poster": "media/images/pipe_hard_10-frame.png",
+        "figure": "media/images/pipe_hard_10.png"
+      }
+    },
+    {
+      "id": "pipe_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -i error build/charlie.log | head\n```\n# Review context: `~/bin/echo` slot 11 variant 1\nSIGPIPE happens when...",
+      "choices": [
+        "Writing to a pipe with no readers",
+        "Reading /etc/passwd",
+        "Calling pwd",
+        "Setting PS1"
+      ],
+      "answer": 0,
+      "explain": "Writer gets SIGPIPE.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_hard_11.mp4",
+        "poster": "media/images/pipe_hard_11-frame.png",
+        "figure": "media/images/pipe_hard_11.png"
+      }
+    },
+    {
+      "id": "pipe_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { echo hi; }; cmd | tee /tmp/delta14.out\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\n`xargs -P` parallel runs can break tools that...",
+      "choices": [
+        "Are not concurrency-safe on shared outputs",
+        "Only print help",
+        "Use abs paths",
+        "Read man"
+      ],
+      "answer": 0,
+      "explain": "Parallelism needs safe sinks.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_hard_12.mp4",
+        "poster": "media/images/pipe_hard_12-frame.png",
+        "figure": "media/images/pipe_hard_12.png"
+      }
+    },
+    {
+      "id": "pipe_hard_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nprintf 'a\\nb\\n' | xargs -n1 echo\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\nProcess substitution `<(cmd)` exposes cmd output as a filename.",
+      "answer": true,
+      "explain": "<( ) is bash process subst.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_hard_13.mp4",
+        "poster": "media/images/pipe_hard_13-frame.png",
+        "figure": "media/images/pipe_hard_13.png"
+      }
+    },
+    {
+      "id": "pipe_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls cfg 2>&1 | tee /tmp/foxtrot.log >/dev/null\n```\n`exec >file14.txt 2>&1` in a script...",
+      "choices": [
+        "Redirects the rest of the shell's stdout/stderr",
+        "Only affects one external cmd",
+        "Disables pipes forever globally for all users",
+        "Clears PATH"
+      ],
+      "answer": 0,
+      "explain": "exec can rebind shell fds.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_hard_14.mp4",
+        "poster": "media/images/pipe_hard_14-frame.png",
+        "figure": "media/images/pipe_hard_14.png"
+      }
+    },
+    {
+      "id": "pipe_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -i error bin/golf.log | head\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nAtomic replace patterns use `>tmp && mv` because...",
+      "choices": [
+        "Avoid readers seeing partial files",
+        "Faster always",
+        "Required by POSIX echo",
+        "Disables NFS"
+      ],
+      "answer": 0,
+      "explain": "Publish complete outputs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_hard_15.mp4",
+        "poster": "media/images/pipe_hard_15-frame.png",
+        "figure": "media/images/pipe_hard_15.png"
+      }
+    },
+    {
+      "id": "pipe_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { echo hi; }; cmd | tee /tmp/hotel18.out\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nBinary data through pipes is fine if...",
+      "choices": [
+        "Tools are binary-safe and you avoid newline assumptions",
+        "You always use grep",
+        "You use ls",
+        "You set umask 0"
+      ],
+      "answer": 0,
+      "explain": "Text tools != binary safe.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_hard_16.mp4",
+        "poster": "media/images/pipe_hard_16-frame.png",
+        "figure": "media/images/pipe_hard_16.png"
+      }
+    },
+    {
+      "id": "pipe_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf 'a\\nb\\n' | xargs -n1 echo\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nClosing unused pipe ends in custom programs prevents...",
+      "choices": [
+        "Hangs waiting for EOF",
+        "All networking",
+        "man access",
+        "make"
+      ],
+      "answer": 0,
+      "explain": "EOF needs all writers closed.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_hard_17.mp4",
+        "poster": "media/images/pipe_hard_17-frame.png",
+        "figure": "media/images/pipe_hard_17.png"
+      }
+    },
+    {
+      "id": "pipe_hard_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nls tmp 2>&1 | tee /tmp/juliet.log >/dev/null\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\n`coproc` (bash) sets up async pipes to a coprocess.",
+      "answer": true,
+      "explain": "Advanced bidirectional async.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_hard_18.mp4",
+        "poster": "media/images/pipe_hard_18-frame.png",
+        "figure": "media/images/pipe_hard_18.png"
+      }
+    },
+    {
+      "id": "pipe_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -i error build/alpha.log | head\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nWhy `cat huge | grep` may be slower than `grep huge`?",
+      "choices": [
+        "Extra process + copying",
+        "grep cannot read files",
+        "Pipes encrypt",
+        "Kernels ban file grep"
+      ],
+      "answer": 0,
+      "explain": "Avoid useless cats.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_hard_19.mp4",
+        "poster": "media/images/pipe_hard_19-frame.png",
+        "figure": "media/images/pipe_hard_19.png"
+      }
+    },
+    {
+      "id": "pipe_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { echo hi; }; cmd | tee /tmp/bravo22.out\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\nLab habit: sketch fd wiring before complex `2>&1 | tee`.",
+      "choices": [
+        "Yes: order and merges confuse",
+        "No: trial only",
+        "No: skip stderr",
+        "No: always -9"
+      ],
+      "answer": 0,
+      "explain": "Draw the fds.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_hard_20.mp4",
+        "poster": "media/images/pipe_hard_20-frame.png",
+        "figure": "media/images/pipe_hard_20.png"
+      }
+    },
+    {
+      "id": "pipe_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf 'a\\nb\\n' | xargs -n1 echo\n```\n# Review context: `/var/log/golf` slot 21 variant 1\nSIGPIPE happens when...",
+      "choices": [
+        "Writing to a pipe with no readers",
+        "Reading /etc/passwd",
+        "Calling pwd",
+        "Setting PS1"
+      ],
+      "answer": 0,
+      "explain": "Writer gets SIGPIPE.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_hard_21.mp4",
+        "poster": "media/images/pipe_hard_21-frame.png",
+        "figure": "media/images/pipe_hard_21.png"
+      }
+    },
+    {
+      "id": "pipe_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls cfg 2>&1 | tee /tmp/delta.log >/dev/null\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\n`xargs -P` parallel runs can break tools that...",
+      "choices": [
+        "Are not concurrency-safe on shared outputs",
+        "Only print help",
+        "Use abs paths",
+        "Read man"
+      ],
+      "answer": 0,
+      "explain": "Parallelism needs safe sinks.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_hard_22.mp4",
+        "poster": "media/images/pipe_hard_22-frame.png",
+        "figure": "media/images/pipe_hard_22.png"
+      }
+    },
+    {
+      "id": "pipe_hard_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -i error bin/echo.log | head\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\nProcess substitution `<(cmd)` exposes cmd output as a filename.",
+      "answer": true,
+      "explain": "<( ) is bash process subst.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_hard_23.mp4",
+        "poster": "media/images/pipe_hard_23-frame.png",
+        "figure": "media/images/pipe_hard_23.png"
+      }
+    },
+    {
+      "id": "pipe_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { echo hi; }; cmd | tee /tmp/foxtrot26.out\n```\n`exec >file24.txt 2>&1` in a script...",
+      "choices": [
+        "Redirects the rest of the shell's stdout/stderr",
+        "Only affects one external cmd",
+        "Disables pipes forever globally for all users",
+        "Clears PATH"
+      ],
+      "answer": 0,
+      "explain": "exec can rebind shell fds.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_hard_24.mp4",
+        "poster": "media/images/pipe_hard_24-frame.png",
+        "figure": "media/images/pipe_hard_24.png"
+      }
+    },
+    {
+      "id": "pipe_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf 'a\\nb\\n' | xargs -n1 echo\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nAtomic replace patterns use `>tmp && mv` because...",
+      "choices": [
+        "Avoid readers seeing partial files",
+        "Faster always",
+        "Required by POSIX echo",
+        "Disables NFS"
+      ],
+      "answer": 0,
+      "explain": "Publish complete outputs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_hard_25.mp4",
+        "poster": "media/images/pipe_hard_25-frame.png",
+        "figure": "media/images/pipe_hard_25.png"
+      }
+    },
+    {
+      "id": "pipe_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls tmp 2>&1 | tee /tmp/hotel.log >/dev/null\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nBinary data through pipes is fine if...",
+      "choices": [
+        "Tools are binary-safe and you avoid newline assumptions",
+        "You always use grep",
+        "You use ls",
+        "You set umask 0"
+      ],
+      "answer": 0,
+      "explain": "Text tools != binary safe.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_hard_26.mp4",
+        "poster": "media/images/pipe_hard_26-frame.png",
+        "figure": "media/images/pipe_hard_26.png"
+      }
+    },
+    {
+      "id": "pipe_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\ngrep -i error build/india.log | head\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nClosing unused pipe ends in custom programs prevents...",
+      "choices": [
+        "Hangs waiting for EOF",
+        "All networking",
+        "man access",
+        "make"
+      ],
+      "answer": 0,
+      "explain": "EOF needs all writers closed.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_hard_27.mp4",
+        "poster": "media/images/pipe_hard_27-frame.png",
+        "figure": "media/images/pipe_hard_27.png"
+      }
+    },
+    {
+      "id": "pipe_hard_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\ncmd() { echo hi; }; cmd | tee /tmp/juliet30.out\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\n`coproc` (bash) sets up async pipes to a coprocess.",
+      "answer": true,
+      "explain": "Advanced bidirectional async.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_hard_28.mp4",
+        "poster": "media/images/pipe_hard_28-frame.png",
+        "figure": "media/images/pipe_hard_28.png"
+      }
+    },
+    {
+      "id": "pipe_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nprintf 'a\\nb\\n' | xargs -n1 echo\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nWhy `cat huge | grep` may be slower than `grep huge`?",
+      "choices": [
+        "Extra process + copying",
+        "grep cannot read files",
+        "Pipes encrypt",
+        "Kernels ban file grep"
+      ],
+      "answer": 0,
+      "explain": "Avoid useless cats.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_hard_29.mp4",
+        "poster": "media/images/pipe_hard_29-frame.png",
+        "figure": "media/images/pipe_hard_29.png"
+      }
+    },
+    {
+      "id": "pipe_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nls cfg 2>&1 | tee /tmp/bravo.log >/dev/null\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nLab habit: sketch fd wiring before complex `2>&1 | tee`.",
+      "choices": [
+        "Yes: order and merges confuse",
+        "No: trial only",
+        "No: skip stderr",
+        "No: always -9"
+      ],
+      "answer": 0,
+      "explain": "Draw the fds.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pipe_hard_30.mp4",
+        "poster": "media/images/pipe_hard_30-frame.png",
+        "figure": "media/images/pipe_hard_30.png"
+      }
+    }
+  ]
+}

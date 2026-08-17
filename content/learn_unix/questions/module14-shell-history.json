@@ -1,0 +1,1698 @@
+{
+  "module": "module14-shell-history",
+  "title": "Shell history & reverse-search",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"last: !!  last-arg: !$\"  # history expansion demo\n```\nCtrl+R in a typical bash session starts...",
+      "choices": [
+        "Redo of the last undo",
+        "Reverse incremental search of history",
+        "Reload of .bashrc only",
+        "Recursive delete of the current directory"
+      ],
+      "answer": 1,
+      "explain": "Ctrl+R is reverse-search: type a substring to find an older command.",
+      "difficulty": "easy",
+      "id": "hist_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_easy_01.mp4",
+        "poster": "media/images/hist_easy_01-frame.png",
+        "figure": "media/images/hist_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nhistory | tail -n 10\n```\nThe history builtin...",
+      "choices": [
+        "Deletes all files older than a day",
+        "Lists numbered past commands from the shell history",
+        "Shows only git commits",
+        "Disables arrow-key recall"
+      ],
+      "answer": 1,
+      "explain": "history prints numbered entries you can recall or re-run carefully.",
+      "difficulty": "easy",
+      "id": "hist_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_easy_02.mp4",
+        "poster": "media/images/hist_easy_02-frame.png",
+        "figure": "media/images/hist_easy_02.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# Ctrl-R then type: foxtrot\n```\n!! re-runs the previous command.",
+      "answer": true,
+      "explain": "Bang-bang expands to the last command-use carefully on destructive lines.",
+      "difficulty": "easy",
+      "id": "hist_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_easy_03.mp4",
+        "poster": "media/images/hist_easy_03-frame.png",
+        "figure": "media/images/hist_easy_03.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nHISTTIMEFORMAT='%F %T ' history | tail\n```\nArrow ↑ in the shell typically...",
+      "choices": [
+        "Scrolls the man page only",
+        "Recalls the previous command for editing or re-run",
+        "Sends SIGINT",
+        "Clears the screen"
+      ],
+      "answer": 1,
+      "explain": "Up/down step through history so you can edit and re-run.",
+      "difficulty": "easy",
+      "id": "hist_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_easy_04.mp4",
+        "poster": "media/images/hist_easy_04-frame.png",
+        "figure": "media/images/hist_easy_04.png"
+      }
+    },
+    {
+      "id": "hist_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"last: !!  last-arg: !$\"  # history expansion demo\n```\nShell history typically records...",
+      "choices": [
+        "Previous commands",
+        "Only man pages",
+        "Only kernel logs",
+        "Only zip lists"
+      ],
+      "answer": 0,
+      "explain": "History = past commands.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_easy_05.mp4",
+        "poster": "media/images/hist_easy_05-frame.png",
+        "figure": "media/images/hist_easy_05.png"
+      }
+    },
+    {
+      "id": "hist_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nhistory | tail -n 14\n```\nCtrl-R often starts...",
+      "choices": [
+        "Reverse incremental search",
+        "Reboot",
+        "rm -rf",
+        "Rename"
+      ],
+      "answer": 0,
+      "explain": "Reverse-i-search.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_easy_06.mp4",
+        "poster": "media/images/hist_easy_06-frame.png",
+        "figure": "media/images/hist_easy_06.png"
+      }
+    },
+    {
+      "id": "hist_easy_07",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# Ctrl-R then type: juliet\n```\n`history` builtin prints recent commands (bash).",
+      "answer": true,
+      "explain": "history lists them.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_easy_07.mp4",
+        "poster": "media/images/hist_easy_07-frame.png",
+        "figure": "media/images/hist_easy_07.png"
+      }
+    },
+    {
+      "id": "hist_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nHISTTIMEFORMAT='%F %T ' history | tail\n```\n`!!` expands to...",
+      "choices": [
+        "The previous command",
+        "Login name",
+        "Home",
+        "PID 1"
+      ],
+      "answer": 0,
+      "explain": "Bang-bang last command.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_easy_08.mp4",
+        "poster": "media/images/hist_easy_08-frame.png",
+        "figure": "media/images/hist_easy_08.png"
+      }
+    },
+    {
+      "id": "hist_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"last: !!  last-arg: !$\"  # history expansion demo\n```\n`!$` often means...",
+      "choices": [
+        "Last argument of previous command",
+        "First arg",
+        "Exit status",
+        "umask"
+      ],
+      "answer": 0,
+      "explain": "Last word reuse.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_easy_09.mp4",
+        "poster": "media/images/hist_easy_09-frame.png",
+        "figure": "media/images/hist_easy_09.png"
+      }
+    },
+    {
+      "id": "hist_easy_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nhistory | tail -n 18\n```\nUp-arrow usually...",
+      "choices": [
+        "Recalls previous lines",
+        "Sends SIGKILL",
+        "Clears disk",
+        "Opens man"
+      ],
+      "answer": 0,
+      "explain": "Linear history nav.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_easy_10.mp4",
+        "poster": "media/images/hist_easy_10-frame.png",
+        "figure": "media/images/hist_easy_10.png"
+      }
+    },
+    {
+      "id": "hist_easy_11",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# Ctrl-R then type: delta\n```\nHistory can leak secrets if you typed passwords on the CLI.",
+      "answer": true,
+      "explain": "Avoid secret argv.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_easy_11.mp4",
+        "poster": "media/images/hist_easy_11-frame.png",
+        "figure": "media/images/hist_easy_11.png"
+      }
+    },
+    {
+      "id": "hist_easy_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nHISTTIMEFORMAT='%F %T ' history | tail\n```\n`HISTFILE` points to...",
+      "choices": [
+        "Where history is stored",
+        "PATH",
+        "umask",
+        "PS1"
+      ],
+      "answer": 0,
+      "explain": "History file path.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_easy_12.mp4",
+        "poster": "media/images/hist_easy_12-frame.png",
+        "figure": "media/images/hist_easy_12.png"
+      }
+    },
+    {
+      "id": "hist_easy_13",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"last: !!  last-arg: !$\"  # history expansion demo\n```\n`history -c` ...",
+      "choices": [
+        "Clears the in-memory list (careful)",
+        "Formats disk",
+        "Clears /tmp only",
+        "Resets uid"
+      ],
+      "answer": 0,
+      "explain": "Clear history.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_easy_13.mp4",
+        "poster": "media/images/hist_easy_13-frame.png",
+        "figure": "media/images/hist_easy_13.png"
+      }
+    },
+    {
+      "id": "hist_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nhistory | tail -n 7\n```\nSearching history helps you...",
+      "choices": [
+        "Reuse complex commands safely",
+        "Increase RAM clock",
+        "Disable SELinux",
+        "Skip man"
+      ],
+      "answer": 0,
+      "explain": "Productivity + accuracy.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_easy_14.mp4",
+        "poster": "media/images/hist_easy_14-frame.png",
+        "figure": "media/images/hist_easy_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# Ctrl-R then type: hotel\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nCtrl+R in a typical bash session starts...",
+      "choices": [
+        "Redo of the last undo",
+        "Reverse incremental search of history",
+        "Reload of .bashrc only",
+        "Recursive delete of the current directory"
+      ],
+      "answer": 1,
+      "explain": "Ctrl+R is reverse-search: type a substring to find an older command.",
+      "difficulty": "easy",
+      "id": "hist_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_easy_15.mp4",
+        "poster": "media/images/hist_easy_15-frame.png",
+        "figure": "media/images/hist_easy_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nHISTTIMEFORMAT='%F %T ' history | tail\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nThe history builtin...",
+      "choices": [
+        "Deletes all files older than a day",
+        "Lists numbered past commands from the shell history",
+        "Shows only git commits",
+        "Disables arrow-key recall"
+      ],
+      "answer": 1,
+      "explain": "history prints numbered entries you can recall or re-run carefully.",
+      "difficulty": "easy",
+      "id": "hist_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_easy_16.mp4",
+        "poster": "media/images/hist_easy_16-frame.png",
+        "figure": "media/images/hist_easy_16.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\necho \"last: !!  last-arg: !$\"  # history expansion demo\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\n!! re-runs the previous command.",
+      "answer": true,
+      "explain": "Bang-bang expands to the last command-use carefully on destructive lines.",
+      "difficulty": "easy",
+      "id": "hist_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_easy_17.mp4",
+        "poster": "media/images/hist_easy_17-frame.png",
+        "figure": "media/images/hist_easy_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nhistory | tail -n 11\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nArrow ↑ in the shell typically...",
+      "choices": [
+        "Scrolls the man page only",
+        "Recalls the previous command for editing or re-run",
+        "Sends SIGINT",
+        "Clears the screen"
+      ],
+      "answer": 1,
+      "explain": "Up/down step through history so you can edit and re-run.",
+      "difficulty": "easy",
+      "id": "hist_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_easy_18.mp4",
+        "poster": "media/images/hist_easy_18-frame.png",
+        "figure": "media/images/hist_easy_18.png"
+      }
+    },
+    {
+      "id": "hist_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# Ctrl-R then type: bravo\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nShell history typically records...",
+      "choices": [
+        "Previous commands",
+        "Only man pages",
+        "Only kernel logs",
+        "Only zip lists"
+      ],
+      "answer": 0,
+      "explain": "History = past commands.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_easy_19.mp4",
+        "poster": "media/images/hist_easy_19-frame.png",
+        "figure": "media/images/hist_easy_19.png"
+      }
+    },
+    {
+      "id": "hist_easy_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nHISTTIMEFORMAT='%F %T ' history | tail\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\nCtrl-R often starts...",
+      "choices": [
+        "Reverse incremental search",
+        "Reboot",
+        "rm -rf",
+        "Rename"
+      ],
+      "answer": 0,
+      "explain": "Reverse-i-search.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_easy_20.mp4",
+        "poster": "media/images/hist_easy_20-frame.png",
+        "figure": "media/images/hist_easy_20.png"
+      }
+    },
+    {
+      "id": "hist_easy_21",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\necho \"last: !!  last-arg: !$\"  # history expansion demo\n```\n# Review context: `/var/log/golf` slot 21 variant 1\n`history` builtin prints recent commands (bash).",
+      "answer": true,
+      "explain": "history lists them.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_easy_21.mp4",
+        "poster": "media/images/hist_easy_21-frame.png",
+        "figure": "media/images/hist_easy_21.png"
+      }
+    },
+    {
+      "id": "hist_easy_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nhistory | tail -n 15\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\n`!!` expands to...",
+      "choices": [
+        "The previous command",
+        "Login name",
+        "Home",
+        "PID 1"
+      ],
+      "answer": 0,
+      "explain": "Bang-bang last command.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_easy_22.mp4",
+        "poster": "media/images/hist_easy_22-frame.png",
+        "figure": "media/images/hist_easy_22.png"
+      }
+    },
+    {
+      "id": "hist_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# Ctrl-R then type: foxtrot\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\n`!$` often means...",
+      "choices": [
+        "Last argument of previous command",
+        "First arg",
+        "Exit status",
+        "umask"
+      ],
+      "answer": 0,
+      "explain": "Last word reuse.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_easy_23.mp4",
+        "poster": "media/images/hist_easy_23-frame.png",
+        "figure": "media/images/hist_easy_23.png"
+      }
+    },
+    {
+      "id": "hist_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nHISTTIMEFORMAT='%F %T ' history | tail\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nUp-arrow usually...",
+      "choices": [
+        "Recalls previous lines",
+        "Sends SIGKILL",
+        "Clears disk",
+        "Opens man"
+      ],
+      "answer": 0,
+      "explain": "Linear history nav.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_easy_24.mp4",
+        "poster": "media/images/hist_easy_24-frame.png",
+        "figure": "media/images/hist_easy_24.png"
+      }
+    },
+    {
+      "id": "hist_easy_25",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\necho \"last: !!  last-arg: !$\"  # history expansion demo\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nHistory can leak secrets if you typed passwords on the CLI.",
+      "answer": true,
+      "explain": "Avoid secret argv.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_easy_25.mp4",
+        "poster": "media/images/hist_easy_25-frame.png",
+        "figure": "media/images/hist_easy_25.png"
+      }
+    },
+    {
+      "id": "hist_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nhistory | tail -n 19\n```\n# Review context: `./scripts/delta` slot 26 variant 1\n`HISTFILE` points to...",
+      "choices": [
+        "Where history is stored",
+        "PATH",
+        "umask",
+        "PS1"
+      ],
+      "answer": 0,
+      "explain": "History file path.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_easy_26.mp4",
+        "poster": "media/images/hist_easy_26-frame.png",
+        "figure": "media/images/hist_easy_26.png"
+      }
+    },
+    {
+      "id": "hist_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# Ctrl-R then type: juliet\n```\n# Review context: `/var/log/echo` slot 27 variant 1\n`history -c` ...",
+      "choices": [
+        "Clears the in-memory list (careful)",
+        "Formats disk",
+        "Clears /tmp only",
+        "Resets uid"
+      ],
+      "answer": 0,
+      "explain": "Clear history.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_easy_27.mp4",
+        "poster": "media/images/hist_easy_27-frame.png",
+        "figure": "media/images/hist_easy_27.png"
+      }
+    },
+    {
+      "id": "hist_easy_28",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nHISTTIMEFORMAT='%F %T ' history | tail\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nSearching history helps you...",
+      "choices": [
+        "Reuse complex commands safely",
+        "Increase RAM clock",
+        "Disable SELinux",
+        "Skip man"
+      ],
+      "answer": 0,
+      "explain": "Productivity + accuracy.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_easy_28.mp4",
+        "poster": "media/images/hist_easy_28-frame.png",
+        "figure": "media/images/hist_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"last: !!  last-arg: !$\"  # history expansion demo\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nCtrl+R in a typical bash session starts...",
+      "choices": [
+        "Redo of the last undo",
+        "Reverse incremental search of history",
+        "Reload of .bashrc only",
+        "Recursive delete of the current directory"
+      ],
+      "answer": 1,
+      "explain": "Ctrl+R is reverse-search: type a substring to find an older command.",
+      "difficulty": "easy",
+      "id": "hist_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_easy_29.mp4",
+        "poster": "media/images/hist_easy_29-frame.png",
+        "figure": "media/images/hist_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nhistory | tail -n 8\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nThe history builtin...",
+      "choices": [
+        "Deletes all files older than a day",
+        "Lists numbered past commands from the shell history",
+        "Shows only git commits",
+        "Disables arrow-key recall"
+      ],
+      "answer": 1,
+      "explain": "history prints numbered entries you can recall or re-run carefully.",
+      "difficulty": "easy",
+      "id": "hist_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_easy_30.mp4",
+        "poster": "media/images/hist_easy_30-frame.png",
+        "figure": "media/images/hist_easy_30.png"
+      }
+    },
+    {
+      "id": "hist_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nHISTTIMEFORMAT='%F %T ' history | tail\n```\n`HISTCONTROL=ignoredups` skips...",
+      "choices": [
+        "Recording consecutive duplicates",
+        "All commands",
+        "All files",
+        "All signals"
+      ],
+      "answer": 0,
+      "explain": "Dedup consecutive.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_medium_01.mp4",
+        "poster": "media/images/hist_medium_01-frame.png",
+        "figure": "media/images/hist_medium_01.png"
+      }
+    },
+    {
+      "id": "hist_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"last: !!  last-arg: !$\"  # history expansion demo\n```\n`HISTSIZE` vs `HISTFILESIZE` ...",
+      "choices": [
+        "Memory list vs on-disk size limits",
+        "Identical always",
+        "Users vs groups",
+        "PIDs vs PPIDs"
+      ],
+      "answer": 0,
+      "explain": "Two different caps.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_medium_02.mp4",
+        "poster": "media/images/hist_medium_02-frame.png",
+        "figure": "media/images/hist_medium_02.png"
+      }
+    },
+    {
+      "id": "hist_medium_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nhistory | tail -n 10\n```\n`set -o histverify` lets you edit expanded history before running.",
+      "answer": true,
+      "explain": "Verify bang expansions.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_medium_03.mp4",
+        "poster": "media/images/hist_medium_03-frame.png",
+        "figure": "media/images/hist_medium_03.png"
+      }
+    },
+    {
+      "id": "hist_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# Ctrl-R then type: foxtrot\n```\n`!grep` re-runs last command starting with grep because...",
+      "choices": [
+        "Prefix history expansion",
+        "grep builtin always",
+        "Kernel rule",
+        "make rule"
+      ],
+      "answer": 0,
+      "explain": "Bang prefix.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_medium_04.mp4",
+        "poster": "media/images/hist_medium_04-frame.png",
+        "figure": "media/images/hist_medium_04.png"
+      }
+    },
+    {
+      "id": "hist_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nHISTTIMEFORMAT='%F %T ' history | tail\n```\nMulti-line commands in history may...",
+      "choices": [
+        "Store with escaped newlines / depend on options",
+        "Never appear",
+        "Become zip",
+        "Clear PATH"
+      ],
+      "answer": 0,
+      "explain": "Multiline storage quirks.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_medium_05.mp4",
+        "poster": "media/images/hist_medium_05-frame.png",
+        "figure": "media/images/hist_medium_05.png"
+      }
+    },
+    {
+      "id": "hist_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"last: !!  last-arg: !$\"  # history expansion demo\n```\n`history -a` appends...",
+      "choices": [
+        "New lines to HISTFILE now",
+        "All of /etc",
+        "Only aliases",
+        "Only jobs"
+      ],
+      "answer": 0,
+      "explain": "Flush to disk.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_medium_06.mp4",
+        "poster": "media/images/hist_medium_06-frame.png",
+        "figure": "media/images/hist_medium_06.png"
+      }
+    },
+    {
+      "id": "hist_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nhistory | tail -n 14\n```\nShared history across sessions needs...",
+      "choices": [
+        "Careful append/reload options",
+        "Disabling HISTFILE",
+        "Root only",
+        "Only tmux"
+      ],
+      "answer": 0,
+      "explain": "Concurrent sessions collide.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_medium_07.mp4",
+        "poster": "media/images/hist_medium_07-frame.png",
+        "figure": "media/images/hist_medium_07.png"
+      }
+    },
+    {
+      "id": "hist_medium_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# Ctrl-R then type: juliet\n```\n`ignorespace` can omit commands starting with a space from history.",
+      "answer": true,
+      "explain": "Leading space trick.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_medium_08.mp4",
+        "poster": "media/images/hist_medium_08-frame.png",
+        "figure": "media/images/hist_medium_08.png"
+      }
+    },
+    {
+      "id": "hist_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nHISTTIMEFORMAT='%F %T ' history | tail\n```\nfc command can...",
+      "choices": [
+        "List/edit/re-run history ranges",
+        "Format disks",
+        "Mount nfs",
+        "Set ACL only"
+      ],
+      "answer": 0,
+      "explain": "fc = fix command.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_medium_09.mp4",
+        "poster": "media/images/hist_medium_09-frame.png",
+        "figure": "media/images/hist_medium_09.png"
+      }
+    },
+    {
+      "id": "hist_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"last: !!  last-arg: !$\"  # history expansion demo\n```\nSecurity policy may disable history to...",
+      "choices": [
+        "Reduce forensic leakage on shared accounts",
+        "Speed CPU",
+        "Break bash",
+        "Clear man"
+      ],
+      "answer": 0,
+      "explain": "Trade ops vs privacy.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_medium_10.mp4",
+        "poster": "media/images/hist_medium_10-frame.png",
+        "figure": "media/images/hist_medium_10.png"
+      }
+    },
+    {
+      "id": "hist_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nhistory | tail -n 18\n```\n# Review context: `~/bin/echo` slot 11 variant 1\n`HISTCONTROL=ignoredups` skips...",
+      "choices": [
+        "Recording consecutive duplicates",
+        "All commands",
+        "All files",
+        "All signals"
+      ],
+      "answer": 0,
+      "explain": "Dedup consecutive.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_medium_11.mp4",
+        "poster": "media/images/hist_medium_11-frame.png",
+        "figure": "media/images/hist_medium_11.png"
+      }
+    },
+    {
+      "id": "hist_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# Ctrl-R then type: delta\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\n`HISTSIZE` vs `HISTFILESIZE` ...",
+      "choices": [
+        "Memory list vs on-disk size limits",
+        "Identical always",
+        "Users vs groups",
+        "PIDs vs PPIDs"
+      ],
+      "answer": 0,
+      "explain": "Two different caps.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_medium_12.mp4",
+        "poster": "media/images/hist_medium_12-frame.png",
+        "figure": "media/images/hist_medium_12.png"
+      }
+    },
+    {
+      "id": "hist_medium_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nHISTTIMEFORMAT='%F %T ' history | tail\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\n`set -o histverify` lets you edit expanded history before running.",
+      "answer": true,
+      "explain": "Verify bang expansions.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_medium_13.mp4",
+        "poster": "media/images/hist_medium_13-frame.png",
+        "figure": "media/images/hist_medium_13.png"
+      }
+    },
+    {
+      "id": "hist_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"last: !!  last-arg: !$\"  # history expansion demo\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\n`!grep` re-runs last command starting with grep because...",
+      "choices": [
+        "Prefix history expansion",
+        "grep builtin always",
+        "Kernel rule",
+        "make rule"
+      ],
+      "answer": 0,
+      "explain": "Bang prefix.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_medium_14.mp4",
+        "poster": "media/images/hist_medium_14-frame.png",
+        "figure": "media/images/hist_medium_14.png"
+      }
+    },
+    {
+      "id": "hist_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nhistory | tail -n 7\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nMulti-line commands in history may...",
+      "choices": [
+        "Store with escaped newlines / depend on options",
+        "Never appear",
+        "Become zip",
+        "Clear PATH"
+      ],
+      "answer": 0,
+      "explain": "Multiline storage quirks.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_medium_15.mp4",
+        "poster": "media/images/hist_medium_15-frame.png",
+        "figure": "media/images/hist_medium_15.png"
+      }
+    },
+    {
+      "id": "hist_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# Ctrl-R then type: hotel\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\n`history -a` appends...",
+      "choices": [
+        "New lines to HISTFILE now",
+        "All of /etc",
+        "Only aliases",
+        "Only jobs"
+      ],
+      "answer": 0,
+      "explain": "Flush to disk.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_medium_16.mp4",
+        "poster": "media/images/hist_medium_16-frame.png",
+        "figure": "media/images/hist_medium_16.png"
+      }
+    },
+    {
+      "id": "hist_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nHISTTIMEFORMAT='%F %T ' history | tail\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nShared history across sessions needs...",
+      "choices": [
+        "Careful append/reload options",
+        "Disabling HISTFILE",
+        "Root only",
+        "Only tmux"
+      ],
+      "answer": 0,
+      "explain": "Concurrent sessions collide.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_medium_17.mp4",
+        "poster": "media/images/hist_medium_17-frame.png",
+        "figure": "media/images/hist_medium_17.png"
+      }
+    },
+    {
+      "id": "hist_medium_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\necho \"last: !!  last-arg: !$\"  # history expansion demo\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\n`ignorespace` can omit commands starting with a space from history.",
+      "answer": true,
+      "explain": "Leading space trick.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_medium_18.mp4",
+        "poster": "media/images/hist_medium_18-frame.png",
+        "figure": "media/images/hist_medium_18.png"
+      }
+    },
+    {
+      "id": "hist_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nhistory | tail -n 11\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nfc command can...",
+      "choices": [
+        "List/edit/re-run history ranges",
+        "Format disks",
+        "Mount nfs",
+        "Set ACL only"
+      ],
+      "answer": 0,
+      "explain": "fc = fix command.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_medium_19.mp4",
+        "poster": "media/images/hist_medium_19-frame.png",
+        "figure": "media/images/hist_medium_19.png"
+      }
+    },
+    {
+      "id": "hist_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# Ctrl-R then type: bravo\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\nSecurity policy may disable history to...",
+      "choices": [
+        "Reduce forensic leakage on shared accounts",
+        "Speed CPU",
+        "Break bash",
+        "Clear man"
+      ],
+      "answer": 0,
+      "explain": "Trade ops vs privacy.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_medium_20.mp4",
+        "poster": "media/images/hist_medium_20-frame.png",
+        "figure": "media/images/hist_medium_20.png"
+      }
+    },
+    {
+      "id": "hist_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nHISTTIMEFORMAT='%F %T ' history | tail\n```\n# Review context: `/var/log/golf` slot 21 variant 1\n`HISTCONTROL=ignoredups` skips...",
+      "choices": [
+        "Recording consecutive duplicates",
+        "All commands",
+        "All files",
+        "All signals"
+      ],
+      "answer": 0,
+      "explain": "Dedup consecutive.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_medium_21.mp4",
+        "poster": "media/images/hist_medium_21-frame.png",
+        "figure": "media/images/hist_medium_21.png"
+      }
+    },
+    {
+      "id": "hist_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"last: !!  last-arg: !$\"  # history expansion demo\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\n`HISTSIZE` vs `HISTFILESIZE` ...",
+      "choices": [
+        "Memory list vs on-disk size limits",
+        "Identical always",
+        "Users vs groups",
+        "PIDs vs PPIDs"
+      ],
+      "answer": 0,
+      "explain": "Two different caps.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_medium_22.mp4",
+        "poster": "media/images/hist_medium_22-frame.png",
+        "figure": "media/images/hist_medium_22.png"
+      }
+    },
+    {
+      "id": "hist_medium_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nhistory | tail -n 15\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\n`set -o histverify` lets you edit expanded history before running.",
+      "answer": true,
+      "explain": "Verify bang expansions.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_medium_23.mp4",
+        "poster": "media/images/hist_medium_23-frame.png",
+        "figure": "media/images/hist_medium_23.png"
+      }
+    },
+    {
+      "id": "hist_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# Ctrl-R then type: foxtrot\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\n`!grep` re-runs last command starting with grep because...",
+      "choices": [
+        "Prefix history expansion",
+        "grep builtin always",
+        "Kernel rule",
+        "make rule"
+      ],
+      "answer": 0,
+      "explain": "Bang prefix.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_medium_24.mp4",
+        "poster": "media/images/hist_medium_24-frame.png",
+        "figure": "media/images/hist_medium_24.png"
+      }
+    },
+    {
+      "id": "hist_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nHISTTIMEFORMAT='%F %T ' history | tail\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nMulti-line commands in history may...",
+      "choices": [
+        "Store with escaped newlines / depend on options",
+        "Never appear",
+        "Become zip",
+        "Clear PATH"
+      ],
+      "answer": 0,
+      "explain": "Multiline storage quirks.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_medium_25.mp4",
+        "poster": "media/images/hist_medium_25-frame.png",
+        "figure": "media/images/hist_medium_25.png"
+      }
+    },
+    {
+      "id": "hist_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"last: !!  last-arg: !$\"  # history expansion demo\n```\n# Review context: `./scripts/delta` slot 26 variant 1\n`history -a` appends...",
+      "choices": [
+        "New lines to HISTFILE now",
+        "All of /etc",
+        "Only aliases",
+        "Only jobs"
+      ],
+      "answer": 0,
+      "explain": "Flush to disk.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_medium_26.mp4",
+        "poster": "media/images/hist_medium_26-frame.png",
+        "figure": "media/images/hist_medium_26.png"
+      }
+    },
+    {
+      "id": "hist_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nhistory | tail -n 19\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nShared history across sessions needs...",
+      "choices": [
+        "Careful append/reload options",
+        "Disabling HISTFILE",
+        "Root only",
+        "Only tmux"
+      ],
+      "answer": 0,
+      "explain": "Concurrent sessions collide.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_medium_27.mp4",
+        "poster": "media/images/hist_medium_27-frame.png",
+        "figure": "media/images/hist_medium_27.png"
+      }
+    },
+    {
+      "id": "hist_medium_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# Ctrl-R then type: juliet\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\n`ignorespace` can omit commands starting with a space from history.",
+      "answer": true,
+      "explain": "Leading space trick.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_medium_28.mp4",
+        "poster": "media/images/hist_medium_28-frame.png",
+        "figure": "media/images/hist_medium_28.png"
+      }
+    },
+    {
+      "id": "hist_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nHISTTIMEFORMAT='%F %T ' history | tail\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nfc command can...",
+      "choices": [
+        "List/edit/re-run history ranges",
+        "Format disks",
+        "Mount nfs",
+        "Set ACL only"
+      ],
+      "answer": 0,
+      "explain": "fc = fix command.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_medium_29.mp4",
+        "poster": "media/images/hist_medium_29-frame.png",
+        "figure": "media/images/hist_medium_29.png"
+      }
+    },
+    {
+      "id": "hist_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"last: !!  last-arg: !$\"  # history expansion demo\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nSecurity policy may disable history to...",
+      "choices": [
+        "Reduce forensic leakage on shared accounts",
+        "Speed CPU",
+        "Break bash",
+        "Clear man"
+      ],
+      "answer": 0,
+      "explain": "Trade ops vs privacy.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_medium_30.mp4",
+        "poster": "media/images/hist_medium_30-frame.png",
+        "figure": "media/images/hist_medium_30.png"
+      }
+    },
+    {
+      "id": "hist_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nHISTTIMEFORMAT='%F %T ' history | tail\n```\nHistory expansion `!` conflicts with...",
+      "choices": [
+        "Some commands' own ! meanings; disable with set +H",
+        "Only zip",
+        "Only make",
+        "Only pwd"
+      ],
+      "answer": 0,
+      "explain": "set +H disables.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_hard_01.mp4",
+        "poster": "media/images/hist_hard_01-frame.png",
+        "figure": "media/images/hist_hard_01.png"
+      }
+    },
+    {
+      "id": "hist_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"last: !!  last-arg: !$\"  # history expansion demo\n```\nTimestamped history (`HISTTIMEFORMAT`) helps...",
+      "choices": [
+        "Audit when a command ran",
+        "Sort files",
+        "Set umask",
+        "Color ls"
+      ],
+      "answer": 0,
+      "explain": "Temporal audit.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_hard_02.mp4",
+        "poster": "media/images/hist_hard_02-frame.png",
+        "figure": "media/images/hist_hard_02.png"
+      }
+    },
+    {
+      "id": "hist_hard_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nhistory | tail -n 10\n```\nAsync prompts / multiple bash instances can interleave HISTFILE writes.",
+      "answer": true,
+      "explain": "Race on history file.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_hard_03.mp4",
+        "poster": "media/images/hist_hard_03-frame.png",
+        "figure": "media/images/hist_hard_03.png"
+      }
+    },
+    {
+      "id": "hist_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# Ctrl-R then type: foxtrot\n```\nReading HISTFILE from untrusted home risks...",
+      "choices": [
+        "Command injection if replayed carelessly",
+        "Only slow IO",
+        "Only locale",
+        "Only colors"
+      ],
+      "answer": 0,
+      "explain": "Treat history as data.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_hard_04.mp4",
+        "poster": "media/images/hist_hard_04-frame.png",
+        "figure": "media/images/hist_hard_04.png"
+      }
+    },
+    {
+      "id": "hist_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nHISTTIMEFORMAT='%F %T ' history | tail\n```\n`shopt -s histappend` is recommended because...",
+      "choices": [
+        "Appends rather than overwrites HISTFILE on exit",
+        "Deletes history",
+        "Disables Ctrl-R",
+        "Clears PS1"
+      ],
+      "answer": 0,
+      "explain": "Avoid clobber.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_hard_05.mp4",
+        "poster": "media/images/hist_hard_05-frame.png",
+        "figure": "media/images/hist_hard_05.png"
+      }
+    },
+    {
+      "id": "hist_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"last: !!  last-arg: !$\"  # history expansion demo\n```\nZsh vs bash history features differ; portability means...",
+      "choices": [
+        "Not relying on one shell's widgets in docs",
+        "Identical always",
+        "Only Ctrl-R exists nowhere",
+        "Bang always same"
+      ],
+      "answer": 0,
+      "explain": "Shell-specific UX.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_hard_06.mp4",
+        "poster": "media/images/hist_hard_06-frame.png",
+        "figure": "media/images/hist_hard_06.png"
+      }
+    },
+    {
+      "id": "hist_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nhistory | tail -n 14\n```\nSecret managers beat typing tokens because...",
+      "choices": [
+        "Tokens won't land in HISTFILE/ps",
+        "History encrypts argv",
+        "Shells ban env",
+        "SSH refuses keys"
+      ],
+      "answer": 0,
+      "explain": "Keep secrets out of argv/history.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_hard_07.mp4",
+        "poster": "media/images/hist_hard_07-frame.png",
+        "figure": "media/images/hist_hard_07.png"
+      }
+    },
+    {
+      "id": "hist_hard_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# Ctrl-R then type: juliet\n```\n`LEADPIPE`/options aside, reverse-search needs readline-style editing.",
+      "answer": true,
+      "explain": "Editing mode dependent.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_hard_08.mp4",
+        "poster": "media/images/hist_hard_08-frame.png",
+        "figure": "media/images/hist_hard_08.png"
+      }
+    },
+    {
+      "id": "hist_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nHISTTIMEFORMAT='%F %T ' history | tail\n```\nCompliance redaction pipelines sometimes...",
+      "choices": [
+        "Scrub HISTFILE patterns on logout",
+        "Expand HISTSIZE infinitely",
+        "Force ignoredups off",
+        "Disable tty"
+      ],
+      "answer": 0,
+      "explain": "Policy scrubbing.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_hard_09.mp4",
+        "poster": "media/images/hist_hard_09-frame.png",
+        "figure": "media/images/hist_hard_09.png"
+      }
+    },
+    {
+      "id": "hist_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"last: !!  last-arg: !$\"  # history expansion demo\n```\nLab drill: recover a prior pipeline via Ctrl-R then tweak args.",
+      "choices": [
+        "Yes: search then edit",
+        "No: retype always",
+        "No: use -9",
+        "No: reboot"
+      ],
+      "answer": 0,
+      "explain": "Search-edit-run.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_hard_10.mp4",
+        "poster": "media/images/hist_hard_10-frame.png",
+        "figure": "media/images/hist_hard_10.png"
+      }
+    },
+    {
+      "id": "hist_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nhistory | tail -n 18\n```\n# Review context: `~/bin/echo` slot 11 variant 1\nHistory expansion `!` conflicts with...",
+      "choices": [
+        "Some commands' own ! meanings; disable with set +H",
+        "Only zip",
+        "Only make",
+        "Only pwd"
+      ],
+      "answer": 0,
+      "explain": "set +H disables.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_hard_11.mp4",
+        "poster": "media/images/hist_hard_11-frame.png",
+        "figure": "media/images/hist_hard_11.png"
+      }
+    },
+    {
+      "id": "hist_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# Ctrl-R then type: delta\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\nTimestamped history (`HISTTIMEFORMAT`) helps...",
+      "choices": [
+        "Audit when a command ran",
+        "Sort files",
+        "Set umask",
+        "Color ls"
+      ],
+      "answer": 0,
+      "explain": "Temporal audit.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_hard_12.mp4",
+        "poster": "media/images/hist_hard_12-frame.png",
+        "figure": "media/images/hist_hard_12.png"
+      }
+    },
+    {
+      "id": "hist_hard_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nHISTTIMEFORMAT='%F %T ' history | tail\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\nAsync prompts / multiple bash instances can interleave HISTFILE writes.",
+      "answer": true,
+      "explain": "Race on history file.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_hard_13.mp4",
+        "poster": "media/images/hist_hard_13-frame.png",
+        "figure": "media/images/hist_hard_13.png"
+      }
+    },
+    {
+      "id": "hist_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"last: !!  last-arg: !$\"  # history expansion demo\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\nReading HISTFILE from untrusted home risks...",
+      "choices": [
+        "Command injection if replayed carelessly",
+        "Only slow IO",
+        "Only locale",
+        "Only colors"
+      ],
+      "answer": 0,
+      "explain": "Treat history as data.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_hard_14.mp4",
+        "poster": "media/images/hist_hard_14-frame.png",
+        "figure": "media/images/hist_hard_14.png"
+      }
+    },
+    {
+      "id": "hist_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nhistory | tail -n 7\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\n`shopt -s histappend` is recommended because...",
+      "choices": [
+        "Appends rather than overwrites HISTFILE on exit",
+        "Deletes history",
+        "Disables Ctrl-R",
+        "Clears PS1"
+      ],
+      "answer": 0,
+      "explain": "Avoid clobber.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_hard_15.mp4",
+        "poster": "media/images/hist_hard_15-frame.png",
+        "figure": "media/images/hist_hard_15.png"
+      }
+    },
+    {
+      "id": "hist_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# Ctrl-R then type: hotel\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nZsh vs bash history features differ; portability means...",
+      "choices": [
+        "Not relying on one shell's widgets in docs",
+        "Identical always",
+        "Only Ctrl-R exists nowhere",
+        "Bang always same"
+      ],
+      "answer": 0,
+      "explain": "Shell-specific UX.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_hard_16.mp4",
+        "poster": "media/images/hist_hard_16-frame.png",
+        "figure": "media/images/hist_hard_16.png"
+      }
+    },
+    {
+      "id": "hist_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nHISTTIMEFORMAT='%F %T ' history | tail\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nSecret managers beat typing tokens because...",
+      "choices": [
+        "Tokens won't land in HISTFILE/ps",
+        "History encrypts argv",
+        "Shells ban env",
+        "SSH refuses keys"
+      ],
+      "answer": 0,
+      "explain": "Keep secrets out of argv/history.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_hard_17.mp4",
+        "poster": "media/images/hist_hard_17-frame.png",
+        "figure": "media/images/hist_hard_17.png"
+      }
+    },
+    {
+      "id": "hist_hard_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\necho \"last: !!  last-arg: !$\"  # history expansion demo\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\n`LEADPIPE`/options aside, reverse-search needs readline-style editing.",
+      "answer": true,
+      "explain": "Editing mode dependent.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_hard_18.mp4",
+        "poster": "media/images/hist_hard_18-frame.png",
+        "figure": "media/images/hist_hard_18.png"
+      }
+    },
+    {
+      "id": "hist_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nhistory | tail -n 11\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nCompliance redaction pipelines sometimes...",
+      "choices": [
+        "Scrub HISTFILE patterns on logout",
+        "Expand HISTSIZE infinitely",
+        "Force ignoredups off",
+        "Disable tty"
+      ],
+      "answer": 0,
+      "explain": "Policy scrubbing.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_hard_19.mp4",
+        "poster": "media/images/hist_hard_19-frame.png",
+        "figure": "media/images/hist_hard_19.png"
+      }
+    },
+    {
+      "id": "hist_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# Ctrl-R then type: bravo\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\nLab drill: recover a prior pipeline via Ctrl-R then tweak args.",
+      "choices": [
+        "Yes: search then edit",
+        "No: retype always",
+        "No: use -9",
+        "No: reboot"
+      ],
+      "answer": 0,
+      "explain": "Search-edit-run.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_hard_20.mp4",
+        "poster": "media/images/hist_hard_20-frame.png",
+        "figure": "media/images/hist_hard_20.png"
+      }
+    },
+    {
+      "id": "hist_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nHISTTIMEFORMAT='%F %T ' history | tail\n```\n# Review context: `/var/log/golf` slot 21 variant 1\nHistory expansion `!` conflicts with...",
+      "choices": [
+        "Some commands' own ! meanings; disable with set +H",
+        "Only zip",
+        "Only make",
+        "Only pwd"
+      ],
+      "answer": 0,
+      "explain": "set +H disables.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_hard_21.mp4",
+        "poster": "media/images/hist_hard_21-frame.png",
+        "figure": "media/images/hist_hard_21.png"
+      }
+    },
+    {
+      "id": "hist_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"last: !!  last-arg: !$\"  # history expansion demo\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\nTimestamped history (`HISTTIMEFORMAT`) helps...",
+      "choices": [
+        "Audit when a command ran",
+        "Sort files",
+        "Set umask",
+        "Color ls"
+      ],
+      "answer": 0,
+      "explain": "Temporal audit.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_hard_22.mp4",
+        "poster": "media/images/hist_hard_22-frame.png",
+        "figure": "media/images/hist_hard_22.png"
+      }
+    },
+    {
+      "id": "hist_hard_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nhistory | tail -n 15\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\nAsync prompts / multiple bash instances can interleave HISTFILE writes.",
+      "answer": true,
+      "explain": "Race on history file.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_hard_23.mp4",
+        "poster": "media/images/hist_hard_23-frame.png",
+        "figure": "media/images/hist_hard_23.png"
+      }
+    },
+    {
+      "id": "hist_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# Ctrl-R then type: foxtrot\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nReading HISTFILE from untrusted home risks...",
+      "choices": [
+        "Command injection if replayed carelessly",
+        "Only slow IO",
+        "Only locale",
+        "Only colors"
+      ],
+      "answer": 0,
+      "explain": "Treat history as data.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_hard_24.mp4",
+        "poster": "media/images/hist_hard_24-frame.png",
+        "figure": "media/images/hist_hard_24.png"
+      }
+    },
+    {
+      "id": "hist_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nHISTTIMEFORMAT='%F %T ' history | tail\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\n`shopt -s histappend` is recommended because...",
+      "choices": [
+        "Appends rather than overwrites HISTFILE on exit",
+        "Deletes history",
+        "Disables Ctrl-R",
+        "Clears PS1"
+      ],
+      "answer": 0,
+      "explain": "Avoid clobber.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_hard_25.mp4",
+        "poster": "media/images/hist_hard_25-frame.png",
+        "figure": "media/images/hist_hard_25.png"
+      }
+    },
+    {
+      "id": "hist_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"last: !!  last-arg: !$\"  # history expansion demo\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nZsh vs bash history features differ; portability means...",
+      "choices": [
+        "Not relying on one shell's widgets in docs",
+        "Identical always",
+        "Only Ctrl-R exists nowhere",
+        "Bang always same"
+      ],
+      "answer": 0,
+      "explain": "Shell-specific UX.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_hard_26.mp4",
+        "poster": "media/images/hist_hard_26-frame.png",
+        "figure": "media/images/hist_hard_26.png"
+      }
+    },
+    {
+      "id": "hist_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nhistory | tail -n 19\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nSecret managers beat typing tokens because...",
+      "choices": [
+        "Tokens won't land in HISTFILE/ps",
+        "History encrypts argv",
+        "Shells ban env",
+        "SSH refuses keys"
+      ],
+      "answer": 0,
+      "explain": "Keep secrets out of argv/history.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_hard_27.mp4",
+        "poster": "media/images/hist_hard_27-frame.png",
+        "figure": "media/images/hist_hard_27.png"
+      }
+    },
+    {
+      "id": "hist_hard_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# Ctrl-R then type: juliet\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\n`LEADPIPE`/options aside, reverse-search needs readline-style editing.",
+      "answer": true,
+      "explain": "Editing mode dependent.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_hard_28.mp4",
+        "poster": "media/images/hist_hard_28-frame.png",
+        "figure": "media/images/hist_hard_28.png"
+      }
+    },
+    {
+      "id": "hist_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nHISTTIMEFORMAT='%F %T ' history | tail\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nCompliance redaction pipelines sometimes...",
+      "choices": [
+        "Scrub HISTFILE patterns on logout",
+        "Expand HISTSIZE infinitely",
+        "Force ignoredups off",
+        "Disable tty"
+      ],
+      "answer": 0,
+      "explain": "Policy scrubbing.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_hard_29.mp4",
+        "poster": "media/images/hist_hard_29-frame.png",
+        "figure": "media/images/hist_hard_29.png"
+      }
+    },
+    {
+      "id": "hist_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\necho \"last: !!  last-arg: !$\"  # history expansion demo\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nLab drill: recover a prior pipeline via Ctrl-R then tweak args.",
+      "choices": [
+        "Yes: search then edit",
+        "No: retype always",
+        "No: use -9",
+        "No: reboot"
+      ],
+      "answer": 0,
+      "explain": "Search-edit-run.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/hist_hard_30.mp4",
+        "poster": "media/images/hist_hard_30-frame.png",
+        "figure": "media/images/hist_hard_30.png"
+      }
+    }
+  ]
+}

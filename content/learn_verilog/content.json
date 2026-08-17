@@ -1,0 +1,210 @@
+{
+  "id": "learn_verilog",
+  "title": "Verilog RTL Quest",
+  "version": 3,
+  "source_course": "learn_verilog",
+  "ux": {
+    "reveal_modules_during_quiz": false,
+    "feedback": "report_only",
+    "module_order": "random",
+    "within_module": "easy_to_hard_clearance",
+    "embed_tools": true,
+    "tool_embed_height_px": 3600
+  },
+  "timing": {
+    "enabled": true,
+    "limits_s": {
+      "easy": 30,
+      "medium": 45,
+      "hard": 60
+    },
+    "warn_before_s": 10,
+    "on_timeout": "incorrect",
+    "keep_counting_when_hidden": true
+  },
+  "progress": {
+    "unit": "module",
+    "difficulties": [
+      "easy",
+      "medium",
+      "hard"
+    ],
+    "need_correct_per_difficulty": 1,
+    "max_attempts_per_difficulty": 10,
+    "bank_multiplier": 3,
+    "advance": "difficulties_cleared_or_exhausted"
+  },
+  "profiles": {
+    "test": {
+      "title": "Verilog RTL Quest (Short)",
+      "module_count": 1,
+      "difficulties": [
+        "easy",
+        "medium",
+        "hard"
+      ],
+      "need_correct_per_difficulty": 2,
+      "max_attempts_per_difficulty": 6,
+      "prefer_video_stems": true
+    }
+  },
+  "media_policy": {
+    "download": false,
+    "screenshot_ok": true
+  },
+  "modules": [
+    {
+      "id": "module01-module-diagram",
+      "order": 1,
+      "title": "Module / port diagram",
+      "toolId": "module-diagram",
+      "questions": "questions/module01-module-diagram.json",
+      "source_quiz": "module01-module-diagram/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module02-verilog-literals",
+      "order": 2,
+      "title": "Verilog literals",
+      "toolId": "verilog-literals",
+      "questions": "questions/module02-verilog-literals.json",
+      "source_quiz": "module02-verilog-literals/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module03-wire-vs-reg",
+      "order": 3,
+      "title": "wire vs reg",
+      "toolId": "wire-vs-reg",
+      "questions": "questions/module03-wire-vs-reg.json",
+      "source_quiz": "module03-wire-vs-reg/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module04-ansi-ports",
+      "order": 4,
+      "title": "ANSI vs non-ANSI ports",
+      "toolId": "ansi-ports",
+      "questions": "questions/module04-ansi-ports.json",
+      "source_quiz": "module04-ansi-ports/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module05-sv-operators",
+      "order": 5,
+      "title": "Operators",
+      "toolId": "sv-operators",
+      "questions": "questions/module05-sv-operators.json",
+      "source_quiz": "module05-sv-operators/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module06-sensitivity-list",
+      "order": 6,
+      "title": "Sensitivity lists",
+      "toolId": "sensitivity-list",
+      "questions": "questions/module06-sensitivity-list.json",
+      "source_quiz": "module06-sensitivity-list/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module07-latch-risk",
+      "order": 7,
+      "title": "Latch risk",
+      "toolId": "latch-risk",
+      "questions": "questions/module07-latch-risk.json",
+      "source_quiz": "module07-latch-risk/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module08-blocking-vs-nonblocking",
+      "order": 8,
+      "title": "Blocking vs non-blocking",
+      "toolId": "blocking-vs-nonblocking",
+      "questions": "questions/module08-blocking-vs-nonblocking.json",
+      "source_quiz": "module08-blocking-vs-nonblocking/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module09-param-width",
+      "order": 9,
+      "title": "Parameter / width",
+      "toolId": "param-width",
+      "questions": "questions/module09-param-width.json",
+      "source_quiz": "module09-param-width/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module10-named-vs-positional",
+      "order": 10,
+      "title": "Named vs positional",
+      "toolId": "named-vs-positional",
+      "questions": "questions/module10-named-vs-positional.json",
+      "source_quiz": "module10-named-vs-positional/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module11-localparam-lab",
+      "order": 11,
+      "title": "localparam",
+      "toolId": "localparam-lab",
+      "questions": "questions/module11-localparam-lab.json",
+      "source_quiz": "module11-localparam-lab/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module12-sv-generate",
+      "order": 12,
+      "title": "Generate / replication",
+      "toolId": "sv-generate",
+      "questions": "questions/module12-sv-generate.json",
+      "source_quiz": "module12-sv-generate/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module13-one-driver",
+      "order": 13,
+      "title": "One-driver nets",
+      "toolId": "one-driver",
+      "questions": "questions/module13-one-driver.json",
+      "source_quiz": "module13-one-driver/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module14-counter-lab",
+      "order": 14,
+      "title": "Counter patterns",
+      "toolId": "counter-lab",
+      "questions": "questions/module14-counter-lab.json",
+      "source_quiz": "module14-counter-lab/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module15-shift-register-lab",
+      "order": 15,
+      "title": "Shift-register patterns",
+      "toolId": "shift-register-lab",
+      "questions": "questions/module15-shift-register-lab.json",
+      "source_quiz": "module15-shift-register-lab/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module16-synth-lint",
+      "order": 16,
+      "title": "Synthesizability lint",
+      "toolId": "synth-lint",
+      "questions": "questions/module16-synth-lint.json",
+      "source_quiz": "module16-synth-lint/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module17-hdl-style",
+      "order": 17,
+      "title": "HDL style",
+      "toolId": "hdl-style",
+      "questions": "questions/module17-hdl-style.json",
+      "source_quiz": "module17-hdl-style/quiz.json",
+      "video_stems": true
+    }
+  ]
+}

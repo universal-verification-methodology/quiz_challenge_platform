@@ -1,0 +1,1680 @@
+{
+  "module": "module08-blocking-vs-nonblocking",
+  "title": "Blocking vs non-blocking",
+  "items": [
+    {
+      "id": "nba_easy_01",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin clk = en; en = clk; end\n```\nIn a clocked always block, non-blocking (<=) means…",
+      "choices": [
+        "All RHS values are sampled first, then LHS updates happen together",
+        "Statements never run on a clock edge",
+        "Only wire outputs",
+        "The block is combo"
+      ],
+      "answer": 0,
+      "explain": "NBA scheduling.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_easy_01.mp4",
+        "poster": "media/images/nba_easy_01-frame.png",
+        "figure": "media/images/nba_easy_01.png"
+      }
+    },
+    {
+      "id": "nba_easy_02",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin en <= rst_n; rst_n <= en; end\n```\nq1 = d; q2 = q1; on one posedge (blocking) typically…",
+      "choices": [
+        "Both q1 and q2 get d in the same edge",
+        "q2 gets only old q1",
+        "Illegal",
+        "Never change"
+      ],
+      "answer": 0,
+      "explain": "Blocking is ordered.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_easy_02.mp4",
+        "poster": "media/images/nba_easy_02-frame.png",
+        "figure": "media/images/nba_easy_02.png"
+      }
+    },
+    {
+      "id": "nba_easy_03",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg rst_n; always @(*) rst_n = data & count;\n```\na <= b; b <= a; with a=1,b=0 before edge…",
+      "choices": [
+        "a becomes 0 and b becomes 1 — a real swap",
+        "Both unchanged",
+        "Both 0",
+        "Both 1"
+      ],
+      "answer": 0,
+      "explain": "NBA samples both RHS first.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_easy_03.mp4",
+        "poster": "media/images/nba_easy_03-frame.png",
+        "figure": "media/images/nba_easy_03.png"
+      }
+    },
+    {
+      "id": "nba_easy_04",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) data <= count;\n```\nFlip-flop RTL in always @(posedge clk) should normally use <= for register updates.",
+      "answer": true,
+      "explain": "NBA is sequential style.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_easy_04.mp4",
+        "poster": "media/images/nba_easy_04-frame.png",
+        "figure": "media/images/nba_easy_04.png"
+      }
+    },
+    {
+      "id": "nba_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin count = sel; sel = count; end\n```\nBlocking `=` in combo always is…",
+      "choices": [
+        "Common/OK for combo logic",
+        "Illegal",
+        "Only for flops",
+        "Only for wires"
+      ],
+      "answer": 0,
+      "explain": "Combo often uses blocking.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_easy_05.mp4",
+        "poster": "media/images/nba_easy_05-frame.png",
+        "figure": "media/images/nba_easy_05.png"
+      }
+    },
+    {
+      "id": "nba_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin sel <= out; out <= sel; end\n```\nNBA in combo always is…",
+      "choices": [
+        "Usually discouraged — can surprise",
+        "Required",
+        "Same as assign",
+        "A port style"
+      ],
+      "answer": 0,
+      "explain": "Keep NBA for sequential.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_easy_06.mp4",
+        "poster": "media/images/nba_easy_06-frame.png",
+        "figure": "media/images/nba_easy_06.png"
+      }
+    },
+    {
+      "id": "nba_easy_07",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg out; always @(*) out = sum & din;\n```\n`<=` is called a non-blocking assignment.",
+      "answer": true,
+      "explain": "Name of the operator.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_easy_07.mp4",
+        "poster": "media/images/nba_easy_07-frame.png",
+        "figure": "media/images/nba_easy_07.png"
+      }
+    },
+    {
+      "id": "nba_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) sum <= din;\n```\nPipeline shift with NBA: q <= {q[6:0], si}; …",
+      "choices": [
+        "Registers the new vector next edge",
+        "Combo shift only",
+        "Illegal",
+        "Needs two clocks always"
+      ],
+      "answer": 0,
+      "explain": "Registered shift.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_easy_08.mp4",
+        "poster": "media/images/nba_easy_08-frame.png",
+        "figure": "media/images/nba_easy_08.png"
+      }
+    },
+    {
+      "id": "nba_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin din = qout; qout = din; end\n```\nUsing blocking for a simple flop q = d; …",
+      "choices": [
+        "Can work in isolation but is bad style / races in larger code",
+        "Required by IEEE",
+        "Same as wire",
+        "Bans reset"
+      ],
+      "answer": 0,
+      "explain": "Prefer NBA for flops.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_easy_09.mp4",
+        "poster": "media/images/nba_easy_09-frame.png",
+        "figure": "media/images/nba_easy_09.png"
+      }
+    },
+    {
+      "id": "nba_easy_10",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin qout <= a; a <= qout; end\n```\nNBA updates are visible after the active event region per scheduling semantics.",
+      "answer": true,
+      "explain": "That's why parallel regs swap cleanly.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_easy_10.mp4",
+        "poster": "media/images/nba_easy_10-frame.png",
+        "figure": "media/images/nba_easy_10.png"
+      }
+    },
+    {
+      "id": "nba_easy_11",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg a; always @(*) a = b & y;\n```\n// Review context: `y[5:0]` slot 11 variant 1\nIn a clocked always block, non-blocking (<=) means…",
+      "choices": [
+        "All RHS values are sampled first, then LHS updates happen together",
+        "Statements never run on a clock edge",
+        "Only wire outputs",
+        "The block is combo"
+      ],
+      "answer": 0,
+      "explain": "NBA scheduling.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_easy_11.mp4",
+        "poster": "media/images/nba_easy_11-frame.png",
+        "figure": "media/images/nba_easy_11.png"
+      }
+    },
+    {
+      "id": "nba_easy_12",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) b <= y;\n```\n// Review context: `q[6:0]` slot 12 variant 1\nq1 = d; q2 = q1; on one posedge (blocking) typically…",
+      "choices": [
+        "Both q1 and q2 get d in the same edge",
+        "q2 gets only old q1",
+        "Illegal",
+        "Never change"
+      ],
+      "answer": 0,
+      "explain": "Blocking is ordered.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_easy_12.mp4",
+        "poster": "media/images/nba_easy_12-frame.png",
+        "figure": "media/images/nba_easy_12.png"
+      }
+    },
+    {
+      "id": "nba_easy_13",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin y = q; q = y; end\n```\n// Review context: `d[7:0]` slot 13 variant 1\na <= b; b <= a; with a=1,b=0 before edge…",
+      "choices": [
+        "a becomes 0 and b becomes 1 — a real swap",
+        "Both unchanged",
+        "Both 0",
+        "Both 1"
+      ],
+      "answer": 0,
+      "explain": "NBA samples both RHS first.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_easy_13.mp4",
+        "poster": "media/images/nba_easy_13-frame.png",
+        "figure": "media/images/nba_easy_13.png"
+      }
+    },
+    {
+      "id": "nba_easy_14",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin q <= d; d <= q; end\n```\n// Review context: `clk[11:0]` slot 14 variant 1\nFlip-flop RTL in always @(posedge clk) should normally use <= for register updates.",
+      "answer": true,
+      "explain": "NBA is sequential style.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_easy_14.mp4",
+        "poster": "media/images/nba_easy_14-frame.png",
+        "figure": "media/images/nba_easy_14.png"
+      }
+    },
+    {
+      "id": "nba_easy_15",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg d; always @(*) d = clk & en;\n```\n// Review context: `en[15:0]` slot 15 variant 1\nBlocking `=` in combo always is…",
+      "choices": [
+        "Common/OK for combo logic",
+        "Illegal",
+        "Only for flops",
+        "Only for wires"
+      ],
+      "answer": 0,
+      "explain": "Combo often uses blocking.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_easy_15.mp4",
+        "poster": "media/images/nba_easy_15-frame.png",
+        "figure": "media/images/nba_easy_15.png"
+      }
+    },
+    {
+      "id": "nba_easy_16",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) clk <= en;\n```\n// Review context: `rst_n[31:0]` slot 16 variant 1\nNBA in combo always is…",
+      "choices": [
+        "Usually discouraged — can surprise",
+        "Required",
+        "Same as assign",
+        "A port style"
+      ],
+      "answer": 0,
+      "explain": "Keep NBA for sequential.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_easy_16.mp4",
+        "poster": "media/images/nba_easy_16-frame.png",
+        "figure": "media/images/nba_easy_16.png"
+      }
+    },
+    {
+      "id": "nba_easy_17",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin en = rst_n; rst_n = en; end\n```\n// Review context: `data[2:0]` slot 17 variant 1\n`<=` is called a non-blocking assignment.",
+      "answer": true,
+      "explain": "Name of the operator.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_easy_17.mp4",
+        "poster": "media/images/nba_easy_17-frame.png",
+        "figure": "media/images/nba_easy_17.png"
+      }
+    },
+    {
+      "id": "nba_easy_18",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin rst_n <= data; data <= rst_n; end\n```\n// Review context: `count[3:0]` slot 18 variant 1\nPipeline shift with NBA: q <= {q[6:0], si}; …",
+      "choices": [
+        "Registers the new vector next edge",
+        "Combo shift only",
+        "Illegal",
+        "Needs two clocks always"
+      ],
+      "answer": 0,
+      "explain": "Registered shift.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_easy_18.mp4",
+        "poster": "media/images/nba_easy_18-frame.png",
+        "figure": "media/images/nba_easy_18.png"
+      }
+    },
+    {
+      "id": "nba_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg data; always @(*) data = count & sel;\n```\n// Review context: `a[4:0]` slot 19 variant 1\nUsing blocking for a simple flop q = d; …",
+      "choices": [
+        "Can work in isolation but is bad style / races in larger code",
+        "Required by IEEE",
+        "Same as wire",
+        "Bans reset"
+      ],
+      "answer": 0,
+      "explain": "Prefer NBA for flops.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_easy_19.mp4",
+        "poster": "media/images/nba_easy_19-frame.png",
+        "figure": "media/images/nba_easy_19.png"
+      }
+    },
+    {
+      "id": "nba_easy_20",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) count <= sel;\n```\n// Review context: `b[5:0]` slot 20 variant 1\nNBA updates are visible after the active event region per scheduling semantics.",
+      "answer": true,
+      "explain": "That's why parallel regs swap cleanly.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_easy_20.mp4",
+        "poster": "media/images/nba_easy_20-frame.png",
+        "figure": "media/images/nba_easy_20.png"
+      }
+    },
+    {
+      "id": "nba_easy_21",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin sel = out; out = sel; end\n```\n// Review context: `y[6:0]` slot 21 variant 1\nIn a clocked always block, non-blocking (<=) means…",
+      "choices": [
+        "All RHS values are sampled first, then LHS updates happen together",
+        "Statements never run on a clock edge",
+        "Only wire outputs",
+        "The block is combo"
+      ],
+      "answer": 0,
+      "explain": "NBA scheduling.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_easy_21.mp4",
+        "poster": "media/images/nba_easy_21-frame.png",
+        "figure": "media/images/nba_easy_21.png"
+      }
+    },
+    {
+      "id": "nba_easy_22",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin out <= sum; sum <= out; end\n```\n// Review context: `q[7:0]` slot 22 variant 1\nq1 = d; q2 = q1; on one posedge (blocking) typically…",
+      "choices": [
+        "Both q1 and q2 get d in the same edge",
+        "q2 gets only old q1",
+        "Illegal",
+        "Never change"
+      ],
+      "answer": 0,
+      "explain": "Blocking is ordered.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_easy_22.mp4",
+        "poster": "media/images/nba_easy_22-frame.png",
+        "figure": "media/images/nba_easy_22.png"
+      }
+    },
+    {
+      "id": "nba_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg sum; always @(*) sum = din & qout;\n```\n// Review context: `d[11:0]` slot 23 variant 1\na <= b; b <= a; with a=1,b=0 before edge…",
+      "choices": [
+        "a becomes 0 and b becomes 1 — a real swap",
+        "Both unchanged",
+        "Both 0",
+        "Both 1"
+      ],
+      "answer": 0,
+      "explain": "NBA samples both RHS first.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_easy_23.mp4",
+        "poster": "media/images/nba_easy_23-frame.png",
+        "figure": "media/images/nba_easy_23.png"
+      }
+    },
+    {
+      "id": "nba_easy_24",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) din <= qout;\n```\n// Review context: `clk[15:0]` slot 24 variant 1\nFlip-flop RTL in always @(posedge clk) should normally use <= for register updates.",
+      "answer": true,
+      "explain": "NBA is sequential style.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_easy_24.mp4",
+        "poster": "media/images/nba_easy_24-frame.png",
+        "figure": "media/images/nba_easy_24.png"
+      }
+    },
+    {
+      "id": "nba_easy_25",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin qout = a; a = qout; end\n```\n// Review context: `en[31:0]` slot 25 variant 1\nBlocking `=` in combo always is…",
+      "choices": [
+        "Common/OK for combo logic",
+        "Illegal",
+        "Only for flops",
+        "Only for wires"
+      ],
+      "answer": 0,
+      "explain": "Combo often uses blocking.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_easy_25.mp4",
+        "poster": "media/images/nba_easy_25-frame.png",
+        "figure": "media/images/nba_easy_25.png"
+      }
+    },
+    {
+      "id": "nba_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin a <= b; b <= a; end\n```\n// Review context: `rst_n[2:0]` slot 26 variant 1\nNBA in combo always is…",
+      "choices": [
+        "Usually discouraged — can surprise",
+        "Required",
+        "Same as assign",
+        "A port style"
+      ],
+      "answer": 0,
+      "explain": "Keep NBA for sequential.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_easy_26.mp4",
+        "poster": "media/images/nba_easy_26-frame.png",
+        "figure": "media/images/nba_easy_26.png"
+      }
+    },
+    {
+      "id": "nba_easy_27",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg b; always @(*) b = y & q;\n```\n// Review context: `data[3:0]` slot 27 variant 1\n`<=` is called a non-blocking assignment.",
+      "answer": true,
+      "explain": "Name of the operator.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_easy_27.mp4",
+        "poster": "media/images/nba_easy_27-frame.png",
+        "figure": "media/images/nba_easy_27.png"
+      }
+    },
+    {
+      "id": "nba_easy_28",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) y <= q;\n```\n// Review context: `count[4:0]` slot 28 variant 1\nPipeline shift with NBA: q <= {q[6:0], si}; …",
+      "choices": [
+        "Registers the new vector next edge",
+        "Combo shift only",
+        "Illegal",
+        "Needs two clocks always"
+      ],
+      "answer": 0,
+      "explain": "Registered shift.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_easy_28.mp4",
+        "poster": "media/images/nba_easy_28-frame.png",
+        "figure": "media/images/nba_easy_28.png"
+      }
+    },
+    {
+      "id": "nba_easy_29",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin q = d; d = q; end\n```\n// Review context: `a[5:0]` slot 29 variant 1\nUsing blocking for a simple flop q = d; …",
+      "choices": [
+        "Can work in isolation but is bad style / races in larger code",
+        "Required by IEEE",
+        "Same as wire",
+        "Bans reset"
+      ],
+      "answer": 0,
+      "explain": "Prefer NBA for flops.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_easy_29.mp4",
+        "poster": "media/images/nba_easy_29-frame.png",
+        "figure": "media/images/nba_easy_29.png"
+      }
+    },
+    {
+      "id": "nba_easy_30",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin d <= clk; clk <= d; end\n```\n// Review context: `b[6:0]` slot 30 variant 1\nNBA updates are visible after the active event region per scheduling semantics.",
+      "answer": true,
+      "explain": "That's why parallel regs swap cleanly.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_easy_30.mp4",
+        "poster": "media/images/nba_easy_30-frame.png",
+        "figure": "media/images/nba_easy_30.png"
+      }
+    },
+    {
+      "id": "nba_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin y <= q; q <= y; end\n```\nRace: two always blocks reading/writing with blocking…",
+      "choices": [
+        "Order-dependent simulation races",
+        "Impossible",
+        "Fixed by ANSI",
+        "Fixed by $clog2"
+      ],
+      "answer": 0,
+      "explain": "NBA reduces race classes.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_medium_01.mp4",
+        "poster": "media/images/nba_medium_01-frame.png",
+        "figure": "media/images/nba_medium_01.png"
+      }
+    },
+    {
+      "id": "nba_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg q; always @(*) q = d & clk;\n```\nTemporary combo inside clocked block using blocking…",
+      "choices": [
+        "Sometimes used carefully; still prefer clean split combo/seq",
+        "Required always",
+        "Illegal always",
+        "Only for interfaces"
+      ],
+      "answer": 0,
+      "explain": "Advanced pattern; teach caution.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_medium_02.mp4",
+        "poster": "media/images/nba_medium_02-frame.png",
+        "figure": "media/images/nba_medium_02.png"
+      }
+    },
+    {
+      "id": "nba_medium_03",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) d <= clk;\n```\na <= a + 1; increments the register each clock (with NBA).",
+      "answer": true,
+      "explain": "Classic counter.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_medium_03.mp4",
+        "poster": "media/images/nba_medium_03-frame.png",
+        "figure": "media/images/nba_medium_03.png"
+      }
+    },
+    {
+      "id": "nba_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin clk = en; en = clk; end\n```\nRead-before-write with NBA in one edge…",
+      "choices": [
+        "RHS sees old value",
+        "RHS always sees new",
+        "Needs wire",
+        "Needs generate"
+      ],
+      "answer": 0,
+      "explain": "Old value sampling.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_medium_04.mp4",
+        "poster": "media/images/nba_medium_04-frame.png",
+        "figure": "media/images/nba_medium_04.png"
+      }
+    },
+    {
+      "id": "nba_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin en <= rst_n; rst_n <= en; end\n```\nassign vs NBA…",
+      "choices": [
+        "assign is continuous on nets; NBA is procedural",
+        "Identical",
+        "assign is only flops",
+        "NBA drives only input ports"
+      ],
+      "answer": 0,
+      "explain": "Different mechanisms.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_medium_05.mp4",
+        "poster": "media/images/nba_medium_05-frame.png",
+        "figure": "media/images/nba_medium_05.png"
+      }
+    },
+    {
+      "id": "nba_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg rst_n; always @(*) rst_n = data & count;\n```\nNon-blocking with intra-assignment delay `q <= #1 d`…",
+      "choices": [
+        "Simulation delay scheduling — not synth RTL delay",
+        "Creates PLL",
+        "Required FPGA style",
+        "ANSI only"
+      ],
+      "answer": 0,
+      "explain": "Hash delays ≠ synth delay.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_medium_06.mp4",
+        "poster": "media/images/nba_medium_06-frame.png",
+        "figure": "media/images/nba_medium_06.png"
+      }
+    },
+    {
+      "id": "nba_medium_07",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) data <= count;\n```\nMixing = and <= on the same reg in one always is a red flag.",
+      "answer": true,
+      "explain": "Pick one intent.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_medium_07.mp4",
+        "poster": "media/images/nba_medium_07-frame.png",
+        "figure": "media/images/nba_medium_07.png"
+      }
+    },
+    {
+      "id": "nba_medium_08",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin count = sel; sel = count; end\n```\nWhy NBA for multi-reg parallel update?",
+      "choices": [
+        "All regs update from pre-edge samples — predictable",
+        "Faster synthesis always",
+        "Smaller fonts",
+        "Fewer ports"
+      ],
+      "answer": 0,
+      "explain": "Deterministic parallel regs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_medium_08.mp4",
+        "poster": "media/images/nba_medium_08-frame.png",
+        "figure": "media/images/nba_medium_08.png"
+      }
+    },
+    {
+      "id": "nba_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin sel <= out; out <= sel; end\n```\nBlocking chain in clocked block creating combo path into next NBA…",
+      "choices": [
+        "Can infer unexpected logic — avoid spaghetti",
+        "Preferred",
+        "Required for lint",
+        "Only legal with tri"
+      ],
+      "answer": 0,
+      "explain": "Keep seq clean.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_medium_09.mp4",
+        "poster": "media/images/nba_medium_09-frame.png",
+        "figure": "media/images/nba_medium_09.png"
+      }
+    },
+    {
+      "id": "nba_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg out; always @(*) out = sum & din;\n```\nSV always_ff guideline…",
+      "choices": [
+        "Use non-blocking assignments to flops",
+        "Use only blocking",
+        "Ban clocks",
+        "Require initial"
+      ],
+      "answer": 0,
+      "explain": "always_ff + NBA.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_medium_10.mp4",
+        "poster": "media/images/nba_medium_10-frame.png",
+        "figure": "media/images/nba_medium_10.png"
+      }
+    },
+    {
+      "id": "nba_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) sum <= din;\n```\n// Review context: `y[5:0]` slot 11 variant 1\nRace: two always blocks reading/writing with blocking…",
+      "choices": [
+        "Order-dependent simulation races",
+        "Impossible",
+        "Fixed by ANSI",
+        "Fixed by $clog2"
+      ],
+      "answer": 0,
+      "explain": "NBA reduces race classes.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_medium_11.mp4",
+        "poster": "media/images/nba_medium_11-frame.png",
+        "figure": "media/images/nba_medium_11.png"
+      }
+    },
+    {
+      "id": "nba_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin din = qout; qout = din; end\n```\n// Review context: `q[6:0]` slot 12 variant 1\nTemporary combo inside clocked block using blocking…",
+      "choices": [
+        "Sometimes used carefully; still prefer clean split combo/seq",
+        "Required always",
+        "Illegal always",
+        "Only for interfaces"
+      ],
+      "answer": 0,
+      "explain": "Advanced pattern; teach caution.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_medium_12.mp4",
+        "poster": "media/images/nba_medium_12-frame.png",
+        "figure": "media/images/nba_medium_12.png"
+      }
+    },
+    {
+      "id": "nba_medium_13",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin qout <= a; a <= qout; end\n```\n// Review context: `d[7:0]` slot 13 variant 1\na <= a + 1; increments the register each clock (with NBA).",
+      "answer": true,
+      "explain": "Classic counter.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_medium_13.mp4",
+        "poster": "media/images/nba_medium_13-frame.png",
+        "figure": "media/images/nba_medium_13.png"
+      }
+    },
+    {
+      "id": "nba_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg a; always @(*) a = b & y;\n```\n// Review context: `clk[11:0]` slot 14 variant 1\nRead-before-write with NBA in one edge…",
+      "choices": [
+        "RHS sees old value",
+        "RHS always sees new",
+        "Needs wire",
+        "Needs generate"
+      ],
+      "answer": 0,
+      "explain": "Old value sampling.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_medium_14.mp4",
+        "poster": "media/images/nba_medium_14-frame.png",
+        "figure": "media/images/nba_medium_14.png"
+      }
+    },
+    {
+      "id": "nba_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) b <= y;\n```\n// Review context: `en[15:0]` slot 15 variant 1\nassign vs NBA…",
+      "choices": [
+        "assign is continuous on nets; NBA is procedural",
+        "Identical",
+        "assign is only flops",
+        "NBA drives only input ports"
+      ],
+      "answer": 0,
+      "explain": "Different mechanisms.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_medium_15.mp4",
+        "poster": "media/images/nba_medium_15-frame.png",
+        "figure": "media/images/nba_medium_15.png"
+      }
+    },
+    {
+      "id": "nba_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin y = q; q = y; end\n```\n// Review context: `rst_n[31:0]` slot 16 variant 1\nNon-blocking with intra-assignment delay `q <= #1 d`…",
+      "choices": [
+        "Simulation delay scheduling — not synth RTL delay",
+        "Creates PLL",
+        "Required FPGA style",
+        "ANSI only"
+      ],
+      "answer": 0,
+      "explain": "Hash delays ≠ synth delay.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_medium_16.mp4",
+        "poster": "media/images/nba_medium_16-frame.png",
+        "figure": "media/images/nba_medium_16.png"
+      }
+    },
+    {
+      "id": "nba_medium_17",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin q <= d; d <= q; end\n```\n// Review context: `data[2:0]` slot 17 variant 1\nMixing = and <= on the same reg in one always is a red flag.",
+      "answer": true,
+      "explain": "Pick one intent.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_medium_17.mp4",
+        "poster": "media/images/nba_medium_17-frame.png",
+        "figure": "media/images/nba_medium_17.png"
+      }
+    },
+    {
+      "id": "nba_medium_18",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg d; always @(*) d = clk & en;\n```\n// Review context: `count[3:0]` slot 18 variant 1\nWhy NBA for multi-reg parallel update?",
+      "choices": [
+        "All regs update from pre-edge samples — predictable",
+        "Faster synthesis always",
+        "Smaller fonts",
+        "Fewer ports"
+      ],
+      "answer": 0,
+      "explain": "Deterministic parallel regs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_medium_18.mp4",
+        "poster": "media/images/nba_medium_18-frame.png",
+        "figure": "media/images/nba_medium_18.png"
+      }
+    },
+    {
+      "id": "nba_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) clk <= en;\n```\n// Review context: `a[4:0]` slot 19 variant 1\nBlocking chain in clocked block creating combo path into next NBA…",
+      "choices": [
+        "Can infer unexpected logic — avoid spaghetti",
+        "Preferred",
+        "Required for lint",
+        "Only legal with tri"
+      ],
+      "answer": 0,
+      "explain": "Keep seq clean.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_medium_19.mp4",
+        "poster": "media/images/nba_medium_19-frame.png",
+        "figure": "media/images/nba_medium_19.png"
+      }
+    },
+    {
+      "id": "nba_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin en = rst_n; rst_n = en; end\n```\n// Review context: `b[5:0]` slot 20 variant 1\nSV always_ff guideline…",
+      "choices": [
+        "Use non-blocking assignments to flops",
+        "Use only blocking",
+        "Ban clocks",
+        "Require initial"
+      ],
+      "answer": 0,
+      "explain": "always_ff + NBA.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_medium_20.mp4",
+        "poster": "media/images/nba_medium_20-frame.png",
+        "figure": "media/images/nba_medium_20.png"
+      }
+    },
+    {
+      "id": "nba_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin rst_n <= data; data <= rst_n; end\n```\n// Review context: `y[6:0]` slot 21 variant 1\nRace: two always blocks reading/writing with blocking…",
+      "choices": [
+        "Order-dependent simulation races",
+        "Impossible",
+        "Fixed by ANSI",
+        "Fixed by $clog2"
+      ],
+      "answer": 0,
+      "explain": "NBA reduces race classes.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_medium_21.mp4",
+        "poster": "media/images/nba_medium_21-frame.png",
+        "figure": "media/images/nba_medium_21.png"
+      }
+    },
+    {
+      "id": "nba_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg data; always @(*) data = count & sel;\n```\n// Review context: `q[7:0]` slot 22 variant 1\nTemporary combo inside clocked block using blocking…",
+      "choices": [
+        "Sometimes used carefully; still prefer clean split combo/seq",
+        "Required always",
+        "Illegal always",
+        "Only for interfaces"
+      ],
+      "answer": 0,
+      "explain": "Advanced pattern; teach caution.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_medium_22.mp4",
+        "poster": "media/images/nba_medium_22-frame.png",
+        "figure": "media/images/nba_medium_22.png"
+      }
+    },
+    {
+      "id": "nba_medium_23",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) count <= sel;\n```\n// Review context: `d[11:0]` slot 23 variant 1\na <= a + 1; increments the register each clock (with NBA).",
+      "answer": true,
+      "explain": "Classic counter.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_medium_23.mp4",
+        "poster": "media/images/nba_medium_23-frame.png",
+        "figure": "media/images/nba_medium_23.png"
+      }
+    },
+    {
+      "id": "nba_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin sel = out; out = sel; end\n```\n// Review context: `clk[15:0]` slot 24 variant 1\nRead-before-write with NBA in one edge…",
+      "choices": [
+        "RHS sees old value",
+        "RHS always sees new",
+        "Needs wire",
+        "Needs generate"
+      ],
+      "answer": 0,
+      "explain": "Old value sampling.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_medium_24.mp4",
+        "poster": "media/images/nba_medium_24-frame.png",
+        "figure": "media/images/nba_medium_24.png"
+      }
+    },
+    {
+      "id": "nba_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin out <= sum; sum <= out; end\n```\n// Review context: `en[31:0]` slot 25 variant 1\nassign vs NBA…",
+      "choices": [
+        "assign is continuous on nets; NBA is procedural",
+        "Identical",
+        "assign is only flops",
+        "NBA drives only input ports"
+      ],
+      "answer": 0,
+      "explain": "Different mechanisms.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_medium_25.mp4",
+        "poster": "media/images/nba_medium_25-frame.png",
+        "figure": "media/images/nba_medium_25.png"
+      }
+    },
+    {
+      "id": "nba_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg sum; always @(*) sum = din & qout;\n```\n// Review context: `rst_n[2:0]` slot 26 variant 1\nNon-blocking with intra-assignment delay `q <= #1 d`…",
+      "choices": [
+        "Simulation delay scheduling — not synth RTL delay",
+        "Creates PLL",
+        "Required FPGA style",
+        "ANSI only"
+      ],
+      "answer": 0,
+      "explain": "Hash delays ≠ synth delay.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_medium_26.mp4",
+        "poster": "media/images/nba_medium_26-frame.png",
+        "figure": "media/images/nba_medium_26.png"
+      }
+    },
+    {
+      "id": "nba_medium_27",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) din <= qout;\n```\n// Review context: `data[3:0]` slot 27 variant 1\nMixing = and <= on the same reg in one always is a red flag.",
+      "answer": true,
+      "explain": "Pick one intent.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_medium_27.mp4",
+        "poster": "media/images/nba_medium_27-frame.png",
+        "figure": "media/images/nba_medium_27.png"
+      }
+    },
+    {
+      "id": "nba_medium_28",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin qout = a; a = qout; end\n```\n// Review context: `count[4:0]` slot 28 variant 1\nWhy NBA for multi-reg parallel update?",
+      "choices": [
+        "All regs update from pre-edge samples — predictable",
+        "Faster synthesis always",
+        "Smaller fonts",
+        "Fewer ports"
+      ],
+      "answer": 0,
+      "explain": "Deterministic parallel regs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_medium_28.mp4",
+        "poster": "media/images/nba_medium_28-frame.png",
+        "figure": "media/images/nba_medium_28.png"
+      }
+    },
+    {
+      "id": "nba_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin a <= b; b <= a; end\n```\n// Review context: `a[5:0]` slot 29 variant 1\nBlocking chain in clocked block creating combo path into next NBA…",
+      "choices": [
+        "Can infer unexpected logic — avoid spaghetti",
+        "Preferred",
+        "Required for lint",
+        "Only legal with tri"
+      ],
+      "answer": 0,
+      "explain": "Keep seq clean.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_medium_29.mp4",
+        "poster": "media/images/nba_medium_29-frame.png",
+        "figure": "media/images/nba_medium_29.png"
+      }
+    },
+    {
+      "id": "nba_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg b; always @(*) b = y & q;\n```\n// Review context: `b[6:0]` slot 30 variant 1\nSV always_ff guideline…",
+      "choices": [
+        "Use non-blocking assignments to flops",
+        "Use only blocking",
+        "Ban clocks",
+        "Require initial"
+      ],
+      "answer": 0,
+      "explain": "always_ff + NBA.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_medium_30.mp4",
+        "poster": "media/images/nba_medium_30-frame.png",
+        "figure": "media/images/nba_medium_30.png"
+      }
+    },
+    {
+      "id": "nba_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) d <= clk;\n```\nNBA to a wire…",
+      "choices": [
+        "Illegal — NBA targets variables",
+        "Preferred continuous style",
+        "Creates assign",
+        "Sets parameter"
+      ],
+      "answer": 0,
+      "explain": "Variables only.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_hard_01.mp4",
+        "poster": "media/images/nba_hard_01-frame.png",
+        "figure": "media/images/nba_hard_01.png"
+      }
+    },
+    {
+      "id": "nba_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin clk = en; en = clk; end\n```\nScheduling: active vs NBA region bugs show up as…",
+      "choices": [
+        "Order-dependent TB/RTL races",
+        "Better WNS always",
+        "ANSI conversion",
+        "Gray counters"
+      ],
+      "answer": 0,
+      "explain": "Event regions matter.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_hard_02.mp4",
+        "poster": "media/images/nba_hard_02-frame.png",
+        "figure": "media/images/nba_hard_02.png"
+      }
+    },
+    {
+      "id": "nba_hard_03",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin en <= rst_n; rst_n <= en; end\n```\nIn a pure combo block, blocking assignments compute immediately for later statements in that block.",
+      "answer": true,
+      "explain": "Ordered combo evaluation.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_hard_03.mp4",
+        "poster": "media/images/nba_hard_03-frame.png",
+        "figure": "media/images/nba_hard_03.png"
+      }
+    },
+    {
+      "id": "nba_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg rst_n; always @(*) rst_n = data & count;\n```\nDual always writing same reg one with = one with <= …",
+      "choices": [
+        "Broken multi-driver / race nightmare",
+        "Standard dual-port",
+        "Required CDC",
+        "Only SV interfaces"
+      ],
+      "answer": 0,
+      "explain": "One driver.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_hard_04.mp4",
+        "poster": "media/images/nba_hard_04-frame.png",
+        "figure": "media/images/nba_hard_04.png"
+      }
+    },
+    {
+      "id": "nba_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) data <= count;\n```\nNonblocking to memory `mem[a] <= d` …",
+      "choices": [
+        "Registered write style",
+        "Continuous assign",
+        "Port direction",
+        "Package import"
+      ],
+      "answer": 0,
+      "explain": "NBA memory write.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_hard_05.mp4",
+        "poster": "media/images/nba_hard_05-frame.png",
+        "figure": "media/images/nba_hard_05.png"
+      }
+    },
+    {
+      "id": "nba_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin count = sel; sel = count; end\n```\nForcing blocking everywhere 'because C'…",
+      "choices": [
+        "Misses hardware concurrency model",
+        "Matches NBA",
+        "Fixes all CDC",
+        "Required by Yosys"
+      ],
+      "answer": 0,
+      "explain": "HDL ≠ C sequencing.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_hard_06.mp4",
+        "poster": "media/images/nba_hard_06-frame.png",
+        "figure": "media/images/nba_hard_06.png"
+      }
+    },
+    {
+      "id": "nba_hard_07",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin sel <= out; out <= sel; end\n```\nA swap with blocking `a=b; b=a;` loses a value without a temp.",
+      "answer": true,
+      "explain": "Needs temp; NBA swap doesn't.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_hard_07.mp4",
+        "poster": "media/images/nba_hard_07-frame.png",
+        "figure": "media/images/nba_hard_07.png"
+      }
+    },
+    {
+      "id": "nba_hard_08",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg out; always @(*) out = sum & din;\n```\nIntra-assignment vs delayed procedural…",
+      "choices": [
+        "Different scheduling; avoid in synth RTL",
+        "Same as generate",
+        "Same as localparam",
+        "Same as ANSI"
+      ],
+      "answer": 0,
+      "explain": "Leave delays to TB.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_hard_08.mp4",
+        "poster": "media/images/nba_hard_08-frame.png",
+        "figure": "media/images/nba_hard_08.png"
+      }
+    },
+    {
+      "id": "nba_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) sum <= din;\n```\nLint: 'blocking used in sequential' …",
+      "choices": [
+        "Style warning to prefer NBA in clocked blocks",
+        "Means syntax error always",
+        "Means delete reset",
+        "Means add X"
+      ],
+      "answer": 0,
+      "explain": "Style guidance.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_hard_09.mp4",
+        "poster": "media/images/nba_hard_09-frame.png",
+        "figure": "media/images/nba_hard_09.png"
+      }
+    },
+    {
+      "id": "nba_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin din = qout; qout = din; end\n```\nBest simple teaching rule…",
+      "choices": [
+        "Combo: blocking; sequential: non-blocking; don't mix drivers",
+        "Always blocking",
+        "Always NBA everywhere including assign",
+        "Never use always"
+      ],
+      "answer": 0,
+      "explain": "Classic guideline.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_hard_10.mp4",
+        "poster": "media/images/nba_hard_10-frame.png",
+        "figure": "media/images/nba_hard_10.png"
+      }
+    },
+    {
+      "id": "nba_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin qout <= a; a <= qout; end\n```\n// Review context: `y[5:0]` slot 11 variant 1\nNBA to a wire…",
+      "choices": [
+        "Illegal — NBA targets variables",
+        "Preferred continuous style",
+        "Creates assign",
+        "Sets parameter"
+      ],
+      "answer": 0,
+      "explain": "Variables only.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_hard_11.mp4",
+        "poster": "media/images/nba_hard_11-frame.png",
+        "figure": "media/images/nba_hard_11.png"
+      }
+    },
+    {
+      "id": "nba_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg a; always @(*) a = b & y;\n```\n// Review context: `q[6:0]` slot 12 variant 1\nScheduling: active vs NBA region bugs show up as…",
+      "choices": [
+        "Order-dependent TB/RTL races",
+        "Better WNS always",
+        "ANSI conversion",
+        "Gray counters"
+      ],
+      "answer": 0,
+      "explain": "Event regions matter.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_hard_12.mp4",
+        "poster": "media/images/nba_hard_12-frame.png",
+        "figure": "media/images/nba_hard_12.png"
+      }
+    },
+    {
+      "id": "nba_hard_13",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) b <= y;\n```\n// Review context: `d[7:0]` slot 13 variant 1\nIn a pure combo block, blocking assignments compute immediately for later statements in that block.",
+      "answer": true,
+      "explain": "Ordered combo evaluation.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_hard_13.mp4",
+        "poster": "media/images/nba_hard_13-frame.png",
+        "figure": "media/images/nba_hard_13.png"
+      }
+    },
+    {
+      "id": "nba_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin y = q; q = y; end\n```\n// Review context: `clk[11:0]` slot 14 variant 1\nDual always writing same reg one with = one with <= …",
+      "choices": [
+        "Broken multi-driver / race nightmare",
+        "Standard dual-port",
+        "Required CDC",
+        "Only SV interfaces"
+      ],
+      "answer": 0,
+      "explain": "One driver.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_hard_14.mp4",
+        "poster": "media/images/nba_hard_14-frame.png",
+        "figure": "media/images/nba_hard_14.png"
+      }
+    },
+    {
+      "id": "nba_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin q <= d; d <= q; end\n```\n// Review context: `en[15:0]` slot 15 variant 1\nNonblocking to memory `mem[a] <= d` …",
+      "choices": [
+        "Registered write style",
+        "Continuous assign",
+        "Port direction",
+        "Package import"
+      ],
+      "answer": 0,
+      "explain": "NBA memory write.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_hard_15.mp4",
+        "poster": "media/images/nba_hard_15-frame.png",
+        "figure": "media/images/nba_hard_15.png"
+      }
+    },
+    {
+      "id": "nba_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg d; always @(*) d = clk & en;\n```\n// Review context: `rst_n[31:0]` slot 16 variant 1\nForcing blocking everywhere 'because C'…",
+      "choices": [
+        "Misses hardware concurrency model",
+        "Matches NBA",
+        "Fixes all CDC",
+        "Required by Yosys"
+      ],
+      "answer": 0,
+      "explain": "HDL ≠ C sequencing.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_hard_16.mp4",
+        "poster": "media/images/nba_hard_16-frame.png",
+        "figure": "media/images/nba_hard_16.png"
+      }
+    },
+    {
+      "id": "nba_hard_17",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) clk <= en;\n```\n// Review context: `data[2:0]` slot 17 variant 1\nA swap with blocking `a=b; b=a;` loses a value without a temp.",
+      "answer": true,
+      "explain": "Needs temp; NBA swap doesn't.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_hard_17.mp4",
+        "poster": "media/images/nba_hard_17-frame.png",
+        "figure": "media/images/nba_hard_17.png"
+      }
+    },
+    {
+      "id": "nba_hard_18",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin en = rst_n; rst_n = en; end\n```\n// Review context: `count[3:0]` slot 18 variant 1\nIntra-assignment vs delayed procedural…",
+      "choices": [
+        "Different scheduling; avoid in synth RTL",
+        "Same as generate",
+        "Same as localparam",
+        "Same as ANSI"
+      ],
+      "answer": 0,
+      "explain": "Leave delays to TB.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_hard_18.mp4",
+        "poster": "media/images/nba_hard_18-frame.png",
+        "figure": "media/images/nba_hard_18.png"
+      }
+    },
+    {
+      "id": "nba_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin rst_n <= data; data <= rst_n; end\n```\n// Review context: `a[4:0]` slot 19 variant 1\nLint: 'blocking used in sequential' …",
+      "choices": [
+        "Style warning to prefer NBA in clocked blocks",
+        "Means syntax error always",
+        "Means delete reset",
+        "Means add X"
+      ],
+      "answer": 0,
+      "explain": "Style guidance.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_hard_19.mp4",
+        "poster": "media/images/nba_hard_19-frame.png",
+        "figure": "media/images/nba_hard_19.png"
+      }
+    },
+    {
+      "id": "nba_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg data; always @(*) data = count & sel;\n```\n// Review context: `b[5:0]` slot 20 variant 1\nBest simple teaching rule…",
+      "choices": [
+        "Combo: blocking; sequential: non-blocking; don't mix drivers",
+        "Always blocking",
+        "Always NBA everywhere including assign",
+        "Never use always"
+      ],
+      "answer": 0,
+      "explain": "Classic guideline.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_hard_20.mp4",
+        "poster": "media/images/nba_hard_20-frame.png",
+        "figure": "media/images/nba_hard_20.png"
+      }
+    },
+    {
+      "id": "nba_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) count <= sel;\n```\n// Review context: `y[6:0]` slot 21 variant 1\nNBA to a wire…",
+      "choices": [
+        "Illegal — NBA targets variables",
+        "Preferred continuous style",
+        "Creates assign",
+        "Sets parameter"
+      ],
+      "answer": 0,
+      "explain": "Variables only.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_hard_21.mp4",
+        "poster": "media/images/nba_hard_21-frame.png",
+        "figure": "media/images/nba_hard_21.png"
+      }
+    },
+    {
+      "id": "nba_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin sel = out; out = sel; end\n```\n// Review context: `q[7:0]` slot 22 variant 1\nScheduling: active vs NBA region bugs show up as…",
+      "choices": [
+        "Order-dependent TB/RTL races",
+        "Better WNS always",
+        "ANSI conversion",
+        "Gray counters"
+      ],
+      "answer": 0,
+      "explain": "Event regions matter.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_hard_22.mp4",
+        "poster": "media/images/nba_hard_22-frame.png",
+        "figure": "media/images/nba_hard_22.png"
+      }
+    },
+    {
+      "id": "nba_hard_23",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin out <= sum; sum <= out; end\n```\n// Review context: `d[11:0]` slot 23 variant 1\nIn a pure combo block, blocking assignments compute immediately for later statements in that block.",
+      "answer": true,
+      "explain": "Ordered combo evaluation.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_hard_23.mp4",
+        "poster": "media/images/nba_hard_23-frame.png",
+        "figure": "media/images/nba_hard_23.png"
+      }
+    },
+    {
+      "id": "nba_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg sum; always @(*) sum = din & qout;\n```\n// Review context: `clk[15:0]` slot 24 variant 1\nDual always writing same reg one with = one with <= …",
+      "choices": [
+        "Broken multi-driver / race nightmare",
+        "Standard dual-port",
+        "Required CDC",
+        "Only SV interfaces"
+      ],
+      "answer": 0,
+      "explain": "One driver.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_hard_24.mp4",
+        "poster": "media/images/nba_hard_24-frame.png",
+        "figure": "media/images/nba_hard_24.png"
+      }
+    },
+    {
+      "id": "nba_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) din <= qout;\n```\n// Review context: `en[31:0]` slot 25 variant 1\nNonblocking to memory `mem[a] <= d` …",
+      "choices": [
+        "Registered write style",
+        "Continuous assign",
+        "Port direction",
+        "Package import"
+      ],
+      "answer": 0,
+      "explain": "NBA memory write.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_hard_25.mp4",
+        "poster": "media/images/nba_hard_25-frame.png",
+        "figure": "media/images/nba_hard_25.png"
+      }
+    },
+    {
+      "id": "nba_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin qout = a; a = qout; end\n```\n// Review context: `rst_n[2:0]` slot 26 variant 1\nForcing blocking everywhere 'because C'…",
+      "choices": [
+        "Misses hardware concurrency model",
+        "Matches NBA",
+        "Fixes all CDC",
+        "Required by Yosys"
+      ],
+      "answer": 0,
+      "explain": "HDL ≠ C sequencing.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_hard_26.mp4",
+        "poster": "media/images/nba_hard_26-frame.png",
+        "figure": "media/images/nba_hard_26.png"
+      }
+    },
+    {
+      "id": "nba_hard_27",
+      "type": "true_false",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin a <= b; b <= a; end\n```\n// Review context: `data[3:0]` slot 27 variant 1\nA swap with blocking `a=b; b=a;` loses a value without a temp.",
+      "answer": true,
+      "explain": "Needs temp; NBA swap doesn't.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_hard_27.mp4",
+        "poster": "media/images/nba_hard_27-frame.png",
+        "figure": "media/images/nba_hard_27.png"
+      }
+    },
+    {
+      "id": "nba_hard_28",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nreg b; always @(*) b = y & q;\n```\n// Review context: `count[4:0]` slot 28 variant 1\nIntra-assignment vs delayed procedural…",
+      "choices": [
+        "Different scheduling; avoid in synth RTL",
+        "Same as generate",
+        "Same as localparam",
+        "Same as ANSI"
+      ],
+      "answer": 0,
+      "explain": "Leave delays to TB.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_hard_28.mp4",
+        "poster": "media/images/nba_hard_28-frame.png",
+        "figure": "media/images/nba_hard_28.png"
+      }
+    },
+    {
+      "id": "nba_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) y <= q;\n```\n// Review context: `a[5:0]` slot 29 variant 1\nLint: 'blocking used in sequential' …",
+      "choices": [
+        "Style warning to prefer NBA in clocked blocks",
+        "Means syntax error always",
+        "Means delete reset",
+        "Means add X"
+      ],
+      "answer": 0,
+      "explain": "Style guidance.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_hard_29.mp4",
+        "poster": "media/images/nba_hard_29-frame.png",
+        "figure": "media/images/nba_hard_29.png"
+      }
+    },
+    {
+      "id": "nba_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this RTL snippet:\n```verilog\nalways @(posedge clk) begin q = d; d = q; end\n```\n// Review context: `b[6:0]` slot 30 variant 1\nBest simple teaching rule…",
+      "choices": [
+        "Combo: blocking; sequential: non-blocking; don't mix drivers",
+        "Always blocking",
+        "Always NBA everywhere including assign",
+        "Never use always"
+      ],
+      "answer": 0,
+      "explain": "Classic guideline.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/nba_hard_30.mp4",
+        "poster": "media/images/nba_hard_30-frame.png",
+        "figure": "media/images/nba_hard_30.png"
+      }
+    }
+  ]
+}

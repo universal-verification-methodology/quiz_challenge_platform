@@ -1,0 +1,1698 @@
+{
+  "module": "module09-ps-kill-lab",
+  "title": "Process list & signals",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps aux | grep -i [d]elta || true\n```\nExit status 0 usually means...",
+      "choices": [
+        "Failure",
+        "Success",
+        "The process is still running",
+        "Permission denied only"
+      ],
+      "answer": 1,
+      "explain": "By convention, 0 is success; non-zero is failure.",
+      "difficulty": "easy",
+      "id": "ps_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_easy_01.mp4",
+        "poster": "media/images/ps_easy_01-frame.png",
+        "figure": "media/images/ps_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps -o pid,ppid,cmd | head -n 10\n```\necho $? prints...",
+      "choices": [
+        "Your username",
+        "The exit status of the previous command",
+        "The next free PID",
+        "The umask"
+      ],
+      "answer": 1,
+      "explain": "$? is the exit status of the last foreground command.",
+      "difficulty": "easy",
+      "id": "ps_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_easy_02.mp4",
+        "poster": "media/images/ps_easy_02-frame.png",
+        "figure": "media/images/ps_easy_02.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\npgrep -a foxtrot || true\n```\nCtrl+C in the terminal sends an interrupt signal to the foreground process.",
+      "answer": true,
+      "explain": "Ctrl+C delivers SIGINT to the foreground job.",
+      "difficulty": "easy",
+      "id": "ps_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_easy_03.mp4",
+        "poster": "media/images/ps_easy_03-frame.png",
+        "figure": "media/images/ps_easy_03.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nkill -TERM 1007 2>/dev/null || true\n```\nkill -9 is best described as...",
+      "choices": [
+        "A polite terminate that processes can catch",
+        "A last-resort force kill that cannot be caught",
+        "A way to list processes",
+        "The same as Ctrl+Z"
+      ],
+      "answer": 1,
+      "explain": "SIGKILL (-9) cannot be caught; use it only when gentler signals fail.",
+      "difficulty": "easy",
+      "id": "ps_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_easy_04.mp4",
+        "poster": "media/images/ps_easy_04-frame.png",
+        "figure": "media/images/ps_easy_04.png"
+      }
+    },
+    {
+      "id": "ps_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps aux | grep -i [h]otel || true\n```\n`ps` shows...",
+      "choices": [
+        "A snapshot of processes",
+        "Only disk usage",
+        "Only mounts",
+        "Only man pages"
+      ],
+      "answer": 0,
+      "explain": "ps lists processes.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_easy_05.mp4",
+        "poster": "media/images/ps_easy_05-frame.png",
+        "figure": "media/images/ps_easy_05.png"
+      }
+    },
+    {
+      "id": "ps_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps -o pid,ppid,cmd | head -n 14\n```\n`kill PID` by default sends...",
+      "choices": [
+        "SIGTERM",
+        "SIGKILL",
+        "SIGSTOP",
+        "SIGINT only"
+      ],
+      "answer": 0,
+      "explain": "Default is TERM.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_easy_06.mp4",
+        "poster": "media/images/ps_easy_06-frame.png",
+        "figure": "media/images/ps_easy_06.png"
+      }
+    },
+    {
+      "id": "ps_easy_07",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\npgrep -a juliet || true\n```\nSIGKILL (9) cannot be caught; use as last resort.",
+      "answer": true,
+      "explain": "KILL is non-catchable.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_easy_07.mp4",
+        "poster": "media/images/ps_easy_07-frame.png",
+        "figure": "media/images/ps_easy_07.png"
+      }
+    },
+    {
+      "id": "ps_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nkill -TERM 1011 2>/dev/null || true\n```\n`ps aux` / `ps -ef` styles are for...",
+      "choices": [
+        "Richer process listings",
+        "Formatting disks",
+        "Setting umask",
+        "Zip listing"
+      ],
+      "answer": 0,
+      "explain": "Common full listings.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_easy_08.mp4",
+        "poster": "media/images/ps_easy_08-frame.png",
+        "figure": "media/images/ps_easy_08.png"
+      }
+    },
+    {
+      "id": "ps_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps aux | grep -i [b]ravo || true\n```\nPID means...",
+      "choices": [
+        "Process ID",
+        "Parent inode",
+        "Permission ID",
+        "Pipe ID"
+      ],
+      "answer": 0,
+      "explain": "PID identifies a process.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_easy_09.mp4",
+        "poster": "media/images/ps_easy_09-frame.png",
+        "figure": "media/images/ps_easy_09.png"
+      }
+    },
+    {
+      "id": "ps_easy_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps -o pid,ppid,cmd | head -n 8\n```\nPPID means...",
+      "choices": [
+        "Parent process ID",
+        "Primary PATH id",
+        "Pretty print id",
+        "Package id"
+      ],
+      "answer": 0,
+      "explain": "Parent PID.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_easy_10.mp4",
+        "poster": "media/images/ps_easy_10-frame.png",
+        "figure": "media/images/ps_easy_10.png"
+      }
+    },
+    {
+      "id": "ps_easy_11",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\npgrep -a delta || true\n```\nCtrl-C typically sends SIGINT to the foreground process group.",
+      "answer": true,
+      "explain": "Keyboard interrupt signal.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_easy_11.mp4",
+        "poster": "media/images/ps_easy_11-frame.png",
+        "figure": "media/images/ps_easy_11.png"
+      }
+    },
+    {
+      "id": "ps_easy_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nkill -TERM 1015 2>/dev/null || true\n```\n`kill -l` lists...",
+      "choices": [
+        "Signal names/numbers",
+        "Logged-in users only",
+        "Open files only",
+        "Mounts"
+      ],
+      "answer": 0,
+      "explain": "Signal catalog.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_easy_12.mp4",
+        "poster": "media/images/ps_easy_12-frame.png",
+        "figure": "media/images/ps_easy_12.png"
+      }
+    },
+    {
+      "id": "ps_easy_13",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps aux | grep -i [f]oxtrot || true\n```\n`pgrep mod13` helps find...",
+      "choices": [
+        "PIDs matching a name pattern",
+        "Disk labels",
+        "Only zombies always",
+        "Man sections"
+      ],
+      "answer": 0,
+      "explain": "Name to PID.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_easy_13.mp4",
+        "poster": "media/images/ps_easy_13-frame.png",
+        "figure": "media/images/ps_easy_13.png"
+      }
+    },
+    {
+      "id": "ps_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps -o pid,ppid,cmd | head -n 12\n```\nA zombie process has...",
+      "choices": [
+        "Exited but not yet waited on by parent",
+        "Infinite CPU always",
+        "No PID",
+        "Only network sockets"
+      ],
+      "answer": 0,
+      "explain": "Zombies await reaping.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_easy_14.mp4",
+        "poster": "media/images/ps_easy_14-frame.png",
+        "figure": "media/images/ps_easy_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\npgrep -a hotel || true\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nExit status 0 usually means...",
+      "choices": [
+        "Failure",
+        "Success",
+        "The process is still running",
+        "Permission denied only"
+      ],
+      "answer": 1,
+      "explain": "By convention, 0 is success; non-zero is failure.",
+      "difficulty": "easy",
+      "id": "ps_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_easy_15.mp4",
+        "poster": "media/images/ps_easy_15-frame.png",
+        "figure": "media/images/ps_easy_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nkill -TERM 1019 2>/dev/null || true\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\necho $? prints...",
+      "choices": [
+        "Your username",
+        "The exit status of the previous command",
+        "The next free PID",
+        "The umask"
+      ],
+      "answer": 1,
+      "explain": "$? is the exit status of the last foreground command.",
+      "difficulty": "easy",
+      "id": "ps_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_easy_16.mp4",
+        "poster": "media/images/ps_easy_16-frame.png",
+        "figure": "media/images/ps_easy_16.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nps aux | grep -i [j]uliet || true\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nCtrl+C in the terminal sends an interrupt signal to the foreground process.",
+      "answer": true,
+      "explain": "Ctrl+C delivers SIGINT to the foreground job.",
+      "difficulty": "easy",
+      "id": "ps_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_easy_17.mp4",
+        "poster": "media/images/ps_easy_17-frame.png",
+        "figure": "media/images/ps_easy_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps -o pid,ppid,cmd | head -n 6\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nkill -9 is best described as...",
+      "choices": [
+        "A polite terminate that processes can catch",
+        "A last-resort force kill that cannot be caught",
+        "A way to list processes",
+        "The same as Ctrl+Z"
+      ],
+      "answer": 1,
+      "explain": "SIGKILL (-9) cannot be caught; use it only when gentler signals fail.",
+      "difficulty": "easy",
+      "id": "ps_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_easy_18.mp4",
+        "poster": "media/images/ps_easy_18-frame.png",
+        "figure": "media/images/ps_easy_18.png"
+      }
+    },
+    {
+      "id": "ps_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\npgrep -a bravo || true\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\n`ps` shows...",
+      "choices": [
+        "A snapshot of processes",
+        "Only disk usage",
+        "Only mounts",
+        "Only man pages"
+      ],
+      "answer": 0,
+      "explain": "ps lists processes.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_easy_19.mp4",
+        "poster": "media/images/ps_easy_19-frame.png",
+        "figure": "media/images/ps_easy_19.png"
+      }
+    },
+    {
+      "id": "ps_easy_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nkill -TERM 1023 2>/dev/null || true\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\n`kill PID` by default sends...",
+      "choices": [
+        "SIGTERM",
+        "SIGKILL",
+        "SIGSTOP",
+        "SIGINT only"
+      ],
+      "answer": 0,
+      "explain": "Default is TERM.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_easy_20.mp4",
+        "poster": "media/images/ps_easy_20-frame.png",
+        "figure": "media/images/ps_easy_20.png"
+      }
+    },
+    {
+      "id": "ps_easy_21",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nps aux | grep -i [d]elta || true\n```\n# Review context: `/var/log/golf` slot 21 variant 1\nSIGKILL (9) cannot be caught; use as last resort.",
+      "answer": true,
+      "explain": "KILL is non-catchable.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_easy_21.mp4",
+        "poster": "media/images/ps_easy_21-frame.png",
+        "figure": "media/images/ps_easy_21.png"
+      }
+    },
+    {
+      "id": "ps_easy_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps -o pid,ppid,cmd | head -n 10\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\n`ps aux` / `ps -ef` styles are for...",
+      "choices": [
+        "Richer process listings",
+        "Formatting disks",
+        "Setting umask",
+        "Zip listing"
+      ],
+      "answer": 0,
+      "explain": "Common full listings.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_easy_22.mp4",
+        "poster": "media/images/ps_easy_22-frame.png",
+        "figure": "media/images/ps_easy_22.png"
+      }
+    },
+    {
+      "id": "ps_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\npgrep -a foxtrot || true\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\nPID means...",
+      "choices": [
+        "Process ID",
+        "Parent inode",
+        "Permission ID",
+        "Pipe ID"
+      ],
+      "answer": 0,
+      "explain": "PID identifies a process.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_easy_23.mp4",
+        "poster": "media/images/ps_easy_23-frame.png",
+        "figure": "media/images/ps_easy_23.png"
+      }
+    },
+    {
+      "id": "ps_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nkill -TERM 1027 2>/dev/null || true\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nPPID means...",
+      "choices": [
+        "Parent process ID",
+        "Primary PATH id",
+        "Pretty print id",
+        "Package id"
+      ],
+      "answer": 0,
+      "explain": "Parent PID.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_easy_24.mp4",
+        "poster": "media/images/ps_easy_24-frame.png",
+        "figure": "media/images/ps_easy_24.png"
+      }
+    },
+    {
+      "id": "ps_easy_25",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nps aux | grep -i [h]otel || true\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nCtrl-C typically sends SIGINT to the foreground process group.",
+      "answer": true,
+      "explain": "Keyboard interrupt signal.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_easy_25.mp4",
+        "poster": "media/images/ps_easy_25-frame.png",
+        "figure": "media/images/ps_easy_25.png"
+      }
+    },
+    {
+      "id": "ps_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps -o pid,ppid,cmd | head -n 14\n```\n# Review context: `./scripts/delta` slot 26 variant 1\n`kill -l` lists...",
+      "choices": [
+        "Signal names/numbers",
+        "Logged-in users only",
+        "Open files only",
+        "Mounts"
+      ],
+      "answer": 0,
+      "explain": "Signal catalog.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_easy_26.mp4",
+        "poster": "media/images/ps_easy_26-frame.png",
+        "figure": "media/images/ps_easy_26.png"
+      }
+    },
+    {
+      "id": "ps_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\npgrep -a juliet || true\n```\n`pgrep mod27` helps find...",
+      "choices": [
+        "PIDs matching a name pattern",
+        "Disk labels",
+        "Only zombies always",
+        "Man sections"
+      ],
+      "answer": 0,
+      "explain": "Name to PID.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_easy_27.mp4",
+        "poster": "media/images/ps_easy_27-frame.png",
+        "figure": "media/images/ps_easy_27.png"
+      }
+    },
+    {
+      "id": "ps_easy_28",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nkill -TERM 1031 2>/dev/null || true\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nA zombie process has...",
+      "choices": [
+        "Exited but not yet waited on by parent",
+        "Infinite CPU always",
+        "No PID",
+        "Only network sockets"
+      ],
+      "answer": 0,
+      "explain": "Zombies await reaping.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_easy_28.mp4",
+        "poster": "media/images/ps_easy_28-frame.png",
+        "figure": "media/images/ps_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps aux | grep -i [b]ravo || true\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nExit status 0 usually means...",
+      "choices": [
+        "Failure",
+        "Success",
+        "The process is still running",
+        "Permission denied only"
+      ],
+      "answer": 1,
+      "explain": "By convention, 0 is success; non-zero is failure.",
+      "difficulty": "easy",
+      "id": "ps_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_easy_29.mp4",
+        "poster": "media/images/ps_easy_29-frame.png",
+        "figure": "media/images/ps_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps -o pid,ppid,cmd | head -n 8\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\necho $? prints...",
+      "choices": [
+        "Your username",
+        "The exit status of the previous command",
+        "The next free PID",
+        "The umask"
+      ],
+      "answer": 1,
+      "explain": "$? is the exit status of the last foreground command.",
+      "difficulty": "easy",
+      "id": "ps_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_easy_30.mp4",
+        "poster": "media/images/ps_easy_30-frame.png",
+        "figure": "media/images/ps_easy_30.png"
+      }
+    },
+    {
+      "id": "ps_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nkill -TERM 1003 2>/dev/null || true\n```\n`kill -15` vs `kill -9`...",
+      "choices": [
+        "15 TERM allows cleanup; 9 KILL forces",
+        "Identical always",
+        "15 is stronger",
+        "9 is catchable"
+      ],
+      "answer": 0,
+      "explain": "Prefer TERM then escalate.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_medium_01.mp4",
+        "poster": "media/images/ps_medium_01-frame.png",
+        "figure": "media/images/ps_medium_01.png"
+      }
+    },
+    {
+      "id": "ps_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps aux | grep -i [d]elta || true\n```\n`ps -o pid,ppid,cmd` customizes...",
+      "choices": [
+        "Output columns",
+        "Signals",
+        "umask",
+        "PATH"
+      ],
+      "answer": 0,
+      "explain": "Format strings.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_medium_02.mp4",
+        "poster": "media/images/ps_medium_02-frame.png",
+        "figure": "media/images/ps_medium_02.png"
+      }
+    },
+    {
+      "id": "ps_medium_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nps -o pid,ppid,cmd | head -n 10\n```\n`pkill` can signal processes by name (careful!).",
+      "answer": true,
+      "explain": "Name-based signaling.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_medium_03.mp4",
+        "poster": "media/images/ps_medium_03-frame.png",
+        "figure": "media/images/ps_medium_03.png"
+      }
+    },
+    {
+      "id": "ps_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\npgrep -a foxtrot || true\n```\nProcess groups and sessions matter for...",
+      "choices": [
+        "Job control and signal delivery",
+        "Only zip",
+        "Only make colors",
+        "Only man"
+      ],
+      "answer": 0,
+      "explain": "Signals target groups.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_medium_04.mp4",
+        "poster": "media/images/ps_medium_04-frame.png",
+        "figure": "media/images/ps_medium_04.png"
+      }
+    },
+    {
+      "id": "ps_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nkill -TERM 1007 2>/dev/null || true\n```\n`top`/`htop` differ from ps mainly by...",
+      "choices": [
+        "Interactive continuous view",
+        "Being unable to show PID",
+        "Disabling kill",
+        "Requiring offline"
+      ],
+      "answer": 0,
+      "explain": "Live monitors.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_medium_05.mp4",
+        "poster": "media/images/ps_medium_05-frame.png",
+        "figure": "media/images/ps_medium_05.png"
+      }
+    },
+    {
+      "id": "ps_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps aux | grep -i [h]otel || true\n```\nOrphaned processes are typically...",
+      "choices": [
+        "Reparented (often to init/systemd)",
+        "Deleted from disk",
+        "Converted to files",
+        "Hidden from ps"
+      ],
+      "answer": 0,
+      "explain": "Reparenting.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_medium_06.mp4",
+        "poster": "media/images/ps_medium_06-frame.png",
+        "figure": "media/images/ps_medium_06.png"
+      }
+    },
+    {
+      "id": "ps_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps -o pid,ppid,cmd | head -n 14\n```\n`nice`/`renice` adjust...",
+      "choices": [
+        "CPU scheduling priority",
+        "File modes",
+        "Symlink text",
+        "Man sections"
+      ],
+      "answer": 0,
+      "explain": "Niceness.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_medium_07.mp4",
+        "poster": "media/images/ps_medium_07-frame.png",
+        "figure": "media/images/ps_medium_07.png"
+      }
+    },
+    {
+      "id": "ps_medium_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\npgrep -a juliet || true\n```\nSending signals you do not own usually fails with EPERM.",
+      "answer": true,
+      "explain": "Permission checks apply.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_medium_08.mp4",
+        "poster": "media/images/ps_medium_08-frame.png",
+        "figure": "media/images/ps_medium_08.png"
+      }
+    },
+    {
+      "id": "ps_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nkill -TERM 1011 2>/dev/null || true\n```\n`/proc/4/status` on Linux exposes...",
+      "choices": [
+        "Process state details",
+        "Only ZIP headers",
+        "Only make rules",
+        "Only bash aliases"
+      ],
+      "answer": 0,
+      "explain": "procfs introspection.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_medium_09.mp4",
+        "poster": "media/images/ps_medium_09-frame.png",
+        "figure": "media/images/ps_medium_09.png"
+      }
+    },
+    {
+      "id": "ps_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps aux | grep -i [b]ravo || true\n```\nBefore kill -9 on a DB, prefer...",
+      "choices": [
+        "Graceful TERM + check logs",
+        "Immediate -9 always",
+        "rm data dir",
+        "Disable disks"
+      ],
+      "answer": 0,
+      "explain": "Graceful shutdown first.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_medium_10.mp4",
+        "poster": "media/images/ps_medium_10-frame.png",
+        "figure": "media/images/ps_medium_10.png"
+      }
+    },
+    {
+      "id": "ps_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps -o pid,ppid,cmd | head -n 8\n```\n# Review context: `~/bin/echo` slot 11 variant 1\n`kill -15` vs `kill -9`...",
+      "choices": [
+        "15 TERM allows cleanup; 9 KILL forces",
+        "Identical always",
+        "15 is stronger",
+        "9 is catchable"
+      ],
+      "answer": 0,
+      "explain": "Prefer TERM then escalate.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_medium_11.mp4",
+        "poster": "media/images/ps_medium_11-frame.png",
+        "figure": "media/images/ps_medium_11.png"
+      }
+    },
+    {
+      "id": "ps_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\npgrep -a delta || true\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\n`ps -o pid,ppid,cmd` customizes...",
+      "choices": [
+        "Output columns",
+        "Signals",
+        "umask",
+        "PATH"
+      ],
+      "answer": 0,
+      "explain": "Format strings.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_medium_12.mp4",
+        "poster": "media/images/ps_medium_12-frame.png",
+        "figure": "media/images/ps_medium_12.png"
+      }
+    },
+    {
+      "id": "ps_medium_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nkill -TERM 1015 2>/dev/null || true\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\n`pkill` can signal processes by name (careful!).",
+      "answer": true,
+      "explain": "Name-based signaling.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_medium_13.mp4",
+        "poster": "media/images/ps_medium_13-frame.png",
+        "figure": "media/images/ps_medium_13.png"
+      }
+    },
+    {
+      "id": "ps_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps aux | grep -i [f]oxtrot || true\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\nProcess groups and sessions matter for...",
+      "choices": [
+        "Job control and signal delivery",
+        "Only zip",
+        "Only make colors",
+        "Only man"
+      ],
+      "answer": 0,
+      "explain": "Signals target groups.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_medium_14.mp4",
+        "poster": "media/images/ps_medium_14-frame.png",
+        "figure": "media/images/ps_medium_14.png"
+      }
+    },
+    {
+      "id": "ps_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps -o pid,ppid,cmd | head -n 12\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\n`top`/`htop` differ from ps mainly by...",
+      "choices": [
+        "Interactive continuous view",
+        "Being unable to show PID",
+        "Disabling kill",
+        "Requiring offline"
+      ],
+      "answer": 0,
+      "explain": "Live monitors.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_medium_15.mp4",
+        "poster": "media/images/ps_medium_15-frame.png",
+        "figure": "media/images/ps_medium_15.png"
+      }
+    },
+    {
+      "id": "ps_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\npgrep -a hotel || true\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nOrphaned processes are typically...",
+      "choices": [
+        "Reparented (often to init/systemd)",
+        "Deleted from disk",
+        "Converted to files",
+        "Hidden from ps"
+      ],
+      "answer": 0,
+      "explain": "Reparenting.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_medium_16.mp4",
+        "poster": "media/images/ps_medium_16-frame.png",
+        "figure": "media/images/ps_medium_16.png"
+      }
+    },
+    {
+      "id": "ps_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nkill -TERM 1019 2>/dev/null || true\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\n`nice`/`renice` adjust...",
+      "choices": [
+        "CPU scheduling priority",
+        "File modes",
+        "Symlink text",
+        "Man sections"
+      ],
+      "answer": 0,
+      "explain": "Niceness.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_medium_17.mp4",
+        "poster": "media/images/ps_medium_17-frame.png",
+        "figure": "media/images/ps_medium_17.png"
+      }
+    },
+    {
+      "id": "ps_medium_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nps aux | grep -i [j]uliet || true\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nSending signals you do not own usually fails with EPERM.",
+      "answer": true,
+      "explain": "Permission checks apply.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_medium_18.mp4",
+        "poster": "media/images/ps_medium_18-frame.png",
+        "figure": "media/images/ps_medium_18.png"
+      }
+    },
+    {
+      "id": "ps_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps -o pid,ppid,cmd | head -n 6\n```\n`/proc/7/status` on Linux exposes...",
+      "choices": [
+        "Process state details",
+        "Only ZIP headers",
+        "Only make rules",
+        "Only bash aliases"
+      ],
+      "answer": 0,
+      "explain": "procfs introspection.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_medium_19.mp4",
+        "poster": "media/images/ps_medium_19-frame.png",
+        "figure": "media/images/ps_medium_19.png"
+      }
+    },
+    {
+      "id": "ps_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\npgrep -a bravo || true\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\nBefore kill -9 on a DB, prefer...",
+      "choices": [
+        "Graceful TERM + check logs",
+        "Immediate -9 always",
+        "rm data dir",
+        "Disable disks"
+      ],
+      "answer": 0,
+      "explain": "Graceful shutdown first.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_medium_20.mp4",
+        "poster": "media/images/ps_medium_20-frame.png",
+        "figure": "media/images/ps_medium_20.png"
+      }
+    },
+    {
+      "id": "ps_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nkill -TERM 1023 2>/dev/null || true\n```\n# Review context: `/var/log/golf` slot 21 variant 1\n`kill -15` vs `kill -9`...",
+      "choices": [
+        "15 TERM allows cleanup; 9 KILL forces",
+        "Identical always",
+        "15 is stronger",
+        "9 is catchable"
+      ],
+      "answer": 0,
+      "explain": "Prefer TERM then escalate.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_medium_21.mp4",
+        "poster": "media/images/ps_medium_21-frame.png",
+        "figure": "media/images/ps_medium_21.png"
+      }
+    },
+    {
+      "id": "ps_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps aux | grep -i [d]elta || true\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\n`ps -o pid,ppid,cmd` customizes...",
+      "choices": [
+        "Output columns",
+        "Signals",
+        "umask",
+        "PATH"
+      ],
+      "answer": 0,
+      "explain": "Format strings.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_medium_22.mp4",
+        "poster": "media/images/ps_medium_22-frame.png",
+        "figure": "media/images/ps_medium_22.png"
+      }
+    },
+    {
+      "id": "ps_medium_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nps -o pid,ppid,cmd | head -n 10\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\n`pkill` can signal processes by name (careful!).",
+      "answer": true,
+      "explain": "Name-based signaling.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_medium_23.mp4",
+        "poster": "media/images/ps_medium_23-frame.png",
+        "figure": "media/images/ps_medium_23.png"
+      }
+    },
+    {
+      "id": "ps_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\npgrep -a foxtrot || true\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nProcess groups and sessions matter for...",
+      "choices": [
+        "Job control and signal delivery",
+        "Only zip",
+        "Only make colors",
+        "Only man"
+      ],
+      "answer": 0,
+      "explain": "Signals target groups.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_medium_24.mp4",
+        "poster": "media/images/ps_medium_24-frame.png",
+        "figure": "media/images/ps_medium_24.png"
+      }
+    },
+    {
+      "id": "ps_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nkill -TERM 1027 2>/dev/null || true\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\n`top`/`htop` differ from ps mainly by...",
+      "choices": [
+        "Interactive continuous view",
+        "Being unable to show PID",
+        "Disabling kill",
+        "Requiring offline"
+      ],
+      "answer": 0,
+      "explain": "Live monitors.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_medium_25.mp4",
+        "poster": "media/images/ps_medium_25-frame.png",
+        "figure": "media/images/ps_medium_25.png"
+      }
+    },
+    {
+      "id": "ps_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps aux | grep -i [h]otel || true\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nOrphaned processes are typically...",
+      "choices": [
+        "Reparented (often to init/systemd)",
+        "Deleted from disk",
+        "Converted to files",
+        "Hidden from ps"
+      ],
+      "answer": 0,
+      "explain": "Reparenting.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_medium_26.mp4",
+        "poster": "media/images/ps_medium_26-frame.png",
+        "figure": "media/images/ps_medium_26.png"
+      }
+    },
+    {
+      "id": "ps_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps -o pid,ppid,cmd | head -n 14\n```\n# Review context: `/var/log/echo` slot 27 variant 1\n`nice`/`renice` adjust...",
+      "choices": [
+        "CPU scheduling priority",
+        "File modes",
+        "Symlink text",
+        "Man sections"
+      ],
+      "answer": 0,
+      "explain": "Niceness.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_medium_27.mp4",
+        "poster": "media/images/ps_medium_27-frame.png",
+        "figure": "media/images/ps_medium_27.png"
+      }
+    },
+    {
+      "id": "ps_medium_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\npgrep -a juliet || true\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nSending signals you do not own usually fails with EPERM.",
+      "answer": true,
+      "explain": "Permission checks apply.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_medium_28.mp4",
+        "poster": "media/images/ps_medium_28-frame.png",
+        "figure": "media/images/ps_medium_28.png"
+      }
+    },
+    {
+      "id": "ps_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nkill -TERM 1031 2>/dev/null || true\n```\n`/proc/3/status` on Linux exposes...",
+      "choices": [
+        "Process state details",
+        "Only ZIP headers",
+        "Only make rules",
+        "Only bash aliases"
+      ],
+      "answer": 0,
+      "explain": "procfs introspection.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_medium_29.mp4",
+        "poster": "media/images/ps_medium_29-frame.png",
+        "figure": "media/images/ps_medium_29.png"
+      }
+    },
+    {
+      "id": "ps_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps aux | grep -i [b]ravo || true\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nBefore kill -9 on a DB, prefer...",
+      "choices": [
+        "Graceful TERM + check logs",
+        "Immediate -9 always",
+        "rm data dir",
+        "Disable disks"
+      ],
+      "answer": 0,
+      "explain": "Graceful shutdown first.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_medium_30.mp4",
+        "poster": "media/images/ps_medium_30-frame.png",
+        "figure": "media/images/ps_medium_30.png"
+      }
+    },
+    {
+      "id": "ps_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nkill -TERM 1003 2>/dev/null || true\n```\nSIGSTOP vs SIGTSTP...",
+      "choices": [
+        "STOP is unblockable; TSTP is terminal stop (job control)",
+        "Identical",
+        "Both are kill",
+        "Both ignore tty"
+      ],
+      "answer": 0,
+      "explain": "Different stop signals.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_hard_01.mp4",
+        "poster": "media/images/ps_hard_01-frame.png",
+        "figure": "media/images/ps_hard_01.png"
+      }
+    },
+    {
+      "id": "ps_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps aux | grep -i [d]elta || true\n```\nKill process groups with...",
+      "choices": [
+        "Negative PID / kill -- -PGID patterns",
+        "Only kill 1 always",
+        "Only pkill -9 $$",
+        "chmod"
+      ],
+      "answer": 0,
+      "explain": "Group-targeted kills.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_hard_02.mp4",
+        "poster": "media/images/ps_hard_02-frame.png",
+        "figure": "media/images/ps_hard_02.png"
+      }
+    },
+    {
+      "id": "ps_hard_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nps -o pid,ppid,cmd | head -n 10\n```\nThreads may share a TGID while having different TIDs (Linux).",
+      "answer": true,
+      "explain": "Thread vs process ids.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_hard_03.mp4",
+        "poster": "media/images/ps_hard_03-frame.png",
+        "figure": "media/images/ps_hard_03.png"
+      }
+    },
+    {
+      "id": "ps_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\npgrep -a foxtrot || true\n```\nptrace/debugger attaches can make kill behavior...",
+      "choices": [
+        "Interact differently / stop for tracing",
+        "Impossible",
+        "Always reboot",
+        "Clear logs"
+      ],
+      "answer": 0,
+      "explain": "Tracing changes state.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_hard_04.mp4",
+        "poster": "media/images/ps_hard_04-frame.png",
+        "figure": "media/images/ps_hard_04.png"
+      }
+    },
+    {
+      "id": "ps_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nkill -TERM 1007 2>/dev/null || true\n```\ncgroup freezer / OOM killer are...",
+      "choices": [
+        "Other ways the system stops workloads",
+        "Shell aliases",
+        "man macros",
+        "zip methods"
+      ],
+      "answer": 0,
+      "explain": "Beyond kill(1).",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_hard_05.mp4",
+        "poster": "media/images/ps_hard_05-frame.png",
+        "figure": "media/images/ps_hard_05.png"
+      }
+    },
+    {
+      "id": "ps_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps aux | grep -i [h]otel || true\n```\nZombie accumulation often indicates...",
+      "choices": [
+        "Parent not wait()ing",
+        "Too much RAM always",
+        "Bad umask",
+        "Missing man"
+      ],
+      "answer": 0,
+      "explain": "Reap children.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_hard_06.mp4",
+        "poster": "media/images/ps_hard_06-frame.png",
+        "figure": "media/images/ps_hard_06.png"
+      }
+    },
+    {
+      "id": "ps_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps -o pid,ppid,cmd | head -n 14\n```\nContainer PID namespaces mean host `kill`...",
+      "choices": [
+        "May not see/kill guest PIDs the same way",
+        "Always works with guest PIDs",
+        "Disables namespaces",
+        "Sets CAP_SYS"
+      ],
+      "answer": 0,
+      "explain": "Namespaces isolate PIDs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_hard_07.mp4",
+        "poster": "media/images/ps_hard_07-frame.png",
+        "figure": "media/images/ps_hard_07.png"
+      }
+    },
+    {
+      "id": "ps_hard_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\npgrep -a juliet || true\n```\nSIGHUP historically hung up terminals; daemons may reload on HUP.",
+      "answer": true,
+      "explain": "HUP reused for reload.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_hard_08.mp4",
+        "poster": "media/images/ps_hard_08-frame.png",
+        "figure": "media/images/ps_hard_08.png"
+      }
+    },
+    {
+      "id": "ps_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nkill -TERM 1011 2>/dev/null || true\n```\nSafe automation uses...",
+      "choices": [
+        "Explicit PIDs/files + TERM timeouts + escalation policy",
+        "pkill -9 -f .",
+        "killall -9",
+        "Random PIDs"
+      ],
+      "answer": 0,
+      "explain": "Controlled stop recipes.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_hard_09.mp4",
+        "poster": "media/images/ps_hard_09-frame.png",
+        "figure": "media/images/ps_hard_09.png"
+      }
+    },
+    {
+      "id": "ps_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps aux | grep -i [b]ravo || true\n```\nLab skill: map symptoms -> `ps`/`pgrep` -> signal choice.",
+      "choices": [
+        "Yes: observe then act",
+        "No: always -9 first",
+        "No: reboot only",
+        "No: chmod 777"
+      ],
+      "answer": 0,
+      "explain": "Observe-signal loop.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_hard_10.mp4",
+        "poster": "media/images/ps_hard_10-frame.png",
+        "figure": "media/images/ps_hard_10.png"
+      }
+    },
+    {
+      "id": "ps_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps -o pid,ppid,cmd | head -n 8\n```\n# Review context: `~/bin/echo` slot 11 variant 1\nSIGSTOP vs SIGTSTP...",
+      "choices": [
+        "STOP is unblockable; TSTP is terminal stop (job control)",
+        "Identical",
+        "Both are kill",
+        "Both ignore tty"
+      ],
+      "answer": 0,
+      "explain": "Different stop signals.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_hard_11.mp4",
+        "poster": "media/images/ps_hard_11-frame.png",
+        "figure": "media/images/ps_hard_11.png"
+      }
+    },
+    {
+      "id": "ps_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\npgrep -a delta || true\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\nKill process groups with...",
+      "choices": [
+        "Negative PID / kill -- -PGID patterns",
+        "Only kill 1 always",
+        "Only pkill -9 $$",
+        "chmod"
+      ],
+      "answer": 0,
+      "explain": "Group-targeted kills.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_hard_12.mp4",
+        "poster": "media/images/ps_hard_12-frame.png",
+        "figure": "media/images/ps_hard_12.png"
+      }
+    },
+    {
+      "id": "ps_hard_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nkill -TERM 1015 2>/dev/null || true\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\nThreads may share a TGID while having different TIDs (Linux).",
+      "answer": true,
+      "explain": "Thread vs process ids.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_hard_13.mp4",
+        "poster": "media/images/ps_hard_13-frame.png",
+        "figure": "media/images/ps_hard_13.png"
+      }
+    },
+    {
+      "id": "ps_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps aux | grep -i [f]oxtrot || true\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\nptrace/debugger attaches can make kill behavior...",
+      "choices": [
+        "Interact differently / stop for tracing",
+        "Impossible",
+        "Always reboot",
+        "Clear logs"
+      ],
+      "answer": 0,
+      "explain": "Tracing changes state.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_hard_14.mp4",
+        "poster": "media/images/ps_hard_14-frame.png",
+        "figure": "media/images/ps_hard_14.png"
+      }
+    },
+    {
+      "id": "ps_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps -o pid,ppid,cmd | head -n 12\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\ncgroup freezer / OOM killer are...",
+      "choices": [
+        "Other ways the system stops workloads",
+        "Shell aliases",
+        "man macros",
+        "zip methods"
+      ],
+      "answer": 0,
+      "explain": "Beyond kill(1).",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_hard_15.mp4",
+        "poster": "media/images/ps_hard_15-frame.png",
+        "figure": "media/images/ps_hard_15.png"
+      }
+    },
+    {
+      "id": "ps_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\npgrep -a hotel || true\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nZombie accumulation often indicates...",
+      "choices": [
+        "Parent not wait()ing",
+        "Too much RAM always",
+        "Bad umask",
+        "Missing man"
+      ],
+      "answer": 0,
+      "explain": "Reap children.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_hard_16.mp4",
+        "poster": "media/images/ps_hard_16-frame.png",
+        "figure": "media/images/ps_hard_16.png"
+      }
+    },
+    {
+      "id": "ps_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nkill -TERM 1019 2>/dev/null || true\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nContainer PID namespaces mean host `kill`...",
+      "choices": [
+        "May not see/kill guest PIDs the same way",
+        "Always works with guest PIDs",
+        "Disables namespaces",
+        "Sets CAP_SYS"
+      ],
+      "answer": 0,
+      "explain": "Namespaces isolate PIDs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_hard_17.mp4",
+        "poster": "media/images/ps_hard_17-frame.png",
+        "figure": "media/images/ps_hard_17.png"
+      }
+    },
+    {
+      "id": "ps_hard_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nps aux | grep -i [j]uliet || true\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nSIGHUP historically hung up terminals; daemons may reload on HUP.",
+      "answer": true,
+      "explain": "HUP reused for reload.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_hard_18.mp4",
+        "poster": "media/images/ps_hard_18-frame.png",
+        "figure": "media/images/ps_hard_18.png"
+      }
+    },
+    {
+      "id": "ps_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps -o pid,ppid,cmd | head -n 6\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nSafe automation uses...",
+      "choices": [
+        "Explicit PIDs/files + TERM timeouts + escalation policy",
+        "pkill -9 -f .",
+        "killall -9",
+        "Random PIDs"
+      ],
+      "answer": 0,
+      "explain": "Controlled stop recipes.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_hard_19.mp4",
+        "poster": "media/images/ps_hard_19-frame.png",
+        "figure": "media/images/ps_hard_19.png"
+      }
+    },
+    {
+      "id": "ps_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\npgrep -a bravo || true\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\nLab skill: map symptoms -> `ps`/`pgrep` -> signal choice.",
+      "choices": [
+        "Yes: observe then act",
+        "No: always -9 first",
+        "No: reboot only",
+        "No: chmod 777"
+      ],
+      "answer": 0,
+      "explain": "Observe-signal loop.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_hard_20.mp4",
+        "poster": "media/images/ps_hard_20-frame.png",
+        "figure": "media/images/ps_hard_20.png"
+      }
+    },
+    {
+      "id": "ps_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nkill -TERM 1023 2>/dev/null || true\n```\n# Review context: `/var/log/golf` slot 21 variant 1\nSIGSTOP vs SIGTSTP...",
+      "choices": [
+        "STOP is unblockable; TSTP is terminal stop (job control)",
+        "Identical",
+        "Both are kill",
+        "Both ignore tty"
+      ],
+      "answer": 0,
+      "explain": "Different stop signals.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_hard_21.mp4",
+        "poster": "media/images/ps_hard_21-frame.png",
+        "figure": "media/images/ps_hard_21.png"
+      }
+    },
+    {
+      "id": "ps_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps aux | grep -i [d]elta || true\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\nKill process groups with...",
+      "choices": [
+        "Negative PID / kill -- -PGID patterns",
+        "Only kill 1 always",
+        "Only pkill -9 $$",
+        "chmod"
+      ],
+      "answer": 0,
+      "explain": "Group-targeted kills.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_hard_22.mp4",
+        "poster": "media/images/ps_hard_22-frame.png",
+        "figure": "media/images/ps_hard_22.png"
+      }
+    },
+    {
+      "id": "ps_hard_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nps -o pid,ppid,cmd | head -n 10\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\nThreads may share a TGID while having different TIDs (Linux).",
+      "answer": true,
+      "explain": "Thread vs process ids.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_hard_23.mp4",
+        "poster": "media/images/ps_hard_23-frame.png",
+        "figure": "media/images/ps_hard_23.png"
+      }
+    },
+    {
+      "id": "ps_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\npgrep -a foxtrot || true\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nptrace/debugger attaches can make kill behavior...",
+      "choices": [
+        "Interact differently / stop for tracing",
+        "Impossible",
+        "Always reboot",
+        "Clear logs"
+      ],
+      "answer": 0,
+      "explain": "Tracing changes state.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_hard_24.mp4",
+        "poster": "media/images/ps_hard_24-frame.png",
+        "figure": "media/images/ps_hard_24.png"
+      }
+    },
+    {
+      "id": "ps_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nkill -TERM 1027 2>/dev/null || true\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\ncgroup freezer / OOM killer are...",
+      "choices": [
+        "Other ways the system stops workloads",
+        "Shell aliases",
+        "man macros",
+        "zip methods"
+      ],
+      "answer": 0,
+      "explain": "Beyond kill(1).",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_hard_25.mp4",
+        "poster": "media/images/ps_hard_25-frame.png",
+        "figure": "media/images/ps_hard_25.png"
+      }
+    },
+    {
+      "id": "ps_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps aux | grep -i [h]otel || true\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nZombie accumulation often indicates...",
+      "choices": [
+        "Parent not wait()ing",
+        "Too much RAM always",
+        "Bad umask",
+        "Missing man"
+      ],
+      "answer": 0,
+      "explain": "Reap children.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_hard_26.mp4",
+        "poster": "media/images/ps_hard_26-frame.png",
+        "figure": "media/images/ps_hard_26.png"
+      }
+    },
+    {
+      "id": "ps_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps -o pid,ppid,cmd | head -n 14\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nContainer PID namespaces mean host `kill`...",
+      "choices": [
+        "May not see/kill guest PIDs the same way",
+        "Always works with guest PIDs",
+        "Disables namespaces",
+        "Sets CAP_SYS"
+      ],
+      "answer": 0,
+      "explain": "Namespaces isolate PIDs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_hard_27.mp4",
+        "poster": "media/images/ps_hard_27-frame.png",
+        "figure": "media/images/ps_hard_27.png"
+      }
+    },
+    {
+      "id": "ps_hard_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\npgrep -a juliet || true\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nSIGHUP historically hung up terminals; daemons may reload on HUP.",
+      "answer": true,
+      "explain": "HUP reused for reload.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_hard_28.mp4",
+        "poster": "media/images/ps_hard_28-frame.png",
+        "figure": "media/images/ps_hard_28.png"
+      }
+    },
+    {
+      "id": "ps_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nkill -TERM 1031 2>/dev/null || true\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nSafe automation uses...",
+      "choices": [
+        "Explicit PIDs/files + TERM timeouts + escalation policy",
+        "pkill -9 -f .",
+        "killall -9",
+        "Random PIDs"
+      ],
+      "answer": 0,
+      "explain": "Controlled stop recipes.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_hard_29.mp4",
+        "poster": "media/images/ps_hard_29-frame.png",
+        "figure": "media/images/ps_hard_29.png"
+      }
+    },
+    {
+      "id": "ps_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nps aux | grep -i [b]ravo || true\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nLab skill: map symptoms -> `ps`/`pgrep` -> signal choice.",
+      "choices": [
+        "Yes: observe then act",
+        "No: always -9 first",
+        "No: reboot only",
+        "No: chmod 777"
+      ],
+      "answer": 0,
+      "explain": "Observe-signal loop.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ps_hard_30.mp4",
+        "poster": "media/images/ps_hard_30-frame.png",
+        "figure": "media/images/ps_hard_30.png"
+      }
+    }
+  ]
+}

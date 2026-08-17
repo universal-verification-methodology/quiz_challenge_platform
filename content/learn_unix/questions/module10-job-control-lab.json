@@ -1,0 +1,1698 @@
+{
+  "module": "module10-job-control-lab",
+  "title": "Job control",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nnohup sleep 4 >/tmp/delta.out 2>&1 &\n```\ncommand & typically...",
+      "choices": [
+        "Runs command in the background",
+        "Deletes the command",
+        "Always kills the shell",
+        "Means the same as Ctrl+C"
+      ],
+      "answer": 0,
+      "explain": "Trailing & starts the command as a background job.",
+      "difficulty": "easy",
+      "id": "job_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_easy_01.mp4",
+        "poster": "media/images/job_easy_01-frame.png",
+        "figure": "media/images/job_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 2 & jobs -l\n```\nCtrl+Z on a foreground job usually...",
+      "choices": [
+        "Kills it with SIGKILL",
+        "Suspends it (Stopped) - it can be resumed",
+        "Logs you out",
+        "Clears the screen only"
+      ],
+      "answer": 1,
+      "explain": "Ctrl+Z sends SIGTSTP - stop, not kill.",
+      "difficulty": "easy",
+      "id": "job_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_easy_02.mp4",
+        "poster": "media/images/job_easy_02-frame.png",
+        "figure": "media/images/job_easy_02.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 30 & bg; jobs\n```\nfg brings a job to the foreground; bg resumes a stopped job in the background.",
+      "answer": true,
+      "explain": "fg / bg are the resume directions for shell jobs.",
+      "difficulty": "easy",
+      "id": "job_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_easy_03.mp4",
+        "poster": "media/images/job_easy_03-frame.png",
+        "figure": "media/images/job_easy_03.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# fg %1 / bg %1 / disown\n```\nA common pattern for a long sim is...",
+      "choices": [
+        "Never redirect output",
+        "Run with > log 2>&1 & then inspect with tail",
+        "Only use kill -9 with no log",
+        "Disable jobs permanently"
+      ],
+      "answer": 1,
+      "explain": "Background + log + tail (or tail -f) is the usual workflow.",
+      "difficulty": "easy",
+      "id": "job_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_easy_04.mp4",
+        "poster": "media/images/job_easy_04-frame.png",
+        "figure": "media/images/job_easy_04.png"
+      }
+    },
+    {
+      "id": "job_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nnohup sleep 8 >/tmp/hotel.out 2>&1 &\n```\n`command &` runs command...",
+      "choices": [
+        "In the background",
+        "Only as root",
+        "With nice -20 always",
+        "Detached from disk"
+      ],
+      "answer": 0,
+      "explain": "& backgrounds.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_easy_05.mp4",
+        "poster": "media/images/job_easy_05-frame.png",
+        "figure": "media/images/job_easy_05.png"
+      }
+    },
+    {
+      "id": "job_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 6 & jobs -l\n```\n`jobs` lists...",
+      "choices": [
+        "Active jobs of the shell",
+        "Cron for all users",
+        "Kernel threads only",
+        "Zip members"
+      ],
+      "answer": 0,
+      "explain": "Shell job table.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_easy_06.mp4",
+        "poster": "media/images/job_easy_06-frame.png",
+        "figure": "media/images/job_easy_06.png"
+      }
+    },
+    {
+      "id": "job_easy_07",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 30 & bg; jobs\n```\nCtrl-Z typically sends SIGTSTP and suspends the foreground job.",
+      "answer": true,
+      "explain": "Terminal stop.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_easy_07.mp4",
+        "poster": "media/images/job_easy_07-frame.png",
+        "figure": "media/images/job_easy_07.png"
+      }
+    },
+    {
+      "id": "job_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# fg %1 / bg %1 / disown\n```\n`bg` resumes a suspended job...",
+      "choices": [
+        "In the background",
+        "As a new login",
+        "Only with -9",
+        "In another user"
+      ],
+      "answer": 0,
+      "explain": "bg continues in background.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_easy_08.mp4",
+        "poster": "media/images/job_easy_08-frame.png",
+        "figure": "media/images/job_easy_08.png"
+      }
+    },
+    {
+      "id": "job_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nnohup sleep 12 >/tmp/bravo.out 2>&1 &\n```\n`fg` brings a job...",
+      "choices": [
+        "To the foreground",
+        "To init",
+        "To cron",
+        "To zip"
+      ],
+      "answer": 0,
+      "explain": "fg foregrounds.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_easy_09.mp4",
+        "poster": "media/images/job_easy_09-frame.png",
+        "figure": "media/images/job_easy_09.png"
+      }
+    },
+    {
+      "id": "job_easy_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 5 & jobs -l\n```\nJob ids often look like...",
+      "choices": [
+        "%1, %2, ...",
+        "Only PIDs",
+        "Only inodes",
+        "Only ports"
+      ],
+      "answer": 0,
+      "explain": "%n job specs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_easy_10.mp4",
+        "poster": "media/images/job_easy_10-frame.png",
+        "figure": "media/images/job_easy_10.png"
+      }
+    },
+    {
+      "id": "job_easy_11",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 30 & bg; jobs\n```\nA foreground job receives terminal keyboard signals.",
+      "answer": true,
+      "explain": "TTY signals go foreground group.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_easy_11.mp4",
+        "poster": "media/images/job_easy_11-frame.png",
+        "figure": "media/images/job_easy_11.png"
+      }
+    },
+    {
+      "id": "job_easy_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# fg %1 / bg %1 / disown\n```\n`disown` can...",
+      "choices": [
+        "Remove a job from the shell's job table",
+        "Unlink files",
+        "Clear umask",
+        "Format disks"
+      ],
+      "answer": 0,
+      "explain": "disown detaches from job control.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_easy_12.mp4",
+        "poster": "media/images/job_easy_12-frame.png",
+        "figure": "media/images/job_easy_12.png"
+      }
+    },
+    {
+      "id": "job_easy_13",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nnohup sleep 16 >/tmp/foxtrot.out 2>&1 &\n```\nWhy background a long `make`?",
+      "choices": [
+        "Keep using the shell for other commands",
+        "Speed the CPU clock",
+        "Disable errors",
+        "Skip deps"
+      ],
+      "answer": 0,
+      "explain": "Concurrency of interactive use.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_easy_13.mp4",
+        "poster": "media/images/job_easy_13-frame.png",
+        "figure": "media/images/job_easy_13.png"
+      }
+    },
+    {
+      "id": "job_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 4 & jobs -l\n```\n`jobs -l` also shows...",
+      "choices": [
+        "PIDs",
+        "Only names",
+        "Only exit codes forever",
+        "Mounts"
+      ],
+      "answer": 0,
+      "explain": "Long job listing includes PIDs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_easy_14.mp4",
+        "poster": "media/images/job_easy_14-frame.png",
+        "figure": "media/images/job_easy_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 30 & bg; jobs\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\ncommand & typically...",
+      "choices": [
+        "Runs command in the background",
+        "Deletes the command",
+        "Always kills the shell",
+        "Means the same as Ctrl+C"
+      ],
+      "answer": 0,
+      "explain": "Trailing & starts the command as a background job.",
+      "difficulty": "easy",
+      "id": "job_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_easy_15.mp4",
+        "poster": "media/images/job_easy_15-frame.png",
+        "figure": "media/images/job_easy_15.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# fg %1 / bg %1 / disown\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nCtrl+Z on a foreground job usually...",
+      "choices": [
+        "Kills it with SIGKILL",
+        "Suspends it (Stopped) - it can be resumed",
+        "Logs you out",
+        "Clears the screen only"
+      ],
+      "answer": 1,
+      "explain": "Ctrl+Z sends SIGTSTP - stop, not kill.",
+      "difficulty": "easy",
+      "id": "job_easy_16",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_easy_16.mp4",
+        "poster": "media/images/job_easy_16-frame.png",
+        "figure": "media/images/job_easy_16.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nnohup sleep 20 >/tmp/juliet.out 2>&1 &\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nfg brings a job to the foreground; bg resumes a stopped job in the background.",
+      "answer": true,
+      "explain": "fg / bg are the resume directions for shell jobs.",
+      "difficulty": "easy",
+      "id": "job_easy_17",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_easy_17.mp4",
+        "poster": "media/images/job_easy_17-frame.png",
+        "figure": "media/images/job_easy_17.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 3 & jobs -l\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nA common pattern for a long sim is...",
+      "choices": [
+        "Never redirect output",
+        "Run with > log 2>&1 & then inspect with tail",
+        "Only use kill -9 with no log",
+        "Disable jobs permanently"
+      ],
+      "answer": 1,
+      "explain": "Background + log + tail (or tail -f) is the usual workflow.",
+      "difficulty": "easy",
+      "id": "job_easy_18",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_easy_18.mp4",
+        "poster": "media/images/job_easy_18-frame.png",
+        "figure": "media/images/job_easy_18.png"
+      }
+    },
+    {
+      "id": "job_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 30 & bg; jobs\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\n`command &` runs command...",
+      "choices": [
+        "In the background",
+        "Only as root",
+        "With nice -20 always",
+        "Detached from disk"
+      ],
+      "answer": 0,
+      "explain": "& backgrounds.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_easy_19.mp4",
+        "poster": "media/images/job_easy_19-frame.png",
+        "figure": "media/images/job_easy_19.png"
+      }
+    },
+    {
+      "id": "job_easy_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# fg %1 / bg %1 / disown\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\n`jobs` lists...",
+      "choices": [
+        "Active jobs of the shell",
+        "Cron for all users",
+        "Kernel threads only",
+        "Zip members"
+      ],
+      "answer": 0,
+      "explain": "Shell job table.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_easy_20.mp4",
+        "poster": "media/images/job_easy_20-frame.png",
+        "figure": "media/images/job_easy_20.png"
+      }
+    },
+    {
+      "id": "job_easy_21",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nnohup sleep 24 >/tmp/delta.out 2>&1 &\n```\n# Review context: `/var/log/golf` slot 21 variant 1\nCtrl-Z typically sends SIGTSTP and suspends the foreground job.",
+      "answer": true,
+      "explain": "Terminal stop.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_easy_21.mp4",
+        "poster": "media/images/job_easy_21-frame.png",
+        "figure": "media/images/job_easy_21.png"
+      }
+    },
+    {
+      "id": "job_easy_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 2 & jobs -l\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\n`bg` resumes a suspended job...",
+      "choices": [
+        "In the background",
+        "As a new login",
+        "Only with -9",
+        "In another user"
+      ],
+      "answer": 0,
+      "explain": "bg continues in background.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_easy_22.mp4",
+        "poster": "media/images/job_easy_22-frame.png",
+        "figure": "media/images/job_easy_22.png"
+      }
+    },
+    {
+      "id": "job_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 30 & bg; jobs\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\n`fg` brings a job...",
+      "choices": [
+        "To the foreground",
+        "To init",
+        "To cron",
+        "To zip"
+      ],
+      "answer": 0,
+      "explain": "fg foregrounds.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_easy_23.mp4",
+        "poster": "media/images/job_easy_23-frame.png",
+        "figure": "media/images/job_easy_23.png"
+      }
+    },
+    {
+      "id": "job_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# fg %1 / bg %1 / disown\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nJob ids often look like...",
+      "choices": [
+        "%1, %2, ...",
+        "Only PIDs",
+        "Only inodes",
+        "Only ports"
+      ],
+      "answer": 0,
+      "explain": "%n job specs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_easy_24.mp4",
+        "poster": "media/images/job_easy_24-frame.png",
+        "figure": "media/images/job_easy_24.png"
+      }
+    },
+    {
+      "id": "job_easy_25",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nnohup sleep 28 >/tmp/hotel.out 2>&1 &\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nA foreground job receives terminal keyboard signals.",
+      "answer": true,
+      "explain": "TTY signals go foreground group.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_easy_25.mp4",
+        "poster": "media/images/job_easy_25-frame.png",
+        "figure": "media/images/job_easy_25.png"
+      }
+    },
+    {
+      "id": "job_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 6 & jobs -l\n```\n# Review context: `./scripts/delta` slot 26 variant 1\n`disown` can...",
+      "choices": [
+        "Remove a job from the shell's job table",
+        "Unlink files",
+        "Clear umask",
+        "Format disks"
+      ],
+      "answer": 0,
+      "explain": "disown detaches from job control.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_easy_26.mp4",
+        "poster": "media/images/job_easy_26-frame.png",
+        "figure": "media/images/job_easy_26.png"
+      }
+    },
+    {
+      "id": "job_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 30 & bg; jobs\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nWhy background a long `make`?",
+      "choices": [
+        "Keep using the shell for other commands",
+        "Speed the CPU clock",
+        "Disable errors",
+        "Skip deps"
+      ],
+      "answer": 0,
+      "explain": "Concurrency of interactive use.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_easy_27.mp4",
+        "poster": "media/images/job_easy_27-frame.png",
+        "figure": "media/images/job_easy_27.png"
+      }
+    },
+    {
+      "id": "job_easy_28",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# fg %1 / bg %1 / disown\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\n`jobs -l` also shows...",
+      "choices": [
+        "PIDs",
+        "Only names",
+        "Only exit codes forever",
+        "Mounts"
+      ],
+      "answer": 0,
+      "explain": "Long job listing includes PIDs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_easy_28.mp4",
+        "poster": "media/images/job_easy_28-frame.png",
+        "figure": "media/images/job_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nnohup sleep 32 >/tmp/bravo.out 2>&1 &\n```\n# Review context: `~/bin/golf` slot 29 variant 1\ncommand & typically...",
+      "choices": [
+        "Runs command in the background",
+        "Deletes the command",
+        "Always kills the shell",
+        "Means the same as Ctrl+C"
+      ],
+      "answer": 0,
+      "explain": "Trailing & starts the command as a background job.",
+      "difficulty": "easy",
+      "id": "job_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_easy_29.mp4",
+        "poster": "media/images/job_easy_29-frame.png",
+        "figure": "media/images/job_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 5 & jobs -l\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nCtrl+Z on a foreground job usually...",
+      "choices": [
+        "Kills it with SIGKILL",
+        "Suspends it (Stopped) - it can be resumed",
+        "Logs you out",
+        "Clears the screen only"
+      ],
+      "answer": 1,
+      "explain": "Ctrl+Z sends SIGTSTP - stop, not kill.",
+      "difficulty": "easy",
+      "id": "job_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_easy_30.mp4",
+        "poster": "media/images/job_easy_30-frame.png",
+        "figure": "media/images/job_easy_30.png"
+      }
+    },
+    {
+      "id": "job_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# fg %1 / bg %1 / disown\n```\n`fg %2` foregrounds...",
+      "choices": [
+        "Job number 2",
+        "PID 2 always",
+        "Nice 2",
+        "TTY 2"
+      ],
+      "answer": 0,
+      "explain": "%2 is job id.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_medium_01.mp4",
+        "poster": "media/images/job_medium_01-frame.png",
+        "figure": "media/images/job_medium_01.png"
+      }
+    },
+    {
+      "id": "job_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nnohup sleep 4 >/tmp/delta.out 2>&1 &\n```\nBackground jobs writing to the terminal may...",
+      "choices": [
+        "Be stopped with SIGTTOU depending on tty settings",
+        "Always print freely forever",
+        "Crash the kernel",
+        "Clear PATH"
+      ],
+      "answer": 0,
+      "explain": "TTY output stops possible.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_medium_02.mp4",
+        "poster": "media/images/job_medium_02-frame.png",
+        "figure": "media/images/job_medium_02.png"
+      }
+    },
+    {
+      "id": "job_medium_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 2 & jobs -l\n```\n`set -m` enables monitor mode / job control in scripts (bash).",
+      "answer": true,
+      "explain": "Monitor mode for jobs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_medium_03.mp4",
+        "poster": "media/images/job_medium_03-frame.png",
+        "figure": "media/images/job_medium_03.png"
+      }
+    },
+    {
+      "id": "job_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 30 & bg; jobs\n```\nPipeline job control treats...",
+      "choices": [
+        "The pipeline as a related process group (typically)",
+        "Each command as unrelated always",
+        "Only the last PID",
+        "Only the first file"
+      ],
+      "answer": 0,
+      "explain": "Pipelines are job units.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_medium_04.mp4",
+        "poster": "media/images/job_medium_04-frame.png",
+        "figure": "media/images/job_medium_04.png"
+      }
+    },
+    {
+      "id": "job_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# fg %1 / bg %1 / disown\n```\n`wait %1` waits for...",
+      "choices": [
+        "That job to finish",
+        "All cron jobs",
+        "Network only",
+        "man rebuild"
+      ],
+      "answer": 0,
+      "explain": "wait on job spec.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_medium_05.mp4",
+        "poster": "media/images/job_medium_05-frame.png",
+        "figure": "media/images/job_medium_05.png"
+      }
+    },
+    {
+      "id": "job_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nnohup sleep 8 >/tmp/hotel.out 2>&1 &\n```\nSIGHUP on shell exit can kill background jobs unless...",
+      "choices": [
+        "nohup/disown/systemd-run etc.",
+        "They are named .sh",
+        "umask is 0",
+        "They use echo"
+      ],
+      "answer": 0,
+      "explain": "HUP policies.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_medium_06.mp4",
+        "poster": "media/images/job_medium_06-frame.png",
+        "figure": "media/images/job_medium_06.png"
+      }
+    },
+    {
+      "id": "job_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 6 & jobs -l\n```\n`nohup cmd &` commonly...",
+      "choices": [
+        "Ignores HUP and often redirects output to nohup.out",
+        "Disables all signals",
+        "Requires root",
+        "Clears jobs"
+      ],
+      "answer": 0,
+      "explain": "Classic detach pattern.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_medium_07.mp4",
+        "poster": "media/images/job_medium_07-frame.png",
+        "figure": "media/images/job_medium_07.png"
+      }
+    },
+    {
+      "id": "job_medium_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 30 & bg; jobs\n```\nJob control is tied to interactive shells with a controlling terminal.",
+      "answer": true,
+      "explain": "Needs a tty context.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_medium_08.mp4",
+        "poster": "media/images/job_medium_08-frame.png",
+        "figure": "media/images/job_medium_08.png"
+      }
+    },
+    {
+      "id": "job_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# fg %1 / bg %1 / disown\n```\nSuspend vs terminate...",
+      "choices": [
+        "Suspend keeps state; terminate ends",
+        "Identical",
+        "Suspend is -9",
+        "Terminate is Ctrl-Z"
+      ],
+      "answer": 0,
+      "explain": "Different intents.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_medium_09.mp4",
+        "poster": "media/images/job_medium_09-frame.png",
+        "figure": "media/images/job_medium_09.png"
+      }
+    },
+    {
+      "id": "job_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nnohup sleep 12 >/tmp/bravo.out 2>&1 &\n```\nFinding a lost background PID: use...",
+      "choices": [
+        "jobs -l / ps / pgrep",
+        "Only ls",
+        "Only chmod",
+        "Only tar"
+      ],
+      "answer": 0,
+      "explain": "Cross-check job table and ps.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_medium_10.mp4",
+        "poster": "media/images/job_medium_10-frame.png",
+        "figure": "media/images/job_medium_10.png"
+      }
+    },
+    {
+      "id": "job_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 5 & jobs -l\n```\n# Review context: `~/bin/echo` slot 11 variant 1\n`fg %2` foregrounds...",
+      "choices": [
+        "Job number 2",
+        "PID 2 always",
+        "Nice 2",
+        "TTY 2"
+      ],
+      "answer": 0,
+      "explain": "%2 is job id.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_medium_11.mp4",
+        "poster": "media/images/job_medium_11-frame.png",
+        "figure": "media/images/job_medium_11.png"
+      }
+    },
+    {
+      "id": "job_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 30 & bg; jobs\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\nBackground jobs writing to the terminal may...",
+      "choices": [
+        "Be stopped with SIGTTOU depending on tty settings",
+        "Always print freely forever",
+        "Crash the kernel",
+        "Clear PATH"
+      ],
+      "answer": 0,
+      "explain": "TTY output stops possible.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_medium_12.mp4",
+        "poster": "media/images/job_medium_12-frame.png",
+        "figure": "media/images/job_medium_12.png"
+      }
+    },
+    {
+      "id": "job_medium_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# fg %1 / bg %1 / disown\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\n`set -m` enables monitor mode / job control in scripts (bash).",
+      "answer": true,
+      "explain": "Monitor mode for jobs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_medium_13.mp4",
+        "poster": "media/images/job_medium_13-frame.png",
+        "figure": "media/images/job_medium_13.png"
+      }
+    },
+    {
+      "id": "job_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nnohup sleep 16 >/tmp/foxtrot.out 2>&1 &\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\nPipeline job control treats...",
+      "choices": [
+        "The pipeline as a related process group (typically)",
+        "Each command as unrelated always",
+        "Only the last PID",
+        "Only the first file"
+      ],
+      "answer": 0,
+      "explain": "Pipelines are job units.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_medium_14.mp4",
+        "poster": "media/images/job_medium_14-frame.png",
+        "figure": "media/images/job_medium_14.png"
+      }
+    },
+    {
+      "id": "job_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 4 & jobs -l\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\n`wait %1` waits for...",
+      "choices": [
+        "That job to finish",
+        "All cron jobs",
+        "Network only",
+        "man rebuild"
+      ],
+      "answer": 0,
+      "explain": "wait on job spec.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_medium_15.mp4",
+        "poster": "media/images/job_medium_15-frame.png",
+        "figure": "media/images/job_medium_15.png"
+      }
+    },
+    {
+      "id": "job_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 30 & bg; jobs\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nSIGHUP on shell exit can kill background jobs unless...",
+      "choices": [
+        "nohup/disown/systemd-run etc.",
+        "They are named .sh",
+        "umask is 0",
+        "They use echo"
+      ],
+      "answer": 0,
+      "explain": "HUP policies.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_medium_16.mp4",
+        "poster": "media/images/job_medium_16-frame.png",
+        "figure": "media/images/job_medium_16.png"
+      }
+    },
+    {
+      "id": "job_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# fg %1 / bg %1 / disown\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\n`nohup cmd &` commonly...",
+      "choices": [
+        "Ignores HUP and often redirects output to nohup.out",
+        "Disables all signals",
+        "Requires root",
+        "Clears jobs"
+      ],
+      "answer": 0,
+      "explain": "Classic detach pattern.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_medium_17.mp4",
+        "poster": "media/images/job_medium_17-frame.png",
+        "figure": "media/images/job_medium_17.png"
+      }
+    },
+    {
+      "id": "job_medium_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nnohup sleep 20 >/tmp/juliet.out 2>&1 &\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nJob control is tied to interactive shells with a controlling terminal.",
+      "answer": true,
+      "explain": "Needs a tty context.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_medium_18.mp4",
+        "poster": "media/images/job_medium_18-frame.png",
+        "figure": "media/images/job_medium_18.png"
+      }
+    },
+    {
+      "id": "job_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 3 & jobs -l\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nSuspend vs terminate...",
+      "choices": [
+        "Suspend keeps state; terminate ends",
+        "Identical",
+        "Suspend is -9",
+        "Terminate is Ctrl-Z"
+      ],
+      "answer": 0,
+      "explain": "Different intents.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_medium_19.mp4",
+        "poster": "media/images/job_medium_19-frame.png",
+        "figure": "media/images/job_medium_19.png"
+      }
+    },
+    {
+      "id": "job_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 30 & bg; jobs\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\nFinding a lost background PID: use...",
+      "choices": [
+        "jobs -l / ps / pgrep",
+        "Only ls",
+        "Only chmod",
+        "Only tar"
+      ],
+      "answer": 0,
+      "explain": "Cross-check job table and ps.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_medium_20.mp4",
+        "poster": "media/images/job_medium_20-frame.png",
+        "figure": "media/images/job_medium_20.png"
+      }
+    },
+    {
+      "id": "job_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# fg %1 / bg %1 / disown\n```\n# Review context: `/var/log/golf` slot 21 variant 1\n`fg %2` foregrounds...",
+      "choices": [
+        "Job number 2",
+        "PID 2 always",
+        "Nice 2",
+        "TTY 2"
+      ],
+      "answer": 0,
+      "explain": "%2 is job id.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_medium_21.mp4",
+        "poster": "media/images/job_medium_21-frame.png",
+        "figure": "media/images/job_medium_21.png"
+      }
+    },
+    {
+      "id": "job_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nnohup sleep 24 >/tmp/delta.out 2>&1 &\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\nBackground jobs writing to the terminal may...",
+      "choices": [
+        "Be stopped with SIGTTOU depending on tty settings",
+        "Always print freely forever",
+        "Crash the kernel",
+        "Clear PATH"
+      ],
+      "answer": 0,
+      "explain": "TTY output stops possible.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_medium_22.mp4",
+        "poster": "media/images/job_medium_22-frame.png",
+        "figure": "media/images/job_medium_22.png"
+      }
+    },
+    {
+      "id": "job_medium_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 2 & jobs -l\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\n`set -m` enables monitor mode / job control in scripts (bash).",
+      "answer": true,
+      "explain": "Monitor mode for jobs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_medium_23.mp4",
+        "poster": "media/images/job_medium_23-frame.png",
+        "figure": "media/images/job_medium_23.png"
+      }
+    },
+    {
+      "id": "job_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 30 & bg; jobs\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nPipeline job control treats...",
+      "choices": [
+        "The pipeline as a related process group (typically)",
+        "Each command as unrelated always",
+        "Only the last PID",
+        "Only the first file"
+      ],
+      "answer": 0,
+      "explain": "Pipelines are job units.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_medium_24.mp4",
+        "poster": "media/images/job_medium_24-frame.png",
+        "figure": "media/images/job_medium_24.png"
+      }
+    },
+    {
+      "id": "job_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# fg %1 / bg %1 / disown\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\n`wait %1` waits for...",
+      "choices": [
+        "That job to finish",
+        "All cron jobs",
+        "Network only",
+        "man rebuild"
+      ],
+      "answer": 0,
+      "explain": "wait on job spec.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_medium_25.mp4",
+        "poster": "media/images/job_medium_25-frame.png",
+        "figure": "media/images/job_medium_25.png"
+      }
+    },
+    {
+      "id": "job_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nnohup sleep 28 >/tmp/hotel.out 2>&1 &\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nSIGHUP on shell exit can kill background jobs unless...",
+      "choices": [
+        "nohup/disown/systemd-run etc.",
+        "They are named .sh",
+        "umask is 0",
+        "They use echo"
+      ],
+      "answer": 0,
+      "explain": "HUP policies.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_medium_26.mp4",
+        "poster": "media/images/job_medium_26-frame.png",
+        "figure": "media/images/job_medium_26.png"
+      }
+    },
+    {
+      "id": "job_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 6 & jobs -l\n```\n# Review context: `/var/log/echo` slot 27 variant 1\n`nohup cmd &` commonly...",
+      "choices": [
+        "Ignores HUP and often redirects output to nohup.out",
+        "Disables all signals",
+        "Requires root",
+        "Clears jobs"
+      ],
+      "answer": 0,
+      "explain": "Classic detach pattern.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_medium_27.mp4",
+        "poster": "media/images/job_medium_27-frame.png",
+        "figure": "media/images/job_medium_27.png"
+      }
+    },
+    {
+      "id": "job_medium_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 30 & bg; jobs\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nJob control is tied to interactive shells with a controlling terminal.",
+      "answer": true,
+      "explain": "Needs a tty context.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_medium_28.mp4",
+        "poster": "media/images/job_medium_28-frame.png",
+        "figure": "media/images/job_medium_28.png"
+      }
+    },
+    {
+      "id": "job_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# fg %1 / bg %1 / disown\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nSuspend vs terminate...",
+      "choices": [
+        "Suspend keeps state; terminate ends",
+        "Identical",
+        "Suspend is -9",
+        "Terminate is Ctrl-Z"
+      ],
+      "answer": 0,
+      "explain": "Different intents.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_medium_29.mp4",
+        "poster": "media/images/job_medium_29-frame.png",
+        "figure": "media/images/job_medium_29.png"
+      }
+    },
+    {
+      "id": "job_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nnohup sleep 32 >/tmp/bravo.out 2>&1 &\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nFinding a lost background PID: use...",
+      "choices": [
+        "jobs -l / ps / pgrep",
+        "Only ls",
+        "Only chmod",
+        "Only tar"
+      ],
+      "answer": 0,
+      "explain": "Cross-check job table and ps.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_medium_30.mp4",
+        "poster": "media/images/job_medium_30-frame.png",
+        "figure": "media/images/job_medium_30.png"
+      }
+    },
+    {
+      "id": "job_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# fg %1 / bg %1 / disown\n```\nOrphaned process groups after shell death...",
+      "choices": [
+        "May continue under new parent depending on setup",
+        "Always vanish instantly",
+        "Become directories",
+        "Hold man locks"
+      ],
+      "answer": 0,
+      "explain": "Lifecycle continues.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_hard_01.mp4",
+        "poster": "media/images/job_hard_01-frame.png",
+        "figure": "media/images/job_hard_01.png"
+      }
+    },
+    {
+      "id": "job_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nnohup sleep 4 >/tmp/delta.out 2>&1 &\n```\ntmux/screen sessions differ from `&` because...",
+      "choices": [
+        "They provide detachable terminals/sessions",
+        "They disable processes",
+        "They replace kill",
+        "They clear PATH"
+      ],
+      "answer": 0,
+      "explain": "Session persistence.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_hard_02.mp4",
+        "poster": "media/images/job_hard_02-frame.png",
+        "figure": "media/images/job_hard_02.png"
+      }
+    },
+    {
+      "id": "job_hard_03",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 2 & jobs -l\n```\nModern preference for long services is often systemd/user units over raw nohup.",
+      "answer": true,
+      "explain": "Supervisors beat ad-hoc &.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_hard_03.mp4",
+        "poster": "media/images/job_hard_03-frame.png",
+        "figure": "media/images/job_hard_03.png"
+      }
+    },
+    {
+      "id": "job_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 30 & bg; jobs\n```\nRace: `bg` then immediate `kill %1` can fail if...",
+      "choices": [
+        "Job state changed / id reused patterns",
+        "PIDs are 32-bit",
+        "umask wrong",
+        "man missing"
+      ],
+      "answer": 0,
+      "explain": "Job ids are ephemeral.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_hard_04.mp4",
+        "poster": "media/images/job_hard_04-frame.png",
+        "figure": "media/images/job_hard_04.png"
+      }
+    },
+    {
+      "id": "job_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# fg %1 / bg %1 / disown\n```\nPipeline with `cmd1 | cmd2 &` backgrounds...",
+      "choices": [
+        "The whole pipeline job",
+        "Only cmd1",
+        "Only cmd2",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explain": "One job for the pipe.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_hard_05.mp4",
+        "poster": "media/images/job_hard_05-frame.png",
+        "figure": "media/images/job_hard_05.png"
+      }
+    },
+    {
+      "id": "job_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nnohup sleep 8 >/tmp/hotel.out 2>&1 &\n```\nstty tostop influences...",
+      "choices": [
+        "Whether background writers get SIGTTOU",
+        "File modes",
+        "Symlink resolution",
+        "make -j"
+      ],
+      "answer": 0,
+      "explain": "TTY stop policy.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_hard_06.mp4",
+        "poster": "media/images/job_hard_06-frame.png",
+        "figure": "media/images/job_hard_06.png"
+      }
+    },
+    {
+      "id": "job_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 6 & jobs -l\n```\nNon-interactive CI shells often...",
+      "choices": [
+        "Lack job control; use wait/PIDs explicitly",
+        "Always support fg/bg",
+        "Require Ctrl-Z",
+        "Need disown"
+      ],
+      "answer": 0,
+      "explain": "CI != interactive.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_hard_07.mp4",
+        "poster": "media/images/job_hard_07-frame.png",
+        "figure": "media/images/job_hard_07.png"
+      }
+    },
+    {
+      "id": "job_hard_08",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 30 & bg; jobs\n```\nProcess group leadership affects which PID receives tty signals.",
+      "answer": true,
+      "explain": "Foreground PGID matters.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_hard_08.mp4",
+        "poster": "media/images/job_hard_08-frame.png",
+        "figure": "media/images/job_hard_08.png"
+      }
+    },
+    {
+      "id": "job_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# fg %1 / bg %1 / disown\n```\nDebugging stuck 'Stopped' jobs: check...",
+      "choices": [
+        "tty tostop + attempts to read/write terminal",
+        "Only CPU gov",
+        "Only zip",
+        "Only ACL"
+      ],
+      "answer": 0,
+      "explain": "Stopped often means tty policy.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_hard_09.mp4",
+        "poster": "media/images/job_hard_09-frame.png",
+        "figure": "media/images/job_hard_09.png"
+      }
+    },
+    {
+      "id": "job_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nnohup sleep 12 >/tmp/bravo.out 2>&1 &\n```\nLab takeaway: prefer explicit logging redirects when using `&`.",
+      "choices": [
+        "Yes: avoid buried tty stops / lost output",
+        "No: print raw to tty always",
+        "No: skip redirects",
+        "No: use -9"
+      ],
+      "answer": 0,
+      "explain": "Redirect background I/O.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_hard_10.mp4",
+        "poster": "media/images/job_hard_10-frame.png",
+        "figure": "media/images/job_hard_10.png"
+      }
+    },
+    {
+      "id": "job_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 5 & jobs -l\n```\n# Review context: `~/bin/echo` slot 11 variant 1\nOrphaned process groups after shell death...",
+      "choices": [
+        "May continue under new parent depending on setup",
+        "Always vanish instantly",
+        "Become directories",
+        "Hold man locks"
+      ],
+      "answer": 0,
+      "explain": "Lifecycle continues.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_hard_11.mp4",
+        "poster": "media/images/job_hard_11-frame.png",
+        "figure": "media/images/job_hard_11.png"
+      }
+    },
+    {
+      "id": "job_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 30 & bg; jobs\n```\n# Review context: `/usr/local/foxtrot` slot 12 variant 1\ntmux/screen sessions differ from `&` because...",
+      "choices": [
+        "They provide detachable terminals/sessions",
+        "They disable processes",
+        "They replace kill",
+        "They clear PATH"
+      ],
+      "answer": 0,
+      "explain": "Session persistence.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_hard_12.mp4",
+        "poster": "media/images/job_hard_12-frame.png",
+        "figure": "media/images/job_hard_12.png"
+      }
+    },
+    {
+      "id": "job_hard_13",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\n# fg %1 / bg %1 / disown\n```\n# Review context: `/opt/tools/golf` slot 13 variant 1\nModern preference for long services is often systemd/user units over raw nohup.",
+      "answer": true,
+      "explain": "Supervisors beat ad-hoc &.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_hard_13.mp4",
+        "poster": "media/images/job_hard_13-frame.png",
+        "figure": "media/images/job_hard_13.png"
+      }
+    },
+    {
+      "id": "job_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nnohup sleep 16 >/tmp/foxtrot.out 2>&1 &\n```\n# Review context: `./scripts/hotel` slot 14 variant 1\nRace: `bg` then immediate `kill %1` can fail if...",
+      "choices": [
+        "Job state changed / id reused patterns",
+        "PIDs are 32-bit",
+        "umask wrong",
+        "man missing"
+      ],
+      "answer": 0,
+      "explain": "Job ids are ephemeral.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_hard_14.mp4",
+        "poster": "media/images/job_hard_14-frame.png",
+        "figure": "media/images/job_hard_14.png"
+      }
+    },
+    {
+      "id": "job_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 4 & jobs -l\n```\n# Review context: `/var/log/alpha` slot 15 variant 1\nPipeline with `cmd1 | cmd2 &` backgrounds...",
+      "choices": [
+        "The whole pipeline job",
+        "Only cmd1",
+        "Only cmd2",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explain": "One job for the pipe.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_hard_15.mp4",
+        "poster": "media/images/job_hard_15-frame.png",
+        "figure": "media/images/job_hard_15.png"
+      }
+    },
+    {
+      "id": "job_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 30 & bg; jobs\n```\n# Review context: `/tmp/work/bravo` slot 16 variant 1\nstty tostop influences...",
+      "choices": [
+        "Whether background writers get SIGTTOU",
+        "File modes",
+        "Symlink resolution",
+        "make -j"
+      ],
+      "answer": 0,
+      "explain": "TTY stop policy.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_hard_16.mp4",
+        "poster": "media/images/job_hard_16-frame.png",
+        "figure": "media/images/job_hard_16.png"
+      }
+    },
+    {
+      "id": "job_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# fg %1 / bg %1 / disown\n```\n# Review context: `~/bin/charlie` slot 17 variant 1\nNon-interactive CI shells often...",
+      "choices": [
+        "Lack job control; use wait/PIDs explicitly",
+        "Always support fg/bg",
+        "Require Ctrl-Z",
+        "Need disown"
+      ],
+      "answer": 0,
+      "explain": "CI != interactive.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_hard_17.mp4",
+        "poster": "media/images/job_hard_17-frame.png",
+        "figure": "media/images/job_hard_17.png"
+      }
+    },
+    {
+      "id": "job_hard_18",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nnohup sleep 20 >/tmp/juliet.out 2>&1 &\n```\n# Review context: `/usr/local/delta` slot 18 variant 1\nProcess group leadership affects which PID receives tty signals.",
+      "answer": true,
+      "explain": "Foreground PGID matters.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_hard_18.mp4",
+        "poster": "media/images/job_hard_18-frame.png",
+        "figure": "media/images/job_hard_18.png"
+      }
+    },
+    {
+      "id": "job_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 3 & jobs -l\n```\n# Review context: `/opt/tools/echo` slot 19 variant 1\nDebugging stuck 'Stopped' jobs: check...",
+      "choices": [
+        "tty tostop + attempts to read/write terminal",
+        "Only CPU gov",
+        "Only zip",
+        "Only ACL"
+      ],
+      "answer": 0,
+      "explain": "Stopped often means tty policy.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_hard_19.mp4",
+        "poster": "media/images/job_hard_19-frame.png",
+        "figure": "media/images/job_hard_19.png"
+      }
+    },
+    {
+      "id": "job_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 30 & bg; jobs\n```\n# Review context: `./scripts/foxtrot` slot 20 variant 1\nLab takeaway: prefer explicit logging redirects when using `&`.",
+      "choices": [
+        "Yes: avoid buried tty stops / lost output",
+        "No: print raw to tty always",
+        "No: skip redirects",
+        "No: use -9"
+      ],
+      "answer": 0,
+      "explain": "Redirect background I/O.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_hard_20.mp4",
+        "poster": "media/images/job_hard_20-frame.png",
+        "figure": "media/images/job_hard_20.png"
+      }
+    },
+    {
+      "id": "job_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# fg %1 / bg %1 / disown\n```\n# Review context: `/var/log/golf` slot 21 variant 1\nOrphaned process groups after shell death...",
+      "choices": [
+        "May continue under new parent depending on setup",
+        "Always vanish instantly",
+        "Become directories",
+        "Hold man locks"
+      ],
+      "answer": 0,
+      "explain": "Lifecycle continues.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_hard_21.mp4",
+        "poster": "media/images/job_hard_21-frame.png",
+        "figure": "media/images/job_hard_21.png"
+      }
+    },
+    {
+      "id": "job_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nnohup sleep 24 >/tmp/delta.out 2>&1 &\n```\n# Review context: `/tmp/work/hotel` slot 22 variant 1\ntmux/screen sessions differ from `&` because...",
+      "choices": [
+        "They provide detachable terminals/sessions",
+        "They disable processes",
+        "They replace kill",
+        "They clear PATH"
+      ],
+      "answer": 0,
+      "explain": "Session persistence.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_hard_22.mp4",
+        "poster": "media/images/job_hard_22-frame.png",
+        "figure": "media/images/job_hard_22.png"
+      }
+    },
+    {
+      "id": "job_hard_23",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 2 & jobs -l\n```\n# Review context: `~/bin/alpha` slot 23 variant 1\nModern preference for long services is often systemd/user units over raw nohup.",
+      "answer": true,
+      "explain": "Supervisors beat ad-hoc &.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_hard_23.mp4",
+        "poster": "media/images/job_hard_23-frame.png",
+        "figure": "media/images/job_hard_23.png"
+      }
+    },
+    {
+      "id": "job_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 30 & bg; jobs\n```\n# Review context: `/usr/local/bravo` slot 24 variant 1\nRace: `bg` then immediate `kill %1` can fail if...",
+      "choices": [
+        "Job state changed / id reused patterns",
+        "PIDs are 32-bit",
+        "umask wrong",
+        "man missing"
+      ],
+      "answer": 0,
+      "explain": "Job ids are ephemeral.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_hard_24.mp4",
+        "poster": "media/images/job_hard_24-frame.png",
+        "figure": "media/images/job_hard_24.png"
+      }
+    },
+    {
+      "id": "job_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# fg %1 / bg %1 / disown\n```\n# Review context: `/opt/tools/charlie` slot 25 variant 1\nPipeline with `cmd1 | cmd2 &` backgrounds...",
+      "choices": [
+        "The whole pipeline job",
+        "Only cmd1",
+        "Only cmd2",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explain": "One job for the pipe.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_hard_25.mp4",
+        "poster": "media/images/job_hard_25-frame.png",
+        "figure": "media/images/job_hard_25.png"
+      }
+    },
+    {
+      "id": "job_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nnohup sleep 28 >/tmp/hotel.out 2>&1 &\n```\n# Review context: `./scripts/delta` slot 26 variant 1\nstty tostop influences...",
+      "choices": [
+        "Whether background writers get SIGTTOU",
+        "File modes",
+        "Symlink resolution",
+        "make -j"
+      ],
+      "answer": 0,
+      "explain": "TTY stop policy.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_hard_26.mp4",
+        "poster": "media/images/job_hard_26-frame.png",
+        "figure": "media/images/job_hard_26.png"
+      }
+    },
+    {
+      "id": "job_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 6 & jobs -l\n```\n# Review context: `/var/log/echo` slot 27 variant 1\nNon-interactive CI shells often...",
+      "choices": [
+        "Lack job control; use wait/PIDs explicitly",
+        "Always support fg/bg",
+        "Require Ctrl-Z",
+        "Need disown"
+      ],
+      "answer": 0,
+      "explain": "CI != interactive.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_hard_27.mp4",
+        "poster": "media/images/job_hard_27-frame.png",
+        "figure": "media/images/job_hard_27.png"
+      }
+    },
+    {
+      "id": "job_hard_28",
+      "type": "true_false",
+      "prompt": "Given this shell snippet:\n```bash\nsleep 30 & bg; jobs\n```\n# Review context: `/tmp/work/foxtrot` slot 28 variant 1\nProcess group leadership affects which PID receives tty signals.",
+      "answer": true,
+      "explain": "Foreground PGID matters.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_hard_28.mp4",
+        "poster": "media/images/job_hard_28-frame.png",
+        "figure": "media/images/job_hard_28.png"
+      }
+    },
+    {
+      "id": "job_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\n# fg %1 / bg %1 / disown\n```\n# Review context: `~/bin/golf` slot 29 variant 1\nDebugging stuck 'Stopped' jobs: check...",
+      "choices": [
+        "tty tostop + attempts to read/write terminal",
+        "Only CPU gov",
+        "Only zip",
+        "Only ACL"
+      ],
+      "answer": 0,
+      "explain": "Stopped often means tty policy.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_hard_29.mp4",
+        "poster": "media/images/job_hard_29-frame.png",
+        "figure": "media/images/job_hard_29.png"
+      }
+    },
+    {
+      "id": "job_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this shell snippet:\n```bash\nnohup sleep 32 >/tmp/bravo.out 2>&1 &\n```\n# Review context: `/usr/local/hotel` slot 30 variant 1\nLab takeaway: prefer explicit logging redirects when using `&`.",
+      "choices": [
+        "Yes: avoid buried tty stops / lost output",
+        "No: print raw to tty always",
+        "No: skip redirects",
+        "No: use -9"
+      ],
+      "answer": 0,
+      "explain": "Redirect background I/O.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/job_hard_30.mp4",
+        "poster": "media/images/job_hard_30-frame.png",
+        "figure": "media/images/job_hard_30.png"
+      }
+    }
+  ]
+}
