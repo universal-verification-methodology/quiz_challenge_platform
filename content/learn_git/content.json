@@ -1,0 +1,229 @@
+{
+  "id": "learn_git",
+  "title": "Git Foundations Quest",
+  "version": 1,
+  "source_course": "learn_git",
+  "ux": {
+    "reveal_modules_during_quiz": false,
+    "feedback": "report_only",
+    "module_order": "random",
+    "within_module": "easy_to_hard_clearance",
+    "embed_tools": true,
+    "tool_embed_height_px": 3600
+  },
+  "timing": {
+    "enabled": true,
+    "limits_s": {
+      "easy": 30,
+      "medium": 45,
+      "hard": 60
+    },
+    "warn_before_s": 10,
+    "on_timeout": "incorrect",
+    "keep_counting_when_hidden": true
+  },
+  "progress": {
+    "unit": "module",
+    "difficulties": ["easy", "medium", "hard"],
+    "need_correct_per_difficulty": 1,
+    "max_attempts_per_difficulty": 10,
+    "bank_multiplier": 3,
+    "advance": "difficulties_cleared_or_exhausted"
+  },
+  "profiles": {
+    "test": {
+      "title": "Git Foundations Quest (Short)",
+      "module_count": 1,
+      "difficulties": ["easy", "medium", "hard"],
+      "need_correct_per_difficulty": 2,
+      "max_attempts_per_difficulty": 6,
+      "prefer_video_stems": true
+    }
+  },
+  "media_policy": {
+    "download": false,
+    "screenshot_ok": true
+  },
+  "modules": [
+    {
+      "id": "module01-git-mental-model",
+      "order": 1,
+      "title": "Git mental model",
+      "toolId": "git-mental-model",
+      "questions": "questions/module01-git-mental-model.json",
+      "source_quiz": "module01-git-mental-model/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module02-git-graph",
+      "order": 2,
+      "title": "Graph, stage, commit",
+      "toolId": "git-graph",
+      "questions": "questions/module02-git-graph.json",
+      "source_quiz": "module02-git-graph/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module03-gitignore-lab",
+      "order": 3,
+      "title": ".gitignore patterns",
+      "toolId": "gitignore-lab",
+      "questions": "questions/module03-gitignore-lab.json",
+      "source_quiz": "module03-gitignore-lab/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module04-commit-message-lab",
+      "order": 4,
+      "title": "Commit messages",
+      "toolId": "commit-message-lab",
+      "questions": "questions/module04-commit-message-lab.json",
+      "source_quiz": "module04-commit-message-lab/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module05-git-log-lab",
+      "order": 5,
+      "title": "git log options",
+      "toolId": "git-log-lab",
+      "questions": "questions/module05-git-log-lab.json",
+      "source_quiz": "module05-git-log-lab/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module06-git-undo-safe",
+      "order": 6,
+      "title": "Safe undo",
+      "toolId": "git-undo-safe",
+      "questions": "questions/module06-git-undo-safe.json",
+      "source_quiz": "module06-git-undo-safe/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module07-git-stash-lab",
+      "order": 7,
+      "title": "Stash scenarios",
+      "toolId": "git-stash-lab",
+      "questions": "questions/module07-git-stash-lab.json",
+      "source_quiz": "module07-git-stash-lab/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module08-git-tags-lab",
+      "order": 8,
+      "title": "Tags",
+      "toolId": "git-tags-lab",
+      "questions": "questions/module08-git-tags-lab.json",
+      "source_quiz": "module08-git-tags-lab/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module09-branch-strategy",
+      "order": 9,
+      "title": "Branch naming",
+      "toolId": "branch-strategy",
+      "questions": "questions/module09-branch-strategy.json",
+      "source_quiz": "module09-branch-strategy/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module10-git-conflicts",
+      "order": 10,
+      "title": "Merge conflicts",
+      "toolId": "git-conflicts",
+      "questions": "questions/module10-git-conflicts.json",
+      "source_quiz": "module10-git-conflicts/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module11-git-rebase-merge",
+      "order": 11,
+      "title": "Rebase vs merge",
+      "toolId": "git-rebase-merge",
+      "questions": "questions/module11-git-rebase-merge.json",
+      "source_quiz": "module11-git-rebase-merge/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module12-git-cherry-pick-lab",
+      "order": 12,
+      "title": "Cherry-pick",
+      "toolId": "git-cherry-pick-lab",
+      "questions": "questions/module12-git-cherry-pick-lab.json",
+      "source_quiz": "module12-git-cherry-pick-lab/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module13-git-reflog",
+      "order": 13,
+      "title": "Reflog recovery",
+      "toolId": "git-reflog",
+      "questions": "questions/module13-git-reflog.json",
+      "source_quiz": "module13-git-reflog/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module14-blame-bisect",
+      "order": 14,
+      "title": "Blame & bisect",
+      "toolId": "blame-bisect",
+      "questions": "questions/module14-blame-bisect.json",
+      "source_quiz": "module14-blame-bisect/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module15-remotes",
+      "order": 15,
+      "title": "Remotes & first push",
+      "toolId": "remotes",
+      "questions": "questions/module15-remotes.json",
+      "source_quiz": "module15-remotes/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module16-remote-tracking",
+      "order": 16,
+      "title": "Remote-tracking branches",
+      "toolId": "remote-tracking",
+      "questions": "questions/module16-remote-tracking.json",
+      "source_quiz": "module16-remote-tracking/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module17-pr-review-lab",
+      "order": 17,
+      "title": "PR review checklist",
+      "toolId": "pr-review-lab",
+      "questions": "questions/module17-pr-review-lab.json",
+      "source_quiz": "module17-pr-review-lab/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module18-submodule-pitfalls",
+      "order": 18,
+      "title": "Submodule pitfalls",
+      "toolId": "submodule-pitfalls",
+      "questions": "questions/module18-submodule-pitfalls.json",
+      "source_quiz": "module18-submodule-pitfalls/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module19-template-clone",
+      "order": 19,
+      "title": "Template-repo bootstrap",
+      "toolId": "template-clone",
+      "questions": "questions/module19-template-clone.json",
+      "source_quiz": "module19-template-clone/quiz.json",
+      "video_stems": true
+    },
+    {
+      "id": "module20-submission-repro",
+      "order": 20,
+      "title": "Submission reproducibility",
+      "toolId": "submission-repro",
+      "questions": "questions/module20-submission-repro.json",
+      "source_quiz": "module20-submission-repro/quiz.json",
+      "video_stems": true
+    }
+  ]
+}
