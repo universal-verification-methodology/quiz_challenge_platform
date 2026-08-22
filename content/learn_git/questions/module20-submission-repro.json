@@ -1,0 +1,1674 @@
+{
+  "module": "module20-submission-repro",
+  "title": "Submission reproducibility",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rev-parse HEAD\n```\nBefore submitting, git status should show...",
+      "choices": [
+        "No surprise junk or secrets you did not mean to ship",
+        "Thousands of build artifacts staged",
+        "Your password in .env committed",
+        "A detached HEAD forever with no commits"
+      ],
+      "answer": 0,
+      "explain": "Pre-submit status confirms you know what is tracked, ignored, or still local-only.",
+      "difficulty": "easy",
+      "id": "ship_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_easy_01.mp4",
+        "poster": "media/images/ship_easy_01-frame.png",
+        "figure": "media/images/ship_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\nbash scripts/run_demo.sh 2>&1 | tee run3.log\n```\nCourse scripts should usually be run from...",
+      "choices": [
+        "The repository root (where README and scripts/ live)",
+        "A random subdirectory only",
+        "Outside the repo entirely",
+        "/tmp with no clone"
+      ],
+      "answer": 0,
+      "explain": "Relative paths in scripts and Makefiles assume the repo root as cwd.",
+      "difficulty": "easy",
+      "id": "ship_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_easy_02.mp4",
+        "poster": "media/images/ship_easy_02-frame.png",
+        "figure": "media/images/ship_easy_02.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\nbash scripts/run_demo.sh 2>&1 | tee run.log saves command output for graders.",
+      "answer": true,
+      "explain": "tee duplicates stdout/stderr to a file while still showing it in the terminal.",
+      "difficulty": "easy",
+      "id": "ship_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_easy_03.mp4",
+        "poster": "media/images/ship_easy_03-frame.png",
+        "figure": "media/images/ship_easy_03.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git log -1 --oneline\n```\nFor submissions you should ship...",
+      "choices": [
+        ".env.example (not your real .env secrets)",
+        "build/ and wave dumps always",
+        "Only logs, no source",
+        "Nothing from gitignore ever matters"
+      ],
+      "answer": 0,
+      "explain": "Example env documents variables; real .env often holds secrets and stays local.",
+      "difficulty": "easy",
+      "id": "ship_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_easy_04.mp4",
+        "poster": "media/images/ship_easy_04-frame.png",
+        "figure": "media/images/ship_easy_04.png"
+      }
+    },
+    {
+      "id": "ship_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rev-parse HEAD\n```\nBefore submitting, `git status` should show...",
+      "choices": [
+        "No surprise junk or secrets you did not mean to ship",
+        "Thousands of build artifacts staged",
+        "Your password in .env committed",
+        "A detached HEAD with no commits"
+      ],
+      "answer": 0,
+      "explain": "Know what is tracked.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_easy_05.mp4",
+        "poster": "media/images/ship_easy_05-frame.png",
+        "figure": "media/images/ship_easy_05.png"
+      }
+    },
+    {
+      "id": "ship_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\nbash scripts/run_demo.sh 2>&1 | tee run7.log\n```\nCourse scripts should usually be run from...",
+      "choices": [
+        "The repository root (README and scripts/ live there)",
+        "A random subdirectory only",
+        "Outside the repo",
+        "/tmp with no clone"
+      ],
+      "answer": 0,
+      "explain": "Relative paths assume root.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_easy_06.mp4",
+        "poster": "media/images/ship_easy_06-frame.png",
+        "figure": "media/images/ship_easy_06.png"
+      }
+    },
+    {
+      "id": "ship_easy_07",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n`bash scripts/run_demo.sh 2>&1 | tee run.log` saves command output for graders.",
+      "answer": true,
+      "explain": "tee duplicates stdout/stderr to a file.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_easy_07.mp4",
+        "poster": "media/images/ship_easy_07-frame.png",
+        "figure": "media/images/ship_easy_07.png"
+      }
+    },
+    {
+      "id": "ship_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git log -1 --oneline\n```\n# Review context: `/tmp/gitlab/bravo` slot 8 variant 1\nFor submissions you should ship...",
+      "choices": [
+        ".env.example (not your real .env secrets)",
+        "build/ and wave dumps always",
+        "Only logs, no source",
+        "Nothing from gitignore ever matters"
+      ],
+      "answer": 0,
+      "explain": "Example env, not secrets.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_easy_08.mp4",
+        "poster": "media/images/ship_easy_08-frame.png",
+        "figure": "media/images/ship_easy_08.png"
+      }
+    },
+    {
+      "id": "ship_easy_09",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit rev-parse HEAD\n```\nGraders clone your SHA; uncommitted editor buffers are not in the repo.",
+      "answer": true,
+      "explain": "Only commits ship.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_easy_09.mp4",
+        "poster": "media/images/ship_easy_09-frame.png",
+        "figure": "media/images/ship_easy_09.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\nbash scripts/run_demo.sh 2>&1 | tee run11.log\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\nBefore submitting, git status should show...",
+      "choices": [
+        "No surprise junk or secrets you did not mean to ship",
+        "Thousands of build artifacts staged",
+        "Your password in .env committed",
+        "A detached HEAD forever with no commits"
+      ],
+      "answer": 0,
+      "explain": "Pre-submit status confirms you know what is tracked, ignored, or still local-only.",
+      "difficulty": "easy",
+      "id": "ship_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_easy_10.mp4",
+        "poster": "media/images/ship_easy_10-frame.png",
+        "figure": "media/images/ship_easy_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n# Review context: `~/src/echo` slot 11 variant 1\nCourse scripts should usually be run from...",
+      "choices": [
+        "The repository root (where README and scripts/ live)",
+        "A random subdirectory only",
+        "Outside the repo entirely",
+        "/tmp with no clone"
+      ],
+      "answer": 0,
+      "explain": "Relative paths in scripts and Makefiles assume the repo root as cwd.",
+      "difficulty": "easy",
+      "id": "ship_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_easy_11.mp4",
+        "poster": "media/images/ship_easy_11-frame.png",
+        "figure": "media/images/ship_easy_11.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git log -1 --oneline\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\nbash scripts/run_demo.sh 2>&1 | tee run.log saves command output for graders.",
+      "answer": true,
+      "explain": "tee duplicates stdout/stderr to a file while still showing it in the terminal.",
+      "difficulty": "easy",
+      "id": "ship_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_easy_12.mp4",
+        "poster": "media/images/ship_easy_12-frame.png",
+        "figure": "media/images/ship_easy_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rev-parse HEAD\n```\n# Review context: `./labs/golf` slot 13 variant 1\nFor submissions you should ship...",
+      "choices": [
+        ".env.example (not your real .env secrets)",
+        "build/ and wave dumps always",
+        "Only logs, no source",
+        "Nothing from gitignore ever matters"
+      ],
+      "answer": 0,
+      "explain": "Example env documents variables; real .env often holds secrets and stays local.",
+      "difficulty": "easy",
+      "id": "ship_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_easy_13.mp4",
+        "poster": "media/images/ship_easy_13-frame.png",
+        "figure": "media/images/ship_easy_13.png"
+      }
+    },
+    {
+      "id": "ship_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\nbash scripts/run_demo.sh 2>&1 | tee run15.log\n```\n# Review context: `/tmp/gitlab/hotel` slot 14 variant 1\nBefore submitting, `git status` should show...",
+      "choices": [
+        "No surprise junk or secrets you did not mean to ship",
+        "Thousands of build artifacts staged",
+        "Your password in .env committed",
+        "A detached HEAD with no commits"
+      ],
+      "answer": 0,
+      "explain": "Know what is tracked.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_easy_14.mp4",
+        "poster": "media/images/ship_easy_14-frame.png",
+        "figure": "media/images/ship_easy_14.png"
+      }
+    },
+    {
+      "id": "ship_easy_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\nCourse scripts should usually be run from...",
+      "choices": [
+        "The repository root (README and scripts/ live there)",
+        "A random subdirectory only",
+        "Outside the repo",
+        "/tmp with no clone"
+      ],
+      "answer": 0,
+      "explain": "Relative paths assume root.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_easy_15.mp4",
+        "poster": "media/images/ship_easy_15-frame.png",
+        "figure": "media/images/ship_easy_15.png"
+      }
+    },
+    {
+      "id": "ship_easy_16",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git log -1 --oneline\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\n`bash scripts/run_demo.sh 2>&1 | tee run.log` saves command output for graders.",
+      "answer": true,
+      "explain": "tee duplicates stdout/stderr to a file.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_easy_16.mp4",
+        "poster": "media/images/ship_easy_16-frame.png",
+        "figure": "media/images/ship_easy_16.png"
+      }
+    },
+    {
+      "id": "ship_easy_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rev-parse HEAD\n```\n# Review context: `~/src/charlie` slot 17 variant 1\nFor submissions you should ship...",
+      "choices": [
+        ".env.example (not your real .env secrets)",
+        "build/ and wave dumps always",
+        "Only logs, no source",
+        "Nothing from gitignore ever matters"
+      ],
+      "answer": 0,
+      "explain": "Example env, not secrets.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_easy_17.mp4",
+        "poster": "media/images/ship_easy_17-frame.png",
+        "figure": "media/images/ship_easy_17.png"
+      }
+    },
+    {
+      "id": "ship_easy_18",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\nbash scripts/run_demo.sh 2>&1 | tee run19.log\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\nGraders clone your SHA; uncommitted editor buffers are not in the repo.",
+      "answer": true,
+      "explain": "Only commits ship.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_easy_18.mp4",
+        "poster": "media/images/ship_easy_18-frame.png",
+        "figure": "media/images/ship_easy_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n# Review context: `./labs/echo` slot 19 variant 1\nBefore submitting, git status should show...",
+      "choices": [
+        "No surprise junk or secrets you did not mean to ship",
+        "Thousands of build artifacts staged",
+        "Your password in .env committed",
+        "A detached HEAD forever with no commits"
+      ],
+      "answer": 0,
+      "explain": "Pre-submit status confirms you know what is tracked, ignored, or still local-only.",
+      "difficulty": "easy",
+      "id": "ship_easy_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_easy_19.mp4",
+        "poster": "media/images/ship_easy_19-frame.png",
+        "figure": "media/images/ship_easy_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git log -1 --oneline\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\nCourse scripts should usually be run from...",
+      "choices": [
+        "The repository root (where README and scripts/ live)",
+        "A random subdirectory only",
+        "Outside the repo entirely",
+        "/tmp with no clone"
+      ],
+      "answer": 0,
+      "explain": "Relative paths in scripts and Makefiles assume the repo root as cwd.",
+      "difficulty": "easy",
+      "id": "ship_easy_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_easy_20.mp4",
+        "poster": "media/images/ship_easy_20-frame.png",
+        "figure": "media/images/ship_easy_20.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit rev-parse HEAD\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\nbash scripts/run_demo.sh 2>&1 | tee run.log saves command output for graders.",
+      "answer": true,
+      "explain": "tee duplicates stdout/stderr to a file while still showing it in the terminal.",
+      "difficulty": "easy",
+      "id": "ship_easy_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_easy_21.mp4",
+        "poster": "media/images/ship_easy_21-frame.png",
+        "figure": "media/images/ship_easy_21.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\nbash scripts/run_demo.sh 2>&1 | tee run23.log\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\nFor submissions you should ship...",
+      "choices": [
+        ".env.example (not your real .env secrets)",
+        "build/ and wave dumps always",
+        "Only logs, no source",
+        "Nothing from gitignore ever matters"
+      ],
+      "answer": 0,
+      "explain": "Example env documents variables; real .env often holds secrets and stays local.",
+      "difficulty": "easy",
+      "id": "ship_easy_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_easy_22.mp4",
+        "poster": "media/images/ship_easy_22-frame.png",
+        "figure": "media/images/ship_easy_22.png"
+      }
+    },
+    {
+      "id": "ship_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n# Review context: `~/src/alpha` slot 23 variant 1\nBefore submitting, `git status` should show...",
+      "choices": [
+        "No surprise junk or secrets you did not mean to ship",
+        "Thousands of build artifacts staged",
+        "Your password in .env committed",
+        "A detached HEAD with no commits"
+      ],
+      "answer": 0,
+      "explain": "Know what is tracked.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_easy_23.mp4",
+        "poster": "media/images/ship_easy_23-frame.png",
+        "figure": "media/images/ship_easy_23.png"
+      }
+    },
+    {
+      "id": "ship_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git log -1 --oneline\n```\n# Review context: `/work/chip/bravo` slot 24 variant 1\nCourse scripts should usually be run from...",
+      "choices": [
+        "The repository root (README and scripts/ live there)",
+        "A random subdirectory only",
+        "Outside the repo",
+        "/tmp with no clone"
+      ],
+      "answer": 0,
+      "explain": "Relative paths assume root.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_easy_24.mp4",
+        "poster": "media/images/ship_easy_24-frame.png",
+        "figure": "media/images/ship_easy_24.png"
+      }
+    },
+    {
+      "id": "ship_easy_25",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit rev-parse HEAD\n```\n# Review context: `./labs/charlie` slot 25 variant 1\n`bash scripts/run_demo.sh 2>&1 | tee run.log` saves command output for graders.",
+      "answer": true,
+      "explain": "tee duplicates stdout/stderr to a file.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_easy_25.mp4",
+        "poster": "media/images/ship_easy_25-frame.png",
+        "figure": "media/images/ship_easy_25.png"
+      }
+    },
+    {
+      "id": "ship_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\nbash scripts/run_demo.sh 2>&1 | tee run27.log\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\nFor submissions you should ship...",
+      "choices": [
+        ".env.example (not your real .env secrets)",
+        "build/ and wave dumps always",
+        "Only logs, no source",
+        "Nothing from gitignore ever matters"
+      ],
+      "answer": 0,
+      "explain": "Example env, not secrets.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_easy_26.mp4",
+        "poster": "media/images/ship_easy_26-frame.png",
+        "figure": "media/images/ship_easy_26.png"
+      }
+    },
+    {
+      "id": "ship_easy_27",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\nGraders clone your SHA; uncommitted editor buffers are not in the repo.",
+      "answer": true,
+      "explain": "Only commits ship.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_easy_27.mp4",
+        "poster": "media/images/ship_easy_27-frame.png",
+        "figure": "media/images/ship_easy_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git log -1 --oneline\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\nBefore submitting, git status should show...",
+      "choices": [
+        "No surprise junk or secrets you did not mean to ship",
+        "Thousands of build artifacts staged",
+        "Your password in .env committed",
+        "A detached HEAD forever with no commits"
+      ],
+      "answer": 0,
+      "explain": "Pre-submit status confirms you know what is tracked, ignored, or still local-only.",
+      "difficulty": "easy",
+      "id": "ship_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_easy_28.mp4",
+        "poster": "media/images/ship_easy_28-frame.png",
+        "figure": "media/images/ship_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rev-parse HEAD\n```\n# Review context: `~/src/golf` slot 29 variant 1\nCourse scripts should usually be run from...",
+      "choices": [
+        "The repository root (where README and scripts/ live)",
+        "A random subdirectory only",
+        "Outside the repo entirely",
+        "/tmp with no clone"
+      ],
+      "answer": 0,
+      "explain": "Relative paths in scripts and Makefiles assume the repo root as cwd.",
+      "difficulty": "easy",
+      "id": "ship_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_easy_29.mp4",
+        "poster": "media/images/ship_easy_29-frame.png",
+        "figure": "media/images/ship_easy_29.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\nbash scripts/run_demo.sh 2>&1 | tee run31.log\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\nbash scripts/run_demo.sh 2>&1 | tee run.log saves command output for graders.",
+      "answer": true,
+      "explain": "tee duplicates stdout/stderr to a file while still showing it in the terminal.",
+      "difficulty": "easy",
+      "id": "ship_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_easy_30.mp4",
+        "poster": "media/images/ship_easy_30-frame.png",
+        "figure": "media/images/ship_easy_30.png"
+      }
+    },
+    {
+      "id": "ship_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rev-parse HEAD\n```\n`git archive HEAD` creates...",
+      "choices": [
+        "A tree snapshot without the .git directory",
+        "A full clone",
+        "A remote",
+        "A stash"
+      ],
+      "answer": 0,
+      "explain": "Archive is sources at a commit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_medium_01.mp4",
+        "poster": "media/images/ship_medium_01-frame.png",
+        "figure": "media/images/ship_medium_01.png"
+      }
+    },
+    {
+      "id": "ship_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\nbash scripts/run_demo.sh 2>&1 | tee run3.log\n```\nReproducible submit includes...",
+      "choices": [
+        "Pinned commit SHA, run recipe, and no secrets",
+        "Only a screenshot",
+        "Only VCD",
+        "A force-push to class main"
+      ],
+      "answer": 0,
+      "explain": "Recipe + SHA.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_medium_02.mp4",
+        "poster": "media/images/ship_medium_02-frame.png",
+        "figure": "media/images/ship_medium_02.png"
+      }
+    },
+    {
+      "id": "ship_medium_03",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n`git describe --always --dirty` is a handy version string for logs.",
+      "answer": true,
+      "explain": "Shows tag/SHA and dirty flag.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_medium_03.mp4",
+        "poster": "media/images/ship_medium_03-frame.png",
+        "figure": "media/images/ship_medium_03.png"
+      }
+    },
+    {
+      "id": "ship_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git log -1 --oneline\n```\nIf `build/out4.vcd` is generated, submit instructions should...",
+      "choices": [
+        "Tell graders how to regenerate, not commit the dump",
+        "Always commit every wave",
+        "Delete RTL",
+        "Skip tests"
+      ],
+      "answer": 0,
+      "explain": "Repro over blobs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_medium_04.mp4",
+        "poster": "media/images/ship_medium_04-frame.png",
+        "figure": "media/images/ship_medium_04.png"
+      }
+    },
+    {
+      "id": "ship_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rev-parse HEAD\n```\n`git clean -nd` is a dry-run of...",
+      "choices": [
+        "What untracked files would be deleted",
+        "fetch",
+        "tag",
+        "rebase"
+      ],
+      "answer": 0,
+      "explain": "Preview clean.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_medium_05.mp4",
+        "poster": "media/images/ship_medium_05-frame.png",
+        "figure": "media/images/ship_medium_05.png"
+      }
+    },
+    {
+      "id": "ship_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\nbash scripts/run_demo.sh 2>&1 | tee run7.log\n```\n# Review context: `/work/chip/hotel` slot 6 variant 1\n`git archive HEAD` creates...",
+      "choices": [
+        "A tree snapshot without the .git directory",
+        "A full clone",
+        "A remote",
+        "A stash"
+      ],
+      "answer": 0,
+      "explain": "Archive is sources at a commit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_medium_06.mp4",
+        "poster": "media/images/ship_medium_06-frame.png",
+        "figure": "media/images/ship_medium_06.png"
+      }
+    },
+    {
+      "id": "ship_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n# Review context: `./labs/alpha` slot 7 variant 1\nReproducible submit includes...",
+      "choices": [
+        "Pinned commit SHA, run recipe, and no secrets",
+        "Only a screenshot",
+        "Only VCD",
+        "A force-push to class main"
+      ],
+      "answer": 0,
+      "explain": "Recipe + SHA.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_medium_07.mp4",
+        "poster": "media/images/ship_medium_07-frame.png",
+        "figure": "media/images/ship_medium_07.png"
+      }
+    },
+    {
+      "id": "ship_medium_08",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git log -1 --oneline\n```\n# Review context: `/tmp/gitlab/bravo` slot 8 variant 1\n`git describe --always --dirty` is a handy version string for logs.",
+      "answer": true,
+      "explain": "Shows tag/SHA and dirty flag.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_medium_08.mp4",
+        "poster": "media/images/ship_medium_08-frame.png",
+        "figure": "media/images/ship_medium_08.png"
+      }
+    },
+    {
+      "id": "ship_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rev-parse HEAD\n```\nIf `build/out9.vcd` is generated, submit instructions should...",
+      "choices": [
+        "Tell graders how to regenerate, not commit the dump",
+        "Always commit every wave",
+        "Delete RTL",
+        "Skip tests"
+      ],
+      "answer": 0,
+      "explain": "Repro over blobs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_medium_09.mp4",
+        "poster": "media/images/ship_medium_09-frame.png",
+        "figure": "media/images/ship_medium_09.png"
+      }
+    },
+    {
+      "id": "ship_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\nbash scripts/run_demo.sh 2>&1 | tee run11.log\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\n`git clean -nd` is a dry-run of...",
+      "choices": [
+        "What untracked files would be deleted",
+        "fetch",
+        "tag",
+        "rebase"
+      ],
+      "answer": 0,
+      "explain": "Preview clean.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_medium_10.mp4",
+        "poster": "media/images/ship_medium_10-frame.png",
+        "figure": "media/images/ship_medium_10.png"
+      }
+    },
+    {
+      "id": "ship_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n# Review context: `~/src/echo` slot 11 variant 1\n`git archive HEAD` creates...",
+      "choices": [
+        "A tree snapshot without the .git directory",
+        "A full clone",
+        "A remote",
+        "A stash"
+      ],
+      "answer": 0,
+      "explain": "Archive is sources at a commit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_medium_11.mp4",
+        "poster": "media/images/ship_medium_11-frame.png",
+        "figure": "media/images/ship_medium_11.png"
+      }
+    },
+    {
+      "id": "ship_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git log -1 --oneline\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\nReproducible submit includes...",
+      "choices": [
+        "Pinned commit SHA, run recipe, and no secrets",
+        "Only a screenshot",
+        "Only VCD",
+        "A force-push to class main"
+      ],
+      "answer": 0,
+      "explain": "Recipe + SHA.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_medium_12.mp4",
+        "poster": "media/images/ship_medium_12-frame.png",
+        "figure": "media/images/ship_medium_12.png"
+      }
+    },
+    {
+      "id": "ship_medium_13",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit rev-parse HEAD\n```\n# Review context: `./labs/golf` slot 13 variant 1\n`git describe --always --dirty` is a handy version string for logs.",
+      "answer": true,
+      "explain": "Shows tag/SHA and dirty flag.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_medium_13.mp4",
+        "poster": "media/images/ship_medium_13-frame.png",
+        "figure": "media/images/ship_medium_13.png"
+      }
+    },
+    {
+      "id": "ship_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\nbash scripts/run_demo.sh 2>&1 | tee run15.log\n```\nIf `build/out14.vcd` is generated, submit instructions should...",
+      "choices": [
+        "Tell graders how to regenerate, not commit the dump",
+        "Always commit every wave",
+        "Delete RTL",
+        "Skip tests"
+      ],
+      "answer": 0,
+      "explain": "Repro over blobs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_medium_14.mp4",
+        "poster": "media/images/ship_medium_14-frame.png",
+        "figure": "media/images/ship_medium_14.png"
+      }
+    },
+    {
+      "id": "ship_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\n`git clean -nd` is a dry-run of...",
+      "choices": [
+        "What untracked files would be deleted",
+        "fetch",
+        "tag",
+        "rebase"
+      ],
+      "answer": 0,
+      "explain": "Preview clean.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_medium_15.mp4",
+        "poster": "media/images/ship_medium_15-frame.png",
+        "figure": "media/images/ship_medium_15.png"
+      }
+    },
+    {
+      "id": "ship_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git log -1 --oneline\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\n`git archive HEAD` creates...",
+      "choices": [
+        "A tree snapshot without the .git directory",
+        "A full clone",
+        "A remote",
+        "A stash"
+      ],
+      "answer": 0,
+      "explain": "Archive is sources at a commit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_medium_16.mp4",
+        "poster": "media/images/ship_medium_16-frame.png",
+        "figure": "media/images/ship_medium_16.png"
+      }
+    },
+    {
+      "id": "ship_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rev-parse HEAD\n```\n# Review context: `~/src/charlie` slot 17 variant 1\nReproducible submit includes...",
+      "choices": [
+        "Pinned commit SHA, run recipe, and no secrets",
+        "Only a screenshot",
+        "Only VCD",
+        "A force-push to class main"
+      ],
+      "answer": 0,
+      "explain": "Recipe + SHA.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_medium_17.mp4",
+        "poster": "media/images/ship_medium_17-frame.png",
+        "figure": "media/images/ship_medium_17.png"
+      }
+    },
+    {
+      "id": "ship_medium_18",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\nbash scripts/run_demo.sh 2>&1 | tee run19.log\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\n`git describe --always --dirty` is a handy version string for logs.",
+      "answer": true,
+      "explain": "Shows tag/SHA and dirty flag.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_medium_18.mp4",
+        "poster": "media/images/ship_medium_18-frame.png",
+        "figure": "media/images/ship_medium_18.png"
+      }
+    },
+    {
+      "id": "ship_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\nIf `build/out19.vcd` is generated, submit instructions should...",
+      "choices": [
+        "Tell graders how to regenerate, not commit the dump",
+        "Always commit every wave",
+        "Delete RTL",
+        "Skip tests"
+      ],
+      "answer": 0,
+      "explain": "Repro over blobs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_medium_19.mp4",
+        "poster": "media/images/ship_medium_19-frame.png",
+        "figure": "media/images/ship_medium_19.png"
+      }
+    },
+    {
+      "id": "ship_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git log -1 --oneline\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\n`git clean -nd` is a dry-run of...",
+      "choices": [
+        "What untracked files would be deleted",
+        "fetch",
+        "tag",
+        "rebase"
+      ],
+      "answer": 0,
+      "explain": "Preview clean.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_medium_20.mp4",
+        "poster": "media/images/ship_medium_20-frame.png",
+        "figure": "media/images/ship_medium_20.png"
+      }
+    },
+    {
+      "id": "ship_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rev-parse HEAD\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\n`git archive HEAD` creates...",
+      "choices": [
+        "A tree snapshot without the .git directory",
+        "A full clone",
+        "A remote",
+        "A stash"
+      ],
+      "answer": 0,
+      "explain": "Archive is sources at a commit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_medium_21.mp4",
+        "poster": "media/images/ship_medium_21-frame.png",
+        "figure": "media/images/ship_medium_21.png"
+      }
+    },
+    {
+      "id": "ship_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\nbash scripts/run_demo.sh 2>&1 | tee run23.log\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\nReproducible submit includes...",
+      "choices": [
+        "Pinned commit SHA, run recipe, and no secrets",
+        "Only a screenshot",
+        "Only VCD",
+        "A force-push to class main"
+      ],
+      "answer": 0,
+      "explain": "Recipe + SHA.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_medium_22.mp4",
+        "poster": "media/images/ship_medium_22-frame.png",
+        "figure": "media/images/ship_medium_22.png"
+      }
+    },
+    {
+      "id": "ship_medium_23",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n# Review context: `~/src/alpha` slot 23 variant 1\n`git describe --always --dirty` is a handy version string for logs.",
+      "answer": true,
+      "explain": "Shows tag/SHA and dirty flag.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_medium_23.mp4",
+        "poster": "media/images/ship_medium_23-frame.png",
+        "figure": "media/images/ship_medium_23.png"
+      }
+    },
+    {
+      "id": "ship_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git log -1 --oneline\n```\nIf `build/out24.vcd` is generated, submit instructions should...",
+      "choices": [
+        "Tell graders how to regenerate, not commit the dump",
+        "Always commit every wave",
+        "Delete RTL",
+        "Skip tests"
+      ],
+      "answer": 0,
+      "explain": "Repro over blobs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_medium_24.mp4",
+        "poster": "media/images/ship_medium_24-frame.png",
+        "figure": "media/images/ship_medium_24.png"
+      }
+    },
+    {
+      "id": "ship_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rev-parse HEAD\n```\n# Review context: `./labs/charlie` slot 25 variant 1\n`git clean -nd` is a dry-run of...",
+      "choices": [
+        "What untracked files would be deleted",
+        "fetch",
+        "tag",
+        "rebase"
+      ],
+      "answer": 0,
+      "explain": "Preview clean.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_medium_25.mp4",
+        "poster": "media/images/ship_medium_25-frame.png",
+        "figure": "media/images/ship_medium_25.png"
+      }
+    },
+    {
+      "id": "ship_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\nbash scripts/run_demo.sh 2>&1 | tee run27.log\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\n`git archive HEAD` creates...",
+      "choices": [
+        "A tree snapshot without the .git directory",
+        "A full clone",
+        "A remote",
+        "A stash"
+      ],
+      "answer": 0,
+      "explain": "Archive is sources at a commit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_medium_26.mp4",
+        "poster": "media/images/ship_medium_26-frame.png",
+        "figure": "media/images/ship_medium_26.png"
+      }
+    },
+    {
+      "id": "ship_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\nReproducible submit includes...",
+      "choices": [
+        "Pinned commit SHA, run recipe, and no secrets",
+        "Only a screenshot",
+        "Only VCD",
+        "A force-push to class main"
+      ],
+      "answer": 0,
+      "explain": "Recipe + SHA.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_medium_27.mp4",
+        "poster": "media/images/ship_medium_27-frame.png",
+        "figure": "media/images/ship_medium_27.png"
+      }
+    },
+    {
+      "id": "ship_medium_28",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git log -1 --oneline\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\n`git describe --always --dirty` is a handy version string for logs.",
+      "answer": true,
+      "explain": "Shows tag/SHA and dirty flag.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_medium_28.mp4",
+        "poster": "media/images/ship_medium_28-frame.png",
+        "figure": "media/images/ship_medium_28.png"
+      }
+    },
+    {
+      "id": "ship_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rev-parse HEAD\n```\nIf `build/out29.vcd` is generated, submit instructions should...",
+      "choices": [
+        "Tell graders how to regenerate, not commit the dump",
+        "Always commit every wave",
+        "Delete RTL",
+        "Skip tests"
+      ],
+      "answer": 0,
+      "explain": "Repro over blobs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_medium_29.mp4",
+        "poster": "media/images/ship_medium_29-frame.png",
+        "figure": "media/images/ship_medium_29.png"
+      }
+    },
+    {
+      "id": "ship_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\nbash scripts/run_demo.sh 2>&1 | tee run31.log\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\n`git clean -nd` is a dry-run of...",
+      "choices": [
+        "What untracked files would be deleted",
+        "fetch",
+        "tag",
+        "rebase"
+      ],
+      "answer": 0,
+      "explain": "Preview clean.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_medium_30.mp4",
+        "poster": "media/images/ship_medium_30-frame.png",
+        "figure": "media/images/ship_medium_30.png"
+      }
+    },
+    {
+      "id": "ship_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\nA grader's clone of your GitHub SHA will miss...",
+      "choices": [
+        "Unpushed local commits and uncommitted files",
+        "Committed RTL",
+        "Tracked README",
+        "The gitlink pins you committed"
+      ],
+      "answer": 0,
+      "explain": "Push the SHA you claim.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_hard_01.mp4",
+        "poster": "media/images/ship_hard_01-frame.png",
+        "figure": "media/images/ship_hard_01.png"
+      }
+    },
+    {
+      "id": "ship_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git log -1 --oneline\n```\n`git bundle create lab.bundle HEAD` is useful when...",
+      "choices": [
+        "You must hand in Git objects without a hosting remote",
+        "You want to delete history",
+        "You skip commits",
+        "You ignore SHA"
+      ],
+      "answer": 0,
+      "explain": "Bundles are fetchable files.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_hard_02.mp4",
+        "poster": "media/images/ship_hard_02-frame.png",
+        "figure": "media/images/ship_hard_02.png"
+      }
+    },
+    {
+      "id": "ship_hard_03",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit rev-parse HEAD\n```\nRecording `git rev-parse HEAD` in the report ties the grade to an exact snapshot.",
+      "answer": true,
+      "explain": "SHA is the receipt.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_hard_03.mp4",
+        "poster": "media/images/ship_hard_03-frame.png",
+        "figure": "media/images/ship_hard_03.png"
+      }
+    },
+    {
+      "id": "ship_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\nbash scripts/run_demo.sh 2>&1 | tee run7.log\n```\nShipping `.env.4` with API keys is...",
+      "choices": [
+        "A security incident; rotate and use .env.example",
+        "Required by Git",
+        "The same as .gitignore",
+        "A tag"
+      ],
+      "answer": 0,
+      "explain": "Secrets.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_hard_04.mp4",
+        "poster": "media/images/ship_hard_04-frame.png",
+        "figure": "media/images/ship_hard_04.png"
+      }
+    },
+    {
+      "id": "ship_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\nMake-based labs: `make clean && make` from root before zip because...",
+      "choices": [
+        "You verify a clean rebuild matches what graders will run",
+        "Make deletes .git",
+        "Tags require it",
+        "Fetch fails otherwise"
+      ],
+      "answer": 0,
+      "explain": "Clean rebuild.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_hard_05.mp4",
+        "poster": "media/images/ship_hard_05-frame.png",
+        "figure": "media/images/ship_hard_05.png"
+      }
+    },
+    {
+      "id": "ship_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git log -1 --oneline\n```\n# Review context: `/work/chip/hotel` slot 6 variant 1\nA grader's clone of your GitHub SHA will miss...",
+      "choices": [
+        "Unpushed local commits and uncommitted files",
+        "Committed RTL",
+        "Tracked README",
+        "The gitlink pins you committed"
+      ],
+      "answer": 0,
+      "explain": "Push the SHA you claim.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_hard_06.mp4",
+        "poster": "media/images/ship_hard_06-frame.png",
+        "figure": "media/images/ship_hard_06.png"
+      }
+    },
+    {
+      "id": "ship_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rev-parse HEAD\n```\n# Review context: `./labs/alpha` slot 7 variant 1\n`git bundle create lab.bundle HEAD` is useful when...",
+      "choices": [
+        "You must hand in Git objects without a hosting remote",
+        "You want to delete history",
+        "You skip commits",
+        "You ignore SHA"
+      ],
+      "answer": 0,
+      "explain": "Bundles are fetchable files.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_hard_07.mp4",
+        "poster": "media/images/ship_hard_07-frame.png",
+        "figure": "media/images/ship_hard_07.png"
+      }
+    },
+    {
+      "id": "ship_hard_08",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\nbash scripts/run_demo.sh 2>&1 | tee run11.log\n```\n# Review context: `/tmp/gitlab/bravo` slot 8 variant 1\nRecording `git rev-parse HEAD` in the report ties the grade to an exact snapshot.",
+      "answer": true,
+      "explain": "SHA is the receipt.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_hard_08.mp4",
+        "poster": "media/images/ship_hard_08-frame.png",
+        "figure": "media/images/ship_hard_08.png"
+      }
+    },
+    {
+      "id": "ship_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\nShipping `.env.9` with API keys is...",
+      "choices": [
+        "A security incident; rotate and use .env.example",
+        "Required by Git",
+        "The same as .gitignore",
+        "A tag"
+      ],
+      "answer": 0,
+      "explain": "Secrets.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_hard_09.mp4",
+        "poster": "media/images/ship_hard_09-frame.png",
+        "figure": "media/images/ship_hard_09.png"
+      }
+    },
+    {
+      "id": "ship_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git log -1 --oneline\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\nMake-based labs: `make clean && make` from root before zip because...",
+      "choices": [
+        "You verify a clean rebuild matches what graders will run",
+        "Make deletes .git",
+        "Tags require it",
+        "Fetch fails otherwise"
+      ],
+      "answer": 0,
+      "explain": "Clean rebuild.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_hard_10.mp4",
+        "poster": "media/images/ship_hard_10-frame.png",
+        "figure": "media/images/ship_hard_10.png"
+      }
+    },
+    {
+      "id": "ship_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rev-parse HEAD\n```\n# Review context: `~/src/echo` slot 11 variant 1\nA grader's clone of your GitHub SHA will miss...",
+      "choices": [
+        "Unpushed local commits and uncommitted files",
+        "Committed RTL",
+        "Tracked README",
+        "The gitlink pins you committed"
+      ],
+      "answer": 0,
+      "explain": "Push the SHA you claim.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_hard_11.mp4",
+        "poster": "media/images/ship_hard_11-frame.png",
+        "figure": "media/images/ship_hard_11.png"
+      }
+    },
+    {
+      "id": "ship_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\nbash scripts/run_demo.sh 2>&1 | tee run15.log\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\n`git bundle create lab.bundle HEAD` is useful when...",
+      "choices": [
+        "You must hand in Git objects without a hosting remote",
+        "You want to delete history",
+        "You skip commits",
+        "You ignore SHA"
+      ],
+      "answer": 0,
+      "explain": "Bundles are fetchable files.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_hard_12.mp4",
+        "poster": "media/images/ship_hard_12-frame.png",
+        "figure": "media/images/ship_hard_12.png"
+      }
+    },
+    {
+      "id": "ship_hard_13",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n# Review context: `./labs/golf` slot 13 variant 1\nRecording `git rev-parse HEAD` in the report ties the grade to an exact snapshot.",
+      "answer": true,
+      "explain": "SHA is the receipt.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_hard_13.mp4",
+        "poster": "media/images/ship_hard_13-frame.png",
+        "figure": "media/images/ship_hard_13.png"
+      }
+    },
+    {
+      "id": "ship_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git log -1 --oneline\n```\nShipping `.env.14` with API keys is...",
+      "choices": [
+        "A security incident; rotate and use .env.example",
+        "Required by Git",
+        "The same as .gitignore",
+        "A tag"
+      ],
+      "answer": 0,
+      "explain": "Secrets.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_hard_14.mp4",
+        "poster": "media/images/ship_hard_14-frame.png",
+        "figure": "media/images/ship_hard_14.png"
+      }
+    },
+    {
+      "id": "ship_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rev-parse HEAD\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\nMake-based labs: `make clean && make` from root before zip because...",
+      "choices": [
+        "You verify a clean rebuild matches what graders will run",
+        "Make deletes .git",
+        "Tags require it",
+        "Fetch fails otherwise"
+      ],
+      "answer": 0,
+      "explain": "Clean rebuild.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_hard_15.mp4",
+        "poster": "media/images/ship_hard_15-frame.png",
+        "figure": "media/images/ship_hard_15.png"
+      }
+    },
+    {
+      "id": "ship_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\nbash scripts/run_demo.sh 2>&1 | tee run19.log\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\nA grader's clone of your GitHub SHA will miss...",
+      "choices": [
+        "Unpushed local commits and uncommitted files",
+        "Committed RTL",
+        "Tracked README",
+        "The gitlink pins you committed"
+      ],
+      "answer": 0,
+      "explain": "Push the SHA you claim.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_hard_16.mp4",
+        "poster": "media/images/ship_hard_16-frame.png",
+        "figure": "media/images/ship_hard_16.png"
+      }
+    },
+    {
+      "id": "ship_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n# Review context: `~/src/charlie` slot 17 variant 1\n`git bundle create lab.bundle HEAD` is useful when...",
+      "choices": [
+        "You must hand in Git objects without a hosting remote",
+        "You want to delete history",
+        "You skip commits",
+        "You ignore SHA"
+      ],
+      "answer": 0,
+      "explain": "Bundles are fetchable files.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_hard_17.mp4",
+        "poster": "media/images/ship_hard_17-frame.png",
+        "figure": "media/images/ship_hard_17.png"
+      }
+    },
+    {
+      "id": "ship_hard_18",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git log -1 --oneline\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\nRecording `git rev-parse HEAD` in the report ties the grade to an exact snapshot.",
+      "answer": true,
+      "explain": "SHA is the receipt.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_hard_18.mp4",
+        "poster": "media/images/ship_hard_18-frame.png",
+        "figure": "media/images/ship_hard_18.png"
+      }
+    },
+    {
+      "id": "ship_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rev-parse HEAD\n```\nShipping `.env.19` with API keys is...",
+      "choices": [
+        "A security incident; rotate and use .env.example",
+        "Required by Git",
+        "The same as .gitignore",
+        "A tag"
+      ],
+      "answer": 0,
+      "explain": "Secrets.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_hard_19.mp4",
+        "poster": "media/images/ship_hard_19-frame.png",
+        "figure": "media/images/ship_hard_19.png"
+      }
+    },
+    {
+      "id": "ship_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\nbash scripts/run_demo.sh 2>&1 | tee run23.log\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\nMake-based labs: `make clean && make` from root before zip because...",
+      "choices": [
+        "You verify a clean rebuild matches what graders will run",
+        "Make deletes .git",
+        "Tags require it",
+        "Fetch fails otherwise"
+      ],
+      "answer": 0,
+      "explain": "Clean rebuild.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_hard_20.mp4",
+        "poster": "media/images/ship_hard_20-frame.png",
+        "figure": "media/images/ship_hard_20.png"
+      }
+    },
+    {
+      "id": "ship_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\nA grader's clone of your GitHub SHA will miss...",
+      "choices": [
+        "Unpushed local commits and uncommitted files",
+        "Committed RTL",
+        "Tracked README",
+        "The gitlink pins you committed"
+      ],
+      "answer": 0,
+      "explain": "Push the SHA you claim.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_hard_21.mp4",
+        "poster": "media/images/ship_hard_21-frame.png",
+        "figure": "media/images/ship_hard_21.png"
+      }
+    },
+    {
+      "id": "ship_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git log -1 --oneline\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\n`git bundle create lab.bundle HEAD` is useful when...",
+      "choices": [
+        "You must hand in Git objects without a hosting remote",
+        "You want to delete history",
+        "You skip commits",
+        "You ignore SHA"
+      ],
+      "answer": 0,
+      "explain": "Bundles are fetchable files.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_hard_22.mp4",
+        "poster": "media/images/ship_hard_22-frame.png",
+        "figure": "media/images/ship_hard_22.png"
+      }
+    },
+    {
+      "id": "ship_hard_23",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit rev-parse HEAD\n```\n# Review context: `~/src/alpha` slot 23 variant 1\nRecording `git rev-parse HEAD` in the report ties the grade to an exact snapshot.",
+      "answer": true,
+      "explain": "SHA is the receipt.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_hard_23.mp4",
+        "poster": "media/images/ship_hard_23-frame.png",
+        "figure": "media/images/ship_hard_23.png"
+      }
+    },
+    {
+      "id": "ship_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\nbash scripts/run_demo.sh 2>&1 | tee run27.log\n```\nShipping `.env.24` with API keys is...",
+      "choices": [
+        "A security incident; rotate and use .env.example",
+        "Required by Git",
+        "The same as .gitignore",
+        "A tag"
+      ],
+      "answer": 0,
+      "explain": "Secrets.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_hard_24.mp4",
+        "poster": "media/images/ship_hard_24-frame.png",
+        "figure": "media/images/ship_hard_24.png"
+      }
+    },
+    {
+      "id": "ship_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n# Review context: `./labs/charlie` slot 25 variant 1\nMake-based labs: `make clean && make` from root before zip because...",
+      "choices": [
+        "You verify a clean rebuild matches what graders will run",
+        "Make deletes .git",
+        "Tags require it",
+        "Fetch fails otherwise"
+      ],
+      "answer": 0,
+      "explain": "Clean rebuild.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_hard_25.mp4",
+        "poster": "media/images/ship_hard_25-frame.png",
+        "figure": "media/images/ship_hard_25.png"
+      }
+    },
+    {
+      "id": "ship_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git log -1 --oneline\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\nA grader's clone of your GitHub SHA will miss...",
+      "choices": [
+        "Unpushed local commits and uncommitted files",
+        "Committed RTL",
+        "Tracked README",
+        "The gitlink pins you committed"
+      ],
+      "answer": 0,
+      "explain": "Push the SHA you claim.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_hard_26.mp4",
+        "poster": "media/images/ship_hard_26-frame.png",
+        "figure": "media/images/ship_hard_26.png"
+      }
+    },
+    {
+      "id": "ship_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rev-parse HEAD\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\n`git bundle create lab.bundle HEAD` is useful when...",
+      "choices": [
+        "You must hand in Git objects without a hosting remote",
+        "You want to delete history",
+        "You skip commits",
+        "You ignore SHA"
+      ],
+      "answer": 0,
+      "explain": "Bundles are fetchable files.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_hard_27.mp4",
+        "poster": "media/images/ship_hard_27-frame.png",
+        "figure": "media/images/ship_hard_27.png"
+      }
+    },
+    {
+      "id": "ship_hard_28",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\nbash scripts/run_demo.sh 2>&1 | tee run31.log\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\nRecording `git rev-parse HEAD` in the report ties the grade to an exact snapshot.",
+      "answer": true,
+      "explain": "SHA is the receipt.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_hard_28.mp4",
+        "poster": "media/images/ship_hard_28-frame.png",
+        "figure": "media/images/ship_hard_28.png"
+      }
+    },
+    {
+      "id": "ship_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\nShipping `.env.29` with API keys is...",
+      "choices": [
+        "A security incident; rotate and use .env.example",
+        "Required by Git",
+        "The same as .gitignore",
+        "A tag"
+      ],
+      "answer": 0,
+      "explain": "Secrets.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_hard_29.mp4",
+        "poster": "media/images/ship_hard_29-frame.png",
+        "figure": "media/images/ship_hard_29.png"
+      }
+    },
+    {
+      "id": "ship_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git log -1 --oneline\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\nMake-based labs: `make clean && make` from root before zip because...",
+      "choices": [
+        "You verify a clean rebuild matches what graders will run",
+        "Make deletes .git",
+        "Tags require it",
+        "Fetch fails otherwise"
+      ],
+      "answer": 0,
+      "explain": "Clean rebuild.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/ship_hard_30.mp4",
+        "poster": "media/images/ship_hard_30-frame.png",
+        "figure": "media/images/ship_hard_30.png"
+      }
+    }
+  ]
+}
