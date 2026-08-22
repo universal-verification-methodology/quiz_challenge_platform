@@ -1,0 +1,1674 @@
+{
+  "module": "module19-template-clone",
+  "title": "Template-repo bootstrap",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\nRight after cloning a course template you should...",
+      "choices": [
+        "Inspect the layout and run git status on a clean tree",
+        "Delete .git immediately",
+        "Force-push to the org template",
+        "Skip reading README and Makefile"
+      ],
+      "answer": 0,
+      "explain": "Bootstrap means orient: know the folders and confirm a clean starting state.",
+      "difficulty": "easy",
+      "id": "tmpl_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_easy_01.mp4",
+        "poster": "media/images/tmpl_easy_01-frame.png",
+        "figure": "media/images/tmpl_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote add upstream <template-url>\n```\nA typical chip-lab template includes...",
+      "choices": [
+        "RTL source, testbench, and scripts directories",
+        "Only wave dumps and build artifacts",
+        "No README or gitignore",
+        "A second .git inside every file"
+      ],
+      "answer": 0,
+      "explain": "Templates ship src/rtl, tb, scripts, docs-not generated build output.",
+      "difficulty": "easy",
+      "id": "tmpl_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_easy_02.mp4",
+        "poster": "media/images/tmpl_easy_02-frame.png",
+        "figure": "media/images/tmpl_easy_02.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/delta4\n```\ngit remote -v after clone shows where origin points for fetch and push.",
+      "answer": true,
+      "explain": "Checking origin early prevents pushing to the wrong repository.",
+      "difficulty": "easy",
+      "id": "tmpl_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_easy_03.mp4",
+        "poster": "media/images/tmpl_easy_03-frame.png",
+        "figure": "media/images/tmpl_easy_03.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone <template-url> echo5-lab && cd echo5-lab && git status\n```\nUse this template on GitHub is for...",
+      "choices": [
+        "Creating your own writable copy from an org template",
+        "Deleting remote branches",
+        "Running git bisect",
+        "Avoiding git clone forever"
+      ],
+      "answer": 0,
+      "explain": "Templates let each student fork a writable repo with the right starting layout.",
+      "difficulty": "easy",
+      "id": "tmpl_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_easy_04.mp4",
+        "poster": "media/images/tmpl_easy_04-frame.png",
+        "figure": "media/images/tmpl_easy_04.png"
+      }
+    },
+    {
+      "id": "tmpl_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\nRight after cloning a course template you should...",
+      "choices": [
+        "Inspect the layout and run git status on a clean tree",
+        "Delete .git immediately",
+        "Force-push to the org template",
+        "Skip README and Makefile"
+      ],
+      "answer": 0,
+      "explain": "Orient and confirm clean state.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_easy_05.mp4",
+        "poster": "media/images/tmpl_easy_05-frame.png",
+        "figure": "media/images/tmpl_easy_05.png"
+      }
+    },
+    {
+      "id": "tmpl_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote add upstream <template-url>\n```\n# Review context: `/work/chip/hotel` slot 6 variant 1\nA typical chip-lab template includes...",
+      "choices": [
+        "RTL source, testbench, and scripts directories",
+        "Only wave dumps and build artifacts",
+        "No README or gitignore",
+        "A second .git inside every file"
+      ],
+      "answer": 0,
+      "explain": "src/tb/scripts, not build output.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_easy_06.mp4",
+        "poster": "media/images/tmpl_easy_06-frame.png",
+        "figure": "media/images/tmpl_easy_06.png"
+      }
+    },
+    {
+      "id": "tmpl_easy_07",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/hotel8\n```\n`git remote -v` after clone shows where origin points for fetch and push.",
+      "answer": true,
+      "explain": "Check origin early.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_easy_07.mp4",
+        "poster": "media/images/tmpl_easy_07-frame.png",
+        "figure": "media/images/tmpl_easy_07.png"
+      }
+    },
+    {
+      "id": "tmpl_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone <template-url> india9-lab && cd india9-lab && git status\n```\nUse this template on GitHub is for...",
+      "choices": [
+        "Creating your own writable copy from an org template",
+        "Deleting remote branches",
+        "Running git bisect",
+        "Avoiding clone forever"
+      ],
+      "answer": 0,
+      "explain": "Student-writable copy.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_easy_08.mp4",
+        "poster": "media/images/tmpl_easy_08-frame.png",
+        "figure": "media/images/tmpl_easy_08.png"
+      }
+    },
+    {
+      "id": "tmpl_easy_09",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\nRead README and Makefile before the first lab commit.",
+      "answer": true,
+      "explain": "Know how to run.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_easy_09.mp4",
+        "poster": "media/images/tmpl_easy_09-frame.png",
+        "figure": "media/images/tmpl_easy_09.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote add upstream <template-url>\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\nRight after cloning a course template you should...",
+      "choices": [
+        "Inspect the layout and run git status on a clean tree",
+        "Delete .git immediately",
+        "Force-push to the org template",
+        "Skip reading README and Makefile"
+      ],
+      "answer": 0,
+      "explain": "Bootstrap means orient: know the folders and confirm a clean starting state.",
+      "difficulty": "easy",
+      "id": "tmpl_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_easy_10.mp4",
+        "poster": "media/images/tmpl_easy_10-frame.png",
+        "figure": "media/images/tmpl_easy_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/bravo12\n```\n# Review context: `~/src/echo` slot 11 variant 1\nA typical chip-lab template includes...",
+      "choices": [
+        "RTL source, testbench, and scripts directories",
+        "Only wave dumps and build artifacts",
+        "No README or gitignore",
+        "A second .git inside every file"
+      ],
+      "answer": 0,
+      "explain": "Templates ship src/rtl, tb, scripts, docs-not generated build output.",
+      "difficulty": "easy",
+      "id": "tmpl_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_easy_11.mp4",
+        "poster": "media/images/tmpl_easy_11-frame.png",
+        "figure": "media/images/tmpl_easy_11.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit clone <template-url> charlie13-lab && cd charlie13-lab && git status\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\ngit remote -v after clone shows where origin points for fetch and push.",
+      "answer": true,
+      "explain": "Checking origin early prevents pushing to the wrong repository.",
+      "difficulty": "easy",
+      "id": "tmpl_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_easy_12.mp4",
+        "poster": "media/images/tmpl_easy_12-frame.png",
+        "figure": "media/images/tmpl_easy_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n# Review context: `./labs/golf` slot 13 variant 1\nUse this template on GitHub is for...",
+      "choices": [
+        "Creating your own writable copy from an org template",
+        "Deleting remote branches",
+        "Running git bisect",
+        "Avoiding git clone forever"
+      ],
+      "answer": 0,
+      "explain": "Templates let each student fork a writable repo with the right starting layout.",
+      "difficulty": "easy",
+      "id": "tmpl_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_easy_13.mp4",
+        "poster": "media/images/tmpl_easy_13-frame.png",
+        "figure": "media/images/tmpl_easy_13.png"
+      }
+    },
+    {
+      "id": "tmpl_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote add upstream <template-url>\n```\n# Review context: `/tmp/gitlab/hotel` slot 14 variant 1\nRight after cloning a course template you should...",
+      "choices": [
+        "Inspect the layout and run git status on a clean tree",
+        "Delete .git immediately",
+        "Force-push to the org template",
+        "Skip README and Makefile"
+      ],
+      "answer": 0,
+      "explain": "Orient and confirm clean state.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_easy_14.mp4",
+        "poster": "media/images/tmpl_easy_14-frame.png",
+        "figure": "media/images/tmpl_easy_14.png"
+      }
+    },
+    {
+      "id": "tmpl_easy_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/foxtrot16\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\nA typical chip-lab template includes...",
+      "choices": [
+        "RTL source, testbench, and scripts directories",
+        "Only wave dumps and build artifacts",
+        "No README or gitignore",
+        "A second .git inside every file"
+      ],
+      "answer": 0,
+      "explain": "src/tb/scripts, not build output.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_easy_15.mp4",
+        "poster": "media/images/tmpl_easy_15-frame.png",
+        "figure": "media/images/tmpl_easy_15.png"
+      }
+    },
+    {
+      "id": "tmpl_easy_16",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit clone <template-url> golf17-lab && cd golf17-lab && git status\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\n`git remote -v` after clone shows where origin points for fetch and push.",
+      "answer": true,
+      "explain": "Check origin early.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_easy_16.mp4",
+        "poster": "media/images/tmpl_easy_16-frame.png",
+        "figure": "media/images/tmpl_easy_16.png"
+      }
+    },
+    {
+      "id": "tmpl_easy_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n# Review context: `~/src/charlie` slot 17 variant 1\nUse this template on GitHub is for...",
+      "choices": [
+        "Creating your own writable copy from an org template",
+        "Deleting remote branches",
+        "Running git bisect",
+        "Avoiding clone forever"
+      ],
+      "answer": 0,
+      "explain": "Student-writable copy.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_easy_17.mp4",
+        "poster": "media/images/tmpl_easy_17-frame.png",
+        "figure": "media/images/tmpl_easy_17.png"
+      }
+    },
+    {
+      "id": "tmpl_easy_18",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit remote add upstream <template-url>\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\nRead README and Makefile before the first lab commit.",
+      "answer": true,
+      "explain": "Know how to run.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_easy_18.mp4",
+        "poster": "media/images/tmpl_easy_18-frame.png",
+        "figure": "media/images/tmpl_easy_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/juliet20\n```\n# Review context: `./labs/echo` slot 19 variant 1\nRight after cloning a course template you should...",
+      "choices": [
+        "Inspect the layout and run git status on a clean tree",
+        "Delete .git immediately",
+        "Force-push to the org template",
+        "Skip reading README and Makefile"
+      ],
+      "answer": 0,
+      "explain": "Bootstrap means orient: know the folders and confirm a clean starting state.",
+      "difficulty": "easy",
+      "id": "tmpl_easy_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_easy_19.mp4",
+        "poster": "media/images/tmpl_easy_19-frame.png",
+        "figure": "media/images/tmpl_easy_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone <template-url> alpha21-lab && cd alpha21-lab && git status\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\nA typical chip-lab template includes...",
+      "choices": [
+        "RTL source, testbench, and scripts directories",
+        "Only wave dumps and build artifacts",
+        "No README or gitignore",
+        "A second .git inside every file"
+      ],
+      "answer": 0,
+      "explain": "Templates ship src/rtl, tb, scripts, docs-not generated build output.",
+      "difficulty": "easy",
+      "id": "tmpl_easy_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_easy_20.mp4",
+        "poster": "media/images/tmpl_easy_20-frame.png",
+        "figure": "media/images/tmpl_easy_20.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\ngit remote -v after clone shows where origin points for fetch and push.",
+      "answer": true,
+      "explain": "Checking origin early prevents pushing to the wrong repository.",
+      "difficulty": "easy",
+      "id": "tmpl_easy_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_easy_21.mp4",
+        "poster": "media/images/tmpl_easy_21-frame.png",
+        "figure": "media/images/tmpl_easy_21.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote add upstream <template-url>\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\nUse this template on GitHub is for...",
+      "choices": [
+        "Creating your own writable copy from an org template",
+        "Deleting remote branches",
+        "Running git bisect",
+        "Avoiding git clone forever"
+      ],
+      "answer": 0,
+      "explain": "Templates let each student fork a writable repo with the right starting layout.",
+      "difficulty": "easy",
+      "id": "tmpl_easy_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_easy_22.mp4",
+        "poster": "media/images/tmpl_easy_22-frame.png",
+        "figure": "media/images/tmpl_easy_22.png"
+      }
+    },
+    {
+      "id": "tmpl_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/delta24\n```\n# Review context: `~/src/alpha` slot 23 variant 1\nRight after cloning a course template you should...",
+      "choices": [
+        "Inspect the layout and run git status on a clean tree",
+        "Delete .git immediately",
+        "Force-push to the org template",
+        "Skip README and Makefile"
+      ],
+      "answer": 0,
+      "explain": "Orient and confirm clean state.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_easy_23.mp4",
+        "poster": "media/images/tmpl_easy_23-frame.png",
+        "figure": "media/images/tmpl_easy_23.png"
+      }
+    },
+    {
+      "id": "tmpl_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone <template-url> echo25-lab && cd echo25-lab && git status\n```\n# Review context: `/work/chip/bravo` slot 24 variant 1\nA typical chip-lab template includes...",
+      "choices": [
+        "RTL source, testbench, and scripts directories",
+        "Only wave dumps and build artifacts",
+        "No README or gitignore",
+        "A second .git inside every file"
+      ],
+      "answer": 0,
+      "explain": "src/tb/scripts, not build output.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_easy_24.mp4",
+        "poster": "media/images/tmpl_easy_24-frame.png",
+        "figure": "media/images/tmpl_easy_24.png"
+      }
+    },
+    {
+      "id": "tmpl_easy_25",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n# Review context: `./labs/charlie` slot 25 variant 1\n`git remote -v` after clone shows where origin points for fetch and push.",
+      "answer": true,
+      "explain": "Check origin early.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_easy_25.mp4",
+        "poster": "media/images/tmpl_easy_25-frame.png",
+        "figure": "media/images/tmpl_easy_25.png"
+      }
+    },
+    {
+      "id": "tmpl_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote add upstream <template-url>\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\nUse this template on GitHub is for...",
+      "choices": [
+        "Creating your own writable copy from an org template",
+        "Deleting remote branches",
+        "Running git bisect",
+        "Avoiding clone forever"
+      ],
+      "answer": 0,
+      "explain": "Student-writable copy.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_easy_26.mp4",
+        "poster": "media/images/tmpl_easy_26-frame.png",
+        "figure": "media/images/tmpl_easy_26.png"
+      }
+    },
+    {
+      "id": "tmpl_easy_27",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/hotel28\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\nRead README and Makefile before the first lab commit.",
+      "answer": true,
+      "explain": "Know how to run.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_easy_27.mp4",
+        "poster": "media/images/tmpl_easy_27-frame.png",
+        "figure": "media/images/tmpl_easy_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone <template-url> india29-lab && cd india29-lab && git status\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\nRight after cloning a course template you should...",
+      "choices": [
+        "Inspect the layout and run git status on a clean tree",
+        "Delete .git immediately",
+        "Force-push to the org template",
+        "Skip reading README and Makefile"
+      ],
+      "answer": 0,
+      "explain": "Bootstrap means orient: know the folders and confirm a clean starting state.",
+      "difficulty": "easy",
+      "id": "tmpl_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_easy_28.mp4",
+        "poster": "media/images/tmpl_easy_28-frame.png",
+        "figure": "media/images/tmpl_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n# Review context: `~/src/golf` slot 29 variant 1\nA typical chip-lab template includes...",
+      "choices": [
+        "RTL source, testbench, and scripts directories",
+        "Only wave dumps and build artifacts",
+        "No README or gitignore",
+        "A second .git inside every file"
+      ],
+      "answer": 0,
+      "explain": "Templates ship src/rtl, tb, scripts, docs-not generated build output.",
+      "difficulty": "easy",
+      "id": "tmpl_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_easy_29.mp4",
+        "poster": "media/images/tmpl_easy_29-frame.png",
+        "figure": "media/images/tmpl_easy_29.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit remote add upstream <template-url>\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\ngit remote -v after clone shows where origin points for fetch and push.",
+      "answer": true,
+      "explain": "Checking origin early prevents pushing to the wrong repository.",
+      "difficulty": "easy",
+      "id": "tmpl_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_easy_30.mp4",
+        "poster": "media/images/tmpl_easy_30-frame.png",
+        "figure": "media/images/tmpl_easy_30.png"
+      }
+    },
+    {
+      "id": "tmpl_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n`git remote add upstream <template-url>` lets you...",
+      "choices": [
+        "Fetch teacher updates without pushing to the template",
+        "Force-push the org repo",
+        "Delete your origin",
+        "Skip fetch"
+      ],
+      "answer": 0,
+      "explain": "upstream is read-mostly.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_medium_01.mp4",
+        "poster": "media/images/tmpl_medium_01-frame.png",
+        "figure": "media/images/tmpl_medium_01.png"
+      }
+    },
+    {
+      "id": "tmpl_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote add upstream <template-url>\n```\nFirst student commit on a template should...",
+      "choices": [
+        "Be on a lab branch, not rewriting shared history",
+        "Reset --hard origin/main on the org",
+        "Delete .gitignore",
+        "Commit build/"
+      ],
+      "answer": 0,
+      "explain": "Branch then work.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_medium_02.mp4",
+        "poster": "media/images/tmpl_medium_02-frame.png",
+        "figure": "media/images/tmpl_medium_02.png"
+      }
+    },
+    {
+      "id": "tmpl_medium_03",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/delta4\n```\n`git pull upstream main` (after fetch) can merge teacher template updates into your copy.",
+      "answer": true,
+      "explain": "Stay current.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_medium_03.mp4",
+        "poster": "media/images/tmpl_medium_03-frame.png",
+        "figure": "media/images/tmpl_medium_03.png"
+      }
+    },
+    {
+      "id": "tmpl_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone <template-url> echo5-lab && cd echo5-lab && git status\n```\nIf origin still points at a repo you cannot push to...",
+      "choices": [
+        "Change the URL or add a fork remote and push -u there",
+        "Force-push anyway",
+        "Delete .git",
+        "Ignore remotes"
+      ],
+      "answer": 0,
+      "explain": "Fix remotes first.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_medium_04.mp4",
+        "poster": "media/images/tmpl_medium_04-frame.png",
+        "figure": "media/images/tmpl_medium_04.png"
+      }
+    },
+    {
+      "id": "tmpl_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\nTemplate `scripts/` paths usually assume cwd is...",
+      "choices": [
+        "The repository root",
+        "A random nested folder",
+        "/tmp",
+        "HOME"
+      ],
+      "answer": 0,
+      "explain": "Relative paths.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_medium_05.mp4",
+        "poster": "media/images/tmpl_medium_05-frame.png",
+        "figure": "media/images/tmpl_medium_05.png"
+      }
+    },
+    {
+      "id": "tmpl_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote add upstream <template-url>\n```\n# Review context: `/work/chip/hotel` slot 6 variant 1\n`git remote add upstream <template-url>` lets you...",
+      "choices": [
+        "Fetch teacher updates without pushing to the template",
+        "Force-push the org repo",
+        "Delete your origin",
+        "Skip fetch"
+      ],
+      "answer": 0,
+      "explain": "upstream is read-mostly.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_medium_06.mp4",
+        "poster": "media/images/tmpl_medium_06-frame.png",
+        "figure": "media/images/tmpl_medium_06.png"
+      }
+    },
+    {
+      "id": "tmpl_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/hotel8\n```\n# Review context: `./labs/alpha` slot 7 variant 1\nFirst student commit on a template should...",
+      "choices": [
+        "Be on a lab branch, not rewriting shared history",
+        "Reset --hard origin/main on the org",
+        "Delete .gitignore",
+        "Commit build/"
+      ],
+      "answer": 0,
+      "explain": "Branch then work.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_medium_07.mp4",
+        "poster": "media/images/tmpl_medium_07-frame.png",
+        "figure": "media/images/tmpl_medium_07.png"
+      }
+    },
+    {
+      "id": "tmpl_medium_08",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit clone <template-url> india9-lab && cd india9-lab && git status\n```\n# Review context: `/tmp/gitlab/bravo` slot 8 variant 1\n`git pull upstream main` (after fetch) can merge teacher template updates into your copy.",
+      "answer": true,
+      "explain": "Stay current.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_medium_08.mp4",
+        "poster": "media/images/tmpl_medium_08-frame.png",
+        "figure": "media/images/tmpl_medium_08.png"
+      }
+    },
+    {
+      "id": "tmpl_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n# Review context: `C:/proj/charlie` slot 9 variant 1\nIf origin still points at a repo you cannot push to...",
+      "choices": [
+        "Change the URL or add a fork remote and push -u there",
+        "Force-push anyway",
+        "Delete .git",
+        "Ignore remotes"
+      ],
+      "answer": 0,
+      "explain": "Fix remotes first.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_medium_09.mp4",
+        "poster": "media/images/tmpl_medium_09-frame.png",
+        "figure": "media/images/tmpl_medium_09.png"
+      }
+    },
+    {
+      "id": "tmpl_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote add upstream <template-url>\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\nTemplate `scripts/` paths usually assume cwd is...",
+      "choices": [
+        "The repository root",
+        "A random nested folder",
+        "/tmp",
+        "HOME"
+      ],
+      "answer": 0,
+      "explain": "Relative paths.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_medium_10.mp4",
+        "poster": "media/images/tmpl_medium_10-frame.png",
+        "figure": "media/images/tmpl_medium_10.png"
+      }
+    },
+    {
+      "id": "tmpl_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/bravo12\n```\n# Review context: `~/src/echo` slot 11 variant 1\n`git remote add upstream <template-url>` lets you...",
+      "choices": [
+        "Fetch teacher updates without pushing to the template",
+        "Force-push the org repo",
+        "Delete your origin",
+        "Skip fetch"
+      ],
+      "answer": 0,
+      "explain": "upstream is read-mostly.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_medium_11.mp4",
+        "poster": "media/images/tmpl_medium_11-frame.png",
+        "figure": "media/images/tmpl_medium_11.png"
+      }
+    },
+    {
+      "id": "tmpl_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone <template-url> charlie13-lab && cd charlie13-lab && git status\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\nFirst student commit on a template should...",
+      "choices": [
+        "Be on a lab branch, not rewriting shared history",
+        "Reset --hard origin/main on the org",
+        "Delete .gitignore",
+        "Commit build/"
+      ],
+      "answer": 0,
+      "explain": "Branch then work.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_medium_12.mp4",
+        "poster": "media/images/tmpl_medium_12-frame.png",
+        "figure": "media/images/tmpl_medium_12.png"
+      }
+    },
+    {
+      "id": "tmpl_medium_13",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n# Review context: `./labs/golf` slot 13 variant 1\n`git pull upstream main` (after fetch) can merge teacher template updates into your copy.",
+      "answer": true,
+      "explain": "Stay current.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_medium_13.mp4",
+        "poster": "media/images/tmpl_medium_13-frame.png",
+        "figure": "media/images/tmpl_medium_13.png"
+      }
+    },
+    {
+      "id": "tmpl_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote add upstream <template-url>\n```\n# Review context: `/tmp/gitlab/hotel` slot 14 variant 1\nIf origin still points at a repo you cannot push to...",
+      "choices": [
+        "Change the URL or add a fork remote and push -u there",
+        "Force-push anyway",
+        "Delete .git",
+        "Ignore remotes"
+      ],
+      "answer": 0,
+      "explain": "Fix remotes first.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_medium_14.mp4",
+        "poster": "media/images/tmpl_medium_14-frame.png",
+        "figure": "media/images/tmpl_medium_14.png"
+      }
+    },
+    {
+      "id": "tmpl_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/foxtrot16\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\nTemplate `scripts/` paths usually assume cwd is...",
+      "choices": [
+        "The repository root",
+        "A random nested folder",
+        "/tmp",
+        "HOME"
+      ],
+      "answer": 0,
+      "explain": "Relative paths.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_medium_15.mp4",
+        "poster": "media/images/tmpl_medium_15-frame.png",
+        "figure": "media/images/tmpl_medium_15.png"
+      }
+    },
+    {
+      "id": "tmpl_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone <template-url> golf17-lab && cd golf17-lab && git status\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\n`git remote add upstream <template-url>` lets you...",
+      "choices": [
+        "Fetch teacher updates without pushing to the template",
+        "Force-push the org repo",
+        "Delete your origin",
+        "Skip fetch"
+      ],
+      "answer": 0,
+      "explain": "upstream is read-mostly.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_medium_16.mp4",
+        "poster": "media/images/tmpl_medium_16-frame.png",
+        "figure": "media/images/tmpl_medium_16.png"
+      }
+    },
+    {
+      "id": "tmpl_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n# Review context: `~/src/charlie` slot 17 variant 1\nFirst student commit on a template should...",
+      "choices": [
+        "Be on a lab branch, not rewriting shared history",
+        "Reset --hard origin/main on the org",
+        "Delete .gitignore",
+        "Commit build/"
+      ],
+      "answer": 0,
+      "explain": "Branch then work.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_medium_17.mp4",
+        "poster": "media/images/tmpl_medium_17-frame.png",
+        "figure": "media/images/tmpl_medium_17.png"
+      }
+    },
+    {
+      "id": "tmpl_medium_18",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit remote add upstream <template-url>\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\n`git pull upstream main` (after fetch) can merge teacher template updates into your copy.",
+      "answer": true,
+      "explain": "Stay current.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_medium_18.mp4",
+        "poster": "media/images/tmpl_medium_18-frame.png",
+        "figure": "media/images/tmpl_medium_18.png"
+      }
+    },
+    {
+      "id": "tmpl_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/juliet20\n```\n# Review context: `./labs/echo` slot 19 variant 1\nIf origin still points at a repo you cannot push to...",
+      "choices": [
+        "Change the URL or add a fork remote and push -u there",
+        "Force-push anyway",
+        "Delete .git",
+        "Ignore remotes"
+      ],
+      "answer": 0,
+      "explain": "Fix remotes first.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_medium_19.mp4",
+        "poster": "media/images/tmpl_medium_19-frame.png",
+        "figure": "media/images/tmpl_medium_19.png"
+      }
+    },
+    {
+      "id": "tmpl_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone <template-url> alpha21-lab && cd alpha21-lab && git status\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\nTemplate `scripts/` paths usually assume cwd is...",
+      "choices": [
+        "The repository root",
+        "A random nested folder",
+        "/tmp",
+        "HOME"
+      ],
+      "answer": 0,
+      "explain": "Relative paths.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_medium_20.mp4",
+        "poster": "media/images/tmpl_medium_20-frame.png",
+        "figure": "media/images/tmpl_medium_20.png"
+      }
+    },
+    {
+      "id": "tmpl_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\n`git remote add upstream <template-url>` lets you...",
+      "choices": [
+        "Fetch teacher updates without pushing to the template",
+        "Force-push the org repo",
+        "Delete your origin",
+        "Skip fetch"
+      ],
+      "answer": 0,
+      "explain": "upstream is read-mostly.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_medium_21.mp4",
+        "poster": "media/images/tmpl_medium_21-frame.png",
+        "figure": "media/images/tmpl_medium_21.png"
+      }
+    },
+    {
+      "id": "tmpl_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote add upstream <template-url>\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\nFirst student commit on a template should...",
+      "choices": [
+        "Be on a lab branch, not rewriting shared history",
+        "Reset --hard origin/main on the org",
+        "Delete .gitignore",
+        "Commit build/"
+      ],
+      "answer": 0,
+      "explain": "Branch then work.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_medium_22.mp4",
+        "poster": "media/images/tmpl_medium_22-frame.png",
+        "figure": "media/images/tmpl_medium_22.png"
+      }
+    },
+    {
+      "id": "tmpl_medium_23",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/delta24\n```\n# Review context: `~/src/alpha` slot 23 variant 1\n`git pull upstream main` (after fetch) can merge teacher template updates into your copy.",
+      "answer": true,
+      "explain": "Stay current.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_medium_23.mp4",
+        "poster": "media/images/tmpl_medium_23-frame.png",
+        "figure": "media/images/tmpl_medium_23.png"
+      }
+    },
+    {
+      "id": "tmpl_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone <template-url> echo25-lab && cd echo25-lab && git status\n```\n# Review context: `/work/chip/bravo` slot 24 variant 1\nIf origin still points at a repo you cannot push to...",
+      "choices": [
+        "Change the URL or add a fork remote and push -u there",
+        "Force-push anyway",
+        "Delete .git",
+        "Ignore remotes"
+      ],
+      "answer": 0,
+      "explain": "Fix remotes first.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_medium_24.mp4",
+        "poster": "media/images/tmpl_medium_24-frame.png",
+        "figure": "media/images/tmpl_medium_24.png"
+      }
+    },
+    {
+      "id": "tmpl_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n# Review context: `./labs/charlie` slot 25 variant 1\nTemplate `scripts/` paths usually assume cwd is...",
+      "choices": [
+        "The repository root",
+        "A random nested folder",
+        "/tmp",
+        "HOME"
+      ],
+      "answer": 0,
+      "explain": "Relative paths.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_medium_25.mp4",
+        "poster": "media/images/tmpl_medium_25-frame.png",
+        "figure": "media/images/tmpl_medium_25.png"
+      }
+    },
+    {
+      "id": "tmpl_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote add upstream <template-url>\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\n`git remote add upstream <template-url>` lets you...",
+      "choices": [
+        "Fetch teacher updates without pushing to the template",
+        "Force-push the org repo",
+        "Delete your origin",
+        "Skip fetch"
+      ],
+      "answer": 0,
+      "explain": "upstream is read-mostly.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_medium_26.mp4",
+        "poster": "media/images/tmpl_medium_26-frame.png",
+        "figure": "media/images/tmpl_medium_26.png"
+      }
+    },
+    {
+      "id": "tmpl_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/hotel28\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\nFirst student commit on a template should...",
+      "choices": [
+        "Be on a lab branch, not rewriting shared history",
+        "Reset --hard origin/main on the org",
+        "Delete .gitignore",
+        "Commit build/"
+      ],
+      "answer": 0,
+      "explain": "Branch then work.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_medium_27.mp4",
+        "poster": "media/images/tmpl_medium_27-frame.png",
+        "figure": "media/images/tmpl_medium_27.png"
+      }
+    },
+    {
+      "id": "tmpl_medium_28",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit clone <template-url> india29-lab && cd india29-lab && git status\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\n`git pull upstream main` (after fetch) can merge teacher template updates into your copy.",
+      "answer": true,
+      "explain": "Stay current.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_medium_28.mp4",
+        "poster": "media/images/tmpl_medium_28-frame.png",
+        "figure": "media/images/tmpl_medium_28.png"
+      }
+    },
+    {
+      "id": "tmpl_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n# Review context: `~/src/golf` slot 29 variant 1\nIf origin still points at a repo you cannot push to...",
+      "choices": [
+        "Change the URL or add a fork remote and push -u there",
+        "Force-push anyway",
+        "Delete .git",
+        "Ignore remotes"
+      ],
+      "answer": 0,
+      "explain": "Fix remotes first.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_medium_29.mp4",
+        "poster": "media/images/tmpl_medium_29-frame.png",
+        "figure": "media/images/tmpl_medium_29.png"
+      }
+    },
+    {
+      "id": "tmpl_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote add upstream <template-url>\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\nTemplate `scripts/` paths usually assume cwd is...",
+      "choices": [
+        "The repository root",
+        "A random nested folder",
+        "/tmp",
+        "HOME"
+      ],
+      "answer": 0,
+      "explain": "Relative paths.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_medium_30.mp4",
+        "poster": "media/images/tmpl_medium_30-frame.png",
+        "figure": "media/images/tmpl_medium_30.png"
+      }
+    },
+    {
+      "id": "tmpl_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/delta4\n```\n`git clone --template=` is about...",
+      "choices": [
+        "Using a git template directory for hooks, not the GitHub template button",
+        "GitHub Use this template",
+        "Submodules",
+        "Bisect"
+      ],
+      "answer": 0,
+      "explain": "Different meaning of template.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_hard_01.mp4",
+        "poster": "media/images/tmpl_hard_01-frame.png",
+        "figure": "media/images/tmpl_hard_01.png"
+      }
+    },
+    {
+      "id": "tmpl_hard_02",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit clone <template-url> echo5-lab && cd echo5-lab && git status\n```\n`sparse-checkout` can clone a template subset; labs still expect the documented layout.",
+      "answer": true,
+      "explain": "Sparse is optional and easy to get wrong.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_hard_02.mp4",
+        "poster": "media/images/tmpl_hard_02-frame.png",
+        "figure": "media/images/tmpl_hard_02.png"
+      }
+    },
+    {
+      "id": "tmpl_hard_03",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\nIf Makefile uses `rtl3/` relative paths, running it from a subdir...",
+      "choices": [
+        "Often fails; cd to repo root",
+        "Always works",
+        "Pushes origin",
+        "Starts mergetool"
+      ],
+      "answer": 0,
+      "explain": "cwd matters.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_hard_03.mp4",
+        "poster": "media/images/tmpl_hard_03-frame.png",
+        "figure": "media/images/tmpl_hard_03.png"
+      }
+    },
+    {
+      "id": "tmpl_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote add upstream <template-url>\n```\nCopying a template as a zip without `.git` means...",
+      "choices": [
+        "You lost history; git init starts a new unrelated repo",
+        "Remotes still work",
+        "Tags remain",
+        "Fetch works"
+      ],
+      "answer": 0,
+      "explain": "Need a real clone or init.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_hard_04.mp4",
+        "poster": "media/images/tmpl_hard_04-frame.png",
+        "figure": "media/images/tmpl_hard_04.png"
+      }
+    },
+    {
+      "id": "tmpl_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/hotel8\n```\nAfter template clone, `origin` should be...",
+      "choices": [
+        "Your writable repo, not the class read-only template if you cannot push there",
+        "Always the org template",
+        "A tag",
+        "Empty"
+      ],
+      "answer": 0,
+      "explain": "Push to your copy.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_hard_05.mp4",
+        "poster": "media/images/tmpl_hard_05-frame.png",
+        "figure": "media/images/tmpl_hard_05.png"
+      }
+    },
+    {
+      "id": "tmpl_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone <template-url> india9-lab && cd india9-lab && git status\n```\n# Review context: `/work/chip/hotel` slot 6 variant 1\n`git clone --template=` is about...",
+      "choices": [
+        "Using a git template directory for hooks, not the GitHub template button",
+        "GitHub Use this template",
+        "Submodules",
+        "Bisect"
+      ],
+      "answer": 0,
+      "explain": "Different meaning of template.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_hard_06.mp4",
+        "poster": "media/images/tmpl_hard_06-frame.png",
+        "figure": "media/images/tmpl_hard_06.png"
+      }
+    },
+    {
+      "id": "tmpl_hard_07",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n# Review context: `./labs/alpha` slot 7 variant 1\n`sparse-checkout` can clone a template subset; labs still expect the documented layout.",
+      "answer": true,
+      "explain": "Sparse is optional and easy to get wrong.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_hard_07.mp4",
+        "poster": "media/images/tmpl_hard_07-frame.png",
+        "figure": "media/images/tmpl_hard_07.png"
+      }
+    },
+    {
+      "id": "tmpl_hard_08",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote add upstream <template-url>\n```\nIf Makefile uses `rtl8/` relative paths, running it from a subdir...",
+      "choices": [
+        "Often fails; cd to repo root",
+        "Always works",
+        "Pushes origin",
+        "Starts mergetool"
+      ],
+      "answer": 0,
+      "explain": "cwd matters.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_hard_08.mp4",
+        "poster": "media/images/tmpl_hard_08-frame.png",
+        "figure": "media/images/tmpl_hard_08.png"
+      }
+    },
+    {
+      "id": "tmpl_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/bravo12\n```\n# Review context: `C:/proj/charlie` slot 9 variant 1\nCopying a template as a zip without `.git` means...",
+      "choices": [
+        "You lost history; git init starts a new unrelated repo",
+        "Remotes still work",
+        "Tags remain",
+        "Fetch works"
+      ],
+      "answer": 0,
+      "explain": "Need a real clone or init.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_hard_09.mp4",
+        "poster": "media/images/tmpl_hard_09-frame.png",
+        "figure": "media/images/tmpl_hard_09.png"
+      }
+    },
+    {
+      "id": "tmpl_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone <template-url> charlie13-lab && cd charlie13-lab && git status\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\nAfter template clone, `origin` should be...",
+      "choices": [
+        "Your writable repo, not the class read-only template if you cannot push there",
+        "Always the org template",
+        "A tag",
+        "Empty"
+      ],
+      "answer": 0,
+      "explain": "Push to your copy.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_hard_10.mp4",
+        "poster": "media/images/tmpl_hard_10-frame.png",
+        "figure": "media/images/tmpl_hard_10.png"
+      }
+    },
+    {
+      "id": "tmpl_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n# Review context: `~/src/echo` slot 11 variant 1\n`git clone --template=` is about...",
+      "choices": [
+        "Using a git template directory for hooks, not the GitHub template button",
+        "GitHub Use this template",
+        "Submodules",
+        "Bisect"
+      ],
+      "answer": 0,
+      "explain": "Different meaning of template.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_hard_11.mp4",
+        "poster": "media/images/tmpl_hard_11-frame.png",
+        "figure": "media/images/tmpl_hard_11.png"
+      }
+    },
+    {
+      "id": "tmpl_hard_12",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit remote add upstream <template-url>\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\n`sparse-checkout` can clone a template subset; labs still expect the documented layout.",
+      "answer": true,
+      "explain": "Sparse is optional and easy to get wrong.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_hard_12.mp4",
+        "poster": "media/images/tmpl_hard_12-frame.png",
+        "figure": "media/images/tmpl_hard_12.png"
+      }
+    },
+    {
+      "id": "tmpl_hard_13",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/foxtrot16\n```\nIf Makefile uses `rtl13/` relative paths, running it from a subdir...",
+      "choices": [
+        "Often fails; cd to repo root",
+        "Always works",
+        "Pushes origin",
+        "Starts mergetool"
+      ],
+      "answer": 0,
+      "explain": "cwd matters.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_hard_13.mp4",
+        "poster": "media/images/tmpl_hard_13-frame.png",
+        "figure": "media/images/tmpl_hard_13.png"
+      }
+    },
+    {
+      "id": "tmpl_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone <template-url> golf17-lab && cd golf17-lab && git status\n```\n# Review context: `/tmp/gitlab/hotel` slot 14 variant 1\nCopying a template as a zip without `.git` means...",
+      "choices": [
+        "You lost history; git init starts a new unrelated repo",
+        "Remotes still work",
+        "Tags remain",
+        "Fetch works"
+      ],
+      "answer": 0,
+      "explain": "Need a real clone or init.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_hard_14.mp4",
+        "poster": "media/images/tmpl_hard_14-frame.png",
+        "figure": "media/images/tmpl_hard_14.png"
+      }
+    },
+    {
+      "id": "tmpl_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\nAfter template clone, `origin` should be...",
+      "choices": [
+        "Your writable repo, not the class read-only template if you cannot push there",
+        "Always the org template",
+        "A tag",
+        "Empty"
+      ],
+      "answer": 0,
+      "explain": "Push to your copy.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_hard_15.mp4",
+        "poster": "media/images/tmpl_hard_15-frame.png",
+        "figure": "media/images/tmpl_hard_15.png"
+      }
+    },
+    {
+      "id": "tmpl_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote add upstream <template-url>\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\n`git clone --template=` is about...",
+      "choices": [
+        "Using a git template directory for hooks, not the GitHub template button",
+        "GitHub Use this template",
+        "Submodules",
+        "Bisect"
+      ],
+      "answer": 0,
+      "explain": "Different meaning of template.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_hard_16.mp4",
+        "poster": "media/images/tmpl_hard_16-frame.png",
+        "figure": "media/images/tmpl_hard_16.png"
+      }
+    },
+    {
+      "id": "tmpl_hard_17",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/juliet20\n```\n# Review context: `~/src/charlie` slot 17 variant 1\n`sparse-checkout` can clone a template subset; labs still expect the documented layout.",
+      "answer": true,
+      "explain": "Sparse is optional and easy to get wrong.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_hard_17.mp4",
+        "poster": "media/images/tmpl_hard_17-frame.png",
+        "figure": "media/images/tmpl_hard_17.png"
+      }
+    },
+    {
+      "id": "tmpl_hard_18",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone <template-url> alpha21-lab && cd alpha21-lab && git status\n```\nIf Makefile uses `rtl18/` relative paths, running it from a subdir...",
+      "choices": [
+        "Often fails; cd to repo root",
+        "Always works",
+        "Pushes origin",
+        "Starts mergetool"
+      ],
+      "answer": 0,
+      "explain": "cwd matters.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_hard_18.mp4",
+        "poster": "media/images/tmpl_hard_18-frame.png",
+        "figure": "media/images/tmpl_hard_18.png"
+      }
+    },
+    {
+      "id": "tmpl_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n# Review context: `./labs/echo` slot 19 variant 1\nCopying a template as a zip without `.git` means...",
+      "choices": [
+        "You lost history; git init starts a new unrelated repo",
+        "Remotes still work",
+        "Tags remain",
+        "Fetch works"
+      ],
+      "answer": 0,
+      "explain": "Need a real clone or init.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_hard_19.mp4",
+        "poster": "media/images/tmpl_hard_19-frame.png",
+        "figure": "media/images/tmpl_hard_19.png"
+      }
+    },
+    {
+      "id": "tmpl_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote add upstream <template-url>\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\nAfter template clone, `origin` should be...",
+      "choices": [
+        "Your writable repo, not the class read-only template if you cannot push there",
+        "Always the org template",
+        "A tag",
+        "Empty"
+      ],
+      "answer": 0,
+      "explain": "Push to your copy.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_hard_20.mp4",
+        "poster": "media/images/tmpl_hard_20-frame.png",
+        "figure": "media/images/tmpl_hard_20.png"
+      }
+    },
+    {
+      "id": "tmpl_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/delta24\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\n`git clone --template=` is about...",
+      "choices": [
+        "Using a git template directory for hooks, not the GitHub template button",
+        "GitHub Use this template",
+        "Submodules",
+        "Bisect"
+      ],
+      "answer": 0,
+      "explain": "Different meaning of template.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_hard_21.mp4",
+        "poster": "media/images/tmpl_hard_21-frame.png",
+        "figure": "media/images/tmpl_hard_21.png"
+      }
+    },
+    {
+      "id": "tmpl_hard_22",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit clone <template-url> echo25-lab && cd echo25-lab && git status\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\n`sparse-checkout` can clone a template subset; labs still expect the documented layout.",
+      "answer": true,
+      "explain": "Sparse is optional and easy to get wrong.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_hard_22.mp4",
+        "poster": "media/images/tmpl_hard_22-frame.png",
+        "figure": "media/images/tmpl_hard_22.png"
+      }
+    },
+    {
+      "id": "tmpl_hard_23",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\nIf Makefile uses `rtl23/` relative paths, running it from a subdir...",
+      "choices": [
+        "Often fails; cd to repo root",
+        "Always works",
+        "Pushes origin",
+        "Starts mergetool"
+      ],
+      "answer": 0,
+      "explain": "cwd matters.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_hard_23.mp4",
+        "poster": "media/images/tmpl_hard_23-frame.png",
+        "figure": "media/images/tmpl_hard_23.png"
+      }
+    },
+    {
+      "id": "tmpl_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote add upstream <template-url>\n```\n# Review context: `/work/chip/bravo` slot 24 variant 1\nCopying a template as a zip without `.git` means...",
+      "choices": [
+        "You lost history; git init starts a new unrelated repo",
+        "Remotes still work",
+        "Tags remain",
+        "Fetch works"
+      ],
+      "answer": 0,
+      "explain": "Need a real clone or init.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_hard_24.mp4",
+        "poster": "media/images/tmpl_hard_24-frame.png",
+        "figure": "media/images/tmpl_hard_24.png"
+      }
+    },
+    {
+      "id": "tmpl_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/hotel28\n```\n# Review context: `./labs/charlie` slot 25 variant 1\nAfter template clone, `origin` should be...",
+      "choices": [
+        "Your writable repo, not the class read-only template if you cannot push there",
+        "Always the org template",
+        "A tag",
+        "Empty"
+      ],
+      "answer": 0,
+      "explain": "Push to your copy.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_hard_25.mp4",
+        "poster": "media/images/tmpl_hard_25-frame.png",
+        "figure": "media/images/tmpl_hard_25.png"
+      }
+    },
+    {
+      "id": "tmpl_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone <template-url> india29-lab && cd india29-lab && git status\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\n`git clone --template=` is about...",
+      "choices": [
+        "Using a git template directory for hooks, not the GitHub template button",
+        "GitHub Use this template",
+        "Submodules",
+        "Bisect"
+      ],
+      "answer": 0,
+      "explain": "Different meaning of template.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_hard_26.mp4",
+        "poster": "media/images/tmpl_hard_26-frame.png",
+        "figure": "media/images/tmpl_hard_26.png"
+      }
+    },
+    {
+      "id": "tmpl_hard_27",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\n`sparse-checkout` can clone a template subset; labs still expect the documented layout.",
+      "answer": true,
+      "explain": "Sparse is optional and easy to get wrong.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_hard_27.mp4",
+        "poster": "media/images/tmpl_hard_27-frame.png",
+        "figure": "media/images/tmpl_hard_27.png"
+      }
+    },
+    {
+      "id": "tmpl_hard_28",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote add upstream <template-url>\n```\nIf Makefile uses `rtl28/` relative paths, running it from a subdir...",
+      "choices": [
+        "Often fails; cd to repo root",
+        "Always works",
+        "Pushes origin",
+        "Starts mergetool"
+      ],
+      "answer": 0,
+      "explain": "cwd matters.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_hard_28.mp4",
+        "poster": "media/images/tmpl_hard_28-frame.png",
+        "figure": "media/images/tmpl_hard_28.png"
+      }
+    },
+    {
+      "id": "tmpl_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/bravo32\n```\n# Review context: `~/src/golf` slot 29 variant 1\nCopying a template as a zip without `.git` means...",
+      "choices": [
+        "You lost history; git init starts a new unrelated repo",
+        "Remotes still work",
+        "Tags remain",
+        "Fetch works"
+      ],
+      "answer": 0,
+      "explain": "Need a real clone or init.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_hard_29.mp4",
+        "poster": "media/images/tmpl_hard_29-frame.png",
+        "figure": "media/images/tmpl_hard_29.png"
+      }
+    },
+    {
+      "id": "tmpl_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone <template-url> charlie33-lab && cd charlie33-lab && git status\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\nAfter template clone, `origin` should be...",
+      "choices": [
+        "Your writable repo, not the class read-only template if you cannot push there",
+        "Always the org template",
+        "A tag",
+        "Empty"
+      ],
+      "answer": 0,
+      "explain": "Push to your copy.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tmpl_hard_30.mp4",
+        "poster": "media/images/tmpl_hard_30-frame.png",
+        "figure": "media/images/tmpl_hard_30.png"
+      }
+    }
+  ]
+}
