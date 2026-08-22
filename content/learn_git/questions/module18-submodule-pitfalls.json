@@ -1,0 +1,1692 @@
+{
+  "module": "module18-submodule-pitfalls",
+  "title": "Submodule pitfalls",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule status\n```\nAfter cloning a repo with submodules, empty submodule folders usually mean...",
+      "choices": [
+        "You still need git submodule update --init --recursive",
+        "The submodule was deleted from GitHub",
+        "You must run git bisect",
+        "Submodules never use separate repos"
+      ],
+      "answer": 0,
+      "explain": "A plain clone records gitlinks but does not populate submodule working trees until init.",
+      "difficulty": "easy",
+      "id": "sub_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_easy_01.mp4",
+        "poster": "media/images/sub_easy_01-frame.png",
+        "figure": "media/images/sub_easy_01.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit clone --recurse-submodules . /tmp/charlie3-clone 2>/dev/null || true\n```\nDetached HEAD inside a submodule at a pinned SHA is normal.",
+      "answer": true,
+      "explain": "The parent pins a specific commit; checkout is detached until you switch a branch intentionally.",
+      "difficulty": "easy",
+      "id": "sub_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_easy_02.mp4",
+        "poster": "media/images/sub_easy_02-frame.png",
+        "figure": "media/images/sub_easy_02.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule foreach git status -sb\n```\nTo bump a submodule version for teammates, you must...",
+      "choices": [
+        "Commit the updated gitlink in the parent repo",
+        "Only edit files locally without any commit",
+        "Delete .gitmodules",
+        "Force-push main on the parent only"
+      ],
+      "answer": 0,
+      "explain": "The parent repo stores the pin; others see the new SHA only after that commit.",
+      "difficulty": "easy",
+      "id": "sub_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_easy_03.mp4",
+        "poster": "media/images/sub_easy_03-frame.png",
+        "figure": "media/images/sub_easy_03.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule update --init --recursive\n```\nTo clone and fetch submodules in one step, use...",
+      "choices": [
+        "git clone --recurse-submodules",
+        "git clone --bare only",
+        "git remote prune",
+        "git stash pop"
+      ],
+      "answer": 0,
+      "explain": "--recurse-submodules runs init/update during clone-handy for CI and fresh checkouts.",
+      "difficulty": "easy",
+      "id": "sub_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_easy_04.mp4",
+        "poster": "media/images/sub_easy_04-frame.png",
+        "figure": "media/images/sub_easy_04.png"
+      }
+    },
+    {
+      "id": "sub_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule status\n```\nAfter cloning a repo with submodules, empty folders usually mean...",
+      "choices": [
+        "You still need git submodule update --init --recursive",
+        "The submodule was deleted",
+        "You must bisect",
+        "Submodules never use separate repos"
+      ],
+      "answer": 0,
+      "explain": "Clone records gitlinks but does not populate.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_easy_05.mp4",
+        "poster": "media/images/sub_easy_05-frame.png",
+        "figure": "media/images/sub_easy_05.png"
+      }
+    },
+    {
+      "id": "sub_easy_06",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit clone --recurse-submodules . /tmp/golf7-clone 2>/dev/null || true\n```\n# Review context: `/work/chip/hotel` slot 6 variant 1\nDetached HEAD inside a submodule at a pinned SHA is normal.",
+      "answer": true,
+      "explain": "Parent pins a commit.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_easy_06.mp4",
+        "poster": "media/images/sub_easy_06-frame.png",
+        "figure": "media/images/sub_easy_06.png"
+      }
+    },
+    {
+      "id": "sub_easy_07",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule foreach git status -sb\n```\nTo bump a submodule version for teammates, you must...",
+      "choices": [
+        "Commit the updated gitlink in the parent repo",
+        "Only edit files locally",
+        "Delete .gitmodules",
+        "Force-push main without the gitlink"
+      ],
+      "answer": 0,
+      "explain": "Parent stores the pin.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_easy_07.mp4",
+        "poster": "media/images/sub_easy_07-frame.png",
+        "figure": "media/images/sub_easy_07.png"
+      }
+    },
+    {
+      "id": "sub_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule update --init --recursive\n```\n# Review context: `/tmp/gitlab/bravo` slot 8 variant 1\nTo clone and fetch submodules in one step, use...",
+      "choices": [
+        "git clone --recurse-submodules",
+        "git clone --bare only",
+        "git remote prune",
+        "git stash pop"
+      ],
+      "answer": 0,
+      "explain": "--recurse-submodules.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_easy_08.mp4",
+        "poster": "media/images/sub_easy_08-frame.png",
+        "figure": "media/images/sub_easy_08.png"
+      }
+    },
+    {
+      "id": "sub_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule status\n```\n`.gitmodules` records...",
+      "choices": [
+        "Submodule paths and URLs",
+        "Ignore globs only",
+        "Stash",
+        "Tags"
+      ],
+      "answer": 0,
+      "explain": "Config file for submodules.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_easy_09.mp4",
+        "poster": "media/images/sub_easy_09-frame.png",
+        "figure": "media/images/sub_easy_09.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone --recurse-submodules . /tmp/alpha11-clone 2>/dev/null || true\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\nAfter cloning a repo with submodules, empty submodule folders usually mean...",
+      "choices": [
+        "You still need git submodule update --init --recursive",
+        "The submodule was deleted from GitHub",
+        "You must run git bisect",
+        "Submodules never use separate repos"
+      ],
+      "answer": 0,
+      "explain": "A plain clone records gitlinks but does not populate submodule working trees until init.",
+      "difficulty": "easy",
+      "id": "sub_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_easy_10.mp4",
+        "poster": "media/images/sub_easy_10-frame.png",
+        "figure": "media/images/sub_easy_10.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule foreach git status -sb\n```\n# Review context: `~/src/echo` slot 11 variant 1\nDetached HEAD inside a submodule at a pinned SHA is normal.",
+      "answer": true,
+      "explain": "The parent pins a specific commit; checkout is detached until you switch a branch intentionally.",
+      "difficulty": "easy",
+      "id": "sub_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_easy_11.mp4",
+        "poster": "media/images/sub_easy_11-frame.png",
+        "figure": "media/images/sub_easy_11.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule update --init --recursive\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\nTo bump a submodule version for teammates, you must...",
+      "choices": [
+        "Commit the updated gitlink in the parent repo",
+        "Only edit files locally without any commit",
+        "Delete .gitmodules",
+        "Force-push main on the parent only"
+      ],
+      "answer": 0,
+      "explain": "The parent repo stores the pin; others see the new SHA only after that commit.",
+      "difficulty": "easy",
+      "id": "sub_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_easy_12.mp4",
+        "poster": "media/images/sub_easy_12-frame.png",
+        "figure": "media/images/sub_easy_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule status\n```\n# Review context: `./labs/golf` slot 13 variant 1\nTo clone and fetch submodules in one step, use...",
+      "choices": [
+        "git clone --recurse-submodules",
+        "git clone --bare only",
+        "git remote prune",
+        "git stash pop"
+      ],
+      "answer": 0,
+      "explain": "--recurse-submodules runs init/update during clone-handy for CI and fresh checkouts.",
+      "difficulty": "easy",
+      "id": "sub_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_easy_13.mp4",
+        "poster": "media/images/sub_easy_13-frame.png",
+        "figure": "media/images/sub_easy_13.png"
+      }
+    },
+    {
+      "id": "sub_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone --recurse-submodules . /tmp/echo15-clone 2>/dev/null || true\n```\n# Review context: `/tmp/gitlab/hotel` slot 14 variant 1\nAfter cloning a repo with submodules, empty folders usually mean...",
+      "choices": [
+        "You still need git submodule update --init --recursive",
+        "The submodule was deleted",
+        "You must bisect",
+        "Submodules never use separate repos"
+      ],
+      "answer": 0,
+      "explain": "Clone records gitlinks but does not populate.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_easy_14.mp4",
+        "poster": "media/images/sub_easy_14-frame.png",
+        "figure": "media/images/sub_easy_14.png"
+      }
+    },
+    {
+      "id": "sub_easy_15",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule foreach git status -sb\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\nDetached HEAD inside a submodule at a pinned SHA is normal.",
+      "answer": true,
+      "explain": "Parent pins a commit.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_easy_15.mp4",
+        "poster": "media/images/sub_easy_15-frame.png",
+        "figure": "media/images/sub_easy_15.png"
+      }
+    },
+    {
+      "id": "sub_easy_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule update --init --recursive\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\nTo bump a submodule version for teammates, you must...",
+      "choices": [
+        "Commit the updated gitlink in the parent repo",
+        "Only edit files locally",
+        "Delete .gitmodules",
+        "Force-push main without the gitlink"
+      ],
+      "answer": 0,
+      "explain": "Parent stores the pin.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_easy_16.mp4",
+        "poster": "media/images/sub_easy_16-frame.png",
+        "figure": "media/images/sub_easy_16.png"
+      }
+    },
+    {
+      "id": "sub_easy_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule status\n```\n# Review context: `~/src/charlie` slot 17 variant 1\nTo clone and fetch submodules in one step, use...",
+      "choices": [
+        "git clone --recurse-submodules",
+        "git clone --bare only",
+        "git remote prune",
+        "git stash pop"
+      ],
+      "answer": 0,
+      "explain": "--recurse-submodules.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_easy_17.mp4",
+        "poster": "media/images/sub_easy_17-frame.png",
+        "figure": "media/images/sub_easy_17.png"
+      }
+    },
+    {
+      "id": "sub_easy_18",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone --recurse-submodules . /tmp/india19-clone 2>/dev/null || true\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\n`.gitmodules` records...",
+      "choices": [
+        "Submodule paths and URLs",
+        "Ignore globs only",
+        "Stash",
+        "Tags"
+      ],
+      "answer": 0,
+      "explain": "Config file for submodules.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_easy_18.mp4",
+        "poster": "media/images/sub_easy_18-frame.png",
+        "figure": "media/images/sub_easy_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule foreach git status -sb\n```\n# Review context: `./labs/echo` slot 19 variant 1\nAfter cloning a repo with submodules, empty submodule folders usually mean...",
+      "choices": [
+        "You still need git submodule update --init --recursive",
+        "The submodule was deleted from GitHub",
+        "You must run git bisect",
+        "Submodules never use separate repos"
+      ],
+      "answer": 0,
+      "explain": "A plain clone records gitlinks but does not populate submodule working trees until init.",
+      "difficulty": "easy",
+      "id": "sub_easy_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_easy_19.mp4",
+        "poster": "media/images/sub_easy_19-frame.png",
+        "figure": "media/images/sub_easy_19.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule update --init --recursive\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\nDetached HEAD inside a submodule at a pinned SHA is normal.",
+      "answer": true,
+      "explain": "The parent pins a specific commit; checkout is detached until you switch a branch intentionally.",
+      "difficulty": "easy",
+      "id": "sub_easy_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_easy_20.mp4",
+        "poster": "media/images/sub_easy_20-frame.png",
+        "figure": "media/images/sub_easy_20.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule status\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\nTo bump a submodule version for teammates, you must...",
+      "choices": [
+        "Commit the updated gitlink in the parent repo",
+        "Only edit files locally without any commit",
+        "Delete .gitmodules",
+        "Force-push main on the parent only"
+      ],
+      "answer": 0,
+      "explain": "The parent repo stores the pin; others see the new SHA only after that commit.",
+      "difficulty": "easy",
+      "id": "sub_easy_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_easy_21.mp4",
+        "poster": "media/images/sub_easy_21-frame.png",
+        "figure": "media/images/sub_easy_21.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone --recurse-submodules . /tmp/charlie23-clone 2>/dev/null || true\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\nTo clone and fetch submodules in one step, use...",
+      "choices": [
+        "git clone --recurse-submodules",
+        "git clone --bare only",
+        "git remote prune",
+        "git stash pop"
+      ],
+      "answer": 0,
+      "explain": "--recurse-submodules runs init/update during clone-handy for CI and fresh checkouts.",
+      "difficulty": "easy",
+      "id": "sub_easy_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_easy_22.mp4",
+        "poster": "media/images/sub_easy_22-frame.png",
+        "figure": "media/images/sub_easy_22.png"
+      }
+    },
+    {
+      "id": "sub_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule foreach git status -sb\n```\n# Review context: `~/src/alpha` slot 23 variant 1\nAfter cloning a repo with submodules, empty folders usually mean...",
+      "choices": [
+        "You still need git submodule update --init --recursive",
+        "The submodule was deleted",
+        "You must bisect",
+        "Submodules never use separate repos"
+      ],
+      "answer": 0,
+      "explain": "Clone records gitlinks but does not populate.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_easy_23.mp4",
+        "poster": "media/images/sub_easy_23-frame.png",
+        "figure": "media/images/sub_easy_23.png"
+      }
+    },
+    {
+      "id": "sub_easy_24",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule update --init --recursive\n```\n# Review context: `/work/chip/bravo` slot 24 variant 1\nDetached HEAD inside a submodule at a pinned SHA is normal.",
+      "answer": true,
+      "explain": "Parent pins a commit.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_easy_24.mp4",
+        "poster": "media/images/sub_easy_24-frame.png",
+        "figure": "media/images/sub_easy_24.png"
+      }
+    },
+    {
+      "id": "sub_easy_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule status\n```\n# Review context: `./labs/charlie` slot 25 variant 1\nTo bump a submodule version for teammates, you must...",
+      "choices": [
+        "Commit the updated gitlink in the parent repo",
+        "Only edit files locally",
+        "Delete .gitmodules",
+        "Force-push main without the gitlink"
+      ],
+      "answer": 0,
+      "explain": "Parent stores the pin.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_easy_25.mp4",
+        "poster": "media/images/sub_easy_25-frame.png",
+        "figure": "media/images/sub_easy_25.png"
+      }
+    },
+    {
+      "id": "sub_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone --recurse-submodules . /tmp/golf27-clone 2>/dev/null || true\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\nTo clone and fetch submodules in one step, use...",
+      "choices": [
+        "git clone --recurse-submodules",
+        "git clone --bare only",
+        "git remote prune",
+        "git stash pop"
+      ],
+      "answer": 0,
+      "explain": "--recurse-submodules.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_easy_26.mp4",
+        "poster": "media/images/sub_easy_26-frame.png",
+        "figure": "media/images/sub_easy_26.png"
+      }
+    },
+    {
+      "id": "sub_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule foreach git status -sb\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\n`.gitmodules` records...",
+      "choices": [
+        "Submodule paths and URLs",
+        "Ignore globs only",
+        "Stash",
+        "Tags"
+      ],
+      "answer": 0,
+      "explain": "Config file for submodules.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_easy_27.mp4",
+        "poster": "media/images/sub_easy_27-frame.png",
+        "figure": "media/images/sub_easy_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule update --init --recursive\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\nAfter cloning a repo with submodules, empty submodule folders usually mean...",
+      "choices": [
+        "You still need git submodule update --init --recursive",
+        "The submodule was deleted from GitHub",
+        "You must run git bisect",
+        "Submodules never use separate repos"
+      ],
+      "answer": 0,
+      "explain": "A plain clone records gitlinks but does not populate submodule working trees until init.",
+      "difficulty": "easy",
+      "id": "sub_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_easy_28.mp4",
+        "poster": "media/images/sub_easy_28-frame.png",
+        "figure": "media/images/sub_easy_28.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule status\n```\n# Review context: `~/src/golf` slot 29 variant 1\nDetached HEAD inside a submodule at a pinned SHA is normal.",
+      "answer": true,
+      "explain": "The parent pins a specific commit; checkout is detached until you switch a branch intentionally.",
+      "difficulty": "easy",
+      "id": "sub_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_easy_29.mp4",
+        "poster": "media/images/sub_easy_29-frame.png",
+        "figure": "media/images/sub_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone --recurse-submodules . /tmp/alpha31-clone 2>/dev/null || true\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\nTo bump a submodule version for teammates, you must...",
+      "choices": [
+        "Commit the updated gitlink in the parent repo",
+        "Only edit files locally without any commit",
+        "Delete .gitmodules",
+        "Force-push main on the parent only"
+      ],
+      "answer": 0,
+      "explain": "The parent repo stores the pin; others see the new SHA only after that commit.",
+      "difficulty": "easy",
+      "id": "sub_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_easy_30.mp4",
+        "poster": "media/images/sub_easy_30-frame.png",
+        "figure": "media/images/sub_easy_30.png"
+      }
+    },
+    {
+      "id": "sub_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule status\n```\n`git submodule update --remote`...",
+      "choices": [
+        "Fetches and updates toward the configured remote branch; then commit the gitlink",
+        "Always safe on release pins without review",
+        "Deletes .gitmodules",
+        "Ignores URLs"
+      ],
+      "answer": 0,
+      "explain": "--remote moves the pin toward a branch.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_medium_01.mp4",
+        "poster": "media/images/sub_medium_01-frame.png",
+        "figure": "media/images/sub_medium_01.png"
+      }
+    },
+    {
+      "id": "sub_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone --recurse-submodules . /tmp/charlie3-clone 2>/dev/null || true\n```\nNested submodules need...",
+      "choices": [
+        "--recursive",
+        "Nothing",
+        "bisect",
+        "stash"
+      ],
+      "answer": 0,
+      "explain": "Recursive init.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_medium_02.mp4",
+        "poster": "media/images/sub_medium_02-frame.png",
+        "figure": "media/images/sub_medium_02.png"
+      }
+    },
+    {
+      "id": "sub_medium_03",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule foreach git status -sb\n```\nEditing files inside a submodule requires a commit in the submodule repo, then a gitlink commit in the parent.",
+      "answer": true,
+      "explain": "Two repos.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_medium_03.mp4",
+        "poster": "media/images/sub_medium_03-frame.png",
+        "figure": "media/images/sub_medium_03.png"
+      }
+    },
+    {
+      "id": "sub_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule update --init --recursive\n```\nA common pitfall is committing in a submodule while...",
+      "choices": [
+        "Detached HEAD without a branch, then losing the commit",
+        "On main always",
+        "With tags",
+        "With ignore"
+      ],
+      "answer": 0,
+      "explain": "Create a branch in the submodule first.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_medium_04.mp4",
+        "poster": "media/images/sub_medium_04-frame.png",
+        "figure": "media/images/sub_medium_04.png"
+      }
+    },
+    {
+      "id": "sub_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule status\n```\n`git submodule deinit rtl5`...",
+      "choices": [
+        "Unregisters the local checkout (can remove the working copy)",
+        "Deletes the remote project",
+        "Tags HEAD",
+        "Starts mergetool"
+      ],
+      "answer": 0,
+      "explain": "deinit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_medium_05.mp4",
+        "poster": "media/images/sub_medium_05-frame.png",
+        "figure": "media/images/sub_medium_05.png"
+      }
+    },
+    {
+      "id": "sub_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone --recurse-submodules . /tmp/golf7-clone 2>/dev/null || true\n```\n# Review context: `/work/chip/hotel` slot 6 variant 1\n`git submodule update --remote`...",
+      "choices": [
+        "Fetches and updates toward the configured remote branch; then commit the gitlink",
+        "Always safe on release pins without review",
+        "Deletes .gitmodules",
+        "Ignores URLs"
+      ],
+      "answer": 0,
+      "explain": "--remote moves the pin toward a branch.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_medium_06.mp4",
+        "poster": "media/images/sub_medium_06-frame.png",
+        "figure": "media/images/sub_medium_06.png"
+      }
+    },
+    {
+      "id": "sub_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule foreach git status -sb\n```\n# Review context: `./labs/alpha` slot 7 variant 1\nNested submodules need...",
+      "choices": [
+        "--recursive",
+        "Nothing",
+        "bisect",
+        "stash"
+      ],
+      "answer": 0,
+      "explain": "Recursive init.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_medium_07.mp4",
+        "poster": "media/images/sub_medium_07-frame.png",
+        "figure": "media/images/sub_medium_07.png"
+      }
+    },
+    {
+      "id": "sub_medium_08",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule update --init --recursive\n```\n# Review context: `/tmp/gitlab/bravo` slot 8 variant 1\nEditing files inside a submodule requires a commit in the submodule repo, then a gitlink commit in the parent.",
+      "answer": true,
+      "explain": "Two repos.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_medium_08.mp4",
+        "poster": "media/images/sub_medium_08-frame.png",
+        "figure": "media/images/sub_medium_08.png"
+      }
+    },
+    {
+      "id": "sub_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule status\n```\n# Review context: `C:/proj/charlie` slot 9 variant 1\nA common pitfall is committing in a submodule while...",
+      "choices": [
+        "Detached HEAD without a branch, then losing the commit",
+        "On main always",
+        "With tags",
+        "With ignore"
+      ],
+      "answer": 0,
+      "explain": "Create a branch in the submodule first.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_medium_09.mp4",
+        "poster": "media/images/sub_medium_09-frame.png",
+        "figure": "media/images/sub_medium_09.png"
+      }
+    },
+    {
+      "id": "sub_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone --recurse-submodules . /tmp/alpha11-clone 2>/dev/null || true\n```\n`git submodule deinit rtl10`...",
+      "choices": [
+        "Unregisters the local checkout (can remove the working copy)",
+        "Deletes the remote project",
+        "Tags HEAD",
+        "Starts mergetool"
+      ],
+      "answer": 0,
+      "explain": "deinit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_medium_10.mp4",
+        "poster": "media/images/sub_medium_10-frame.png",
+        "figure": "media/images/sub_medium_10.png"
+      }
+    },
+    {
+      "id": "sub_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule foreach git status -sb\n```\n# Review context: `~/src/echo` slot 11 variant 1\n`git submodule update --remote`...",
+      "choices": [
+        "Fetches and updates toward the configured remote branch; then commit the gitlink",
+        "Always safe on release pins without review",
+        "Deletes .gitmodules",
+        "Ignores URLs"
+      ],
+      "answer": 0,
+      "explain": "--remote moves the pin toward a branch.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_medium_11.mp4",
+        "poster": "media/images/sub_medium_11-frame.png",
+        "figure": "media/images/sub_medium_11.png"
+      }
+    },
+    {
+      "id": "sub_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule update --init --recursive\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\nNested submodules need...",
+      "choices": [
+        "--recursive",
+        "Nothing",
+        "bisect",
+        "stash"
+      ],
+      "answer": 0,
+      "explain": "Recursive init.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_medium_12.mp4",
+        "poster": "media/images/sub_medium_12-frame.png",
+        "figure": "media/images/sub_medium_12.png"
+      }
+    },
+    {
+      "id": "sub_medium_13",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule status\n```\n# Review context: `./labs/golf` slot 13 variant 1\nEditing files inside a submodule requires a commit in the submodule repo, then a gitlink commit in the parent.",
+      "answer": true,
+      "explain": "Two repos.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_medium_13.mp4",
+        "poster": "media/images/sub_medium_13-frame.png",
+        "figure": "media/images/sub_medium_13.png"
+      }
+    },
+    {
+      "id": "sub_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone --recurse-submodules . /tmp/echo15-clone 2>/dev/null || true\n```\n# Review context: `/tmp/gitlab/hotel` slot 14 variant 1\nA common pitfall is committing in a submodule while...",
+      "choices": [
+        "Detached HEAD without a branch, then losing the commit",
+        "On main always",
+        "With tags",
+        "With ignore"
+      ],
+      "answer": 0,
+      "explain": "Create a branch in the submodule first.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_medium_14.mp4",
+        "poster": "media/images/sub_medium_14-frame.png",
+        "figure": "media/images/sub_medium_14.png"
+      }
+    },
+    {
+      "id": "sub_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule foreach git status -sb\n```\n`git submodule deinit rtl15`...",
+      "choices": [
+        "Unregisters the local checkout (can remove the working copy)",
+        "Deletes the remote project",
+        "Tags HEAD",
+        "Starts mergetool"
+      ],
+      "answer": 0,
+      "explain": "deinit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_medium_15.mp4",
+        "poster": "media/images/sub_medium_15-frame.png",
+        "figure": "media/images/sub_medium_15.png"
+      }
+    },
+    {
+      "id": "sub_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule update --init --recursive\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\n`git submodule update --remote`...",
+      "choices": [
+        "Fetches and updates toward the configured remote branch; then commit the gitlink",
+        "Always safe on release pins without review",
+        "Deletes .gitmodules",
+        "Ignores URLs"
+      ],
+      "answer": 0,
+      "explain": "--remote moves the pin toward a branch.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_medium_16.mp4",
+        "poster": "media/images/sub_medium_16-frame.png",
+        "figure": "media/images/sub_medium_16.png"
+      }
+    },
+    {
+      "id": "sub_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule status\n```\n# Review context: `~/src/charlie` slot 17 variant 1\nNested submodules need...",
+      "choices": [
+        "--recursive",
+        "Nothing",
+        "bisect",
+        "stash"
+      ],
+      "answer": 0,
+      "explain": "Recursive init.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_medium_17.mp4",
+        "poster": "media/images/sub_medium_17-frame.png",
+        "figure": "media/images/sub_medium_17.png"
+      }
+    },
+    {
+      "id": "sub_medium_18",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit clone --recurse-submodules . /tmp/india19-clone 2>/dev/null || true\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\nEditing files inside a submodule requires a commit in the submodule repo, then a gitlink commit in the parent.",
+      "answer": true,
+      "explain": "Two repos.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_medium_18.mp4",
+        "poster": "media/images/sub_medium_18-frame.png",
+        "figure": "media/images/sub_medium_18.png"
+      }
+    },
+    {
+      "id": "sub_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule foreach git status -sb\n```\n# Review context: `./labs/echo` slot 19 variant 1\nA common pitfall is committing in a submodule while...",
+      "choices": [
+        "Detached HEAD without a branch, then losing the commit",
+        "On main always",
+        "With tags",
+        "With ignore"
+      ],
+      "answer": 0,
+      "explain": "Create a branch in the submodule first.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_medium_19.mp4",
+        "poster": "media/images/sub_medium_19-frame.png",
+        "figure": "media/images/sub_medium_19.png"
+      }
+    },
+    {
+      "id": "sub_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule update --init --recursive\n```\n`git submodule deinit rtl20`...",
+      "choices": [
+        "Unregisters the local checkout (can remove the working copy)",
+        "Deletes the remote project",
+        "Tags HEAD",
+        "Starts mergetool"
+      ],
+      "answer": 0,
+      "explain": "deinit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_medium_20.mp4",
+        "poster": "media/images/sub_medium_20-frame.png",
+        "figure": "media/images/sub_medium_20.png"
+      }
+    },
+    {
+      "id": "sub_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule status\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\n`git submodule update --remote`...",
+      "choices": [
+        "Fetches and updates toward the configured remote branch; then commit the gitlink",
+        "Always safe on release pins without review",
+        "Deletes .gitmodules",
+        "Ignores URLs"
+      ],
+      "answer": 0,
+      "explain": "--remote moves the pin toward a branch.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_medium_21.mp4",
+        "poster": "media/images/sub_medium_21-frame.png",
+        "figure": "media/images/sub_medium_21.png"
+      }
+    },
+    {
+      "id": "sub_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone --recurse-submodules . /tmp/charlie23-clone 2>/dev/null || true\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\nNested submodules need...",
+      "choices": [
+        "--recursive",
+        "Nothing",
+        "bisect",
+        "stash"
+      ],
+      "answer": 0,
+      "explain": "Recursive init.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_medium_22.mp4",
+        "poster": "media/images/sub_medium_22-frame.png",
+        "figure": "media/images/sub_medium_22.png"
+      }
+    },
+    {
+      "id": "sub_medium_23",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule foreach git status -sb\n```\n# Review context: `~/src/alpha` slot 23 variant 1\nEditing files inside a submodule requires a commit in the submodule repo, then a gitlink commit in the parent.",
+      "answer": true,
+      "explain": "Two repos.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_medium_23.mp4",
+        "poster": "media/images/sub_medium_23-frame.png",
+        "figure": "media/images/sub_medium_23.png"
+      }
+    },
+    {
+      "id": "sub_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule update --init --recursive\n```\n# Review context: `/work/chip/bravo` slot 24 variant 1\nA common pitfall is committing in a submodule while...",
+      "choices": [
+        "Detached HEAD without a branch, then losing the commit",
+        "On main always",
+        "With tags",
+        "With ignore"
+      ],
+      "answer": 0,
+      "explain": "Create a branch in the submodule first.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_medium_24.mp4",
+        "poster": "media/images/sub_medium_24-frame.png",
+        "figure": "media/images/sub_medium_24.png"
+      }
+    },
+    {
+      "id": "sub_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule status\n```\n`git submodule deinit rtl25`...",
+      "choices": [
+        "Unregisters the local checkout (can remove the working copy)",
+        "Deletes the remote project",
+        "Tags HEAD",
+        "Starts mergetool"
+      ],
+      "answer": 0,
+      "explain": "deinit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_medium_25.mp4",
+        "poster": "media/images/sub_medium_25-frame.png",
+        "figure": "media/images/sub_medium_25.png"
+      }
+    },
+    {
+      "id": "sub_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone --recurse-submodules . /tmp/golf27-clone 2>/dev/null || true\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\n`git submodule update --remote`...",
+      "choices": [
+        "Fetches and updates toward the configured remote branch; then commit the gitlink",
+        "Always safe on release pins without review",
+        "Deletes .gitmodules",
+        "Ignores URLs"
+      ],
+      "answer": 0,
+      "explain": "--remote moves the pin toward a branch.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_medium_26.mp4",
+        "poster": "media/images/sub_medium_26-frame.png",
+        "figure": "media/images/sub_medium_26.png"
+      }
+    },
+    {
+      "id": "sub_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule foreach git status -sb\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\nNested submodules need...",
+      "choices": [
+        "--recursive",
+        "Nothing",
+        "bisect",
+        "stash"
+      ],
+      "answer": 0,
+      "explain": "Recursive init.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_medium_27.mp4",
+        "poster": "media/images/sub_medium_27-frame.png",
+        "figure": "media/images/sub_medium_27.png"
+      }
+    },
+    {
+      "id": "sub_medium_28",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule update --init --recursive\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\nEditing files inside a submodule requires a commit in the submodule repo, then a gitlink commit in the parent.",
+      "answer": true,
+      "explain": "Two repos.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_medium_28.mp4",
+        "poster": "media/images/sub_medium_28-frame.png",
+        "figure": "media/images/sub_medium_28.png"
+      }
+    },
+    {
+      "id": "sub_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule status\n```\n# Review context: `~/src/golf` slot 29 variant 1\nA common pitfall is committing in a submodule while...",
+      "choices": [
+        "Detached HEAD without a branch, then losing the commit",
+        "On main always",
+        "With tags",
+        "With ignore"
+      ],
+      "answer": 0,
+      "explain": "Create a branch in the submodule first.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_medium_29.mp4",
+        "poster": "media/images/sub_medium_29-frame.png",
+        "figure": "media/images/sub_medium_29.png"
+      }
+    },
+    {
+      "id": "sub_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone --recurse-submodules . /tmp/alpha31-clone 2>/dev/null || true\n```\n`git submodule deinit rtl30`...",
+      "choices": [
+        "Unregisters the local checkout (can remove the working copy)",
+        "Deletes the remote project",
+        "Tags HEAD",
+        "Starts mergetool"
+      ],
+      "answer": 0,
+      "explain": "deinit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_medium_30.mp4",
+        "poster": "media/images/sub_medium_30-frame.png",
+        "figure": "media/images/sub_medium_30.png"
+      }
+    },
+    {
+      "id": "sub_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule foreach git status -sb\n```\nWhy submodules cause 'modified content' in parent status...",
+      "choices": [
+        "The submodule HEAD does not match the recorded gitlink",
+        "Ignore is wrong",
+        "Tags moved",
+        "Fetch failed"
+      ],
+      "answer": 0,
+      "explain": "Dirty or different SHA.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_hard_01.mp4",
+        "poster": "media/images/sub_hard_01-frame.png",
+        "figure": "media/images/sub_hard_01.png"
+      }
+    },
+    {
+      "id": "sub_hard_02",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule update --init --recursive\n```\n`git config -f .gitmodules submodule.rtl2.update none` can skip update for that path.",
+      "answer": true,
+      "explain": "Per-submodule update mode.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_hard_02.mp4",
+        "poster": "media/images/sub_hard_02-frame.png",
+        "figure": "media/images/sub_hard_02.png"
+      }
+    },
+    {
+      "id": "sub_hard_03",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule status\n```\nVendoring vs submodule: submodule keeps...",
+      "choices": [
+        "A pointer to an external history; vendoring copies files into your tree",
+        "Identical workflows",
+        "No URL",
+        "Only tags"
+      ],
+      "answer": 0,
+      "explain": "Pointer vs copy.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_hard_03.mp4",
+        "poster": "media/images/sub_hard_03-frame.png",
+        "figure": "media/images/sub_hard_03.png"
+      }
+    },
+    {
+      "id": "sub_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone --recurse-submodules . /tmp/golf7-clone 2>/dev/null || true\n```\n`git submodule foreach --recursive git status`...",
+      "choices": [
+        "Runs a command in each submodule",
+        "Pushes parent",
+        "Deletes pins",
+        "Starts PR"
+      ],
+      "answer": 0,
+      "explain": "foreach.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_hard_04.mp4",
+        "poster": "media/images/sub_hard_04-frame.png",
+        "figure": "media/images/sub_hard_04.png"
+      }
+    },
+    {
+      "id": "sub_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule foreach git status -sb\n```\nA gitlink in the parent tree is...",
+      "choices": [
+        "A commit SHA pointer to the submodule",
+        "A branch",
+        "A tag message",
+        "A remote URL only"
+      ],
+      "answer": 0,
+      "explain": "mode 160000 gitlink.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_hard_05.mp4",
+        "poster": "media/images/sub_hard_05-frame.png",
+        "figure": "media/images/sub_hard_05.png"
+      }
+    },
+    {
+      "id": "sub_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule update --init --recursive\n```\n# Review context: `/work/chip/hotel` slot 6 variant 1\nWhy submodules cause 'modified content' in parent status...",
+      "choices": [
+        "The submodule HEAD does not match the recorded gitlink",
+        "Ignore is wrong",
+        "Tags moved",
+        "Fetch failed"
+      ],
+      "answer": 0,
+      "explain": "Dirty or different SHA.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_hard_06.mp4",
+        "poster": "media/images/sub_hard_06-frame.png",
+        "figure": "media/images/sub_hard_06.png"
+      }
+    },
+    {
+      "id": "sub_hard_07",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule status\n```\n`git config -f .gitmodules submodule.rtl7.update none` can skip update for that path.",
+      "answer": true,
+      "explain": "Per-submodule update mode.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_hard_07.mp4",
+        "poster": "media/images/sub_hard_07-frame.png",
+        "figure": "media/images/sub_hard_07.png"
+      }
+    },
+    {
+      "id": "sub_hard_08",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone --recurse-submodules . /tmp/alpha11-clone 2>/dev/null || true\n```\n# Review context: `/tmp/gitlab/bravo` slot 8 variant 1\nVendoring vs submodule: submodule keeps...",
+      "choices": [
+        "A pointer to an external history; vendoring copies files into your tree",
+        "Identical workflows",
+        "No URL",
+        "Only tags"
+      ],
+      "answer": 0,
+      "explain": "Pointer vs copy.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_hard_08.mp4",
+        "poster": "media/images/sub_hard_08-frame.png",
+        "figure": "media/images/sub_hard_08.png"
+      }
+    },
+    {
+      "id": "sub_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule foreach git status -sb\n```\n# Review context: `C:/proj/charlie` slot 9 variant 1\n`git submodule foreach --recursive git status`...",
+      "choices": [
+        "Runs a command in each submodule",
+        "Pushes parent",
+        "Deletes pins",
+        "Starts PR"
+      ],
+      "answer": 0,
+      "explain": "foreach.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_hard_09.mp4",
+        "poster": "media/images/sub_hard_09-frame.png",
+        "figure": "media/images/sub_hard_09.png"
+      }
+    },
+    {
+      "id": "sub_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule update --init --recursive\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\nA gitlink in the parent tree is...",
+      "choices": [
+        "A commit SHA pointer to the submodule",
+        "A branch",
+        "A tag message",
+        "A remote URL only"
+      ],
+      "answer": 0,
+      "explain": "mode 160000 gitlink.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_hard_10.mp4",
+        "poster": "media/images/sub_hard_10-frame.png",
+        "figure": "media/images/sub_hard_10.png"
+      }
+    },
+    {
+      "id": "sub_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule status\n```\n# Review context: `~/src/echo` slot 11 variant 1\nWhy submodules cause 'modified content' in parent status...",
+      "choices": [
+        "The submodule HEAD does not match the recorded gitlink",
+        "Ignore is wrong",
+        "Tags moved",
+        "Fetch failed"
+      ],
+      "answer": 0,
+      "explain": "Dirty or different SHA.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_hard_11.mp4",
+        "poster": "media/images/sub_hard_11-frame.png",
+        "figure": "media/images/sub_hard_11.png"
+      }
+    },
+    {
+      "id": "sub_hard_12",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit clone --recurse-submodules . /tmp/echo15-clone 2>/dev/null || true\n```\n`git config -f .gitmodules submodule.rtl12.update none` can skip update for that path.",
+      "answer": true,
+      "explain": "Per-submodule update mode.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_hard_12.mp4",
+        "poster": "media/images/sub_hard_12-frame.png",
+        "figure": "media/images/sub_hard_12.png"
+      }
+    },
+    {
+      "id": "sub_hard_13",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule foreach git status -sb\n```\n# Review context: `./labs/golf` slot 13 variant 1\nVendoring vs submodule: submodule keeps...",
+      "choices": [
+        "A pointer to an external history; vendoring copies files into your tree",
+        "Identical workflows",
+        "No URL",
+        "Only tags"
+      ],
+      "answer": 0,
+      "explain": "Pointer vs copy.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_hard_13.mp4",
+        "poster": "media/images/sub_hard_13-frame.png",
+        "figure": "media/images/sub_hard_13.png"
+      }
+    },
+    {
+      "id": "sub_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule update --init --recursive\n```\n# Review context: `/tmp/gitlab/hotel` slot 14 variant 1\n`git submodule foreach --recursive git status`...",
+      "choices": [
+        "Runs a command in each submodule",
+        "Pushes parent",
+        "Deletes pins",
+        "Starts PR"
+      ],
+      "answer": 0,
+      "explain": "foreach.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_hard_14.mp4",
+        "poster": "media/images/sub_hard_14-frame.png",
+        "figure": "media/images/sub_hard_14.png"
+      }
+    },
+    {
+      "id": "sub_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule status\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\nA gitlink in the parent tree is...",
+      "choices": [
+        "A commit SHA pointer to the submodule",
+        "A branch",
+        "A tag message",
+        "A remote URL only"
+      ],
+      "answer": 0,
+      "explain": "mode 160000 gitlink.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_hard_15.mp4",
+        "poster": "media/images/sub_hard_15-frame.png",
+        "figure": "media/images/sub_hard_15.png"
+      }
+    },
+    {
+      "id": "sub_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone --recurse-submodules . /tmp/india19-clone 2>/dev/null || true\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\nWhy submodules cause 'modified content' in parent status...",
+      "choices": [
+        "The submodule HEAD does not match the recorded gitlink",
+        "Ignore is wrong",
+        "Tags moved",
+        "Fetch failed"
+      ],
+      "answer": 0,
+      "explain": "Dirty or different SHA.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_hard_16.mp4",
+        "poster": "media/images/sub_hard_16-frame.png",
+        "figure": "media/images/sub_hard_16.png"
+      }
+    },
+    {
+      "id": "sub_hard_17",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule foreach git status -sb\n```\n`git config -f .gitmodules submodule.rtl17.update none` can skip update for that path.",
+      "answer": true,
+      "explain": "Per-submodule update mode.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_hard_17.mp4",
+        "poster": "media/images/sub_hard_17-frame.png",
+        "figure": "media/images/sub_hard_17.png"
+      }
+    },
+    {
+      "id": "sub_hard_18",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule update --init --recursive\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\nVendoring vs submodule: submodule keeps...",
+      "choices": [
+        "A pointer to an external history; vendoring copies files into your tree",
+        "Identical workflows",
+        "No URL",
+        "Only tags"
+      ],
+      "answer": 0,
+      "explain": "Pointer vs copy.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_hard_18.mp4",
+        "poster": "media/images/sub_hard_18-frame.png",
+        "figure": "media/images/sub_hard_18.png"
+      }
+    },
+    {
+      "id": "sub_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule status\n```\n# Review context: `./labs/echo` slot 19 variant 1\n`git submodule foreach --recursive git status`...",
+      "choices": [
+        "Runs a command in each submodule",
+        "Pushes parent",
+        "Deletes pins",
+        "Starts PR"
+      ],
+      "answer": 0,
+      "explain": "foreach.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_hard_19.mp4",
+        "poster": "media/images/sub_hard_19-frame.png",
+        "figure": "media/images/sub_hard_19.png"
+      }
+    },
+    {
+      "id": "sub_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone --recurse-submodules . /tmp/charlie23-clone 2>/dev/null || true\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\nA gitlink in the parent tree is...",
+      "choices": [
+        "A commit SHA pointer to the submodule",
+        "A branch",
+        "A tag message",
+        "A remote URL only"
+      ],
+      "answer": 0,
+      "explain": "mode 160000 gitlink.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_hard_20.mp4",
+        "poster": "media/images/sub_hard_20-frame.png",
+        "figure": "media/images/sub_hard_20.png"
+      }
+    },
+    {
+      "id": "sub_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule foreach git status -sb\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\nWhy submodules cause 'modified content' in parent status...",
+      "choices": [
+        "The submodule HEAD does not match the recorded gitlink",
+        "Ignore is wrong",
+        "Tags moved",
+        "Fetch failed"
+      ],
+      "answer": 0,
+      "explain": "Dirty or different SHA.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_hard_21.mp4",
+        "poster": "media/images/sub_hard_21-frame.png",
+        "figure": "media/images/sub_hard_21.png"
+      }
+    },
+    {
+      "id": "sub_hard_22",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule update --init --recursive\n```\n`git config -f .gitmodules submodule.rtl22.update none` can skip update for that path.",
+      "answer": true,
+      "explain": "Per-submodule update mode.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_hard_22.mp4",
+        "poster": "media/images/sub_hard_22-frame.png",
+        "figure": "media/images/sub_hard_22.png"
+      }
+    },
+    {
+      "id": "sub_hard_23",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule status\n```\n# Review context: `~/src/alpha` slot 23 variant 1\nVendoring vs submodule: submodule keeps...",
+      "choices": [
+        "A pointer to an external history; vendoring copies files into your tree",
+        "Identical workflows",
+        "No URL",
+        "Only tags"
+      ],
+      "answer": 0,
+      "explain": "Pointer vs copy.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_hard_23.mp4",
+        "poster": "media/images/sub_hard_23-frame.png",
+        "figure": "media/images/sub_hard_23.png"
+      }
+    },
+    {
+      "id": "sub_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone --recurse-submodules . /tmp/golf27-clone 2>/dev/null || true\n```\n# Review context: `/work/chip/bravo` slot 24 variant 1\n`git submodule foreach --recursive git status`...",
+      "choices": [
+        "Runs a command in each submodule",
+        "Pushes parent",
+        "Deletes pins",
+        "Starts PR"
+      ],
+      "answer": 0,
+      "explain": "foreach.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_hard_24.mp4",
+        "poster": "media/images/sub_hard_24-frame.png",
+        "figure": "media/images/sub_hard_24.png"
+      }
+    },
+    {
+      "id": "sub_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule foreach git status -sb\n```\n# Review context: `./labs/charlie` slot 25 variant 1\nA gitlink in the parent tree is...",
+      "choices": [
+        "A commit SHA pointer to the submodule",
+        "A branch",
+        "A tag message",
+        "A remote URL only"
+      ],
+      "answer": 0,
+      "explain": "mode 160000 gitlink.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_hard_25.mp4",
+        "poster": "media/images/sub_hard_25-frame.png",
+        "figure": "media/images/sub_hard_25.png"
+      }
+    },
+    {
+      "id": "sub_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule update --init --recursive\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\nWhy submodules cause 'modified content' in parent status...",
+      "choices": [
+        "The submodule HEAD does not match the recorded gitlink",
+        "Ignore is wrong",
+        "Tags moved",
+        "Fetch failed"
+      ],
+      "answer": 0,
+      "explain": "Dirty or different SHA.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_hard_26.mp4",
+        "poster": "media/images/sub_hard_26-frame.png",
+        "figure": "media/images/sub_hard_26.png"
+      }
+    },
+    {
+      "id": "sub_hard_27",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule status\n```\n`git config -f .gitmodules submodule.rtl27.update none` can skip update for that path.",
+      "answer": true,
+      "explain": "Per-submodule update mode.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_hard_27.mp4",
+        "poster": "media/images/sub_hard_27-frame.png",
+        "figure": "media/images/sub_hard_27.png"
+      }
+    },
+    {
+      "id": "sub_hard_28",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit clone --recurse-submodules . /tmp/alpha31-clone 2>/dev/null || true\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\nVendoring vs submodule: submodule keeps...",
+      "choices": [
+        "A pointer to an external history; vendoring copies files into your tree",
+        "Identical workflows",
+        "No URL",
+        "Only tags"
+      ],
+      "answer": 0,
+      "explain": "Pointer vs copy.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_hard_28.mp4",
+        "poster": "media/images/sub_hard_28-frame.png",
+        "figure": "media/images/sub_hard_28.png"
+      }
+    },
+    {
+      "id": "sub_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule foreach git status -sb\n```\n# Review context: `~/src/golf` slot 29 variant 1\n`git submodule foreach --recursive git status`...",
+      "choices": [
+        "Runs a command in each submodule",
+        "Pushes parent",
+        "Deletes pins",
+        "Starts PR"
+      ],
+      "answer": 0,
+      "explain": "foreach.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_hard_29.mp4",
+        "poster": "media/images/sub_hard_29-frame.png",
+        "figure": "media/images/sub_hard_29.png"
+      }
+    },
+    {
+      "id": "sub_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit submodule update --init --recursive\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\nA gitlink in the parent tree is...",
+      "choices": [
+        "A commit SHA pointer to the submodule",
+        "A branch",
+        "A tag message",
+        "A remote URL only"
+      ],
+      "answer": 0,
+      "explain": "mode 160000 gitlink.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/sub_hard_30.mp4",
+        "poster": "media/images/sub_hard_30-frame.png",
+        "figure": "media/images/sub_hard_30.png"
+      }
+    }
+  ]
+}
