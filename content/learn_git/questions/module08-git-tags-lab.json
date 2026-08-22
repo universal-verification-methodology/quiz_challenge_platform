@@ -1,0 +1,1674 @@
+{
+  "module": "module08-git-tags-lab",
+  "title": "Tags",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit show v1.2.0 | head\n```\nA lightweight tag is...",
+      "choices": [
+        "A name pointing at a commit, without extra tag object metadata",
+        "A branch that auto-updates on every push",
+        "The same as .gitignore",
+        "Only stored on GitHub, never locally"
+      ],
+      "answer": 0,
+      "explain": "Lightweight tags are simple refs to a commit; annotated tags add message, tagger, and date.",
+      "difficulty": "easy",
+      "id": "tag_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_easy_01.mp4",
+        "poster": "media/images/tag_easy_01-frame.png",
+        "figure": "media/images/tag_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push origin v1.3.0\n```\nFor a published release you share with others, prefer...",
+      "choices": [
+        "git tag -a v1.0.0 -m \"Release 1.0\"",
+        "Deleting .git and recloning",
+        "git stash clear only",
+        "Never tagging at all"
+      ],
+      "answer": 0,
+      "explain": "Annotated tags carry release metadata and are the usual choice for semver releases.",
+      "difficulty": "easy",
+      "id": "tag_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_easy_02.mp4",
+        "poster": "media/images/tag_easy_02-frame.png",
+        "figure": "media/images/tag_easy_02.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\ngit push alone always pushes all local tags to the remote.",
+      "answer": false,
+      "explain": "Tags are not pushed by default; use git push origin --tags or push a specific tag name.",
+      "difficulty": "easy",
+      "id": "tag_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_easy_03.mp4",
+        "poster": "media/images/tag_easy_03-frame.png",
+        "figure": "media/images/tag_easy_03.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit tag -a v1.5.0 -m \"Release v1.5.0\"\n```\ngit show v1.0 is useful to...",
+      "choices": [
+        "Inspect which commit a tag points to (and annotation if present)",
+        "Change your shell PATH",
+        "Ignore build/ directories",
+        "Create a merge conflict automatically"
+      ],
+      "answer": 0,
+      "explain": "git show on a tag reveals the tagged commit and, for annotated tags, the tag message.",
+      "difficulty": "easy",
+      "id": "tag_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_easy_04.mp4",
+        "poster": "media/images/tag_easy_04-frame.png",
+        "figure": "media/images/tag_easy_04.png"
+      }
+    },
+    {
+      "id": "tag_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit show v1.6.0 | head\n```\nA lightweight tag is...",
+      "choices": [
+        "A name pointing at a commit, without extra tag object metadata",
+        "A branch that auto-updates",
+        "The same as .gitignore",
+        "Only stored on GitHub"
+      ],
+      "answer": 0,
+      "explain": "Lightweight tags are refs to a commit.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_easy_05.mp4",
+        "poster": "media/images/tag_easy_05-frame.png",
+        "figure": "media/images/tag_easy_05.png"
+      }
+    },
+    {
+      "id": "tag_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push origin v1.7.0\n```\nFor a published release, prefer...",
+      "choices": [
+        "`git tag -a v1.6.0 -m \"Release\"`",
+        "Deleting .git",
+        "git stash clear only",
+        "Never tagging"
+      ],
+      "answer": 0,
+      "explain": "Annotated tags carry release metadata.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_easy_06.mp4",
+        "poster": "media/images/tag_easy_06-frame.png",
+        "figure": "media/images/tag_easy_06.png"
+      }
+    },
+    {
+      "id": "tag_easy_07",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n`git push` alone always pushes all local tags.",
+      "answer": false,
+      "explain": "Push a tag or use --tags.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_easy_07.mp4",
+        "poster": "media/images/tag_easy_07-frame.png",
+        "figure": "media/images/tag_easy_07.png"
+      }
+    },
+    {
+      "id": "tag_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit tag -a v1.0.0 -m \"Release v1.0.0\"\n```\n`git show v1.8.0` is useful to...",
+      "choices": [
+        "See which commit the tag points to (and annotation)",
+        "Change PATH",
+        "Ignore build/",
+        "Create a conflict"
+      ],
+      "answer": 0,
+      "explain": "show inspects the tag.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_easy_08.mp4",
+        "poster": "media/images/tag_easy_08-frame.png",
+        "figure": "media/images/tag_easy_08.png"
+      }
+    },
+    {
+      "id": "tag_easy_09",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit show v1.1.0 | head\n```\nTags do not move when you make new commits (unlike branches).",
+      "answer": true,
+      "explain": "A tag stays on that commit.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_easy_09.mp4",
+        "poster": "media/images/tag_easy_09-frame.png",
+        "figure": "media/images/tag_easy_09.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push origin v1.2.0\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\nA lightweight tag is...",
+      "choices": [
+        "A name pointing at a commit, without extra tag object metadata",
+        "A branch that auto-updates on every push",
+        "The same as .gitignore",
+        "Only stored on GitHub, never locally"
+      ],
+      "answer": 0,
+      "explain": "Lightweight tags are simple refs to a commit; annotated tags add message, tagger, and date.",
+      "difficulty": "easy",
+      "id": "tag_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_easy_10.mp4",
+        "poster": "media/images/tag_easy_10-frame.png",
+        "figure": "media/images/tag_easy_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n# Review context: `~/src/echo` slot 11 variant 1\nFor a published release you share with others, prefer...",
+      "choices": [
+        "git tag -a v1.0.0 -m \"Release 1.0\"",
+        "Deleting .git and recloning",
+        "git stash clear only",
+        "Never tagging at all"
+      ],
+      "answer": 0,
+      "explain": "Annotated tags carry release metadata and are the usual choice for semver releases.",
+      "difficulty": "easy",
+      "id": "tag_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_easy_11.mp4",
+        "poster": "media/images/tag_easy_11-frame.png",
+        "figure": "media/images/tag_easy_11.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit tag -a v1.4.0 -m \"Release v1.4.0\"\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\ngit push alone always pushes all local tags to the remote.",
+      "answer": false,
+      "explain": "Tags are not pushed by default; use git push origin --tags or push a specific tag name.",
+      "difficulty": "easy",
+      "id": "tag_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_easy_12.mp4",
+        "poster": "media/images/tag_easy_12-frame.png",
+        "figure": "media/images/tag_easy_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit show v1.5.0 | head\n```\n# Review context: `./labs/golf` slot 13 variant 1\ngit show v1.0 is useful to...",
+      "choices": [
+        "Inspect which commit a tag points to (and annotation if present)",
+        "Change your shell PATH",
+        "Ignore build/ directories",
+        "Create a merge conflict automatically"
+      ],
+      "answer": 0,
+      "explain": "git show on a tag reveals the tagged commit and, for annotated tags, the tag message.",
+      "difficulty": "easy",
+      "id": "tag_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_easy_13.mp4",
+        "poster": "media/images/tag_easy_13-frame.png",
+        "figure": "media/images/tag_easy_13.png"
+      }
+    },
+    {
+      "id": "tag_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push origin v1.6.0\n```\n# Review context: `/tmp/gitlab/hotel` slot 14 variant 1\nA lightweight tag is...",
+      "choices": [
+        "A name pointing at a commit, without extra tag object metadata",
+        "A branch that auto-updates",
+        "The same as .gitignore",
+        "Only stored on GitHub"
+      ],
+      "answer": 0,
+      "explain": "Lightweight tags are refs to a commit.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_easy_14.mp4",
+        "poster": "media/images/tag_easy_14-frame.png",
+        "figure": "media/images/tag_easy_14.png"
+      }
+    },
+    {
+      "id": "tag_easy_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\nFor a published release, prefer...",
+      "choices": [
+        "`git tag -a v1.6.0 -m \"Release\"`",
+        "Deleting .git",
+        "git stash clear only",
+        "Never tagging"
+      ],
+      "answer": 0,
+      "explain": "Annotated tags carry release metadata.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_easy_15.mp4",
+        "poster": "media/images/tag_easy_15-frame.png",
+        "figure": "media/images/tag_easy_15.png"
+      }
+    },
+    {
+      "id": "tag_easy_16",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit tag -a v1.8.0 -m \"Release v1.8.0\"\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\n`git push` alone always pushes all local tags.",
+      "answer": false,
+      "explain": "Push a tag or use --tags.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_easy_16.mp4",
+        "poster": "media/images/tag_easy_16-frame.png",
+        "figure": "media/images/tag_easy_16.png"
+      }
+    },
+    {
+      "id": "tag_easy_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit show v1.0.0 | head\n```\n# Review context: `~/src/charlie` slot 17 variant 1\n`git show v1.8.0` is useful to...",
+      "choices": [
+        "See which commit the tag points to (and annotation)",
+        "Change PATH",
+        "Ignore build/",
+        "Create a conflict"
+      ],
+      "answer": 0,
+      "explain": "show inspects the tag.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_easy_17.mp4",
+        "poster": "media/images/tag_easy_17-frame.png",
+        "figure": "media/images/tag_easy_17.png"
+      }
+    },
+    {
+      "id": "tag_easy_18",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit push origin v1.1.0\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\nTags do not move when you make new commits (unlike branches).",
+      "answer": true,
+      "explain": "A tag stays on that commit.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_easy_18.mp4",
+        "poster": "media/images/tag_easy_18-frame.png",
+        "figure": "media/images/tag_easy_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n# Review context: `./labs/echo` slot 19 variant 1\nA lightweight tag is...",
+      "choices": [
+        "A name pointing at a commit, without extra tag object metadata",
+        "A branch that auto-updates on every push",
+        "The same as .gitignore",
+        "Only stored on GitHub, never locally"
+      ],
+      "answer": 0,
+      "explain": "Lightweight tags are simple refs to a commit; annotated tags add message, tagger, and date.",
+      "difficulty": "easy",
+      "id": "tag_easy_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_easy_19.mp4",
+        "poster": "media/images/tag_easy_19-frame.png",
+        "figure": "media/images/tag_easy_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit tag -a v1.3.0 -m \"Release v1.3.0\"\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\nFor a published release you share with others, prefer...",
+      "choices": [
+        "git tag -a v1.0.0 -m \"Release 1.0\"",
+        "Deleting .git and recloning",
+        "git stash clear only",
+        "Never tagging at all"
+      ],
+      "answer": 0,
+      "explain": "Annotated tags carry release metadata and are the usual choice for semver releases.",
+      "difficulty": "easy",
+      "id": "tag_easy_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_easy_20.mp4",
+        "poster": "media/images/tag_easy_20-frame.png",
+        "figure": "media/images/tag_easy_20.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit show v1.4.0 | head\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\ngit push alone always pushes all local tags to the remote.",
+      "answer": false,
+      "explain": "Tags are not pushed by default; use git push origin --tags or push a specific tag name.",
+      "difficulty": "easy",
+      "id": "tag_easy_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_easy_21.mp4",
+        "poster": "media/images/tag_easy_21-frame.png",
+        "figure": "media/images/tag_easy_21.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push origin v1.5.0\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\ngit show v1.0 is useful to...",
+      "choices": [
+        "Inspect which commit a tag points to (and annotation if present)",
+        "Change your shell PATH",
+        "Ignore build/ directories",
+        "Create a merge conflict automatically"
+      ],
+      "answer": 0,
+      "explain": "git show on a tag reveals the tagged commit and, for annotated tags, the tag message.",
+      "difficulty": "easy",
+      "id": "tag_easy_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_easy_22.mp4",
+        "poster": "media/images/tag_easy_22-frame.png",
+        "figure": "media/images/tag_easy_22.png"
+      }
+    },
+    {
+      "id": "tag_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n# Review context: `~/src/alpha` slot 23 variant 1\nA lightweight tag is...",
+      "choices": [
+        "A name pointing at a commit, without extra tag object metadata",
+        "A branch that auto-updates",
+        "The same as .gitignore",
+        "Only stored on GitHub"
+      ],
+      "answer": 0,
+      "explain": "Lightweight tags are refs to a commit.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_easy_23.mp4",
+        "poster": "media/images/tag_easy_23-frame.png",
+        "figure": "media/images/tag_easy_23.png"
+      }
+    },
+    {
+      "id": "tag_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit tag -a v1.7.0 -m \"Release v1.7.0\"\n```\n# Review context: `/work/chip/bravo` slot 24 variant 1\nFor a published release, prefer...",
+      "choices": [
+        "`git tag -a v1.6.0 -m \"Release\"`",
+        "Deleting .git",
+        "git stash clear only",
+        "Never tagging"
+      ],
+      "answer": 0,
+      "explain": "Annotated tags carry release metadata.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_easy_24.mp4",
+        "poster": "media/images/tag_easy_24-frame.png",
+        "figure": "media/images/tag_easy_24.png"
+      }
+    },
+    {
+      "id": "tag_easy_25",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit show v1.8.0 | head\n```\n# Review context: `./labs/charlie` slot 25 variant 1\n`git push` alone always pushes all local tags.",
+      "answer": false,
+      "explain": "Push a tag or use --tags.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_easy_25.mp4",
+        "poster": "media/images/tag_easy_25-frame.png",
+        "figure": "media/images/tag_easy_25.png"
+      }
+    },
+    {
+      "id": "tag_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push origin v1.0.0\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\n`git show v1.8.0` is useful to...",
+      "choices": [
+        "See which commit the tag points to (and annotation)",
+        "Change PATH",
+        "Ignore build/",
+        "Create a conflict"
+      ],
+      "answer": 0,
+      "explain": "show inspects the tag.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_easy_26.mp4",
+        "poster": "media/images/tag_easy_26-frame.png",
+        "figure": "media/images/tag_easy_26.png"
+      }
+    },
+    {
+      "id": "tag_easy_27",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\nTags do not move when you make new commits (unlike branches).",
+      "answer": true,
+      "explain": "A tag stays on that commit.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_easy_27.mp4",
+        "poster": "media/images/tag_easy_27-frame.png",
+        "figure": "media/images/tag_easy_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit tag -a v1.2.0 -m \"Release v1.2.0\"\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\nA lightweight tag is...",
+      "choices": [
+        "A name pointing at a commit, without extra tag object metadata",
+        "A branch that auto-updates on every push",
+        "The same as .gitignore",
+        "Only stored on GitHub, never locally"
+      ],
+      "answer": 0,
+      "explain": "Lightweight tags are simple refs to a commit; annotated tags add message, tagger, and date.",
+      "difficulty": "easy",
+      "id": "tag_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_easy_28.mp4",
+        "poster": "media/images/tag_easy_28-frame.png",
+        "figure": "media/images/tag_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit show v1.3.0 | head\n```\n# Review context: `~/src/golf` slot 29 variant 1\nFor a published release you share with others, prefer...",
+      "choices": [
+        "git tag -a v1.0.0 -m \"Release 1.0\"",
+        "Deleting .git and recloning",
+        "git stash clear only",
+        "Never tagging at all"
+      ],
+      "answer": 0,
+      "explain": "Annotated tags carry release metadata and are the usual choice for semver releases.",
+      "difficulty": "easy",
+      "id": "tag_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_easy_29.mp4",
+        "poster": "media/images/tag_easy_29-frame.png",
+        "figure": "media/images/tag_easy_29.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit push origin v1.4.0\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\ngit push alone always pushes all local tags to the remote.",
+      "answer": false,
+      "explain": "Tags are not pushed by default; use git push origin --tags or push a specific tag name.",
+      "difficulty": "easy",
+      "id": "tag_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_easy_30.mp4",
+        "poster": "media/images/tag_easy_30-frame.png",
+        "figure": "media/images/tag_easy_30.png"
+      }
+    },
+    {
+      "id": "tag_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit show v1.2.0 | head\n```\n`git tag -d v1.1.0` deletes...",
+      "choices": [
+        "The local tag",
+        "The remote automatically always",
+        "The commit object always",
+        "origin"
+      ],
+      "answer": 0,
+      "explain": "Local delete; remote needs push --delete.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_medium_01.mp4",
+        "poster": "media/images/tag_medium_01-frame.png",
+        "figure": "media/images/tag_medium_01.png"
+      }
+    },
+    {
+      "id": "tag_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push origin v1.3.0\n```\n`git push origin --delete v1.2.0` removes...",
+      "choices": [
+        "The tag on the remote",
+        "Local main",
+        "The working tree",
+        "Submodules"
+      ],
+      "answer": 0,
+      "explain": "Delete the remote tag ref.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_medium_02.mp4",
+        "poster": "media/images/tag_medium_02-frame.png",
+        "figure": "media/images/tag_medium_02.png"
+      }
+    },
+    {
+      "id": "tag_medium_03",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n`git checkout v1.3.0` often leaves you in detached HEAD.",
+      "answer": true,
+      "explain": "Tags are not branches.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_medium_03.mp4",
+        "poster": "media/images/tag_medium_03-frame.png",
+        "figure": "media/images/tag_medium_03.png"
+      }
+    },
+    {
+      "id": "tag_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit tag -a v1.5.0 -m \"Release v1.5.0\"\n```\n`git describe` prefers...",
+      "choices": [
+        "Nearest annotated tag plus dirty/abbrev info",
+        "A random remote",
+        "Stash names",
+        "Ignore patterns"
+      ],
+      "answer": 0,
+      "explain": "describe names a commit relative to tags.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_medium_04.mp4",
+        "poster": "media/images/tag_medium_04-frame.png",
+        "figure": "media/images/tag_medium_04.png"
+      }
+    },
+    {
+      "id": "tag_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit show v1.6.0 | head\n```\nMoving a tag that others fetched is...",
+      "choices": [
+        "A history/ref rewrite; avoid for published releases",
+        "Always safe",
+        "Required weekly",
+        "The same as branching"
+      ],
+      "answer": 0,
+      "explain": "Published tags should be immutable.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_medium_05.mp4",
+        "poster": "media/images/tag_medium_05-frame.png",
+        "figure": "media/images/tag_medium_05.png"
+      }
+    },
+    {
+      "id": "tag_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push origin v1.7.0\n```\n`git tag -d v1.6.0` deletes...",
+      "choices": [
+        "The local tag",
+        "The remote automatically always",
+        "The commit object always",
+        "origin"
+      ],
+      "answer": 0,
+      "explain": "Local delete; remote needs push --delete.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_medium_06.mp4",
+        "poster": "media/images/tag_medium_06-frame.png",
+        "figure": "media/images/tag_medium_06.png"
+      }
+    },
+    {
+      "id": "tag_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n`git push origin --delete v1.7.0` removes...",
+      "choices": [
+        "The tag on the remote",
+        "Local main",
+        "The working tree",
+        "Submodules"
+      ],
+      "answer": 0,
+      "explain": "Delete the remote tag ref.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_medium_07.mp4",
+        "poster": "media/images/tag_medium_07-frame.png",
+        "figure": "media/images/tag_medium_07.png"
+      }
+    },
+    {
+      "id": "tag_medium_08",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit tag -a v1.0.0 -m \"Release v1.0.0\"\n```\n`git checkout v1.8.0` often leaves you in detached HEAD.",
+      "answer": true,
+      "explain": "Tags are not branches.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_medium_08.mp4",
+        "poster": "media/images/tag_medium_08-frame.png",
+        "figure": "media/images/tag_medium_08.png"
+      }
+    },
+    {
+      "id": "tag_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit show v1.1.0 | head\n```\n# Review context: `C:/proj/charlie` slot 9 variant 1\n`git describe` prefers...",
+      "choices": [
+        "Nearest annotated tag plus dirty/abbrev info",
+        "A random remote",
+        "Stash names",
+        "Ignore patterns"
+      ],
+      "answer": 0,
+      "explain": "describe names a commit relative to tags.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_medium_09.mp4",
+        "poster": "media/images/tag_medium_09-frame.png",
+        "figure": "media/images/tag_medium_09.png"
+      }
+    },
+    {
+      "id": "tag_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push origin v1.2.0\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\nMoving a tag that others fetched is...",
+      "choices": [
+        "A history/ref rewrite; avoid for published releases",
+        "Always safe",
+        "Required weekly",
+        "The same as branching"
+      ],
+      "answer": 0,
+      "explain": "Published tags should be immutable.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_medium_10.mp4",
+        "poster": "media/images/tag_medium_10-frame.png",
+        "figure": "media/images/tag_medium_10.png"
+      }
+    },
+    {
+      "id": "tag_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n`git tag -d v1.2.0` deletes...",
+      "choices": [
+        "The local tag",
+        "The remote automatically always",
+        "The commit object always",
+        "origin"
+      ],
+      "answer": 0,
+      "explain": "Local delete; remote needs push --delete.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_medium_11.mp4",
+        "poster": "media/images/tag_medium_11-frame.png",
+        "figure": "media/images/tag_medium_11.png"
+      }
+    },
+    {
+      "id": "tag_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit tag -a v1.4.0 -m \"Release v1.4.0\"\n```\n`git push origin --delete v1.3.0` removes...",
+      "choices": [
+        "The tag on the remote",
+        "Local main",
+        "The working tree",
+        "Submodules"
+      ],
+      "answer": 0,
+      "explain": "Delete the remote tag ref.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_medium_12.mp4",
+        "poster": "media/images/tag_medium_12-frame.png",
+        "figure": "media/images/tag_medium_12.png"
+      }
+    },
+    {
+      "id": "tag_medium_13",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit show v1.5.0 | head\n```\n`git checkout v1.4.0` often leaves you in detached HEAD.",
+      "answer": true,
+      "explain": "Tags are not branches.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_medium_13.mp4",
+        "poster": "media/images/tag_medium_13-frame.png",
+        "figure": "media/images/tag_medium_13.png"
+      }
+    },
+    {
+      "id": "tag_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push origin v1.6.0\n```\n# Review context: `/tmp/gitlab/hotel` slot 14 variant 1\n`git describe` prefers...",
+      "choices": [
+        "Nearest annotated tag plus dirty/abbrev info",
+        "A random remote",
+        "Stash names",
+        "Ignore patterns"
+      ],
+      "answer": 0,
+      "explain": "describe names a commit relative to tags.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_medium_14.mp4",
+        "poster": "media/images/tag_medium_14-frame.png",
+        "figure": "media/images/tag_medium_14.png"
+      }
+    },
+    {
+      "id": "tag_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\nMoving a tag that others fetched is...",
+      "choices": [
+        "A history/ref rewrite; avoid for published releases",
+        "Always safe",
+        "Required weekly",
+        "The same as branching"
+      ],
+      "answer": 0,
+      "explain": "Published tags should be immutable.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_medium_15.mp4",
+        "poster": "media/images/tag_medium_15-frame.png",
+        "figure": "media/images/tag_medium_15.png"
+      }
+    },
+    {
+      "id": "tag_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit tag -a v1.8.0 -m \"Release v1.8.0\"\n```\n`git tag -d v1.7.0` deletes...",
+      "choices": [
+        "The local tag",
+        "The remote automatically always",
+        "The commit object always",
+        "origin"
+      ],
+      "answer": 0,
+      "explain": "Local delete; remote needs push --delete.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_medium_16.mp4",
+        "poster": "media/images/tag_medium_16-frame.png",
+        "figure": "media/images/tag_medium_16.png"
+      }
+    },
+    {
+      "id": "tag_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit show v1.0.0 | head\n```\n`git push origin --delete v1.8.0` removes...",
+      "choices": [
+        "The tag on the remote",
+        "Local main",
+        "The working tree",
+        "Submodules"
+      ],
+      "answer": 0,
+      "explain": "Delete the remote tag ref.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_medium_17.mp4",
+        "poster": "media/images/tag_medium_17-frame.png",
+        "figure": "media/images/tag_medium_17.png"
+      }
+    },
+    {
+      "id": "tag_medium_18",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit push origin v1.1.0\n```\n`git checkout v1.0.0` often leaves you in detached HEAD.",
+      "answer": true,
+      "explain": "Tags are not branches.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_medium_18.mp4",
+        "poster": "media/images/tag_medium_18-frame.png",
+        "figure": "media/images/tag_medium_18.png"
+      }
+    },
+    {
+      "id": "tag_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n# Review context: `./labs/echo` slot 19 variant 1\n`git describe` prefers...",
+      "choices": [
+        "Nearest annotated tag plus dirty/abbrev info",
+        "A random remote",
+        "Stash names",
+        "Ignore patterns"
+      ],
+      "answer": 0,
+      "explain": "describe names a commit relative to tags.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_medium_19.mp4",
+        "poster": "media/images/tag_medium_19-frame.png",
+        "figure": "media/images/tag_medium_19.png"
+      }
+    },
+    {
+      "id": "tag_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit tag -a v1.3.0 -m \"Release v1.3.0\"\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\nMoving a tag that others fetched is...",
+      "choices": [
+        "A history/ref rewrite; avoid for published releases",
+        "Always safe",
+        "Required weekly",
+        "The same as branching"
+      ],
+      "answer": 0,
+      "explain": "Published tags should be immutable.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_medium_20.mp4",
+        "poster": "media/images/tag_medium_20-frame.png",
+        "figure": "media/images/tag_medium_20.png"
+      }
+    },
+    {
+      "id": "tag_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit show v1.4.0 | head\n```\n`git tag -d v1.3.0` deletes...",
+      "choices": [
+        "The local tag",
+        "The remote automatically always",
+        "The commit object always",
+        "origin"
+      ],
+      "answer": 0,
+      "explain": "Local delete; remote needs push --delete.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_medium_21.mp4",
+        "poster": "media/images/tag_medium_21-frame.png",
+        "figure": "media/images/tag_medium_21.png"
+      }
+    },
+    {
+      "id": "tag_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push origin v1.5.0\n```\n`git push origin --delete v1.4.0` removes...",
+      "choices": [
+        "The tag on the remote",
+        "Local main",
+        "The working tree",
+        "Submodules"
+      ],
+      "answer": 0,
+      "explain": "Delete the remote tag ref.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_medium_22.mp4",
+        "poster": "media/images/tag_medium_22-frame.png",
+        "figure": "media/images/tag_medium_22.png"
+      }
+    },
+    {
+      "id": "tag_medium_23",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n`git checkout v1.5.0` often leaves you in detached HEAD.",
+      "answer": true,
+      "explain": "Tags are not branches.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_medium_23.mp4",
+        "poster": "media/images/tag_medium_23-frame.png",
+        "figure": "media/images/tag_medium_23.png"
+      }
+    },
+    {
+      "id": "tag_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit tag -a v1.7.0 -m \"Release v1.7.0\"\n```\n# Review context: `/work/chip/bravo` slot 24 variant 1\n`git describe` prefers...",
+      "choices": [
+        "Nearest annotated tag plus dirty/abbrev info",
+        "A random remote",
+        "Stash names",
+        "Ignore patterns"
+      ],
+      "answer": 0,
+      "explain": "describe names a commit relative to tags.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_medium_24.mp4",
+        "poster": "media/images/tag_medium_24-frame.png",
+        "figure": "media/images/tag_medium_24.png"
+      }
+    },
+    {
+      "id": "tag_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit show v1.8.0 | head\n```\n# Review context: `./labs/charlie` slot 25 variant 1\nMoving a tag that others fetched is...",
+      "choices": [
+        "A history/ref rewrite; avoid for published releases",
+        "Always safe",
+        "Required weekly",
+        "The same as branching"
+      ],
+      "answer": 0,
+      "explain": "Published tags should be immutable.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_medium_25.mp4",
+        "poster": "media/images/tag_medium_25-frame.png",
+        "figure": "media/images/tag_medium_25.png"
+      }
+    },
+    {
+      "id": "tag_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push origin v1.0.0\n```\n`git tag -d v1.8.0` deletes...",
+      "choices": [
+        "The local tag",
+        "The remote automatically always",
+        "The commit object always",
+        "origin"
+      ],
+      "answer": 0,
+      "explain": "Local delete; remote needs push --delete.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_medium_26.mp4",
+        "poster": "media/images/tag_medium_26-frame.png",
+        "figure": "media/images/tag_medium_26.png"
+      }
+    },
+    {
+      "id": "tag_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n`git push origin --delete v1.0.0` removes...",
+      "choices": [
+        "The tag on the remote",
+        "Local main",
+        "The working tree",
+        "Submodules"
+      ],
+      "answer": 0,
+      "explain": "Delete the remote tag ref.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_medium_27.mp4",
+        "poster": "media/images/tag_medium_27-frame.png",
+        "figure": "media/images/tag_medium_27.png"
+      }
+    },
+    {
+      "id": "tag_medium_28",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit tag -a v1.2.0 -m \"Release v1.2.0\"\n```\n`git checkout v1.1.0` often leaves you in detached HEAD.",
+      "answer": true,
+      "explain": "Tags are not branches.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_medium_28.mp4",
+        "poster": "media/images/tag_medium_28-frame.png",
+        "figure": "media/images/tag_medium_28.png"
+      }
+    },
+    {
+      "id": "tag_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit show v1.3.0 | head\n```\n# Review context: `~/src/golf` slot 29 variant 1\n`git describe` prefers...",
+      "choices": [
+        "Nearest annotated tag plus dirty/abbrev info",
+        "A random remote",
+        "Stash names",
+        "Ignore patterns"
+      ],
+      "answer": 0,
+      "explain": "describe names a commit relative to tags.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_medium_29.mp4",
+        "poster": "media/images/tag_medium_29-frame.png",
+        "figure": "media/images/tag_medium_29.png"
+      }
+    },
+    {
+      "id": "tag_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push origin v1.4.0\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\nMoving a tag that others fetched is...",
+      "choices": [
+        "A history/ref rewrite; avoid for published releases",
+        "Always safe",
+        "Required weekly",
+        "The same as branching"
+      ],
+      "answer": 0,
+      "explain": "Published tags should be immutable.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_medium_30.mp4",
+        "poster": "media/images/tag_medium_30-frame.png",
+        "figure": "media/images/tag_medium_30.png"
+      }
+    },
+    {
+      "id": "tag_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n`git tag -a v1.1.0 a0001bee` tags...",
+      "choices": [
+        "That commit, not necessarily HEAD",
+        "Only origin/main",
+        "The stash",
+        "A PR"
+      ],
+      "answer": 0,
+      "explain": "You can tag any commit.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_hard_01.mp4",
+        "poster": "media/images/tag_hard_01-frame.png",
+        "figure": "media/images/tag_hard_01.png"
+      }
+    },
+    {
+      "id": "tag_hard_02",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit tag -a v1.5.0 -m \"Release v1.5.0\"\n```\n`refs/tags/v1.2.0` can be fetched with `git fetch origin tag v1.2.0`.",
+      "answer": true,
+      "explain": "Tags are refs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_hard_02.mp4",
+        "poster": "media/images/tag_hard_02-frame.png",
+        "figure": "media/images/tag_hard_02.png"
+      }
+    },
+    {
+      "id": "tag_hard_03",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit show v1.6.0 | head\n```\nWhy releases use annotated tags...",
+      "choices": [
+        "Message, tagger, date; tooling and git describe prefer them",
+        "Git cannot store lightweight tags on remotes",
+        "They auto-move like branches",
+        "They ignore .gitignore"
+      ],
+      "answer": 0,
+      "explain": "Metadata and tooling.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_hard_03.mp4",
+        "poster": "media/images/tag_hard_03-frame.png",
+        "figure": "media/images/tag_hard_03.png"
+      }
+    },
+    {
+      "id": "tag_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push origin v1.7.0\n```\n`git push --follow-tags` pushes...",
+      "choices": [
+        "Commits plus annotated tags reachable from the commits",
+        "Every lightweight tag always",
+        "The stash",
+        "Ignore files"
+      ],
+      "answer": 0,
+      "explain": "follow-tags is annotated-aware.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_hard_04.mp4",
+        "poster": "media/images/tag_hard_04-frame.png",
+        "figure": "media/images/tag_hard_04.png"
+      }
+    },
+    {
+      "id": "tag_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\nAnnotated vs lightweight: `git cat-file -t v1.5.0` on annotated is...",
+      "choices": [
+        "tag",
+        "commit",
+        "tree",
+        "blob"
+      ],
+      "answer": 0,
+      "explain": "Annotated tags are tag objects.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_hard_05.mp4",
+        "poster": "media/images/tag_hard_05-frame.png",
+        "figure": "media/images/tag_hard_05.png"
+      }
+    },
+    {
+      "id": "tag_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit tag -a v1.0.0 -m \"Release v1.0.0\"\n```\n`git tag -a v1.6.0 a0006bee` tags...",
+      "choices": [
+        "That commit, not necessarily HEAD",
+        "Only origin/main",
+        "The stash",
+        "A PR"
+      ],
+      "answer": 0,
+      "explain": "You can tag any commit.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_hard_06.mp4",
+        "poster": "media/images/tag_hard_06-frame.png",
+        "figure": "media/images/tag_hard_06.png"
+      }
+    },
+    {
+      "id": "tag_hard_07",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit show v1.1.0 | head\n```\n`refs/tags/v1.7.0` can be fetched with `git fetch origin tag v1.7.0`.",
+      "answer": true,
+      "explain": "Tags are refs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_hard_07.mp4",
+        "poster": "media/images/tag_hard_07-frame.png",
+        "figure": "media/images/tag_hard_07.png"
+      }
+    },
+    {
+      "id": "tag_hard_08",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push origin v1.2.0\n```\n# Review context: `/tmp/gitlab/bravo` slot 8 variant 1\nWhy releases use annotated tags...",
+      "choices": [
+        "Message, tagger, date; tooling and git describe prefer them",
+        "Git cannot store lightweight tags on remotes",
+        "They auto-move like branches",
+        "They ignore .gitignore"
+      ],
+      "answer": 0,
+      "explain": "Metadata and tooling.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_hard_08.mp4",
+        "poster": "media/images/tag_hard_08-frame.png",
+        "figure": "media/images/tag_hard_08.png"
+      }
+    },
+    {
+      "id": "tag_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n# Review context: `C:/proj/charlie` slot 9 variant 1\n`git push --follow-tags` pushes...",
+      "choices": [
+        "Commits plus annotated tags reachable from the commits",
+        "Every lightweight tag always",
+        "The stash",
+        "Ignore files"
+      ],
+      "answer": 0,
+      "explain": "follow-tags is annotated-aware.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_hard_09.mp4",
+        "poster": "media/images/tag_hard_09-frame.png",
+        "figure": "media/images/tag_hard_09.png"
+      }
+    },
+    {
+      "id": "tag_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit tag -a v1.4.0 -m \"Release v1.4.0\"\n```\nAnnotated vs lightweight: `git cat-file -t v1.1.0` on annotated is...",
+      "choices": [
+        "tag",
+        "commit",
+        "tree",
+        "blob"
+      ],
+      "answer": 0,
+      "explain": "Annotated tags are tag objects.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_hard_10.mp4",
+        "poster": "media/images/tag_hard_10-frame.png",
+        "figure": "media/images/tag_hard_10.png"
+      }
+    },
+    {
+      "id": "tag_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit show v1.5.0 | head\n```\n`git tag -a v1.2.0 a0011bee` tags...",
+      "choices": [
+        "That commit, not necessarily HEAD",
+        "Only origin/main",
+        "The stash",
+        "A PR"
+      ],
+      "answer": 0,
+      "explain": "You can tag any commit.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_hard_11.mp4",
+        "poster": "media/images/tag_hard_11-frame.png",
+        "figure": "media/images/tag_hard_11.png"
+      }
+    },
+    {
+      "id": "tag_hard_12",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit push origin v1.6.0\n```\n`refs/tags/v1.3.0` can be fetched with `git fetch origin tag v1.3.0`.",
+      "answer": true,
+      "explain": "Tags are refs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_hard_12.mp4",
+        "poster": "media/images/tag_hard_12-frame.png",
+        "figure": "media/images/tag_hard_12.png"
+      }
+    },
+    {
+      "id": "tag_hard_13",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n# Review context: `./labs/golf` slot 13 variant 1\nWhy releases use annotated tags...",
+      "choices": [
+        "Message, tagger, date; tooling and git describe prefer them",
+        "Git cannot store lightweight tags on remotes",
+        "They auto-move like branches",
+        "They ignore .gitignore"
+      ],
+      "answer": 0,
+      "explain": "Metadata and tooling.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_hard_13.mp4",
+        "poster": "media/images/tag_hard_13-frame.png",
+        "figure": "media/images/tag_hard_13.png"
+      }
+    },
+    {
+      "id": "tag_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit tag -a v1.8.0 -m \"Release v1.8.0\"\n```\n# Review context: `/tmp/gitlab/hotel` slot 14 variant 1\n`git push --follow-tags` pushes...",
+      "choices": [
+        "Commits plus annotated tags reachable from the commits",
+        "Every lightweight tag always",
+        "The stash",
+        "Ignore files"
+      ],
+      "answer": 0,
+      "explain": "follow-tags is annotated-aware.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_hard_14.mp4",
+        "poster": "media/images/tag_hard_14-frame.png",
+        "figure": "media/images/tag_hard_14.png"
+      }
+    },
+    {
+      "id": "tag_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit show v1.0.0 | head\n```\nAnnotated vs lightweight: `git cat-file -t v1.6.0` on annotated is...",
+      "choices": [
+        "tag",
+        "commit",
+        "tree",
+        "blob"
+      ],
+      "answer": 0,
+      "explain": "Annotated tags are tag objects.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_hard_15.mp4",
+        "poster": "media/images/tag_hard_15-frame.png",
+        "figure": "media/images/tag_hard_15.png"
+      }
+    },
+    {
+      "id": "tag_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push origin v1.1.0\n```\n`git tag -a v1.7.0 a0016bee` tags...",
+      "choices": [
+        "That commit, not necessarily HEAD",
+        "Only origin/main",
+        "The stash",
+        "A PR"
+      ],
+      "answer": 0,
+      "explain": "You can tag any commit.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_hard_16.mp4",
+        "poster": "media/images/tag_hard_16-frame.png",
+        "figure": "media/images/tag_hard_16.png"
+      }
+    },
+    {
+      "id": "tag_hard_17",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n`refs/tags/v1.8.0` can be fetched with `git fetch origin tag v1.8.0`.",
+      "answer": true,
+      "explain": "Tags are refs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_hard_17.mp4",
+        "poster": "media/images/tag_hard_17-frame.png",
+        "figure": "media/images/tag_hard_17.png"
+      }
+    },
+    {
+      "id": "tag_hard_18",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit tag -a v1.3.0 -m \"Release v1.3.0\"\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\nWhy releases use annotated tags...",
+      "choices": [
+        "Message, tagger, date; tooling and git describe prefer them",
+        "Git cannot store lightweight tags on remotes",
+        "They auto-move like branches",
+        "They ignore .gitignore"
+      ],
+      "answer": 0,
+      "explain": "Metadata and tooling.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_hard_18.mp4",
+        "poster": "media/images/tag_hard_18-frame.png",
+        "figure": "media/images/tag_hard_18.png"
+      }
+    },
+    {
+      "id": "tag_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit show v1.4.0 | head\n```\n# Review context: `./labs/echo` slot 19 variant 1\n`git push --follow-tags` pushes...",
+      "choices": [
+        "Commits plus annotated tags reachable from the commits",
+        "Every lightweight tag always",
+        "The stash",
+        "Ignore files"
+      ],
+      "answer": 0,
+      "explain": "follow-tags is annotated-aware.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_hard_19.mp4",
+        "poster": "media/images/tag_hard_19-frame.png",
+        "figure": "media/images/tag_hard_19.png"
+      }
+    },
+    {
+      "id": "tag_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push origin v1.5.0\n```\nAnnotated vs lightweight: `git cat-file -t v1.2.0` on annotated is...",
+      "choices": [
+        "tag",
+        "commit",
+        "tree",
+        "blob"
+      ],
+      "answer": 0,
+      "explain": "Annotated tags are tag objects.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_hard_20.mp4",
+        "poster": "media/images/tag_hard_20-frame.png",
+        "figure": "media/images/tag_hard_20.png"
+      }
+    },
+    {
+      "id": "tag_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n`git tag -a v1.3.0 a0021bee` tags...",
+      "choices": [
+        "That commit, not necessarily HEAD",
+        "Only origin/main",
+        "The stash",
+        "A PR"
+      ],
+      "answer": 0,
+      "explain": "You can tag any commit.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_hard_21.mp4",
+        "poster": "media/images/tag_hard_21-frame.png",
+        "figure": "media/images/tag_hard_21.png"
+      }
+    },
+    {
+      "id": "tag_hard_22",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit tag -a v1.7.0 -m \"Release v1.7.0\"\n```\n`refs/tags/v1.4.0` can be fetched with `git fetch origin tag v1.4.0`.",
+      "answer": true,
+      "explain": "Tags are refs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_hard_22.mp4",
+        "poster": "media/images/tag_hard_22-frame.png",
+        "figure": "media/images/tag_hard_22.png"
+      }
+    },
+    {
+      "id": "tag_hard_23",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit show v1.8.0 | head\n```\n# Review context: `~/src/alpha` slot 23 variant 1\nWhy releases use annotated tags...",
+      "choices": [
+        "Message, tagger, date; tooling and git describe prefer them",
+        "Git cannot store lightweight tags on remotes",
+        "They auto-move like branches",
+        "They ignore .gitignore"
+      ],
+      "answer": 0,
+      "explain": "Metadata and tooling.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_hard_23.mp4",
+        "poster": "media/images/tag_hard_23-frame.png",
+        "figure": "media/images/tag_hard_23.png"
+      }
+    },
+    {
+      "id": "tag_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push origin v1.0.0\n```\n# Review context: `/work/chip/bravo` slot 24 variant 1\n`git push --follow-tags` pushes...",
+      "choices": [
+        "Commits plus annotated tags reachable from the commits",
+        "Every lightweight tag always",
+        "The stash",
+        "Ignore files"
+      ],
+      "answer": 0,
+      "explain": "follow-tags is annotated-aware.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_hard_24.mp4",
+        "poster": "media/images/tag_hard_24-frame.png",
+        "figure": "media/images/tag_hard_24.png"
+      }
+    },
+    {
+      "id": "tag_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\nAnnotated vs lightweight: `git cat-file -t v1.7.0` on annotated is...",
+      "choices": [
+        "tag",
+        "commit",
+        "tree",
+        "blob"
+      ],
+      "answer": 0,
+      "explain": "Annotated tags are tag objects.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_hard_25.mp4",
+        "poster": "media/images/tag_hard_25-frame.png",
+        "figure": "media/images/tag_hard_25.png"
+      }
+    },
+    {
+      "id": "tag_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit tag -a v1.2.0 -m \"Release v1.2.0\"\n```\n`git tag -a v1.8.0 a0026bee` tags...",
+      "choices": [
+        "That commit, not necessarily HEAD",
+        "Only origin/main",
+        "The stash",
+        "A PR"
+      ],
+      "answer": 0,
+      "explain": "You can tag any commit.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_hard_26.mp4",
+        "poster": "media/images/tag_hard_26-frame.png",
+        "figure": "media/images/tag_hard_26.png"
+      }
+    },
+    {
+      "id": "tag_hard_27",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit show v1.3.0 | head\n```\n`refs/tags/v1.0.0` can be fetched with `git fetch origin tag v1.0.0`.",
+      "answer": true,
+      "explain": "Tags are refs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_hard_27.mp4",
+        "poster": "media/images/tag_hard_27-frame.png",
+        "figure": "media/images/tag_hard_27.png"
+      }
+    },
+    {
+      "id": "tag_hard_28",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push origin v1.4.0\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\nWhy releases use annotated tags...",
+      "choices": [
+        "Message, tagger, date; tooling and git describe prefer them",
+        "Git cannot store lightweight tags on remotes",
+        "They auto-move like branches",
+        "They ignore .gitignore"
+      ],
+      "answer": 0,
+      "explain": "Metadata and tooling.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_hard_28.mp4",
+        "poster": "media/images/tag_hard_28-frame.png",
+        "figure": "media/images/tag_hard_28.png"
+      }
+    },
+    {
+      "id": "tag_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit describe --always --dirty\n```\n# Review context: `~/src/golf` slot 29 variant 1\n`git push --follow-tags` pushes...",
+      "choices": [
+        "Commits plus annotated tags reachable from the commits",
+        "Every lightweight tag always",
+        "The stash",
+        "Ignore files"
+      ],
+      "answer": 0,
+      "explain": "follow-tags is annotated-aware.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_hard_29.mp4",
+        "poster": "media/images/tag_hard_29-frame.png",
+        "figure": "media/images/tag_hard_29.png"
+      }
+    },
+    {
+      "id": "tag_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit tag -a v1.6.0 -m \"Release v1.6.0\"\n```\nAnnotated vs lightweight: `git cat-file -t v1.3.0` on annotated is...",
+      "choices": [
+        "tag",
+        "commit",
+        "tree",
+        "blob"
+      ],
+      "answer": 0,
+      "explain": "Annotated tags are tag objects.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/tag_hard_30.mp4",
+        "poster": "media/images/tag_hard_30-frame.png",
+        "figure": "media/images/tag_hard_30.png"
+      }
+    }
+  ]
+}
