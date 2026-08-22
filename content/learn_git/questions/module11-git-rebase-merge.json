@@ -1,0 +1,1674 @@
+{
+  "module": "module11-git-rebase-merge",
+  "title": "Rebase vs merge",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase -i HEAD~4\n```\ngit rebase main on your feature branch mainly...",
+      "choices": [
+        "Replays your commits on top of the current main tip",
+        "Deletes the remote forever",
+        "Ignores all conflict markers automatically",
+        "Replaces git stash"
+      ],
+      "answer": 0,
+      "explain": "Rebase rewinds and reapplies your branch commits as if they started from latest main.",
+      "difficulty": "easy",
+      "id": "rebase_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_easy_01.mp4",
+        "poster": "media/images/rebase_easy_01-frame.png",
+        "figure": "media/images/rebase_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/charlie3\n```\ngit merge on main typically...",
+      "choices": [
+        "Joins another branch with a merge commit (or fast-forward)",
+        "Erases every commit in history",
+        "Only lists tags",
+        "Runs only in the browser lab"
+      ],
+      "answer": 0,
+      "explain": "Merge integrates branches; divergent histories get an explicit merge commit.",
+      "difficulty": "easy",
+      "id": "rebase_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_easy_02.mp4",
+        "poster": "media/images/rebase_easy_02-frame.png",
+        "figure": "media/images/rebase_easy_02.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit pull --rebase\n```\nRebasing a shared branch others already pulled is usually safe.",
+      "answer": false,
+      "explain": "Rebase rewrites history; shared branches should merge unless everyone agrees to rebase.",
+      "difficulty": "easy",
+      "id": "rebase_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_easy_03.mp4",
+        "poster": "media/images/rebase_easy_03-frame.png",
+        "figure": "media/images/rebase_easy_03.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase main\n```\nA common pre-PR rhythm on a solo feature branch is...",
+      "choices": [
+        "Rebase onto latest main for a linear review story",
+        "Force-push main daily",
+        "Never update from main",
+        "Delete .gitignore first"
+      ],
+      "answer": 0,
+      "explain": "Solo feature branches often rebase onto main before review for a clean log.",
+      "difficulty": "easy",
+      "id": "rebase_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_easy_04.mp4",
+        "poster": "media/images/rebase_easy_04-frame.png",
+        "figure": "media/images/rebase_easy_04.png"
+      }
+    },
+    {
+      "id": "rebase_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase -i HEAD~4\n```\n`git rebase main` on `feature/lab5` mainly...",
+      "choices": [
+        "Replays your commits on top of the current main tip",
+        "Deletes the remote forever",
+        "Ignores all conflicts",
+        "Replaces stash"
+      ],
+      "answer": 0,
+      "explain": "Rebase reapplies your commits.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_easy_05.mp4",
+        "poster": "media/images/rebase_easy_05-frame.png",
+        "figure": "media/images/rebase_easy_05.png"
+      }
+    },
+    {
+      "id": "rebase_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/golf7\n```\n`git merge` on main typically...",
+      "choices": [
+        "Joins another branch with a merge commit (or fast-forward)",
+        "Erases every commit",
+        "Only lists tags",
+        "Runs only in a browser"
+      ],
+      "answer": 0,
+      "explain": "Merge integrates branches.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_easy_06.mp4",
+        "poster": "media/images/rebase_easy_06-frame.png",
+        "figure": "media/images/rebase_easy_06.png"
+      }
+    },
+    {
+      "id": "rebase_easy_07",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit pull --rebase\n```\n# Review context: `./labs/alpha` slot 7 variant 1\nRebasing a shared branch others already pulled is usually safe.",
+      "answer": false,
+      "explain": "Rebase rewrites SHAs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_easy_07.mp4",
+        "poster": "media/images/rebase_easy_07-frame.png",
+        "figure": "media/images/rebase_easy_07.png"
+      }
+    },
+    {
+      "id": "rebase_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase main\n```\nA common pre-PR rhythm on a solo `feature/lab8` is...",
+      "choices": [
+        "Rebase onto latest main for a linear review story",
+        "Force-push main daily",
+        "Never update from main",
+        "Delete .gitignore"
+      ],
+      "answer": 0,
+      "explain": "Solo branches often rebase onto main.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_easy_08.mp4",
+        "poster": "media/images/rebase_easy_08-frame.png",
+        "figure": "media/images/rebase_easy_08.png"
+      }
+    },
+    {
+      "id": "rebase_easy_09",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase -i HEAD~4\n```\n`git pull --rebase` fetches then rebases your local commits on the updated upstream.",
+      "answer": true,
+      "explain": "Pull can rebase instead of merge.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_easy_09.mp4",
+        "poster": "media/images/rebase_easy_09-frame.png",
+        "figure": "media/images/rebase_easy_09.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/alpha11\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\ngit rebase main on your feature branch mainly...",
+      "choices": [
+        "Replays your commits on top of the current main tip",
+        "Deletes the remote forever",
+        "Ignores all conflict markers automatically",
+        "Replaces git stash"
+      ],
+      "answer": 0,
+      "explain": "Rebase rewinds and reapplies your branch commits as if they started from latest main.",
+      "difficulty": "easy",
+      "id": "rebase_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_easy_10.mp4",
+        "poster": "media/images/rebase_easy_10-frame.png",
+        "figure": "media/images/rebase_easy_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit pull --rebase\n```\n# Review context: `~/src/echo` slot 11 variant 1\ngit merge on main typically...",
+      "choices": [
+        "Joins another branch with a merge commit (or fast-forward)",
+        "Erases every commit in history",
+        "Only lists tags",
+        "Runs only in the browser lab"
+      ],
+      "answer": 0,
+      "explain": "Merge integrates branches; divergent histories get an explicit merge commit.",
+      "difficulty": "easy",
+      "id": "rebase_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_easy_11.mp4",
+        "poster": "media/images/rebase_easy_11-frame.png",
+        "figure": "media/images/rebase_easy_11.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase main\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\nRebasing a shared branch others already pulled is usually safe.",
+      "answer": false,
+      "explain": "Rebase rewrites history; shared branches should merge unless everyone agrees to rebase.",
+      "difficulty": "easy",
+      "id": "rebase_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_easy_12.mp4",
+        "poster": "media/images/rebase_easy_12-frame.png",
+        "figure": "media/images/rebase_easy_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase -i HEAD~4\n```\n# Review context: `./labs/golf` slot 13 variant 1\nA common pre-PR rhythm on a solo feature branch is...",
+      "choices": [
+        "Rebase onto latest main for a linear review story",
+        "Force-push main daily",
+        "Never update from main",
+        "Delete .gitignore first"
+      ],
+      "answer": 0,
+      "explain": "Solo feature branches often rebase onto main before review for a clean log.",
+      "difficulty": "easy",
+      "id": "rebase_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_easy_13.mp4",
+        "poster": "media/images/rebase_easy_13-frame.png",
+        "figure": "media/images/rebase_easy_13.png"
+      }
+    },
+    {
+      "id": "rebase_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/echo15\n```\n`git rebase main` on `feature/lab14` mainly...",
+      "choices": [
+        "Replays your commits on top of the current main tip",
+        "Deletes the remote forever",
+        "Ignores all conflicts",
+        "Replaces stash"
+      ],
+      "answer": 0,
+      "explain": "Rebase reapplies your commits.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_easy_14.mp4",
+        "poster": "media/images/rebase_easy_14-frame.png",
+        "figure": "media/images/rebase_easy_14.png"
+      }
+    },
+    {
+      "id": "rebase_easy_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit pull --rebase\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\n`git merge` on main typically...",
+      "choices": [
+        "Joins another branch with a merge commit (or fast-forward)",
+        "Erases every commit",
+        "Only lists tags",
+        "Runs only in a browser"
+      ],
+      "answer": 0,
+      "explain": "Merge integrates branches.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_easy_15.mp4",
+        "poster": "media/images/rebase_easy_15-frame.png",
+        "figure": "media/images/rebase_easy_15.png"
+      }
+    },
+    {
+      "id": "rebase_easy_16",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase main\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\nRebasing a shared branch others already pulled is usually safe.",
+      "answer": false,
+      "explain": "Rebase rewrites SHAs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_easy_16.mp4",
+        "poster": "media/images/rebase_easy_16-frame.png",
+        "figure": "media/images/rebase_easy_16.png"
+      }
+    },
+    {
+      "id": "rebase_easy_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase -i HEAD~4\n```\nA common pre-PR rhythm on a solo `feature/lab17` is...",
+      "choices": [
+        "Rebase onto latest main for a linear review story",
+        "Force-push main daily",
+        "Never update from main",
+        "Delete .gitignore"
+      ],
+      "answer": 0,
+      "explain": "Solo branches often rebase onto main.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_easy_17.mp4",
+        "poster": "media/images/rebase_easy_17-frame.png",
+        "figure": "media/images/rebase_easy_17.png"
+      }
+    },
+    {
+      "id": "rebase_easy_18",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/india19\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\n`git pull --rebase` fetches then rebases your local commits on the updated upstream.",
+      "answer": true,
+      "explain": "Pull can rebase instead of merge.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_easy_18.mp4",
+        "poster": "media/images/rebase_easy_18-frame.png",
+        "figure": "media/images/rebase_easy_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit pull --rebase\n```\n# Review context: `./labs/echo` slot 19 variant 1\ngit rebase main on your feature branch mainly...",
+      "choices": [
+        "Replays your commits on top of the current main tip",
+        "Deletes the remote forever",
+        "Ignores all conflict markers automatically",
+        "Replaces git stash"
+      ],
+      "answer": 0,
+      "explain": "Rebase rewinds and reapplies your branch commits as if they started from latest main.",
+      "difficulty": "easy",
+      "id": "rebase_easy_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_easy_19.mp4",
+        "poster": "media/images/rebase_easy_19-frame.png",
+        "figure": "media/images/rebase_easy_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase main\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\ngit merge on main typically...",
+      "choices": [
+        "Joins another branch with a merge commit (or fast-forward)",
+        "Erases every commit in history",
+        "Only lists tags",
+        "Runs only in the browser lab"
+      ],
+      "answer": 0,
+      "explain": "Merge integrates branches; divergent histories get an explicit merge commit.",
+      "difficulty": "easy",
+      "id": "rebase_easy_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_easy_20.mp4",
+        "poster": "media/images/rebase_easy_20-frame.png",
+        "figure": "media/images/rebase_easy_20.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase -i HEAD~4\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\nRebasing a shared branch others already pulled is usually safe.",
+      "answer": false,
+      "explain": "Rebase rewrites history; shared branches should merge unless everyone agrees to rebase.",
+      "difficulty": "easy",
+      "id": "rebase_easy_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_easy_21.mp4",
+        "poster": "media/images/rebase_easy_21-frame.png",
+        "figure": "media/images/rebase_easy_21.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/charlie23\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\nA common pre-PR rhythm on a solo feature branch is...",
+      "choices": [
+        "Rebase onto latest main for a linear review story",
+        "Force-push main daily",
+        "Never update from main",
+        "Delete .gitignore first"
+      ],
+      "answer": 0,
+      "explain": "Solo feature branches often rebase onto main before review for a clean log.",
+      "difficulty": "easy",
+      "id": "rebase_easy_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_easy_22.mp4",
+        "poster": "media/images/rebase_easy_22-frame.png",
+        "figure": "media/images/rebase_easy_22.png"
+      }
+    },
+    {
+      "id": "rebase_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit pull --rebase\n```\n`git rebase main` on `feature/lab23` mainly...",
+      "choices": [
+        "Replays your commits on top of the current main tip",
+        "Deletes the remote forever",
+        "Ignores all conflicts",
+        "Replaces stash"
+      ],
+      "answer": 0,
+      "explain": "Rebase reapplies your commits.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_easy_23.mp4",
+        "poster": "media/images/rebase_easy_23-frame.png",
+        "figure": "media/images/rebase_easy_23.png"
+      }
+    },
+    {
+      "id": "rebase_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase main\n```\n# Review context: `/work/chip/bravo` slot 24 variant 1\n`git merge` on main typically...",
+      "choices": [
+        "Joins another branch with a merge commit (or fast-forward)",
+        "Erases every commit",
+        "Only lists tags",
+        "Runs only in a browser"
+      ],
+      "answer": 0,
+      "explain": "Merge integrates branches.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_easy_24.mp4",
+        "poster": "media/images/rebase_easy_24-frame.png",
+        "figure": "media/images/rebase_easy_24.png"
+      }
+    },
+    {
+      "id": "rebase_easy_25",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase -i HEAD~4\n```\n# Review context: `./labs/charlie` slot 25 variant 1\nRebasing a shared branch others already pulled is usually safe.",
+      "answer": false,
+      "explain": "Rebase rewrites SHAs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_easy_25.mp4",
+        "poster": "media/images/rebase_easy_25-frame.png",
+        "figure": "media/images/rebase_easy_25.png"
+      }
+    },
+    {
+      "id": "rebase_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/golf27\n```\nA common pre-PR rhythm on a solo `feature/lab26` is...",
+      "choices": [
+        "Rebase onto latest main for a linear review story",
+        "Force-push main daily",
+        "Never update from main",
+        "Delete .gitignore"
+      ],
+      "answer": 0,
+      "explain": "Solo branches often rebase onto main.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_easy_26.mp4",
+        "poster": "media/images/rebase_easy_26-frame.png",
+        "figure": "media/images/rebase_easy_26.png"
+      }
+    },
+    {
+      "id": "rebase_easy_27",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit pull --rebase\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\n`git pull --rebase` fetches then rebases your local commits on the updated upstream.",
+      "answer": true,
+      "explain": "Pull can rebase instead of merge.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_easy_27.mp4",
+        "poster": "media/images/rebase_easy_27-frame.png",
+        "figure": "media/images/rebase_easy_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase main\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\ngit rebase main on your feature branch mainly...",
+      "choices": [
+        "Replays your commits on top of the current main tip",
+        "Deletes the remote forever",
+        "Ignores all conflict markers automatically",
+        "Replaces git stash"
+      ],
+      "answer": 0,
+      "explain": "Rebase rewinds and reapplies your branch commits as if they started from latest main.",
+      "difficulty": "easy",
+      "id": "rebase_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_easy_28.mp4",
+        "poster": "media/images/rebase_easy_28-frame.png",
+        "figure": "media/images/rebase_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase -i HEAD~4\n```\n# Review context: `~/src/golf` slot 29 variant 1\ngit merge on main typically...",
+      "choices": [
+        "Joins another branch with a merge commit (or fast-forward)",
+        "Erases every commit in history",
+        "Only lists tags",
+        "Runs only in the browser lab"
+      ],
+      "answer": 0,
+      "explain": "Merge integrates branches; divergent histories get an explicit merge commit.",
+      "difficulty": "easy",
+      "id": "rebase_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_easy_29.mp4",
+        "poster": "media/images/rebase_easy_29-frame.png",
+        "figure": "media/images/rebase_easy_29.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/alpha31\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\nRebasing a shared branch others already pulled is usually safe.",
+      "answer": false,
+      "explain": "Rebase rewrites history; shared branches should merge unless everyone agrees to rebase.",
+      "difficulty": "easy",
+      "id": "rebase_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_easy_30.mp4",
+        "poster": "media/images/rebase_easy_30-frame.png",
+        "figure": "media/images/rebase_easy_30.png"
+      }
+    },
+    {
+      "id": "rebase_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase -i HEAD~4\n```\n`git rebase -i HEAD~3` can...",
+      "choices": [
+        "squash/fixup/reword recent commits",
+        "only fetch",
+        "only tag",
+        "only stash"
+      ],
+      "answer": 0,
+      "explain": "Interactive rebase edits a todo list.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_medium_01.mp4",
+        "poster": "media/images/rebase_medium_01-frame.png",
+        "figure": "media/images/rebase_medium_01.png"
+      }
+    },
+    {
+      "id": "rebase_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/charlie3\n```\n`fixup` in rebase -i...",
+      "choices": [
+        "Folds the commit into the previous and drops its message",
+        "Pushes origin",
+        "Starts bisect",
+        "Deletes remotes"
+      ],
+      "answer": 0,
+      "explain": "fixup vs squash (keeps messages).",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_medium_02.mp4",
+        "poster": "media/images/rebase_medium_02-frame.png",
+        "figure": "media/images/rebase_medium_02.png"
+      }
+    },
+    {
+      "id": "rebase_medium_03",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit pull --rebase\n```\n`git rebase --onto main feature/lab3` can transplant a commit range.",
+      "answer": true,
+      "explain": "--onto is advanced replay.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_medium_03.mp4",
+        "poster": "media/images/rebase_medium_03-frame.png",
+        "figure": "media/images/rebase_medium_03.png"
+      }
+    },
+    {
+      "id": "rebase_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase main\n```\nConflicts during rebase: after fixing `notes4.md`...",
+      "choices": [
+        "git add notes4.md && git rebase --continue",
+        "git merge --abort",
+        "git tag -a",
+        "git remote prune"
+      ],
+      "answer": 0,
+      "explain": "Sequencer continue.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_medium_04.mp4",
+        "poster": "media/images/rebase_medium_04-frame.png",
+        "figure": "media/images/rebase_medium_04.png"
+      }
+    },
+    {
+      "id": "rebase_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase -i HEAD~4\n```\n`git rebase --abort`...",
+      "choices": [
+        "Cancels an in-progress rebase",
+        "Deletes origin",
+        "Creates a PR",
+        "Prunes tags"
+      ],
+      "answer": 0,
+      "explain": "Abort restores pre-rebase.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_medium_05.mp4",
+        "poster": "media/images/rebase_medium_05-frame.png",
+        "figure": "media/images/rebase_medium_05.png"
+      }
+    },
+    {
+      "id": "rebase_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/golf7\n```\n`git rebase -i HEAD~8` can...",
+      "choices": [
+        "squash/fixup/reword recent commits",
+        "only fetch",
+        "only tag",
+        "only stash"
+      ],
+      "answer": 0,
+      "explain": "Interactive rebase edits a todo list.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_medium_06.mp4",
+        "poster": "media/images/rebase_medium_06-frame.png",
+        "figure": "media/images/rebase_medium_06.png"
+      }
+    },
+    {
+      "id": "rebase_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit pull --rebase\n```\n# Review context: `./labs/alpha` slot 7 variant 1\n`fixup` in rebase -i...",
+      "choices": [
+        "Folds the commit into the previous and drops its message",
+        "Pushes origin",
+        "Starts bisect",
+        "Deletes remotes"
+      ],
+      "answer": 0,
+      "explain": "fixup vs squash (keeps messages).",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_medium_07.mp4",
+        "poster": "media/images/rebase_medium_07-frame.png",
+        "figure": "media/images/rebase_medium_07.png"
+      }
+    },
+    {
+      "id": "rebase_medium_08",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase main\n```\n`git rebase --onto main feature/lab8` can transplant a commit range.",
+      "answer": true,
+      "explain": "--onto is advanced replay.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_medium_08.mp4",
+        "poster": "media/images/rebase_medium_08-frame.png",
+        "figure": "media/images/rebase_medium_08.png"
+      }
+    },
+    {
+      "id": "rebase_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase -i HEAD~4\n```\nConflicts during rebase: after fixing `notes9.md`...",
+      "choices": [
+        "git add notes9.md && git rebase --continue",
+        "git merge --abort",
+        "git tag -a",
+        "git remote prune"
+      ],
+      "answer": 0,
+      "explain": "Sequencer continue.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_medium_09.mp4",
+        "poster": "media/images/rebase_medium_09-frame.png",
+        "figure": "media/images/rebase_medium_09.png"
+      }
+    },
+    {
+      "id": "rebase_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/alpha11\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\n`git rebase --abort`...",
+      "choices": [
+        "Cancels an in-progress rebase",
+        "Deletes origin",
+        "Creates a PR",
+        "Prunes tags"
+      ],
+      "answer": 0,
+      "explain": "Abort restores pre-rebase.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_medium_10.mp4",
+        "poster": "media/images/rebase_medium_10-frame.png",
+        "figure": "media/images/rebase_medium_10.png"
+      }
+    },
+    {
+      "id": "rebase_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit pull --rebase\n```\n`git rebase -i HEAD~6` can...",
+      "choices": [
+        "squash/fixup/reword recent commits",
+        "only fetch",
+        "only tag",
+        "only stash"
+      ],
+      "answer": 0,
+      "explain": "Interactive rebase edits a todo list.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_medium_11.mp4",
+        "poster": "media/images/rebase_medium_11-frame.png",
+        "figure": "media/images/rebase_medium_11.png"
+      }
+    },
+    {
+      "id": "rebase_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase main\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\n`fixup` in rebase -i...",
+      "choices": [
+        "Folds the commit into the previous and drops its message",
+        "Pushes origin",
+        "Starts bisect",
+        "Deletes remotes"
+      ],
+      "answer": 0,
+      "explain": "fixup vs squash (keeps messages).",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_medium_12.mp4",
+        "poster": "media/images/rebase_medium_12-frame.png",
+        "figure": "media/images/rebase_medium_12.png"
+      }
+    },
+    {
+      "id": "rebase_medium_13",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase -i HEAD~4\n```\n`git rebase --onto main feature/lab13` can transplant a commit range.",
+      "answer": true,
+      "explain": "--onto is advanced replay.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_medium_13.mp4",
+        "poster": "media/images/rebase_medium_13-frame.png",
+        "figure": "media/images/rebase_medium_13.png"
+      }
+    },
+    {
+      "id": "rebase_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/echo15\n```\nConflicts during rebase: after fixing `notes14.md`...",
+      "choices": [
+        "git add notes14.md && git rebase --continue",
+        "git merge --abort",
+        "git tag -a",
+        "git remote prune"
+      ],
+      "answer": 0,
+      "explain": "Sequencer continue.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_medium_14.mp4",
+        "poster": "media/images/rebase_medium_14-frame.png",
+        "figure": "media/images/rebase_medium_14.png"
+      }
+    },
+    {
+      "id": "rebase_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit pull --rebase\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\n`git rebase --abort`...",
+      "choices": [
+        "Cancels an in-progress rebase",
+        "Deletes origin",
+        "Creates a PR",
+        "Prunes tags"
+      ],
+      "answer": 0,
+      "explain": "Abort restores pre-rebase.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_medium_15.mp4",
+        "poster": "media/images/rebase_medium_15-frame.png",
+        "figure": "media/images/rebase_medium_15.png"
+      }
+    },
+    {
+      "id": "rebase_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase main\n```\n`git rebase -i HEAD~4` can...",
+      "choices": [
+        "squash/fixup/reword recent commits",
+        "only fetch",
+        "only tag",
+        "only stash"
+      ],
+      "answer": 0,
+      "explain": "Interactive rebase edits a todo list.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_medium_16.mp4",
+        "poster": "media/images/rebase_medium_16-frame.png",
+        "figure": "media/images/rebase_medium_16.png"
+      }
+    },
+    {
+      "id": "rebase_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase -i HEAD~4\n```\n# Review context: `~/src/charlie` slot 17 variant 1\n`fixup` in rebase -i...",
+      "choices": [
+        "Folds the commit into the previous and drops its message",
+        "Pushes origin",
+        "Starts bisect",
+        "Deletes remotes"
+      ],
+      "answer": 0,
+      "explain": "fixup vs squash (keeps messages).",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_medium_17.mp4",
+        "poster": "media/images/rebase_medium_17-frame.png",
+        "figure": "media/images/rebase_medium_17.png"
+      }
+    },
+    {
+      "id": "rebase_medium_18",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/india19\n```\n`git rebase --onto main feature/lab18` can transplant a commit range.",
+      "answer": true,
+      "explain": "--onto is advanced replay.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_medium_18.mp4",
+        "poster": "media/images/rebase_medium_18-frame.png",
+        "figure": "media/images/rebase_medium_18.png"
+      }
+    },
+    {
+      "id": "rebase_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit pull --rebase\n```\nConflicts during rebase: after fixing `notes19.md`...",
+      "choices": [
+        "git add notes19.md && git rebase --continue",
+        "git merge --abort",
+        "git tag -a",
+        "git remote prune"
+      ],
+      "answer": 0,
+      "explain": "Sequencer continue.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_medium_19.mp4",
+        "poster": "media/images/rebase_medium_19-frame.png",
+        "figure": "media/images/rebase_medium_19.png"
+      }
+    },
+    {
+      "id": "rebase_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase main\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\n`git rebase --abort`...",
+      "choices": [
+        "Cancels an in-progress rebase",
+        "Deletes origin",
+        "Creates a PR",
+        "Prunes tags"
+      ],
+      "answer": 0,
+      "explain": "Abort restores pre-rebase.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_medium_20.mp4",
+        "poster": "media/images/rebase_medium_20-frame.png",
+        "figure": "media/images/rebase_medium_20.png"
+      }
+    },
+    {
+      "id": "rebase_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase -i HEAD~4\n```\n`git rebase -i HEAD~2` can...",
+      "choices": [
+        "squash/fixup/reword recent commits",
+        "only fetch",
+        "only tag",
+        "only stash"
+      ],
+      "answer": 0,
+      "explain": "Interactive rebase edits a todo list.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_medium_21.mp4",
+        "poster": "media/images/rebase_medium_21-frame.png",
+        "figure": "media/images/rebase_medium_21.png"
+      }
+    },
+    {
+      "id": "rebase_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/charlie23\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\n`fixup` in rebase -i...",
+      "choices": [
+        "Folds the commit into the previous and drops its message",
+        "Pushes origin",
+        "Starts bisect",
+        "Deletes remotes"
+      ],
+      "answer": 0,
+      "explain": "fixup vs squash (keeps messages).",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_medium_22.mp4",
+        "poster": "media/images/rebase_medium_22-frame.png",
+        "figure": "media/images/rebase_medium_22.png"
+      }
+    },
+    {
+      "id": "rebase_medium_23",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit pull --rebase\n```\n`git rebase --onto main feature/lab23` can transplant a commit range.",
+      "answer": true,
+      "explain": "--onto is advanced replay.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_medium_23.mp4",
+        "poster": "media/images/rebase_medium_23-frame.png",
+        "figure": "media/images/rebase_medium_23.png"
+      }
+    },
+    {
+      "id": "rebase_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase main\n```\nConflicts during rebase: after fixing `notes24.md`...",
+      "choices": [
+        "git add notes24.md && git rebase --continue",
+        "git merge --abort",
+        "git tag -a",
+        "git remote prune"
+      ],
+      "answer": 0,
+      "explain": "Sequencer continue.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_medium_24.mp4",
+        "poster": "media/images/rebase_medium_24-frame.png",
+        "figure": "media/images/rebase_medium_24.png"
+      }
+    },
+    {
+      "id": "rebase_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase -i HEAD~4\n```\n# Review context: `./labs/charlie` slot 25 variant 1\n`git rebase --abort`...",
+      "choices": [
+        "Cancels an in-progress rebase",
+        "Deletes origin",
+        "Creates a PR",
+        "Prunes tags"
+      ],
+      "answer": 0,
+      "explain": "Abort restores pre-rebase.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_medium_25.mp4",
+        "poster": "media/images/rebase_medium_25-frame.png",
+        "figure": "media/images/rebase_medium_25.png"
+      }
+    },
+    {
+      "id": "rebase_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/golf27\n```\n`git rebase -i HEAD~7` can...",
+      "choices": [
+        "squash/fixup/reword recent commits",
+        "only fetch",
+        "only tag",
+        "only stash"
+      ],
+      "answer": 0,
+      "explain": "Interactive rebase edits a todo list.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_medium_26.mp4",
+        "poster": "media/images/rebase_medium_26-frame.png",
+        "figure": "media/images/rebase_medium_26.png"
+      }
+    },
+    {
+      "id": "rebase_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit pull --rebase\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\n`fixup` in rebase -i...",
+      "choices": [
+        "Folds the commit into the previous and drops its message",
+        "Pushes origin",
+        "Starts bisect",
+        "Deletes remotes"
+      ],
+      "answer": 0,
+      "explain": "fixup vs squash (keeps messages).",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_medium_27.mp4",
+        "poster": "media/images/rebase_medium_27-frame.png",
+        "figure": "media/images/rebase_medium_27.png"
+      }
+    },
+    {
+      "id": "rebase_medium_28",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase main\n```\n`git rebase --onto main feature/lab28` can transplant a commit range.",
+      "answer": true,
+      "explain": "--onto is advanced replay.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_medium_28.mp4",
+        "poster": "media/images/rebase_medium_28-frame.png",
+        "figure": "media/images/rebase_medium_28.png"
+      }
+    },
+    {
+      "id": "rebase_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase -i HEAD~4\n```\nConflicts during rebase: after fixing `notes29.md`...",
+      "choices": [
+        "git add notes29.md && git rebase --continue",
+        "git merge --abort",
+        "git tag -a",
+        "git remote prune"
+      ],
+      "answer": 0,
+      "explain": "Sequencer continue.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_medium_29.mp4",
+        "poster": "media/images/rebase_medium_29-frame.png",
+        "figure": "media/images/rebase_medium_29.png"
+      }
+    },
+    {
+      "id": "rebase_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/alpha31\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\n`git rebase --abort`...",
+      "choices": [
+        "Cancels an in-progress rebase",
+        "Deletes origin",
+        "Creates a PR",
+        "Prunes tags"
+      ],
+      "answer": 0,
+      "explain": "Abort restores pre-rebase.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_medium_30.mp4",
+        "poster": "media/images/rebase_medium_30-frame.png",
+        "figure": "media/images/rebase_medium_30.png"
+      }
+    },
+    {
+      "id": "rebase_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit pull --rebase\n```\n`git rebase --rebase-merges` tries to...",
+      "choices": [
+        "Preserve merge topology while rebasing",
+        "Delete merges always",
+        "Convert tags to branches",
+        "Stash everything"
+      ],
+      "answer": 0,
+      "explain": "Replays merge structure.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_hard_01.mp4",
+        "poster": "media/images/rebase_hard_01-frame.png",
+        "figure": "media/images/rebase_hard_01.png"
+      }
+    },
+    {
+      "id": "rebase_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase main\n```\nAfter rebase, force-push to `feature/lab2` (never main) uses...",
+      "choices": [
+        "git push --force-with-lease",
+        "git push without lease always",
+        "git tag -d",
+        "git stash"
+      ],
+      "answer": 0,
+      "explain": "lease is safer than --force.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_hard_02.mp4",
+        "poster": "media/images/rebase_hard_02-frame.png",
+        "figure": "media/images/rebase_hard_02.png"
+      }
+    },
+    {
+      "id": "rebase_hard_03",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase -i HEAD~4\n```\n`git rebase --skip` is for when...",
+      "choices": [
+        "You want to drop the commit that is currently applying",
+        "You finished successfully",
+        "You fetch",
+        "You tag"
+      ],
+      "answer": 0,
+      "explain": "Skip drops that patch.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_hard_03.mp4",
+        "poster": "media/images/rebase_hard_03-frame.png",
+        "figure": "media/images/rebase_hard_03.png"
+      }
+    },
+    {
+      "id": "rebase_hard_04",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/golf7\n```\nFast-forward merge happens when the target has no unique commits and the tip just moves.",
+      "answer": true,
+      "explain": "FF is a pointer move.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_hard_04.mp4",
+        "poster": "media/images/rebase_hard_04-frame.png",
+        "figure": "media/images/rebase_hard_04.png"
+      }
+    },
+    {
+      "id": "rebase_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit pull --rebase\n```\nWhy not rebase `main` that teammates use...",
+      "choices": [
+        "You rewrite commits they already based work on",
+        "Git forbids rebase on main",
+        "Status breaks",
+        "Tags vanish"
+      ],
+      "answer": 0,
+      "explain": "Shared-branch rule.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_hard_05.mp4",
+        "poster": "media/images/rebase_hard_05-frame.png",
+        "figure": "media/images/rebase_hard_05.png"
+      }
+    },
+    {
+      "id": "rebase_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase main\n```\n# Review context: `/work/chip/hotel` slot 6 variant 1\n`git rebase --rebase-merges` tries to...",
+      "choices": [
+        "Preserve merge topology while rebasing",
+        "Delete merges always",
+        "Convert tags to branches",
+        "Stash everything"
+      ],
+      "answer": 0,
+      "explain": "Replays merge structure.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_hard_06.mp4",
+        "poster": "media/images/rebase_hard_06-frame.png",
+        "figure": "media/images/rebase_hard_06.png"
+      }
+    },
+    {
+      "id": "rebase_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase -i HEAD~4\n```\nAfter rebase, force-push to `feature/lab7` (never main) uses...",
+      "choices": [
+        "git push --force-with-lease",
+        "git push without lease always",
+        "git tag -d",
+        "git stash"
+      ],
+      "answer": 0,
+      "explain": "lease is safer than --force.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_hard_07.mp4",
+        "poster": "media/images/rebase_hard_07-frame.png",
+        "figure": "media/images/rebase_hard_07.png"
+      }
+    },
+    {
+      "id": "rebase_hard_08",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/alpha11\n```\n# Review context: `/tmp/gitlab/bravo` slot 8 variant 1\n`git rebase --skip` is for when...",
+      "choices": [
+        "You want to drop the commit that is currently applying",
+        "You finished successfully",
+        "You fetch",
+        "You tag"
+      ],
+      "answer": 0,
+      "explain": "Skip drops that patch.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_hard_08.mp4",
+        "poster": "media/images/rebase_hard_08-frame.png",
+        "figure": "media/images/rebase_hard_08.png"
+      }
+    },
+    {
+      "id": "rebase_hard_09",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit pull --rebase\n```\n# Review context: `C:/proj/charlie` slot 9 variant 1\nFast-forward merge happens when the target has no unique commits and the tip just moves.",
+      "answer": true,
+      "explain": "FF is a pointer move.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_hard_09.mp4",
+        "poster": "media/images/rebase_hard_09-frame.png",
+        "figure": "media/images/rebase_hard_09.png"
+      }
+    },
+    {
+      "id": "rebase_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase main\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\nWhy not rebase `main` that teammates use...",
+      "choices": [
+        "You rewrite commits they already based work on",
+        "Git forbids rebase on main",
+        "Status breaks",
+        "Tags vanish"
+      ],
+      "answer": 0,
+      "explain": "Shared-branch rule.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_hard_10.mp4",
+        "poster": "media/images/rebase_hard_10-frame.png",
+        "figure": "media/images/rebase_hard_10.png"
+      }
+    },
+    {
+      "id": "rebase_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase -i HEAD~4\n```\n# Review context: `~/src/echo` slot 11 variant 1\n`git rebase --rebase-merges` tries to...",
+      "choices": [
+        "Preserve merge topology while rebasing",
+        "Delete merges always",
+        "Convert tags to branches",
+        "Stash everything"
+      ],
+      "answer": 0,
+      "explain": "Replays merge structure.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_hard_11.mp4",
+        "poster": "media/images/rebase_hard_11-frame.png",
+        "figure": "media/images/rebase_hard_11.png"
+      }
+    },
+    {
+      "id": "rebase_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/echo15\n```\nAfter rebase, force-push to `feature/lab12` (never main) uses...",
+      "choices": [
+        "git push --force-with-lease",
+        "git push without lease always",
+        "git tag -d",
+        "git stash"
+      ],
+      "answer": 0,
+      "explain": "lease is safer than --force.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_hard_12.mp4",
+        "poster": "media/images/rebase_hard_12-frame.png",
+        "figure": "media/images/rebase_hard_12.png"
+      }
+    },
+    {
+      "id": "rebase_hard_13",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit pull --rebase\n```\n# Review context: `./labs/golf` slot 13 variant 1\n`git rebase --skip` is for when...",
+      "choices": [
+        "You want to drop the commit that is currently applying",
+        "You finished successfully",
+        "You fetch",
+        "You tag"
+      ],
+      "answer": 0,
+      "explain": "Skip drops that patch.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_hard_13.mp4",
+        "poster": "media/images/rebase_hard_13-frame.png",
+        "figure": "media/images/rebase_hard_13.png"
+      }
+    },
+    {
+      "id": "rebase_hard_14",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase main\n```\n# Review context: `/tmp/gitlab/hotel` slot 14 variant 1\nFast-forward merge happens when the target has no unique commits and the tip just moves.",
+      "answer": true,
+      "explain": "FF is a pointer move.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_hard_14.mp4",
+        "poster": "media/images/rebase_hard_14-frame.png",
+        "figure": "media/images/rebase_hard_14.png"
+      }
+    },
+    {
+      "id": "rebase_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase -i HEAD~4\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\nWhy not rebase `main` that teammates use...",
+      "choices": [
+        "You rewrite commits they already based work on",
+        "Git forbids rebase on main",
+        "Status breaks",
+        "Tags vanish"
+      ],
+      "answer": 0,
+      "explain": "Shared-branch rule.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_hard_15.mp4",
+        "poster": "media/images/rebase_hard_15-frame.png",
+        "figure": "media/images/rebase_hard_15.png"
+      }
+    },
+    {
+      "id": "rebase_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/india19\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\n`git rebase --rebase-merges` tries to...",
+      "choices": [
+        "Preserve merge topology while rebasing",
+        "Delete merges always",
+        "Convert tags to branches",
+        "Stash everything"
+      ],
+      "answer": 0,
+      "explain": "Replays merge structure.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_hard_16.mp4",
+        "poster": "media/images/rebase_hard_16-frame.png",
+        "figure": "media/images/rebase_hard_16.png"
+      }
+    },
+    {
+      "id": "rebase_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit pull --rebase\n```\nAfter rebase, force-push to `feature/lab17` (never main) uses...",
+      "choices": [
+        "git push --force-with-lease",
+        "git push without lease always",
+        "git tag -d",
+        "git stash"
+      ],
+      "answer": 0,
+      "explain": "lease is safer than --force.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_hard_17.mp4",
+        "poster": "media/images/rebase_hard_17-frame.png",
+        "figure": "media/images/rebase_hard_17.png"
+      }
+    },
+    {
+      "id": "rebase_hard_18",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase main\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\n`git rebase --skip` is for when...",
+      "choices": [
+        "You want to drop the commit that is currently applying",
+        "You finished successfully",
+        "You fetch",
+        "You tag"
+      ],
+      "answer": 0,
+      "explain": "Skip drops that patch.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_hard_18.mp4",
+        "poster": "media/images/rebase_hard_18-frame.png",
+        "figure": "media/images/rebase_hard_18.png"
+      }
+    },
+    {
+      "id": "rebase_hard_19",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase -i HEAD~4\n```\n# Review context: `./labs/echo` slot 19 variant 1\nFast-forward merge happens when the target has no unique commits and the tip just moves.",
+      "answer": true,
+      "explain": "FF is a pointer move.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_hard_19.mp4",
+        "poster": "media/images/rebase_hard_19-frame.png",
+        "figure": "media/images/rebase_hard_19.png"
+      }
+    },
+    {
+      "id": "rebase_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/charlie23\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\nWhy not rebase `main` that teammates use...",
+      "choices": [
+        "You rewrite commits they already based work on",
+        "Git forbids rebase on main",
+        "Status breaks",
+        "Tags vanish"
+      ],
+      "answer": 0,
+      "explain": "Shared-branch rule.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_hard_20.mp4",
+        "poster": "media/images/rebase_hard_20-frame.png",
+        "figure": "media/images/rebase_hard_20.png"
+      }
+    },
+    {
+      "id": "rebase_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit pull --rebase\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\n`git rebase --rebase-merges` tries to...",
+      "choices": [
+        "Preserve merge topology while rebasing",
+        "Delete merges always",
+        "Convert tags to branches",
+        "Stash everything"
+      ],
+      "answer": 0,
+      "explain": "Replays merge structure.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_hard_21.mp4",
+        "poster": "media/images/rebase_hard_21-frame.png",
+        "figure": "media/images/rebase_hard_21.png"
+      }
+    },
+    {
+      "id": "rebase_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase main\n```\nAfter rebase, force-push to `feature/lab22` (never main) uses...",
+      "choices": [
+        "git push --force-with-lease",
+        "git push without lease always",
+        "git tag -d",
+        "git stash"
+      ],
+      "answer": 0,
+      "explain": "lease is safer than --force.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_hard_22.mp4",
+        "poster": "media/images/rebase_hard_22-frame.png",
+        "figure": "media/images/rebase_hard_22.png"
+      }
+    },
+    {
+      "id": "rebase_hard_23",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase -i HEAD~4\n```\n# Review context: `~/src/alpha` slot 23 variant 1\n`git rebase --skip` is for when...",
+      "choices": [
+        "You want to drop the commit that is currently applying",
+        "You finished successfully",
+        "You fetch",
+        "You tag"
+      ],
+      "answer": 0,
+      "explain": "Skip drops that patch.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_hard_23.mp4",
+        "poster": "media/images/rebase_hard_23-frame.png",
+        "figure": "media/images/rebase_hard_23.png"
+      }
+    },
+    {
+      "id": "rebase_hard_24",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/golf27\n```\n# Review context: `/work/chip/bravo` slot 24 variant 1\nFast-forward merge happens when the target has no unique commits and the tip just moves.",
+      "answer": true,
+      "explain": "FF is a pointer move.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_hard_24.mp4",
+        "poster": "media/images/rebase_hard_24-frame.png",
+        "figure": "media/images/rebase_hard_24.png"
+      }
+    },
+    {
+      "id": "rebase_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit pull --rebase\n```\n# Review context: `./labs/charlie` slot 25 variant 1\nWhy not rebase `main` that teammates use...",
+      "choices": [
+        "You rewrite commits they already based work on",
+        "Git forbids rebase on main",
+        "Status breaks",
+        "Tags vanish"
+      ],
+      "answer": 0,
+      "explain": "Shared-branch rule.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_hard_25.mp4",
+        "poster": "media/images/rebase_hard_25-frame.png",
+        "figure": "media/images/rebase_hard_25.png"
+      }
+    },
+    {
+      "id": "rebase_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase main\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\n`git rebase --rebase-merges` tries to...",
+      "choices": [
+        "Preserve merge topology while rebasing",
+        "Delete merges always",
+        "Convert tags to branches",
+        "Stash everything"
+      ],
+      "answer": 0,
+      "explain": "Replays merge structure.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_hard_26.mp4",
+        "poster": "media/images/rebase_hard_26-frame.png",
+        "figure": "media/images/rebase_hard_26.png"
+      }
+    },
+    {
+      "id": "rebase_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase -i HEAD~4\n```\nAfter rebase, force-push to `feature/lab27` (never main) uses...",
+      "choices": [
+        "git push --force-with-lease",
+        "git push without lease always",
+        "git tag -d",
+        "git stash"
+      ],
+      "answer": 0,
+      "explain": "lease is safer than --force.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_hard_27.mp4",
+        "poster": "media/images/rebase_hard_27-frame.png",
+        "figure": "media/images/rebase_hard_27.png"
+      }
+    },
+    {
+      "id": "rebase_hard_28",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/alpha31\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\n`git rebase --skip` is for when...",
+      "choices": [
+        "You want to drop the commit that is currently applying",
+        "You finished successfully",
+        "You fetch",
+        "You tag"
+      ],
+      "answer": 0,
+      "explain": "Skip drops that patch.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_hard_28.mp4",
+        "poster": "media/images/rebase_hard_28-frame.png",
+        "figure": "media/images/rebase_hard_28.png"
+      }
+    },
+    {
+      "id": "rebase_hard_29",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit pull --rebase\n```\n# Review context: `~/src/golf` slot 29 variant 1\nFast-forward merge happens when the target has no unique commits and the tip just moves.",
+      "answer": true,
+      "explain": "FF is a pointer move.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_hard_29.mp4",
+        "poster": "media/images/rebase_hard_29-frame.png",
+        "figure": "media/images/rebase_hard_29.png"
+      }
+    },
+    {
+      "id": "rebase_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit rebase main\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\nWhy not rebase `main` that teammates use...",
+      "choices": [
+        "You rewrite commits they already based work on",
+        "Git forbids rebase on main",
+        "Status breaks",
+        "Tags vanish"
+      ],
+      "answer": 0,
+      "explain": "Shared-branch rule.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rebase_hard_30.mp4",
+        "poster": "media/images/rebase_hard_30-frame.png",
+        "figure": "media/images/rebase_hard_30.png"
+      }
+    }
+  ]
+}
