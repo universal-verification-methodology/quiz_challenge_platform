@@ -1,0 +1,1692 @@
+{
+  "module": "module10-git-conflicts",
+  "title": "Merge conflicts",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status | grep -E 'Unmerged|both modified' || true\n```\nConflict markers in a file look like...",
+      "choices": [
+        "<<<<<<< HEAD ... ======= ... >>>>>>> branch",
+        "Only # comments at the top",
+        "Your SSH public key",
+        "build/ and *.log patterns"
+      ],
+      "answer": 0,
+      "explain": "Git inserts HEAD/incoming markers around the competing hunks until you resolve them.",
+      "difficulty": "easy",
+      "id": "cflt_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_easy_01.mp4",
+        "poster": "media/images/cflt_easy_01-frame.png",
+        "figure": "media/images/cflt_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# markers: <<<<<<< HEAD / ======= / >>>>>>> feature/charlie3\n```\nAfter you fix a conflicted file, the next steps are usually...",
+      "choices": [
+        "git add the file, then git commit to finish the merge",
+        "Delete .git and recloning",
+        "git stash clear only",
+        "Force-push without reading the file"
+      ],
+      "answer": 0,
+      "explain": "Stage the resolved file, then commit; Git completes the merge with that commit.",
+      "difficulty": "easy",
+      "id": "cflt_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_easy_02.mp4",
+        "poster": "media/images/cflt_easy_02-frame.png",
+        "figure": "media/images/cflt_easy_02.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit merge --abort 2>/dev/null || true\n```\nIt is OK to commit a merge while <<<<<<< markers are still in the source file.",
+      "answer": false,
+      "explain": "Remove all conflict markers and choose the intended content before you commit.",
+      "difficulty": "easy",
+      "id": "cflt_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_easy_03.mp4",
+        "poster": "media/images/cflt_easy_03-frame.png",
+        "figure": "media/images/cflt_easy_03.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/echo5 || true\n```\nA merge conflict happens when...",
+      "choices": [
+        "Two branches changed the same lines and Git cannot auto-merge",
+        "You run git tag on an empty repo",
+        "You only use git log --oneline",
+        "Your terminal has no WSL installed"
+      ],
+      "answer": 0,
+      "explain": "Overlapping edits on the same region force a manual resolution.",
+      "difficulty": "easy",
+      "id": "cflt_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_easy_04.mp4",
+        "poster": "media/images/cflt_easy_04-frame.png",
+        "figure": "media/images/cflt_easy_04.png"
+      }
+    },
+    {
+      "id": "cflt_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status | grep -E 'Unmerged|both modified' || true\n```\nConflict markers in a file look like...",
+      "choices": [
+        "<<<<<<< HEAD ... ======= ... >>>>>>> branch",
+        "Only # comments",
+        "Your SSH public key",
+        "build/ and *.log patterns"
+      ],
+      "answer": 0,
+      "explain": "Git inserts HEAD/incoming markers.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_easy_05.mp4",
+        "poster": "media/images/cflt_easy_05-frame.png",
+        "figure": "media/images/cflt_easy_05.png"
+      }
+    },
+    {
+      "id": "cflt_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# markers: <<<<<<< HEAD / ======= / >>>>>>> feature/golf7\n```\nAfter you fix a conflicted `notes6.md`, next steps are usually...",
+      "choices": [
+        "git add notes6.md, then git commit to finish the merge",
+        "Delete .git",
+        "git stash clear only",
+        "Force-push without reading"
+      ],
+      "answer": 0,
+      "explain": "Stage the resolution, then commit.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_easy_06.mp4",
+        "poster": "media/images/cflt_easy_06-frame.png",
+        "figure": "media/images/cflt_easy_06.png"
+      }
+    },
+    {
+      "id": "cflt_easy_07",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit merge --abort 2>/dev/null || true\n```\nIt is OK to commit a merge while <<<<<<< markers are still in `src/mod7.v`.",
+      "answer": false,
+      "explain": "Remove markers before commit.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_easy_07.mp4",
+        "poster": "media/images/cflt_easy_07-frame.png",
+        "figure": "media/images/cflt_easy_07.png"
+      }
+    },
+    {
+      "id": "cflt_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/india9 || true\n```\nA merge conflict happens when...",
+      "choices": [
+        "Two branches changed the same lines and Git cannot auto-merge",
+        "You run git tag",
+        "You only use log --oneline",
+        "WSL is missing"
+      ],
+      "answer": 0,
+      "explain": "Overlapping edits.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_easy_08.mp4",
+        "poster": "media/images/cflt_easy_08-frame.png",
+        "figure": "media/images/cflt_easy_08.png"
+      }
+    },
+    {
+      "id": "cflt_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status | grep -E 'Unmerged|both modified' || true\n```\n`git merge --abort`...",
+      "choices": [
+        "Cancels the in-progress merge",
+        "Deletes origin",
+        "Creates a tag",
+        "Starts bisect"
+      ],
+      "answer": 0,
+      "explain": "Abort restores pre-merge.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_easy_09.mp4",
+        "poster": "media/images/cflt_easy_09-frame.png",
+        "figure": "media/images/cflt_easy_09.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# markers: <<<<<<< HEAD / ======= / >>>>>>> feature/alpha11\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\nConflict markers in a file look like...",
+      "choices": [
+        "<<<<<<< HEAD ... ======= ... >>>>>>> branch",
+        "Only # comments at the top",
+        "Your SSH public key",
+        "build/ and *.log patterns"
+      ],
+      "answer": 0,
+      "explain": "Git inserts HEAD/incoming markers around the competing hunks until you resolve them.",
+      "difficulty": "easy",
+      "id": "cflt_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_easy_10.mp4",
+        "poster": "media/images/cflt_easy_10-frame.png",
+        "figure": "media/images/cflt_easy_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge --abort 2>/dev/null || true\n```\n# Review context: `~/src/echo` slot 11 variant 1\nAfter you fix a conflicted file, the next steps are usually...",
+      "choices": [
+        "git add the file, then git commit to finish the merge",
+        "Delete .git and recloning",
+        "git stash clear only",
+        "Force-push without reading the file"
+      ],
+      "answer": 0,
+      "explain": "Stage the resolved file, then commit; Git completes the merge with that commit.",
+      "difficulty": "easy",
+      "id": "cflt_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_easy_11.mp4",
+        "poster": "media/images/cflt_easy_11-frame.png",
+        "figure": "media/images/cflt_easy_11.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/charlie13 || true\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\nIt is OK to commit a merge while <<<<<<< markers are still in the source file.",
+      "answer": false,
+      "explain": "Remove all conflict markers and choose the intended content before you commit.",
+      "difficulty": "easy",
+      "id": "cflt_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_easy_12.mp4",
+        "poster": "media/images/cflt_easy_12-frame.png",
+        "figure": "media/images/cflt_easy_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status | grep -E 'Unmerged|both modified' || true\n```\n# Review context: `./labs/golf` slot 13 variant 1\nA merge conflict happens when...",
+      "choices": [
+        "Two branches changed the same lines and Git cannot auto-merge",
+        "You run git tag on an empty repo",
+        "You only use git log --oneline",
+        "Your terminal has no WSL installed"
+      ],
+      "answer": 0,
+      "explain": "Overlapping edits on the same region force a manual resolution.",
+      "difficulty": "easy",
+      "id": "cflt_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_easy_13.mp4",
+        "poster": "media/images/cflt_easy_13-frame.png",
+        "figure": "media/images/cflt_easy_13.png"
+      }
+    },
+    {
+      "id": "cflt_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# markers: <<<<<<< HEAD / ======= / >>>>>>> feature/echo15\n```\n# Review context: `/tmp/gitlab/hotel` slot 14 variant 1\nConflict markers in a file look like...",
+      "choices": [
+        "<<<<<<< HEAD ... ======= ... >>>>>>> branch",
+        "Only # comments",
+        "Your SSH public key",
+        "build/ and *.log patterns"
+      ],
+      "answer": 0,
+      "explain": "Git inserts HEAD/incoming markers.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_easy_14.mp4",
+        "poster": "media/images/cflt_easy_14-frame.png",
+        "figure": "media/images/cflt_easy_14.png"
+      }
+    },
+    {
+      "id": "cflt_easy_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge --abort 2>/dev/null || true\n```\nAfter you fix a conflicted `notes15.md`, next steps are usually...",
+      "choices": [
+        "git add notes15.md, then git commit to finish the merge",
+        "Delete .git",
+        "git stash clear only",
+        "Force-push without reading"
+      ],
+      "answer": 0,
+      "explain": "Stage the resolution, then commit.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_easy_15.mp4",
+        "poster": "media/images/cflt_easy_15-frame.png",
+        "figure": "media/images/cflt_easy_15.png"
+      }
+    },
+    {
+      "id": "cflt_easy_16",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/golf17 || true\n```\nIt is OK to commit a merge while <<<<<<< markers are still in `src/mod16.v`.",
+      "answer": false,
+      "explain": "Remove markers before commit.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_easy_16.mp4",
+        "poster": "media/images/cflt_easy_16-frame.png",
+        "figure": "media/images/cflt_easy_16.png"
+      }
+    },
+    {
+      "id": "cflt_easy_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status | grep -E 'Unmerged|both modified' || true\n```\n# Review context: `~/src/charlie` slot 17 variant 1\nA merge conflict happens when...",
+      "choices": [
+        "Two branches changed the same lines and Git cannot auto-merge",
+        "You run git tag",
+        "You only use log --oneline",
+        "WSL is missing"
+      ],
+      "answer": 0,
+      "explain": "Overlapping edits.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_easy_17.mp4",
+        "poster": "media/images/cflt_easy_17-frame.png",
+        "figure": "media/images/cflt_easy_17.png"
+      }
+    },
+    {
+      "id": "cflt_easy_18",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# markers: <<<<<<< HEAD / ======= / >>>>>>> feature/india19\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\n`git merge --abort`...",
+      "choices": [
+        "Cancels the in-progress merge",
+        "Deletes origin",
+        "Creates a tag",
+        "Starts bisect"
+      ],
+      "answer": 0,
+      "explain": "Abort restores pre-merge.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_easy_18.mp4",
+        "poster": "media/images/cflt_easy_18-frame.png",
+        "figure": "media/images/cflt_easy_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge --abort 2>/dev/null || true\n```\n# Review context: `./labs/echo` slot 19 variant 1\nConflict markers in a file look like...",
+      "choices": [
+        "<<<<<<< HEAD ... ======= ... >>>>>>> branch",
+        "Only # comments at the top",
+        "Your SSH public key",
+        "build/ and *.log patterns"
+      ],
+      "answer": 0,
+      "explain": "Git inserts HEAD/incoming markers around the competing hunks until you resolve them.",
+      "difficulty": "easy",
+      "id": "cflt_easy_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_easy_19.mp4",
+        "poster": "media/images/cflt_easy_19-frame.png",
+        "figure": "media/images/cflt_easy_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/alpha21 || true\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\nAfter you fix a conflicted file, the next steps are usually...",
+      "choices": [
+        "git add the file, then git commit to finish the merge",
+        "Delete .git and recloning",
+        "git stash clear only",
+        "Force-push without reading the file"
+      ],
+      "answer": 0,
+      "explain": "Stage the resolved file, then commit; Git completes the merge with that commit.",
+      "difficulty": "easy",
+      "id": "cflt_easy_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_easy_20.mp4",
+        "poster": "media/images/cflt_easy_20-frame.png",
+        "figure": "media/images/cflt_easy_20.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit status | grep -E 'Unmerged|both modified' || true\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\nIt is OK to commit a merge while <<<<<<< markers are still in the source file.",
+      "answer": false,
+      "explain": "Remove all conflict markers and choose the intended content before you commit.",
+      "difficulty": "easy",
+      "id": "cflt_easy_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_easy_21.mp4",
+        "poster": "media/images/cflt_easy_21-frame.png",
+        "figure": "media/images/cflt_easy_21.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# markers: <<<<<<< HEAD / ======= / >>>>>>> feature/charlie23\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\nA merge conflict happens when...",
+      "choices": [
+        "Two branches changed the same lines and Git cannot auto-merge",
+        "You run git tag on an empty repo",
+        "You only use git log --oneline",
+        "Your terminal has no WSL installed"
+      ],
+      "answer": 0,
+      "explain": "Overlapping edits on the same region force a manual resolution.",
+      "difficulty": "easy",
+      "id": "cflt_easy_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_easy_22.mp4",
+        "poster": "media/images/cflt_easy_22-frame.png",
+        "figure": "media/images/cflt_easy_22.png"
+      }
+    },
+    {
+      "id": "cflt_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge --abort 2>/dev/null || true\n```\n# Review context: `~/src/alpha` slot 23 variant 1\nConflict markers in a file look like...",
+      "choices": [
+        "<<<<<<< HEAD ... ======= ... >>>>>>> branch",
+        "Only # comments",
+        "Your SSH public key",
+        "build/ and *.log patterns"
+      ],
+      "answer": 0,
+      "explain": "Git inserts HEAD/incoming markers.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_easy_23.mp4",
+        "poster": "media/images/cflt_easy_23-frame.png",
+        "figure": "media/images/cflt_easy_23.png"
+      }
+    },
+    {
+      "id": "cflt_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/echo25 || true\n```\nAfter you fix a conflicted `notes24.md`, next steps are usually...",
+      "choices": [
+        "git add notes24.md, then git commit to finish the merge",
+        "Delete .git",
+        "git stash clear only",
+        "Force-push without reading"
+      ],
+      "answer": 0,
+      "explain": "Stage the resolution, then commit.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_easy_24.mp4",
+        "poster": "media/images/cflt_easy_24-frame.png",
+        "figure": "media/images/cflt_easy_24.png"
+      }
+    },
+    {
+      "id": "cflt_easy_25",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit status | grep -E 'Unmerged|both modified' || true\n```\nIt is OK to commit a merge while <<<<<<< markers are still in `src/mod25.v`.",
+      "answer": false,
+      "explain": "Remove markers before commit.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_easy_25.mp4",
+        "poster": "media/images/cflt_easy_25-frame.png",
+        "figure": "media/images/cflt_easy_25.png"
+      }
+    },
+    {
+      "id": "cflt_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# markers: <<<<<<< HEAD / ======= / >>>>>>> feature/golf27\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\nA merge conflict happens when...",
+      "choices": [
+        "Two branches changed the same lines and Git cannot auto-merge",
+        "You run git tag",
+        "You only use log --oneline",
+        "WSL is missing"
+      ],
+      "answer": 0,
+      "explain": "Overlapping edits.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_easy_26.mp4",
+        "poster": "media/images/cflt_easy_26-frame.png",
+        "figure": "media/images/cflt_easy_26.png"
+      }
+    },
+    {
+      "id": "cflt_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge --abort 2>/dev/null || true\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\n`git merge --abort`...",
+      "choices": [
+        "Cancels the in-progress merge",
+        "Deletes origin",
+        "Creates a tag",
+        "Starts bisect"
+      ],
+      "answer": 0,
+      "explain": "Abort restores pre-merge.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_easy_27.mp4",
+        "poster": "media/images/cflt_easy_27-frame.png",
+        "figure": "media/images/cflt_easy_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/india29 || true\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\nConflict markers in a file look like...",
+      "choices": [
+        "<<<<<<< HEAD ... ======= ... >>>>>>> branch",
+        "Only # comments at the top",
+        "Your SSH public key",
+        "build/ and *.log patterns"
+      ],
+      "answer": 0,
+      "explain": "Git inserts HEAD/incoming markers around the competing hunks until you resolve them.",
+      "difficulty": "easy",
+      "id": "cflt_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_easy_28.mp4",
+        "poster": "media/images/cflt_easy_28-frame.png",
+        "figure": "media/images/cflt_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status | grep -E 'Unmerged|both modified' || true\n```\n# Review context: `~/src/golf` slot 29 variant 1\nAfter you fix a conflicted file, the next steps are usually...",
+      "choices": [
+        "git add the file, then git commit to finish the merge",
+        "Delete .git and recloning",
+        "git stash clear only",
+        "Force-push without reading the file"
+      ],
+      "answer": 0,
+      "explain": "Stage the resolved file, then commit; Git completes the merge with that commit.",
+      "difficulty": "easy",
+      "id": "cflt_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_easy_29.mp4",
+        "poster": "media/images/cflt_easy_29-frame.png",
+        "figure": "media/images/cflt_easy_29.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\n# markers: <<<<<<< HEAD / ======= / >>>>>>> feature/alpha31\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\nIt is OK to commit a merge while <<<<<<< markers are still in the source file.",
+      "answer": false,
+      "explain": "Remove all conflict markers and choose the intended content before you commit.",
+      "difficulty": "easy",
+      "id": "cflt_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_easy_30.mp4",
+        "poster": "media/images/cflt_easy_30-frame.png",
+        "figure": "media/images/cflt_easy_30.png"
+      }
+    },
+    {
+      "id": "cflt_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status | grep -E 'Unmerged|both modified' || true\n```\n`git checkout --ours notes1.md` during merge takes...",
+      "choices": [
+        "The current-branch version",
+        "The incoming version",
+        "origin/main always",
+        "The stash"
+      ],
+      "answer": 0,
+      "explain": "ours is HEAD.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_medium_01.mp4",
+        "poster": "media/images/cflt_medium_01-frame.png",
+        "figure": "media/images/cflt_medium_01.png"
+      }
+    },
+    {
+      "id": "cflt_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# markers: <<<<<<< HEAD / ======= / >>>>>>> feature/charlie3\n```\n`git checkout --theirs notes2.md` during merge takes...",
+      "choices": [
+        "The incoming branch version",
+        "HEAD always",
+        "A tag",
+        "Ignore rules"
+      ],
+      "answer": 0,
+      "explain": "theirs is the other side.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_medium_02.mp4",
+        "poster": "media/images/cflt_medium_02-frame.png",
+        "figure": "media/images/cflt_medium_02.png"
+      }
+    },
+    {
+      "id": "cflt_medium_03",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit merge --abort 2>/dev/null || true\n```\nDuring rebase, --ours/--theirs meaning is swapped vs merge.",
+      "answer": true,
+      "explain": "Rebase ours is the branch you replay onto.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_medium_03.mp4",
+        "poster": "media/images/cflt_medium_03-frame.png",
+        "figure": "media/images/cflt_medium_03.png"
+      }
+    },
+    {
+      "id": "cflt_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/echo5 || true\n```\n`git mergetool` launches...",
+      "choices": [
+        "A configured merge tool on unmerged paths",
+        "git push",
+        "bisect",
+        "submodule update"
+      ],
+      "answer": 0,
+      "explain": "mergetool is UI for conflicts.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_medium_04.mp4",
+        "poster": "media/images/cflt_medium_04-frame.png",
+        "figure": "media/images/cflt_medium_04.png"
+      }
+    },
+    {
+      "id": "cflt_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status | grep -E 'Unmerged|both modified' || true\n```\n`git merge -X ours` auto-resolves content conflicts favoring...",
+      "choices": [
+        "HEAD",
+        "theirs",
+        "stash",
+        "tags"
+      ],
+      "answer": 0,
+      "explain": "Strategy option ours.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_medium_05.mp4",
+        "poster": "media/images/cflt_medium_05-frame.png",
+        "figure": "media/images/cflt_medium_05.png"
+      }
+    },
+    {
+      "id": "cflt_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# markers: <<<<<<< HEAD / ======= / >>>>>>> feature/golf7\n```\n`git checkout --ours notes6.md` during merge takes...",
+      "choices": [
+        "The current-branch version",
+        "The incoming version",
+        "origin/main always",
+        "The stash"
+      ],
+      "answer": 0,
+      "explain": "ours is HEAD.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_medium_06.mp4",
+        "poster": "media/images/cflt_medium_06-frame.png",
+        "figure": "media/images/cflt_medium_06.png"
+      }
+    },
+    {
+      "id": "cflt_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge --abort 2>/dev/null || true\n```\n`git checkout --theirs notes7.md` during merge takes...",
+      "choices": [
+        "The incoming branch version",
+        "HEAD always",
+        "A tag",
+        "Ignore rules"
+      ],
+      "answer": 0,
+      "explain": "theirs is the other side.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_medium_07.mp4",
+        "poster": "media/images/cflt_medium_07-frame.png",
+        "figure": "media/images/cflt_medium_07.png"
+      }
+    },
+    {
+      "id": "cflt_medium_08",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/india9 || true\n```\n# Review context: `/tmp/gitlab/bravo` slot 8 variant 1\nDuring rebase, --ours/--theirs meaning is swapped vs merge.",
+      "answer": true,
+      "explain": "Rebase ours is the branch you replay onto.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_medium_08.mp4",
+        "poster": "media/images/cflt_medium_08-frame.png",
+        "figure": "media/images/cflt_medium_08.png"
+      }
+    },
+    {
+      "id": "cflt_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status | grep -E 'Unmerged|both modified' || true\n```\n# Review context: `C:/proj/charlie` slot 9 variant 1\n`git mergetool` launches...",
+      "choices": [
+        "A configured merge tool on unmerged paths",
+        "git push",
+        "bisect",
+        "submodule update"
+      ],
+      "answer": 0,
+      "explain": "mergetool is UI for conflicts.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_medium_09.mp4",
+        "poster": "media/images/cflt_medium_09-frame.png",
+        "figure": "media/images/cflt_medium_09.png"
+      }
+    },
+    {
+      "id": "cflt_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# markers: <<<<<<< HEAD / ======= / >>>>>>> feature/alpha11\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\n`git merge -X ours` auto-resolves content conflicts favoring...",
+      "choices": [
+        "HEAD",
+        "theirs",
+        "stash",
+        "tags"
+      ],
+      "answer": 0,
+      "explain": "Strategy option ours.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_medium_10.mp4",
+        "poster": "media/images/cflt_medium_10-frame.png",
+        "figure": "media/images/cflt_medium_10.png"
+      }
+    },
+    {
+      "id": "cflt_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge --abort 2>/dev/null || true\n```\n`git checkout --ours notes11.md` during merge takes...",
+      "choices": [
+        "The current-branch version",
+        "The incoming version",
+        "origin/main always",
+        "The stash"
+      ],
+      "answer": 0,
+      "explain": "ours is HEAD.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_medium_11.mp4",
+        "poster": "media/images/cflt_medium_11-frame.png",
+        "figure": "media/images/cflt_medium_11.png"
+      }
+    },
+    {
+      "id": "cflt_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/charlie13 || true\n```\n`git checkout --theirs notes12.md` during merge takes...",
+      "choices": [
+        "The incoming branch version",
+        "HEAD always",
+        "A tag",
+        "Ignore rules"
+      ],
+      "answer": 0,
+      "explain": "theirs is the other side.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_medium_12.mp4",
+        "poster": "media/images/cflt_medium_12-frame.png",
+        "figure": "media/images/cflt_medium_12.png"
+      }
+    },
+    {
+      "id": "cflt_medium_13",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit status | grep -E 'Unmerged|both modified' || true\n```\n# Review context: `./labs/golf` slot 13 variant 1\nDuring rebase, --ours/--theirs meaning is swapped vs merge.",
+      "answer": true,
+      "explain": "Rebase ours is the branch you replay onto.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_medium_13.mp4",
+        "poster": "media/images/cflt_medium_13-frame.png",
+        "figure": "media/images/cflt_medium_13.png"
+      }
+    },
+    {
+      "id": "cflt_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# markers: <<<<<<< HEAD / ======= / >>>>>>> feature/echo15\n```\n# Review context: `/tmp/gitlab/hotel` slot 14 variant 1\n`git mergetool` launches...",
+      "choices": [
+        "A configured merge tool on unmerged paths",
+        "git push",
+        "bisect",
+        "submodule update"
+      ],
+      "answer": 0,
+      "explain": "mergetool is UI for conflicts.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_medium_14.mp4",
+        "poster": "media/images/cflt_medium_14-frame.png",
+        "figure": "media/images/cflt_medium_14.png"
+      }
+    },
+    {
+      "id": "cflt_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge --abort 2>/dev/null || true\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\n`git merge -X ours` auto-resolves content conflicts favoring...",
+      "choices": [
+        "HEAD",
+        "theirs",
+        "stash",
+        "tags"
+      ],
+      "answer": 0,
+      "explain": "Strategy option ours.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_medium_15.mp4",
+        "poster": "media/images/cflt_medium_15-frame.png",
+        "figure": "media/images/cflt_medium_15.png"
+      }
+    },
+    {
+      "id": "cflt_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/golf17 || true\n```\n`git checkout --ours notes16.md` during merge takes...",
+      "choices": [
+        "The current-branch version",
+        "The incoming version",
+        "origin/main always",
+        "The stash"
+      ],
+      "answer": 0,
+      "explain": "ours is HEAD.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_medium_16.mp4",
+        "poster": "media/images/cflt_medium_16-frame.png",
+        "figure": "media/images/cflt_medium_16.png"
+      }
+    },
+    {
+      "id": "cflt_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status | grep -E 'Unmerged|both modified' || true\n```\n`git checkout --theirs notes17.md` during merge takes...",
+      "choices": [
+        "The incoming branch version",
+        "HEAD always",
+        "A tag",
+        "Ignore rules"
+      ],
+      "answer": 0,
+      "explain": "theirs is the other side.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_medium_17.mp4",
+        "poster": "media/images/cflt_medium_17-frame.png",
+        "figure": "media/images/cflt_medium_17.png"
+      }
+    },
+    {
+      "id": "cflt_medium_18",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\n# markers: <<<<<<< HEAD / ======= / >>>>>>> feature/india19\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\nDuring rebase, --ours/--theirs meaning is swapped vs merge.",
+      "answer": true,
+      "explain": "Rebase ours is the branch you replay onto.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_medium_18.mp4",
+        "poster": "media/images/cflt_medium_18-frame.png",
+        "figure": "media/images/cflt_medium_18.png"
+      }
+    },
+    {
+      "id": "cflt_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge --abort 2>/dev/null || true\n```\n# Review context: `./labs/echo` slot 19 variant 1\n`git mergetool` launches...",
+      "choices": [
+        "A configured merge tool on unmerged paths",
+        "git push",
+        "bisect",
+        "submodule update"
+      ],
+      "answer": 0,
+      "explain": "mergetool is UI for conflicts.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_medium_19.mp4",
+        "poster": "media/images/cflt_medium_19-frame.png",
+        "figure": "media/images/cflt_medium_19.png"
+      }
+    },
+    {
+      "id": "cflt_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/alpha21 || true\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\n`git merge -X ours` auto-resolves content conflicts favoring...",
+      "choices": [
+        "HEAD",
+        "theirs",
+        "stash",
+        "tags"
+      ],
+      "answer": 0,
+      "explain": "Strategy option ours.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_medium_20.mp4",
+        "poster": "media/images/cflt_medium_20-frame.png",
+        "figure": "media/images/cflt_medium_20.png"
+      }
+    },
+    {
+      "id": "cflt_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status | grep -E 'Unmerged|both modified' || true\n```\n`git checkout --ours notes21.md` during merge takes...",
+      "choices": [
+        "The current-branch version",
+        "The incoming version",
+        "origin/main always",
+        "The stash"
+      ],
+      "answer": 0,
+      "explain": "ours is HEAD.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_medium_21.mp4",
+        "poster": "media/images/cflt_medium_21-frame.png",
+        "figure": "media/images/cflt_medium_21.png"
+      }
+    },
+    {
+      "id": "cflt_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# markers: <<<<<<< HEAD / ======= / >>>>>>> feature/charlie23\n```\n`git checkout --theirs notes22.md` during merge takes...",
+      "choices": [
+        "The incoming branch version",
+        "HEAD always",
+        "A tag",
+        "Ignore rules"
+      ],
+      "answer": 0,
+      "explain": "theirs is the other side.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_medium_22.mp4",
+        "poster": "media/images/cflt_medium_22-frame.png",
+        "figure": "media/images/cflt_medium_22.png"
+      }
+    },
+    {
+      "id": "cflt_medium_23",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit merge --abort 2>/dev/null || true\n```\n# Review context: `~/src/alpha` slot 23 variant 1\nDuring rebase, --ours/--theirs meaning is swapped vs merge.",
+      "answer": true,
+      "explain": "Rebase ours is the branch you replay onto.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_medium_23.mp4",
+        "poster": "media/images/cflt_medium_23-frame.png",
+        "figure": "media/images/cflt_medium_23.png"
+      }
+    },
+    {
+      "id": "cflt_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/echo25 || true\n```\n# Review context: `/work/chip/bravo` slot 24 variant 1\n`git mergetool` launches...",
+      "choices": [
+        "A configured merge tool on unmerged paths",
+        "git push",
+        "bisect",
+        "submodule update"
+      ],
+      "answer": 0,
+      "explain": "mergetool is UI for conflicts.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_medium_24.mp4",
+        "poster": "media/images/cflt_medium_24-frame.png",
+        "figure": "media/images/cflt_medium_24.png"
+      }
+    },
+    {
+      "id": "cflt_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status | grep -E 'Unmerged|both modified' || true\n```\n# Review context: `./labs/charlie` slot 25 variant 1\n`git merge -X ours` auto-resolves content conflicts favoring...",
+      "choices": [
+        "HEAD",
+        "theirs",
+        "stash",
+        "tags"
+      ],
+      "answer": 0,
+      "explain": "Strategy option ours.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_medium_25.mp4",
+        "poster": "media/images/cflt_medium_25-frame.png",
+        "figure": "media/images/cflt_medium_25.png"
+      }
+    },
+    {
+      "id": "cflt_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# markers: <<<<<<< HEAD / ======= / >>>>>>> feature/golf27\n```\n`git checkout --ours notes26.md` during merge takes...",
+      "choices": [
+        "The current-branch version",
+        "The incoming version",
+        "origin/main always",
+        "The stash"
+      ],
+      "answer": 0,
+      "explain": "ours is HEAD.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_medium_26.mp4",
+        "poster": "media/images/cflt_medium_26-frame.png",
+        "figure": "media/images/cflt_medium_26.png"
+      }
+    },
+    {
+      "id": "cflt_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge --abort 2>/dev/null || true\n```\n`git checkout --theirs notes27.md` during merge takes...",
+      "choices": [
+        "The incoming branch version",
+        "HEAD always",
+        "A tag",
+        "Ignore rules"
+      ],
+      "answer": 0,
+      "explain": "theirs is the other side.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_medium_27.mp4",
+        "poster": "media/images/cflt_medium_27-frame.png",
+        "figure": "media/images/cflt_medium_27.png"
+      }
+    },
+    {
+      "id": "cflt_medium_28",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/india29 || true\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\nDuring rebase, --ours/--theirs meaning is swapped vs merge.",
+      "answer": true,
+      "explain": "Rebase ours is the branch you replay onto.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_medium_28.mp4",
+        "poster": "media/images/cflt_medium_28-frame.png",
+        "figure": "media/images/cflt_medium_28.png"
+      }
+    },
+    {
+      "id": "cflt_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status | grep -E 'Unmerged|both modified' || true\n```\n# Review context: `~/src/golf` slot 29 variant 1\n`git mergetool` launches...",
+      "choices": [
+        "A configured merge tool on unmerged paths",
+        "git push",
+        "bisect",
+        "submodule update"
+      ],
+      "answer": 0,
+      "explain": "mergetool is UI for conflicts.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_medium_29.mp4",
+        "poster": "media/images/cflt_medium_29-frame.png",
+        "figure": "media/images/cflt_medium_29.png"
+      }
+    },
+    {
+      "id": "cflt_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# markers: <<<<<<< HEAD / ======= / >>>>>>> feature/alpha31\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\n`git merge -X ours` auto-resolves content conflicts favoring...",
+      "choices": [
+        "HEAD",
+        "theirs",
+        "stash",
+        "tags"
+      ],
+      "answer": 0,
+      "explain": "Strategy option ours.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_medium_30.mp4",
+        "poster": "media/images/cflt_medium_30-frame.png",
+        "figure": "media/images/cflt_medium_30.png"
+      }
+    },
+    {
+      "id": "cflt_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge --abort 2>/dev/null || true\n```\nIndex stages 1/2/3 during a conflict are...",
+      "choices": [
+        "base, ours, theirs blobs",
+        "remotes",
+        "tags",
+        "stashes"
+      ],
+      "answer": 0,
+      "explain": "Unmerged index has three stages.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_hard_01.mp4",
+        "poster": "media/images/cflt_hard_01-frame.png",
+        "figure": "media/images/cflt_hard_01.png"
+      }
+    },
+    {
+      "id": "cflt_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/echo5 || true\n```\n`git show :2:notes2.md` shows...",
+      "choices": [
+        "Ours (stage 2) version",
+        "Theirs",
+        "Base only",
+        "The working tree ignore"
+      ],
+      "answer": 0,
+      "explain": "Colon stage syntax.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_hard_02.mp4",
+        "poster": "media/images/cflt_hard_02-frame.png",
+        "figure": "media/images/cflt_hard_02.png"
+      }
+    },
+    {
+      "id": "cflt_hard_03",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit status | grep -E 'Unmerged|both modified' || true\n```\n`git rerere` records conflict resolutions to reuse later.",
+      "answer": true,
+      "explain": "Reuse recorded resolution.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_hard_03.mp4",
+        "poster": "media/images/cflt_hard_03-frame.png",
+        "figure": "media/images/cflt_hard_03.png"
+      }
+    },
+    {
+      "id": "cflt_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# markers: <<<<<<< HEAD / ======= / >>>>>>> feature/golf7\n```\nA conflicted cherry-pick is finished with...",
+      "choices": [
+        "git add then git cherry-pick --continue",
+        "git merge --abort only",
+        "git tag -d",
+        "git fetch"
+      ],
+      "answer": 0,
+      "explain": "Each sequencer has --continue.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_hard_04.mp4",
+        "poster": "media/images/cflt_hard_04-frame.png",
+        "figure": "media/images/cflt_hard_04.png"
+      }
+    },
+    {
+      "id": "cflt_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge --abort 2>/dev/null || true\n```\nWhy binary `build/out5.vcd` conflicts are painful...",
+      "choices": [
+        "No line-based markers; you must pick a whole file",
+        "Git cannot store binaries",
+        "Status hides them",
+        "They are always ignored"
+      ],
+      "answer": 0,
+      "explain": "Pick ours/theirs or regenerate.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_hard_05.mp4",
+        "poster": "media/images/cflt_hard_05-frame.png",
+        "figure": "media/images/cflt_hard_05.png"
+      }
+    },
+    {
+      "id": "cflt_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/india9 || true\n```\n# Review context: `/work/chip/hotel` slot 6 variant 1\nIndex stages 1/2/3 during a conflict are...",
+      "choices": [
+        "base, ours, theirs blobs",
+        "remotes",
+        "tags",
+        "stashes"
+      ],
+      "answer": 0,
+      "explain": "Unmerged index has three stages.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_hard_06.mp4",
+        "poster": "media/images/cflt_hard_06-frame.png",
+        "figure": "media/images/cflt_hard_06.png"
+      }
+    },
+    {
+      "id": "cflt_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status | grep -E 'Unmerged|both modified' || true\n```\n`git show :2:notes7.md` shows...",
+      "choices": [
+        "Ours (stage 2) version",
+        "Theirs",
+        "Base only",
+        "The working tree ignore"
+      ],
+      "answer": 0,
+      "explain": "Colon stage syntax.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_hard_07.mp4",
+        "poster": "media/images/cflt_hard_07-frame.png",
+        "figure": "media/images/cflt_hard_07.png"
+      }
+    },
+    {
+      "id": "cflt_hard_08",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\n# markers: <<<<<<< HEAD / ======= / >>>>>>> feature/alpha11\n```\n# Review context: `/tmp/gitlab/bravo` slot 8 variant 1\n`git rerere` records conflict resolutions to reuse later.",
+      "answer": true,
+      "explain": "Reuse recorded resolution.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_hard_08.mp4",
+        "poster": "media/images/cflt_hard_08-frame.png",
+        "figure": "media/images/cflt_hard_08.png"
+      }
+    },
+    {
+      "id": "cflt_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge --abort 2>/dev/null || true\n```\n# Review context: `C:/proj/charlie` slot 9 variant 1\nA conflicted cherry-pick is finished with...",
+      "choices": [
+        "git add then git cherry-pick --continue",
+        "git merge --abort only",
+        "git tag -d",
+        "git fetch"
+      ],
+      "answer": 0,
+      "explain": "Each sequencer has --continue.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_hard_09.mp4",
+        "poster": "media/images/cflt_hard_09-frame.png",
+        "figure": "media/images/cflt_hard_09.png"
+      }
+    },
+    {
+      "id": "cflt_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/charlie13 || true\n```\nWhy binary `build/out10.vcd` conflicts are painful...",
+      "choices": [
+        "No line-based markers; you must pick a whole file",
+        "Git cannot store binaries",
+        "Status hides them",
+        "They are always ignored"
+      ],
+      "answer": 0,
+      "explain": "Pick ours/theirs or regenerate.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_hard_10.mp4",
+        "poster": "media/images/cflt_hard_10-frame.png",
+        "figure": "media/images/cflt_hard_10.png"
+      }
+    },
+    {
+      "id": "cflt_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status | grep -E 'Unmerged|both modified' || true\n```\n# Review context: `~/src/echo` slot 11 variant 1\nIndex stages 1/2/3 during a conflict are...",
+      "choices": [
+        "base, ours, theirs blobs",
+        "remotes",
+        "tags",
+        "stashes"
+      ],
+      "answer": 0,
+      "explain": "Unmerged index has three stages.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_hard_11.mp4",
+        "poster": "media/images/cflt_hard_11-frame.png",
+        "figure": "media/images/cflt_hard_11.png"
+      }
+    },
+    {
+      "id": "cflt_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# markers: <<<<<<< HEAD / ======= / >>>>>>> feature/echo15\n```\n`git show :2:notes12.md` shows...",
+      "choices": [
+        "Ours (stage 2) version",
+        "Theirs",
+        "Base only",
+        "The working tree ignore"
+      ],
+      "answer": 0,
+      "explain": "Colon stage syntax.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_hard_12.mp4",
+        "poster": "media/images/cflt_hard_12-frame.png",
+        "figure": "media/images/cflt_hard_12.png"
+      }
+    },
+    {
+      "id": "cflt_hard_13",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit merge --abort 2>/dev/null || true\n```\n# Review context: `./labs/golf` slot 13 variant 1\n`git rerere` records conflict resolutions to reuse later.",
+      "answer": true,
+      "explain": "Reuse recorded resolution.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_hard_13.mp4",
+        "poster": "media/images/cflt_hard_13-frame.png",
+        "figure": "media/images/cflt_hard_13.png"
+      }
+    },
+    {
+      "id": "cflt_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/golf17 || true\n```\n# Review context: `/tmp/gitlab/hotel` slot 14 variant 1\nA conflicted cherry-pick is finished with...",
+      "choices": [
+        "git add then git cherry-pick --continue",
+        "git merge --abort only",
+        "git tag -d",
+        "git fetch"
+      ],
+      "answer": 0,
+      "explain": "Each sequencer has --continue.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_hard_14.mp4",
+        "poster": "media/images/cflt_hard_14-frame.png",
+        "figure": "media/images/cflt_hard_14.png"
+      }
+    },
+    {
+      "id": "cflt_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status | grep -E 'Unmerged|both modified' || true\n```\nWhy binary `build/out15.vcd` conflicts are painful...",
+      "choices": [
+        "No line-based markers; you must pick a whole file",
+        "Git cannot store binaries",
+        "Status hides them",
+        "They are always ignored"
+      ],
+      "answer": 0,
+      "explain": "Pick ours/theirs or regenerate.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_hard_15.mp4",
+        "poster": "media/images/cflt_hard_15-frame.png",
+        "figure": "media/images/cflt_hard_15.png"
+      }
+    },
+    {
+      "id": "cflt_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# markers: <<<<<<< HEAD / ======= / >>>>>>> feature/india19\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\nIndex stages 1/2/3 during a conflict are...",
+      "choices": [
+        "base, ours, theirs blobs",
+        "remotes",
+        "tags",
+        "stashes"
+      ],
+      "answer": 0,
+      "explain": "Unmerged index has three stages.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_hard_16.mp4",
+        "poster": "media/images/cflt_hard_16-frame.png",
+        "figure": "media/images/cflt_hard_16.png"
+      }
+    },
+    {
+      "id": "cflt_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge --abort 2>/dev/null || true\n```\n`git show :2:notes17.md` shows...",
+      "choices": [
+        "Ours (stage 2) version",
+        "Theirs",
+        "Base only",
+        "The working tree ignore"
+      ],
+      "answer": 0,
+      "explain": "Colon stage syntax.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_hard_17.mp4",
+        "poster": "media/images/cflt_hard_17-frame.png",
+        "figure": "media/images/cflt_hard_17.png"
+      }
+    },
+    {
+      "id": "cflt_hard_18",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/alpha21 || true\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\n`git rerere` records conflict resolutions to reuse later.",
+      "answer": true,
+      "explain": "Reuse recorded resolution.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_hard_18.mp4",
+        "poster": "media/images/cflt_hard_18-frame.png",
+        "figure": "media/images/cflt_hard_18.png"
+      }
+    },
+    {
+      "id": "cflt_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status | grep -E 'Unmerged|both modified' || true\n```\n# Review context: `./labs/echo` slot 19 variant 1\nA conflicted cherry-pick is finished with...",
+      "choices": [
+        "git add then git cherry-pick --continue",
+        "git merge --abort only",
+        "git tag -d",
+        "git fetch"
+      ],
+      "answer": 0,
+      "explain": "Each sequencer has --continue.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_hard_19.mp4",
+        "poster": "media/images/cflt_hard_19-frame.png",
+        "figure": "media/images/cflt_hard_19.png"
+      }
+    },
+    {
+      "id": "cflt_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# markers: <<<<<<< HEAD / ======= / >>>>>>> feature/charlie23\n```\nWhy binary `build/out20.vcd` conflicts are painful...",
+      "choices": [
+        "No line-based markers; you must pick a whole file",
+        "Git cannot store binaries",
+        "Status hides them",
+        "They are always ignored"
+      ],
+      "answer": 0,
+      "explain": "Pick ours/theirs or regenerate.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_hard_20.mp4",
+        "poster": "media/images/cflt_hard_20-frame.png",
+        "figure": "media/images/cflt_hard_20.png"
+      }
+    },
+    {
+      "id": "cflt_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge --abort 2>/dev/null || true\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\nIndex stages 1/2/3 during a conflict are...",
+      "choices": [
+        "base, ours, theirs blobs",
+        "remotes",
+        "tags",
+        "stashes"
+      ],
+      "answer": 0,
+      "explain": "Unmerged index has three stages.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_hard_21.mp4",
+        "poster": "media/images/cflt_hard_21-frame.png",
+        "figure": "media/images/cflt_hard_21.png"
+      }
+    },
+    {
+      "id": "cflt_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/echo25 || true\n```\n`git show :2:notes22.md` shows...",
+      "choices": [
+        "Ours (stage 2) version",
+        "Theirs",
+        "Base only",
+        "The working tree ignore"
+      ],
+      "answer": 0,
+      "explain": "Colon stage syntax.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_hard_22.mp4",
+        "poster": "media/images/cflt_hard_22-frame.png",
+        "figure": "media/images/cflt_hard_22.png"
+      }
+    },
+    {
+      "id": "cflt_hard_23",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit status | grep -E 'Unmerged|both modified' || true\n```\n# Review context: `~/src/alpha` slot 23 variant 1\n`git rerere` records conflict resolutions to reuse later.",
+      "answer": true,
+      "explain": "Reuse recorded resolution.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_hard_23.mp4",
+        "poster": "media/images/cflt_hard_23-frame.png",
+        "figure": "media/images/cflt_hard_23.png"
+      }
+    },
+    {
+      "id": "cflt_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# markers: <<<<<<< HEAD / ======= / >>>>>>> feature/golf27\n```\n# Review context: `/work/chip/bravo` slot 24 variant 1\nA conflicted cherry-pick is finished with...",
+      "choices": [
+        "git add then git cherry-pick --continue",
+        "git merge --abort only",
+        "git tag -d",
+        "git fetch"
+      ],
+      "answer": 0,
+      "explain": "Each sequencer has --continue.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_hard_24.mp4",
+        "poster": "media/images/cflt_hard_24-frame.png",
+        "figure": "media/images/cflt_hard_24.png"
+      }
+    },
+    {
+      "id": "cflt_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge --abort 2>/dev/null || true\n```\nWhy binary `build/out25.vcd` conflicts are painful...",
+      "choices": [
+        "No line-based markers; you must pick a whole file",
+        "Git cannot store binaries",
+        "Status hides them",
+        "They are always ignored"
+      ],
+      "answer": 0,
+      "explain": "Pick ours/theirs or regenerate.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_hard_25.mp4",
+        "poster": "media/images/cflt_hard_25-frame.png",
+        "figure": "media/images/cflt_hard_25.png"
+      }
+    },
+    {
+      "id": "cflt_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/india29 || true\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\nIndex stages 1/2/3 during a conflict are...",
+      "choices": [
+        "base, ours, theirs blobs",
+        "remotes",
+        "tags",
+        "stashes"
+      ],
+      "answer": 0,
+      "explain": "Unmerged index has three stages.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_hard_26.mp4",
+        "poster": "media/images/cflt_hard_26-frame.png",
+        "figure": "media/images/cflt_hard_26.png"
+      }
+    },
+    {
+      "id": "cflt_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status | grep -E 'Unmerged|both modified' || true\n```\n`git show :2:notes27.md` shows...",
+      "choices": [
+        "Ours (stage 2) version",
+        "Theirs",
+        "Base only",
+        "The working tree ignore"
+      ],
+      "answer": 0,
+      "explain": "Colon stage syntax.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_hard_27.mp4",
+        "poster": "media/images/cflt_hard_27-frame.png",
+        "figure": "media/images/cflt_hard_27.png"
+      }
+    },
+    {
+      "id": "cflt_hard_28",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\n# markers: <<<<<<< HEAD / ======= / >>>>>>> feature/alpha31\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\n`git rerere` records conflict resolutions to reuse later.",
+      "answer": true,
+      "explain": "Reuse recorded resolution.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_hard_28.mp4",
+        "poster": "media/images/cflt_hard_28-frame.png",
+        "figure": "media/images/cflt_hard_28.png"
+      }
+    },
+    {
+      "id": "cflt_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge --abort 2>/dev/null || true\n```\n# Review context: `~/src/golf` slot 29 variant 1\nA conflicted cherry-pick is finished with...",
+      "choices": [
+        "git add then git cherry-pick --continue",
+        "git merge --abort only",
+        "git tag -d",
+        "git fetch"
+      ],
+      "answer": 0,
+      "explain": "Each sequencer has --continue.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_hard_29.mp4",
+        "poster": "media/images/cflt_hard_29-frame.png",
+        "figure": "media/images/cflt_hard_29.png"
+      }
+    },
+    {
+      "id": "cflt_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit merge feature/charlie33 || true\n```\nWhy binary `build/out30.vcd` conflicts are painful...",
+      "choices": [
+        "No line-based markers; you must pick a whole file",
+        "Git cannot store binaries",
+        "Status hides them",
+        "They are always ignored"
+      ],
+      "answer": 0,
+      "explain": "Pick ours/theirs or regenerate.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/cflt_hard_30.mp4",
+        "poster": "media/images/cflt_hard_30-frame.png",
+        "figure": "media/images/cflt_hard_30.png"
+      }
+    }
+  ]
+}
