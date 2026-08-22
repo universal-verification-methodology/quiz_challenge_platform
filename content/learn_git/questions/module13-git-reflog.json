@@ -1,0 +1,1656 @@
+{
+  "module": "module13-git-reflog",
+  "title": "Reflog recovery",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --hard HEAD@{1}\n```\ngit reflog mainly shows...",
+      "choices": [
+        "A local history of where HEAD and branch tips have moved",
+        "Only remote URLs",
+        "Your .gitignore patterns",
+        "Every file on your hard disk"
+      ],
+      "answer": 0,
+      "explain": "Reflog records local HEAD/branch movements-commits, checkouts, resets-even when log forgets a commit.",
+      "difficulty": "easy",
+      "id": "rlog_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_easy_01.mp4",
+        "poster": "media/images/rlog_easy_01-frame.png",
+        "figure": "media/images/rlog_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog show feature/charlie3 | head\n```\nAfter git reset --hard HEAD~1, a common undo is...",
+      "choices": [
+        "git reset --hard HEAD@{1}",
+        "git push --force main",
+        "Delete .gitignore",
+        "git tag -d everything"
+      ],
+      "answer": 0,
+      "explain": "HEAD@{1} is the previous reflog position-often the tip before the reset.",
+      "difficulty": "easy",
+      "id": "rlog_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_easy_02.mp4",
+        "poster": "media/images/rlog_easy_02-frame.png",
+        "figure": "media/images/rlog_easy_02.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log -g --oneline | head\n```\nReflog entries are automatically shared when you git push.",
+      "answer": false,
+      "explain": "Reflog is local to your clone; push recovery branches if others need the commit.",
+      "difficulty": "easy",
+      "id": "rlog_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_easy_03.mp4",
+        "poster": "media/images/rlog_easy_03-frame.png",
+        "figure": "media/images/rlog_easy_03.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog | head -n 10\n```\nA commit can disappear from git log but still appear in reflog when...",
+      "choices": [
+        "No branch points at it anymore after a hard reset",
+        "You only ran git status",
+        "The file was never committed",
+        "You used git stash list"
+      ],
+      "answer": 0,
+      "explain": "Hard reset can drop the branch tip; reflog may still reference the old commit hash.",
+      "difficulty": "easy",
+      "id": "rlog_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_easy_04.mp4",
+        "poster": "media/images/rlog_easy_04-frame.png",
+        "figure": "media/images/rlog_easy_04.png"
+      }
+    },
+    {
+      "id": "rlog_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --hard HEAD@{1}\n```\n`git reflog` mainly shows...",
+      "choices": [
+        "A local history of where HEAD and branch tips have moved",
+        "Only remote URLs",
+        "Your .gitignore patterns",
+        "Every file on disk"
+      ],
+      "answer": 0,
+      "explain": "Reflog records local HEAD movements.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_easy_05.mp4",
+        "poster": "media/images/rlog_easy_05-frame.png",
+        "figure": "media/images/rlog_easy_05.png"
+      }
+    },
+    {
+      "id": "rlog_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog show feature/golf7 | head\n```\nAfter `git reset --hard HEAD~1`, a common undo is...",
+      "choices": [
+        "git reset --hard HEAD@{{1}}",
+        "git push --force main",
+        "Delete .gitignore",
+        "git tag -d everything"
+      ],
+      "answer": 0,
+      "explain": "HEAD@{1} is often the previous tip.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_easy_06.mp4",
+        "poster": "media/images/rlog_easy_06-frame.png",
+        "figure": "media/images/rlog_easy_06.png"
+      }
+    },
+    {
+      "id": "rlog_easy_07",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log -g --oneline | head\n```\nReflog entries are automatically shared when you `git push`.",
+      "answer": false,
+      "explain": "Reflog is local to your clone.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_easy_07.mp4",
+        "poster": "media/images/rlog_easy_07-frame.png",
+        "figure": "media/images/rlog_easy_07.png"
+      }
+    },
+    {
+      "id": "rlog_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog | head -n 14\n```\nA commit can vanish from `git log` but still appear in reflog when...",
+      "choices": [
+        "No branch points at it after a hard reset",
+        "You only ran status",
+        "The file was never committed",
+        "You used stash list"
+      ],
+      "answer": 0,
+      "explain": "Dangling commits may still be in reflog.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_easy_08.mp4",
+        "poster": "media/images/rlog_easy_08-frame.png",
+        "figure": "media/images/rlog_easy_08.png"
+      }
+    },
+    {
+      "id": "rlog_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --hard HEAD@{1}\n```\n`HEAD@{{1}}` means...",
+      "choices": [
+        "The previous reflog position of HEAD",
+        "origin/main",
+        "A tag",
+        "A stash always"
+      ],
+      "answer": 0,
+      "explain": "Nth prior HEAD.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_easy_09.mp4",
+        "poster": "media/images/rlog_easy_09-frame.png",
+        "figure": "media/images/rlog_easy_09.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog show feature/alpha11 | head\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\ngit reflog mainly shows...",
+      "choices": [
+        "A local history of where HEAD and branch tips have moved",
+        "Only remote URLs",
+        "Your .gitignore patterns",
+        "Every file on your hard disk"
+      ],
+      "answer": 0,
+      "explain": "Reflog records local HEAD/branch movements-commits, checkouts, resets-even when log forgets a commit.",
+      "difficulty": "easy",
+      "id": "rlog_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_easy_10.mp4",
+        "poster": "media/images/rlog_easy_10-frame.png",
+        "figure": "media/images/rlog_easy_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -g --oneline | head\n```\n# Review context: `~/src/echo` slot 11 variant 1\nAfter git reset --hard HEAD~1, a common undo is...",
+      "choices": [
+        "git reset --hard HEAD@{1}",
+        "git push --force main",
+        "Delete .gitignore",
+        "git tag -d everything"
+      ],
+      "answer": 0,
+      "explain": "HEAD@{1} is the previous reflog position-often the tip before the reset.",
+      "difficulty": "easy",
+      "id": "rlog_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_easy_11.mp4",
+        "poster": "media/images/rlog_easy_11-frame.png",
+        "figure": "media/images/rlog_easy_11.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog | head -n 8\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\nReflog entries are automatically shared when you git push.",
+      "answer": false,
+      "explain": "Reflog is local to your clone; push recovery branches if others need the commit.",
+      "difficulty": "easy",
+      "id": "rlog_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_easy_12.mp4",
+        "poster": "media/images/rlog_easy_12-frame.png",
+        "figure": "media/images/rlog_easy_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --hard HEAD@{1}\n```\n# Review context: `./labs/golf` slot 13 variant 1\nA commit can disappear from git log but still appear in reflog when...",
+      "choices": [
+        "No branch points at it anymore after a hard reset",
+        "You only ran git status",
+        "The file was never committed",
+        "You used git stash list"
+      ],
+      "answer": 0,
+      "explain": "Hard reset can drop the branch tip; reflog may still reference the old commit hash.",
+      "difficulty": "easy",
+      "id": "rlog_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_easy_13.mp4",
+        "poster": "media/images/rlog_easy_13-frame.png",
+        "figure": "media/images/rlog_easy_13.png"
+      }
+    },
+    {
+      "id": "rlog_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog show feature/echo15 | head\n```\n# Review context: `/tmp/gitlab/hotel` slot 14 variant 1\n`git reflog` mainly shows...",
+      "choices": [
+        "A local history of where HEAD and branch tips have moved",
+        "Only remote URLs",
+        "Your .gitignore patterns",
+        "Every file on disk"
+      ],
+      "answer": 0,
+      "explain": "Reflog records local HEAD movements.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_easy_14.mp4",
+        "poster": "media/images/rlog_easy_14-frame.png",
+        "figure": "media/images/rlog_easy_14.png"
+      }
+    },
+    {
+      "id": "rlog_easy_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -g --oneline | head\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\nAfter `git reset --hard HEAD~1`, a common undo is...",
+      "choices": [
+        "git reset --hard HEAD@{{1}}",
+        "git push --force main",
+        "Delete .gitignore",
+        "git tag -d everything"
+      ],
+      "answer": 0,
+      "explain": "HEAD@{1} is often the previous tip.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_easy_15.mp4",
+        "poster": "media/images/rlog_easy_15-frame.png",
+        "figure": "media/images/rlog_easy_15.png"
+      }
+    },
+    {
+      "id": "rlog_easy_16",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog | head -n 12\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\nReflog entries are automatically shared when you `git push`.",
+      "answer": false,
+      "explain": "Reflog is local to your clone.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_easy_16.mp4",
+        "poster": "media/images/rlog_easy_16-frame.png",
+        "figure": "media/images/rlog_easy_16.png"
+      }
+    },
+    {
+      "id": "rlog_easy_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --hard HEAD@{1}\n```\n# Review context: `~/src/charlie` slot 17 variant 1\nA commit can vanish from `git log` but still appear in reflog when...",
+      "choices": [
+        "No branch points at it after a hard reset",
+        "You only ran status",
+        "The file was never committed",
+        "You used stash list"
+      ],
+      "answer": 0,
+      "explain": "Dangling commits may still be in reflog.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_easy_17.mp4",
+        "poster": "media/images/rlog_easy_17-frame.png",
+        "figure": "media/images/rlog_easy_17.png"
+      }
+    },
+    {
+      "id": "rlog_easy_18",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog show feature/india19 | head\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\n`HEAD@{{1}}` means...",
+      "choices": [
+        "The previous reflog position of HEAD",
+        "origin/main",
+        "A tag",
+        "A stash always"
+      ],
+      "answer": 0,
+      "explain": "Nth prior HEAD.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_easy_18.mp4",
+        "poster": "media/images/rlog_easy_18-frame.png",
+        "figure": "media/images/rlog_easy_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -g --oneline | head\n```\n# Review context: `./labs/echo` slot 19 variant 1\ngit reflog mainly shows...",
+      "choices": [
+        "A local history of where HEAD and branch tips have moved",
+        "Only remote URLs",
+        "Your .gitignore patterns",
+        "Every file on your hard disk"
+      ],
+      "answer": 0,
+      "explain": "Reflog records local HEAD/branch movements-commits, checkouts, resets-even when log forgets a commit.",
+      "difficulty": "easy",
+      "id": "rlog_easy_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_easy_19.mp4",
+        "poster": "media/images/rlog_easy_19-frame.png",
+        "figure": "media/images/rlog_easy_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog | head -n 6\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\nAfter git reset --hard HEAD~1, a common undo is...",
+      "choices": [
+        "git reset --hard HEAD@{1}",
+        "git push --force main",
+        "Delete .gitignore",
+        "git tag -d everything"
+      ],
+      "answer": 0,
+      "explain": "HEAD@{1} is the previous reflog position-often the tip before the reset.",
+      "difficulty": "easy",
+      "id": "rlog_easy_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_easy_20.mp4",
+        "poster": "media/images/rlog_easy_20-frame.png",
+        "figure": "media/images/rlog_easy_20.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --hard HEAD@{1}\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\nReflog entries are automatically shared when you git push.",
+      "answer": false,
+      "explain": "Reflog is local to your clone; push recovery branches if others need the commit.",
+      "difficulty": "easy",
+      "id": "rlog_easy_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_easy_21.mp4",
+        "poster": "media/images/rlog_easy_21-frame.png",
+        "figure": "media/images/rlog_easy_21.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog show feature/charlie23 | head\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\nA commit can disappear from git log but still appear in reflog when...",
+      "choices": [
+        "No branch points at it anymore after a hard reset",
+        "You only ran git status",
+        "The file was never committed",
+        "You used git stash list"
+      ],
+      "answer": 0,
+      "explain": "Hard reset can drop the branch tip; reflog may still reference the old commit hash.",
+      "difficulty": "easy",
+      "id": "rlog_easy_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_easy_22.mp4",
+        "poster": "media/images/rlog_easy_22-frame.png",
+        "figure": "media/images/rlog_easy_22.png"
+      }
+    },
+    {
+      "id": "rlog_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -g --oneline | head\n```\n# Review context: `~/src/alpha` slot 23 variant 1\n`git reflog` mainly shows...",
+      "choices": [
+        "A local history of where HEAD and branch tips have moved",
+        "Only remote URLs",
+        "Your .gitignore patterns",
+        "Every file on disk"
+      ],
+      "answer": 0,
+      "explain": "Reflog records local HEAD movements.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_easy_23.mp4",
+        "poster": "media/images/rlog_easy_23-frame.png",
+        "figure": "media/images/rlog_easy_23.png"
+      }
+    },
+    {
+      "id": "rlog_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog | head -n 10\n```\n# Review context: `/work/chip/bravo` slot 24 variant 1\nAfter `git reset --hard HEAD~1`, a common undo is...",
+      "choices": [
+        "git reset --hard HEAD@{{1}}",
+        "git push --force main",
+        "Delete .gitignore",
+        "git tag -d everything"
+      ],
+      "answer": 0,
+      "explain": "HEAD@{1} is often the previous tip.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_easy_24.mp4",
+        "poster": "media/images/rlog_easy_24-frame.png",
+        "figure": "media/images/rlog_easy_24.png"
+      }
+    },
+    {
+      "id": "rlog_easy_25",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --hard HEAD@{1}\n```\n# Review context: `./labs/charlie` slot 25 variant 1\nReflog entries are automatically shared when you `git push`.",
+      "answer": false,
+      "explain": "Reflog is local to your clone.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_easy_25.mp4",
+        "poster": "media/images/rlog_easy_25-frame.png",
+        "figure": "media/images/rlog_easy_25.png"
+      }
+    },
+    {
+      "id": "rlog_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog show feature/golf27 | head\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\nA commit can vanish from `git log` but still appear in reflog when...",
+      "choices": [
+        "No branch points at it after a hard reset",
+        "You only ran status",
+        "The file was never committed",
+        "You used stash list"
+      ],
+      "answer": 0,
+      "explain": "Dangling commits may still be in reflog.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_easy_26.mp4",
+        "poster": "media/images/rlog_easy_26-frame.png",
+        "figure": "media/images/rlog_easy_26.png"
+      }
+    },
+    {
+      "id": "rlog_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -g --oneline | head\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\n`HEAD@{{1}}` means...",
+      "choices": [
+        "The previous reflog position of HEAD",
+        "origin/main",
+        "A tag",
+        "A stash always"
+      ],
+      "answer": 0,
+      "explain": "Nth prior HEAD.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_easy_27.mp4",
+        "poster": "media/images/rlog_easy_27-frame.png",
+        "figure": "media/images/rlog_easy_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog | head -n 14\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\ngit reflog mainly shows...",
+      "choices": [
+        "A local history of where HEAD and branch tips have moved",
+        "Only remote URLs",
+        "Your .gitignore patterns",
+        "Every file on your hard disk"
+      ],
+      "answer": 0,
+      "explain": "Reflog records local HEAD/branch movements-commits, checkouts, resets-even when log forgets a commit.",
+      "difficulty": "easy",
+      "id": "rlog_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_easy_28.mp4",
+        "poster": "media/images/rlog_easy_28-frame.png",
+        "figure": "media/images/rlog_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --hard HEAD@{1}\n```\n# Review context: `~/src/golf` slot 29 variant 1\nAfter git reset --hard HEAD~1, a common undo is...",
+      "choices": [
+        "git reset --hard HEAD@{1}",
+        "git push --force main",
+        "Delete .gitignore",
+        "git tag -d everything"
+      ],
+      "answer": 0,
+      "explain": "HEAD@{1} is the previous reflog position-often the tip before the reset.",
+      "difficulty": "easy",
+      "id": "rlog_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_easy_29.mp4",
+        "poster": "media/images/rlog_easy_29-frame.png",
+        "figure": "media/images/rlog_easy_29.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog show feature/alpha31 | head\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\nReflog entries are automatically shared when you git push.",
+      "answer": false,
+      "explain": "Reflog is local to your clone; push recovery branches if others need the commit.",
+      "difficulty": "easy",
+      "id": "rlog_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_easy_30.mp4",
+        "poster": "media/images/rlog_easy_30-frame.png",
+        "figure": "media/images/rlog_easy_30.png"
+      }
+    },
+    {
+      "id": "rlog_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --hard HEAD@{1}\n```\n`git reset --hard ORIG_HEAD` often undoes...",
+      "choices": [
+        "The last reset/merge/rebase that set ORIG_HEAD",
+        "All remotes",
+        "gitignore",
+        "tags"
+      ],
+      "answer": 0,
+      "explain": "ORIG_HEAD is a backup pointer.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_medium_01.mp4",
+        "poster": "media/images/rlog_medium_01-frame.png",
+        "figure": "media/images/rlog_medium_01.png"
+      }
+    },
+    {
+      "id": "rlog_medium_02",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog show feature/charlie3 | head\n```\n`git stash` also records entries under refs/stash.",
+      "answer": true,
+      "explain": "Stash has its own log.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_medium_02.mp4",
+        "poster": "media/images/rlog_medium_02-frame.png",
+        "figure": "media/images/rlog_medium_02.png"
+      }
+    },
+    {
+      "id": "rlog_medium_03",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -g --oneline | head\n```\nWhy `git clone` starts with a short reflog...",
+      "choices": [
+        "New clone has little local HEAD motion yet",
+        "Remotes copy reflog",
+        "Tags fill reflog",
+        "Status writes reflog"
+      ],
+      "answer": 0,
+      "explain": "Reflog is local activity.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_medium_03.mp4",
+        "poster": "media/images/rlog_medium_03-frame.png",
+        "figure": "media/images/rlog_medium_03.png"
+      }
+    },
+    {
+      "id": "rlog_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog | head -n 10\n```\nCreating a branch at a dangling `a0004bee`...",
+      "choices": [
+        "Gives the commit a ref so gc will not drop it",
+        "Pushes automatically",
+        "Deletes origin",
+        "Starts mergetool"
+      ],
+      "answer": 0,
+      "explain": "Refs protect objects.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_medium_04.mp4",
+        "poster": "media/images/rlog_medium_04-frame.png",
+        "figure": "media/images/rlog_medium_04.png"
+      }
+    },
+    {
+      "id": "rlog_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --hard HEAD@{1}\n```\n`git reflog show feature/lab5` shows...",
+      "choices": [
+        "Movements of that branch tip",
+        "Only remotes",
+        "Ignore rules",
+        "PRs"
+      ],
+      "answer": 0,
+      "explain": "Per-ref reflog.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_medium_05.mp4",
+        "poster": "media/images/rlog_medium_05-frame.png",
+        "figure": "media/images/rlog_medium_05.png"
+      }
+    },
+    {
+      "id": "rlog_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog show feature/golf7 | head\n```\n# Review context: `/work/chip/hotel` slot 6 variant 1\n`git reset --hard ORIG_HEAD` often undoes...",
+      "choices": [
+        "The last reset/merge/rebase that set ORIG_HEAD",
+        "All remotes",
+        "gitignore",
+        "tags"
+      ],
+      "answer": 0,
+      "explain": "ORIG_HEAD is a backup pointer.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_medium_06.mp4",
+        "poster": "media/images/rlog_medium_06-frame.png",
+        "figure": "media/images/rlog_medium_06.png"
+      }
+    },
+    {
+      "id": "rlog_medium_07",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log -g --oneline | head\n```\n# Review context: `./labs/alpha` slot 7 variant 1\n`git stash` also records entries under refs/stash.",
+      "answer": true,
+      "explain": "Stash has its own log.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_medium_07.mp4",
+        "poster": "media/images/rlog_medium_07-frame.png",
+        "figure": "media/images/rlog_medium_07.png"
+      }
+    },
+    {
+      "id": "rlog_medium_08",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog | head -n 14\n```\n# Review context: `/tmp/gitlab/bravo` slot 8 variant 1\nWhy `git clone` starts with a short reflog...",
+      "choices": [
+        "New clone has little local HEAD motion yet",
+        "Remotes copy reflog",
+        "Tags fill reflog",
+        "Status writes reflog"
+      ],
+      "answer": 0,
+      "explain": "Reflog is local activity.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_medium_08.mp4",
+        "poster": "media/images/rlog_medium_08-frame.png",
+        "figure": "media/images/rlog_medium_08.png"
+      }
+    },
+    {
+      "id": "rlog_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --hard HEAD@{1}\n```\nCreating a branch at a dangling `a0009bee`...",
+      "choices": [
+        "Gives the commit a ref so gc will not drop it",
+        "Pushes automatically",
+        "Deletes origin",
+        "Starts mergetool"
+      ],
+      "answer": 0,
+      "explain": "Refs protect objects.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_medium_09.mp4",
+        "poster": "media/images/rlog_medium_09-frame.png",
+        "figure": "media/images/rlog_medium_09.png"
+      }
+    },
+    {
+      "id": "rlog_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog show feature/alpha11 | head\n```\n`git reflog show feature/lab10` shows...",
+      "choices": [
+        "Movements of that branch tip",
+        "Only remotes",
+        "Ignore rules",
+        "PRs"
+      ],
+      "answer": 0,
+      "explain": "Per-ref reflog.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_medium_10.mp4",
+        "poster": "media/images/rlog_medium_10-frame.png",
+        "figure": "media/images/rlog_medium_10.png"
+      }
+    },
+    {
+      "id": "rlog_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -g --oneline | head\n```\n# Review context: `~/src/echo` slot 11 variant 1\n`git reset --hard ORIG_HEAD` often undoes...",
+      "choices": [
+        "The last reset/merge/rebase that set ORIG_HEAD",
+        "All remotes",
+        "gitignore",
+        "tags"
+      ],
+      "answer": 0,
+      "explain": "ORIG_HEAD is a backup pointer.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_medium_11.mp4",
+        "poster": "media/images/rlog_medium_11-frame.png",
+        "figure": "media/images/rlog_medium_11.png"
+      }
+    },
+    {
+      "id": "rlog_medium_12",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog | head -n 8\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\n`git stash` also records entries under refs/stash.",
+      "answer": true,
+      "explain": "Stash has its own log.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_medium_12.mp4",
+        "poster": "media/images/rlog_medium_12-frame.png",
+        "figure": "media/images/rlog_medium_12.png"
+      }
+    },
+    {
+      "id": "rlog_medium_13",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --hard HEAD@{1}\n```\n# Review context: `./labs/golf` slot 13 variant 1\nWhy `git clone` starts with a short reflog...",
+      "choices": [
+        "New clone has little local HEAD motion yet",
+        "Remotes copy reflog",
+        "Tags fill reflog",
+        "Status writes reflog"
+      ],
+      "answer": 0,
+      "explain": "Reflog is local activity.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_medium_13.mp4",
+        "poster": "media/images/rlog_medium_13-frame.png",
+        "figure": "media/images/rlog_medium_13.png"
+      }
+    },
+    {
+      "id": "rlog_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog show feature/echo15 | head\n```\nCreating a branch at a dangling `a0014bee`...",
+      "choices": [
+        "Gives the commit a ref so gc will not drop it",
+        "Pushes automatically",
+        "Deletes origin",
+        "Starts mergetool"
+      ],
+      "answer": 0,
+      "explain": "Refs protect objects.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_medium_14.mp4",
+        "poster": "media/images/rlog_medium_14-frame.png",
+        "figure": "media/images/rlog_medium_14.png"
+      }
+    },
+    {
+      "id": "rlog_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -g --oneline | head\n```\n`git reflog show feature/lab15` shows...",
+      "choices": [
+        "Movements of that branch tip",
+        "Only remotes",
+        "Ignore rules",
+        "PRs"
+      ],
+      "answer": 0,
+      "explain": "Per-ref reflog.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_medium_15.mp4",
+        "poster": "media/images/rlog_medium_15-frame.png",
+        "figure": "media/images/rlog_medium_15.png"
+      }
+    },
+    {
+      "id": "rlog_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog | head -n 12\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\n`git reset --hard ORIG_HEAD` often undoes...",
+      "choices": [
+        "The last reset/merge/rebase that set ORIG_HEAD",
+        "All remotes",
+        "gitignore",
+        "tags"
+      ],
+      "answer": 0,
+      "explain": "ORIG_HEAD is a backup pointer.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_medium_16.mp4",
+        "poster": "media/images/rlog_medium_16-frame.png",
+        "figure": "media/images/rlog_medium_16.png"
+      }
+    },
+    {
+      "id": "rlog_medium_17",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --hard HEAD@{1}\n```\n# Review context: `~/src/charlie` slot 17 variant 1\n`git stash` also records entries under refs/stash.",
+      "answer": true,
+      "explain": "Stash has its own log.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_medium_17.mp4",
+        "poster": "media/images/rlog_medium_17-frame.png",
+        "figure": "media/images/rlog_medium_17.png"
+      }
+    },
+    {
+      "id": "rlog_medium_18",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog show feature/india19 | head\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\nWhy `git clone` starts with a short reflog...",
+      "choices": [
+        "New clone has little local HEAD motion yet",
+        "Remotes copy reflog",
+        "Tags fill reflog",
+        "Status writes reflog"
+      ],
+      "answer": 0,
+      "explain": "Reflog is local activity.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_medium_18.mp4",
+        "poster": "media/images/rlog_medium_18-frame.png",
+        "figure": "media/images/rlog_medium_18.png"
+      }
+    },
+    {
+      "id": "rlog_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -g --oneline | head\n```\nCreating a branch at a dangling `a0019bee`...",
+      "choices": [
+        "Gives the commit a ref so gc will not drop it",
+        "Pushes automatically",
+        "Deletes origin",
+        "Starts mergetool"
+      ],
+      "answer": 0,
+      "explain": "Refs protect objects.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_medium_19.mp4",
+        "poster": "media/images/rlog_medium_19-frame.png",
+        "figure": "media/images/rlog_medium_19.png"
+      }
+    },
+    {
+      "id": "rlog_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog | head -n 6\n```\n`git reflog show feature/lab20` shows...",
+      "choices": [
+        "Movements of that branch tip",
+        "Only remotes",
+        "Ignore rules",
+        "PRs"
+      ],
+      "answer": 0,
+      "explain": "Per-ref reflog.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_medium_20.mp4",
+        "poster": "media/images/rlog_medium_20-frame.png",
+        "figure": "media/images/rlog_medium_20.png"
+      }
+    },
+    {
+      "id": "rlog_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --hard HEAD@{1}\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\n`git reset --hard ORIG_HEAD` often undoes...",
+      "choices": [
+        "The last reset/merge/rebase that set ORIG_HEAD",
+        "All remotes",
+        "gitignore",
+        "tags"
+      ],
+      "answer": 0,
+      "explain": "ORIG_HEAD is a backup pointer.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_medium_21.mp4",
+        "poster": "media/images/rlog_medium_21-frame.png",
+        "figure": "media/images/rlog_medium_21.png"
+      }
+    },
+    {
+      "id": "rlog_medium_22",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog show feature/charlie23 | head\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\n`git stash` also records entries under refs/stash.",
+      "answer": true,
+      "explain": "Stash has its own log.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_medium_22.mp4",
+        "poster": "media/images/rlog_medium_22-frame.png",
+        "figure": "media/images/rlog_medium_22.png"
+      }
+    },
+    {
+      "id": "rlog_medium_23",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -g --oneline | head\n```\n# Review context: `~/src/alpha` slot 23 variant 1\nWhy `git clone` starts with a short reflog...",
+      "choices": [
+        "New clone has little local HEAD motion yet",
+        "Remotes copy reflog",
+        "Tags fill reflog",
+        "Status writes reflog"
+      ],
+      "answer": 0,
+      "explain": "Reflog is local activity.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_medium_23.mp4",
+        "poster": "media/images/rlog_medium_23-frame.png",
+        "figure": "media/images/rlog_medium_23.png"
+      }
+    },
+    {
+      "id": "rlog_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog | head -n 10\n```\nCreating a branch at a dangling `a0024bee`...",
+      "choices": [
+        "Gives the commit a ref so gc will not drop it",
+        "Pushes automatically",
+        "Deletes origin",
+        "Starts mergetool"
+      ],
+      "answer": 0,
+      "explain": "Refs protect objects.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_medium_24.mp4",
+        "poster": "media/images/rlog_medium_24-frame.png",
+        "figure": "media/images/rlog_medium_24.png"
+      }
+    },
+    {
+      "id": "rlog_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --hard HEAD@{1}\n```\n`git reflog show feature/lab25` shows...",
+      "choices": [
+        "Movements of that branch tip",
+        "Only remotes",
+        "Ignore rules",
+        "PRs"
+      ],
+      "answer": 0,
+      "explain": "Per-ref reflog.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_medium_25.mp4",
+        "poster": "media/images/rlog_medium_25-frame.png",
+        "figure": "media/images/rlog_medium_25.png"
+      }
+    },
+    {
+      "id": "rlog_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog show feature/golf27 | head\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\n`git reset --hard ORIG_HEAD` often undoes...",
+      "choices": [
+        "The last reset/merge/rebase that set ORIG_HEAD",
+        "All remotes",
+        "gitignore",
+        "tags"
+      ],
+      "answer": 0,
+      "explain": "ORIG_HEAD is a backup pointer.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_medium_26.mp4",
+        "poster": "media/images/rlog_medium_26-frame.png",
+        "figure": "media/images/rlog_medium_26.png"
+      }
+    },
+    {
+      "id": "rlog_medium_27",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log -g --oneline | head\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\n`git stash` also records entries under refs/stash.",
+      "answer": true,
+      "explain": "Stash has its own log.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_medium_27.mp4",
+        "poster": "media/images/rlog_medium_27-frame.png",
+        "figure": "media/images/rlog_medium_27.png"
+      }
+    },
+    {
+      "id": "rlog_medium_28",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog | head -n 14\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\nWhy `git clone` starts with a short reflog...",
+      "choices": [
+        "New clone has little local HEAD motion yet",
+        "Remotes copy reflog",
+        "Tags fill reflog",
+        "Status writes reflog"
+      ],
+      "answer": 0,
+      "explain": "Reflog is local activity.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_medium_28.mp4",
+        "poster": "media/images/rlog_medium_28-frame.png",
+        "figure": "media/images/rlog_medium_28.png"
+      }
+    },
+    {
+      "id": "rlog_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --hard HEAD@{1}\n```\nCreating a branch at a dangling `a0029bee`...",
+      "choices": [
+        "Gives the commit a ref so gc will not drop it",
+        "Pushes automatically",
+        "Deletes origin",
+        "Starts mergetool"
+      ],
+      "answer": 0,
+      "explain": "Refs protect objects.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_medium_29.mp4",
+        "poster": "media/images/rlog_medium_29-frame.png",
+        "figure": "media/images/rlog_medium_29.png"
+      }
+    },
+    {
+      "id": "rlog_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog show feature/alpha31 | head\n```\n`git reflog show feature/lab30` shows...",
+      "choices": [
+        "Movements of that branch tip",
+        "Only remotes",
+        "Ignore rules",
+        "PRs"
+      ],
+      "answer": 0,
+      "explain": "Per-ref reflog.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_medium_30.mp4",
+        "poster": "media/images/rlog_medium_30-frame.png",
+        "figure": "media/images/rlog_medium_30.png"
+      }
+    },
+    {
+      "id": "rlog_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -g --oneline | head\n```\n`gc.reflogExpire` default is typically...",
+      "choices": [
+        "About 90 days, then prune may drop dangling objects",
+        "1 minute",
+        "Forever on remotes",
+        "Never"
+      ],
+      "answer": 0,
+      "explain": "Expire then prune.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_hard_01.mp4",
+        "poster": "media/images/rlog_hard_01-frame.png",
+        "figure": "media/images/rlog_hard_01.png"
+      }
+    },
+    {
+      "id": "rlog_hard_02",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog | head -n 10\n```\n`git log -g` walks the reflog like log.",
+      "answer": true,
+      "explain": "-g is walk reflogs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_hard_02.mp4",
+        "poster": "media/images/rlog_hard_02-frame.png",
+        "figure": "media/images/rlog_hard_02.png"
+      }
+    },
+    {
+      "id": "rlog_hard_03",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --hard HEAD@{1}\n```\nRecovering after `git rebase` gone wrong uses...",
+      "choices": [
+        "reflog of the branch before rebase started",
+        "Only origin prune",
+        "Deleting .git",
+        "stash drop"
+      ],
+      "answer": 0,
+      "explain": "Reflog records the pre-rebase tip.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_hard_03.mp4",
+        "poster": "media/images/rlog_hard_03-frame.png",
+        "figure": "media/images/rlog_hard_03.png"
+      }
+    },
+    {
+      "id": "rlog_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog show feature/golf7 | head\n```\n`git fsck --lost-found` can find...",
+      "choices": [
+        "Dangling commits not in reflog anymore",
+        "Only remotes",
+        "SSH keys",
+        "Make logs"
+      ],
+      "answer": 0,
+      "explain": "Last-ditch object recovery.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_hard_04.mp4",
+        "poster": "media/images/rlog_hard_04-frame.png",
+        "figure": "media/images/rlog_hard_04.png"
+      }
+    },
+    {
+      "id": "rlog_hard_05",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log -g --oneline | head\n```\n`git update-ref -d` can delete a ref; reflog may still mention the old SHA until expire.",
+      "answer": true,
+      "explain": "Deleting the ref is not immediate object deletion.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_hard_05.mp4",
+        "poster": "media/images/rlog_hard_05-frame.png",
+        "figure": "media/images/rlog_hard_05.png"
+      }
+    },
+    {
+      "id": "rlog_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog | head -n 14\n```\n# Review context: `/work/chip/hotel` slot 6 variant 1\n`gc.reflogExpire` default is typically...",
+      "choices": [
+        "About 90 days, then prune may drop dangling objects",
+        "1 minute",
+        "Forever on remotes",
+        "Never"
+      ],
+      "answer": 0,
+      "explain": "Expire then prune.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_hard_06.mp4",
+        "poster": "media/images/rlog_hard_06-frame.png",
+        "figure": "media/images/rlog_hard_06.png"
+      }
+    },
+    {
+      "id": "rlog_hard_07",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --hard HEAD@{1}\n```\n# Review context: `./labs/alpha` slot 7 variant 1\n`git log -g` walks the reflog like log.",
+      "answer": true,
+      "explain": "-g is walk reflogs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_hard_07.mp4",
+        "poster": "media/images/rlog_hard_07-frame.png",
+        "figure": "media/images/rlog_hard_07.png"
+      }
+    },
+    {
+      "id": "rlog_hard_08",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog show feature/alpha11 | head\n```\n# Review context: `/tmp/gitlab/bravo` slot 8 variant 1\nRecovering after `git rebase` gone wrong uses...",
+      "choices": [
+        "reflog of the branch before rebase started",
+        "Only origin prune",
+        "Deleting .git",
+        "stash drop"
+      ],
+      "answer": 0,
+      "explain": "Reflog records the pre-rebase tip.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_hard_08.mp4",
+        "poster": "media/images/rlog_hard_08-frame.png",
+        "figure": "media/images/rlog_hard_08.png"
+      }
+    },
+    {
+      "id": "rlog_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -g --oneline | head\n```\n# Review context: `C:/proj/charlie` slot 9 variant 1\n`git fsck --lost-found` can find...",
+      "choices": [
+        "Dangling commits not in reflog anymore",
+        "Only remotes",
+        "SSH keys",
+        "Make logs"
+      ],
+      "answer": 0,
+      "explain": "Last-ditch object recovery.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_hard_09.mp4",
+        "poster": "media/images/rlog_hard_09-frame.png",
+        "figure": "media/images/rlog_hard_09.png"
+      }
+    },
+    {
+      "id": "rlog_hard_10",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog | head -n 8\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\n`git update-ref -d` can delete a ref; reflog may still mention the old SHA until expire.",
+      "answer": true,
+      "explain": "Deleting the ref is not immediate object deletion.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_hard_10.mp4",
+        "poster": "media/images/rlog_hard_10-frame.png",
+        "figure": "media/images/rlog_hard_10.png"
+      }
+    },
+    {
+      "id": "rlog_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --hard HEAD@{1}\n```\n# Review context: `~/src/echo` slot 11 variant 1\n`gc.reflogExpire` default is typically...",
+      "choices": [
+        "About 90 days, then prune may drop dangling objects",
+        "1 minute",
+        "Forever on remotes",
+        "Never"
+      ],
+      "answer": 0,
+      "explain": "Expire then prune.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_hard_11.mp4",
+        "poster": "media/images/rlog_hard_11-frame.png",
+        "figure": "media/images/rlog_hard_11.png"
+      }
+    },
+    {
+      "id": "rlog_hard_12",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog show feature/echo15 | head\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\n`git log -g` walks the reflog like log.",
+      "answer": true,
+      "explain": "-g is walk reflogs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_hard_12.mp4",
+        "poster": "media/images/rlog_hard_12-frame.png",
+        "figure": "media/images/rlog_hard_12.png"
+      }
+    },
+    {
+      "id": "rlog_hard_13",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -g --oneline | head\n```\n# Review context: `./labs/golf` slot 13 variant 1\nRecovering after `git rebase` gone wrong uses...",
+      "choices": [
+        "reflog of the branch before rebase started",
+        "Only origin prune",
+        "Deleting .git",
+        "stash drop"
+      ],
+      "answer": 0,
+      "explain": "Reflog records the pre-rebase tip.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_hard_13.mp4",
+        "poster": "media/images/rlog_hard_13-frame.png",
+        "figure": "media/images/rlog_hard_13.png"
+      }
+    },
+    {
+      "id": "rlog_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog | head -n 12\n```\n# Review context: `/tmp/gitlab/hotel` slot 14 variant 1\n`git fsck --lost-found` can find...",
+      "choices": [
+        "Dangling commits not in reflog anymore",
+        "Only remotes",
+        "SSH keys",
+        "Make logs"
+      ],
+      "answer": 0,
+      "explain": "Last-ditch object recovery.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_hard_14.mp4",
+        "poster": "media/images/rlog_hard_14-frame.png",
+        "figure": "media/images/rlog_hard_14.png"
+      }
+    },
+    {
+      "id": "rlog_hard_15",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --hard HEAD@{1}\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\n`git update-ref -d` can delete a ref; reflog may still mention the old SHA until expire.",
+      "answer": true,
+      "explain": "Deleting the ref is not immediate object deletion.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_hard_15.mp4",
+        "poster": "media/images/rlog_hard_15-frame.png",
+        "figure": "media/images/rlog_hard_15.png"
+      }
+    },
+    {
+      "id": "rlog_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog show feature/india19 | head\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\n`gc.reflogExpire` default is typically...",
+      "choices": [
+        "About 90 days, then prune may drop dangling objects",
+        "1 minute",
+        "Forever on remotes",
+        "Never"
+      ],
+      "answer": 0,
+      "explain": "Expire then prune.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_hard_16.mp4",
+        "poster": "media/images/rlog_hard_16-frame.png",
+        "figure": "media/images/rlog_hard_16.png"
+      }
+    },
+    {
+      "id": "rlog_hard_17",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log -g --oneline | head\n```\n# Review context: `~/src/charlie` slot 17 variant 1\n`git log -g` walks the reflog like log.",
+      "answer": true,
+      "explain": "-g is walk reflogs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_hard_17.mp4",
+        "poster": "media/images/rlog_hard_17-frame.png",
+        "figure": "media/images/rlog_hard_17.png"
+      }
+    },
+    {
+      "id": "rlog_hard_18",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog | head -n 6\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\nRecovering after `git rebase` gone wrong uses...",
+      "choices": [
+        "reflog of the branch before rebase started",
+        "Only origin prune",
+        "Deleting .git",
+        "stash drop"
+      ],
+      "answer": 0,
+      "explain": "Reflog records the pre-rebase tip.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_hard_18.mp4",
+        "poster": "media/images/rlog_hard_18-frame.png",
+        "figure": "media/images/rlog_hard_18.png"
+      }
+    },
+    {
+      "id": "rlog_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --hard HEAD@{1}\n```\n# Review context: `./labs/echo` slot 19 variant 1\n`git fsck --lost-found` can find...",
+      "choices": [
+        "Dangling commits not in reflog anymore",
+        "Only remotes",
+        "SSH keys",
+        "Make logs"
+      ],
+      "answer": 0,
+      "explain": "Last-ditch object recovery.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_hard_19.mp4",
+        "poster": "media/images/rlog_hard_19-frame.png",
+        "figure": "media/images/rlog_hard_19.png"
+      }
+    },
+    {
+      "id": "rlog_hard_20",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog show feature/charlie23 | head\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\n`git update-ref -d` can delete a ref; reflog may still mention the old SHA until expire.",
+      "answer": true,
+      "explain": "Deleting the ref is not immediate object deletion.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_hard_20.mp4",
+        "poster": "media/images/rlog_hard_20-frame.png",
+        "figure": "media/images/rlog_hard_20.png"
+      }
+    },
+    {
+      "id": "rlog_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -g --oneline | head\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\n`gc.reflogExpire` default is typically...",
+      "choices": [
+        "About 90 days, then prune may drop dangling objects",
+        "1 minute",
+        "Forever on remotes",
+        "Never"
+      ],
+      "answer": 0,
+      "explain": "Expire then prune.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_hard_21.mp4",
+        "poster": "media/images/rlog_hard_21-frame.png",
+        "figure": "media/images/rlog_hard_21.png"
+      }
+    },
+    {
+      "id": "rlog_hard_22",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog | head -n 10\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\n`git log -g` walks the reflog like log.",
+      "answer": true,
+      "explain": "-g is walk reflogs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_hard_22.mp4",
+        "poster": "media/images/rlog_hard_22-frame.png",
+        "figure": "media/images/rlog_hard_22.png"
+      }
+    },
+    {
+      "id": "rlog_hard_23",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --hard HEAD@{1}\n```\n# Review context: `~/src/alpha` slot 23 variant 1\nRecovering after `git rebase` gone wrong uses...",
+      "choices": [
+        "reflog of the branch before rebase started",
+        "Only origin prune",
+        "Deleting .git",
+        "stash drop"
+      ],
+      "answer": 0,
+      "explain": "Reflog records the pre-rebase tip.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_hard_23.mp4",
+        "poster": "media/images/rlog_hard_23-frame.png",
+        "figure": "media/images/rlog_hard_23.png"
+      }
+    },
+    {
+      "id": "rlog_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog show feature/golf27 | head\n```\n# Review context: `/work/chip/bravo` slot 24 variant 1\n`git fsck --lost-found` can find...",
+      "choices": [
+        "Dangling commits not in reflog anymore",
+        "Only remotes",
+        "SSH keys",
+        "Make logs"
+      ],
+      "answer": 0,
+      "explain": "Last-ditch object recovery.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_hard_24.mp4",
+        "poster": "media/images/rlog_hard_24-frame.png",
+        "figure": "media/images/rlog_hard_24.png"
+      }
+    },
+    {
+      "id": "rlog_hard_25",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log -g --oneline | head\n```\n# Review context: `./labs/charlie` slot 25 variant 1\n`git update-ref -d` can delete a ref; reflog may still mention the old SHA until expire.",
+      "answer": true,
+      "explain": "Deleting the ref is not immediate object deletion.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_hard_25.mp4",
+        "poster": "media/images/rlog_hard_25-frame.png",
+        "figure": "media/images/rlog_hard_25.png"
+      }
+    },
+    {
+      "id": "rlog_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog | head -n 14\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\n`gc.reflogExpire` default is typically...",
+      "choices": [
+        "About 90 days, then prune may drop dangling objects",
+        "1 minute",
+        "Forever on remotes",
+        "Never"
+      ],
+      "answer": 0,
+      "explain": "Expire then prune.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_hard_26.mp4",
+        "poster": "media/images/rlog_hard_26-frame.png",
+        "figure": "media/images/rlog_hard_26.png"
+      }
+    },
+    {
+      "id": "rlog_hard_27",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --hard HEAD@{1}\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\n`git log -g` walks the reflog like log.",
+      "answer": true,
+      "explain": "-g is walk reflogs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_hard_27.mp4",
+        "poster": "media/images/rlog_hard_27-frame.png",
+        "figure": "media/images/rlog_hard_27.png"
+      }
+    },
+    {
+      "id": "rlog_hard_28",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog show feature/alpha31 | head\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\nRecovering after `git rebase` gone wrong uses...",
+      "choices": [
+        "reflog of the branch before rebase started",
+        "Only origin prune",
+        "Deleting .git",
+        "stash drop"
+      ],
+      "answer": 0,
+      "explain": "Reflog records the pre-rebase tip.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_hard_28.mp4",
+        "poster": "media/images/rlog_hard_28-frame.png",
+        "figure": "media/images/rlog_hard_28.png"
+      }
+    },
+    {
+      "id": "rlog_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -g --oneline | head\n```\n# Review context: `~/src/golf` slot 29 variant 1\n`git fsck --lost-found` can find...",
+      "choices": [
+        "Dangling commits not in reflog anymore",
+        "Only remotes",
+        "SSH keys",
+        "Make logs"
+      ],
+      "answer": 0,
+      "explain": "Last-ditch object recovery.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_hard_29.mp4",
+        "poster": "media/images/rlog_hard_29-frame.png",
+        "figure": "media/images/rlog_hard_29.png"
+      }
+    },
+    {
+      "id": "rlog_hard_30",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit reflog | head -n 8\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\n`git update-ref -d` can delete a ref; reflog may still mention the old SHA until expire.",
+      "answer": true,
+      "explain": "Deleting the ref is not immediate object deletion.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rlog_hard_30.mp4",
+        "poster": "media/images/rlog_hard_30-frame.png",
+        "figure": "media/images/rlog_hard_30.png"
+      }
+    }
+  ]
+}
