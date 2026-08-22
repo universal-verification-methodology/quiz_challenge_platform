@@ -1,0 +1,1674 @@
+{
+  "module": "module17-pr-review-lab",
+  "title": "PR review checklist",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log main..feature/bravo2 --oneline\n```\nA reviewable PR is usually...",
+      "choices": [
+        "Focused on one concern with a diff you can understand",
+        "As large as possible so you only review once",
+        "Only documentation with no verification",
+        "Always a draft forever"
+      ],
+      "answer": 0,
+      "explain": "Small, single-purpose PRs are easier to review correctly.",
+      "difficulty": "easy",
+      "id": "pr_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_easy_01.mp4",
+        "poster": "media/images/pr_easy_01-frame.png",
+        "figure": "media/images/pr_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status --ignored | head\n```\nRTL or TB changes should include...",
+      "choices": [
+        "Test or simulation evidence (how you verified)",
+        "Only a wave dump in the repo",
+        "Your password in .env",
+        "No description at all"
+      ],
+      "answer": 0,
+      "explain": "Reviewers need proof the change was exercised-sim, TB, or CI.",
+      "difficulty": "easy",
+      "id": "pr_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_easy_02.mp4",
+        "poster": "media/images/pr_easy_02-frame.png",
+        "figure": "media/images/pr_easy_02.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\n# PR: feature/delta4 -> main (4)\n```\nBuild artifacts like .vcd files and sim logs should not appear in a PR diff.",
+      "answer": true,
+      "explain": "Diff hygiene keeps generated noise and secrets out of version control.",
+      "difficulty": "easy",
+      "id": "pr_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_easy_03.mp4",
+        "poster": "media/images/pr_easy_03-frame.png",
+        "figure": "media/images/pr_easy_03.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff main...feature/echo5 --stat\n```\nIf a PR leaks a secret token, you should...",
+      "choices": [
+        "Request changes immediately-never merge secrets",
+        "Approve to save time",
+        "Force-push main",
+        "Ignore hygiene checks"
+      ],
+      "answer": 0,
+      "explain": "Secrets in a diff are a blocking issue regardless of other quality.",
+      "difficulty": "easy",
+      "id": "pr_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_easy_04.mp4",
+        "poster": "media/images/pr_easy_04-frame.png",
+        "figure": "media/images/pr_easy_04.png"
+      }
+    },
+    {
+      "id": "pr_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log main..feature/foxtrot6 --oneline\n```\nA reviewable PR is usually...",
+      "choices": [
+        "Focused on one concern with a diff you can understand",
+        "As large as possible",
+        "Only docs with no verification",
+        "Always a draft forever"
+      ],
+      "answer": 0,
+      "explain": "Small single-purpose PRs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_easy_05.mp4",
+        "poster": "media/images/pr_easy_05-frame.png",
+        "figure": "media/images/pr_easy_05.png"
+      }
+    },
+    {
+      "id": "pr_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status --ignored | head\n```\nRTL or TB changes should include...",
+      "choices": [
+        "Test or simulation evidence (how you verified)",
+        "Only a wave dump in the repo",
+        "Your password in .env",
+        "No description"
+      ],
+      "answer": 0,
+      "explain": "Reviewers need proof.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_easy_06.mp4",
+        "poster": "media/images/pr_easy_06-frame.png",
+        "figure": "media/images/pr_easy_06.png"
+      }
+    },
+    {
+      "id": "pr_easy_07",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\n# PR: feature/hotel8 -> main (8)\n```\nBuild artifacts like `.vcd` files and sim logs should not appear in a PR diff.",
+      "answer": true,
+      "explain": "Keep generated noise out.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_easy_07.mp4",
+        "poster": "media/images/pr_easy_07-frame.png",
+        "figure": "media/images/pr_easy_07.png"
+      }
+    },
+    {
+      "id": "pr_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff main...feature/india9 --stat\n```\nIf a PR leaks a secret token, you should...",
+      "choices": [
+        "Request changes immediately-never merge secrets",
+        "Approve to save time",
+        "Force-push main",
+        "Ignore hygiene"
+      ],
+      "answer": 0,
+      "explain": "Secrets are blocking.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_easy_08.mp4",
+        "poster": "media/images/pr_easy_08-frame.png",
+        "figure": "media/images/pr_easy_08.png"
+      }
+    },
+    {
+      "id": "pr_easy_09",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log main..feature/juliet10 --oneline\n```\nDraft PRs can be used when the work is not ready to merge.",
+      "answer": true,
+      "explain": "Draft signals WIP.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_easy_09.mp4",
+        "poster": "media/images/pr_easy_09-frame.png",
+        "figure": "media/images/pr_easy_09.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status --ignored | head\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\nA reviewable PR is usually...",
+      "choices": [
+        "Focused on one concern with a diff you can understand",
+        "As large as possible so you only review once",
+        "Only documentation with no verification",
+        "Always a draft forever"
+      ],
+      "answer": 0,
+      "explain": "Small, single-purpose PRs are easier to review correctly.",
+      "difficulty": "easy",
+      "id": "pr_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_easy_10.mp4",
+        "poster": "media/images/pr_easy_10-frame.png",
+        "figure": "media/images/pr_easy_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# PR: feature/bravo12 -> main (12)\n```\n# Review context: `~/src/echo` slot 11 variant 1\nRTL or TB changes should include...",
+      "choices": [
+        "Test or simulation evidence (how you verified)",
+        "Only a wave dump in the repo",
+        "Your password in .env",
+        "No description at all"
+      ],
+      "answer": 0,
+      "explain": "Reviewers need proof the change was exercised-sim, TB, or CI.",
+      "difficulty": "easy",
+      "id": "pr_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_easy_11.mp4",
+        "poster": "media/images/pr_easy_11-frame.png",
+        "figure": "media/images/pr_easy_11.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit diff main...feature/charlie13 --stat\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\nBuild artifacts like .vcd files and sim logs should not appear in a PR diff.",
+      "answer": true,
+      "explain": "Diff hygiene keeps generated noise and secrets out of version control.",
+      "difficulty": "easy",
+      "id": "pr_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_easy_12.mp4",
+        "poster": "media/images/pr_easy_12-frame.png",
+        "figure": "media/images/pr_easy_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log main..feature/delta14 --oneline\n```\n# Review context: `./labs/golf` slot 13 variant 1\nIf a PR leaks a secret token, you should...",
+      "choices": [
+        "Request changes immediately-never merge secrets",
+        "Approve to save time",
+        "Force-push main",
+        "Ignore hygiene checks"
+      ],
+      "answer": 0,
+      "explain": "Secrets in a diff are a blocking issue regardless of other quality.",
+      "difficulty": "easy",
+      "id": "pr_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_easy_13.mp4",
+        "poster": "media/images/pr_easy_13-frame.png",
+        "figure": "media/images/pr_easy_13.png"
+      }
+    },
+    {
+      "id": "pr_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status --ignored | head\n```\n# Review context: `/tmp/gitlab/hotel` slot 14 variant 1\nA reviewable PR is usually...",
+      "choices": [
+        "Focused on one concern with a diff you can understand",
+        "As large as possible",
+        "Only docs with no verification",
+        "Always a draft forever"
+      ],
+      "answer": 0,
+      "explain": "Small single-purpose PRs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_easy_14.mp4",
+        "poster": "media/images/pr_easy_14-frame.png",
+        "figure": "media/images/pr_easy_14.png"
+      }
+    },
+    {
+      "id": "pr_easy_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# PR: feature/foxtrot16 -> main (16)\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\nRTL or TB changes should include...",
+      "choices": [
+        "Test or simulation evidence (how you verified)",
+        "Only a wave dump in the repo",
+        "Your password in .env",
+        "No description"
+      ],
+      "answer": 0,
+      "explain": "Reviewers need proof.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_easy_15.mp4",
+        "poster": "media/images/pr_easy_15-frame.png",
+        "figure": "media/images/pr_easy_15.png"
+      }
+    },
+    {
+      "id": "pr_easy_16",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit diff main...feature/golf17 --stat\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\nBuild artifacts like `.vcd` files and sim logs should not appear in a PR diff.",
+      "answer": true,
+      "explain": "Keep generated noise out.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_easy_16.mp4",
+        "poster": "media/images/pr_easy_16-frame.png",
+        "figure": "media/images/pr_easy_16.png"
+      }
+    },
+    {
+      "id": "pr_easy_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log main..feature/hotel18 --oneline\n```\n# Review context: `~/src/charlie` slot 17 variant 1\nIf a PR leaks a secret token, you should...",
+      "choices": [
+        "Request changes immediately-never merge secrets",
+        "Approve to save time",
+        "Force-push main",
+        "Ignore hygiene"
+      ],
+      "answer": 0,
+      "explain": "Secrets are blocking.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_easy_17.mp4",
+        "poster": "media/images/pr_easy_17-frame.png",
+        "figure": "media/images/pr_easy_17.png"
+      }
+    },
+    {
+      "id": "pr_easy_18",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit status --ignored | head\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\nDraft PRs can be used when the work is not ready to merge.",
+      "answer": true,
+      "explain": "Draft signals WIP.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_easy_18.mp4",
+        "poster": "media/images/pr_easy_18-frame.png",
+        "figure": "media/images/pr_easy_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# PR: feature/juliet20 -> main (20)\n```\n# Review context: `./labs/echo` slot 19 variant 1\nA reviewable PR is usually...",
+      "choices": [
+        "Focused on one concern with a diff you can understand",
+        "As large as possible so you only review once",
+        "Only documentation with no verification",
+        "Always a draft forever"
+      ],
+      "answer": 0,
+      "explain": "Small, single-purpose PRs are easier to review correctly.",
+      "difficulty": "easy",
+      "id": "pr_easy_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_easy_19.mp4",
+        "poster": "media/images/pr_easy_19-frame.png",
+        "figure": "media/images/pr_easy_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff main...feature/alpha21 --stat\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\nRTL or TB changes should include...",
+      "choices": [
+        "Test or simulation evidence (how you verified)",
+        "Only a wave dump in the repo",
+        "Your password in .env",
+        "No description at all"
+      ],
+      "answer": 0,
+      "explain": "Reviewers need proof the change was exercised-sim, TB, or CI.",
+      "difficulty": "easy",
+      "id": "pr_easy_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_easy_20.mp4",
+        "poster": "media/images/pr_easy_20-frame.png",
+        "figure": "media/images/pr_easy_20.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log main..feature/bravo22 --oneline\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\nBuild artifacts like .vcd files and sim logs should not appear in a PR diff.",
+      "answer": true,
+      "explain": "Diff hygiene keeps generated noise and secrets out of version control.",
+      "difficulty": "easy",
+      "id": "pr_easy_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_easy_21.mp4",
+        "poster": "media/images/pr_easy_21-frame.png",
+        "figure": "media/images/pr_easy_21.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status --ignored | head\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\nIf a PR leaks a secret token, you should...",
+      "choices": [
+        "Request changes immediately-never merge secrets",
+        "Approve to save time",
+        "Force-push main",
+        "Ignore hygiene checks"
+      ],
+      "answer": 0,
+      "explain": "Secrets in a diff are a blocking issue regardless of other quality.",
+      "difficulty": "easy",
+      "id": "pr_easy_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_easy_22.mp4",
+        "poster": "media/images/pr_easy_22-frame.png",
+        "figure": "media/images/pr_easy_22.png"
+      }
+    },
+    {
+      "id": "pr_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# PR: feature/delta24 -> main (24)\n```\n# Review context: `~/src/alpha` slot 23 variant 1\nA reviewable PR is usually...",
+      "choices": [
+        "Focused on one concern with a diff you can understand",
+        "As large as possible",
+        "Only docs with no verification",
+        "Always a draft forever"
+      ],
+      "answer": 0,
+      "explain": "Small single-purpose PRs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_easy_23.mp4",
+        "poster": "media/images/pr_easy_23-frame.png",
+        "figure": "media/images/pr_easy_23.png"
+      }
+    },
+    {
+      "id": "pr_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff main...feature/echo25 --stat\n```\n# Review context: `/work/chip/bravo` slot 24 variant 1\nRTL or TB changes should include...",
+      "choices": [
+        "Test or simulation evidence (how you verified)",
+        "Only a wave dump in the repo",
+        "Your password in .env",
+        "No description"
+      ],
+      "answer": 0,
+      "explain": "Reviewers need proof.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_easy_24.mp4",
+        "poster": "media/images/pr_easy_24-frame.png",
+        "figure": "media/images/pr_easy_24.png"
+      }
+    },
+    {
+      "id": "pr_easy_25",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log main..feature/foxtrot26 --oneline\n```\n# Review context: `./labs/charlie` slot 25 variant 1\nBuild artifacts like `.vcd` files and sim logs should not appear in a PR diff.",
+      "answer": true,
+      "explain": "Keep generated noise out.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_easy_25.mp4",
+        "poster": "media/images/pr_easy_25-frame.png",
+        "figure": "media/images/pr_easy_25.png"
+      }
+    },
+    {
+      "id": "pr_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status --ignored | head\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\nIf a PR leaks a secret token, you should...",
+      "choices": [
+        "Request changes immediately-never merge secrets",
+        "Approve to save time",
+        "Force-push main",
+        "Ignore hygiene"
+      ],
+      "answer": 0,
+      "explain": "Secrets are blocking.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_easy_26.mp4",
+        "poster": "media/images/pr_easy_26-frame.png",
+        "figure": "media/images/pr_easy_26.png"
+      }
+    },
+    {
+      "id": "pr_easy_27",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\n# PR: feature/hotel28 -> main (28)\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\nDraft PRs can be used when the work is not ready to merge.",
+      "answer": true,
+      "explain": "Draft signals WIP.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_easy_27.mp4",
+        "poster": "media/images/pr_easy_27-frame.png",
+        "figure": "media/images/pr_easy_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff main...feature/india29 --stat\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\nA reviewable PR is usually...",
+      "choices": [
+        "Focused on one concern with a diff you can understand",
+        "As large as possible so you only review once",
+        "Only documentation with no verification",
+        "Always a draft forever"
+      ],
+      "answer": 0,
+      "explain": "Small, single-purpose PRs are easier to review correctly.",
+      "difficulty": "easy",
+      "id": "pr_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_easy_28.mp4",
+        "poster": "media/images/pr_easy_28-frame.png",
+        "figure": "media/images/pr_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log main..feature/juliet30 --oneline\n```\n# Review context: `~/src/golf` slot 29 variant 1\nRTL or TB changes should include...",
+      "choices": [
+        "Test or simulation evidence (how you verified)",
+        "Only a wave dump in the repo",
+        "Your password in .env",
+        "No description at all"
+      ],
+      "answer": 0,
+      "explain": "Reviewers need proof the change was exercised-sim, TB, or CI.",
+      "difficulty": "easy",
+      "id": "pr_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_easy_29.mp4",
+        "poster": "media/images/pr_easy_29-frame.png",
+        "figure": "media/images/pr_easy_29.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit status --ignored | head\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\nBuild artifacts like .vcd files and sim logs should not appear in a PR diff.",
+      "answer": true,
+      "explain": "Diff hygiene keeps generated noise and secrets out of version control.",
+      "difficulty": "easy",
+      "id": "pr_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_easy_30.mp4",
+        "poster": "media/images/pr_easy_30-frame.png",
+        "figure": "media/images/pr_easy_30.png"
+      }
+    },
+    {
+      "id": "pr_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log main..feature/bravo2 --oneline\n```\nRequesting changes is appropriate when...",
+      "choices": [
+        "The diff is wrong, untested, or unsafe",
+        "You like the font",
+        "The branch name has a slash",
+        "There is a tag"
+      ],
+      "answer": 0,
+      "explain": "Blocking issues.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_medium_01.mp4",
+        "poster": "media/images/pr_medium_01-frame.png",
+        "figure": "media/images/pr_medium_01.png"
+      }
+    },
+    {
+      "id": "pr_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status --ignored | head\n```\nA force-push to update `feature/lab2` after rebase should...",
+      "choices": [
+        "Be expected on a solo feature PR; avoid on shared main",
+        "Rewrite origin/main",
+        "Delete the PR",
+        "Drop tests"
+      ],
+      "answer": 0,
+      "explain": "Feature branch lease-push.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_medium_02.mp4",
+        "poster": "media/images/pr_medium_02-frame.png",
+        "figure": "media/images/pr_medium_02.png"
+      }
+    },
+    {
+      "id": "pr_medium_03",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\n# PR: feature/delta4 -> main (4)\n```\nReview comments belong on the diff hunks they refer to when possible.",
+      "answer": true,
+      "explain": "Inline review.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_medium_03.mp4",
+        "poster": "media/images/pr_medium_03-frame.png",
+        "figure": "media/images/pr_medium_03.png"
+      }
+    },
+    {
+      "id": "pr_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff main...feature/echo5 --stat\n```\nCI red on a PR means...",
+      "choices": [
+        "Do not merge until you understand the failure",
+        "Approve anyway",
+        "Delete .git",
+        "Ignore logs"
+      ],
+      "answer": 0,
+      "explain": "CI is evidence.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_medium_04.mp4",
+        "poster": "media/images/pr_medium_04-frame.png",
+        "figure": "media/images/pr_medium_04.png"
+      }
+    },
+    {
+      "id": "pr_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log main..feature/foxtrot6 --oneline\n```\n`git diff main...feature/lab5` (three-dot) shows...",
+      "choices": [
+        "Changes on feature/lab5 since it diverged from main",
+        "The entire history of main",
+        "Stash",
+        "Tags"
+      ],
+      "answer": 0,
+      "explain": "Three-dot is merge-base to HEAD.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_medium_05.mp4",
+        "poster": "media/images/pr_medium_05-frame.png",
+        "figure": "media/images/pr_medium_05.png"
+      }
+    },
+    {
+      "id": "pr_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status --ignored | head\n```\n# Review context: `/work/chip/hotel` slot 6 variant 1\nRequesting changes is appropriate when...",
+      "choices": [
+        "The diff is wrong, untested, or unsafe",
+        "You like the font",
+        "The branch name has a slash",
+        "There is a tag"
+      ],
+      "answer": 0,
+      "explain": "Blocking issues.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_medium_06.mp4",
+        "poster": "media/images/pr_medium_06-frame.png",
+        "figure": "media/images/pr_medium_06.png"
+      }
+    },
+    {
+      "id": "pr_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# PR: feature/hotel8 -> main (8)\n```\nA force-push to update `feature/lab7` after rebase should...",
+      "choices": [
+        "Be expected on a solo feature PR; avoid on shared main",
+        "Rewrite origin/main",
+        "Delete the PR",
+        "Drop tests"
+      ],
+      "answer": 0,
+      "explain": "Feature branch lease-push.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_medium_07.mp4",
+        "poster": "media/images/pr_medium_07-frame.png",
+        "figure": "media/images/pr_medium_07.png"
+      }
+    },
+    {
+      "id": "pr_medium_08",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit diff main...feature/india9 --stat\n```\n# Review context: `/tmp/gitlab/bravo` slot 8 variant 1\nReview comments belong on the diff hunks they refer to when possible.",
+      "answer": true,
+      "explain": "Inline review.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_medium_08.mp4",
+        "poster": "media/images/pr_medium_08-frame.png",
+        "figure": "media/images/pr_medium_08.png"
+      }
+    },
+    {
+      "id": "pr_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log main..feature/juliet10 --oneline\n```\n# Review context: `C:/proj/charlie` slot 9 variant 1\nCI red on a PR means...",
+      "choices": [
+        "Do not merge until you understand the failure",
+        "Approve anyway",
+        "Delete .git",
+        "Ignore logs"
+      ],
+      "answer": 0,
+      "explain": "CI is evidence.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_medium_09.mp4",
+        "poster": "media/images/pr_medium_09-frame.png",
+        "figure": "media/images/pr_medium_09.png"
+      }
+    },
+    {
+      "id": "pr_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status --ignored | head\n```\n`git diff main...feature/lab10` (three-dot) shows...",
+      "choices": [
+        "Changes on feature/lab10 since it diverged from main",
+        "The entire history of main",
+        "Stash",
+        "Tags"
+      ],
+      "answer": 0,
+      "explain": "Three-dot is merge-base to HEAD.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_medium_10.mp4",
+        "poster": "media/images/pr_medium_10-frame.png",
+        "figure": "media/images/pr_medium_10.png"
+      }
+    },
+    {
+      "id": "pr_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# PR: feature/bravo12 -> main (12)\n```\n# Review context: `~/src/echo` slot 11 variant 1\nRequesting changes is appropriate when...",
+      "choices": [
+        "The diff is wrong, untested, or unsafe",
+        "You like the font",
+        "The branch name has a slash",
+        "There is a tag"
+      ],
+      "answer": 0,
+      "explain": "Blocking issues.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_medium_11.mp4",
+        "poster": "media/images/pr_medium_11-frame.png",
+        "figure": "media/images/pr_medium_11.png"
+      }
+    },
+    {
+      "id": "pr_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff main...feature/charlie13 --stat\n```\nA force-push to update `feature/lab12` after rebase should...",
+      "choices": [
+        "Be expected on a solo feature PR; avoid on shared main",
+        "Rewrite origin/main",
+        "Delete the PR",
+        "Drop tests"
+      ],
+      "answer": 0,
+      "explain": "Feature branch lease-push.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_medium_12.mp4",
+        "poster": "media/images/pr_medium_12-frame.png",
+        "figure": "media/images/pr_medium_12.png"
+      }
+    },
+    {
+      "id": "pr_medium_13",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log main..feature/delta14 --oneline\n```\n# Review context: `./labs/golf` slot 13 variant 1\nReview comments belong on the diff hunks they refer to when possible.",
+      "answer": true,
+      "explain": "Inline review.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_medium_13.mp4",
+        "poster": "media/images/pr_medium_13-frame.png",
+        "figure": "media/images/pr_medium_13.png"
+      }
+    },
+    {
+      "id": "pr_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status --ignored | head\n```\n# Review context: `/tmp/gitlab/hotel` slot 14 variant 1\nCI red on a PR means...",
+      "choices": [
+        "Do not merge until you understand the failure",
+        "Approve anyway",
+        "Delete .git",
+        "Ignore logs"
+      ],
+      "answer": 0,
+      "explain": "CI is evidence.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_medium_14.mp4",
+        "poster": "media/images/pr_medium_14-frame.png",
+        "figure": "media/images/pr_medium_14.png"
+      }
+    },
+    {
+      "id": "pr_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# PR: feature/foxtrot16 -> main (16)\n```\n`git diff main...feature/lab15` (three-dot) shows...",
+      "choices": [
+        "Changes on feature/lab15 since it diverged from main",
+        "The entire history of main",
+        "Stash",
+        "Tags"
+      ],
+      "answer": 0,
+      "explain": "Three-dot is merge-base to HEAD.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_medium_15.mp4",
+        "poster": "media/images/pr_medium_15-frame.png",
+        "figure": "media/images/pr_medium_15.png"
+      }
+    },
+    {
+      "id": "pr_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff main...feature/golf17 --stat\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\nRequesting changes is appropriate when...",
+      "choices": [
+        "The diff is wrong, untested, or unsafe",
+        "You like the font",
+        "The branch name has a slash",
+        "There is a tag"
+      ],
+      "answer": 0,
+      "explain": "Blocking issues.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_medium_16.mp4",
+        "poster": "media/images/pr_medium_16-frame.png",
+        "figure": "media/images/pr_medium_16.png"
+      }
+    },
+    {
+      "id": "pr_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log main..feature/hotel18 --oneline\n```\nA force-push to update `feature/lab17` after rebase should...",
+      "choices": [
+        "Be expected on a solo feature PR; avoid on shared main",
+        "Rewrite origin/main",
+        "Delete the PR",
+        "Drop tests"
+      ],
+      "answer": 0,
+      "explain": "Feature branch lease-push.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_medium_17.mp4",
+        "poster": "media/images/pr_medium_17-frame.png",
+        "figure": "media/images/pr_medium_17.png"
+      }
+    },
+    {
+      "id": "pr_medium_18",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit status --ignored | head\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\nReview comments belong on the diff hunks they refer to when possible.",
+      "answer": true,
+      "explain": "Inline review.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_medium_18.mp4",
+        "poster": "media/images/pr_medium_18-frame.png",
+        "figure": "media/images/pr_medium_18.png"
+      }
+    },
+    {
+      "id": "pr_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# PR: feature/juliet20 -> main (20)\n```\n# Review context: `./labs/echo` slot 19 variant 1\nCI red on a PR means...",
+      "choices": [
+        "Do not merge until you understand the failure",
+        "Approve anyway",
+        "Delete .git",
+        "Ignore logs"
+      ],
+      "answer": 0,
+      "explain": "CI is evidence.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_medium_19.mp4",
+        "poster": "media/images/pr_medium_19-frame.png",
+        "figure": "media/images/pr_medium_19.png"
+      }
+    },
+    {
+      "id": "pr_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff main...feature/alpha21 --stat\n```\n`git diff main...feature/lab20` (three-dot) shows...",
+      "choices": [
+        "Changes on feature/lab20 since it diverged from main",
+        "The entire history of main",
+        "Stash",
+        "Tags"
+      ],
+      "answer": 0,
+      "explain": "Three-dot is merge-base to HEAD.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_medium_20.mp4",
+        "poster": "media/images/pr_medium_20-frame.png",
+        "figure": "media/images/pr_medium_20.png"
+      }
+    },
+    {
+      "id": "pr_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log main..feature/bravo22 --oneline\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\nRequesting changes is appropriate when...",
+      "choices": [
+        "The diff is wrong, untested, or unsafe",
+        "You like the font",
+        "The branch name has a slash",
+        "There is a tag"
+      ],
+      "answer": 0,
+      "explain": "Blocking issues.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_medium_21.mp4",
+        "poster": "media/images/pr_medium_21-frame.png",
+        "figure": "media/images/pr_medium_21.png"
+      }
+    },
+    {
+      "id": "pr_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status --ignored | head\n```\nA force-push to update `feature/lab22` after rebase should...",
+      "choices": [
+        "Be expected on a solo feature PR; avoid on shared main",
+        "Rewrite origin/main",
+        "Delete the PR",
+        "Drop tests"
+      ],
+      "answer": 0,
+      "explain": "Feature branch lease-push.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_medium_22.mp4",
+        "poster": "media/images/pr_medium_22-frame.png",
+        "figure": "media/images/pr_medium_22.png"
+      }
+    },
+    {
+      "id": "pr_medium_23",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\n# PR: feature/delta24 -> main (24)\n```\n# Review context: `~/src/alpha` slot 23 variant 1\nReview comments belong on the diff hunks they refer to when possible.",
+      "answer": true,
+      "explain": "Inline review.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_medium_23.mp4",
+        "poster": "media/images/pr_medium_23-frame.png",
+        "figure": "media/images/pr_medium_23.png"
+      }
+    },
+    {
+      "id": "pr_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff main...feature/echo25 --stat\n```\n# Review context: `/work/chip/bravo` slot 24 variant 1\nCI red on a PR means...",
+      "choices": [
+        "Do not merge until you understand the failure",
+        "Approve anyway",
+        "Delete .git",
+        "Ignore logs"
+      ],
+      "answer": 0,
+      "explain": "CI is evidence.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_medium_24.mp4",
+        "poster": "media/images/pr_medium_24-frame.png",
+        "figure": "media/images/pr_medium_24.png"
+      }
+    },
+    {
+      "id": "pr_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log main..feature/foxtrot26 --oneline\n```\n`git diff main...feature/lab25` (three-dot) shows...",
+      "choices": [
+        "Changes on feature/lab25 since it diverged from main",
+        "The entire history of main",
+        "Stash",
+        "Tags"
+      ],
+      "answer": 0,
+      "explain": "Three-dot is merge-base to HEAD.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_medium_25.mp4",
+        "poster": "media/images/pr_medium_25-frame.png",
+        "figure": "media/images/pr_medium_25.png"
+      }
+    },
+    {
+      "id": "pr_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status --ignored | head\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\nRequesting changes is appropriate when...",
+      "choices": [
+        "The diff is wrong, untested, or unsafe",
+        "You like the font",
+        "The branch name has a slash",
+        "There is a tag"
+      ],
+      "answer": 0,
+      "explain": "Blocking issues.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_medium_26.mp4",
+        "poster": "media/images/pr_medium_26-frame.png",
+        "figure": "media/images/pr_medium_26.png"
+      }
+    },
+    {
+      "id": "pr_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# PR: feature/hotel28 -> main (28)\n```\nA force-push to update `feature/lab27` after rebase should...",
+      "choices": [
+        "Be expected on a solo feature PR; avoid on shared main",
+        "Rewrite origin/main",
+        "Delete the PR",
+        "Drop tests"
+      ],
+      "answer": 0,
+      "explain": "Feature branch lease-push.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_medium_27.mp4",
+        "poster": "media/images/pr_medium_27-frame.png",
+        "figure": "media/images/pr_medium_27.png"
+      }
+    },
+    {
+      "id": "pr_medium_28",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit diff main...feature/india29 --stat\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\nReview comments belong on the diff hunks they refer to when possible.",
+      "answer": true,
+      "explain": "Inline review.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_medium_28.mp4",
+        "poster": "media/images/pr_medium_28-frame.png",
+        "figure": "media/images/pr_medium_28.png"
+      }
+    },
+    {
+      "id": "pr_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log main..feature/juliet30 --oneline\n```\n# Review context: `~/src/golf` slot 29 variant 1\nCI red on a PR means...",
+      "choices": [
+        "Do not merge until you understand the failure",
+        "Approve anyway",
+        "Delete .git",
+        "Ignore logs"
+      ],
+      "answer": 0,
+      "explain": "CI is evidence.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_medium_29.mp4",
+        "poster": "media/images/pr_medium_29-frame.png",
+        "figure": "media/images/pr_medium_29.png"
+      }
+    },
+    {
+      "id": "pr_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status --ignored | head\n```\n`git diff main...feature/lab30` (three-dot) shows...",
+      "choices": [
+        "Changes on feature/lab30 since it diverged from main",
+        "The entire history of main",
+        "Stash",
+        "Tags"
+      ],
+      "answer": 0,
+      "explain": "Three-dot is merge-base to HEAD.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_medium_30.mp4",
+        "poster": "media/images/pr_medium_30-frame.png",
+        "figure": "media/images/pr_medium_30.png"
+      }
+    },
+    {
+      "id": "pr_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# PR: feature/delta4 -> main (4)\n```\nA merge queue / required checks exist to...",
+      "choices": [
+        "Block merge until tests pass",
+        "Replace git locally",
+        "Delete remotes",
+        "Skip review"
+      ],
+      "answer": 0,
+      "explain": "Protected branches.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_hard_01.mp4",
+        "poster": "media/images/pr_hard_01-frame.png",
+        "figure": "media/images/pr_hard_01.png"
+      }
+    },
+    {
+      "id": "pr_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff main...feature/echo5 --stat\n```\nReviewing generated `build/out2.vcd` in a PR is a smell because...",
+      "choices": [
+        "It is noise and often should be gitignored",
+        "Git cannot diff text",
+        "SHAs break",
+        "Fetch fails"
+      ],
+      "answer": 0,
+      "explain": "Hygiene.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_hard_02.mp4",
+        "poster": "media/images/pr_hard_02-frame.png",
+        "figure": "media/images/pr_hard_02.png"
+      }
+    },
+    {
+      "id": "pr_hard_03",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log main..feature/foxtrot6 --oneline\n```\nApproving your own required PR on a protected repo is often disallowed by branch rules.",
+      "answer": true,
+      "explain": "CODEOWNERS/protection.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_hard_03.mp4",
+        "poster": "media/images/pr_hard_03-frame.png",
+        "figure": "media/images/pr_hard_03.png"
+      }
+    },
+    {
+      "id": "pr_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status --ignored | head\n```\nA good lab PR description includes...",
+      "choices": [
+        "What, why, and how you verified (command/log)",
+        "Only 'please merge'",
+        "Your .env",
+        "A wave dump binary"
+      ],
+      "answer": 0,
+      "explain": "Graders need a recipe.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_hard_04.mp4",
+        "poster": "media/images/pr_hard_04-frame.png",
+        "figure": "media/images/pr_hard_04.png"
+      }
+    },
+    {
+      "id": "pr_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# PR: feature/hotel8 -> main (8)\n```\nRe-request review after a large push because...",
+      "choices": [
+        "The old approval may not cover new commits",
+        "Git deletes comments",
+        "Tags vanish",
+        "Status lies"
+      ],
+      "answer": 0,
+      "explain": "Fresh eyes on new diffs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_hard_05.mp4",
+        "poster": "media/images/pr_hard_05-frame.png",
+        "figure": "media/images/pr_hard_05.png"
+      }
+    },
+    {
+      "id": "pr_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff main...feature/india9 --stat\n```\n# Review context: `/work/chip/hotel` slot 6 variant 1\nA merge queue / required checks exist to...",
+      "choices": [
+        "Block merge until tests pass",
+        "Replace git locally",
+        "Delete remotes",
+        "Skip review"
+      ],
+      "answer": 0,
+      "explain": "Protected branches.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_hard_06.mp4",
+        "poster": "media/images/pr_hard_06-frame.png",
+        "figure": "media/images/pr_hard_06.png"
+      }
+    },
+    {
+      "id": "pr_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log main..feature/juliet10 --oneline\n```\nReviewing generated `build/out7.vcd` in a PR is a smell because...",
+      "choices": [
+        "It is noise and often should be gitignored",
+        "Git cannot diff text",
+        "SHAs break",
+        "Fetch fails"
+      ],
+      "answer": 0,
+      "explain": "Hygiene.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_hard_07.mp4",
+        "poster": "media/images/pr_hard_07-frame.png",
+        "figure": "media/images/pr_hard_07.png"
+      }
+    },
+    {
+      "id": "pr_hard_08",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit status --ignored | head\n```\n# Review context: `/tmp/gitlab/bravo` slot 8 variant 1\nApproving your own required PR on a protected repo is often disallowed by branch rules.",
+      "answer": true,
+      "explain": "CODEOWNERS/protection.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_hard_08.mp4",
+        "poster": "media/images/pr_hard_08-frame.png",
+        "figure": "media/images/pr_hard_08.png"
+      }
+    },
+    {
+      "id": "pr_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# PR: feature/bravo12 -> main (12)\n```\n# Review context: `C:/proj/charlie` slot 9 variant 1\nA good lab PR description includes...",
+      "choices": [
+        "What, why, and how you verified (command/log)",
+        "Only 'please merge'",
+        "Your .env",
+        "A wave dump binary"
+      ],
+      "answer": 0,
+      "explain": "Graders need a recipe.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_hard_09.mp4",
+        "poster": "media/images/pr_hard_09-frame.png",
+        "figure": "media/images/pr_hard_09.png"
+      }
+    },
+    {
+      "id": "pr_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff main...feature/charlie13 --stat\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\nRe-request review after a large push because...",
+      "choices": [
+        "The old approval may not cover new commits",
+        "Git deletes comments",
+        "Tags vanish",
+        "Status lies"
+      ],
+      "answer": 0,
+      "explain": "Fresh eyes on new diffs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_hard_10.mp4",
+        "poster": "media/images/pr_hard_10-frame.png",
+        "figure": "media/images/pr_hard_10.png"
+      }
+    },
+    {
+      "id": "pr_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log main..feature/delta14 --oneline\n```\n# Review context: `~/src/echo` slot 11 variant 1\nA merge queue / required checks exist to...",
+      "choices": [
+        "Block merge until tests pass",
+        "Replace git locally",
+        "Delete remotes",
+        "Skip review"
+      ],
+      "answer": 0,
+      "explain": "Protected branches.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_hard_11.mp4",
+        "poster": "media/images/pr_hard_11-frame.png",
+        "figure": "media/images/pr_hard_11.png"
+      }
+    },
+    {
+      "id": "pr_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status --ignored | head\n```\nReviewing generated `build/out12.vcd` in a PR is a smell because...",
+      "choices": [
+        "It is noise and often should be gitignored",
+        "Git cannot diff text",
+        "SHAs break",
+        "Fetch fails"
+      ],
+      "answer": 0,
+      "explain": "Hygiene.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_hard_12.mp4",
+        "poster": "media/images/pr_hard_12-frame.png",
+        "figure": "media/images/pr_hard_12.png"
+      }
+    },
+    {
+      "id": "pr_hard_13",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\n# PR: feature/foxtrot16 -> main (16)\n```\n# Review context: `./labs/golf` slot 13 variant 1\nApproving your own required PR on a protected repo is often disallowed by branch rules.",
+      "answer": true,
+      "explain": "CODEOWNERS/protection.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_hard_13.mp4",
+        "poster": "media/images/pr_hard_13-frame.png",
+        "figure": "media/images/pr_hard_13.png"
+      }
+    },
+    {
+      "id": "pr_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff main...feature/golf17 --stat\n```\n# Review context: `/tmp/gitlab/hotel` slot 14 variant 1\nA good lab PR description includes...",
+      "choices": [
+        "What, why, and how you verified (command/log)",
+        "Only 'please merge'",
+        "Your .env",
+        "A wave dump binary"
+      ],
+      "answer": 0,
+      "explain": "Graders need a recipe.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_hard_14.mp4",
+        "poster": "media/images/pr_hard_14-frame.png",
+        "figure": "media/images/pr_hard_14.png"
+      }
+    },
+    {
+      "id": "pr_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log main..feature/hotel18 --oneline\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\nRe-request review after a large push because...",
+      "choices": [
+        "The old approval may not cover new commits",
+        "Git deletes comments",
+        "Tags vanish",
+        "Status lies"
+      ],
+      "answer": 0,
+      "explain": "Fresh eyes on new diffs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_hard_15.mp4",
+        "poster": "media/images/pr_hard_15-frame.png",
+        "figure": "media/images/pr_hard_15.png"
+      }
+    },
+    {
+      "id": "pr_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status --ignored | head\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\nA merge queue / required checks exist to...",
+      "choices": [
+        "Block merge until tests pass",
+        "Replace git locally",
+        "Delete remotes",
+        "Skip review"
+      ],
+      "answer": 0,
+      "explain": "Protected branches.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_hard_16.mp4",
+        "poster": "media/images/pr_hard_16-frame.png",
+        "figure": "media/images/pr_hard_16.png"
+      }
+    },
+    {
+      "id": "pr_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# PR: feature/juliet20 -> main (20)\n```\nReviewing generated `build/out17.vcd` in a PR is a smell because...",
+      "choices": [
+        "It is noise and often should be gitignored",
+        "Git cannot diff text",
+        "SHAs break",
+        "Fetch fails"
+      ],
+      "answer": 0,
+      "explain": "Hygiene.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_hard_17.mp4",
+        "poster": "media/images/pr_hard_17-frame.png",
+        "figure": "media/images/pr_hard_17.png"
+      }
+    },
+    {
+      "id": "pr_hard_18",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit diff main...feature/alpha21 --stat\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\nApproving your own required PR on a protected repo is often disallowed by branch rules.",
+      "answer": true,
+      "explain": "CODEOWNERS/protection.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_hard_18.mp4",
+        "poster": "media/images/pr_hard_18-frame.png",
+        "figure": "media/images/pr_hard_18.png"
+      }
+    },
+    {
+      "id": "pr_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log main..feature/bravo22 --oneline\n```\n# Review context: `./labs/echo` slot 19 variant 1\nA good lab PR description includes...",
+      "choices": [
+        "What, why, and how you verified (command/log)",
+        "Only 'please merge'",
+        "Your .env",
+        "A wave dump binary"
+      ],
+      "answer": 0,
+      "explain": "Graders need a recipe.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_hard_19.mp4",
+        "poster": "media/images/pr_hard_19-frame.png",
+        "figure": "media/images/pr_hard_19.png"
+      }
+    },
+    {
+      "id": "pr_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status --ignored | head\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\nRe-request review after a large push because...",
+      "choices": [
+        "The old approval may not cover new commits",
+        "Git deletes comments",
+        "Tags vanish",
+        "Status lies"
+      ],
+      "answer": 0,
+      "explain": "Fresh eyes on new diffs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_hard_20.mp4",
+        "poster": "media/images/pr_hard_20-frame.png",
+        "figure": "media/images/pr_hard_20.png"
+      }
+    },
+    {
+      "id": "pr_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# PR: feature/delta24 -> main (24)\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\nA merge queue / required checks exist to...",
+      "choices": [
+        "Block merge until tests pass",
+        "Replace git locally",
+        "Delete remotes",
+        "Skip review"
+      ],
+      "answer": 0,
+      "explain": "Protected branches.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_hard_21.mp4",
+        "poster": "media/images/pr_hard_21-frame.png",
+        "figure": "media/images/pr_hard_21.png"
+      }
+    },
+    {
+      "id": "pr_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff main...feature/echo25 --stat\n```\nReviewing generated `build/out22.vcd` in a PR is a smell because...",
+      "choices": [
+        "It is noise and often should be gitignored",
+        "Git cannot diff text",
+        "SHAs break",
+        "Fetch fails"
+      ],
+      "answer": 0,
+      "explain": "Hygiene.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_hard_22.mp4",
+        "poster": "media/images/pr_hard_22-frame.png",
+        "figure": "media/images/pr_hard_22.png"
+      }
+    },
+    {
+      "id": "pr_hard_23",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log main..feature/foxtrot26 --oneline\n```\n# Review context: `~/src/alpha` slot 23 variant 1\nApproving your own required PR on a protected repo is often disallowed by branch rules.",
+      "answer": true,
+      "explain": "CODEOWNERS/protection.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_hard_23.mp4",
+        "poster": "media/images/pr_hard_23-frame.png",
+        "figure": "media/images/pr_hard_23.png"
+      }
+    },
+    {
+      "id": "pr_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status --ignored | head\n```\n# Review context: `/work/chip/bravo` slot 24 variant 1\nA good lab PR description includes...",
+      "choices": [
+        "What, why, and how you verified (command/log)",
+        "Only 'please merge'",
+        "Your .env",
+        "A wave dump binary"
+      ],
+      "answer": 0,
+      "explain": "Graders need a recipe.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_hard_24.mp4",
+        "poster": "media/images/pr_hard_24-frame.png",
+        "figure": "media/images/pr_hard_24.png"
+      }
+    },
+    {
+      "id": "pr_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# PR: feature/hotel28 -> main (28)\n```\n# Review context: `./labs/charlie` slot 25 variant 1\nRe-request review after a large push because...",
+      "choices": [
+        "The old approval may not cover new commits",
+        "Git deletes comments",
+        "Tags vanish",
+        "Status lies"
+      ],
+      "answer": 0,
+      "explain": "Fresh eyes on new diffs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_hard_25.mp4",
+        "poster": "media/images/pr_hard_25-frame.png",
+        "figure": "media/images/pr_hard_25.png"
+      }
+    },
+    {
+      "id": "pr_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff main...feature/india29 --stat\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\nA merge queue / required checks exist to...",
+      "choices": [
+        "Block merge until tests pass",
+        "Replace git locally",
+        "Delete remotes",
+        "Skip review"
+      ],
+      "answer": 0,
+      "explain": "Protected branches.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_hard_26.mp4",
+        "poster": "media/images/pr_hard_26-frame.png",
+        "figure": "media/images/pr_hard_26.png"
+      }
+    },
+    {
+      "id": "pr_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log main..feature/juliet30 --oneline\n```\nReviewing generated `build/out27.vcd` in a PR is a smell because...",
+      "choices": [
+        "It is noise and often should be gitignored",
+        "Git cannot diff text",
+        "SHAs break",
+        "Fetch fails"
+      ],
+      "answer": 0,
+      "explain": "Hygiene.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_hard_27.mp4",
+        "poster": "media/images/pr_hard_27-frame.png",
+        "figure": "media/images/pr_hard_27.png"
+      }
+    },
+    {
+      "id": "pr_hard_28",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit status --ignored | head\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\nApproving your own required PR on a protected repo is often disallowed by branch rules.",
+      "answer": true,
+      "explain": "CODEOWNERS/protection.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_hard_28.mp4",
+        "poster": "media/images/pr_hard_28-frame.png",
+        "figure": "media/images/pr_hard_28.png"
+      }
+    },
+    {
+      "id": "pr_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# PR: feature/bravo32 -> main (32)\n```\n# Review context: `~/src/golf` slot 29 variant 1\nA good lab PR description includes...",
+      "choices": [
+        "What, why, and how you verified (command/log)",
+        "Only 'please merge'",
+        "Your .env",
+        "A wave dump binary"
+      ],
+      "answer": 0,
+      "explain": "Graders need a recipe.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_hard_29.mp4",
+        "poster": "media/images/pr_hard_29-frame.png",
+        "figure": "media/images/pr_hard_29.png"
+      }
+    },
+    {
+      "id": "pr_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff main...feature/charlie33 --stat\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\nRe-request review after a large push because...",
+      "choices": [
+        "The old approval may not cover new commits",
+        "Git deletes comments",
+        "Tags vanish",
+        "Status lies"
+      ],
+      "answer": 0,
+      "explain": "Fresh eyes on new diffs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pr_hard_30.mp4",
+        "poster": "media/images/pr_hard_30-frame.png",
+        "figure": "media/images/pr_hard_30.png"
+      }
+    }
+  ]
+}
