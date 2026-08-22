@@ -1,0 +1,1674 @@
+{
+  "module": "module06-git-undo-safe",
+  "title": "Safe undo",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore bravo2.md\n```\ngit restore notes.md (without --staged) on a modified tracked file...",
+      "choices": [
+        "Unstages the file but keeps your edits",
+        "Discards unstaged edits and matches the last committed/index state",
+        "Deletes the entire repository",
+        "Force-pushes to origin"
+      ],
+      "answer": 1,
+      "explain": "Plain restore rewinds the working tree; unstaged edits in that file are lost.",
+      "difficulty": "easy",
+      "id": "undo_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_easy_01.mp4",
+        "poster": "media/images/undo_easy_01-frame.png",
+        "figure": "media/images/undo_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --soft HEAD~1\n```\ngit restore --staged notes.md after git add...",
+      "choices": [
+        "Removes the file from the staging area but keeps edits on disk",
+        "Deletes the file from disk forever",
+        "Creates a new remote branch",
+        "Rewrites all commit history"
+      ],
+      "answer": 0,
+      "explain": "restore --staged only unstages; the working tree edits remain.",
+      "difficulty": "easy",
+      "id": "undo_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_easy_02.mp4",
+        "poster": "media/images/undo_easy_02-frame.png",
+        "figure": "media/images/undo_easy_02.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit revert --no-edit de0004bee 2>/dev/null || true\n```\ngit reset --hard is a good first choice when you only wanted to unstage one file.",
+      "answer": false,
+      "explain": "Hard reset is a last resort; prefer restore --staged or mixed reset when you want to keep file contents.",
+      "difficulty": "easy",
+      "id": "undo_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_easy_03.mp4",
+        "poster": "media/images/undo_easy_03-frame.png",
+        "figure": "media/images/undo_easy_03.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore --staged echo5.md\n```\nAfter restore --staged, git status on that file should show...",
+      "choices": [
+        "Modified but not staged",
+        "Nothing-the file vanished",
+        "Only remote-tracking info",
+        "A merge conflict automatically"
+      ],
+      "answer": 0,
+      "explain": "Unstaged means the change is still in the working tree, just not in the index.",
+      "difficulty": "easy",
+      "id": "undo_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_easy_04.mp4",
+        "poster": "media/images/undo_easy_04-frame.png",
+        "figure": "media/images/undo_easy_04.png"
+      }
+    },
+    {
+      "id": "undo_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore foxtrot6.md\n```\n`git restore notes5.md` (no --staged) on a modified tracked file...",
+      "choices": [
+        "Unstages but keeps edits",
+        "Discards unstaged edits to match index/HEAD",
+        "Deletes the repo",
+        "Force-pushes origin"
+      ],
+      "answer": 1,
+      "explain": "Plain restore rewinds the working tree.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_easy_05.mp4",
+        "poster": "media/images/undo_easy_05-frame.png",
+        "figure": "media/images/undo_easy_05.png"
+      }
+    },
+    {
+      "id": "undo_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --soft HEAD~1\n```\n`git restore --staged notes6.md` after `git add`...",
+      "choices": [
+        "Removes the path from the index but keeps disk edits",
+        "Deletes the file forever",
+        "Creates a remote branch",
+        "Rewrites all history"
+      ],
+      "answer": 0,
+      "explain": "Unstage only.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_easy_06.mp4",
+        "poster": "media/images/undo_easy_06-frame.png",
+        "figure": "media/images/undo_easy_06.png"
+      }
+    },
+    {
+      "id": "undo_easy_07",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit revert --no-edit ho0008bee 2>/dev/null || true\n```\n`git reset --hard` is a good first choice when you only wanted to unstage one file.",
+      "answer": false,
+      "explain": "Prefer restore --staged; hard reset is last resort.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_easy_07.mp4",
+        "poster": "media/images/undo_easy_07-frame.png",
+        "figure": "media/images/undo_easy_07.png"
+      }
+    },
+    {
+      "id": "undo_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore --staged india9.md\n```\nAfter `restore --staged`, `git status` on `notes8.md` should show...",
+      "choices": [
+        "Modified but not staged",
+        "The file vanished",
+        "Only remote-tracking info",
+        "A merge conflict automatically"
+      ],
+      "answer": 0,
+      "explain": "Edits remain in the working tree.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_easy_08.mp4",
+        "poster": "media/images/undo_easy_08-frame.png",
+        "figure": "media/images/undo_easy_08.png"
+      }
+    },
+    {
+      "id": "undo_easy_09",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit restore juliet10.md\n```\n`git restore` never needs a path if you want to restore everything.",
+      "answer": false,
+      "explain": "Be explicit; restoring everything is dangerous.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_easy_09.mp4",
+        "poster": "media/images/undo_easy_09-frame.png",
+        "figure": "media/images/undo_easy_09.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --soft HEAD~1\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\ngit restore notes.md (without --staged) on a modified tracked file...",
+      "choices": [
+        "Unstages the file but keeps your edits",
+        "Discards unstaged edits and matches the last committed/index state",
+        "Deletes the entire repository",
+        "Force-pushes to origin"
+      ],
+      "answer": 1,
+      "explain": "Plain restore rewinds the working tree; unstaged edits in that file are lost.",
+      "difficulty": "easy",
+      "id": "undo_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_easy_10.mp4",
+        "poster": "media/images/undo_easy_10-frame.png",
+        "figure": "media/images/undo_easy_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit revert --no-edit br0012bee 2>/dev/null || true\n```\n# Review context: `~/src/echo` slot 11 variant 1\ngit restore --staged notes.md after git add...",
+      "choices": [
+        "Removes the file from the staging area but keeps edits on disk",
+        "Deletes the file from disk forever",
+        "Creates a new remote branch",
+        "Rewrites all commit history"
+      ],
+      "answer": 0,
+      "explain": "restore --staged only unstages; the working tree edits remain.",
+      "difficulty": "easy",
+      "id": "undo_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_easy_11.mp4",
+        "poster": "media/images/undo_easy_11-frame.png",
+        "figure": "media/images/undo_easy_11.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit restore --staged charlie13.md\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\ngit reset --hard is a good first choice when you only wanted to unstage one file.",
+      "answer": false,
+      "explain": "Hard reset is a last resort; prefer restore --staged or mixed reset when you want to keep file contents.",
+      "difficulty": "easy",
+      "id": "undo_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_easy_12.mp4",
+        "poster": "media/images/undo_easy_12-frame.png",
+        "figure": "media/images/undo_easy_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore delta14.md\n```\n# Review context: `./labs/golf` slot 13 variant 1\nAfter restore --staged, git status on that file should show...",
+      "choices": [
+        "Modified but not staged",
+        "Nothing-the file vanished",
+        "Only remote-tracking info",
+        "A merge conflict automatically"
+      ],
+      "answer": 0,
+      "explain": "Unstaged means the change is still in the working tree, just not in the index.",
+      "difficulty": "easy",
+      "id": "undo_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_easy_13.mp4",
+        "poster": "media/images/undo_easy_13-frame.png",
+        "figure": "media/images/undo_easy_13.png"
+      }
+    },
+    {
+      "id": "undo_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --soft HEAD~1\n```\n`git restore notes14.md` (no --staged) on a modified tracked file...",
+      "choices": [
+        "Unstages but keeps edits",
+        "Discards unstaged edits to match index/HEAD",
+        "Deletes the repo",
+        "Force-pushes origin"
+      ],
+      "answer": 1,
+      "explain": "Plain restore rewinds the working tree.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_easy_14.mp4",
+        "poster": "media/images/undo_easy_14-frame.png",
+        "figure": "media/images/undo_easy_14.png"
+      }
+    },
+    {
+      "id": "undo_easy_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit revert --no-edit fo0016bee 2>/dev/null || true\n```\n`git restore --staged notes15.md` after `git add`...",
+      "choices": [
+        "Removes the path from the index but keeps disk edits",
+        "Deletes the file forever",
+        "Creates a remote branch",
+        "Rewrites all history"
+      ],
+      "answer": 0,
+      "explain": "Unstage only.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_easy_15.mp4",
+        "poster": "media/images/undo_easy_15-frame.png",
+        "figure": "media/images/undo_easy_15.png"
+      }
+    },
+    {
+      "id": "undo_easy_16",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit restore --staged golf17.md\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\n`git reset --hard` is a good first choice when you only wanted to unstage one file.",
+      "answer": false,
+      "explain": "Prefer restore --staged; hard reset is last resort.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_easy_16.mp4",
+        "poster": "media/images/undo_easy_16-frame.png",
+        "figure": "media/images/undo_easy_16.png"
+      }
+    },
+    {
+      "id": "undo_easy_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore hotel18.md\n```\nAfter `restore --staged`, `git status` on `notes17.md` should show...",
+      "choices": [
+        "Modified but not staged",
+        "The file vanished",
+        "Only remote-tracking info",
+        "A merge conflict automatically"
+      ],
+      "answer": 0,
+      "explain": "Edits remain in the working tree.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_easy_17.mp4",
+        "poster": "media/images/undo_easy_17-frame.png",
+        "figure": "media/images/undo_easy_17.png"
+      }
+    },
+    {
+      "id": "undo_easy_18",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --soft HEAD~1\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\n`git restore` never needs a path if you want to restore everything.",
+      "answer": false,
+      "explain": "Be explicit; restoring everything is dangerous.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_easy_18.mp4",
+        "poster": "media/images/undo_easy_18-frame.png",
+        "figure": "media/images/undo_easy_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit revert --no-edit ju0020bee 2>/dev/null || true\n```\n# Review context: `./labs/echo` slot 19 variant 1\ngit restore notes.md (without --staged) on a modified tracked file...",
+      "choices": [
+        "Unstages the file but keeps your edits",
+        "Discards unstaged edits and matches the last committed/index state",
+        "Deletes the entire repository",
+        "Force-pushes to origin"
+      ],
+      "answer": 1,
+      "explain": "Plain restore rewinds the working tree; unstaged edits in that file are lost.",
+      "difficulty": "easy",
+      "id": "undo_easy_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_easy_19.mp4",
+        "poster": "media/images/undo_easy_19-frame.png",
+        "figure": "media/images/undo_easy_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore --staged alpha21.md\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\ngit restore --staged notes.md after git add...",
+      "choices": [
+        "Removes the file from the staging area but keeps edits on disk",
+        "Deletes the file from disk forever",
+        "Creates a new remote branch",
+        "Rewrites all commit history"
+      ],
+      "answer": 0,
+      "explain": "restore --staged only unstages; the working tree edits remain.",
+      "difficulty": "easy",
+      "id": "undo_easy_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_easy_20.mp4",
+        "poster": "media/images/undo_easy_20-frame.png",
+        "figure": "media/images/undo_easy_20.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit restore bravo22.md\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\ngit reset --hard is a good first choice when you only wanted to unstage one file.",
+      "answer": false,
+      "explain": "Hard reset is a last resort; prefer restore --staged or mixed reset when you want to keep file contents.",
+      "difficulty": "easy",
+      "id": "undo_easy_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_easy_21.mp4",
+        "poster": "media/images/undo_easy_21-frame.png",
+        "figure": "media/images/undo_easy_21.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --soft HEAD~1\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\nAfter restore --staged, git status on that file should show...",
+      "choices": [
+        "Modified but not staged",
+        "Nothing-the file vanished",
+        "Only remote-tracking info",
+        "A merge conflict automatically"
+      ],
+      "answer": 0,
+      "explain": "Unstaged means the change is still in the working tree, just not in the index.",
+      "difficulty": "easy",
+      "id": "undo_easy_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_easy_22.mp4",
+        "poster": "media/images/undo_easy_22-frame.png",
+        "figure": "media/images/undo_easy_22.png"
+      }
+    },
+    {
+      "id": "undo_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit revert --no-edit de0024bee 2>/dev/null || true\n```\n`git restore notes23.md` (no --staged) on a modified tracked file...",
+      "choices": [
+        "Unstages but keeps edits",
+        "Discards unstaged edits to match index/HEAD",
+        "Deletes the repo",
+        "Force-pushes origin"
+      ],
+      "answer": 1,
+      "explain": "Plain restore rewinds the working tree.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_easy_23.mp4",
+        "poster": "media/images/undo_easy_23-frame.png",
+        "figure": "media/images/undo_easy_23.png"
+      }
+    },
+    {
+      "id": "undo_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore --staged echo25.md\n```\n`git restore --staged notes24.md` after `git add`...",
+      "choices": [
+        "Removes the path from the index but keeps disk edits",
+        "Deletes the file forever",
+        "Creates a remote branch",
+        "Rewrites all history"
+      ],
+      "answer": 0,
+      "explain": "Unstage only.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_easy_24.mp4",
+        "poster": "media/images/undo_easy_24-frame.png",
+        "figure": "media/images/undo_easy_24.png"
+      }
+    },
+    {
+      "id": "undo_easy_25",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit restore foxtrot26.md\n```\n# Review context: `./labs/charlie` slot 25 variant 1\n`git reset --hard` is a good first choice when you only wanted to unstage one file.",
+      "answer": false,
+      "explain": "Prefer restore --staged; hard reset is last resort.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_easy_25.mp4",
+        "poster": "media/images/undo_easy_25-frame.png",
+        "figure": "media/images/undo_easy_25.png"
+      }
+    },
+    {
+      "id": "undo_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --soft HEAD~1\n```\nAfter `restore --staged`, `git status` on `notes26.md` should show...",
+      "choices": [
+        "Modified but not staged",
+        "The file vanished",
+        "Only remote-tracking info",
+        "A merge conflict automatically"
+      ],
+      "answer": 0,
+      "explain": "Edits remain in the working tree.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_easy_26.mp4",
+        "poster": "media/images/undo_easy_26-frame.png",
+        "figure": "media/images/undo_easy_26.png"
+      }
+    },
+    {
+      "id": "undo_easy_27",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit revert --no-edit ho0028bee 2>/dev/null || true\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\n`git restore` never needs a path if you want to restore everything.",
+      "answer": false,
+      "explain": "Be explicit; restoring everything is dangerous.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_easy_27.mp4",
+        "poster": "media/images/undo_easy_27-frame.png",
+        "figure": "media/images/undo_easy_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore --staged india29.md\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\ngit restore notes.md (without --staged) on a modified tracked file...",
+      "choices": [
+        "Unstages the file but keeps your edits",
+        "Discards unstaged edits and matches the last committed/index state",
+        "Deletes the entire repository",
+        "Force-pushes to origin"
+      ],
+      "answer": 1,
+      "explain": "Plain restore rewinds the working tree; unstaged edits in that file are lost.",
+      "difficulty": "easy",
+      "id": "undo_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_easy_28.mp4",
+        "poster": "media/images/undo_easy_28-frame.png",
+        "figure": "media/images/undo_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore juliet30.md\n```\n# Review context: `~/src/golf` slot 29 variant 1\ngit restore --staged notes.md after git add...",
+      "choices": [
+        "Removes the file from the staging area but keeps edits on disk",
+        "Deletes the file from disk forever",
+        "Creates a new remote branch",
+        "Rewrites all commit history"
+      ],
+      "answer": 0,
+      "explain": "restore --staged only unstages; the working tree edits remain.",
+      "difficulty": "easy",
+      "id": "undo_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_easy_29.mp4",
+        "poster": "media/images/undo_easy_29-frame.png",
+        "figure": "media/images/undo_easy_29.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --soft HEAD~1\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\ngit reset --hard is a good first choice when you only wanted to unstage one file.",
+      "answer": false,
+      "explain": "Hard reset is a last resort; prefer restore --staged or mixed reset when you want to keep file contents.",
+      "difficulty": "easy",
+      "id": "undo_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_easy_30.mp4",
+        "poster": "media/images/undo_easy_30-frame.png",
+        "figure": "media/images/undo_easy_30.png"
+      }
+    },
+    {
+      "id": "undo_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore bravo2.md\n```\n`git reset --soft HEAD~1` moves HEAD back and...",
+      "choices": [
+        "Keeps the index and working tree as they were (changes stay staged)",
+        "Deletes files on disk",
+        "Pushes origin",
+        "Drops the stash"
+      ],
+      "answer": 0,
+      "explain": "Soft reset keeps the tree staged.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_medium_01.mp4",
+        "poster": "media/images/undo_medium_01-frame.png",
+        "figure": "media/images/undo_medium_01.png"
+      }
+    },
+    {
+      "id": "undo_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --soft HEAD~1\n```\n`git reset --mixed HEAD~1` (default)...",
+      "choices": [
+        "Moves HEAD and resets the index; working tree edits remain",
+        "Deletes .git",
+        "Force-pushes",
+        "Tags HEAD"
+      ],
+      "answer": 0,
+      "explain": "Mixed unstages the undone commit's tree.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_medium_02.mp4",
+        "poster": "media/images/undo_medium_02-frame.png",
+        "figure": "media/images/undo_medium_02.png"
+      }
+    },
+    {
+      "id": "undo_medium_03",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit revert --no-edit de0004bee 2>/dev/null || true\n```\n`git reset --hard HEAD~1`...",
+      "choices": [
+        "Moves HEAD, index, and working tree to that commit",
+        "Only updates remotes",
+        "Only edits .gitignore",
+        "Creates a PR"
+      ],
+      "answer": 0,
+      "explain": "Hard reset matches all three trees.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_medium_03.mp4",
+        "poster": "media/images/undo_medium_03-frame.png",
+        "figure": "media/images/undo_medium_03.png"
+      }
+    },
+    {
+      "id": "undo_medium_04",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit restore --staged echo5.md\n```\n`git revert a0004bee` adds a new commit that undoes a0004bee, unlike reset.",
+      "answer": true,
+      "explain": "Revert is safe on shared history.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_medium_04.mp4",
+        "poster": "media/images/undo_medium_04-frame.png",
+        "figure": "media/images/undo_medium_04.png"
+      }
+    },
+    {
+      "id": "undo_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore foxtrot6.md\n```\nTo undo a public commit on main, prefer...",
+      "choices": [
+        "git revert",
+        "git reset --hard and force-push",
+        "deleting .git",
+        "stash drop"
+      ],
+      "answer": 0,
+      "explain": "Revert does not rewrite others' clones.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_medium_05.mp4",
+        "poster": "media/images/undo_medium_05-frame.png",
+        "figure": "media/images/undo_medium_05.png"
+      }
+    },
+    {
+      "id": "undo_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --soft HEAD~1\n```\n# Review context: `/work/chip/hotel` slot 6 variant 1\n`git reset --soft HEAD~1` moves HEAD back and...",
+      "choices": [
+        "Keeps the index and working tree as they were (changes stay staged)",
+        "Deletes files on disk",
+        "Pushes origin",
+        "Drops the stash"
+      ],
+      "answer": 0,
+      "explain": "Soft reset keeps the tree staged.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_medium_06.mp4",
+        "poster": "media/images/undo_medium_06-frame.png",
+        "figure": "media/images/undo_medium_06.png"
+      }
+    },
+    {
+      "id": "undo_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit revert --no-edit ho0008bee 2>/dev/null || true\n```\n# Review context: `./labs/alpha` slot 7 variant 1\n`git reset --mixed HEAD~1` (default)...",
+      "choices": [
+        "Moves HEAD and resets the index; working tree edits remain",
+        "Deletes .git",
+        "Force-pushes",
+        "Tags HEAD"
+      ],
+      "answer": 0,
+      "explain": "Mixed unstages the undone commit's tree.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_medium_07.mp4",
+        "poster": "media/images/undo_medium_07-frame.png",
+        "figure": "media/images/undo_medium_07.png"
+      }
+    },
+    {
+      "id": "undo_medium_08",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore --staged india9.md\n```\n`git reset --hard HEAD~3`...",
+      "choices": [
+        "Moves HEAD, index, and working tree to that commit",
+        "Only updates remotes",
+        "Only edits .gitignore",
+        "Creates a PR"
+      ],
+      "answer": 0,
+      "explain": "Hard reset matches all three trees.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_medium_08.mp4",
+        "poster": "media/images/undo_medium_08-frame.png",
+        "figure": "media/images/undo_medium_08.png"
+      }
+    },
+    {
+      "id": "undo_medium_09",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit restore juliet10.md\n```\n`git revert a0009bee` adds a new commit that undoes a0009bee, unlike reset.",
+      "answer": true,
+      "explain": "Revert is safe on shared history.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_medium_09.mp4",
+        "poster": "media/images/undo_medium_09-frame.png",
+        "figure": "media/images/undo_medium_09.png"
+      }
+    },
+    {
+      "id": "undo_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --soft HEAD~1\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\nTo undo a public commit on main, prefer...",
+      "choices": [
+        "git revert",
+        "git reset --hard and force-push",
+        "deleting .git",
+        "stash drop"
+      ],
+      "answer": 0,
+      "explain": "Revert does not rewrite others' clones.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_medium_10.mp4",
+        "poster": "media/images/undo_medium_10-frame.png",
+        "figure": "media/images/undo_medium_10.png"
+      }
+    },
+    {
+      "id": "undo_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit revert --no-edit br0012bee 2>/dev/null || true\n```\n# Review context: `~/src/echo` slot 11 variant 1\n`git reset --soft HEAD~1` moves HEAD back and...",
+      "choices": [
+        "Keeps the index and working tree as they were (changes stay staged)",
+        "Deletes files on disk",
+        "Pushes origin",
+        "Drops the stash"
+      ],
+      "answer": 0,
+      "explain": "Soft reset keeps the tree staged.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_medium_11.mp4",
+        "poster": "media/images/undo_medium_11-frame.png",
+        "figure": "media/images/undo_medium_11.png"
+      }
+    },
+    {
+      "id": "undo_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore --staged charlie13.md\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\n`git reset --mixed HEAD~1` (default)...",
+      "choices": [
+        "Moves HEAD and resets the index; working tree edits remain",
+        "Deletes .git",
+        "Force-pushes",
+        "Tags HEAD"
+      ],
+      "answer": 0,
+      "explain": "Mixed unstages the undone commit's tree.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_medium_12.mp4",
+        "poster": "media/images/undo_medium_12-frame.png",
+        "figure": "media/images/undo_medium_12.png"
+      }
+    },
+    {
+      "id": "undo_medium_13",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore delta14.md\n```\n`git reset --hard HEAD~2`...",
+      "choices": [
+        "Moves HEAD, index, and working tree to that commit",
+        "Only updates remotes",
+        "Only edits .gitignore",
+        "Creates a PR"
+      ],
+      "answer": 0,
+      "explain": "Hard reset matches all three trees.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_medium_13.mp4",
+        "poster": "media/images/undo_medium_13-frame.png",
+        "figure": "media/images/undo_medium_13.png"
+      }
+    },
+    {
+      "id": "undo_medium_14",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --soft HEAD~1\n```\n`git revert a0014bee` adds a new commit that undoes a0014bee, unlike reset.",
+      "answer": true,
+      "explain": "Revert is safe on shared history.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_medium_14.mp4",
+        "poster": "media/images/undo_medium_14-frame.png",
+        "figure": "media/images/undo_medium_14.png"
+      }
+    },
+    {
+      "id": "undo_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit revert --no-edit fo0016bee 2>/dev/null || true\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\nTo undo a public commit on main, prefer...",
+      "choices": [
+        "git revert",
+        "git reset --hard and force-push",
+        "deleting .git",
+        "stash drop"
+      ],
+      "answer": 0,
+      "explain": "Revert does not rewrite others' clones.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_medium_15.mp4",
+        "poster": "media/images/undo_medium_15-frame.png",
+        "figure": "media/images/undo_medium_15.png"
+      }
+    },
+    {
+      "id": "undo_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore --staged golf17.md\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\n`git reset --soft HEAD~1` moves HEAD back and...",
+      "choices": [
+        "Keeps the index and working tree as they were (changes stay staged)",
+        "Deletes files on disk",
+        "Pushes origin",
+        "Drops the stash"
+      ],
+      "answer": 0,
+      "explain": "Soft reset keeps the tree staged.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_medium_16.mp4",
+        "poster": "media/images/undo_medium_16-frame.png",
+        "figure": "media/images/undo_medium_16.png"
+      }
+    },
+    {
+      "id": "undo_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore hotel18.md\n```\n# Review context: `~/src/charlie` slot 17 variant 1\n`git reset --mixed HEAD~1` (default)...",
+      "choices": [
+        "Moves HEAD and resets the index; working tree edits remain",
+        "Deletes .git",
+        "Force-pushes",
+        "Tags HEAD"
+      ],
+      "answer": 0,
+      "explain": "Mixed unstages the undone commit's tree.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_medium_17.mp4",
+        "poster": "media/images/undo_medium_17-frame.png",
+        "figure": "media/images/undo_medium_17.png"
+      }
+    },
+    {
+      "id": "undo_medium_18",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --soft HEAD~1\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\n`git reset --hard HEAD~1`...",
+      "choices": [
+        "Moves HEAD, index, and working tree to that commit",
+        "Only updates remotes",
+        "Only edits .gitignore",
+        "Creates a PR"
+      ],
+      "answer": 0,
+      "explain": "Hard reset matches all three trees.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_medium_18.mp4",
+        "poster": "media/images/undo_medium_18-frame.png",
+        "figure": "media/images/undo_medium_18.png"
+      }
+    },
+    {
+      "id": "undo_medium_19",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit revert --no-edit ju0020bee 2>/dev/null || true\n```\n`git revert a0019bee` adds a new commit that undoes a0019bee, unlike reset.",
+      "answer": true,
+      "explain": "Revert is safe on shared history.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_medium_19.mp4",
+        "poster": "media/images/undo_medium_19-frame.png",
+        "figure": "media/images/undo_medium_19.png"
+      }
+    },
+    {
+      "id": "undo_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore --staged alpha21.md\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\nTo undo a public commit on main, prefer...",
+      "choices": [
+        "git revert",
+        "git reset --hard and force-push",
+        "deleting .git",
+        "stash drop"
+      ],
+      "answer": 0,
+      "explain": "Revert does not rewrite others' clones.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_medium_20.mp4",
+        "poster": "media/images/undo_medium_20-frame.png",
+        "figure": "media/images/undo_medium_20.png"
+      }
+    },
+    {
+      "id": "undo_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore bravo22.md\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\n`git reset --soft HEAD~1` moves HEAD back and...",
+      "choices": [
+        "Keeps the index and working tree as they were (changes stay staged)",
+        "Deletes files on disk",
+        "Pushes origin",
+        "Drops the stash"
+      ],
+      "answer": 0,
+      "explain": "Soft reset keeps the tree staged.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_medium_21.mp4",
+        "poster": "media/images/undo_medium_21-frame.png",
+        "figure": "media/images/undo_medium_21.png"
+      }
+    },
+    {
+      "id": "undo_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --soft HEAD~1\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\n`git reset --mixed HEAD~1` (default)...",
+      "choices": [
+        "Moves HEAD and resets the index; working tree edits remain",
+        "Deletes .git",
+        "Force-pushes",
+        "Tags HEAD"
+      ],
+      "answer": 0,
+      "explain": "Mixed unstages the undone commit's tree.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_medium_22.mp4",
+        "poster": "media/images/undo_medium_22-frame.png",
+        "figure": "media/images/undo_medium_22.png"
+      }
+    },
+    {
+      "id": "undo_medium_23",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit revert --no-edit de0024bee 2>/dev/null || true\n```\n# Review context: `~/src/alpha` slot 23 variant 1\n`git reset --hard HEAD~3`...",
+      "choices": [
+        "Moves HEAD, index, and working tree to that commit",
+        "Only updates remotes",
+        "Only edits .gitignore",
+        "Creates a PR"
+      ],
+      "answer": 0,
+      "explain": "Hard reset matches all three trees.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_medium_23.mp4",
+        "poster": "media/images/undo_medium_23-frame.png",
+        "figure": "media/images/undo_medium_23.png"
+      }
+    },
+    {
+      "id": "undo_medium_24",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit restore --staged echo25.md\n```\n`git revert a0024bee` adds a new commit that undoes a0024bee, unlike reset.",
+      "answer": true,
+      "explain": "Revert is safe on shared history.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_medium_24.mp4",
+        "poster": "media/images/undo_medium_24-frame.png",
+        "figure": "media/images/undo_medium_24.png"
+      }
+    },
+    {
+      "id": "undo_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore foxtrot26.md\n```\n# Review context: `./labs/charlie` slot 25 variant 1\nTo undo a public commit on main, prefer...",
+      "choices": [
+        "git revert",
+        "git reset --hard and force-push",
+        "deleting .git",
+        "stash drop"
+      ],
+      "answer": 0,
+      "explain": "Revert does not rewrite others' clones.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_medium_25.mp4",
+        "poster": "media/images/undo_medium_25-frame.png",
+        "figure": "media/images/undo_medium_25.png"
+      }
+    },
+    {
+      "id": "undo_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --soft HEAD~1\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\n`git reset --soft HEAD~1` moves HEAD back and...",
+      "choices": [
+        "Keeps the index and working tree as they were (changes stay staged)",
+        "Deletes files on disk",
+        "Pushes origin",
+        "Drops the stash"
+      ],
+      "answer": 0,
+      "explain": "Soft reset keeps the tree staged.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_medium_26.mp4",
+        "poster": "media/images/undo_medium_26-frame.png",
+        "figure": "media/images/undo_medium_26.png"
+      }
+    },
+    {
+      "id": "undo_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit revert --no-edit ho0028bee 2>/dev/null || true\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\n`git reset --mixed HEAD~1` (default)...",
+      "choices": [
+        "Moves HEAD and resets the index; working tree edits remain",
+        "Deletes .git",
+        "Force-pushes",
+        "Tags HEAD"
+      ],
+      "answer": 0,
+      "explain": "Mixed unstages the undone commit's tree.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_medium_27.mp4",
+        "poster": "media/images/undo_medium_27-frame.png",
+        "figure": "media/images/undo_medium_27.png"
+      }
+    },
+    {
+      "id": "undo_medium_28",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore --staged india29.md\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\n`git reset --hard HEAD~2`...",
+      "choices": [
+        "Moves HEAD, index, and working tree to that commit",
+        "Only updates remotes",
+        "Only edits .gitignore",
+        "Creates a PR"
+      ],
+      "answer": 0,
+      "explain": "Hard reset matches all three trees.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_medium_28.mp4",
+        "poster": "media/images/undo_medium_28-frame.png",
+        "figure": "media/images/undo_medium_28.png"
+      }
+    },
+    {
+      "id": "undo_medium_29",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit restore juliet30.md\n```\n`git revert a0029bee` adds a new commit that undoes a0029bee, unlike reset.",
+      "answer": true,
+      "explain": "Revert is safe on shared history.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_medium_29.mp4",
+        "poster": "media/images/undo_medium_29-frame.png",
+        "figure": "media/images/undo_medium_29.png"
+      }
+    },
+    {
+      "id": "undo_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --soft HEAD~1\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\nTo undo a public commit on main, prefer...",
+      "choices": [
+        "git revert",
+        "git reset --hard and force-push",
+        "deleting .git",
+        "stash drop"
+      ],
+      "answer": 0,
+      "explain": "Revert does not rewrite others' clones.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_medium_30.mp4",
+        "poster": "media/images/undo_medium_30-frame.png",
+        "figure": "media/images/undo_medium_30.png"
+      }
+    },
+    {
+      "id": "undo_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit revert --no-edit de0004bee 2>/dev/null || true\n```\nAfter accidental `reset --hard`, recovery often uses...",
+      "choices": [
+        "git reflog then reset --hard to the old SHA",
+        "git clean -fdx only",
+        "git tag -d",
+        "git remote prune"
+      ],
+      "answer": 0,
+      "explain": "Reflog remembers the previous HEAD.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_hard_01.mp4",
+        "poster": "media/images/undo_hard_01-frame.png",
+        "figure": "media/images/undo_hard_01.png"
+      }
+    },
+    {
+      "id": "undo_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore --staged echo5.md\n```\n`ORIG_HEAD` is set by...",
+      "choices": [
+        "Dangerous moves like reset/merge to remember the prior tip",
+        "gitignore",
+        "status",
+        "blame"
+      ],
+      "answer": 0,
+      "explain": "ORIG_HEAD is a recovery ref.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_hard_02.mp4",
+        "poster": "media/images/undo_hard_02-frame.png",
+        "figure": "media/images/undo_hard_02.png"
+      }
+    },
+    {
+      "id": "undo_hard_03",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit restore foxtrot6.md\n```\n`git restore --staged --worktree notes3.md` makes the file match HEAD in both index and disk.",
+      "answer": true,
+      "explain": "Both flags restore both trees.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_hard_03.mp4",
+        "poster": "media/images/undo_hard_03-frame.png",
+        "figure": "media/images/undo_hard_03.png"
+      }
+    },
+    {
+      "id": "undo_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --soft HEAD~1\n```\n`git revert -m 1 a0004bee` on a merge undoes...",
+      "choices": [
+        "Relative to the first parent (usually mainline)",
+        "All parents equally without -m",
+        "Only tags",
+        "Only stash"
+      ],
+      "answer": 0,
+      "explain": "Merges need a mainline parent.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_hard_04.mp4",
+        "poster": "media/images/undo_hard_04-frame.png",
+        "figure": "media/images/undo_hard_04.png"
+      }
+    },
+    {
+      "id": "undo_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit revert --no-edit ho0008bee 2>/dev/null || true\n```\n`git restore --source=HEAD~3 notes5.md` checks out `notes5.md` from...",
+      "choices": [
+        "That commit's tree",
+        "origin only",
+        "The stash always",
+        "A tag message"
+      ],
+      "answer": 0,
+      "explain": "source selects the tree.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_hard_05.mp4",
+        "poster": "media/images/undo_hard_05-frame.png",
+        "figure": "media/images/undo_hard_05.png"
+      }
+    },
+    {
+      "id": "undo_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore --staged india9.md\n```\n# Review context: `/work/chip/hotel` slot 6 variant 1\nAfter accidental `reset --hard`, recovery often uses...",
+      "choices": [
+        "git reflog then reset --hard to the old SHA",
+        "git clean -fdx only",
+        "git tag -d",
+        "git remote prune"
+      ],
+      "answer": 0,
+      "explain": "Reflog remembers the previous HEAD.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_hard_06.mp4",
+        "poster": "media/images/undo_hard_06-frame.png",
+        "figure": "media/images/undo_hard_06.png"
+      }
+    },
+    {
+      "id": "undo_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore juliet10.md\n```\n# Review context: `./labs/alpha` slot 7 variant 1\n`ORIG_HEAD` is set by...",
+      "choices": [
+        "Dangerous moves like reset/merge to remember the prior tip",
+        "gitignore",
+        "status",
+        "blame"
+      ],
+      "answer": 0,
+      "explain": "ORIG_HEAD is a recovery ref.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_hard_07.mp4",
+        "poster": "media/images/undo_hard_07-frame.png",
+        "figure": "media/images/undo_hard_07.png"
+      }
+    },
+    {
+      "id": "undo_hard_08",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --soft HEAD~1\n```\n`git restore --staged --worktree notes8.md` makes the file match HEAD in both index and disk.",
+      "answer": true,
+      "explain": "Both flags restore both trees.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_hard_08.mp4",
+        "poster": "media/images/undo_hard_08-frame.png",
+        "figure": "media/images/undo_hard_08.png"
+      }
+    },
+    {
+      "id": "undo_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit revert --no-edit br0012bee 2>/dev/null || true\n```\n`git revert -m 1 a0009bee` on a merge undoes...",
+      "choices": [
+        "Relative to the first parent (usually mainline)",
+        "All parents equally without -m",
+        "Only tags",
+        "Only stash"
+      ],
+      "answer": 0,
+      "explain": "Merges need a mainline parent.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_hard_09.mp4",
+        "poster": "media/images/undo_hard_09-frame.png",
+        "figure": "media/images/undo_hard_09.png"
+      }
+    },
+    {
+      "id": "undo_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore --staged charlie13.md\n```\n`git restore --source=HEAD~2 notes10.md` checks out `notes10.md` from...",
+      "choices": [
+        "That commit's tree",
+        "origin only",
+        "The stash always",
+        "A tag message"
+      ],
+      "answer": 0,
+      "explain": "source selects the tree.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_hard_10.mp4",
+        "poster": "media/images/undo_hard_10-frame.png",
+        "figure": "media/images/undo_hard_10.png"
+      }
+    },
+    {
+      "id": "undo_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore delta14.md\n```\n# Review context: `~/src/echo` slot 11 variant 1\nAfter accidental `reset --hard`, recovery often uses...",
+      "choices": [
+        "git reflog then reset --hard to the old SHA",
+        "git clean -fdx only",
+        "git tag -d",
+        "git remote prune"
+      ],
+      "answer": 0,
+      "explain": "Reflog remembers the previous HEAD.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_hard_11.mp4",
+        "poster": "media/images/undo_hard_11-frame.png",
+        "figure": "media/images/undo_hard_11.png"
+      }
+    },
+    {
+      "id": "undo_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --soft HEAD~1\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\n`ORIG_HEAD` is set by...",
+      "choices": [
+        "Dangerous moves like reset/merge to remember the prior tip",
+        "gitignore",
+        "status",
+        "blame"
+      ],
+      "answer": 0,
+      "explain": "ORIG_HEAD is a recovery ref.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_hard_12.mp4",
+        "poster": "media/images/undo_hard_12-frame.png",
+        "figure": "media/images/undo_hard_12.png"
+      }
+    },
+    {
+      "id": "undo_hard_13",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit revert --no-edit fo0016bee 2>/dev/null || true\n```\n`git restore --staged --worktree notes13.md` makes the file match HEAD in both index and disk.",
+      "answer": true,
+      "explain": "Both flags restore both trees.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_hard_13.mp4",
+        "poster": "media/images/undo_hard_13-frame.png",
+        "figure": "media/images/undo_hard_13.png"
+      }
+    },
+    {
+      "id": "undo_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore --staged golf17.md\n```\n`git revert -m 1 a0014bee` on a merge undoes...",
+      "choices": [
+        "Relative to the first parent (usually mainline)",
+        "All parents equally without -m",
+        "Only tags",
+        "Only stash"
+      ],
+      "answer": 0,
+      "explain": "Merges need a mainline parent.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_hard_14.mp4",
+        "poster": "media/images/undo_hard_14-frame.png",
+        "figure": "media/images/undo_hard_14.png"
+      }
+    },
+    {
+      "id": "undo_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore hotel18.md\n```\n`git restore --source=HEAD~1 notes15.md` checks out `notes15.md` from...",
+      "choices": [
+        "That commit's tree",
+        "origin only",
+        "The stash always",
+        "A tag message"
+      ],
+      "answer": 0,
+      "explain": "source selects the tree.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_hard_15.mp4",
+        "poster": "media/images/undo_hard_15-frame.png",
+        "figure": "media/images/undo_hard_15.png"
+      }
+    },
+    {
+      "id": "undo_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --soft HEAD~1\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\nAfter accidental `reset --hard`, recovery often uses...",
+      "choices": [
+        "git reflog then reset --hard to the old SHA",
+        "git clean -fdx only",
+        "git tag -d",
+        "git remote prune"
+      ],
+      "answer": 0,
+      "explain": "Reflog remembers the previous HEAD.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_hard_16.mp4",
+        "poster": "media/images/undo_hard_16-frame.png",
+        "figure": "media/images/undo_hard_16.png"
+      }
+    },
+    {
+      "id": "undo_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit revert --no-edit ju0020bee 2>/dev/null || true\n```\n# Review context: `~/src/charlie` slot 17 variant 1\n`ORIG_HEAD` is set by...",
+      "choices": [
+        "Dangerous moves like reset/merge to remember the prior tip",
+        "gitignore",
+        "status",
+        "blame"
+      ],
+      "answer": 0,
+      "explain": "ORIG_HEAD is a recovery ref.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_hard_17.mp4",
+        "poster": "media/images/undo_hard_17-frame.png",
+        "figure": "media/images/undo_hard_17.png"
+      }
+    },
+    {
+      "id": "undo_hard_18",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit restore --staged alpha21.md\n```\n`git restore --staged --worktree notes18.md` makes the file match HEAD in both index and disk.",
+      "answer": true,
+      "explain": "Both flags restore both trees.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_hard_18.mp4",
+        "poster": "media/images/undo_hard_18-frame.png",
+        "figure": "media/images/undo_hard_18.png"
+      }
+    },
+    {
+      "id": "undo_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore bravo22.md\n```\n`git revert -m 1 a0019bee` on a merge undoes...",
+      "choices": [
+        "Relative to the first parent (usually mainline)",
+        "All parents equally without -m",
+        "Only tags",
+        "Only stash"
+      ],
+      "answer": 0,
+      "explain": "Merges need a mainline parent.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_hard_19.mp4",
+        "poster": "media/images/undo_hard_19-frame.png",
+        "figure": "media/images/undo_hard_19.png"
+      }
+    },
+    {
+      "id": "undo_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --soft HEAD~1\n```\n`git restore --source=HEAD~3 notes20.md` checks out `notes20.md` from...",
+      "choices": [
+        "That commit's tree",
+        "origin only",
+        "The stash always",
+        "A tag message"
+      ],
+      "answer": 0,
+      "explain": "source selects the tree.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_hard_20.mp4",
+        "poster": "media/images/undo_hard_20-frame.png",
+        "figure": "media/images/undo_hard_20.png"
+      }
+    },
+    {
+      "id": "undo_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit revert --no-edit de0024bee 2>/dev/null || true\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\nAfter accidental `reset --hard`, recovery often uses...",
+      "choices": [
+        "git reflog then reset --hard to the old SHA",
+        "git clean -fdx only",
+        "git tag -d",
+        "git remote prune"
+      ],
+      "answer": 0,
+      "explain": "Reflog remembers the previous HEAD.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_hard_21.mp4",
+        "poster": "media/images/undo_hard_21-frame.png",
+        "figure": "media/images/undo_hard_21.png"
+      }
+    },
+    {
+      "id": "undo_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore --staged echo25.md\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\n`ORIG_HEAD` is set by...",
+      "choices": [
+        "Dangerous moves like reset/merge to remember the prior tip",
+        "gitignore",
+        "status",
+        "blame"
+      ],
+      "answer": 0,
+      "explain": "ORIG_HEAD is a recovery ref.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_hard_22.mp4",
+        "poster": "media/images/undo_hard_22-frame.png",
+        "figure": "media/images/undo_hard_22.png"
+      }
+    },
+    {
+      "id": "undo_hard_23",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit restore foxtrot26.md\n```\n`git restore --staged --worktree notes23.md` makes the file match HEAD in both index and disk.",
+      "answer": true,
+      "explain": "Both flags restore both trees.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_hard_23.mp4",
+        "poster": "media/images/undo_hard_23-frame.png",
+        "figure": "media/images/undo_hard_23.png"
+      }
+    },
+    {
+      "id": "undo_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --soft HEAD~1\n```\n`git revert -m 1 a0024bee` on a merge undoes...",
+      "choices": [
+        "Relative to the first parent (usually mainline)",
+        "All parents equally without -m",
+        "Only tags",
+        "Only stash"
+      ],
+      "answer": 0,
+      "explain": "Merges need a mainline parent.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_hard_24.mp4",
+        "poster": "media/images/undo_hard_24-frame.png",
+        "figure": "media/images/undo_hard_24.png"
+      }
+    },
+    {
+      "id": "undo_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit revert --no-edit ho0028bee 2>/dev/null || true\n```\n`git restore --source=HEAD~2 notes25.md` checks out `notes25.md` from...",
+      "choices": [
+        "That commit's tree",
+        "origin only",
+        "The stash always",
+        "A tag message"
+      ],
+      "answer": 0,
+      "explain": "source selects the tree.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_hard_25.mp4",
+        "poster": "media/images/undo_hard_25-frame.png",
+        "figure": "media/images/undo_hard_25.png"
+      }
+    },
+    {
+      "id": "undo_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore --staged india29.md\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\nAfter accidental `reset --hard`, recovery often uses...",
+      "choices": [
+        "git reflog then reset --hard to the old SHA",
+        "git clean -fdx only",
+        "git tag -d",
+        "git remote prune"
+      ],
+      "answer": 0,
+      "explain": "Reflog remembers the previous HEAD.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_hard_26.mp4",
+        "poster": "media/images/undo_hard_26-frame.png",
+        "figure": "media/images/undo_hard_26.png"
+      }
+    },
+    {
+      "id": "undo_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore juliet30.md\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\n`ORIG_HEAD` is set by...",
+      "choices": [
+        "Dangerous moves like reset/merge to remember the prior tip",
+        "gitignore",
+        "status",
+        "blame"
+      ],
+      "answer": 0,
+      "explain": "ORIG_HEAD is a recovery ref.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_hard_27.mp4",
+        "poster": "media/images/undo_hard_27-frame.png",
+        "figure": "media/images/undo_hard_27.png"
+      }
+    },
+    {
+      "id": "undo_hard_28",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit reset --soft HEAD~1\n```\n`git restore --staged --worktree notes28.md` makes the file match HEAD in both index and disk.",
+      "answer": true,
+      "explain": "Both flags restore both trees.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_hard_28.mp4",
+        "poster": "media/images/undo_hard_28-frame.png",
+        "figure": "media/images/undo_hard_28.png"
+      }
+    },
+    {
+      "id": "undo_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit revert --no-edit br0032bee 2>/dev/null || true\n```\n`git revert -m 1 a0029bee` on a merge undoes...",
+      "choices": [
+        "Relative to the first parent (usually mainline)",
+        "All parents equally without -m",
+        "Only tags",
+        "Only stash"
+      ],
+      "answer": 0,
+      "explain": "Merges need a mainline parent.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_hard_29.mp4",
+        "poster": "media/images/undo_hard_29-frame.png",
+        "figure": "media/images/undo_hard_29.png"
+      }
+    },
+    {
+      "id": "undo_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit restore --staged charlie33.md\n```\n`git restore --source=HEAD~1 notes30.md` checks out `notes30.md` from...",
+      "choices": [
+        "That commit's tree",
+        "origin only",
+        "The stash always",
+        "A tag message"
+      ],
+      "answer": 0,
+      "explain": "source selects the tree.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/undo_hard_30.mp4",
+        "poster": "media/images/undo_hard_30-frame.png",
+        "figure": "media/images/undo_hard_30.png"
+      }
+    }
+  ]
+}
