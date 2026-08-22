@@ -1,0 +1,1692 @@
+{
+  "module": "module09-branch-strategy",
+  "title": "Branch naming",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -vv\n```\nA good feature branch name often looks like...",
+      "choices": [
+        "feature/alu-mul",
+        "My Feature Branch",
+        "random WIP",
+        "main-backup-copy-2"
+      ],
+      "answer": 0,
+      "explain": "Use a typed prefix plus a short kebab-case slug: feature/alu-mul.",
+      "difficulty": "easy",
+      "id": "br_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_easy_01.mp4",
+        "poster": "media/images/br_easy_01-frame.png",
+        "figure": "media/images/br_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -\n```\ngit checkout -b feature/readme-update mainly...",
+      "choices": [
+        "Deletes all commit history",
+        "Creates the branch and switches to it",
+        "Force-pushes to origin",
+        "Ignores .gitignore rules"
+      ],
+      "answer": 1,
+      "explain": "checkout -b creates a new branch at the current commit and moves HEAD there.",
+      "difficulty": "easy",
+      "id": "br_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_easy_02.mp4",
+        "poster": "media/images/br_easy_02-frame.png",
+        "figure": "media/images/br_easy_02.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -d feature/delta4 2>/dev/null || git branch -D feature/delta4\n```\nWork committed on a feature branch stays off main until you merge or cherry-pick it.",
+      "answer": true,
+      "explain": "Branches isolate commits; main only gains them after integration.",
+      "difficulty": "easy",
+      "id": "br_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_easy_03.mp4",
+        "poster": "media/images/br_easy_03-frame.png",
+        "figure": "media/images/br_easy_03.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/echo5\n```\nBefore creating a branch for shared coursework, you should...",
+      "choices": [
+        "Branch from any random local tip without fetching",
+        "Update main from the remote, then branch from that tip",
+        "Delete .git first",
+        "Never use a prefix"
+      ],
+      "answer": 1,
+      "explain": "Fetch/pull so main is current, then branch from that updated tip.",
+      "difficulty": "easy",
+      "id": "br_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_easy_04.mp4",
+        "poster": "media/images/br_easy_04-frame.png",
+        "figure": "media/images/br_easy_04.png"
+      }
+    },
+    {
+      "id": "br_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -vv\n```\nA good feature branch name often looks like...",
+      "choices": [
+        "feature/lab5",
+        "My Feature Branch",
+        "random WIP",
+        "main-backup-copy-2"
+      ],
+      "answer": 0,
+      "explain": "Typed prefix plus kebab-case slug.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_easy_05.mp4",
+        "poster": "media/images/br_easy_05-frame.png",
+        "figure": "media/images/br_easy_05.png"
+      }
+    },
+    {
+      "id": "br_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -\n```\n`git switch -c feature/lab6` mainly...",
+      "choices": [
+        "Deletes history",
+        "Creates the branch and switches to it",
+        "Force-pushes origin",
+        "Ignores .gitignore"
+      ],
+      "answer": 1,
+      "explain": "Creates and checks out.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_easy_06.mp4",
+        "poster": "media/images/br_easy_06-frame.png",
+        "figure": "media/images/br_easy_06.png"
+      }
+    },
+    {
+      "id": "br_easy_07",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -d feature/hotel8 2>/dev/null || git branch -D feature/hotel8\n```\nWork committed on `feature/lab7` stays off main until you merge or cherry-pick it.",
+      "answer": true,
+      "explain": "Branches isolate commits.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_easy_07.mp4",
+        "poster": "media/images/br_easy_07-frame.png",
+        "figure": "media/images/br_easy_07.png"
+      }
+    },
+    {
+      "id": "br_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/india9\n```\nBefore creating a branch for shared coursework, you should...",
+      "choices": [
+        "Branch from any random tip without fetching",
+        "Update main from the remote, then branch from that tip",
+        "Delete .git",
+        "Never use a prefix"
+      ],
+      "answer": 1,
+      "explain": "Start from current main.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_easy_08.mp4",
+        "poster": "media/images/br_easy_08-frame.png",
+        "figure": "media/images/br_easy_08.png"
+      }
+    },
+    {
+      "id": "br_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -vv\n```\n`git branch` lists...",
+      "choices": [
+        "Local branches",
+        "Only tags",
+        "Only remotes",
+        "Ignored files"
+      ],
+      "answer": 0,
+      "explain": "branch lists local refs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_easy_09.mp4",
+        "poster": "media/images/br_easy_09-frame.png",
+        "figure": "media/images/br_easy_09.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\nA good feature branch name often looks like...",
+      "choices": [
+        "feature/alu-mul",
+        "My Feature Branch",
+        "random WIP",
+        "main-backup-copy-2"
+      ],
+      "answer": 0,
+      "explain": "Use a typed prefix plus a short kebab-case slug: feature/alu-mul.",
+      "difficulty": "easy",
+      "id": "br_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_easy_10.mp4",
+        "poster": "media/images/br_easy_10-frame.png",
+        "figure": "media/images/br_easy_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -d feature/bravo12 2>/dev/null || git branch -D feature/bravo12\n```\n# Review context: `~/src/echo` slot 11 variant 1\ngit checkout -b feature/readme-update mainly...",
+      "choices": [
+        "Deletes all commit history",
+        "Creates the branch and switches to it",
+        "Force-pushes to origin",
+        "Ignores .gitignore rules"
+      ],
+      "answer": 1,
+      "explain": "checkout -b creates a new branch at the current commit and moves HEAD there.",
+      "difficulty": "easy",
+      "id": "br_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_easy_11.mp4",
+        "poster": "media/images/br_easy_11-frame.png",
+        "figure": "media/images/br_easy_11.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/charlie13\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\nWork committed on a feature branch stays off main until you merge or cherry-pick it.",
+      "answer": true,
+      "explain": "Branches isolate commits; main only gains them after integration.",
+      "difficulty": "easy",
+      "id": "br_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_easy_12.mp4",
+        "poster": "media/images/br_easy_12-frame.png",
+        "figure": "media/images/br_easy_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -vv\n```\n# Review context: `./labs/golf` slot 13 variant 1\nBefore creating a branch for shared coursework, you should...",
+      "choices": [
+        "Branch from any random local tip without fetching",
+        "Update main from the remote, then branch from that tip",
+        "Delete .git first",
+        "Never use a prefix"
+      ],
+      "answer": 1,
+      "explain": "Fetch/pull so main is current, then branch from that updated tip.",
+      "difficulty": "easy",
+      "id": "br_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_easy_13.mp4",
+        "poster": "media/images/br_easy_13-frame.png",
+        "figure": "media/images/br_easy_13.png"
+      }
+    },
+    {
+      "id": "br_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -\n```\nA good feature branch name often looks like...",
+      "choices": [
+        "feature/lab14",
+        "My Feature Branch",
+        "random WIP",
+        "main-backup-copy-2"
+      ],
+      "answer": 0,
+      "explain": "Typed prefix plus kebab-case slug.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_easy_14.mp4",
+        "poster": "media/images/br_easy_14-frame.png",
+        "figure": "media/images/br_easy_14.png"
+      }
+    },
+    {
+      "id": "br_easy_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -d feature/foxtrot16 2>/dev/null || git branch -D feature/foxtrot16\n```\n`git switch -c feature/lab15` mainly...",
+      "choices": [
+        "Deletes history",
+        "Creates the branch and switches to it",
+        "Force-pushes origin",
+        "Ignores .gitignore"
+      ],
+      "answer": 1,
+      "explain": "Creates and checks out.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_easy_15.mp4",
+        "poster": "media/images/br_easy_15-frame.png",
+        "figure": "media/images/br_easy_15.png"
+      }
+    },
+    {
+      "id": "br_easy_16",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/golf17\n```\nWork committed on `feature/lab16` stays off main until you merge or cherry-pick it.",
+      "answer": true,
+      "explain": "Branches isolate commits.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_easy_16.mp4",
+        "poster": "media/images/br_easy_16-frame.png",
+        "figure": "media/images/br_easy_16.png"
+      }
+    },
+    {
+      "id": "br_easy_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -vv\n```\n# Review context: `~/src/charlie` slot 17 variant 1\nBefore creating a branch for shared coursework, you should...",
+      "choices": [
+        "Branch from any random tip without fetching",
+        "Update main from the remote, then branch from that tip",
+        "Delete .git",
+        "Never use a prefix"
+      ],
+      "answer": 1,
+      "explain": "Start from current main.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_easy_17.mp4",
+        "poster": "media/images/br_easy_17-frame.png",
+        "figure": "media/images/br_easy_17.png"
+      }
+    },
+    {
+      "id": "br_easy_18",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\n`git branch` lists...",
+      "choices": [
+        "Local branches",
+        "Only tags",
+        "Only remotes",
+        "Ignored files"
+      ],
+      "answer": 0,
+      "explain": "branch lists local refs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_easy_18.mp4",
+        "poster": "media/images/br_easy_18-frame.png",
+        "figure": "media/images/br_easy_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -d feature/juliet20 2>/dev/null || git branch -D feature/juliet20\n```\n# Review context: `./labs/echo` slot 19 variant 1\nA good feature branch name often looks like...",
+      "choices": [
+        "feature/alu-mul",
+        "My Feature Branch",
+        "random WIP",
+        "main-backup-copy-2"
+      ],
+      "answer": 0,
+      "explain": "Use a typed prefix plus a short kebab-case slug: feature/alu-mul.",
+      "difficulty": "easy",
+      "id": "br_easy_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_easy_19.mp4",
+        "poster": "media/images/br_easy_19-frame.png",
+        "figure": "media/images/br_easy_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/alpha21\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\ngit checkout -b feature/readme-update mainly...",
+      "choices": [
+        "Deletes all commit history",
+        "Creates the branch and switches to it",
+        "Force-pushes to origin",
+        "Ignores .gitignore rules"
+      ],
+      "answer": 1,
+      "explain": "checkout -b creates a new branch at the current commit and moves HEAD there.",
+      "difficulty": "easy",
+      "id": "br_easy_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_easy_20.mp4",
+        "poster": "media/images/br_easy_20-frame.png",
+        "figure": "media/images/br_easy_20.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -vv\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\nWork committed on a feature branch stays off main until you merge or cherry-pick it.",
+      "answer": true,
+      "explain": "Branches isolate commits; main only gains them after integration.",
+      "difficulty": "easy",
+      "id": "br_easy_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_easy_21.mp4",
+        "poster": "media/images/br_easy_21-frame.png",
+        "figure": "media/images/br_easy_21.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\nBefore creating a branch for shared coursework, you should...",
+      "choices": [
+        "Branch from any random local tip without fetching",
+        "Update main from the remote, then branch from that tip",
+        "Delete .git first",
+        "Never use a prefix"
+      ],
+      "answer": 1,
+      "explain": "Fetch/pull so main is current, then branch from that updated tip.",
+      "difficulty": "easy",
+      "id": "br_easy_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_easy_22.mp4",
+        "poster": "media/images/br_easy_22-frame.png",
+        "figure": "media/images/br_easy_22.png"
+      }
+    },
+    {
+      "id": "br_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -d feature/delta24 2>/dev/null || git branch -D feature/delta24\n```\nA good feature branch name often looks like...",
+      "choices": [
+        "feature/lab23",
+        "My Feature Branch",
+        "random WIP",
+        "main-backup-copy-2"
+      ],
+      "answer": 0,
+      "explain": "Typed prefix plus kebab-case slug.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_easy_23.mp4",
+        "poster": "media/images/br_easy_23-frame.png",
+        "figure": "media/images/br_easy_23.png"
+      }
+    },
+    {
+      "id": "br_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/echo25\n```\n`git switch -c feature/lab24` mainly...",
+      "choices": [
+        "Deletes history",
+        "Creates the branch and switches to it",
+        "Force-pushes origin",
+        "Ignores .gitignore"
+      ],
+      "answer": 1,
+      "explain": "Creates and checks out.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_easy_24.mp4",
+        "poster": "media/images/br_easy_24-frame.png",
+        "figure": "media/images/br_easy_24.png"
+      }
+    },
+    {
+      "id": "br_easy_25",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -vv\n```\nWork committed on `feature/lab25` stays off main until you merge or cherry-pick it.",
+      "answer": true,
+      "explain": "Branches isolate commits.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_easy_25.mp4",
+        "poster": "media/images/br_easy_25-frame.png",
+        "figure": "media/images/br_easy_25.png"
+      }
+    },
+    {
+      "id": "br_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\nBefore creating a branch for shared coursework, you should...",
+      "choices": [
+        "Branch from any random tip without fetching",
+        "Update main from the remote, then branch from that tip",
+        "Delete .git",
+        "Never use a prefix"
+      ],
+      "answer": 1,
+      "explain": "Start from current main.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_easy_26.mp4",
+        "poster": "media/images/br_easy_26-frame.png",
+        "figure": "media/images/br_easy_26.png"
+      }
+    },
+    {
+      "id": "br_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -d feature/hotel28 2>/dev/null || git branch -D feature/hotel28\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\n`git branch` lists...",
+      "choices": [
+        "Local branches",
+        "Only tags",
+        "Only remotes",
+        "Ignored files"
+      ],
+      "answer": 0,
+      "explain": "branch lists local refs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_easy_27.mp4",
+        "poster": "media/images/br_easy_27-frame.png",
+        "figure": "media/images/br_easy_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/india29\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\nA good feature branch name often looks like...",
+      "choices": [
+        "feature/alu-mul",
+        "My Feature Branch",
+        "random WIP",
+        "main-backup-copy-2"
+      ],
+      "answer": 0,
+      "explain": "Use a typed prefix plus a short kebab-case slug: feature/alu-mul.",
+      "difficulty": "easy",
+      "id": "br_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_easy_28.mp4",
+        "poster": "media/images/br_easy_28-frame.png",
+        "figure": "media/images/br_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -vv\n```\n# Review context: `~/src/golf` slot 29 variant 1\ngit checkout -b feature/readme-update mainly...",
+      "choices": [
+        "Deletes all commit history",
+        "Creates the branch and switches to it",
+        "Force-pushes to origin",
+        "Ignores .gitignore rules"
+      ],
+      "answer": 1,
+      "explain": "checkout -b creates a new branch at the current commit and moves HEAD there.",
+      "difficulty": "easy",
+      "id": "br_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_easy_29.mp4",
+        "poster": "media/images/br_easy_29-frame.png",
+        "figure": "media/images/br_easy_29.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\nWork committed on a feature branch stays off main until you merge or cherry-pick it.",
+      "answer": true,
+      "explain": "Branches isolate commits; main only gains them after integration.",
+      "difficulty": "easy",
+      "id": "br_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_easy_30.mp4",
+        "poster": "media/images/br_easy_30-frame.png",
+        "figure": "media/images/br_easy_30.png"
+      }
+    },
+    {
+      "id": "br_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -vv\n```\n`git branch -d feature/lab1` deletes a branch only if...",
+      "choices": [
+        "It is fully merged (safe delete)",
+        "It has never been fetched",
+        "It is origin/main",
+        "It is a tag"
+      ],
+      "answer": 0,
+      "explain": "-d is safe; -D forces.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_medium_01.mp4",
+        "poster": "media/images/br_medium_01-frame.png",
+        "figure": "media/images/br_medium_01.png"
+      }
+    },
+    {
+      "id": "br_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -\n```\n`git branch -vv` shows...",
+      "choices": [
+        "Upstream tracking and ahead/behind",
+        "Only ignore rules",
+        "Stash",
+        "Bisect"
+      ],
+      "answer": 0,
+      "explain": "Verbose tracking.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_medium_02.mp4",
+        "poster": "media/images/br_medium_02-frame.png",
+        "figure": "media/images/br_medium_02.png"
+      }
+    },
+    {
+      "id": "br_medium_03",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -d feature/delta4 2>/dev/null || git branch -D feature/delta4\n```\n`git merge feature/lab3` while on main...",
+      "choices": [
+        "Integrates feature/lab3 into main",
+        "Deletes feature/lab3 always",
+        "Pushes tags",
+        "Starts bisect"
+      ],
+      "answer": 0,
+      "explain": "Merge joins into the current branch.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_medium_03.mp4",
+        "poster": "media/images/br_medium_03-frame.png",
+        "figure": "media/images/br_medium_03.png"
+      }
+    },
+    {
+      "id": "br_medium_04",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/echo5\n```\n`git branch -u origin/lab4 feature/lab4` sets upstream tracking.",
+      "answer": true,
+      "explain": "-u records upstream.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_medium_04.mp4",
+        "poster": "media/images/br_medium_04-frame.png",
+        "figure": "media/images/br_medium_04.png"
+      }
+    },
+    {
+      "id": "br_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -vv\n```\n`git switch -` checks out...",
+      "choices": [
+        "The previous branch",
+        "origin always",
+        "A new tag",
+        "The stash"
+      ],
+      "answer": 0,
+      "explain": "Dash is previous checkout.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_medium_05.mp4",
+        "poster": "media/images/br_medium_05-frame.png",
+        "figure": "media/images/br_medium_05.png"
+      }
+    },
+    {
+      "id": "br_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -\n```\n`git branch -d feature/lab6` deletes a branch only if...",
+      "choices": [
+        "It is fully merged (safe delete)",
+        "It has never been fetched",
+        "It is origin/main",
+        "It is a tag"
+      ],
+      "answer": 0,
+      "explain": "-d is safe; -D forces.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_medium_06.mp4",
+        "poster": "media/images/br_medium_06-frame.png",
+        "figure": "media/images/br_medium_06.png"
+      }
+    },
+    {
+      "id": "br_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -d feature/hotel8 2>/dev/null || git branch -D feature/hotel8\n```\n# Review context: `./labs/alpha` slot 7 variant 1\n`git branch -vv` shows...",
+      "choices": [
+        "Upstream tracking and ahead/behind",
+        "Only ignore rules",
+        "Stash",
+        "Bisect"
+      ],
+      "answer": 0,
+      "explain": "Verbose tracking.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_medium_07.mp4",
+        "poster": "media/images/br_medium_07-frame.png",
+        "figure": "media/images/br_medium_07.png"
+      }
+    },
+    {
+      "id": "br_medium_08",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/india9\n```\n`git merge feature/lab8` while on main...",
+      "choices": [
+        "Integrates feature/lab8 into main",
+        "Deletes feature/lab8 always",
+        "Pushes tags",
+        "Starts bisect"
+      ],
+      "answer": 0,
+      "explain": "Merge joins into the current branch.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_medium_08.mp4",
+        "poster": "media/images/br_medium_08-frame.png",
+        "figure": "media/images/br_medium_08.png"
+      }
+    },
+    {
+      "id": "br_medium_09",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -vv\n```\n`git branch -u origin/lab9 feature/lab9` sets upstream tracking.",
+      "answer": true,
+      "explain": "-u records upstream.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_medium_09.mp4",
+        "poster": "media/images/br_medium_09-frame.png",
+        "figure": "media/images/br_medium_09.png"
+      }
+    },
+    {
+      "id": "br_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\n`git switch -` checks out...",
+      "choices": [
+        "The previous branch",
+        "origin always",
+        "A new tag",
+        "The stash"
+      ],
+      "answer": 0,
+      "explain": "Dash is previous checkout.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_medium_10.mp4",
+        "poster": "media/images/br_medium_10-frame.png",
+        "figure": "media/images/br_medium_10.png"
+      }
+    },
+    {
+      "id": "br_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -d feature/bravo12 2>/dev/null || git branch -D feature/bravo12\n```\n`git branch -d feature/lab11` deletes a branch only if...",
+      "choices": [
+        "It is fully merged (safe delete)",
+        "It has never been fetched",
+        "It is origin/main",
+        "It is a tag"
+      ],
+      "answer": 0,
+      "explain": "-d is safe; -D forces.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_medium_11.mp4",
+        "poster": "media/images/br_medium_11-frame.png",
+        "figure": "media/images/br_medium_11.png"
+      }
+    },
+    {
+      "id": "br_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/charlie13\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\n`git branch -vv` shows...",
+      "choices": [
+        "Upstream tracking and ahead/behind",
+        "Only ignore rules",
+        "Stash",
+        "Bisect"
+      ],
+      "answer": 0,
+      "explain": "Verbose tracking.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_medium_12.mp4",
+        "poster": "media/images/br_medium_12-frame.png",
+        "figure": "media/images/br_medium_12.png"
+      }
+    },
+    {
+      "id": "br_medium_13",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -vv\n```\n`git merge feature/lab13` while on main...",
+      "choices": [
+        "Integrates feature/lab13 into main",
+        "Deletes feature/lab13 always",
+        "Pushes tags",
+        "Starts bisect"
+      ],
+      "answer": 0,
+      "explain": "Merge joins into the current branch.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_medium_13.mp4",
+        "poster": "media/images/br_medium_13-frame.png",
+        "figure": "media/images/br_medium_13.png"
+      }
+    },
+    {
+      "id": "br_medium_14",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -\n```\n`git branch -u origin/lab14 feature/lab14` sets upstream tracking.",
+      "answer": true,
+      "explain": "-u records upstream.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_medium_14.mp4",
+        "poster": "media/images/br_medium_14-frame.png",
+        "figure": "media/images/br_medium_14.png"
+      }
+    },
+    {
+      "id": "br_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -d feature/foxtrot16 2>/dev/null || git branch -D feature/foxtrot16\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\n`git switch -` checks out...",
+      "choices": [
+        "The previous branch",
+        "origin always",
+        "A new tag",
+        "The stash"
+      ],
+      "answer": 0,
+      "explain": "Dash is previous checkout.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_medium_15.mp4",
+        "poster": "media/images/br_medium_15-frame.png",
+        "figure": "media/images/br_medium_15.png"
+      }
+    },
+    {
+      "id": "br_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/golf17\n```\n`git branch -d feature/lab16` deletes a branch only if...",
+      "choices": [
+        "It is fully merged (safe delete)",
+        "It has never been fetched",
+        "It is origin/main",
+        "It is a tag"
+      ],
+      "answer": 0,
+      "explain": "-d is safe; -D forces.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_medium_16.mp4",
+        "poster": "media/images/br_medium_16-frame.png",
+        "figure": "media/images/br_medium_16.png"
+      }
+    },
+    {
+      "id": "br_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -vv\n```\n# Review context: `~/src/charlie` slot 17 variant 1\n`git branch -vv` shows...",
+      "choices": [
+        "Upstream tracking and ahead/behind",
+        "Only ignore rules",
+        "Stash",
+        "Bisect"
+      ],
+      "answer": 0,
+      "explain": "Verbose tracking.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_medium_17.mp4",
+        "poster": "media/images/br_medium_17-frame.png",
+        "figure": "media/images/br_medium_17.png"
+      }
+    },
+    {
+      "id": "br_medium_18",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -\n```\n`git merge feature/lab18` while on main...",
+      "choices": [
+        "Integrates feature/lab18 into main",
+        "Deletes feature/lab18 always",
+        "Pushes tags",
+        "Starts bisect"
+      ],
+      "answer": 0,
+      "explain": "Merge joins into the current branch.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_medium_18.mp4",
+        "poster": "media/images/br_medium_18-frame.png",
+        "figure": "media/images/br_medium_18.png"
+      }
+    },
+    {
+      "id": "br_medium_19",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -d feature/juliet20 2>/dev/null || git branch -D feature/juliet20\n```\n`git branch -u origin/lab19 feature/lab19` sets upstream tracking.",
+      "answer": true,
+      "explain": "-u records upstream.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_medium_19.mp4",
+        "poster": "media/images/br_medium_19-frame.png",
+        "figure": "media/images/br_medium_19.png"
+      }
+    },
+    {
+      "id": "br_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/alpha21\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\n`git switch -` checks out...",
+      "choices": [
+        "The previous branch",
+        "origin always",
+        "A new tag",
+        "The stash"
+      ],
+      "answer": 0,
+      "explain": "Dash is previous checkout.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_medium_20.mp4",
+        "poster": "media/images/br_medium_20-frame.png",
+        "figure": "media/images/br_medium_20.png"
+      }
+    },
+    {
+      "id": "br_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -vv\n```\n`git branch -d feature/lab21` deletes a branch only if...",
+      "choices": [
+        "It is fully merged (safe delete)",
+        "It has never been fetched",
+        "It is origin/main",
+        "It is a tag"
+      ],
+      "answer": 0,
+      "explain": "-d is safe; -D forces.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_medium_21.mp4",
+        "poster": "media/images/br_medium_21-frame.png",
+        "figure": "media/images/br_medium_21.png"
+      }
+    },
+    {
+      "id": "br_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\n`git branch -vv` shows...",
+      "choices": [
+        "Upstream tracking and ahead/behind",
+        "Only ignore rules",
+        "Stash",
+        "Bisect"
+      ],
+      "answer": 0,
+      "explain": "Verbose tracking.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_medium_22.mp4",
+        "poster": "media/images/br_medium_22-frame.png",
+        "figure": "media/images/br_medium_22.png"
+      }
+    },
+    {
+      "id": "br_medium_23",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -d feature/delta24 2>/dev/null || git branch -D feature/delta24\n```\n`git merge feature/lab23` while on main...",
+      "choices": [
+        "Integrates feature/lab23 into main",
+        "Deletes feature/lab23 always",
+        "Pushes tags",
+        "Starts bisect"
+      ],
+      "answer": 0,
+      "explain": "Merge joins into the current branch.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_medium_23.mp4",
+        "poster": "media/images/br_medium_23-frame.png",
+        "figure": "media/images/br_medium_23.png"
+      }
+    },
+    {
+      "id": "br_medium_24",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/echo25\n```\n`git branch -u origin/lab24 feature/lab24` sets upstream tracking.",
+      "answer": true,
+      "explain": "-u records upstream.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_medium_24.mp4",
+        "poster": "media/images/br_medium_24-frame.png",
+        "figure": "media/images/br_medium_24.png"
+      }
+    },
+    {
+      "id": "br_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -vv\n```\n# Review context: `./labs/charlie` slot 25 variant 1\n`git switch -` checks out...",
+      "choices": [
+        "The previous branch",
+        "origin always",
+        "A new tag",
+        "The stash"
+      ],
+      "answer": 0,
+      "explain": "Dash is previous checkout.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_medium_25.mp4",
+        "poster": "media/images/br_medium_25-frame.png",
+        "figure": "media/images/br_medium_25.png"
+      }
+    },
+    {
+      "id": "br_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -\n```\n`git branch -d feature/lab26` deletes a branch only if...",
+      "choices": [
+        "It is fully merged (safe delete)",
+        "It has never been fetched",
+        "It is origin/main",
+        "It is a tag"
+      ],
+      "answer": 0,
+      "explain": "-d is safe; -D forces.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_medium_26.mp4",
+        "poster": "media/images/br_medium_26-frame.png",
+        "figure": "media/images/br_medium_26.png"
+      }
+    },
+    {
+      "id": "br_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -d feature/hotel28 2>/dev/null || git branch -D feature/hotel28\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\n`git branch -vv` shows...",
+      "choices": [
+        "Upstream tracking and ahead/behind",
+        "Only ignore rules",
+        "Stash",
+        "Bisect"
+      ],
+      "answer": 0,
+      "explain": "Verbose tracking.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_medium_27.mp4",
+        "poster": "media/images/br_medium_27-frame.png",
+        "figure": "media/images/br_medium_27.png"
+      }
+    },
+    {
+      "id": "br_medium_28",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/india29\n```\n`git merge feature/lab28` while on main...",
+      "choices": [
+        "Integrates feature/lab28 into main",
+        "Deletes feature/lab28 always",
+        "Pushes tags",
+        "Starts bisect"
+      ],
+      "answer": 0,
+      "explain": "Merge joins into the current branch.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_medium_28.mp4",
+        "poster": "media/images/br_medium_28-frame.png",
+        "figure": "media/images/br_medium_28.png"
+      }
+    },
+    {
+      "id": "br_medium_29",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -vv\n```\n`git branch -u origin/lab29 feature/lab29` sets upstream tracking.",
+      "answer": true,
+      "explain": "-u records upstream.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_medium_29.mp4",
+        "poster": "media/images/br_medium_29-frame.png",
+        "figure": "media/images/br_medium_29.png"
+      }
+    },
+    {
+      "id": "br_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\n`git switch -` checks out...",
+      "choices": [
+        "The previous branch",
+        "origin always",
+        "A new tag",
+        "The stash"
+      ],
+      "answer": 0,
+      "explain": "Dash is previous checkout.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_medium_30.mp4",
+        "poster": "media/images/br_medium_30-frame.png",
+        "figure": "media/images/br_medium_30.png"
+      }
+    },
+    {
+      "id": "br_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -d feature/delta4 2>/dev/null || git branch -D feature/delta4\n```\n`git branch --merged main` lists...",
+      "choices": [
+        "Branches whose tips are ancestors of main",
+        "Unmerged only",
+        "Tags",
+        "Remotes only"
+      ],
+      "answer": 0,
+      "explain": "Merged-into filter.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_hard_01.mp4",
+        "poster": "media/images/br_hard_01-frame.png",
+        "figure": "media/images/br_hard_01.png"
+      }
+    },
+    {
+      "id": "br_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/echo5\n```\nWhy not commit directly on shared `main` for lab work...",
+      "choices": [
+        "Review isolation; feature branches keep experiments off the integration line",
+        "Git forbids commits on main",
+        "Status cannot run on main",
+        "Tags replace branches"
+      ],
+      "answer": 0,
+      "explain": "Branch then PR.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_hard_02.mp4",
+        "poster": "media/images/br_hard_02-frame.png",
+        "figure": "media/images/br_hard_02.png"
+      }
+    },
+    {
+      "id": "br_hard_03",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -vv\n```\n`git switch -t origin/lab3` can create a local branch tracking that remote-tracking ref.",
+      "answer": true,
+      "explain": "Convenient after fetch.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_hard_03.mp4",
+        "poster": "media/images/br_hard_03-frame.png",
+        "figure": "media/images/br_hard_03.png"
+      }
+    },
+    {
+      "id": "br_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -\n```\n`git branch -m feature/lab4` renames...",
+      "choices": [
+        "The current branch to feature/lab4",
+        "origin",
+        "A tag",
+        "The stash"
+      ],
+      "answer": 0,
+      "explain": "Rename local branch.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_hard_04.mp4",
+        "poster": "media/images/br_hard_04-frame.png",
+        "figure": "media/images/br_hard_04.png"
+      }
+    },
+    {
+      "id": "br_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -d feature/hotel8 2>/dev/null || git branch -D feature/hotel8\n```\n`git worktree add` extra checkout shares...",
+      "choices": [
+        "The same .git objects with another checkout",
+        "Nothing",
+        "Only tags",
+        "Only remotes"
+      ],
+      "answer": 0,
+      "explain": "Linked worktrees.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_hard_05.mp4",
+        "poster": "media/images/br_hard_05-frame.png",
+        "figure": "media/images/br_hard_05.png"
+      }
+    },
+    {
+      "id": "br_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/india9\n```\n# Review context: `/work/chip/hotel` slot 6 variant 1\n`git branch --merged main` lists...",
+      "choices": [
+        "Branches whose tips are ancestors of main",
+        "Unmerged only",
+        "Tags",
+        "Remotes only"
+      ],
+      "answer": 0,
+      "explain": "Merged-into filter.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_hard_06.mp4",
+        "poster": "media/images/br_hard_06-frame.png",
+        "figure": "media/images/br_hard_06.png"
+      }
+    },
+    {
+      "id": "br_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -vv\n```\n# Review context: `./labs/alpha` slot 7 variant 1\nWhy not commit directly on shared `main` for lab work...",
+      "choices": [
+        "Review isolation; feature branches keep experiments off the integration line",
+        "Git forbids commits on main",
+        "Status cannot run on main",
+        "Tags replace branches"
+      ],
+      "answer": 0,
+      "explain": "Branch then PR.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_hard_07.mp4",
+        "poster": "media/images/br_hard_07-frame.png",
+        "figure": "media/images/br_hard_07.png"
+      }
+    },
+    {
+      "id": "br_hard_08",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -\n```\n`git switch -t origin/lab8` can create a local branch tracking that remote-tracking ref.",
+      "answer": true,
+      "explain": "Convenient after fetch.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_hard_08.mp4",
+        "poster": "media/images/br_hard_08-frame.png",
+        "figure": "media/images/br_hard_08.png"
+      }
+    },
+    {
+      "id": "br_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -d feature/bravo12 2>/dev/null || git branch -D feature/bravo12\n```\n`git branch -m feature/lab9` renames...",
+      "choices": [
+        "The current branch to feature/lab9",
+        "origin",
+        "A tag",
+        "The stash"
+      ],
+      "answer": 0,
+      "explain": "Rename local branch.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_hard_09.mp4",
+        "poster": "media/images/br_hard_09-frame.png",
+        "figure": "media/images/br_hard_09.png"
+      }
+    },
+    {
+      "id": "br_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/charlie13\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\n`git worktree add` extra checkout shares...",
+      "choices": [
+        "The same .git objects with another checkout",
+        "Nothing",
+        "Only tags",
+        "Only remotes"
+      ],
+      "answer": 0,
+      "explain": "Linked worktrees.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_hard_10.mp4",
+        "poster": "media/images/br_hard_10-frame.png",
+        "figure": "media/images/br_hard_10.png"
+      }
+    },
+    {
+      "id": "br_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -vv\n```\n# Review context: `~/src/echo` slot 11 variant 1\n`git branch --merged main` lists...",
+      "choices": [
+        "Branches whose tips are ancestors of main",
+        "Unmerged only",
+        "Tags",
+        "Remotes only"
+      ],
+      "answer": 0,
+      "explain": "Merged-into filter.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_hard_11.mp4",
+        "poster": "media/images/br_hard_11-frame.png",
+        "figure": "media/images/br_hard_11.png"
+      }
+    },
+    {
+      "id": "br_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\nWhy not commit directly on shared `main` for lab work...",
+      "choices": [
+        "Review isolation; feature branches keep experiments off the integration line",
+        "Git forbids commits on main",
+        "Status cannot run on main",
+        "Tags replace branches"
+      ],
+      "answer": 0,
+      "explain": "Branch then PR.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_hard_12.mp4",
+        "poster": "media/images/br_hard_12-frame.png",
+        "figure": "media/images/br_hard_12.png"
+      }
+    },
+    {
+      "id": "br_hard_13",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -d feature/foxtrot16 2>/dev/null || git branch -D feature/foxtrot16\n```\n`git switch -t origin/lab13` can create a local branch tracking that remote-tracking ref.",
+      "answer": true,
+      "explain": "Convenient after fetch.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_hard_13.mp4",
+        "poster": "media/images/br_hard_13-frame.png",
+        "figure": "media/images/br_hard_13.png"
+      }
+    },
+    {
+      "id": "br_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/golf17\n```\n`git branch -m feature/lab14` renames...",
+      "choices": [
+        "The current branch to feature/lab14",
+        "origin",
+        "A tag",
+        "The stash"
+      ],
+      "answer": 0,
+      "explain": "Rename local branch.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_hard_14.mp4",
+        "poster": "media/images/br_hard_14-frame.png",
+        "figure": "media/images/br_hard_14.png"
+      }
+    },
+    {
+      "id": "br_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -vv\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\n`git worktree add` extra checkout shares...",
+      "choices": [
+        "The same .git objects with another checkout",
+        "Nothing",
+        "Only tags",
+        "Only remotes"
+      ],
+      "answer": 0,
+      "explain": "Linked worktrees.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_hard_15.mp4",
+        "poster": "media/images/br_hard_15-frame.png",
+        "figure": "media/images/br_hard_15.png"
+      }
+    },
+    {
+      "id": "br_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\n`git branch --merged main` lists...",
+      "choices": [
+        "Branches whose tips are ancestors of main",
+        "Unmerged only",
+        "Tags",
+        "Remotes only"
+      ],
+      "answer": 0,
+      "explain": "Merged-into filter.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_hard_16.mp4",
+        "poster": "media/images/br_hard_16-frame.png",
+        "figure": "media/images/br_hard_16.png"
+      }
+    },
+    {
+      "id": "br_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -d feature/juliet20 2>/dev/null || git branch -D feature/juliet20\n```\n# Review context: `~/src/charlie` slot 17 variant 1\nWhy not commit directly on shared `main` for lab work...",
+      "choices": [
+        "Review isolation; feature branches keep experiments off the integration line",
+        "Git forbids commits on main",
+        "Status cannot run on main",
+        "Tags replace branches"
+      ],
+      "answer": 0,
+      "explain": "Branch then PR.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_hard_17.mp4",
+        "poster": "media/images/br_hard_17-frame.png",
+        "figure": "media/images/br_hard_17.png"
+      }
+    },
+    {
+      "id": "br_hard_18",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/alpha21\n```\n`git switch -t origin/lab18` can create a local branch tracking that remote-tracking ref.",
+      "answer": true,
+      "explain": "Convenient after fetch.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_hard_18.mp4",
+        "poster": "media/images/br_hard_18-frame.png",
+        "figure": "media/images/br_hard_18.png"
+      }
+    },
+    {
+      "id": "br_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -vv\n```\n`git branch -m feature/lab19` renames...",
+      "choices": [
+        "The current branch to feature/lab19",
+        "origin",
+        "A tag",
+        "The stash"
+      ],
+      "answer": 0,
+      "explain": "Rename local branch.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_hard_19.mp4",
+        "poster": "media/images/br_hard_19-frame.png",
+        "figure": "media/images/br_hard_19.png"
+      }
+    },
+    {
+      "id": "br_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\n`git worktree add` extra checkout shares...",
+      "choices": [
+        "The same .git objects with another checkout",
+        "Nothing",
+        "Only tags",
+        "Only remotes"
+      ],
+      "answer": 0,
+      "explain": "Linked worktrees.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_hard_20.mp4",
+        "poster": "media/images/br_hard_20-frame.png",
+        "figure": "media/images/br_hard_20.png"
+      }
+    },
+    {
+      "id": "br_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -d feature/delta24 2>/dev/null || git branch -D feature/delta24\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\n`git branch --merged main` lists...",
+      "choices": [
+        "Branches whose tips are ancestors of main",
+        "Unmerged only",
+        "Tags",
+        "Remotes only"
+      ],
+      "answer": 0,
+      "explain": "Merged-into filter.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_hard_21.mp4",
+        "poster": "media/images/br_hard_21-frame.png",
+        "figure": "media/images/br_hard_21.png"
+      }
+    },
+    {
+      "id": "br_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/echo25\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\nWhy not commit directly on shared `main` for lab work...",
+      "choices": [
+        "Review isolation; feature branches keep experiments off the integration line",
+        "Git forbids commits on main",
+        "Status cannot run on main",
+        "Tags replace branches"
+      ],
+      "answer": 0,
+      "explain": "Branch then PR.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_hard_22.mp4",
+        "poster": "media/images/br_hard_22-frame.png",
+        "figure": "media/images/br_hard_22.png"
+      }
+    },
+    {
+      "id": "br_hard_23",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -vv\n```\n`git switch -t origin/lab23` can create a local branch tracking that remote-tracking ref.",
+      "answer": true,
+      "explain": "Convenient after fetch.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_hard_23.mp4",
+        "poster": "media/images/br_hard_23-frame.png",
+        "figure": "media/images/br_hard_23.png"
+      }
+    },
+    {
+      "id": "br_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -\n```\n`git branch -m feature/lab24` renames...",
+      "choices": [
+        "The current branch to feature/lab24",
+        "origin",
+        "A tag",
+        "The stash"
+      ],
+      "answer": 0,
+      "explain": "Rename local branch.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_hard_24.mp4",
+        "poster": "media/images/br_hard_24-frame.png",
+        "figure": "media/images/br_hard_24.png"
+      }
+    },
+    {
+      "id": "br_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -d feature/hotel28 2>/dev/null || git branch -D feature/hotel28\n```\n# Review context: `./labs/charlie` slot 25 variant 1\n`git worktree add` extra checkout shares...",
+      "choices": [
+        "The same .git objects with another checkout",
+        "Nothing",
+        "Only tags",
+        "Only remotes"
+      ],
+      "answer": 0,
+      "explain": "Linked worktrees.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_hard_25.mp4",
+        "poster": "media/images/br_hard_25-frame.png",
+        "figure": "media/images/br_hard_25.png"
+      }
+    },
+    {
+      "id": "br_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/india29\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\n`git branch --merged main` lists...",
+      "choices": [
+        "Branches whose tips are ancestors of main",
+        "Unmerged only",
+        "Tags",
+        "Remotes only"
+      ],
+      "answer": 0,
+      "explain": "Merged-into filter.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_hard_26.mp4",
+        "poster": "media/images/br_hard_26-frame.png",
+        "figure": "media/images/br_hard_26.png"
+      }
+    },
+    {
+      "id": "br_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -vv\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\nWhy not commit directly on shared `main` for lab work...",
+      "choices": [
+        "Review isolation; feature branches keep experiments off the integration line",
+        "Git forbids commits on main",
+        "Status cannot run on main",
+        "Tags replace branches"
+      ],
+      "answer": 0,
+      "explain": "Branch then PR.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_hard_27.mp4",
+        "poster": "media/images/br_hard_27-frame.png",
+        "figure": "media/images/br_hard_27.png"
+      }
+    },
+    {
+      "id": "br_hard_28",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -\n```\n`git switch -t origin/lab28` can create a local branch tracking that remote-tracking ref.",
+      "answer": true,
+      "explain": "Convenient after fetch.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_hard_28.mp4",
+        "poster": "media/images/br_hard_28-frame.png",
+        "figure": "media/images/br_hard_28.png"
+      }
+    },
+    {
+      "id": "br_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit branch -d feature/bravo32 2>/dev/null || git branch -D feature/bravo32\n```\n`git branch -m feature/lab29` renames...",
+      "choices": [
+        "The current branch to feature/lab29",
+        "origin",
+        "A tag",
+        "The stash"
+      ],
+      "answer": 0,
+      "explain": "Rename local branch.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_hard_29.mp4",
+        "poster": "media/images/br_hard_29-frame.png",
+        "figure": "media/images/br_hard_29.png"
+      }
+    },
+    {
+      "id": "br_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit switch -c feature/charlie33\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\n`git worktree add` extra checkout shares...",
+      "choices": [
+        "The same .git objects with another checkout",
+        "Nothing",
+        "Only tags",
+        "Only remotes"
+      ],
+      "answer": 0,
+      "explain": "Linked worktrees.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/br_hard_30.mp4",
+        "poster": "media/images/br_hard_30-frame.png",
+        "figure": "media/images/br_hard_30.png"
+      }
+    }
+  ]
+}
