@@ -1,0 +1,1692 @@
+{
+  "module": "module12-git-cherry-pick-lab",
+  "title": "Cherry-pick",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --continue 2>/dev/null || true\n```\ngit cherry-pick <hash> mainly...",
+      "choices": [
+        "Applies that commit's changes as a new commit on the current branch",
+        "Deletes the original commit everywhere",
+        "Replaces git merge for all branches",
+        "Only works on empty repositories"
+      ],
+      "answer": 0,
+      "explain": "Cherry-pick replays one commit's patch onto HEAD, creating a new commit with a new SHA.",
+      "difficulty": "easy",
+      "id": "pick_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_easy_01.mp4",
+        "poster": "media/images/pick_easy_01-frame.png",
+        "figure": "media/images/pick_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick -x ch0003bee\n```\nAfter fixing cherry-pick conflicts you usually...",
+      "choices": [
+        "git add the resolved files, then git cherry-pick --continue",
+        "git stash clear only",
+        "Delete .git and recloning",
+        "Force-push main without staging"
+      ],
+      "answer": 0,
+      "explain": "Stage resolutions, then continue; use --abort to cancel the in-progress pick.",
+      "difficulty": "easy",
+      "id": "pick_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_easy_02.mp4",
+        "poster": "media/images/pick_easy_02-frame.png",
+        "figure": "media/images/pick_easy_02.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --abort 2>/dev/null || true\n```\nCherry-pick moves the original commit off the source branch.",
+      "answer": false,
+      "explain": "The source commit stays; cherry-pick adds a new commit on the target branch.",
+      "difficulty": "easy",
+      "id": "pick_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_easy_03.mp4",
+        "poster": "media/images/pick_easy_03-frame.png",
+        "figure": "media/images/pick_easy_03.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick ec0005bee\n```\nCherry-pick is a good fit when...",
+      "choices": [
+        "You need one fix from another branch, not a full merge",
+        "You want to ignore all history forever",
+        "You never know the commit hash",
+        "You only edit .gitignore"
+      ],
+      "answer": 0,
+      "explain": "Selective apply: one bugfix or backport without merging the entire branch.",
+      "difficulty": "easy",
+      "id": "pick_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_easy_04.mp4",
+        "poster": "media/images/pick_easy_04-frame.png",
+        "figure": "media/images/pick_easy_04.png"
+      }
+    },
+    {
+      "id": "pick_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --continue 2>/dev/null || true\n```\n`git cherry-pick a0005bee` mainly...",
+      "choices": [
+        "Applies that commit's changes as a new commit on the current branch",
+        "Deletes the original commit everywhere",
+        "Replaces merge for all branches",
+        "Only works on empty repos"
+      ],
+      "answer": 0,
+      "explain": "Replay one patch; new SHA.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_easy_05.mp4",
+        "poster": "media/images/pick_easy_05-frame.png",
+        "figure": "media/images/pick_easy_05.png"
+      }
+    },
+    {
+      "id": "pick_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick -x go0007bee\n```\nAfter fixing cherry-pick conflicts you usually...",
+      "choices": [
+        "git add the files, then git cherry-pick --continue",
+        "git stash clear only",
+        "Delete .git",
+        "Force-push main"
+      ],
+      "answer": 0,
+      "explain": "Stage then continue.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_easy_06.mp4",
+        "poster": "media/images/pick_easy_06-frame.png",
+        "figure": "media/images/pick_easy_06.png"
+      }
+    },
+    {
+      "id": "pick_easy_07",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --abort 2>/dev/null || true\n```\n# Review context: `./labs/alpha` slot 7 variant 1\nCherry-pick moves the original commit off the source branch.",
+      "answer": false,
+      "explain": "Source commit stays; a new commit is added.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_easy_07.mp4",
+        "poster": "media/images/pick_easy_07-frame.png",
+        "figure": "media/images/pick_easy_07.png"
+      }
+    },
+    {
+      "id": "pick_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick in0009bee\n```\nCherry-pick is a good fit when...",
+      "choices": [
+        "You need one fix from another branch, not a full merge",
+        "You want to ignore all history",
+        "You never know the hash",
+        "You only edit gitignore"
+      ],
+      "answer": 0,
+      "explain": "Selective backport.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_easy_08.mp4",
+        "poster": "media/images/pick_easy_08-frame.png",
+        "figure": "media/images/pick_easy_08.png"
+      }
+    },
+    {
+      "id": "pick_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --continue 2>/dev/null || true\n```\n`git cherry-pick --abort`...",
+      "choices": [
+        "Cancels the in-progress pick",
+        "Deletes origin",
+        "Creates a tag",
+        "Prunes stash"
+      ],
+      "answer": 0,
+      "explain": "Abort restores.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_easy_09.mp4",
+        "poster": "media/images/pick_easy_09-frame.png",
+        "figure": "media/images/pick_easy_09.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick -x al0011bee\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\ngit cherry-pick <hash> mainly...",
+      "choices": [
+        "Applies that commit's changes as a new commit on the current branch",
+        "Deletes the original commit everywhere",
+        "Replaces git merge for all branches",
+        "Only works on empty repositories"
+      ],
+      "answer": 0,
+      "explain": "Cherry-pick replays one commit's patch onto HEAD, creating a new commit with a new SHA.",
+      "difficulty": "easy",
+      "id": "pick_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_easy_10.mp4",
+        "poster": "media/images/pick_easy_10-frame.png",
+        "figure": "media/images/pick_easy_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --abort 2>/dev/null || true\n```\n# Review context: `~/src/echo` slot 11 variant 1\nAfter fixing cherry-pick conflicts you usually...",
+      "choices": [
+        "git add the resolved files, then git cherry-pick --continue",
+        "git stash clear only",
+        "Delete .git and recloning",
+        "Force-push main without staging"
+      ],
+      "answer": 0,
+      "explain": "Stage resolutions, then continue; use --abort to cancel the in-progress pick.",
+      "difficulty": "easy",
+      "id": "pick_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_easy_11.mp4",
+        "poster": "media/images/pick_easy_11-frame.png",
+        "figure": "media/images/pick_easy_11.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick ch0013bee\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\nCherry-pick moves the original commit off the source branch.",
+      "answer": false,
+      "explain": "The source commit stays; cherry-pick adds a new commit on the target branch.",
+      "difficulty": "easy",
+      "id": "pick_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_easy_12.mp4",
+        "poster": "media/images/pick_easy_12-frame.png",
+        "figure": "media/images/pick_easy_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --continue 2>/dev/null || true\n```\n# Review context: `./labs/golf` slot 13 variant 1\nCherry-pick is a good fit when...",
+      "choices": [
+        "You need one fix from another branch, not a full merge",
+        "You want to ignore all history forever",
+        "You never know the commit hash",
+        "You only edit .gitignore"
+      ],
+      "answer": 0,
+      "explain": "Selective apply: one bugfix or backport without merging the entire branch.",
+      "difficulty": "easy",
+      "id": "pick_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_easy_13.mp4",
+        "poster": "media/images/pick_easy_13-frame.png",
+        "figure": "media/images/pick_easy_13.png"
+      }
+    },
+    {
+      "id": "pick_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick -x ec0015bee\n```\n`git cherry-pick a0014bee` mainly...",
+      "choices": [
+        "Applies that commit's changes as a new commit on the current branch",
+        "Deletes the original commit everywhere",
+        "Replaces merge for all branches",
+        "Only works on empty repos"
+      ],
+      "answer": 0,
+      "explain": "Replay one patch; new SHA.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_easy_14.mp4",
+        "poster": "media/images/pick_easy_14-frame.png",
+        "figure": "media/images/pick_easy_14.png"
+      }
+    },
+    {
+      "id": "pick_easy_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --abort 2>/dev/null || true\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\nAfter fixing cherry-pick conflicts you usually...",
+      "choices": [
+        "git add the files, then git cherry-pick --continue",
+        "git stash clear only",
+        "Delete .git",
+        "Force-push main"
+      ],
+      "answer": 0,
+      "explain": "Stage then continue.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_easy_15.mp4",
+        "poster": "media/images/pick_easy_15-frame.png",
+        "figure": "media/images/pick_easy_15.png"
+      }
+    },
+    {
+      "id": "pick_easy_16",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick go0017bee\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\nCherry-pick moves the original commit off the source branch.",
+      "answer": false,
+      "explain": "Source commit stays; a new commit is added.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_easy_16.mp4",
+        "poster": "media/images/pick_easy_16-frame.png",
+        "figure": "media/images/pick_easy_16.png"
+      }
+    },
+    {
+      "id": "pick_easy_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --continue 2>/dev/null || true\n```\n# Review context: `~/src/charlie` slot 17 variant 1\nCherry-pick is a good fit when...",
+      "choices": [
+        "You need one fix from another branch, not a full merge",
+        "You want to ignore all history",
+        "You never know the hash",
+        "You only edit gitignore"
+      ],
+      "answer": 0,
+      "explain": "Selective backport.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_easy_17.mp4",
+        "poster": "media/images/pick_easy_17-frame.png",
+        "figure": "media/images/pick_easy_17.png"
+      }
+    },
+    {
+      "id": "pick_easy_18",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick -x in0019bee\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\n`git cherry-pick --abort`...",
+      "choices": [
+        "Cancels the in-progress pick",
+        "Deletes origin",
+        "Creates a tag",
+        "Prunes stash"
+      ],
+      "answer": 0,
+      "explain": "Abort restores.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_easy_18.mp4",
+        "poster": "media/images/pick_easy_18-frame.png",
+        "figure": "media/images/pick_easy_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --abort 2>/dev/null || true\n```\n# Review context: `./labs/echo` slot 19 variant 1\ngit cherry-pick <hash> mainly...",
+      "choices": [
+        "Applies that commit's changes as a new commit on the current branch",
+        "Deletes the original commit everywhere",
+        "Replaces git merge for all branches",
+        "Only works on empty repositories"
+      ],
+      "answer": 0,
+      "explain": "Cherry-pick replays one commit's patch onto HEAD, creating a new commit with a new SHA.",
+      "difficulty": "easy",
+      "id": "pick_easy_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_easy_19.mp4",
+        "poster": "media/images/pick_easy_19-frame.png",
+        "figure": "media/images/pick_easy_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick al0021bee\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\nAfter fixing cherry-pick conflicts you usually...",
+      "choices": [
+        "git add the resolved files, then git cherry-pick --continue",
+        "git stash clear only",
+        "Delete .git and recloning",
+        "Force-push main without staging"
+      ],
+      "answer": 0,
+      "explain": "Stage resolutions, then continue; use --abort to cancel the in-progress pick.",
+      "difficulty": "easy",
+      "id": "pick_easy_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_easy_20.mp4",
+        "poster": "media/images/pick_easy_20-frame.png",
+        "figure": "media/images/pick_easy_20.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --continue 2>/dev/null || true\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\nCherry-pick moves the original commit off the source branch.",
+      "answer": false,
+      "explain": "The source commit stays; cherry-pick adds a new commit on the target branch.",
+      "difficulty": "easy",
+      "id": "pick_easy_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_easy_21.mp4",
+        "poster": "media/images/pick_easy_21-frame.png",
+        "figure": "media/images/pick_easy_21.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick -x ch0023bee\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\nCherry-pick is a good fit when...",
+      "choices": [
+        "You need one fix from another branch, not a full merge",
+        "You want to ignore all history forever",
+        "You never know the commit hash",
+        "You only edit .gitignore"
+      ],
+      "answer": 0,
+      "explain": "Selective apply: one bugfix or backport without merging the entire branch.",
+      "difficulty": "easy",
+      "id": "pick_easy_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_easy_22.mp4",
+        "poster": "media/images/pick_easy_22-frame.png",
+        "figure": "media/images/pick_easy_22.png"
+      }
+    },
+    {
+      "id": "pick_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --abort 2>/dev/null || true\n```\n`git cherry-pick a0023bee` mainly...",
+      "choices": [
+        "Applies that commit's changes as a new commit on the current branch",
+        "Deletes the original commit everywhere",
+        "Replaces merge for all branches",
+        "Only works on empty repos"
+      ],
+      "answer": 0,
+      "explain": "Replay one patch; new SHA.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_easy_23.mp4",
+        "poster": "media/images/pick_easy_23-frame.png",
+        "figure": "media/images/pick_easy_23.png"
+      }
+    },
+    {
+      "id": "pick_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick ec0025bee\n```\n# Review context: `/work/chip/bravo` slot 24 variant 1\nAfter fixing cherry-pick conflicts you usually...",
+      "choices": [
+        "git add the files, then git cherry-pick --continue",
+        "git stash clear only",
+        "Delete .git",
+        "Force-push main"
+      ],
+      "answer": 0,
+      "explain": "Stage then continue.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_easy_24.mp4",
+        "poster": "media/images/pick_easy_24-frame.png",
+        "figure": "media/images/pick_easy_24.png"
+      }
+    },
+    {
+      "id": "pick_easy_25",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --continue 2>/dev/null || true\n```\n# Review context: `./labs/charlie` slot 25 variant 1\nCherry-pick moves the original commit off the source branch.",
+      "answer": false,
+      "explain": "Source commit stays; a new commit is added.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_easy_25.mp4",
+        "poster": "media/images/pick_easy_25-frame.png",
+        "figure": "media/images/pick_easy_25.png"
+      }
+    },
+    {
+      "id": "pick_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick -x go0027bee\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\nCherry-pick is a good fit when...",
+      "choices": [
+        "You need one fix from another branch, not a full merge",
+        "You want to ignore all history",
+        "You never know the hash",
+        "You only edit gitignore"
+      ],
+      "answer": 0,
+      "explain": "Selective backport.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_easy_26.mp4",
+        "poster": "media/images/pick_easy_26-frame.png",
+        "figure": "media/images/pick_easy_26.png"
+      }
+    },
+    {
+      "id": "pick_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --abort 2>/dev/null || true\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\n`git cherry-pick --abort`...",
+      "choices": [
+        "Cancels the in-progress pick",
+        "Deletes origin",
+        "Creates a tag",
+        "Prunes stash"
+      ],
+      "answer": 0,
+      "explain": "Abort restores.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_easy_27.mp4",
+        "poster": "media/images/pick_easy_27-frame.png",
+        "figure": "media/images/pick_easy_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick in0029bee\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\ngit cherry-pick <hash> mainly...",
+      "choices": [
+        "Applies that commit's changes as a new commit on the current branch",
+        "Deletes the original commit everywhere",
+        "Replaces git merge for all branches",
+        "Only works on empty repositories"
+      ],
+      "answer": 0,
+      "explain": "Cherry-pick replays one commit's patch onto HEAD, creating a new commit with a new SHA.",
+      "difficulty": "easy",
+      "id": "pick_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_easy_28.mp4",
+        "poster": "media/images/pick_easy_28-frame.png",
+        "figure": "media/images/pick_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --continue 2>/dev/null || true\n```\n# Review context: `~/src/golf` slot 29 variant 1\nAfter fixing cherry-pick conflicts you usually...",
+      "choices": [
+        "git add the resolved files, then git cherry-pick --continue",
+        "git stash clear only",
+        "Delete .git and recloning",
+        "Force-push main without staging"
+      ],
+      "answer": 0,
+      "explain": "Stage resolutions, then continue; use --abort to cancel the in-progress pick.",
+      "difficulty": "easy",
+      "id": "pick_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_easy_29.mp4",
+        "poster": "media/images/pick_easy_29-frame.png",
+        "figure": "media/images/pick_easy_29.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick -x al0031bee\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\nCherry-pick moves the original commit off the source branch.",
+      "answer": false,
+      "explain": "The source commit stays; cherry-pick adds a new commit on the target branch.",
+      "difficulty": "easy",
+      "id": "pick_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_easy_30.mp4",
+        "poster": "media/images/pick_easy_30-frame.png",
+        "figure": "media/images/pick_easy_30.png"
+      }
+    },
+    {
+      "id": "pick_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --continue 2>/dev/null || true\n```\n`git cherry-pick -x a0001bee` adds...",
+      "choices": [
+        "A (cherry picked from ...) trailer",
+        "A tag",
+        "A remote",
+        "A stash"
+      ],
+      "answer": 0,
+      "explain": "-x records the source SHA.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_medium_01.mp4",
+        "poster": "media/images/pick_medium_01-frame.png",
+        "figure": "media/images/pick_medium_01.png"
+      }
+    },
+    {
+      "id": "pick_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick -x ch0003bee\n```\n`git cherry-pick --mainline 1` is needed when...",
+      "choices": [
+        "Picking a merge commit",
+        "Picking a root always",
+        "Tagging",
+        "Stashing"
+      ],
+      "answer": 0,
+      "explain": "Merges have multiple parents.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_medium_02.mp4",
+        "poster": "media/images/pick_medium_02-frame.png",
+        "figure": "media/images/pick_medium_02.png"
+      }
+    },
+    {
+      "id": "pick_medium_03",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --abort 2>/dev/null || true\n```\nDuplicate cherry-picks can create empty commits or conflicts if the change is already present.",
+      "answer": true,
+      "explain": "Patch may already be in the tree.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_medium_03.mp4",
+        "poster": "media/images/pick_medium_03-frame.png",
+        "figure": "media/images/pick_medium_03.png"
+      }
+    },
+    {
+      "id": "pick_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick ec0005bee\n```\nCherry-pick vs merge `feature/lab4`...",
+      "choices": [
+        "Pick copies selected commits; merge brings the whole branch history join",
+        "They are identical",
+        "Merge never conflicts",
+        "Pick deletes feature/lab4"
+      ],
+      "answer": 0,
+      "explain": "Scope differs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_medium_04.mp4",
+        "poster": "media/images/pick_medium_04-frame.png",
+        "figure": "media/images/pick_medium_04.png"
+      }
+    },
+    {
+      "id": "pick_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --continue 2>/dev/null || true\n```\n`git cherry-pick -n a0005bee` applies the patch...",
+      "choices": [
+        "Without committing",
+        "And pushes",
+        "And tags",
+        "And deletes the source"
+      ],
+      "answer": 0,
+      "explain": "-n / --no-commit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_medium_05.mp4",
+        "poster": "media/images/pick_medium_05-frame.png",
+        "figure": "media/images/pick_medium_05.png"
+      }
+    },
+    {
+      "id": "pick_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick -x go0007bee\n```\n`git cherry-pick -x a0006bee` adds...",
+      "choices": [
+        "A (cherry picked from ...) trailer",
+        "A tag",
+        "A remote",
+        "A stash"
+      ],
+      "answer": 0,
+      "explain": "-x records the source SHA.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_medium_06.mp4",
+        "poster": "media/images/pick_medium_06-frame.png",
+        "figure": "media/images/pick_medium_06.png"
+      }
+    },
+    {
+      "id": "pick_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --abort 2>/dev/null || true\n```\n# Review context: `./labs/alpha` slot 7 variant 1\n`git cherry-pick --mainline 1` is needed when...",
+      "choices": [
+        "Picking a merge commit",
+        "Picking a root always",
+        "Tagging",
+        "Stashing"
+      ],
+      "answer": 0,
+      "explain": "Merges have multiple parents.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_medium_07.mp4",
+        "poster": "media/images/pick_medium_07-frame.png",
+        "figure": "media/images/pick_medium_07.png"
+      }
+    },
+    {
+      "id": "pick_medium_08",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick in0009bee\n```\n# Review context: `/tmp/gitlab/bravo` slot 8 variant 1\nDuplicate cherry-picks can create empty commits or conflicts if the change is already present.",
+      "answer": true,
+      "explain": "Patch may already be in the tree.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_medium_08.mp4",
+        "poster": "media/images/pick_medium_08-frame.png",
+        "figure": "media/images/pick_medium_08.png"
+      }
+    },
+    {
+      "id": "pick_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --continue 2>/dev/null || true\n```\nCherry-pick vs merge `feature/lab9`...",
+      "choices": [
+        "Pick copies selected commits; merge brings the whole branch history join",
+        "They are identical",
+        "Merge never conflicts",
+        "Pick deletes feature/lab9"
+      ],
+      "answer": 0,
+      "explain": "Scope differs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_medium_09.mp4",
+        "poster": "media/images/pick_medium_09-frame.png",
+        "figure": "media/images/pick_medium_09.png"
+      }
+    },
+    {
+      "id": "pick_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick -x al0011bee\n```\n`git cherry-pick -n a0010bee` applies the patch...",
+      "choices": [
+        "Without committing",
+        "And pushes",
+        "And tags",
+        "And deletes the source"
+      ],
+      "answer": 0,
+      "explain": "-n / --no-commit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_medium_10.mp4",
+        "poster": "media/images/pick_medium_10-frame.png",
+        "figure": "media/images/pick_medium_10.png"
+      }
+    },
+    {
+      "id": "pick_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --abort 2>/dev/null || true\n```\n`git cherry-pick -x a0011bee` adds...",
+      "choices": [
+        "A (cherry picked from ...) trailer",
+        "A tag",
+        "A remote",
+        "A stash"
+      ],
+      "answer": 0,
+      "explain": "-x records the source SHA.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_medium_11.mp4",
+        "poster": "media/images/pick_medium_11-frame.png",
+        "figure": "media/images/pick_medium_11.png"
+      }
+    },
+    {
+      "id": "pick_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick ch0013bee\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\n`git cherry-pick --mainline 1` is needed when...",
+      "choices": [
+        "Picking a merge commit",
+        "Picking a root always",
+        "Tagging",
+        "Stashing"
+      ],
+      "answer": 0,
+      "explain": "Merges have multiple parents.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_medium_12.mp4",
+        "poster": "media/images/pick_medium_12-frame.png",
+        "figure": "media/images/pick_medium_12.png"
+      }
+    },
+    {
+      "id": "pick_medium_13",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --continue 2>/dev/null || true\n```\n# Review context: `./labs/golf` slot 13 variant 1\nDuplicate cherry-picks can create empty commits or conflicts if the change is already present.",
+      "answer": true,
+      "explain": "Patch may already be in the tree.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_medium_13.mp4",
+        "poster": "media/images/pick_medium_13-frame.png",
+        "figure": "media/images/pick_medium_13.png"
+      }
+    },
+    {
+      "id": "pick_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick -x ec0015bee\n```\nCherry-pick vs merge `feature/lab14`...",
+      "choices": [
+        "Pick copies selected commits; merge brings the whole branch history join",
+        "They are identical",
+        "Merge never conflicts",
+        "Pick deletes feature/lab14"
+      ],
+      "answer": 0,
+      "explain": "Scope differs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_medium_14.mp4",
+        "poster": "media/images/pick_medium_14-frame.png",
+        "figure": "media/images/pick_medium_14.png"
+      }
+    },
+    {
+      "id": "pick_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --abort 2>/dev/null || true\n```\n`git cherry-pick -n a0015bee` applies the patch...",
+      "choices": [
+        "Without committing",
+        "And pushes",
+        "And tags",
+        "And deletes the source"
+      ],
+      "answer": 0,
+      "explain": "-n / --no-commit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_medium_15.mp4",
+        "poster": "media/images/pick_medium_15-frame.png",
+        "figure": "media/images/pick_medium_15.png"
+      }
+    },
+    {
+      "id": "pick_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick go0017bee\n```\n`git cherry-pick -x a0016bee` adds...",
+      "choices": [
+        "A (cherry picked from ...) trailer",
+        "A tag",
+        "A remote",
+        "A stash"
+      ],
+      "answer": 0,
+      "explain": "-x records the source SHA.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_medium_16.mp4",
+        "poster": "media/images/pick_medium_16-frame.png",
+        "figure": "media/images/pick_medium_16.png"
+      }
+    },
+    {
+      "id": "pick_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --continue 2>/dev/null || true\n```\n# Review context: `~/src/charlie` slot 17 variant 1\n`git cherry-pick --mainline 1` is needed when...",
+      "choices": [
+        "Picking a merge commit",
+        "Picking a root always",
+        "Tagging",
+        "Stashing"
+      ],
+      "answer": 0,
+      "explain": "Merges have multiple parents.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_medium_17.mp4",
+        "poster": "media/images/pick_medium_17-frame.png",
+        "figure": "media/images/pick_medium_17.png"
+      }
+    },
+    {
+      "id": "pick_medium_18",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick -x in0019bee\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\nDuplicate cherry-picks can create empty commits or conflicts if the change is already present.",
+      "answer": true,
+      "explain": "Patch may already be in the tree.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_medium_18.mp4",
+        "poster": "media/images/pick_medium_18-frame.png",
+        "figure": "media/images/pick_medium_18.png"
+      }
+    },
+    {
+      "id": "pick_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --abort 2>/dev/null || true\n```\nCherry-pick vs merge `feature/lab19`...",
+      "choices": [
+        "Pick copies selected commits; merge brings the whole branch history join",
+        "They are identical",
+        "Merge never conflicts",
+        "Pick deletes feature/lab19"
+      ],
+      "answer": 0,
+      "explain": "Scope differs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_medium_19.mp4",
+        "poster": "media/images/pick_medium_19-frame.png",
+        "figure": "media/images/pick_medium_19.png"
+      }
+    },
+    {
+      "id": "pick_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick al0021bee\n```\n`git cherry-pick -n a0020bee` applies the patch...",
+      "choices": [
+        "Without committing",
+        "And pushes",
+        "And tags",
+        "And deletes the source"
+      ],
+      "answer": 0,
+      "explain": "-n / --no-commit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_medium_20.mp4",
+        "poster": "media/images/pick_medium_20-frame.png",
+        "figure": "media/images/pick_medium_20.png"
+      }
+    },
+    {
+      "id": "pick_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --continue 2>/dev/null || true\n```\n`git cherry-pick -x a0021bee` adds...",
+      "choices": [
+        "A (cherry picked from ...) trailer",
+        "A tag",
+        "A remote",
+        "A stash"
+      ],
+      "answer": 0,
+      "explain": "-x records the source SHA.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_medium_21.mp4",
+        "poster": "media/images/pick_medium_21-frame.png",
+        "figure": "media/images/pick_medium_21.png"
+      }
+    },
+    {
+      "id": "pick_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick -x ch0023bee\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\n`git cherry-pick --mainline 1` is needed when...",
+      "choices": [
+        "Picking a merge commit",
+        "Picking a root always",
+        "Tagging",
+        "Stashing"
+      ],
+      "answer": 0,
+      "explain": "Merges have multiple parents.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_medium_22.mp4",
+        "poster": "media/images/pick_medium_22-frame.png",
+        "figure": "media/images/pick_medium_22.png"
+      }
+    },
+    {
+      "id": "pick_medium_23",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --abort 2>/dev/null || true\n```\n# Review context: `~/src/alpha` slot 23 variant 1\nDuplicate cherry-picks can create empty commits or conflicts if the change is already present.",
+      "answer": true,
+      "explain": "Patch may already be in the tree.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_medium_23.mp4",
+        "poster": "media/images/pick_medium_23-frame.png",
+        "figure": "media/images/pick_medium_23.png"
+      }
+    },
+    {
+      "id": "pick_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick ec0025bee\n```\nCherry-pick vs merge `feature/lab24`...",
+      "choices": [
+        "Pick copies selected commits; merge brings the whole branch history join",
+        "They are identical",
+        "Merge never conflicts",
+        "Pick deletes feature/lab24"
+      ],
+      "answer": 0,
+      "explain": "Scope differs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_medium_24.mp4",
+        "poster": "media/images/pick_medium_24-frame.png",
+        "figure": "media/images/pick_medium_24.png"
+      }
+    },
+    {
+      "id": "pick_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --continue 2>/dev/null || true\n```\n`git cherry-pick -n a0025bee` applies the patch...",
+      "choices": [
+        "Without committing",
+        "And pushes",
+        "And tags",
+        "And deletes the source"
+      ],
+      "answer": 0,
+      "explain": "-n / --no-commit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_medium_25.mp4",
+        "poster": "media/images/pick_medium_25-frame.png",
+        "figure": "media/images/pick_medium_25.png"
+      }
+    },
+    {
+      "id": "pick_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick -x go0027bee\n```\n`git cherry-pick -x a0026bee` adds...",
+      "choices": [
+        "A (cherry picked from ...) trailer",
+        "A tag",
+        "A remote",
+        "A stash"
+      ],
+      "answer": 0,
+      "explain": "-x records the source SHA.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_medium_26.mp4",
+        "poster": "media/images/pick_medium_26-frame.png",
+        "figure": "media/images/pick_medium_26.png"
+      }
+    },
+    {
+      "id": "pick_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --abort 2>/dev/null || true\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\n`git cherry-pick --mainline 1` is needed when...",
+      "choices": [
+        "Picking a merge commit",
+        "Picking a root always",
+        "Tagging",
+        "Stashing"
+      ],
+      "answer": 0,
+      "explain": "Merges have multiple parents.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_medium_27.mp4",
+        "poster": "media/images/pick_medium_27-frame.png",
+        "figure": "media/images/pick_medium_27.png"
+      }
+    },
+    {
+      "id": "pick_medium_28",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick in0029bee\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\nDuplicate cherry-picks can create empty commits or conflicts if the change is already present.",
+      "answer": true,
+      "explain": "Patch may already be in the tree.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_medium_28.mp4",
+        "poster": "media/images/pick_medium_28-frame.png",
+        "figure": "media/images/pick_medium_28.png"
+      }
+    },
+    {
+      "id": "pick_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --continue 2>/dev/null || true\n```\nCherry-pick vs merge `feature/lab29`...",
+      "choices": [
+        "Pick copies selected commits; merge brings the whole branch history join",
+        "They are identical",
+        "Merge never conflicts",
+        "Pick deletes feature/lab29"
+      ],
+      "answer": 0,
+      "explain": "Scope differs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_medium_29.mp4",
+        "poster": "media/images/pick_medium_29-frame.png",
+        "figure": "media/images/pick_medium_29.png"
+      }
+    },
+    {
+      "id": "pick_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick -x al0031bee\n```\n`git cherry-pick -n a0030bee` applies the patch...",
+      "choices": [
+        "Without committing",
+        "And pushes",
+        "And tags",
+        "And deletes the source"
+      ],
+      "answer": 0,
+      "explain": "-n / --no-commit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_medium_30.mp4",
+        "poster": "media/images/pick_medium_30-frame.png",
+        "figure": "media/images/pick_medium_30.png"
+      }
+    },
+    {
+      "id": "pick_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --abort 2>/dev/null || true\n```\nEmpty cherry-pick: `--allow-empty` vs `--skip`...",
+      "choices": [
+        "allow-empty records an empty commit; skip drops it",
+        "They are identical",
+        "skip pushes origin",
+        "allow-empty deletes HEAD"
+      ],
+      "answer": 0,
+      "explain": "Know the sequencer flags.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_hard_01.mp4",
+        "poster": "media/images/pick_hard_01-frame.png",
+        "figure": "media/images/pick_hard_01.png"
+      }
+    },
+    {
+      "id": "pick_hard_02",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick ec0005bee\n```\n`git format-patch` + `git am` is the email equivalent of cherry-pick.",
+      "answer": true,
+      "explain": "Patch series workflow.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_hard_02.mp4",
+        "poster": "media/images/pick_hard_02-frame.png",
+        "figure": "media/images/pick_hard_02.png"
+      }
+    },
+    {
+      "id": "pick_hard_03",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --continue 2>/dev/null || true\n```\nWhy backport with cherry-pick onto a release branch...",
+      "choices": [
+        "Bring one fix without merging all of `feature/lab3`",
+        "To rewrite origin/main",
+        "To ignore tests",
+        "To drop gitignore"
+      ],
+      "answer": 0,
+      "explain": "Release hygiene.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_hard_03.mp4",
+        "poster": "media/images/pick_hard_03-frame.png",
+        "figure": "media/images/pick_hard_03.png"
+      }
+    },
+    {
+      "id": "pick_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick -x go0007bee\n```\n`git cherry-pick --continue` fails if...",
+      "choices": [
+        "Conflicts remain or the index is not ready",
+        "The repo is clean and pick finished",
+        "You have a remote",
+        "You have tags"
+      ],
+      "answer": 0,
+      "explain": "Continue needs a resolved index.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_hard_04.mp4",
+        "poster": "media/images/pick_hard_04-frame.png",
+        "figure": "media/images/pick_hard_04.png"
+      }
+    },
+    {
+      "id": "pick_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --abort 2>/dev/null || true\n```\nThe new cherry-picked commit has...",
+      "choices": [
+        "A new SHA even if the patch is similar",
+        "The identical SHA always",
+        "No parent",
+        "No message"
+      ],
+      "answer": 0,
+      "explain": "New object.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_hard_05.mp4",
+        "poster": "media/images/pick_hard_05-frame.png",
+        "figure": "media/images/pick_hard_05.png"
+      }
+    },
+    {
+      "id": "pick_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick in0009bee\n```\n# Review context: `/work/chip/hotel` slot 6 variant 1\nEmpty cherry-pick: `--allow-empty` vs `--skip`...",
+      "choices": [
+        "allow-empty records an empty commit; skip drops it",
+        "They are identical",
+        "skip pushes origin",
+        "allow-empty deletes HEAD"
+      ],
+      "answer": 0,
+      "explain": "Know the sequencer flags.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_hard_06.mp4",
+        "poster": "media/images/pick_hard_06-frame.png",
+        "figure": "media/images/pick_hard_06.png"
+      }
+    },
+    {
+      "id": "pick_hard_07",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --continue 2>/dev/null || true\n```\n# Review context: `./labs/alpha` slot 7 variant 1\n`git format-patch` + `git am` is the email equivalent of cherry-pick.",
+      "answer": true,
+      "explain": "Patch series workflow.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_hard_07.mp4",
+        "poster": "media/images/pick_hard_07-frame.png",
+        "figure": "media/images/pick_hard_07.png"
+      }
+    },
+    {
+      "id": "pick_hard_08",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick -x al0011bee\n```\nWhy backport with cherry-pick onto a release branch...",
+      "choices": [
+        "Bring one fix without merging all of `feature/lab8`",
+        "To rewrite origin/main",
+        "To ignore tests",
+        "To drop gitignore"
+      ],
+      "answer": 0,
+      "explain": "Release hygiene.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_hard_08.mp4",
+        "poster": "media/images/pick_hard_08-frame.png",
+        "figure": "media/images/pick_hard_08.png"
+      }
+    },
+    {
+      "id": "pick_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --abort 2>/dev/null || true\n```\n# Review context: `C:/proj/charlie` slot 9 variant 1\n`git cherry-pick --continue` fails if...",
+      "choices": [
+        "Conflicts remain or the index is not ready",
+        "The repo is clean and pick finished",
+        "You have a remote",
+        "You have tags"
+      ],
+      "answer": 0,
+      "explain": "Continue needs a resolved index.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_hard_09.mp4",
+        "poster": "media/images/pick_hard_09-frame.png",
+        "figure": "media/images/pick_hard_09.png"
+      }
+    },
+    {
+      "id": "pick_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick ch0013bee\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\nThe new cherry-picked commit has...",
+      "choices": [
+        "A new SHA even if the patch is similar",
+        "The identical SHA always",
+        "No parent",
+        "No message"
+      ],
+      "answer": 0,
+      "explain": "New object.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_hard_10.mp4",
+        "poster": "media/images/pick_hard_10-frame.png",
+        "figure": "media/images/pick_hard_10.png"
+      }
+    },
+    {
+      "id": "pick_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --continue 2>/dev/null || true\n```\n# Review context: `~/src/echo` slot 11 variant 1\nEmpty cherry-pick: `--allow-empty` vs `--skip`...",
+      "choices": [
+        "allow-empty records an empty commit; skip drops it",
+        "They are identical",
+        "skip pushes origin",
+        "allow-empty deletes HEAD"
+      ],
+      "answer": 0,
+      "explain": "Know the sequencer flags.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_hard_11.mp4",
+        "poster": "media/images/pick_hard_11-frame.png",
+        "figure": "media/images/pick_hard_11.png"
+      }
+    },
+    {
+      "id": "pick_hard_12",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick -x ec0015bee\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\n`git format-patch` + `git am` is the email equivalent of cherry-pick.",
+      "answer": true,
+      "explain": "Patch series workflow.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_hard_12.mp4",
+        "poster": "media/images/pick_hard_12-frame.png",
+        "figure": "media/images/pick_hard_12.png"
+      }
+    },
+    {
+      "id": "pick_hard_13",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --abort 2>/dev/null || true\n```\nWhy backport with cherry-pick onto a release branch...",
+      "choices": [
+        "Bring one fix without merging all of `feature/lab13`",
+        "To rewrite origin/main",
+        "To ignore tests",
+        "To drop gitignore"
+      ],
+      "answer": 0,
+      "explain": "Release hygiene.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_hard_13.mp4",
+        "poster": "media/images/pick_hard_13-frame.png",
+        "figure": "media/images/pick_hard_13.png"
+      }
+    },
+    {
+      "id": "pick_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick go0017bee\n```\n# Review context: `/tmp/gitlab/hotel` slot 14 variant 1\n`git cherry-pick --continue` fails if...",
+      "choices": [
+        "Conflicts remain or the index is not ready",
+        "The repo is clean and pick finished",
+        "You have a remote",
+        "You have tags"
+      ],
+      "answer": 0,
+      "explain": "Continue needs a resolved index.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_hard_14.mp4",
+        "poster": "media/images/pick_hard_14-frame.png",
+        "figure": "media/images/pick_hard_14.png"
+      }
+    },
+    {
+      "id": "pick_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --continue 2>/dev/null || true\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\nThe new cherry-picked commit has...",
+      "choices": [
+        "A new SHA even if the patch is similar",
+        "The identical SHA always",
+        "No parent",
+        "No message"
+      ],
+      "answer": 0,
+      "explain": "New object.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_hard_15.mp4",
+        "poster": "media/images/pick_hard_15-frame.png",
+        "figure": "media/images/pick_hard_15.png"
+      }
+    },
+    {
+      "id": "pick_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick -x in0019bee\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\nEmpty cherry-pick: `--allow-empty` vs `--skip`...",
+      "choices": [
+        "allow-empty records an empty commit; skip drops it",
+        "They are identical",
+        "skip pushes origin",
+        "allow-empty deletes HEAD"
+      ],
+      "answer": 0,
+      "explain": "Know the sequencer flags.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_hard_16.mp4",
+        "poster": "media/images/pick_hard_16-frame.png",
+        "figure": "media/images/pick_hard_16.png"
+      }
+    },
+    {
+      "id": "pick_hard_17",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --abort 2>/dev/null || true\n```\n# Review context: `~/src/charlie` slot 17 variant 1\n`git format-patch` + `git am` is the email equivalent of cherry-pick.",
+      "answer": true,
+      "explain": "Patch series workflow.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_hard_17.mp4",
+        "poster": "media/images/pick_hard_17-frame.png",
+        "figure": "media/images/pick_hard_17.png"
+      }
+    },
+    {
+      "id": "pick_hard_18",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick al0021bee\n```\nWhy backport with cherry-pick onto a release branch...",
+      "choices": [
+        "Bring one fix without merging all of `feature/lab18`",
+        "To rewrite origin/main",
+        "To ignore tests",
+        "To drop gitignore"
+      ],
+      "answer": 0,
+      "explain": "Release hygiene.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_hard_18.mp4",
+        "poster": "media/images/pick_hard_18-frame.png",
+        "figure": "media/images/pick_hard_18.png"
+      }
+    },
+    {
+      "id": "pick_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --continue 2>/dev/null || true\n```\n# Review context: `./labs/echo` slot 19 variant 1\n`git cherry-pick --continue` fails if...",
+      "choices": [
+        "Conflicts remain or the index is not ready",
+        "The repo is clean and pick finished",
+        "You have a remote",
+        "You have tags"
+      ],
+      "answer": 0,
+      "explain": "Continue needs a resolved index.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_hard_19.mp4",
+        "poster": "media/images/pick_hard_19-frame.png",
+        "figure": "media/images/pick_hard_19.png"
+      }
+    },
+    {
+      "id": "pick_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick -x ch0023bee\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\nThe new cherry-picked commit has...",
+      "choices": [
+        "A new SHA even if the patch is similar",
+        "The identical SHA always",
+        "No parent",
+        "No message"
+      ],
+      "answer": 0,
+      "explain": "New object.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_hard_20.mp4",
+        "poster": "media/images/pick_hard_20-frame.png",
+        "figure": "media/images/pick_hard_20.png"
+      }
+    },
+    {
+      "id": "pick_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --abort 2>/dev/null || true\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\nEmpty cherry-pick: `--allow-empty` vs `--skip`...",
+      "choices": [
+        "allow-empty records an empty commit; skip drops it",
+        "They are identical",
+        "skip pushes origin",
+        "allow-empty deletes HEAD"
+      ],
+      "answer": 0,
+      "explain": "Know the sequencer flags.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_hard_21.mp4",
+        "poster": "media/images/pick_hard_21-frame.png",
+        "figure": "media/images/pick_hard_21.png"
+      }
+    },
+    {
+      "id": "pick_hard_22",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick ec0025bee\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\n`git format-patch` + `git am` is the email equivalent of cherry-pick.",
+      "answer": true,
+      "explain": "Patch series workflow.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_hard_22.mp4",
+        "poster": "media/images/pick_hard_22-frame.png",
+        "figure": "media/images/pick_hard_22.png"
+      }
+    },
+    {
+      "id": "pick_hard_23",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --continue 2>/dev/null || true\n```\nWhy backport with cherry-pick onto a release branch...",
+      "choices": [
+        "Bring one fix without merging all of `feature/lab23`",
+        "To rewrite origin/main",
+        "To ignore tests",
+        "To drop gitignore"
+      ],
+      "answer": 0,
+      "explain": "Release hygiene.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_hard_23.mp4",
+        "poster": "media/images/pick_hard_23-frame.png",
+        "figure": "media/images/pick_hard_23.png"
+      }
+    },
+    {
+      "id": "pick_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick -x go0027bee\n```\n# Review context: `/work/chip/bravo` slot 24 variant 1\n`git cherry-pick --continue` fails if...",
+      "choices": [
+        "Conflicts remain or the index is not ready",
+        "The repo is clean and pick finished",
+        "You have a remote",
+        "You have tags"
+      ],
+      "answer": 0,
+      "explain": "Continue needs a resolved index.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_hard_24.mp4",
+        "poster": "media/images/pick_hard_24-frame.png",
+        "figure": "media/images/pick_hard_24.png"
+      }
+    },
+    {
+      "id": "pick_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --abort 2>/dev/null || true\n```\n# Review context: `./labs/charlie` slot 25 variant 1\nThe new cherry-picked commit has...",
+      "choices": [
+        "A new SHA even if the patch is similar",
+        "The identical SHA always",
+        "No parent",
+        "No message"
+      ],
+      "answer": 0,
+      "explain": "New object.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_hard_25.mp4",
+        "poster": "media/images/pick_hard_25-frame.png",
+        "figure": "media/images/pick_hard_25.png"
+      }
+    },
+    {
+      "id": "pick_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick in0029bee\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\nEmpty cherry-pick: `--allow-empty` vs `--skip`...",
+      "choices": [
+        "allow-empty records an empty commit; skip drops it",
+        "They are identical",
+        "skip pushes origin",
+        "allow-empty deletes HEAD"
+      ],
+      "answer": 0,
+      "explain": "Know the sequencer flags.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_hard_26.mp4",
+        "poster": "media/images/pick_hard_26-frame.png",
+        "figure": "media/images/pick_hard_26.png"
+      }
+    },
+    {
+      "id": "pick_hard_27",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --continue 2>/dev/null || true\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\n`git format-patch` + `git am` is the email equivalent of cherry-pick.",
+      "answer": true,
+      "explain": "Patch series workflow.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_hard_27.mp4",
+        "poster": "media/images/pick_hard_27-frame.png",
+        "figure": "media/images/pick_hard_27.png"
+      }
+    },
+    {
+      "id": "pick_hard_28",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick -x al0031bee\n```\nWhy backport with cherry-pick onto a release branch...",
+      "choices": [
+        "Bring one fix without merging all of `feature/lab28`",
+        "To rewrite origin/main",
+        "To ignore tests",
+        "To drop gitignore"
+      ],
+      "answer": 0,
+      "explain": "Release hygiene.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_hard_28.mp4",
+        "poster": "media/images/pick_hard_28-frame.png",
+        "figure": "media/images/pick_hard_28.png"
+      }
+    },
+    {
+      "id": "pick_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick --abort 2>/dev/null || true\n```\n# Review context: `~/src/golf` slot 29 variant 1\n`git cherry-pick --continue` fails if...",
+      "choices": [
+        "Conflicts remain or the index is not ready",
+        "The repo is clean and pick finished",
+        "You have a remote",
+        "You have tags"
+      ],
+      "answer": 0,
+      "explain": "Continue needs a resolved index.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_hard_29.mp4",
+        "poster": "media/images/pick_hard_29-frame.png",
+        "figure": "media/images/pick_hard_29.png"
+      }
+    },
+    {
+      "id": "pick_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit cherry-pick ch0033bee\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\nThe new cherry-picked commit has...",
+      "choices": [
+        "A new SHA even if the patch is similar",
+        "The identical SHA always",
+        "No parent",
+        "No message"
+      ],
+      "answer": 0,
+      "explain": "New object.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/pick_hard_30.mp4",
+        "poster": "media/images/pick_hard_30-frame.png",
+        "figure": "media/images/pick_hard_30.png"
+      }
+    }
+  ]
+}
