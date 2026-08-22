@@ -1,0 +1,1680 @@
+{
+  "module": "module07-git-stash-lab",
+  "title": "Stash scenarios",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash list\n```\ngit stash push mainly...",
+      "choices": [
+        "Deletes all commit history",
+        "Saves uncommitted tracked changes and cleans the working tree",
+        "Force-pushes to origin",
+        "Creates a new remote branch"
+      ],
+      "answer": 1,
+      "explain": "Stash push stores dirty tracked work on the stash stack and resets the working tree toward HEAD.",
+      "difficulty": "easy",
+      "id": "stash_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_easy_01.mp4",
+        "poster": "media/images/stash_easy_01-frame.png",
+        "figure": "media/images/stash_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash show -p stash@{0} | head\n```\ngit stash pop compared with git stash apply...",
+      "choices": [
+        "Pop applies the stash and removes it from the list; apply keeps the entry",
+        "Pop only works on remotes; apply only works locally",
+        "They are identical in every case",
+        "Pop never restores file contents"
+      ],
+      "answer": 0,
+      "explain": "Pop = apply + drop the top stash entry; apply leaves the stash on the stack.",
+      "difficulty": "easy",
+      "id": "stash_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_easy_02.mp4",
+        "poster": "media/images/stash_easy_02-frame.png",
+        "figure": "media/images/stash_easy_02.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -u -- delta4.md\n```\nBy default, git stash includes untracked files.",
+      "answer": false,
+      "explain": "Default stash covers tracked dirty files; use stash push -u to include untracked files.",
+      "difficulty": "easy",
+      "id": "stash_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_easy_03.mp4",
+        "poster": "media/images/stash_easy_03-frame.png",
+        "figure": "media/images/stash_easy_03.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -m \"wip echo5\"\n```\nA common reason to stash is...",
+      "choices": [
+        "You need a clean tree to switch branches or pull mid-edit",
+        "You want to delete .git",
+        "You never plan to restore the changes",
+        "You are editing the syllabus only"
+      ],
+      "answer": 0,
+      "explain": "Stash pauses local work so you can change context, then pop or apply to resume.",
+      "difficulty": "easy",
+      "id": "stash_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_easy_04.mp4",
+        "poster": "media/images/stash_easy_04-frame.png",
+        "figure": "media/images/stash_easy_04.png"
+      }
+    },
+    {
+      "id": "stash_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash list\n```\n`git stash push` mainly...",
+      "choices": [
+        "Deletes all history",
+        "Saves uncommitted tracked changes and cleans the working tree",
+        "Force-pushes origin",
+        "Creates a remote branch"
+      ],
+      "answer": 1,
+      "explain": "Stash stores dirty tracked work.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_easy_05.mp4",
+        "poster": "media/images/stash_easy_05-frame.png",
+        "figure": "media/images/stash_easy_05.png"
+      }
+    },
+    {
+      "id": "stash_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash show -p stash@{0} | head\n```\n`git stash pop` vs `git stash apply`...",
+      "choices": [
+        "Pop applies and drops the entry; apply keeps it",
+        "Pop is remotes only",
+        "They are identical always",
+        "Pop never restores files"
+      ],
+      "answer": 0,
+      "explain": "Pop = apply + drop.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_easy_06.mp4",
+        "poster": "media/images/stash_easy_06-frame.png",
+        "figure": "media/images/stash_easy_06.png"
+      }
+    },
+    {
+      "id": "stash_easy_07",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -u -- hotel8.md\n```\nBy default, `git stash` includes untracked files.",
+      "answer": false,
+      "explain": "Default is tracked dirt; use -u for untracked.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_easy_07.mp4",
+        "poster": "media/images/stash_easy_07-frame.png",
+        "figure": "media/images/stash_easy_07.png"
+      }
+    },
+    {
+      "id": "stash_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -m \"wip india9\"\n```\nA common reason to stash is...",
+      "choices": [
+        "Need a clean tree to switch branches or pull mid-edit",
+        "Delete .git",
+        "Never restore the changes",
+        "Edit the syllabus only"
+      ],
+      "answer": 0,
+      "explain": "Stash pauses local work.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_easy_08.mp4",
+        "poster": "media/images/stash_easy_08-frame.png",
+        "figure": "media/images/stash_easy_08.png"
+      }
+    },
+    {
+      "id": "stash_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash list\n```\n`git stash list` shows...",
+      "choices": [
+        "The stash stack",
+        "Remotes only",
+        "Tags only",
+        "Ignore rules"
+      ],
+      "answer": 0,
+      "explain": "list the stack.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_easy_09.mp4",
+        "poster": "media/images/stash_easy_09-frame.png",
+        "figure": "media/images/stash_easy_09.png"
+      }
+    },
+    {
+      "id": "stash_easy_10",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit stash show -p stash@{0} | head\n```\n`git stash drop` deletes one stash entry without applying it.",
+      "answer": true,
+      "explain": "drop removes without restoring.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_easy_10.mp4",
+        "poster": "media/images/stash_easy_10-frame.png",
+        "figure": "media/images/stash_easy_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -u -- bravo12.md\n```\n# Review context: `~/src/echo` slot 11 variant 1\ngit stash push mainly...",
+      "choices": [
+        "Deletes all commit history",
+        "Saves uncommitted tracked changes and cleans the working tree",
+        "Force-pushes to origin",
+        "Creates a new remote branch"
+      ],
+      "answer": 1,
+      "explain": "Stash push stores dirty tracked work on the stash stack and resets the working tree toward HEAD.",
+      "difficulty": "easy",
+      "id": "stash_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_easy_11.mp4",
+        "poster": "media/images/stash_easy_11-frame.png",
+        "figure": "media/images/stash_easy_11.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -m \"wip charlie13\"\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\ngit stash pop compared with git stash apply...",
+      "choices": [
+        "Pop applies the stash and removes it from the list; apply keeps the entry",
+        "Pop only works on remotes; apply only works locally",
+        "They are identical in every case",
+        "Pop never restores file contents"
+      ],
+      "answer": 0,
+      "explain": "Pop = apply + drop the top stash entry; apply leaves the stash on the stack.",
+      "difficulty": "easy",
+      "id": "stash_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_easy_12.mp4",
+        "poster": "media/images/stash_easy_12-frame.png",
+        "figure": "media/images/stash_easy_12.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit stash list\n```\n# Review context: `./labs/golf` slot 13 variant 1\nBy default, git stash includes untracked files.",
+      "answer": false,
+      "explain": "Default stash covers tracked dirty files; use stash push -u to include untracked files.",
+      "difficulty": "easy",
+      "id": "stash_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_easy_13.mp4",
+        "poster": "media/images/stash_easy_13-frame.png",
+        "figure": "media/images/stash_easy_13.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash show -p stash@{0} | head\n```\n# Review context: `/tmp/gitlab/hotel` slot 14 variant 1\nA common reason to stash is...",
+      "choices": [
+        "You need a clean tree to switch branches or pull mid-edit",
+        "You want to delete .git",
+        "You never plan to restore the changes",
+        "You are editing the syllabus only"
+      ],
+      "answer": 0,
+      "explain": "Stash pauses local work so you can change context, then pop or apply to resume.",
+      "difficulty": "easy",
+      "id": "stash_easy_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_easy_14.mp4",
+        "poster": "media/images/stash_easy_14-frame.png",
+        "figure": "media/images/stash_easy_14.png"
+      }
+    },
+    {
+      "id": "stash_easy_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -u -- foxtrot16.md\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\n`git stash push` mainly...",
+      "choices": [
+        "Deletes all history",
+        "Saves uncommitted tracked changes and cleans the working tree",
+        "Force-pushes origin",
+        "Creates a remote branch"
+      ],
+      "answer": 1,
+      "explain": "Stash stores dirty tracked work.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_easy_15.mp4",
+        "poster": "media/images/stash_easy_15-frame.png",
+        "figure": "media/images/stash_easy_15.png"
+      }
+    },
+    {
+      "id": "stash_easy_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -m \"wip golf17\"\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\n`git stash pop` vs `git stash apply`...",
+      "choices": [
+        "Pop applies and drops the entry; apply keeps it",
+        "Pop is remotes only",
+        "They are identical always",
+        "Pop never restores files"
+      ],
+      "answer": 0,
+      "explain": "Pop = apply + drop.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_easy_16.mp4",
+        "poster": "media/images/stash_easy_16-frame.png",
+        "figure": "media/images/stash_easy_16.png"
+      }
+    },
+    {
+      "id": "stash_easy_17",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit stash list\n```\n# Review context: `~/src/charlie` slot 17 variant 1\nBy default, `git stash` includes untracked files.",
+      "answer": false,
+      "explain": "Default is tracked dirt; use -u for untracked.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_easy_17.mp4",
+        "poster": "media/images/stash_easy_17-frame.png",
+        "figure": "media/images/stash_easy_17.png"
+      }
+    },
+    {
+      "id": "stash_easy_18",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash show -p stash@{0} | head\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\nA common reason to stash is...",
+      "choices": [
+        "Need a clean tree to switch branches or pull mid-edit",
+        "Delete .git",
+        "Never restore the changes",
+        "Edit the syllabus only"
+      ],
+      "answer": 0,
+      "explain": "Stash pauses local work.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_easy_18.mp4",
+        "poster": "media/images/stash_easy_18-frame.png",
+        "figure": "media/images/stash_easy_18.png"
+      }
+    },
+    {
+      "id": "stash_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -u -- juliet20.md\n```\n# Review context: `./labs/echo` slot 19 variant 1\n`git stash list` shows...",
+      "choices": [
+        "The stash stack",
+        "Remotes only",
+        "Tags only",
+        "Ignore rules"
+      ],
+      "answer": 0,
+      "explain": "list the stack.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_easy_19.mp4",
+        "poster": "media/images/stash_easy_19-frame.png",
+        "figure": "media/images/stash_easy_19.png"
+      }
+    },
+    {
+      "id": "stash_easy_20",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -m \"wip alpha21\"\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\n`git stash drop` deletes one stash entry without applying it.",
+      "answer": true,
+      "explain": "drop removes without restoring.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_easy_20.mp4",
+        "poster": "media/images/stash_easy_20-frame.png",
+        "figure": "media/images/stash_easy_20.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash list\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\ngit stash push mainly...",
+      "choices": [
+        "Deletes all commit history",
+        "Saves uncommitted tracked changes and cleans the working tree",
+        "Force-pushes to origin",
+        "Creates a new remote branch"
+      ],
+      "answer": 1,
+      "explain": "Stash push stores dirty tracked work on the stash stack and resets the working tree toward HEAD.",
+      "difficulty": "easy",
+      "id": "stash_easy_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_easy_21.mp4",
+        "poster": "media/images/stash_easy_21-frame.png",
+        "figure": "media/images/stash_easy_21.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash show -p stash@{0} | head\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\ngit stash pop compared with git stash apply...",
+      "choices": [
+        "Pop applies the stash and removes it from the list; apply keeps the entry",
+        "Pop only works on remotes; apply only works locally",
+        "They are identical in every case",
+        "Pop never restores file contents"
+      ],
+      "answer": 0,
+      "explain": "Pop = apply + drop the top stash entry; apply leaves the stash on the stack.",
+      "difficulty": "easy",
+      "id": "stash_easy_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_easy_22.mp4",
+        "poster": "media/images/stash_easy_22-frame.png",
+        "figure": "media/images/stash_easy_22.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -u -- delta24.md\n```\n# Review context: `~/src/alpha` slot 23 variant 1\nBy default, git stash includes untracked files.",
+      "answer": false,
+      "explain": "Default stash covers tracked dirty files; use stash push -u to include untracked files.",
+      "difficulty": "easy",
+      "id": "stash_easy_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_easy_23.mp4",
+        "poster": "media/images/stash_easy_23-frame.png",
+        "figure": "media/images/stash_easy_23.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -m \"wip echo25\"\n```\n# Review context: `/work/chip/bravo` slot 24 variant 1\nA common reason to stash is...",
+      "choices": [
+        "You need a clean tree to switch branches or pull mid-edit",
+        "You want to delete .git",
+        "You never plan to restore the changes",
+        "You are editing the syllabus only"
+      ],
+      "answer": 0,
+      "explain": "Stash pauses local work so you can change context, then pop or apply to resume.",
+      "difficulty": "easy",
+      "id": "stash_easy_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_easy_24.mp4",
+        "poster": "media/images/stash_easy_24-frame.png",
+        "figure": "media/images/stash_easy_24.png"
+      }
+    },
+    {
+      "id": "stash_easy_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash list\n```\n# Review context: `./labs/charlie` slot 25 variant 1\n`git stash push` mainly...",
+      "choices": [
+        "Deletes all history",
+        "Saves uncommitted tracked changes and cleans the working tree",
+        "Force-pushes origin",
+        "Creates a remote branch"
+      ],
+      "answer": 1,
+      "explain": "Stash stores dirty tracked work.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_easy_25.mp4",
+        "poster": "media/images/stash_easy_25-frame.png",
+        "figure": "media/images/stash_easy_25.png"
+      }
+    },
+    {
+      "id": "stash_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash show -p stash@{0} | head\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\n`git stash pop` vs `git stash apply`...",
+      "choices": [
+        "Pop applies and drops the entry; apply keeps it",
+        "Pop is remotes only",
+        "They are identical always",
+        "Pop never restores files"
+      ],
+      "answer": 0,
+      "explain": "Pop = apply + drop.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_easy_26.mp4",
+        "poster": "media/images/stash_easy_26-frame.png",
+        "figure": "media/images/stash_easy_26.png"
+      }
+    },
+    {
+      "id": "stash_easy_27",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -u -- hotel28.md\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\nBy default, `git stash` includes untracked files.",
+      "answer": false,
+      "explain": "Default is tracked dirt; use -u for untracked.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_easy_27.mp4",
+        "poster": "media/images/stash_easy_27-frame.png",
+        "figure": "media/images/stash_easy_27.png"
+      }
+    },
+    {
+      "id": "stash_easy_28",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -m \"wip india29\"\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\nA common reason to stash is...",
+      "choices": [
+        "Need a clean tree to switch branches or pull mid-edit",
+        "Delete .git",
+        "Never restore the changes",
+        "Edit the syllabus only"
+      ],
+      "answer": 0,
+      "explain": "Stash pauses local work.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_easy_28.mp4",
+        "poster": "media/images/stash_easy_28-frame.png",
+        "figure": "media/images/stash_easy_28.png"
+      }
+    },
+    {
+      "id": "stash_easy_29",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash list\n```\n# Review context: `~/src/golf` slot 29 variant 1\n`git stash list` shows...",
+      "choices": [
+        "The stash stack",
+        "Remotes only",
+        "Tags only",
+        "Ignore rules"
+      ],
+      "answer": 0,
+      "explain": "list the stack.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_easy_29.mp4",
+        "poster": "media/images/stash_easy_29-frame.png",
+        "figure": "media/images/stash_easy_29.png"
+      }
+    },
+    {
+      "id": "stash_easy_30",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit stash show -p stash@{0} | head\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\n`git stash drop` deletes one stash entry without applying it.",
+      "answer": true,
+      "explain": "drop removes without restoring.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_easy_30.mp4",
+        "poster": "media/images/stash_easy_30-frame.png",
+        "figure": "media/images/stash_easy_30.png"
+      }
+    },
+    {
+      "id": "stash_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash list\n```\n`git stash push -u` includes...",
+      "choices": [
+        "Untracked files as well as tracked dirt",
+        "Only tags",
+        "Only remotes",
+        "The entire .git"
+      ],
+      "answer": 0,
+      "explain": "-u includes untracked.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_medium_01.mp4",
+        "poster": "media/images/stash_medium_01-frame.png",
+        "figure": "media/images/stash_medium_01.png"
+      }
+    },
+    {
+      "id": "stash_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash show -p stash@{0} | head\n```\n`git stash branch feature/lab2` creates a branch from the stash commit and...",
+      "choices": [
+        "Applies/clears that stash onto it",
+        "Deletes origin",
+        "Tags HEAD",
+        "Starts bisect"
+      ],
+      "answer": 0,
+      "explain": "Useful when pop would conflict.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_medium_02.mp4",
+        "poster": "media/images/stash_medium_02-frame.png",
+        "figure": "media/images/stash_medium_02.png"
+      }
+    },
+    {
+      "id": "stash_medium_03",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -u -- delta4.md\n```\n`git stash apply stash@{{0}}` applies the latest stash without dropping it.",
+      "answer": true,
+      "explain": "Index 0 is the top.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_medium_03.mp4",
+        "poster": "media/images/stash_medium_03-frame.png",
+        "figure": "media/images/stash_medium_03.png"
+      }
+    },
+    {
+      "id": "stash_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -m \"wip echo5\"\n```\nIf pop conflicts, the stash entry is often...",
+      "choices": [
+        "Kept on the stack until you drop it",
+        "Deleted automatically always",
+        "Pushed to origin",
+        "Converted to a tag"
+      ],
+      "answer": 0,
+      "explain": "Conflicted pop may keep the stash.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_medium_04.mp4",
+        "poster": "media/images/stash_medium_04-frame.png",
+        "figure": "media/images/stash_medium_04.png"
+      }
+    },
+    {
+      "id": "stash_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash list\n```\n`git stash push -- notes5.md` stashes...",
+      "choices": [
+        "Only that path",
+        "The whole repo always",
+        "Remotes",
+        "Tags"
+      ],
+      "answer": 0,
+      "explain": "Path-limited stash.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_medium_05.mp4",
+        "poster": "media/images/stash_medium_05-frame.png",
+        "figure": "media/images/stash_medium_05.png"
+      }
+    },
+    {
+      "id": "stash_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash show -p stash@{0} | head\n```\n# Review context: `/work/chip/hotel` slot 6 variant 1\n`git stash push -u` includes...",
+      "choices": [
+        "Untracked files as well as tracked dirt",
+        "Only tags",
+        "Only remotes",
+        "The entire .git"
+      ],
+      "answer": 0,
+      "explain": "-u includes untracked.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_medium_06.mp4",
+        "poster": "media/images/stash_medium_06-frame.png",
+        "figure": "media/images/stash_medium_06.png"
+      }
+    },
+    {
+      "id": "stash_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -u -- hotel8.md\n```\n`git stash branch feature/lab7` creates a branch from the stash commit and...",
+      "choices": [
+        "Applies/clears that stash onto it",
+        "Deletes origin",
+        "Tags HEAD",
+        "Starts bisect"
+      ],
+      "answer": 0,
+      "explain": "Useful when pop would conflict.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_medium_07.mp4",
+        "poster": "media/images/stash_medium_07-frame.png",
+        "figure": "media/images/stash_medium_07.png"
+      }
+    },
+    {
+      "id": "stash_medium_08",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -m \"wip india9\"\n```\n# Review context: `/tmp/gitlab/bravo` slot 8 variant 1\n`git stash apply stash@{{0}}` applies the latest stash without dropping it.",
+      "answer": true,
+      "explain": "Index 0 is the top.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_medium_08.mp4",
+        "poster": "media/images/stash_medium_08-frame.png",
+        "figure": "media/images/stash_medium_08.png"
+      }
+    },
+    {
+      "id": "stash_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash list\n```\n# Review context: `C:/proj/charlie` slot 9 variant 1\nIf pop conflicts, the stash entry is often...",
+      "choices": [
+        "Kept on the stack until you drop it",
+        "Deleted automatically always",
+        "Pushed to origin",
+        "Converted to a tag"
+      ],
+      "answer": 0,
+      "explain": "Conflicted pop may keep the stash.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_medium_09.mp4",
+        "poster": "media/images/stash_medium_09-frame.png",
+        "figure": "media/images/stash_medium_09.png"
+      }
+    },
+    {
+      "id": "stash_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash show -p stash@{0} | head\n```\n`git stash push -- notes10.md` stashes...",
+      "choices": [
+        "Only that path",
+        "The whole repo always",
+        "Remotes",
+        "Tags"
+      ],
+      "answer": 0,
+      "explain": "Path-limited stash.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_medium_10.mp4",
+        "poster": "media/images/stash_medium_10-frame.png",
+        "figure": "media/images/stash_medium_10.png"
+      }
+    },
+    {
+      "id": "stash_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -u -- bravo12.md\n```\n# Review context: `~/src/echo` slot 11 variant 1\n`git stash push -u` includes...",
+      "choices": [
+        "Untracked files as well as tracked dirt",
+        "Only tags",
+        "Only remotes",
+        "The entire .git"
+      ],
+      "answer": 0,
+      "explain": "-u includes untracked.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_medium_11.mp4",
+        "poster": "media/images/stash_medium_11-frame.png",
+        "figure": "media/images/stash_medium_11.png"
+      }
+    },
+    {
+      "id": "stash_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -m \"wip charlie13\"\n```\n`git stash branch feature/lab12` creates a branch from the stash commit and...",
+      "choices": [
+        "Applies/clears that stash onto it",
+        "Deletes origin",
+        "Tags HEAD",
+        "Starts bisect"
+      ],
+      "answer": 0,
+      "explain": "Useful when pop would conflict.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_medium_12.mp4",
+        "poster": "media/images/stash_medium_12-frame.png",
+        "figure": "media/images/stash_medium_12.png"
+      }
+    },
+    {
+      "id": "stash_medium_13",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit stash list\n```\n# Review context: `./labs/golf` slot 13 variant 1\n`git stash apply stash@{{0}}` applies the latest stash without dropping it.",
+      "answer": true,
+      "explain": "Index 0 is the top.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_medium_13.mp4",
+        "poster": "media/images/stash_medium_13-frame.png",
+        "figure": "media/images/stash_medium_13.png"
+      }
+    },
+    {
+      "id": "stash_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash show -p stash@{0} | head\n```\n# Review context: `/tmp/gitlab/hotel` slot 14 variant 1\nIf pop conflicts, the stash entry is often...",
+      "choices": [
+        "Kept on the stack until you drop it",
+        "Deleted automatically always",
+        "Pushed to origin",
+        "Converted to a tag"
+      ],
+      "answer": 0,
+      "explain": "Conflicted pop may keep the stash.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_medium_14.mp4",
+        "poster": "media/images/stash_medium_14-frame.png",
+        "figure": "media/images/stash_medium_14.png"
+      }
+    },
+    {
+      "id": "stash_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -u -- foxtrot16.md\n```\n`git stash push -- notes15.md` stashes...",
+      "choices": [
+        "Only that path",
+        "The whole repo always",
+        "Remotes",
+        "Tags"
+      ],
+      "answer": 0,
+      "explain": "Path-limited stash.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_medium_15.mp4",
+        "poster": "media/images/stash_medium_15-frame.png",
+        "figure": "media/images/stash_medium_15.png"
+      }
+    },
+    {
+      "id": "stash_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -m \"wip golf17\"\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\n`git stash push -u` includes...",
+      "choices": [
+        "Untracked files as well as tracked dirt",
+        "Only tags",
+        "Only remotes",
+        "The entire .git"
+      ],
+      "answer": 0,
+      "explain": "-u includes untracked.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_medium_16.mp4",
+        "poster": "media/images/stash_medium_16-frame.png",
+        "figure": "media/images/stash_medium_16.png"
+      }
+    },
+    {
+      "id": "stash_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash list\n```\n`git stash branch feature/lab17` creates a branch from the stash commit and...",
+      "choices": [
+        "Applies/clears that stash onto it",
+        "Deletes origin",
+        "Tags HEAD",
+        "Starts bisect"
+      ],
+      "answer": 0,
+      "explain": "Useful when pop would conflict.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_medium_17.mp4",
+        "poster": "media/images/stash_medium_17-frame.png",
+        "figure": "media/images/stash_medium_17.png"
+      }
+    },
+    {
+      "id": "stash_medium_18",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit stash show -p stash@{0} | head\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\n`git stash apply stash@{{0}}` applies the latest stash without dropping it.",
+      "answer": true,
+      "explain": "Index 0 is the top.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_medium_18.mp4",
+        "poster": "media/images/stash_medium_18-frame.png",
+        "figure": "media/images/stash_medium_18.png"
+      }
+    },
+    {
+      "id": "stash_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -u -- juliet20.md\n```\n# Review context: `./labs/echo` slot 19 variant 1\nIf pop conflicts, the stash entry is often...",
+      "choices": [
+        "Kept on the stack until you drop it",
+        "Deleted automatically always",
+        "Pushed to origin",
+        "Converted to a tag"
+      ],
+      "answer": 0,
+      "explain": "Conflicted pop may keep the stash.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_medium_19.mp4",
+        "poster": "media/images/stash_medium_19-frame.png",
+        "figure": "media/images/stash_medium_19.png"
+      }
+    },
+    {
+      "id": "stash_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -m \"wip alpha21\"\n```\n`git stash push -- notes20.md` stashes...",
+      "choices": [
+        "Only that path",
+        "The whole repo always",
+        "Remotes",
+        "Tags"
+      ],
+      "answer": 0,
+      "explain": "Path-limited stash.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_medium_20.mp4",
+        "poster": "media/images/stash_medium_20-frame.png",
+        "figure": "media/images/stash_medium_20.png"
+      }
+    },
+    {
+      "id": "stash_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash list\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\n`git stash push -u` includes...",
+      "choices": [
+        "Untracked files as well as tracked dirt",
+        "Only tags",
+        "Only remotes",
+        "The entire .git"
+      ],
+      "answer": 0,
+      "explain": "-u includes untracked.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_medium_21.mp4",
+        "poster": "media/images/stash_medium_21-frame.png",
+        "figure": "media/images/stash_medium_21.png"
+      }
+    },
+    {
+      "id": "stash_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash show -p stash@{0} | head\n```\n`git stash branch feature/lab22` creates a branch from the stash commit and...",
+      "choices": [
+        "Applies/clears that stash onto it",
+        "Deletes origin",
+        "Tags HEAD",
+        "Starts bisect"
+      ],
+      "answer": 0,
+      "explain": "Useful when pop would conflict.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_medium_22.mp4",
+        "poster": "media/images/stash_medium_22-frame.png",
+        "figure": "media/images/stash_medium_22.png"
+      }
+    },
+    {
+      "id": "stash_medium_23",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -u -- delta24.md\n```\n# Review context: `~/src/alpha` slot 23 variant 1\n`git stash apply stash@{{0}}` applies the latest stash without dropping it.",
+      "answer": true,
+      "explain": "Index 0 is the top.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_medium_23.mp4",
+        "poster": "media/images/stash_medium_23-frame.png",
+        "figure": "media/images/stash_medium_23.png"
+      }
+    },
+    {
+      "id": "stash_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -m \"wip echo25\"\n```\n# Review context: `/work/chip/bravo` slot 24 variant 1\nIf pop conflicts, the stash entry is often...",
+      "choices": [
+        "Kept on the stack until you drop it",
+        "Deleted automatically always",
+        "Pushed to origin",
+        "Converted to a tag"
+      ],
+      "answer": 0,
+      "explain": "Conflicted pop may keep the stash.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_medium_24.mp4",
+        "poster": "media/images/stash_medium_24-frame.png",
+        "figure": "media/images/stash_medium_24.png"
+      }
+    },
+    {
+      "id": "stash_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash list\n```\n`git stash push -- notes25.md` stashes...",
+      "choices": [
+        "Only that path",
+        "The whole repo always",
+        "Remotes",
+        "Tags"
+      ],
+      "answer": 0,
+      "explain": "Path-limited stash.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_medium_25.mp4",
+        "poster": "media/images/stash_medium_25-frame.png",
+        "figure": "media/images/stash_medium_25.png"
+      }
+    },
+    {
+      "id": "stash_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash show -p stash@{0} | head\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\n`git stash push -u` includes...",
+      "choices": [
+        "Untracked files as well as tracked dirt",
+        "Only tags",
+        "Only remotes",
+        "The entire .git"
+      ],
+      "answer": 0,
+      "explain": "-u includes untracked.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_medium_26.mp4",
+        "poster": "media/images/stash_medium_26-frame.png",
+        "figure": "media/images/stash_medium_26.png"
+      }
+    },
+    {
+      "id": "stash_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -u -- hotel28.md\n```\n`git stash branch feature/lab27` creates a branch from the stash commit and...",
+      "choices": [
+        "Applies/clears that stash onto it",
+        "Deletes origin",
+        "Tags HEAD",
+        "Starts bisect"
+      ],
+      "answer": 0,
+      "explain": "Useful when pop would conflict.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_medium_27.mp4",
+        "poster": "media/images/stash_medium_27-frame.png",
+        "figure": "media/images/stash_medium_27.png"
+      }
+    },
+    {
+      "id": "stash_medium_28",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -m \"wip india29\"\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\n`git stash apply stash@{{0}}` applies the latest stash without dropping it.",
+      "answer": true,
+      "explain": "Index 0 is the top.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_medium_28.mp4",
+        "poster": "media/images/stash_medium_28-frame.png",
+        "figure": "media/images/stash_medium_28.png"
+      }
+    },
+    {
+      "id": "stash_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash list\n```\n# Review context: `~/src/golf` slot 29 variant 1\nIf pop conflicts, the stash entry is often...",
+      "choices": [
+        "Kept on the stack until you drop it",
+        "Deleted automatically always",
+        "Pushed to origin",
+        "Converted to a tag"
+      ],
+      "answer": 0,
+      "explain": "Conflicted pop may keep the stash.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_medium_29.mp4",
+        "poster": "media/images/stash_medium_29-frame.png",
+        "figure": "media/images/stash_medium_29.png"
+      }
+    },
+    {
+      "id": "stash_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash show -p stash@{0} | head\n```\n`git stash push -- notes30.md` stashes...",
+      "choices": [
+        "Only that path",
+        "The whole repo always",
+        "Remotes",
+        "Tags"
+      ],
+      "answer": 0,
+      "explain": "Path-limited stash.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_medium_30.mp4",
+        "poster": "media/images/stash_medium_30-frame.png",
+        "figure": "media/images/stash_medium_30.png"
+      }
+    },
+    {
+      "id": "stash_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -u -- delta4.md\n```\nStash is implemented as...",
+      "choices": [
+        "Commits reachable from refs/stash",
+        "A remote",
+        "A tag only",
+        "An ignore rule"
+      ],
+      "answer": 0,
+      "explain": "Stash is real commits.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_hard_01.mp4",
+        "poster": "media/images/stash_hard_01-frame.png",
+        "figure": "media/images/stash_hard_01.png"
+      }
+    },
+    {
+      "id": "stash_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -m \"wip echo5\"\n```\n`git stash push --keep-index`...",
+      "choices": [
+        "Stashes unstaged work but leaves the index intact",
+        "Deletes the index",
+        "Force-pushes",
+        "Prunes origin"
+      ],
+      "answer": 0,
+      "explain": "Keep staged work in place.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_hard_02.mp4",
+        "poster": "media/images/stash_hard_02-frame.png",
+        "figure": "media/images/stash_hard_02.png"
+      }
+    },
+    {
+      "id": "stash_hard_03",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit stash list\n```\nA dropped stash can sometimes be recovered via fsck if not garbage-collected.",
+      "answer": true,
+      "explain": "Stash commits may linger until gc.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_hard_03.mp4",
+        "poster": "media/images/stash_hard_03-frame.png",
+        "figure": "media/images/stash_hard_03.png"
+      }
+    },
+    {
+      "id": "stash_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash show -p stash@{0} | head\n```\n`git stash push -a` also includes...",
+      "choices": [
+        "Ignored files (dangerous)",
+        "Only commits",
+        "origin/main",
+        "PR comments"
+      ],
+      "answer": 0,
+      "explain": "-a is all, including ignored.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_hard_04.mp4",
+        "poster": "media/images/stash_hard_04-frame.png",
+        "figure": "media/images/stash_hard_04.png"
+      }
+    },
+    {
+      "id": "stash_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -u -- hotel8.md\n```\nWhy stash before `git pull` with a dirty `notes5.md`...",
+      "choices": [
+        "Pull/merge wants a clean integration; stash parks the dirt",
+        "Pull ignores dirty files always",
+        "Status is enough",
+        "Tags replace stash"
+      ],
+      "answer": 0,
+      "explain": "Dirty merge is painful.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_hard_05.mp4",
+        "poster": "media/images/stash_hard_05-frame.png",
+        "figure": "media/images/stash_hard_05.png"
+      }
+    },
+    {
+      "id": "stash_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -m \"wip india9\"\n```\n# Review context: `/work/chip/hotel` slot 6 variant 1\nStash is implemented as...",
+      "choices": [
+        "Commits reachable from refs/stash",
+        "A remote",
+        "A tag only",
+        "An ignore rule"
+      ],
+      "answer": 0,
+      "explain": "Stash is real commits.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_hard_06.mp4",
+        "poster": "media/images/stash_hard_06-frame.png",
+        "figure": "media/images/stash_hard_06.png"
+      }
+    },
+    {
+      "id": "stash_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash list\n```\n# Review context: `./labs/alpha` slot 7 variant 1\n`git stash push --keep-index`...",
+      "choices": [
+        "Stashes unstaged work but leaves the index intact",
+        "Deletes the index",
+        "Force-pushes",
+        "Prunes origin"
+      ],
+      "answer": 0,
+      "explain": "Keep staged work in place.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_hard_07.mp4",
+        "poster": "media/images/stash_hard_07-frame.png",
+        "figure": "media/images/stash_hard_07.png"
+      }
+    },
+    {
+      "id": "stash_hard_08",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit stash show -p stash@{0} | head\n```\n# Review context: `/tmp/gitlab/bravo` slot 8 variant 1\nA dropped stash can sometimes be recovered via fsck if not garbage-collected.",
+      "answer": true,
+      "explain": "Stash commits may linger until gc.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_hard_08.mp4",
+        "poster": "media/images/stash_hard_08-frame.png",
+        "figure": "media/images/stash_hard_08.png"
+      }
+    },
+    {
+      "id": "stash_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -u -- bravo12.md\n```\n# Review context: `C:/proj/charlie` slot 9 variant 1\n`git stash push -a` also includes...",
+      "choices": [
+        "Ignored files (dangerous)",
+        "Only commits",
+        "origin/main",
+        "PR comments"
+      ],
+      "answer": 0,
+      "explain": "-a is all, including ignored.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_hard_09.mp4",
+        "poster": "media/images/stash_hard_09-frame.png",
+        "figure": "media/images/stash_hard_09.png"
+      }
+    },
+    {
+      "id": "stash_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -m \"wip charlie13\"\n```\nWhy stash before `git pull` with a dirty `notes10.md`...",
+      "choices": [
+        "Pull/merge wants a clean integration; stash parks the dirt",
+        "Pull ignores dirty files always",
+        "Status is enough",
+        "Tags replace stash"
+      ],
+      "answer": 0,
+      "explain": "Dirty merge is painful.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_hard_10.mp4",
+        "poster": "media/images/stash_hard_10-frame.png",
+        "figure": "media/images/stash_hard_10.png"
+      }
+    },
+    {
+      "id": "stash_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash list\n```\n# Review context: `~/src/echo` slot 11 variant 1\nStash is implemented as...",
+      "choices": [
+        "Commits reachable from refs/stash",
+        "A remote",
+        "A tag only",
+        "An ignore rule"
+      ],
+      "answer": 0,
+      "explain": "Stash is real commits.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_hard_11.mp4",
+        "poster": "media/images/stash_hard_11-frame.png",
+        "figure": "media/images/stash_hard_11.png"
+      }
+    },
+    {
+      "id": "stash_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash show -p stash@{0} | head\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\n`git stash push --keep-index`...",
+      "choices": [
+        "Stashes unstaged work but leaves the index intact",
+        "Deletes the index",
+        "Force-pushes",
+        "Prunes origin"
+      ],
+      "answer": 0,
+      "explain": "Keep staged work in place.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_hard_12.mp4",
+        "poster": "media/images/stash_hard_12-frame.png",
+        "figure": "media/images/stash_hard_12.png"
+      }
+    },
+    {
+      "id": "stash_hard_13",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -u -- foxtrot16.md\n```\n# Review context: `./labs/golf` slot 13 variant 1\nA dropped stash can sometimes be recovered via fsck if not garbage-collected.",
+      "answer": true,
+      "explain": "Stash commits may linger until gc.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_hard_13.mp4",
+        "poster": "media/images/stash_hard_13-frame.png",
+        "figure": "media/images/stash_hard_13.png"
+      }
+    },
+    {
+      "id": "stash_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -m \"wip golf17\"\n```\n# Review context: `/tmp/gitlab/hotel` slot 14 variant 1\n`git stash push -a` also includes...",
+      "choices": [
+        "Ignored files (dangerous)",
+        "Only commits",
+        "origin/main",
+        "PR comments"
+      ],
+      "answer": 0,
+      "explain": "-a is all, including ignored.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_hard_14.mp4",
+        "poster": "media/images/stash_hard_14-frame.png",
+        "figure": "media/images/stash_hard_14.png"
+      }
+    },
+    {
+      "id": "stash_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash list\n```\nWhy stash before `git pull` with a dirty `notes15.md`...",
+      "choices": [
+        "Pull/merge wants a clean integration; stash parks the dirt",
+        "Pull ignores dirty files always",
+        "Status is enough",
+        "Tags replace stash"
+      ],
+      "answer": 0,
+      "explain": "Dirty merge is painful.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_hard_15.mp4",
+        "poster": "media/images/stash_hard_15-frame.png",
+        "figure": "media/images/stash_hard_15.png"
+      }
+    },
+    {
+      "id": "stash_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash show -p stash@{0} | head\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\nStash is implemented as...",
+      "choices": [
+        "Commits reachable from refs/stash",
+        "A remote",
+        "A tag only",
+        "An ignore rule"
+      ],
+      "answer": 0,
+      "explain": "Stash is real commits.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_hard_16.mp4",
+        "poster": "media/images/stash_hard_16-frame.png",
+        "figure": "media/images/stash_hard_16.png"
+      }
+    },
+    {
+      "id": "stash_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -u -- juliet20.md\n```\n# Review context: `~/src/charlie` slot 17 variant 1\n`git stash push --keep-index`...",
+      "choices": [
+        "Stashes unstaged work but leaves the index intact",
+        "Deletes the index",
+        "Force-pushes",
+        "Prunes origin"
+      ],
+      "answer": 0,
+      "explain": "Keep staged work in place.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_hard_17.mp4",
+        "poster": "media/images/stash_hard_17-frame.png",
+        "figure": "media/images/stash_hard_17.png"
+      }
+    },
+    {
+      "id": "stash_hard_18",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -m \"wip alpha21\"\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\nA dropped stash can sometimes be recovered via fsck if not garbage-collected.",
+      "answer": true,
+      "explain": "Stash commits may linger until gc.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_hard_18.mp4",
+        "poster": "media/images/stash_hard_18-frame.png",
+        "figure": "media/images/stash_hard_18.png"
+      }
+    },
+    {
+      "id": "stash_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash list\n```\n# Review context: `./labs/echo` slot 19 variant 1\n`git stash push -a` also includes...",
+      "choices": [
+        "Ignored files (dangerous)",
+        "Only commits",
+        "origin/main",
+        "PR comments"
+      ],
+      "answer": 0,
+      "explain": "-a is all, including ignored.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_hard_19.mp4",
+        "poster": "media/images/stash_hard_19-frame.png",
+        "figure": "media/images/stash_hard_19.png"
+      }
+    },
+    {
+      "id": "stash_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash show -p stash@{0} | head\n```\nWhy stash before `git pull` with a dirty `notes20.md`...",
+      "choices": [
+        "Pull/merge wants a clean integration; stash parks the dirt",
+        "Pull ignores dirty files always",
+        "Status is enough",
+        "Tags replace stash"
+      ],
+      "answer": 0,
+      "explain": "Dirty merge is painful.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_hard_20.mp4",
+        "poster": "media/images/stash_hard_20-frame.png",
+        "figure": "media/images/stash_hard_20.png"
+      }
+    },
+    {
+      "id": "stash_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -u -- delta24.md\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\nStash is implemented as...",
+      "choices": [
+        "Commits reachable from refs/stash",
+        "A remote",
+        "A tag only",
+        "An ignore rule"
+      ],
+      "answer": 0,
+      "explain": "Stash is real commits.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_hard_21.mp4",
+        "poster": "media/images/stash_hard_21-frame.png",
+        "figure": "media/images/stash_hard_21.png"
+      }
+    },
+    {
+      "id": "stash_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -m \"wip echo25\"\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\n`git stash push --keep-index`...",
+      "choices": [
+        "Stashes unstaged work but leaves the index intact",
+        "Deletes the index",
+        "Force-pushes",
+        "Prunes origin"
+      ],
+      "answer": 0,
+      "explain": "Keep staged work in place.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_hard_22.mp4",
+        "poster": "media/images/stash_hard_22-frame.png",
+        "figure": "media/images/stash_hard_22.png"
+      }
+    },
+    {
+      "id": "stash_hard_23",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit stash list\n```\n# Review context: `~/src/alpha` slot 23 variant 1\nA dropped stash can sometimes be recovered via fsck if not garbage-collected.",
+      "answer": true,
+      "explain": "Stash commits may linger until gc.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_hard_23.mp4",
+        "poster": "media/images/stash_hard_23-frame.png",
+        "figure": "media/images/stash_hard_23.png"
+      }
+    },
+    {
+      "id": "stash_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash show -p stash@{0} | head\n```\n# Review context: `/work/chip/bravo` slot 24 variant 1\n`git stash push -a` also includes...",
+      "choices": [
+        "Ignored files (dangerous)",
+        "Only commits",
+        "origin/main",
+        "PR comments"
+      ],
+      "answer": 0,
+      "explain": "-a is all, including ignored.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_hard_24.mp4",
+        "poster": "media/images/stash_hard_24-frame.png",
+        "figure": "media/images/stash_hard_24.png"
+      }
+    },
+    {
+      "id": "stash_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -u -- hotel28.md\n```\nWhy stash before `git pull` with a dirty `notes25.md`...",
+      "choices": [
+        "Pull/merge wants a clean integration; stash parks the dirt",
+        "Pull ignores dirty files always",
+        "Status is enough",
+        "Tags replace stash"
+      ],
+      "answer": 0,
+      "explain": "Dirty merge is painful.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_hard_25.mp4",
+        "poster": "media/images/stash_hard_25-frame.png",
+        "figure": "media/images/stash_hard_25.png"
+      }
+    },
+    {
+      "id": "stash_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -m \"wip india29\"\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\nStash is implemented as...",
+      "choices": [
+        "Commits reachable from refs/stash",
+        "A remote",
+        "A tag only",
+        "An ignore rule"
+      ],
+      "answer": 0,
+      "explain": "Stash is real commits.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_hard_26.mp4",
+        "poster": "media/images/stash_hard_26-frame.png",
+        "figure": "media/images/stash_hard_26.png"
+      }
+    },
+    {
+      "id": "stash_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash list\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\n`git stash push --keep-index`...",
+      "choices": [
+        "Stashes unstaged work but leaves the index intact",
+        "Deletes the index",
+        "Force-pushes",
+        "Prunes origin"
+      ],
+      "answer": 0,
+      "explain": "Keep staged work in place.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_hard_27.mp4",
+        "poster": "media/images/stash_hard_27-frame.png",
+        "figure": "media/images/stash_hard_27.png"
+      }
+    },
+    {
+      "id": "stash_hard_28",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit stash show -p stash@{0} | head\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\nA dropped stash can sometimes be recovered via fsck if not garbage-collected.",
+      "answer": true,
+      "explain": "Stash commits may linger until gc.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_hard_28.mp4",
+        "poster": "media/images/stash_hard_28-frame.png",
+        "figure": "media/images/stash_hard_28.png"
+      }
+    },
+    {
+      "id": "stash_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -u -- bravo32.md\n```\n# Review context: `~/src/golf` slot 29 variant 1\n`git stash push -a` also includes...",
+      "choices": [
+        "Ignored files (dangerous)",
+        "Only commits",
+        "origin/main",
+        "PR comments"
+      ],
+      "answer": 0,
+      "explain": "-a is all, including ignored.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_hard_29.mp4",
+        "poster": "media/images/stash_hard_29-frame.png",
+        "figure": "media/images/stash_hard_29.png"
+      }
+    },
+    {
+      "id": "stash_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit stash push -m \"wip charlie33\"\n```\nWhy stash before `git pull` with a dirty `notes30.md`...",
+      "choices": [
+        "Pull/merge wants a clean integration; stash parks the dirt",
+        "Pull ignores dirty files always",
+        "Status is enough",
+        "Tags replace stash"
+      ],
+      "answer": 0,
+      "explain": "Dirty merge is painful.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/stash_hard_30.mp4",
+        "poster": "media/images/stash_hard_30-frame.png",
+        "figure": "media/images/stash_hard_30.png"
+      }
+    }
+  ]
+}
