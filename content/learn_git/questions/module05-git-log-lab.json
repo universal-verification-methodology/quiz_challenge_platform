@@ -1,0 +1,1680 @@
+{
+  "module": "module05-git-log-lab",
+  "title": "git log options",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline --graph --all | head -n 7\n```\ngit log --oneline shows...",
+      "choices": [
+        "Only remote URLs",
+        "A short hash plus each commit subject",
+        "Your editor theme",
+        "Only untracked files"
+      ],
+      "answer": 1,
+      "explain": "Oneline is the quick scan view: abbreviated hash and subject.",
+      "difficulty": "easy",
+      "id": "log_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_easy_01.mp4",
+        "poster": "media/images/log_easy_01-frame.png",
+        "figure": "media/images/log_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -S'charlie' --oneline\n```\ngit log --oneline --graph --all is mainly for...",
+      "choices": [
+        "Deleting branches",
+        "Seeing branch topology in a compact history",
+        "Changing your Git password",
+        "Ignoring build/"
+      ],
+      "answer": 1,
+      "explain": "Graph draws ASCII topology; --all includes other refs, not only the current branch tip.",
+      "difficulty": "easy",
+      "id": "log_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_easy_02.mp4",
+        "poster": "media/images/log_easy_02-frame.png",
+        "figure": "media/images/log_easy_02.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log origin/main..HEAD --oneline\n```\ngit log --oneline -- notes.md limits history to...",
+      "choices": [
+        "Commits that touched notes.md",
+        "Every commit on every remote forever",
+        "Only merge commits",
+        "Commits with empty messages"
+      ],
+      "answer": 0,
+      "explain": "A path after -- filters to commits that changed that path.",
+      "difficulty": "easy",
+      "id": "log_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_easy_03.mp4",
+        "poster": "media/images/log_easy_03-frame.png",
+        "figure": "media/images/log_easy_03.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -- echo5.md\n```\ngit log -3 (or --oneline -3) limits how many commits are shown.",
+      "answer": true,
+      "explain": "A count flag like -3 or -n 3 truncates the listing to recent commits.",
+      "difficulty": "easy",
+      "id": "log_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_easy_04.mp4",
+        "poster": "media/images/log_easy_04-frame.png",
+        "figure": "media/images/log_easy_04.png"
+      }
+    },
+    {
+      "id": "log_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline --graph --all | head -n 11\n```\n`git log --oneline --graph --all` is mainly for...",
+      "choices": [
+        "Deleting branches",
+        "Seeing branch topology in compact history",
+        "Changing your Git password",
+        "Ignoring build/"
+      ],
+      "answer": 1,
+      "explain": "Graph plus --all shows other refs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_easy_05.mp4",
+        "poster": "media/images/log_easy_05-frame.png",
+        "figure": "media/images/log_easy_05.png"
+      }
+    },
+    {
+      "id": "log_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -S'golf' --oneline\n```\n`git log --oneline -- notes6.md` limits history to...",
+      "choices": [
+        "Commits that touched notes6.md",
+        "Every remote forever",
+        "Only merge commits",
+        "Empty messages"
+      ],
+      "answer": 0,
+      "explain": "A path after -- filters by path.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_easy_06.mp4",
+        "poster": "media/images/log_easy_06-frame.png",
+        "figure": "media/images/log_easy_06.png"
+      }
+    },
+    {
+      "id": "log_easy_07",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log origin/main..HEAD --oneline\n```\n`git log -2` limits how many commits are shown.",
+      "answer": true,
+      "explain": "A count truncates the listing.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_easy_07.mp4",
+        "poster": "media/images/log_easy_07-frame.png",
+        "figure": "media/images/log_easy_07.png"
+      }
+    },
+    {
+      "id": "log_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -- india9.md\n```\n`git log -p` includes...",
+      "choices": [
+        "Patches (diffs) per commit",
+        "Only remotes",
+        "Stash drop",
+        "Tags deleted"
+      ],
+      "answer": 0,
+      "explain": "-p is patch.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_easy_08.mp4",
+        "poster": "media/images/log_easy_08-frame.png",
+        "figure": "media/images/log_easy_08.png"
+      }
+    },
+    {
+      "id": "log_easy_09",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline --graph --all | head -n 15\n```\n`git log origin/main..HEAD` shows commits on HEAD not in origin/main.",
+      "answer": true,
+      "explain": "Dot-dot is a reachability range.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_easy_09.mp4",
+        "poster": "media/images/log_easy_09-frame.png",
+        "figure": "media/images/log_easy_09.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -S'alpha' --oneline\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\ngit log --oneline shows...",
+      "choices": [
+        "Only remote URLs",
+        "A short hash plus each commit subject",
+        "Your editor theme",
+        "Only untracked files"
+      ],
+      "answer": 1,
+      "explain": "Oneline is the quick scan view: abbreviated hash and subject.",
+      "difficulty": "easy",
+      "id": "log_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_easy_10.mp4",
+        "poster": "media/images/log_easy_10-frame.png",
+        "figure": "media/images/log_easy_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log origin/main..HEAD --oneline\n```\n# Review context: `~/src/echo` slot 11 variant 1\ngit log --oneline --graph --all is mainly for...",
+      "choices": [
+        "Deleting branches",
+        "Seeing branch topology in a compact history",
+        "Changing your Git password",
+        "Ignoring build/"
+      ],
+      "answer": 1,
+      "explain": "Graph draws ASCII topology; --all includes other refs, not only the current branch tip.",
+      "difficulty": "easy",
+      "id": "log_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_easy_11.mp4",
+        "poster": "media/images/log_easy_11-frame.png",
+        "figure": "media/images/log_easy_11.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -- charlie13.md\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\ngit log --oneline -- notes.md limits history to...",
+      "choices": [
+        "Commits that touched notes.md",
+        "Every commit on every remote forever",
+        "Only merge commits",
+        "Commits with empty messages"
+      ],
+      "answer": 0,
+      "explain": "A path after -- filters to commits that changed that path.",
+      "difficulty": "easy",
+      "id": "log_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_easy_12.mp4",
+        "poster": "media/images/log_easy_12-frame.png",
+        "figure": "media/images/log_easy_12.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline --graph --all | head -n 7\n```\n# Review context: `./labs/golf` slot 13 variant 1\ngit log -3 (or --oneline -3) limits how many commits are shown.",
+      "answer": true,
+      "explain": "A count flag like -3 or -n 3 truncates the listing to recent commits.",
+      "difficulty": "easy",
+      "id": "log_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_easy_13.mp4",
+        "poster": "media/images/log_easy_13-frame.png",
+        "figure": "media/images/log_easy_13.png"
+      }
+    },
+    {
+      "id": "log_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -S'echo' --oneline\n```\n# Review context: `/tmp/gitlab/hotel` slot 14 variant 1\n`git log --oneline --graph --all` is mainly for...",
+      "choices": [
+        "Deleting branches",
+        "Seeing branch topology in compact history",
+        "Changing your Git password",
+        "Ignoring build/"
+      ],
+      "answer": 1,
+      "explain": "Graph plus --all shows other refs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_easy_14.mp4",
+        "poster": "media/images/log_easy_14-frame.png",
+        "figure": "media/images/log_easy_14.png"
+      }
+    },
+    {
+      "id": "log_easy_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log origin/main..HEAD --oneline\n```\n`git log --oneline -- notes15.md` limits history to...",
+      "choices": [
+        "Commits that touched notes15.md",
+        "Every remote forever",
+        "Only merge commits",
+        "Empty messages"
+      ],
+      "answer": 0,
+      "explain": "A path after -- filters by path.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_easy_15.mp4",
+        "poster": "media/images/log_easy_15-frame.png",
+        "figure": "media/images/log_easy_15.png"
+      }
+    },
+    {
+      "id": "log_easy_16",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -- golf17.md\n```\n`git log -4` limits how many commits are shown.",
+      "answer": true,
+      "explain": "A count truncates the listing.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_easy_16.mp4",
+        "poster": "media/images/log_easy_16-frame.png",
+        "figure": "media/images/log_easy_16.png"
+      }
+    },
+    {
+      "id": "log_easy_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline --graph --all | head -n 11\n```\n# Review context: `~/src/charlie` slot 17 variant 1\n`git log -p` includes...",
+      "choices": [
+        "Patches (diffs) per commit",
+        "Only remotes",
+        "Stash drop",
+        "Tags deleted"
+      ],
+      "answer": 0,
+      "explain": "-p is patch.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_easy_17.mp4",
+        "poster": "media/images/log_easy_17-frame.png",
+        "figure": "media/images/log_easy_17.png"
+      }
+    },
+    {
+      "id": "log_easy_18",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log -S'india' --oneline\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\n`git log origin/main..HEAD` shows commits on HEAD not in origin/main.",
+      "answer": true,
+      "explain": "Dot-dot is a reachability range.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_easy_18.mp4",
+        "poster": "media/images/log_easy_18-frame.png",
+        "figure": "media/images/log_easy_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log origin/main..HEAD --oneline\n```\n# Review context: `./labs/echo` slot 19 variant 1\ngit log --oneline shows...",
+      "choices": [
+        "Only remote URLs",
+        "A short hash plus each commit subject",
+        "Your editor theme",
+        "Only untracked files"
+      ],
+      "answer": 1,
+      "explain": "Oneline is the quick scan view: abbreviated hash and subject.",
+      "difficulty": "easy",
+      "id": "log_easy_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_easy_19.mp4",
+        "poster": "media/images/log_easy_19-frame.png",
+        "figure": "media/images/log_easy_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -- alpha21.md\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\ngit log --oneline --graph --all is mainly for...",
+      "choices": [
+        "Deleting branches",
+        "Seeing branch topology in a compact history",
+        "Changing your Git password",
+        "Ignoring build/"
+      ],
+      "answer": 1,
+      "explain": "Graph draws ASCII topology; --all includes other refs, not only the current branch tip.",
+      "difficulty": "easy",
+      "id": "log_easy_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_easy_20.mp4",
+        "poster": "media/images/log_easy_20-frame.png",
+        "figure": "media/images/log_easy_20.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline --graph --all | head -n 15\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\ngit log --oneline -- notes.md limits history to...",
+      "choices": [
+        "Commits that touched notes.md",
+        "Every commit on every remote forever",
+        "Only merge commits",
+        "Commits with empty messages"
+      ],
+      "answer": 0,
+      "explain": "A path after -- filters to commits that changed that path.",
+      "difficulty": "easy",
+      "id": "log_easy_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_easy_21.mp4",
+        "poster": "media/images/log_easy_21-frame.png",
+        "figure": "media/images/log_easy_21.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log -S'charlie' --oneline\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\ngit log -3 (or --oneline -3) limits how many commits are shown.",
+      "answer": true,
+      "explain": "A count flag like -3 or -n 3 truncates the listing to recent commits.",
+      "difficulty": "easy",
+      "id": "log_easy_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_easy_22.mp4",
+        "poster": "media/images/log_easy_22-frame.png",
+        "figure": "media/images/log_easy_22.png"
+      }
+    },
+    {
+      "id": "log_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log origin/main..HEAD --oneline\n```\n# Review context: `~/src/alpha` slot 23 variant 1\n`git log --oneline --graph --all` is mainly for...",
+      "choices": [
+        "Deleting branches",
+        "Seeing branch topology in compact history",
+        "Changing your Git password",
+        "Ignoring build/"
+      ],
+      "answer": 1,
+      "explain": "Graph plus --all shows other refs.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_easy_23.mp4",
+        "poster": "media/images/log_easy_23-frame.png",
+        "figure": "media/images/log_easy_23.png"
+      }
+    },
+    {
+      "id": "log_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -- echo25.md\n```\n`git log --oneline -- notes24.md` limits history to...",
+      "choices": [
+        "Commits that touched notes24.md",
+        "Every remote forever",
+        "Only merge commits",
+        "Empty messages"
+      ],
+      "answer": 0,
+      "explain": "A path after -- filters by path.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_easy_24.mp4",
+        "poster": "media/images/log_easy_24-frame.png",
+        "figure": "media/images/log_easy_24.png"
+      }
+    },
+    {
+      "id": "log_easy_25",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline --graph --all | head -n 7\n```\n`git log -6` limits how many commits are shown.",
+      "answer": true,
+      "explain": "A count truncates the listing.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_easy_25.mp4",
+        "poster": "media/images/log_easy_25-frame.png",
+        "figure": "media/images/log_easy_25.png"
+      }
+    },
+    {
+      "id": "log_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -S'golf' --oneline\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\n`git log -p` includes...",
+      "choices": [
+        "Patches (diffs) per commit",
+        "Only remotes",
+        "Stash drop",
+        "Tags deleted"
+      ],
+      "answer": 0,
+      "explain": "-p is patch.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_easy_26.mp4",
+        "poster": "media/images/log_easy_26-frame.png",
+        "figure": "media/images/log_easy_26.png"
+      }
+    },
+    {
+      "id": "log_easy_27",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log origin/main..HEAD --oneline\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\n`git log origin/main..HEAD` shows commits on HEAD not in origin/main.",
+      "answer": true,
+      "explain": "Dot-dot is a reachability range.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_easy_27.mp4",
+        "poster": "media/images/log_easy_27-frame.png",
+        "figure": "media/images/log_easy_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -- india29.md\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\ngit log --oneline shows...",
+      "choices": [
+        "Only remote URLs",
+        "A short hash plus each commit subject",
+        "Your editor theme",
+        "Only untracked files"
+      ],
+      "answer": 1,
+      "explain": "Oneline is the quick scan view: abbreviated hash and subject.",
+      "difficulty": "easy",
+      "id": "log_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_easy_28.mp4",
+        "poster": "media/images/log_easy_28-frame.png",
+        "figure": "media/images/log_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline --graph --all | head -n 11\n```\n# Review context: `~/src/golf` slot 29 variant 1\ngit log --oneline --graph --all is mainly for...",
+      "choices": [
+        "Deleting branches",
+        "Seeing branch topology in a compact history",
+        "Changing your Git password",
+        "Ignoring build/"
+      ],
+      "answer": 1,
+      "explain": "Graph draws ASCII topology; --all includes other refs, not only the current branch tip.",
+      "difficulty": "easy",
+      "id": "log_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_easy_29.mp4",
+        "poster": "media/images/log_easy_29-frame.png",
+        "figure": "media/images/log_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -S'alpha' --oneline\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\ngit log --oneline -- notes.md limits history to...",
+      "choices": [
+        "Commits that touched notes.md",
+        "Every commit on every remote forever",
+        "Only merge commits",
+        "Commits with empty messages"
+      ],
+      "answer": 0,
+      "explain": "A path after -- filters to commits that changed that path.",
+      "difficulty": "easy",
+      "id": "log_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_easy_30.mp4",
+        "poster": "media/images/log_easy_30-frame.png",
+        "figure": "media/images/log_easy_30.png"
+      }
+    },
+    {
+      "id": "log_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline --graph --all | head -n 7\n```\n`git log --since='2 weeks ago'` filters by...",
+      "choices": [
+        "Author date",
+        "Remote name",
+        "Tag annotation only",
+        "Stash index"
+      ],
+      "answer": 0,
+      "explain": "Date filters.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_medium_01.mp4",
+        "poster": "media/images/log_medium_01-frame.png",
+        "figure": "media/images/log_medium_01.png"
+      }
+    },
+    {
+      "id": "log_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -S'charlie' --oneline\n```\n`git log --merges` lists...",
+      "choices": [
+        "Merge commits",
+        "Only root commits",
+        "Untracked files",
+        "Ignored VCD files"
+      ],
+      "answer": 0,
+      "explain": "--merges selects merges.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_medium_02.mp4",
+        "poster": "media/images/log_medium_02-frame.png",
+        "figure": "media/images/log_medium_02.png"
+      }
+    },
+    {
+      "id": "log_medium_03",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log origin/main..HEAD --oneline\n```\n`git log --first-parent` on main follows...",
+      "choices": [
+        "The mainline parent only",
+        "All cherry-picks as first-class",
+        "Stash",
+        "Submodule SHAs"
+      ],
+      "answer": 0,
+      "explain": "First-parent skips merged-in detail.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_medium_03.mp4",
+        "poster": "media/images/log_medium_03-frame.png",
+        "figure": "media/images/log_medium_03.png"
+      }
+    },
+    {
+      "id": "log_medium_04",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -- echo5.md\n```\n`git log -S'lab4'` looks for commits that added or removed that string.",
+      "answer": true,
+      "explain": "Pickaxe search.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_medium_04.mp4",
+        "poster": "media/images/log_medium_04-frame.png",
+        "figure": "media/images/log_medium_04.png"
+      }
+    },
+    {
+      "id": "log_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline --graph --all | head -n 11\n```\n`git log --grep='lab5'` searches...",
+      "choices": [
+        "Commit messages",
+        "Working tree only",
+        "origin URLs",
+        "SSH keys"
+      ],
+      "answer": 0,
+      "explain": "grep is message search.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_medium_05.mp4",
+        "poster": "media/images/log_medium_05-frame.png",
+        "figure": "media/images/log_medium_05.png"
+      }
+    },
+    {
+      "id": "log_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -S'golf' --oneline\n```\n# Review context: `/work/chip/hotel` slot 6 variant 1\n`git log --since='2 weeks ago'` filters by...",
+      "choices": [
+        "Author date",
+        "Remote name",
+        "Tag annotation only",
+        "Stash index"
+      ],
+      "answer": 0,
+      "explain": "Date filters.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_medium_06.mp4",
+        "poster": "media/images/log_medium_06-frame.png",
+        "figure": "media/images/log_medium_06.png"
+      }
+    },
+    {
+      "id": "log_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log origin/main..HEAD --oneline\n```\n# Review context: `./labs/alpha` slot 7 variant 1\n`git log --merges` lists...",
+      "choices": [
+        "Merge commits",
+        "Only root commits",
+        "Untracked files",
+        "Ignored VCD files"
+      ],
+      "answer": 0,
+      "explain": "--merges selects merges.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_medium_07.mp4",
+        "poster": "media/images/log_medium_07-frame.png",
+        "figure": "media/images/log_medium_07.png"
+      }
+    },
+    {
+      "id": "log_medium_08",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -- india9.md\n```\n# Review context: `/tmp/gitlab/bravo` slot 8 variant 1\n`git log --first-parent` on main follows...",
+      "choices": [
+        "The mainline parent only",
+        "All cherry-picks as first-class",
+        "Stash",
+        "Submodule SHAs"
+      ],
+      "answer": 0,
+      "explain": "First-parent skips merged-in detail.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_medium_08.mp4",
+        "poster": "media/images/log_medium_08-frame.png",
+        "figure": "media/images/log_medium_08.png"
+      }
+    },
+    {
+      "id": "log_medium_09",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline --graph --all | head -n 15\n```\n`git log -S'lab9'` looks for commits that added or removed that string.",
+      "answer": true,
+      "explain": "Pickaxe search.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_medium_09.mp4",
+        "poster": "media/images/log_medium_09-frame.png",
+        "figure": "media/images/log_medium_09.png"
+      }
+    },
+    {
+      "id": "log_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -S'alpha' --oneline\n```\n`git log --grep='lab10'` searches...",
+      "choices": [
+        "Commit messages",
+        "Working tree only",
+        "origin URLs",
+        "SSH keys"
+      ],
+      "answer": 0,
+      "explain": "grep is message search.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_medium_10.mp4",
+        "poster": "media/images/log_medium_10-frame.png",
+        "figure": "media/images/log_medium_10.png"
+      }
+    },
+    {
+      "id": "log_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log origin/main..HEAD --oneline\n```\n# Review context: `~/src/echo` slot 11 variant 1\n`git log --since='2 weeks ago'` filters by...",
+      "choices": [
+        "Author date",
+        "Remote name",
+        "Tag annotation only",
+        "Stash index"
+      ],
+      "answer": 0,
+      "explain": "Date filters.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_medium_11.mp4",
+        "poster": "media/images/log_medium_11-frame.png",
+        "figure": "media/images/log_medium_11.png"
+      }
+    },
+    {
+      "id": "log_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -- charlie13.md\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\n`git log --merges` lists...",
+      "choices": [
+        "Merge commits",
+        "Only root commits",
+        "Untracked files",
+        "Ignored VCD files"
+      ],
+      "answer": 0,
+      "explain": "--merges selects merges.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_medium_12.mp4",
+        "poster": "media/images/log_medium_12-frame.png",
+        "figure": "media/images/log_medium_12.png"
+      }
+    },
+    {
+      "id": "log_medium_13",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline --graph --all | head -n 7\n```\n# Review context: `./labs/golf` slot 13 variant 1\n`git log --first-parent` on main follows...",
+      "choices": [
+        "The mainline parent only",
+        "All cherry-picks as first-class",
+        "Stash",
+        "Submodule SHAs"
+      ],
+      "answer": 0,
+      "explain": "First-parent skips merged-in detail.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_medium_13.mp4",
+        "poster": "media/images/log_medium_13-frame.png",
+        "figure": "media/images/log_medium_13.png"
+      }
+    },
+    {
+      "id": "log_medium_14",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log -S'echo' --oneline\n```\n`git log -S'lab14'` looks for commits that added or removed that string.",
+      "answer": true,
+      "explain": "Pickaxe search.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_medium_14.mp4",
+        "poster": "media/images/log_medium_14-frame.png",
+        "figure": "media/images/log_medium_14.png"
+      }
+    },
+    {
+      "id": "log_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log origin/main..HEAD --oneline\n```\n`git log --grep='lab15'` searches...",
+      "choices": [
+        "Commit messages",
+        "Working tree only",
+        "origin URLs",
+        "SSH keys"
+      ],
+      "answer": 0,
+      "explain": "grep is message search.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_medium_15.mp4",
+        "poster": "media/images/log_medium_15-frame.png",
+        "figure": "media/images/log_medium_15.png"
+      }
+    },
+    {
+      "id": "log_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -- golf17.md\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\n`git log --since='2 weeks ago'` filters by...",
+      "choices": [
+        "Author date",
+        "Remote name",
+        "Tag annotation only",
+        "Stash index"
+      ],
+      "answer": 0,
+      "explain": "Date filters.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_medium_16.mp4",
+        "poster": "media/images/log_medium_16-frame.png",
+        "figure": "media/images/log_medium_16.png"
+      }
+    },
+    {
+      "id": "log_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline --graph --all | head -n 11\n```\n# Review context: `~/src/charlie` slot 17 variant 1\n`git log --merges` lists...",
+      "choices": [
+        "Merge commits",
+        "Only root commits",
+        "Untracked files",
+        "Ignored VCD files"
+      ],
+      "answer": 0,
+      "explain": "--merges selects merges.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_medium_17.mp4",
+        "poster": "media/images/log_medium_17-frame.png",
+        "figure": "media/images/log_medium_17.png"
+      }
+    },
+    {
+      "id": "log_medium_18",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -S'india' --oneline\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\n`git log --first-parent` on main follows...",
+      "choices": [
+        "The mainline parent only",
+        "All cherry-picks as first-class",
+        "Stash",
+        "Submodule SHAs"
+      ],
+      "answer": 0,
+      "explain": "First-parent skips merged-in detail.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_medium_18.mp4",
+        "poster": "media/images/log_medium_18-frame.png",
+        "figure": "media/images/log_medium_18.png"
+      }
+    },
+    {
+      "id": "log_medium_19",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log origin/main..HEAD --oneline\n```\n`git log -S'lab19'` looks for commits that added or removed that string.",
+      "answer": true,
+      "explain": "Pickaxe search.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_medium_19.mp4",
+        "poster": "media/images/log_medium_19-frame.png",
+        "figure": "media/images/log_medium_19.png"
+      }
+    },
+    {
+      "id": "log_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -- alpha21.md\n```\n`git log --grep='lab20'` searches...",
+      "choices": [
+        "Commit messages",
+        "Working tree only",
+        "origin URLs",
+        "SSH keys"
+      ],
+      "answer": 0,
+      "explain": "grep is message search.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_medium_20.mp4",
+        "poster": "media/images/log_medium_20-frame.png",
+        "figure": "media/images/log_medium_20.png"
+      }
+    },
+    {
+      "id": "log_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline --graph --all | head -n 15\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\n`git log --since='2 weeks ago'` filters by...",
+      "choices": [
+        "Author date",
+        "Remote name",
+        "Tag annotation only",
+        "Stash index"
+      ],
+      "answer": 0,
+      "explain": "Date filters.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_medium_21.mp4",
+        "poster": "media/images/log_medium_21-frame.png",
+        "figure": "media/images/log_medium_21.png"
+      }
+    },
+    {
+      "id": "log_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -S'charlie' --oneline\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\n`git log --merges` lists...",
+      "choices": [
+        "Merge commits",
+        "Only root commits",
+        "Untracked files",
+        "Ignored VCD files"
+      ],
+      "answer": 0,
+      "explain": "--merges selects merges.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_medium_22.mp4",
+        "poster": "media/images/log_medium_22-frame.png",
+        "figure": "media/images/log_medium_22.png"
+      }
+    },
+    {
+      "id": "log_medium_23",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log origin/main..HEAD --oneline\n```\n# Review context: `~/src/alpha` slot 23 variant 1\n`git log --first-parent` on main follows...",
+      "choices": [
+        "The mainline parent only",
+        "All cherry-picks as first-class",
+        "Stash",
+        "Submodule SHAs"
+      ],
+      "answer": 0,
+      "explain": "First-parent skips merged-in detail.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_medium_23.mp4",
+        "poster": "media/images/log_medium_23-frame.png",
+        "figure": "media/images/log_medium_23.png"
+      }
+    },
+    {
+      "id": "log_medium_24",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -- echo25.md\n```\n`git log -S'lab24'` looks for commits that added or removed that string.",
+      "answer": true,
+      "explain": "Pickaxe search.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_medium_24.mp4",
+        "poster": "media/images/log_medium_24-frame.png",
+        "figure": "media/images/log_medium_24.png"
+      }
+    },
+    {
+      "id": "log_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline --graph --all | head -n 7\n```\n`git log --grep='lab25'` searches...",
+      "choices": [
+        "Commit messages",
+        "Working tree only",
+        "origin URLs",
+        "SSH keys"
+      ],
+      "answer": 0,
+      "explain": "grep is message search.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_medium_25.mp4",
+        "poster": "media/images/log_medium_25-frame.png",
+        "figure": "media/images/log_medium_25.png"
+      }
+    },
+    {
+      "id": "log_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -S'golf' --oneline\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\n`git log --since='2 weeks ago'` filters by...",
+      "choices": [
+        "Author date",
+        "Remote name",
+        "Tag annotation only",
+        "Stash index"
+      ],
+      "answer": 0,
+      "explain": "Date filters.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_medium_26.mp4",
+        "poster": "media/images/log_medium_26-frame.png",
+        "figure": "media/images/log_medium_26.png"
+      }
+    },
+    {
+      "id": "log_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log origin/main..HEAD --oneline\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\n`git log --merges` lists...",
+      "choices": [
+        "Merge commits",
+        "Only root commits",
+        "Untracked files",
+        "Ignored VCD files"
+      ],
+      "answer": 0,
+      "explain": "--merges selects merges.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_medium_27.mp4",
+        "poster": "media/images/log_medium_27-frame.png",
+        "figure": "media/images/log_medium_27.png"
+      }
+    },
+    {
+      "id": "log_medium_28",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -- india29.md\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\n`git log --first-parent` on main follows...",
+      "choices": [
+        "The mainline parent only",
+        "All cherry-picks as first-class",
+        "Stash",
+        "Submodule SHAs"
+      ],
+      "answer": 0,
+      "explain": "First-parent skips merged-in detail.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_medium_28.mp4",
+        "poster": "media/images/log_medium_28-frame.png",
+        "figure": "media/images/log_medium_28.png"
+      }
+    },
+    {
+      "id": "log_medium_29",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline --graph --all | head -n 11\n```\n`git log -S'lab29'` looks for commits that added or removed that string.",
+      "answer": true,
+      "explain": "Pickaxe search.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_medium_29.mp4",
+        "poster": "media/images/log_medium_29-frame.png",
+        "figure": "media/images/log_medium_29.png"
+      }
+    },
+    {
+      "id": "log_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -S'alpha' --oneline\n```\n`git log --grep='lab30'` searches...",
+      "choices": [
+        "Commit messages",
+        "Working tree only",
+        "origin URLs",
+        "SSH keys"
+      ],
+      "answer": 0,
+      "explain": "grep is message search.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_medium_30.mp4",
+        "poster": "media/images/log_medium_30-frame.png",
+        "figure": "media/images/log_medium_30.png"
+      }
+    },
+    {
+      "id": "log_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log origin/main..HEAD --oneline\n```\n`A..B` vs `A...B` (three dots) in log...",
+      "choices": [
+        "Two-dot: reachable from B not A; three-dot: symmetric difference",
+        "They are identical",
+        "Three-dot deletes tags",
+        "Two-dot is stash"
+      ],
+      "answer": 0,
+      "explain": "Range syntax differs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_hard_01.mp4",
+        "poster": "media/images/log_hard_01-frame.png",
+        "figure": "media/images/log_hard_01.png"
+      }
+    },
+    {
+      "id": "log_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -- echo5.md\n```\n`git log --pretty=fuller` adds...",
+      "choices": [
+        "Committer vs author dates",
+        "Remote prune",
+        "Ignore rules",
+        "Bisect state"
+      ],
+      "answer": 0,
+      "explain": "Fuller separates author/committer.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_hard_02.mp4",
+        "poster": "media/images/log_hard_02-frame.png",
+        "figure": "media/images/log_hard_02.png"
+      }
+    },
+    {
+      "id": "log_hard_03",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline --graph --all | head -n 11\n```\n`git log --walk-reflogs` walks...",
+      "choices": [
+        "Reflog instead of commit parents",
+        "Only origin",
+        "Only tags",
+        "Stash messages only"
+      ],
+      "answer": 0,
+      "explain": "Reflog walk is local.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_hard_03.mp4",
+        "poster": "media/images/log_hard_03-frame.png",
+        "figure": "media/images/log_hard_03.png"
+      }
+    },
+    {
+      "id": "log_hard_04",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log -S'golf' --oneline\n```\n`git log --raw` shows tree diffs as raw name-status lines.",
+      "answer": true,
+      "explain": "Raw is plumbing-ish.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_hard_04.mp4",
+        "poster": "media/images/log_hard_04-frame.png",
+        "figure": "media/images/log_hard_04.png"
+      }
+    },
+    {
+      "id": "log_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log origin/main..HEAD --oneline\n```\n`git rev-list --count HEAD` prints...",
+      "choices": [
+        "How many commits are reachable from HEAD",
+        "Remote count",
+        "Stash count",
+        "Tag count only"
+      ],
+      "answer": 0,
+      "explain": "rev-list is the commit walker.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_hard_05.mp4",
+        "poster": "media/images/log_hard_05-frame.png",
+        "figure": "media/images/log_hard_05.png"
+      }
+    },
+    {
+      "id": "log_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -- india9.md\n```\n# Review context: `/work/chip/hotel` slot 6 variant 1\n`A..B` vs `A...B` (three dots) in log...",
+      "choices": [
+        "Two-dot: reachable from B not A; three-dot: symmetric difference",
+        "They are identical",
+        "Three-dot deletes tags",
+        "Two-dot is stash"
+      ],
+      "answer": 0,
+      "explain": "Range syntax differs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_hard_06.mp4",
+        "poster": "media/images/log_hard_06-frame.png",
+        "figure": "media/images/log_hard_06.png"
+      }
+    },
+    {
+      "id": "log_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline --graph --all | head -n 15\n```\n# Review context: `./labs/alpha` slot 7 variant 1\n`git log --pretty=fuller` adds...",
+      "choices": [
+        "Committer vs author dates",
+        "Remote prune",
+        "Ignore rules",
+        "Bisect state"
+      ],
+      "answer": 0,
+      "explain": "Fuller separates author/committer.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_hard_07.mp4",
+        "poster": "media/images/log_hard_07-frame.png",
+        "figure": "media/images/log_hard_07.png"
+      }
+    },
+    {
+      "id": "log_hard_08",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -S'alpha' --oneline\n```\n# Review context: `/tmp/gitlab/bravo` slot 8 variant 1\n`git log --walk-reflogs` walks...",
+      "choices": [
+        "Reflog instead of commit parents",
+        "Only origin",
+        "Only tags",
+        "Stash messages only"
+      ],
+      "answer": 0,
+      "explain": "Reflog walk is local.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_hard_08.mp4",
+        "poster": "media/images/log_hard_08-frame.png",
+        "figure": "media/images/log_hard_08.png"
+      }
+    },
+    {
+      "id": "log_hard_09",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log origin/main..HEAD --oneline\n```\n# Review context: `C:/proj/charlie` slot 9 variant 1\n`git log --raw` shows tree diffs as raw name-status lines.",
+      "answer": true,
+      "explain": "Raw is plumbing-ish.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_hard_09.mp4",
+        "poster": "media/images/log_hard_09-frame.png",
+        "figure": "media/images/log_hard_09.png"
+      }
+    },
+    {
+      "id": "log_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -- charlie13.md\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\n`git rev-list --count HEAD` prints...",
+      "choices": [
+        "How many commits are reachable from HEAD",
+        "Remote count",
+        "Stash count",
+        "Tag count only"
+      ],
+      "answer": 0,
+      "explain": "rev-list is the commit walker.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_hard_10.mp4",
+        "poster": "media/images/log_hard_10-frame.png",
+        "figure": "media/images/log_hard_10.png"
+      }
+    },
+    {
+      "id": "log_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline --graph --all | head -n 7\n```\n# Review context: `~/src/echo` slot 11 variant 1\n`A..B` vs `A...B` (three dots) in log...",
+      "choices": [
+        "Two-dot: reachable from B not A; three-dot: symmetric difference",
+        "They are identical",
+        "Three-dot deletes tags",
+        "Two-dot is stash"
+      ],
+      "answer": 0,
+      "explain": "Range syntax differs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_hard_11.mp4",
+        "poster": "media/images/log_hard_11-frame.png",
+        "figure": "media/images/log_hard_11.png"
+      }
+    },
+    {
+      "id": "log_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -S'echo' --oneline\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\n`git log --pretty=fuller` adds...",
+      "choices": [
+        "Committer vs author dates",
+        "Remote prune",
+        "Ignore rules",
+        "Bisect state"
+      ],
+      "answer": 0,
+      "explain": "Fuller separates author/committer.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_hard_12.mp4",
+        "poster": "media/images/log_hard_12-frame.png",
+        "figure": "media/images/log_hard_12.png"
+      }
+    },
+    {
+      "id": "log_hard_13",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log origin/main..HEAD --oneline\n```\n# Review context: `./labs/golf` slot 13 variant 1\n`git log --walk-reflogs` walks...",
+      "choices": [
+        "Reflog instead of commit parents",
+        "Only origin",
+        "Only tags",
+        "Stash messages only"
+      ],
+      "answer": 0,
+      "explain": "Reflog walk is local.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_hard_13.mp4",
+        "poster": "media/images/log_hard_13-frame.png",
+        "figure": "media/images/log_hard_13.png"
+      }
+    },
+    {
+      "id": "log_hard_14",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -- golf17.md\n```\n# Review context: `/tmp/gitlab/hotel` slot 14 variant 1\n`git log --raw` shows tree diffs as raw name-status lines.",
+      "answer": true,
+      "explain": "Raw is plumbing-ish.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_hard_14.mp4",
+        "poster": "media/images/log_hard_14-frame.png",
+        "figure": "media/images/log_hard_14.png"
+      }
+    },
+    {
+      "id": "log_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline --graph --all | head -n 11\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\n`git rev-list --count HEAD` prints...",
+      "choices": [
+        "How many commits are reachable from HEAD",
+        "Remote count",
+        "Stash count",
+        "Tag count only"
+      ],
+      "answer": 0,
+      "explain": "rev-list is the commit walker.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_hard_15.mp4",
+        "poster": "media/images/log_hard_15-frame.png",
+        "figure": "media/images/log_hard_15.png"
+      }
+    },
+    {
+      "id": "log_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -S'india' --oneline\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\n`A..B` vs `A...B` (three dots) in log...",
+      "choices": [
+        "Two-dot: reachable from B not A; three-dot: symmetric difference",
+        "They are identical",
+        "Three-dot deletes tags",
+        "Two-dot is stash"
+      ],
+      "answer": 0,
+      "explain": "Range syntax differs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_hard_16.mp4",
+        "poster": "media/images/log_hard_16-frame.png",
+        "figure": "media/images/log_hard_16.png"
+      }
+    },
+    {
+      "id": "log_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log origin/main..HEAD --oneline\n```\n# Review context: `~/src/charlie` slot 17 variant 1\n`git log --pretty=fuller` adds...",
+      "choices": [
+        "Committer vs author dates",
+        "Remote prune",
+        "Ignore rules",
+        "Bisect state"
+      ],
+      "answer": 0,
+      "explain": "Fuller separates author/committer.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_hard_17.mp4",
+        "poster": "media/images/log_hard_17-frame.png",
+        "figure": "media/images/log_hard_17.png"
+      }
+    },
+    {
+      "id": "log_hard_18",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -- alpha21.md\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\n`git log --walk-reflogs` walks...",
+      "choices": [
+        "Reflog instead of commit parents",
+        "Only origin",
+        "Only tags",
+        "Stash messages only"
+      ],
+      "answer": 0,
+      "explain": "Reflog walk is local.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_hard_18.mp4",
+        "poster": "media/images/log_hard_18-frame.png",
+        "figure": "media/images/log_hard_18.png"
+      }
+    },
+    {
+      "id": "log_hard_19",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline --graph --all | head -n 15\n```\n# Review context: `./labs/echo` slot 19 variant 1\n`git log --raw` shows tree diffs as raw name-status lines.",
+      "answer": true,
+      "explain": "Raw is plumbing-ish.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_hard_19.mp4",
+        "poster": "media/images/log_hard_19-frame.png",
+        "figure": "media/images/log_hard_19.png"
+      }
+    },
+    {
+      "id": "log_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -S'charlie' --oneline\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\n`git rev-list --count HEAD` prints...",
+      "choices": [
+        "How many commits are reachable from HEAD",
+        "Remote count",
+        "Stash count",
+        "Tag count only"
+      ],
+      "answer": 0,
+      "explain": "rev-list is the commit walker.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_hard_20.mp4",
+        "poster": "media/images/log_hard_20-frame.png",
+        "figure": "media/images/log_hard_20.png"
+      }
+    },
+    {
+      "id": "log_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log origin/main..HEAD --oneline\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\n`A..B` vs `A...B` (three dots) in log...",
+      "choices": [
+        "Two-dot: reachable from B not A; three-dot: symmetric difference",
+        "They are identical",
+        "Three-dot deletes tags",
+        "Two-dot is stash"
+      ],
+      "answer": 0,
+      "explain": "Range syntax differs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_hard_21.mp4",
+        "poster": "media/images/log_hard_21-frame.png",
+        "figure": "media/images/log_hard_21.png"
+      }
+    },
+    {
+      "id": "log_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -- echo25.md\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\n`git log --pretty=fuller` adds...",
+      "choices": [
+        "Committer vs author dates",
+        "Remote prune",
+        "Ignore rules",
+        "Bisect state"
+      ],
+      "answer": 0,
+      "explain": "Fuller separates author/committer.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_hard_22.mp4",
+        "poster": "media/images/log_hard_22-frame.png",
+        "figure": "media/images/log_hard_22.png"
+      }
+    },
+    {
+      "id": "log_hard_23",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline --graph --all | head -n 7\n```\n# Review context: `~/src/alpha` slot 23 variant 1\n`git log --walk-reflogs` walks...",
+      "choices": [
+        "Reflog instead of commit parents",
+        "Only origin",
+        "Only tags",
+        "Stash messages only"
+      ],
+      "answer": 0,
+      "explain": "Reflog walk is local.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_hard_23.mp4",
+        "poster": "media/images/log_hard_23-frame.png",
+        "figure": "media/images/log_hard_23.png"
+      }
+    },
+    {
+      "id": "log_hard_24",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log -S'golf' --oneline\n```\n# Review context: `/work/chip/bravo` slot 24 variant 1\n`git log --raw` shows tree diffs as raw name-status lines.",
+      "answer": true,
+      "explain": "Raw is plumbing-ish.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_hard_24.mp4",
+        "poster": "media/images/log_hard_24-frame.png",
+        "figure": "media/images/log_hard_24.png"
+      }
+    },
+    {
+      "id": "log_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log origin/main..HEAD --oneline\n```\n# Review context: `./labs/charlie` slot 25 variant 1\n`git rev-list --count HEAD` prints...",
+      "choices": [
+        "How many commits are reachable from HEAD",
+        "Remote count",
+        "Stash count",
+        "Tag count only"
+      ],
+      "answer": 0,
+      "explain": "rev-list is the commit walker.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_hard_25.mp4",
+        "poster": "media/images/log_hard_25-frame.png",
+        "figure": "media/images/log_hard_25.png"
+      }
+    },
+    {
+      "id": "log_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -- india29.md\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\n`A..B` vs `A...B` (three dots) in log...",
+      "choices": [
+        "Two-dot: reachable from B not A; three-dot: symmetric difference",
+        "They are identical",
+        "Three-dot deletes tags",
+        "Two-dot is stash"
+      ],
+      "answer": 0,
+      "explain": "Range syntax differs.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_hard_26.mp4",
+        "poster": "media/images/log_hard_26-frame.png",
+        "figure": "media/images/log_hard_26.png"
+      }
+    },
+    {
+      "id": "log_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline --graph --all | head -n 11\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\n`git log --pretty=fuller` adds...",
+      "choices": [
+        "Committer vs author dates",
+        "Remote prune",
+        "Ignore rules",
+        "Bisect state"
+      ],
+      "answer": 0,
+      "explain": "Fuller separates author/committer.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_hard_27.mp4",
+        "poster": "media/images/log_hard_27-frame.png",
+        "figure": "media/images/log_hard_27.png"
+      }
+    },
+    {
+      "id": "log_hard_28",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log -S'alpha' --oneline\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\n`git log --walk-reflogs` walks...",
+      "choices": [
+        "Reflog instead of commit parents",
+        "Only origin",
+        "Only tags",
+        "Stash messages only"
+      ],
+      "answer": 0,
+      "explain": "Reflog walk is local.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_hard_28.mp4",
+        "poster": "media/images/log_hard_28-frame.png",
+        "figure": "media/images/log_hard_28.png"
+      }
+    },
+    {
+      "id": "log_hard_29",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log origin/main..HEAD --oneline\n```\n# Review context: `~/src/golf` slot 29 variant 1\n`git log --raw` shows tree diffs as raw name-status lines.",
+      "answer": true,
+      "explain": "Raw is plumbing-ish.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_hard_29.mp4",
+        "poster": "media/images/log_hard_29-frame.png",
+        "figure": "media/images/log_hard_29.png"
+      }
+    },
+    {
+      "id": "log_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -- charlie33.md\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\n`git rev-list --count HEAD` prints...",
+      "choices": [
+        "How many commits are reachable from HEAD",
+        "Remote count",
+        "Stash count",
+        "Tag count only"
+      ],
+      "answer": 0,
+      "explain": "rev-list is the commit walker.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/log_hard_30.mp4",
+        "poster": "media/images/log_hard_30-frame.png",
+        "figure": "media/images/log_hard_30.png"
+      }
+    }
+  ]
+}
