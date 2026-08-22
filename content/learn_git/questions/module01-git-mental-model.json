@@ -1,0 +1,1692 @@
+{
+  "module": "module01-git-mental-model",
+  "title": "Git mental model",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff -- bravo2.md; git diff --staged\n```\nThe staging area (index) is where you...",
+      "choices": [
+        "Store the remote URL forever",
+        "Prepare changes for the next commit",
+        "Edit files on disk only",
+        "Delete the .git directory"
+      ],
+      "answer": 1,
+      "explain": "git add copies changes from the working tree into the staging area for the next commit.",
+      "difficulty": "easy",
+      "id": "mind_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_easy_01.mp4",
+        "poster": "media/images/mind_easy_01-frame.png",
+        "figure": "media/images/mind_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"docs: update charlie\"\n```\nHEAD usually points at...",
+      "choices": [
+        "Your text editor settings",
+        "The last recorded commit snapshot",
+        "Only untracked files",
+        "The tools index page"
+      ],
+      "answer": 1,
+      "explain": "HEAD is the current commit tip - the durable snapshot you already recorded.",
+      "difficulty": "easy",
+      "id": "mind_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_easy_02.mp4",
+        "poster": "media/images/mind_easy_02-frame.png",
+        "figure": "media/images/mind_easy_02.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\n# three trees: worktree / index / HEAD (4)\n```\nSaving a file in your editor automatically creates a Git commit.",
+      "answer": false,
+      "explain": "Editor save updates the working tree; you still need add and commit to record history.",
+      "difficulty": "easy",
+      "id": "mind_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_easy_03.mp4",
+        "poster": "media/images/mind_easy_03-frame.png",
+        "figure": "media/images/mind_easy_03.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git add echo5.md\n```\nA good first practice trio for this module is...",
+      "choices": [
+        "git push, git pull, git rebase",
+        "git status, git add, git commit",
+        "chmod, chown, sudo",
+        "make, verilator, iverilog"
+      ],
+      "answer": 1,
+      "explain": "The mental-model flow is see status → stage with add → record with commit.",
+      "difficulty": "easy",
+      "id": "mind_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_easy_04.mp4",
+        "poster": "media/images/mind_easy_04-frame.png",
+        "figure": "media/images/mind_easy_04.png"
+      }
+    },
+    {
+      "id": "mind_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff -- foxtrot6.md; git diff --staged\n```\n# Review context: `~/src/golf` slot 5 variant 1\nThe staging area (index) is where you...",
+      "choices": [
+        "Store the remote URL forever",
+        "Prepare changes for the next commit",
+        "Edit files on disk only",
+        "Delete the .git directory"
+      ],
+      "answer": 1,
+      "explain": "git add copies working-tree changes into the index.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_easy_05.mp4",
+        "poster": "media/images/mind_easy_05-frame.png",
+        "figure": "media/images/mind_easy_05.png"
+      }
+    },
+    {
+      "id": "mind_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"docs: update golf\"\n```\nHEAD usually points at...",
+      "choices": [
+        "Your editor settings",
+        "The current commit tip",
+        "Only untracked files",
+        "The tools index page"
+      ],
+      "answer": 1,
+      "explain": "HEAD is the current commit snapshot.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_easy_06.mp4",
+        "poster": "media/images/mind_easy_06-frame.png",
+        "figure": "media/images/mind_easy_06.png"
+      }
+    },
+    {
+      "id": "mind_easy_07",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\n# three trees: worktree / index / HEAD (8)\n```\nSaving `notes7.md` in your editor automatically creates a Git commit.",
+      "answer": false,
+      "explain": "Editor save updates the working tree; you still need add and commit.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_easy_07.mp4",
+        "poster": "media/images/mind_easy_07-frame.png",
+        "figure": "media/images/mind_easy_07.png"
+      }
+    },
+    {
+      "id": "mind_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git add india9.md\n```\nA good first practice trio is...",
+      "choices": [
+        "git push, git pull, git rebase",
+        "git status, git add, git commit",
+        "chmod, chown, sudo",
+        "make, verilator, iverilog"
+      ],
+      "answer": 1,
+      "explain": "See status, stage, then record.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_easy_08.mp4",
+        "poster": "media/images/mind_easy_08-frame.png",
+        "figure": "media/images/mind_easy_08.png"
+      }
+    },
+    {
+      "id": "mind_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff -- juliet10.md; git diff --staged\n```\n`git add notes9.md` copies that path into...",
+      "choices": [
+        "The remote named origin",
+        "The staging area",
+        "$HOME only",
+        "A new tag"
+      ],
+      "answer": 1,
+      "explain": "add stages the path.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_easy_09.mp4",
+        "poster": "media/images/mind_easy_09-frame.png",
+        "figure": "media/images/mind_easy_09.png"
+      }
+    },
+    {
+      "id": "mind_easy_10",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"docs: update alpha\"\n```\nUntracked files are already in the last commit.",
+      "answer": false,
+      "explain": "Untracked paths have never been added.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_easy_10.mp4",
+        "poster": "media/images/mind_easy_10-frame.png",
+        "figure": "media/images/mind_easy_10.png"
+      }
+    },
+    {
+      "id": "mind_easy_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# three trees: worktree / index / HEAD (12)\n```\nThe working tree is...",
+      "choices": [
+        "The files on disk you edit",
+        "Only origin/main",
+        "The reflog",
+        "A GitHub Issue"
+      ],
+      "answer": 0,
+      "explain": "Working tree is the checkout you edit.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_easy_11.mp4",
+        "poster": "media/images/mind_easy_11-frame.png",
+        "figure": "media/images/mind_easy_11.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git add charlie13.md\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\nThe staging area (index) is where you...",
+      "choices": [
+        "Store the remote URL forever",
+        "Prepare changes for the next commit",
+        "Edit files on disk only",
+        "Delete the .git directory"
+      ],
+      "answer": 1,
+      "explain": "git add copies changes from the working tree into the staging area for the next commit.",
+      "difficulty": "easy",
+      "id": "mind_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_easy_12.mp4",
+        "poster": "media/images/mind_easy_12-frame.png",
+        "figure": "media/images/mind_easy_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff -- delta14.md; git diff --staged\n```\n# Review context: `./labs/golf` slot 13 variant 1\nHEAD usually points at...",
+      "choices": [
+        "Your text editor settings",
+        "The last recorded commit snapshot",
+        "Only untracked files",
+        "The tools index page"
+      ],
+      "answer": 1,
+      "explain": "HEAD is the current commit tip - the durable snapshot you already recorded.",
+      "difficulty": "easy",
+      "id": "mind_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_easy_13.mp4",
+        "poster": "media/images/mind_easy_13-frame.png",
+        "figure": "media/images/mind_easy_13.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"docs: update echo\"\n```\n# Review context: `/tmp/gitlab/hotel` slot 14 variant 1\nSaving a file in your editor automatically creates a Git commit.",
+      "answer": false,
+      "explain": "Editor save updates the working tree; you still need add and commit to record history.",
+      "difficulty": "easy",
+      "id": "mind_easy_14",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_easy_14.mp4",
+        "poster": "media/images/mind_easy_14-frame.png",
+        "figure": "media/images/mind_easy_14.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# three trees: worktree / index / HEAD (16)\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\nA good first practice trio for this module is...",
+      "choices": [
+        "git push, git pull, git rebase",
+        "git status, git add, git commit",
+        "chmod, chown, sudo",
+        "make, verilator, iverilog"
+      ],
+      "answer": 1,
+      "explain": "The mental-model flow is see status → stage with add → record with commit.",
+      "difficulty": "easy",
+      "id": "mind_easy_15",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_easy_15.mp4",
+        "poster": "media/images/mind_easy_15-frame.png",
+        "figure": "media/images/mind_easy_15.png"
+      }
+    },
+    {
+      "id": "mind_easy_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git add golf17.md\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\nThe staging area (index) is where you...",
+      "choices": [
+        "Store the remote URL forever",
+        "Prepare changes for the next commit",
+        "Edit files on disk only",
+        "Delete the .git directory"
+      ],
+      "answer": 1,
+      "explain": "git add copies working-tree changes into the index.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_easy_16.mp4",
+        "poster": "media/images/mind_easy_16-frame.png",
+        "figure": "media/images/mind_easy_16.png"
+      }
+    },
+    {
+      "id": "mind_easy_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff -- hotel18.md; git diff --staged\n```\n# Review context: `~/src/charlie` slot 17 variant 1\nHEAD usually points at...",
+      "choices": [
+        "Your editor settings",
+        "The current commit tip",
+        "Only untracked files",
+        "The tools index page"
+      ],
+      "answer": 1,
+      "explain": "HEAD is the current commit snapshot.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_easy_17.mp4",
+        "poster": "media/images/mind_easy_17-frame.png",
+        "figure": "media/images/mind_easy_17.png"
+      }
+    },
+    {
+      "id": "mind_easy_18",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"docs: update india\"\n```\nSaving `notes18.md` in your editor automatically creates a Git commit.",
+      "answer": false,
+      "explain": "Editor save updates the working tree; you still need add and commit.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_easy_18.mp4",
+        "poster": "media/images/mind_easy_18-frame.png",
+        "figure": "media/images/mind_easy_18.png"
+      }
+    },
+    {
+      "id": "mind_easy_19",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# three trees: worktree / index / HEAD (20)\n```\n# Review context: `./labs/echo` slot 19 variant 1\nA good first practice trio is...",
+      "choices": [
+        "git push, git pull, git rebase",
+        "git status, git add, git commit",
+        "chmod, chown, sudo",
+        "make, verilator, iverilog"
+      ],
+      "answer": 1,
+      "explain": "See status, stage, then record.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_easy_19.mp4",
+        "poster": "media/images/mind_easy_19-frame.png",
+        "figure": "media/images/mind_easy_19.png"
+      }
+    },
+    {
+      "id": "mind_easy_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git add alpha21.md\n```\n`git add notes20.md` copies that path into...",
+      "choices": [
+        "The remote named origin",
+        "The staging area",
+        "$HOME only",
+        "A new tag"
+      ],
+      "answer": 1,
+      "explain": "add stages the path.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_easy_20.mp4",
+        "poster": "media/images/mind_easy_20-frame.png",
+        "figure": "media/images/mind_easy_20.png"
+      }
+    },
+    {
+      "id": "mind_easy_21",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit diff -- bravo22.md; git diff --staged\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\nUntracked files are already in the last commit.",
+      "answer": false,
+      "explain": "Untracked paths have never been added.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_easy_21.mp4",
+        "poster": "media/images/mind_easy_21-frame.png",
+        "figure": "media/images/mind_easy_21.png"
+      }
+    },
+    {
+      "id": "mind_easy_22",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"docs: update charlie\"\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\nThe working tree is...",
+      "choices": [
+        "The files on disk you edit",
+        "Only origin/main",
+        "The reflog",
+        "A GitHub Issue"
+      ],
+      "answer": 0,
+      "explain": "Working tree is the checkout you edit.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_easy_22.mp4",
+        "poster": "media/images/mind_easy_22-frame.png",
+        "figure": "media/images/mind_easy_22.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# three trees: worktree / index / HEAD (24)\n```\n# Review context: `~/src/alpha` slot 23 variant 1\nThe staging area (index) is where you...",
+      "choices": [
+        "Store the remote URL forever",
+        "Prepare changes for the next commit",
+        "Edit files on disk only",
+        "Delete the .git directory"
+      ],
+      "answer": 1,
+      "explain": "git add copies changes from the working tree into the staging area for the next commit.",
+      "difficulty": "easy",
+      "id": "mind_easy_23",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_easy_23.mp4",
+        "poster": "media/images/mind_easy_23-frame.png",
+        "figure": "media/images/mind_easy_23.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git add echo25.md\n```\n# Review context: `/work/chip/bravo` slot 24 variant 1\nHEAD usually points at...",
+      "choices": [
+        "Your text editor settings",
+        "The last recorded commit snapshot",
+        "Only untracked files",
+        "The tools index page"
+      ],
+      "answer": 1,
+      "explain": "HEAD is the current commit tip - the durable snapshot you already recorded.",
+      "difficulty": "easy",
+      "id": "mind_easy_24",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_easy_24.mp4",
+        "poster": "media/images/mind_easy_24-frame.png",
+        "figure": "media/images/mind_easy_24.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit diff -- foxtrot26.md; git diff --staged\n```\n# Review context: `./labs/charlie` slot 25 variant 1\nSaving a file in your editor automatically creates a Git commit.",
+      "answer": false,
+      "explain": "Editor save updates the working tree; you still need add and commit to record history.",
+      "difficulty": "easy",
+      "id": "mind_easy_25",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_easy_25.mp4",
+        "poster": "media/images/mind_easy_25-frame.png",
+        "figure": "media/images/mind_easy_25.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"docs: update golf\"\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\nA good first practice trio for this module is...",
+      "choices": [
+        "git push, git pull, git rebase",
+        "git status, git add, git commit",
+        "chmod, chown, sudo",
+        "make, verilator, iverilog"
+      ],
+      "answer": 1,
+      "explain": "The mental-model flow is see status → stage with add → record with commit.",
+      "difficulty": "easy",
+      "id": "mind_easy_26",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_easy_26.mp4",
+        "poster": "media/images/mind_easy_26-frame.png",
+        "figure": "media/images/mind_easy_26.png"
+      }
+    },
+    {
+      "id": "mind_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# three trees: worktree / index / HEAD (28)\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\nThe staging area (index) is where you...",
+      "choices": [
+        "Store the remote URL forever",
+        "Prepare changes for the next commit",
+        "Edit files on disk only",
+        "Delete the .git directory"
+      ],
+      "answer": 1,
+      "explain": "git add copies working-tree changes into the index.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_easy_27.mp4",
+        "poster": "media/images/mind_easy_27-frame.png",
+        "figure": "media/images/mind_easy_27.png"
+      }
+    },
+    {
+      "id": "mind_easy_28",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git add india29.md\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\nHEAD usually points at...",
+      "choices": [
+        "Your editor settings",
+        "The current commit tip",
+        "Only untracked files",
+        "The tools index page"
+      ],
+      "answer": 1,
+      "explain": "HEAD is the current commit snapshot.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_easy_28.mp4",
+        "poster": "media/images/mind_easy_28-frame.png",
+        "figure": "media/images/mind_easy_28.png"
+      }
+    },
+    {
+      "id": "mind_easy_29",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit diff -- juliet30.md; git diff --staged\n```\nSaving `notes29.md` in your editor automatically creates a Git commit.",
+      "answer": false,
+      "explain": "Editor save updates the working tree; you still need add and commit.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_easy_29.mp4",
+        "poster": "media/images/mind_easy_29-frame.png",
+        "figure": "media/images/mind_easy_29.png"
+      }
+    },
+    {
+      "id": "mind_easy_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"docs: update alpha\"\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\nA good first practice trio is...",
+      "choices": [
+        "git push, git pull, git rebase",
+        "git status, git add, git commit",
+        "chmod, chown, sudo",
+        "make, verilator, iverilog"
+      ],
+      "answer": 1,
+      "explain": "See status, stage, then record.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_easy_30.mp4",
+        "poster": "media/images/mind_easy_30-frame.png",
+        "figure": "media/images/mind_easy_30.png"
+      }
+    },
+    {
+      "id": "mind_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff -- bravo2.md; git diff --staged\n```\nAfter `git add notes1.md` then more edits to `notes1.md`, extra edits are...",
+      "choices": [
+        "Already in the next commit automatically",
+        "Only in the working tree until you add again",
+        "Pushed to origin",
+        "Stored in a tag"
+      ],
+      "answer": 1,
+      "explain": "The index holds the last staged blob.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_medium_01.mp4",
+        "poster": "media/images/mind_medium_01-frame.png",
+        "figure": "media/images/mind_medium_01.png"
+      }
+    },
+    {
+      "id": "mind_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"docs: update charlie\"\n```\n`git diff` with no args shows...",
+      "choices": [
+        "Staged vs HEAD",
+        "Working tree vs index",
+        "origin vs HEAD",
+        "Tag annotations"
+      ],
+      "answer": 1,
+      "explain": "Plain diff is unstaged changes.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_medium_02.mp4",
+        "poster": "media/images/mind_medium_02-frame.png",
+        "figure": "media/images/mind_medium_02.png"
+      }
+    },
+    {
+      "id": "mind_medium_03",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# three trees: worktree / index / HEAD (4)\n```\n`git diff --staged` shows...",
+      "choices": [
+        "Working tree vs index",
+        "Index vs HEAD",
+        "Only untracked files",
+        "Remote prune list"
+      ],
+      "answer": 1,
+      "explain": "Staged diff is the next commit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_medium_03.mp4",
+        "poster": "media/images/mind_medium_03-frame.png",
+        "figure": "media/images/mind_medium_03.png"
+      }
+    },
+    {
+      "id": "mind_medium_04",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git add echo5.md\n```\nHEAD can point at a branch name, which then points at a commit.",
+      "answer": true,
+      "explain": "Usually HEAD -> branch -> commit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_medium_04.mp4",
+        "poster": "media/images/mind_medium_04-frame.png",
+        "figure": "media/images/mind_medium_04.png"
+      }
+    },
+    {
+      "id": "mind_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff -- foxtrot6.md; git diff --staged\n```\nDetached HEAD means...",
+      "choices": [
+        "HEAD points directly at a commit, not a branch",
+        "The repo has no .git",
+        "You cannot run status",
+        "All remotes were deleted"
+      ],
+      "answer": 0,
+      "explain": "Detached HEAD is a commit checkout without a branch.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_medium_05.mp4",
+        "poster": "media/images/mind_medium_05-frame.png",
+        "figure": "media/images/mind_medium_05.png"
+      }
+    },
+    {
+      "id": "mind_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"docs: update golf\"\n```\n`git commit -m \"Add path 6 to ALU\"` records...",
+      "choices": [
+        "Only untracked files",
+        "Whatever is currently staged",
+        "The entire home directory",
+        "origin/main automatically"
+      ],
+      "answer": 1,
+      "explain": "Commit uses the index.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_medium_06.mp4",
+        "poster": "media/images/mind_medium_06-frame.png",
+        "figure": "media/images/mind_medium_06.png"
+      }
+    },
+    {
+      "id": "mind_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# three trees: worktree / index / HEAD (8)\n```\nAfter `git add notes7.md` then more edits to `notes7.md`, extra edits are...",
+      "choices": [
+        "Already in the next commit automatically",
+        "Only in the working tree until you add again",
+        "Pushed to origin",
+        "Stored in a tag"
+      ],
+      "answer": 1,
+      "explain": "The index holds the last staged blob.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_medium_07.mp4",
+        "poster": "media/images/mind_medium_07-frame.png",
+        "figure": "media/images/mind_medium_07.png"
+      }
+    },
+    {
+      "id": "mind_medium_08",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git add india9.md\n```\n# Review context: `/tmp/gitlab/bravo` slot 8 variant 1\n`git diff` with no args shows...",
+      "choices": [
+        "Staged vs HEAD",
+        "Working tree vs index",
+        "origin vs HEAD",
+        "Tag annotations"
+      ],
+      "answer": 1,
+      "explain": "Plain diff is unstaged changes.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_medium_08.mp4",
+        "poster": "media/images/mind_medium_08-frame.png",
+        "figure": "media/images/mind_medium_08.png"
+      }
+    },
+    {
+      "id": "mind_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff -- juliet10.md; git diff --staged\n```\n# Review context: `C:/proj/charlie` slot 9 variant 1\n`git diff --staged` shows...",
+      "choices": [
+        "Working tree vs index",
+        "Index vs HEAD",
+        "Only untracked files",
+        "Remote prune list"
+      ],
+      "answer": 1,
+      "explain": "Staged diff is the next commit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_medium_09.mp4",
+        "poster": "media/images/mind_medium_09-frame.png",
+        "figure": "media/images/mind_medium_09.png"
+      }
+    },
+    {
+      "id": "mind_medium_10",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"docs: update alpha\"\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\nHEAD can point at a branch name, which then points at a commit.",
+      "answer": true,
+      "explain": "Usually HEAD -> branch -> commit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_medium_10.mp4",
+        "poster": "media/images/mind_medium_10-frame.png",
+        "figure": "media/images/mind_medium_10.png"
+      }
+    },
+    {
+      "id": "mind_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# three trees: worktree / index / HEAD (12)\n```\n# Review context: `~/src/echo` slot 11 variant 1\nDetached HEAD means...",
+      "choices": [
+        "HEAD points directly at a commit, not a branch",
+        "The repo has no .git",
+        "You cannot run status",
+        "All remotes were deleted"
+      ],
+      "answer": 0,
+      "explain": "Detached HEAD is a commit checkout without a branch.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_medium_11.mp4",
+        "poster": "media/images/mind_medium_11-frame.png",
+        "figure": "media/images/mind_medium_11.png"
+      }
+    },
+    {
+      "id": "mind_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git add charlie13.md\n```\n`git commit -m \"Add path 12 to ALU\"` records...",
+      "choices": [
+        "Only untracked files",
+        "Whatever is currently staged",
+        "The entire home directory",
+        "origin/main automatically"
+      ],
+      "answer": 1,
+      "explain": "Commit uses the index.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_medium_12.mp4",
+        "poster": "media/images/mind_medium_12-frame.png",
+        "figure": "media/images/mind_medium_12.png"
+      }
+    },
+    {
+      "id": "mind_medium_13",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff -- delta14.md; git diff --staged\n```\nAfter `git add notes13.md` then more edits to `notes13.md`, extra edits are...",
+      "choices": [
+        "Already in the next commit automatically",
+        "Only in the working tree until you add again",
+        "Pushed to origin",
+        "Stored in a tag"
+      ],
+      "answer": 1,
+      "explain": "The index holds the last staged blob.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_medium_13.mp4",
+        "poster": "media/images/mind_medium_13-frame.png",
+        "figure": "media/images/mind_medium_13.png"
+      }
+    },
+    {
+      "id": "mind_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"docs: update echo\"\n```\n# Review context: `/tmp/gitlab/hotel` slot 14 variant 1\n`git diff` with no args shows...",
+      "choices": [
+        "Staged vs HEAD",
+        "Working tree vs index",
+        "origin vs HEAD",
+        "Tag annotations"
+      ],
+      "answer": 1,
+      "explain": "Plain diff is unstaged changes.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_medium_14.mp4",
+        "poster": "media/images/mind_medium_14-frame.png",
+        "figure": "media/images/mind_medium_14.png"
+      }
+    },
+    {
+      "id": "mind_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# three trees: worktree / index / HEAD (16)\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\n`git diff --staged` shows...",
+      "choices": [
+        "Working tree vs index",
+        "Index vs HEAD",
+        "Only untracked files",
+        "Remote prune list"
+      ],
+      "answer": 1,
+      "explain": "Staged diff is the next commit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_medium_15.mp4",
+        "poster": "media/images/mind_medium_15-frame.png",
+        "figure": "media/images/mind_medium_15.png"
+      }
+    },
+    {
+      "id": "mind_medium_16",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git add golf17.md\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\nHEAD can point at a branch name, which then points at a commit.",
+      "answer": true,
+      "explain": "Usually HEAD -> branch -> commit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_medium_16.mp4",
+        "poster": "media/images/mind_medium_16-frame.png",
+        "figure": "media/images/mind_medium_16.png"
+      }
+    },
+    {
+      "id": "mind_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff -- hotel18.md; git diff --staged\n```\n# Review context: `~/src/charlie` slot 17 variant 1\nDetached HEAD means...",
+      "choices": [
+        "HEAD points directly at a commit, not a branch",
+        "The repo has no .git",
+        "You cannot run status",
+        "All remotes were deleted"
+      ],
+      "answer": 0,
+      "explain": "Detached HEAD is a commit checkout without a branch.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_medium_17.mp4",
+        "poster": "media/images/mind_medium_17-frame.png",
+        "figure": "media/images/mind_medium_17.png"
+      }
+    },
+    {
+      "id": "mind_medium_18",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"docs: update india\"\n```\n`git commit -m \"Add path 18 to ALU\"` records...",
+      "choices": [
+        "Only untracked files",
+        "Whatever is currently staged",
+        "The entire home directory",
+        "origin/main automatically"
+      ],
+      "answer": 1,
+      "explain": "Commit uses the index.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_medium_18.mp4",
+        "poster": "media/images/mind_medium_18-frame.png",
+        "figure": "media/images/mind_medium_18.png"
+      }
+    },
+    {
+      "id": "mind_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# three trees: worktree / index / HEAD (20)\n```\nAfter `git add notes19.md` then more edits to `notes19.md`, extra edits are...",
+      "choices": [
+        "Already in the next commit automatically",
+        "Only in the working tree until you add again",
+        "Pushed to origin",
+        "Stored in a tag"
+      ],
+      "answer": 1,
+      "explain": "The index holds the last staged blob.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_medium_19.mp4",
+        "poster": "media/images/mind_medium_19-frame.png",
+        "figure": "media/images/mind_medium_19.png"
+      }
+    },
+    {
+      "id": "mind_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git add alpha21.md\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\n`git diff` with no args shows...",
+      "choices": [
+        "Staged vs HEAD",
+        "Working tree vs index",
+        "origin vs HEAD",
+        "Tag annotations"
+      ],
+      "answer": 1,
+      "explain": "Plain diff is unstaged changes.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_medium_20.mp4",
+        "poster": "media/images/mind_medium_20-frame.png",
+        "figure": "media/images/mind_medium_20.png"
+      }
+    },
+    {
+      "id": "mind_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff -- bravo22.md; git diff --staged\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\n`git diff --staged` shows...",
+      "choices": [
+        "Working tree vs index",
+        "Index vs HEAD",
+        "Only untracked files",
+        "Remote prune list"
+      ],
+      "answer": 1,
+      "explain": "Staged diff is the next commit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_medium_21.mp4",
+        "poster": "media/images/mind_medium_21-frame.png",
+        "figure": "media/images/mind_medium_21.png"
+      }
+    },
+    {
+      "id": "mind_medium_22",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"docs: update charlie\"\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\nHEAD can point at a branch name, which then points at a commit.",
+      "answer": true,
+      "explain": "Usually HEAD -> branch -> commit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_medium_22.mp4",
+        "poster": "media/images/mind_medium_22-frame.png",
+        "figure": "media/images/mind_medium_22.png"
+      }
+    },
+    {
+      "id": "mind_medium_23",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# three trees: worktree / index / HEAD (24)\n```\n# Review context: `~/src/alpha` slot 23 variant 1\nDetached HEAD means...",
+      "choices": [
+        "HEAD points directly at a commit, not a branch",
+        "The repo has no .git",
+        "You cannot run status",
+        "All remotes were deleted"
+      ],
+      "answer": 0,
+      "explain": "Detached HEAD is a commit checkout without a branch.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_medium_23.mp4",
+        "poster": "media/images/mind_medium_23-frame.png",
+        "figure": "media/images/mind_medium_23.png"
+      }
+    },
+    {
+      "id": "mind_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git add echo25.md\n```\n`git commit -m \"Add path 24 to ALU\"` records...",
+      "choices": [
+        "Only untracked files",
+        "Whatever is currently staged",
+        "The entire home directory",
+        "origin/main automatically"
+      ],
+      "answer": 1,
+      "explain": "Commit uses the index.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_medium_24.mp4",
+        "poster": "media/images/mind_medium_24-frame.png",
+        "figure": "media/images/mind_medium_24.png"
+      }
+    },
+    {
+      "id": "mind_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff -- foxtrot26.md; git diff --staged\n```\nAfter `git add notes25.md` then more edits to `notes25.md`, extra edits are...",
+      "choices": [
+        "Already in the next commit automatically",
+        "Only in the working tree until you add again",
+        "Pushed to origin",
+        "Stored in a tag"
+      ],
+      "answer": 1,
+      "explain": "The index holds the last staged blob.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_medium_25.mp4",
+        "poster": "media/images/mind_medium_25-frame.png",
+        "figure": "media/images/mind_medium_25.png"
+      }
+    },
+    {
+      "id": "mind_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"docs: update golf\"\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\n`git diff` with no args shows...",
+      "choices": [
+        "Staged vs HEAD",
+        "Working tree vs index",
+        "origin vs HEAD",
+        "Tag annotations"
+      ],
+      "answer": 1,
+      "explain": "Plain diff is unstaged changes.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_medium_26.mp4",
+        "poster": "media/images/mind_medium_26-frame.png",
+        "figure": "media/images/mind_medium_26.png"
+      }
+    },
+    {
+      "id": "mind_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# three trees: worktree / index / HEAD (28)\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\n`git diff --staged` shows...",
+      "choices": [
+        "Working tree vs index",
+        "Index vs HEAD",
+        "Only untracked files",
+        "Remote prune list"
+      ],
+      "answer": 1,
+      "explain": "Staged diff is the next commit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_medium_27.mp4",
+        "poster": "media/images/mind_medium_27-frame.png",
+        "figure": "media/images/mind_medium_27.png"
+      }
+    },
+    {
+      "id": "mind_medium_28",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git add india29.md\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\nHEAD can point at a branch name, which then points at a commit.",
+      "answer": true,
+      "explain": "Usually HEAD -> branch -> commit.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_medium_28.mp4",
+        "poster": "media/images/mind_medium_28-frame.png",
+        "figure": "media/images/mind_medium_28.png"
+      }
+    },
+    {
+      "id": "mind_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff -- juliet30.md; git diff --staged\n```\n# Review context: `~/src/golf` slot 29 variant 1\nDetached HEAD means...",
+      "choices": [
+        "HEAD points directly at a commit, not a branch",
+        "The repo has no .git",
+        "You cannot run status",
+        "All remotes were deleted"
+      ],
+      "answer": 0,
+      "explain": "Detached HEAD is a commit checkout without a branch.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_medium_29.mp4",
+        "poster": "media/images/mind_medium_29-frame.png",
+        "figure": "media/images/mind_medium_29.png"
+      }
+    },
+    {
+      "id": "mind_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"docs: update alpha\"\n```\n`git commit -m \"Add path 30 to ALU\"` records...",
+      "choices": [
+        "Only untracked files",
+        "Whatever is currently staged",
+        "The entire home directory",
+        "origin/main automatically"
+      ],
+      "answer": 1,
+      "explain": "Commit uses the index.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_medium_30.mp4",
+        "poster": "media/images/mind_medium_30-frame.png",
+        "figure": "media/images/mind_medium_30.png"
+      }
+    },
+    {
+      "id": "mind_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# three trees: worktree / index / HEAD (4)\n```\nIf `notes1.md` is staged and you `git restore --staged notes1.md`...",
+      "choices": [
+        "Index matches HEAD; working tree still has edits",
+        "The file is deleted",
+        "The remote is force-updated",
+        "A tag is created"
+      ],
+      "answer": 0,
+      "explain": "Unstaging leaves working-tree edits.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_hard_01.mp4",
+        "poster": "media/images/mind_hard_01-frame.png",
+        "figure": "media/images/mind_hard_01.png"
+      }
+    },
+    {
+      "id": "mind_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git add echo5.md\n```\nThree trees in Git are...",
+      "choices": [
+        "working tree, index, HEAD commit",
+        "origin, upstream, tag",
+        "blob, issue, PR",
+        "stash, bisect, blame"
+      ],
+      "answer": 0,
+      "explain": "Everyday Git compares those three snapshots.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_hard_02.mp4",
+        "poster": "media/images/mind_hard_02-frame.png",
+        "figure": "media/images/mind_hard_02.png"
+      }
+    },
+    {
+      "id": "mind_hard_03",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit diff -- foxtrot6.md; git diff --staged\n```\nTwo commits can share the same tree SHA if they recorded identical content.",
+      "answer": true,
+      "explain": "Tree identity is content-based.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_hard_03.mp4",
+        "poster": "media/images/mind_hard_03-frame.png",
+        "figure": "media/images/mind_hard_03.png"
+      }
+    },
+    {
+      "id": "mind_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"docs: update golf\"\n```\nWhy `git status` can show `notes4.md` as both staged and unstaged...",
+      "choices": [
+        "You staged a version, then edited the file again",
+        "Git is broken",
+        "The file is a submodule",
+        "HEAD is a tag"
+      ],
+      "answer": 0,
+      "explain": "Index and working tree differ after extra edits.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_hard_04.mp4",
+        "poster": "media/images/mind_hard_04-frame.png",
+        "figure": "media/images/mind_hard_04.png"
+      }
+    },
+    {
+      "id": "mind_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# three trees: worktree / index / HEAD (8)\n```\nA commit SHA changes if you...",
+      "choices": [
+        "Change message, tree, parent, or author metadata",
+        "Only run git status",
+        "Open the editor",
+        "List remotes"
+      ],
+      "answer": 0,
+      "explain": "SHA covers the whole commit object.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_hard_05.mp4",
+        "poster": "media/images/mind_hard_05-frame.png",
+        "figure": "media/images/mind_hard_05.png"
+      }
+    },
+    {
+      "id": "mind_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git add india9.md\n```\nIf `notes6.md` is staged and you `git restore --staged notes6.md`...",
+      "choices": [
+        "Index matches HEAD; working tree still has edits",
+        "The file is deleted",
+        "The remote is force-updated",
+        "A tag is created"
+      ],
+      "answer": 0,
+      "explain": "Unstaging leaves working-tree edits.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_hard_06.mp4",
+        "poster": "media/images/mind_hard_06-frame.png",
+        "figure": "media/images/mind_hard_06.png"
+      }
+    },
+    {
+      "id": "mind_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff -- juliet10.md; git diff --staged\n```\n# Review context: `./labs/alpha` slot 7 variant 1\nThree trees in Git are...",
+      "choices": [
+        "working tree, index, HEAD commit",
+        "origin, upstream, tag",
+        "blob, issue, PR",
+        "stash, bisect, blame"
+      ],
+      "answer": 0,
+      "explain": "Everyday Git compares those three snapshots.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_hard_07.mp4",
+        "poster": "media/images/mind_hard_07-frame.png",
+        "figure": "media/images/mind_hard_07.png"
+      }
+    },
+    {
+      "id": "mind_hard_08",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"docs: update alpha\"\n```\n# Review context: `/tmp/gitlab/bravo` slot 8 variant 1\nTwo commits can share the same tree SHA if they recorded identical content.",
+      "answer": true,
+      "explain": "Tree identity is content-based.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_hard_08.mp4",
+        "poster": "media/images/mind_hard_08-frame.png",
+        "figure": "media/images/mind_hard_08.png"
+      }
+    },
+    {
+      "id": "mind_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# three trees: worktree / index / HEAD (12)\n```\nWhy `git status` can show `notes9.md` as both staged and unstaged...",
+      "choices": [
+        "You staged a version, then edited the file again",
+        "Git is broken",
+        "The file is a submodule",
+        "HEAD is a tag"
+      ],
+      "answer": 0,
+      "explain": "Index and working tree differ after extra edits.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_hard_09.mp4",
+        "poster": "media/images/mind_hard_09-frame.png",
+        "figure": "media/images/mind_hard_09.png"
+      }
+    },
+    {
+      "id": "mind_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git add charlie13.md\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\nA commit SHA changes if you...",
+      "choices": [
+        "Change message, tree, parent, or author metadata",
+        "Only run git status",
+        "Open the editor",
+        "List remotes"
+      ],
+      "answer": 0,
+      "explain": "SHA covers the whole commit object.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_hard_10.mp4",
+        "poster": "media/images/mind_hard_10-frame.png",
+        "figure": "media/images/mind_hard_10.png"
+      }
+    },
+    {
+      "id": "mind_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff -- delta14.md; git diff --staged\n```\nIf `notes11.md` is staged and you `git restore --staged notes11.md`...",
+      "choices": [
+        "Index matches HEAD; working tree still has edits",
+        "The file is deleted",
+        "The remote is force-updated",
+        "A tag is created"
+      ],
+      "answer": 0,
+      "explain": "Unstaging leaves working-tree edits.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_hard_11.mp4",
+        "poster": "media/images/mind_hard_11-frame.png",
+        "figure": "media/images/mind_hard_11.png"
+      }
+    },
+    {
+      "id": "mind_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"docs: update echo\"\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\nThree trees in Git are...",
+      "choices": [
+        "working tree, index, HEAD commit",
+        "origin, upstream, tag",
+        "blob, issue, PR",
+        "stash, bisect, blame"
+      ],
+      "answer": 0,
+      "explain": "Everyday Git compares those three snapshots.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_hard_12.mp4",
+        "poster": "media/images/mind_hard_12-frame.png",
+        "figure": "media/images/mind_hard_12.png"
+      }
+    },
+    {
+      "id": "mind_hard_13",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\n# three trees: worktree / index / HEAD (16)\n```\n# Review context: `./labs/golf` slot 13 variant 1\nTwo commits can share the same tree SHA if they recorded identical content.",
+      "answer": true,
+      "explain": "Tree identity is content-based.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_hard_13.mp4",
+        "poster": "media/images/mind_hard_13-frame.png",
+        "figure": "media/images/mind_hard_13.png"
+      }
+    },
+    {
+      "id": "mind_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git add golf17.md\n```\nWhy `git status` can show `notes14.md` as both staged and unstaged...",
+      "choices": [
+        "You staged a version, then edited the file again",
+        "Git is broken",
+        "The file is a submodule",
+        "HEAD is a tag"
+      ],
+      "answer": 0,
+      "explain": "Index and working tree differ after extra edits.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_hard_14.mp4",
+        "poster": "media/images/mind_hard_14-frame.png",
+        "figure": "media/images/mind_hard_14.png"
+      }
+    },
+    {
+      "id": "mind_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff -- hotel18.md; git diff --staged\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\nA commit SHA changes if you...",
+      "choices": [
+        "Change message, tree, parent, or author metadata",
+        "Only run git status",
+        "Open the editor",
+        "List remotes"
+      ],
+      "answer": 0,
+      "explain": "SHA covers the whole commit object.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_hard_15.mp4",
+        "poster": "media/images/mind_hard_15-frame.png",
+        "figure": "media/images/mind_hard_15.png"
+      }
+    },
+    {
+      "id": "mind_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"docs: update india\"\n```\nIf `notes16.md` is staged and you `git restore --staged notes16.md`...",
+      "choices": [
+        "Index matches HEAD; working tree still has edits",
+        "The file is deleted",
+        "The remote is force-updated",
+        "A tag is created"
+      ],
+      "answer": 0,
+      "explain": "Unstaging leaves working-tree edits.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_hard_16.mp4",
+        "poster": "media/images/mind_hard_16-frame.png",
+        "figure": "media/images/mind_hard_16.png"
+      }
+    },
+    {
+      "id": "mind_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# three trees: worktree / index / HEAD (20)\n```\n# Review context: `~/src/charlie` slot 17 variant 1\nThree trees in Git are...",
+      "choices": [
+        "working tree, index, HEAD commit",
+        "origin, upstream, tag",
+        "blob, issue, PR",
+        "stash, bisect, blame"
+      ],
+      "answer": 0,
+      "explain": "Everyday Git compares those three snapshots.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_hard_17.mp4",
+        "poster": "media/images/mind_hard_17-frame.png",
+        "figure": "media/images/mind_hard_17.png"
+      }
+    },
+    {
+      "id": "mind_hard_18",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git add alpha21.md\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\nTwo commits can share the same tree SHA if they recorded identical content.",
+      "answer": true,
+      "explain": "Tree identity is content-based.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_hard_18.mp4",
+        "poster": "media/images/mind_hard_18-frame.png",
+        "figure": "media/images/mind_hard_18.png"
+      }
+    },
+    {
+      "id": "mind_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff -- bravo22.md; git diff --staged\n```\nWhy `git status` can show `notes19.md` as both staged and unstaged...",
+      "choices": [
+        "You staged a version, then edited the file again",
+        "Git is broken",
+        "The file is a submodule",
+        "HEAD is a tag"
+      ],
+      "answer": 0,
+      "explain": "Index and working tree differ after extra edits.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_hard_19.mp4",
+        "poster": "media/images/mind_hard_19-frame.png",
+        "figure": "media/images/mind_hard_19.png"
+      }
+    },
+    {
+      "id": "mind_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"docs: update charlie\"\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\nA commit SHA changes if you...",
+      "choices": [
+        "Change message, tree, parent, or author metadata",
+        "Only run git status",
+        "Open the editor",
+        "List remotes"
+      ],
+      "answer": 0,
+      "explain": "SHA covers the whole commit object.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_hard_20.mp4",
+        "poster": "media/images/mind_hard_20-frame.png",
+        "figure": "media/images/mind_hard_20.png"
+      }
+    },
+    {
+      "id": "mind_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# three trees: worktree / index / HEAD (24)\n```\nIf `notes21.md` is staged and you `git restore --staged notes21.md`...",
+      "choices": [
+        "Index matches HEAD; working tree still has edits",
+        "The file is deleted",
+        "The remote is force-updated",
+        "A tag is created"
+      ],
+      "answer": 0,
+      "explain": "Unstaging leaves working-tree edits.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_hard_21.mp4",
+        "poster": "media/images/mind_hard_21-frame.png",
+        "figure": "media/images/mind_hard_21.png"
+      }
+    },
+    {
+      "id": "mind_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git add echo25.md\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\nThree trees in Git are...",
+      "choices": [
+        "working tree, index, HEAD commit",
+        "origin, upstream, tag",
+        "blob, issue, PR",
+        "stash, bisect, blame"
+      ],
+      "answer": 0,
+      "explain": "Everyday Git compares those three snapshots.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_hard_22.mp4",
+        "poster": "media/images/mind_hard_22-frame.png",
+        "figure": "media/images/mind_hard_22.png"
+      }
+    },
+    {
+      "id": "mind_hard_23",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit diff -- foxtrot26.md; git diff --staged\n```\n# Review context: `~/src/alpha` slot 23 variant 1\nTwo commits can share the same tree SHA if they recorded identical content.",
+      "answer": true,
+      "explain": "Tree identity is content-based.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_hard_23.mp4",
+        "poster": "media/images/mind_hard_23-frame.png",
+        "figure": "media/images/mind_hard_23.png"
+      }
+    },
+    {
+      "id": "mind_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"docs: update golf\"\n```\nWhy `git status` can show `notes24.md` as both staged and unstaged...",
+      "choices": [
+        "You staged a version, then edited the file again",
+        "Git is broken",
+        "The file is a submodule",
+        "HEAD is a tag"
+      ],
+      "answer": 0,
+      "explain": "Index and working tree differ after extra edits.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_hard_24.mp4",
+        "poster": "media/images/mind_hard_24-frame.png",
+        "figure": "media/images/mind_hard_24.png"
+      }
+    },
+    {
+      "id": "mind_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# three trees: worktree / index / HEAD (28)\n```\n# Review context: `./labs/charlie` slot 25 variant 1\nA commit SHA changes if you...",
+      "choices": [
+        "Change message, tree, parent, or author metadata",
+        "Only run git status",
+        "Open the editor",
+        "List remotes"
+      ],
+      "answer": 0,
+      "explain": "SHA covers the whole commit object.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_hard_25.mp4",
+        "poster": "media/images/mind_hard_25-frame.png",
+        "figure": "media/images/mind_hard_25.png"
+      }
+    },
+    {
+      "id": "mind_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git add india29.md\n```\nIf `notes26.md` is staged and you `git restore --staged notes26.md`...",
+      "choices": [
+        "Index matches HEAD; working tree still has edits",
+        "The file is deleted",
+        "The remote is force-updated",
+        "A tag is created"
+      ],
+      "answer": 0,
+      "explain": "Unstaging leaves working-tree edits.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_hard_26.mp4",
+        "poster": "media/images/mind_hard_26-frame.png",
+        "figure": "media/images/mind_hard_26.png"
+      }
+    },
+    {
+      "id": "mind_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit diff -- juliet30.md; git diff --staged\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\nThree trees in Git are...",
+      "choices": [
+        "working tree, index, HEAD commit",
+        "origin, upstream, tag",
+        "blob, issue, PR",
+        "stash, bisect, blame"
+      ],
+      "answer": 0,
+      "explain": "Everyday Git compares those three snapshots.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_hard_27.mp4",
+        "poster": "media/images/mind_hard_27-frame.png",
+        "figure": "media/images/mind_hard_27.png"
+      }
+    },
+    {
+      "id": "mind_hard_28",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"docs: update alpha\"\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\nTwo commits can share the same tree SHA if they recorded identical content.",
+      "answer": true,
+      "explain": "Tree identity is content-based.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_hard_28.mp4",
+        "poster": "media/images/mind_hard_28-frame.png",
+        "figure": "media/images/mind_hard_28.png"
+      }
+    },
+    {
+      "id": "mind_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# three trees: worktree / index / HEAD (32)\n```\nWhy `git status` can show `notes29.md` as both staged and unstaged...",
+      "choices": [
+        "You staged a version, then edited the file again",
+        "Git is broken",
+        "The file is a submodule",
+        "HEAD is a tag"
+      ],
+      "answer": 0,
+      "explain": "Index and working tree differ after extra edits.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_hard_29.mp4",
+        "poster": "media/images/mind_hard_29-frame.png",
+        "figure": "media/images/mind_hard_29.png"
+      }
+    },
+    {
+      "id": "mind_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit status; git add charlie33.md\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\nA commit SHA changes if you...",
+      "choices": [
+        "Change message, tree, parent, or author metadata",
+        "Only run git status",
+        "Open the editor",
+        "List remotes"
+      ],
+      "answer": 0,
+      "explain": "SHA covers the whole commit object.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/mind_hard_30.mp4",
+        "poster": "media/images/mind_hard_30-frame.png",
+        "figure": "media/images/mind_hard_30.png"
+      }
+    }
+  ]
+}
