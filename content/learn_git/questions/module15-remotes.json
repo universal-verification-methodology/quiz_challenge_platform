@@ -1,0 +1,1698 @@
+{
+  "module": "module15-remotes",
+  "title": "Remotes & first push",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push -u origin feature/bravo2\n```\nA remote named origin usually...",
+      "choices": [
+        "Points at the default hosted copy of your repository",
+        "Is only a local branch name",
+        "Deletes all commits",
+        "Replaces git blame"
+      ],
+      "answer": 0,
+      "explain": "Origin is the conventional name for the primary remote URL (e.g. on GitHub).",
+      "difficulty": "easy",
+      "id": "rem_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_easy_01.mp4",
+        "poster": "media/images/rem_easy_01-frame.png",
+        "figure": "media/images/rem_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit fetch origin\n```\nFirst push of lab1 that also sets upstream is...",
+      "choices": [
+        "git push -u origin lab1",
+        "git push lab1",
+        "git remote remove origin",
+        "git bisect start"
+      ],
+      "answer": 0,
+      "explain": "-u records upstream so later git push can omit remote and branch names.",
+      "difficulty": "easy",
+      "id": "rem_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_easy_02.mp4",
+        "poster": "media/images/rem_easy_02-frame.png",
+        "figure": "media/images/rem_easy_02.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit ls-remote origin | head\n```\nA typical lab pull request compares...",
+      "choices": [
+        "lab1 into main",
+        "main into lab1 only",
+        "origin into HEAD always",
+        "tags into stash"
+      ],
+      "answer": 0,
+      "explain": "You propose merging your feature/lab branch into the integration branch (main).",
+      "difficulty": "easy",
+      "id": "rem_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_easy_03.mp4",
+        "poster": "media/images/rem_easy_03-frame.png",
+        "figure": "media/images/rem_easy_03.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\nAfter cloning a repo with submodules, you may need git submodule update --init --recursive.",
+      "answer": true,
+      "explain": "Submodule directories are empty until initialized; clone --recurse-submodules avoids that step.",
+      "difficulty": "easy",
+      "id": "rem_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_easy_04.mp4",
+        "poster": "media/images/rem_easy_04-frame.png",
+        "figure": "media/images/rem_easy_04.png"
+      }
+    },
+    {
+      "id": "rem_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push -u origin feature/foxtrot6\n```\nA remote named `origin` usually...",
+      "choices": [
+        "Points at the default hosted copy of your repository",
+        "Is only a local branch name",
+        "Deletes all commits",
+        "Replaces git blame"
+      ],
+      "answer": 0,
+      "explain": "origin is the conventional primary remote.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_easy_05.mp4",
+        "poster": "media/images/rem_easy_05-frame.png",
+        "figure": "media/images/rem_easy_05.png"
+      }
+    },
+    {
+      "id": "rem_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit fetch origin\n```\nFirst push of `lab6` that also sets upstream is...",
+      "choices": [
+        "git push -u origin lab6",
+        "git push lab6",
+        "git remote remove origin",
+        "git bisect start"
+      ],
+      "answer": 0,
+      "explain": "-u records upstream.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_easy_06.mp4",
+        "poster": "media/images/rem_easy_06-frame.png",
+        "figure": "media/images/rem_easy_06.png"
+      }
+    },
+    {
+      "id": "rem_easy_07",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit ls-remote origin | head\n```\nA typical lab pull request compares...",
+      "choices": [
+        "lab7 into main",
+        "main into lab7 only",
+        "origin into HEAD always",
+        "tags into stash"
+      ],
+      "answer": 0,
+      "explain": "Propose merging the lab branch into main.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_easy_07.mp4",
+        "poster": "media/images/rem_easy_07-frame.png",
+        "figure": "media/images/rem_easy_07.png"
+      }
+    },
+    {
+      "id": "rem_easy_08",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n`git fetch origin` downloads objects and updates remote-tracking refs.",
+      "answer": true,
+      "explain": "Fetch does not merge.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_easy_08.mp4",
+        "poster": "media/images/rem_easy_08-frame.png",
+        "figure": "media/images/rem_easy_08.png"
+      }
+    },
+    {
+      "id": "rem_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push -u origin feature/juliet10\n```\n`git remote -v` shows...",
+      "choices": [
+        "Fetch and push URLs",
+        "Only tags",
+        "Stash",
+        "Ignore"
+      ],
+      "answer": 0,
+      "explain": "List remotes.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_easy_09.mp4",
+        "poster": "media/images/rem_easy_09-frame.png",
+        "figure": "media/images/rem_easy_09.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit fetch origin\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\nA remote named origin usually...",
+      "choices": [
+        "Points at the default hosted copy of your repository",
+        "Is only a local branch name",
+        "Deletes all commits",
+        "Replaces git blame"
+      ],
+      "answer": 0,
+      "explain": "Origin is the conventional name for the primary remote URL (e.g. on GitHub).",
+      "difficulty": "easy",
+      "id": "rem_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_easy_10.mp4",
+        "poster": "media/images/rem_easy_10-frame.png",
+        "figure": "media/images/rem_easy_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit ls-remote origin | head\n```\n# Review context: `~/src/echo` slot 11 variant 1\nFirst push of lab1 that also sets upstream is...",
+      "choices": [
+        "git push -u origin lab1",
+        "git push lab1",
+        "git remote remove origin",
+        "git bisect start"
+      ],
+      "answer": 0,
+      "explain": "-u records upstream so later git push can omit remote and branch names.",
+      "difficulty": "easy",
+      "id": "rem_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_easy_11.mp4",
+        "poster": "media/images/rem_easy_11-frame.png",
+        "figure": "media/images/rem_easy_11.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\nA typical lab pull request compares...",
+      "choices": [
+        "lab1 into main",
+        "main into lab1 only",
+        "origin into HEAD always",
+        "tags into stash"
+      ],
+      "answer": 0,
+      "explain": "You propose merging your feature/lab branch into the integration branch (main).",
+      "difficulty": "easy",
+      "id": "rem_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_easy_12.mp4",
+        "poster": "media/images/rem_easy_12-frame.png",
+        "figure": "media/images/rem_easy_12.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit push -u origin feature/delta14\n```\n# Review context: `./labs/golf` slot 13 variant 1\nAfter cloning a repo with submodules, you may need git submodule update --init --recursive.",
+      "answer": true,
+      "explain": "Submodule directories are empty until initialized; clone --recurse-submodules avoids that step.",
+      "difficulty": "easy",
+      "id": "rem_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_easy_13.mp4",
+        "poster": "media/images/rem_easy_13-frame.png",
+        "figure": "media/images/rem_easy_13.png"
+      }
+    },
+    {
+      "id": "rem_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit fetch origin\n```\n# Review context: `/tmp/gitlab/hotel` slot 14 variant 1\nA remote named `origin` usually...",
+      "choices": [
+        "Points at the default hosted copy of your repository",
+        "Is only a local branch name",
+        "Deletes all commits",
+        "Replaces git blame"
+      ],
+      "answer": 0,
+      "explain": "origin is the conventional primary remote.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_easy_14.mp4",
+        "poster": "media/images/rem_easy_14-frame.png",
+        "figure": "media/images/rem_easy_14.png"
+      }
+    },
+    {
+      "id": "rem_easy_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit ls-remote origin | head\n```\nFirst push of `lab15` that also sets upstream is...",
+      "choices": [
+        "git push -u origin lab15",
+        "git push lab15",
+        "git remote remove origin",
+        "git bisect start"
+      ],
+      "answer": 0,
+      "explain": "-u records upstream.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_easy_15.mp4",
+        "poster": "media/images/rem_easy_15-frame.png",
+        "figure": "media/images/rem_easy_15.png"
+      }
+    },
+    {
+      "id": "rem_easy_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\nA typical lab pull request compares...",
+      "choices": [
+        "lab16 into main",
+        "main into lab16 only",
+        "origin into HEAD always",
+        "tags into stash"
+      ],
+      "answer": 0,
+      "explain": "Propose merging the lab branch into main.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_easy_16.mp4",
+        "poster": "media/images/rem_easy_16-frame.png",
+        "figure": "media/images/rem_easy_16.png"
+      }
+    },
+    {
+      "id": "rem_easy_17",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit push -u origin feature/hotel18\n```\n# Review context: `~/src/charlie` slot 17 variant 1\n`git fetch origin` downloads objects and updates remote-tracking refs.",
+      "answer": true,
+      "explain": "Fetch does not merge.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_easy_17.mp4",
+        "poster": "media/images/rem_easy_17-frame.png",
+        "figure": "media/images/rem_easy_17.png"
+      }
+    },
+    {
+      "id": "rem_easy_18",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit fetch origin\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\n`git remote -v` shows...",
+      "choices": [
+        "Fetch and push URLs",
+        "Only tags",
+        "Stash",
+        "Ignore"
+      ],
+      "answer": 0,
+      "explain": "List remotes.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_easy_18.mp4",
+        "poster": "media/images/rem_easy_18-frame.png",
+        "figure": "media/images/rem_easy_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit ls-remote origin | head\n```\n# Review context: `./labs/echo` slot 19 variant 1\nA remote named origin usually...",
+      "choices": [
+        "Points at the default hosted copy of your repository",
+        "Is only a local branch name",
+        "Deletes all commits",
+        "Replaces git blame"
+      ],
+      "answer": 0,
+      "explain": "Origin is the conventional name for the primary remote URL (e.g. on GitHub).",
+      "difficulty": "easy",
+      "id": "rem_easy_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_easy_19.mp4",
+        "poster": "media/images/rem_easy_19-frame.png",
+        "figure": "media/images/rem_easy_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\nFirst push of lab1 that also sets upstream is...",
+      "choices": [
+        "git push -u origin lab1",
+        "git push lab1",
+        "git remote remove origin",
+        "git bisect start"
+      ],
+      "answer": 0,
+      "explain": "-u records upstream so later git push can omit remote and branch names.",
+      "difficulty": "easy",
+      "id": "rem_easy_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_easy_20.mp4",
+        "poster": "media/images/rem_easy_20-frame.png",
+        "figure": "media/images/rem_easy_20.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push -u origin feature/bravo22\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\nA typical lab pull request compares...",
+      "choices": [
+        "lab1 into main",
+        "main into lab1 only",
+        "origin into HEAD always",
+        "tags into stash"
+      ],
+      "answer": 0,
+      "explain": "You propose merging your feature/lab branch into the integration branch (main).",
+      "difficulty": "easy",
+      "id": "rem_easy_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_easy_21.mp4",
+        "poster": "media/images/rem_easy_21-frame.png",
+        "figure": "media/images/rem_easy_21.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit fetch origin\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\nAfter cloning a repo with submodules, you may need git submodule update --init --recursive.",
+      "answer": true,
+      "explain": "Submodule directories are empty until initialized; clone --recurse-submodules avoids that step.",
+      "difficulty": "easy",
+      "id": "rem_easy_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_easy_22.mp4",
+        "poster": "media/images/rem_easy_22-frame.png",
+        "figure": "media/images/rem_easy_22.png"
+      }
+    },
+    {
+      "id": "rem_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit ls-remote origin | head\n```\n# Review context: `~/src/alpha` slot 23 variant 1\nA remote named `origin` usually...",
+      "choices": [
+        "Points at the default hosted copy of your repository",
+        "Is only a local branch name",
+        "Deletes all commits",
+        "Replaces git blame"
+      ],
+      "answer": 0,
+      "explain": "origin is the conventional primary remote.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_easy_23.mp4",
+        "poster": "media/images/rem_easy_23-frame.png",
+        "figure": "media/images/rem_easy_23.png"
+      }
+    },
+    {
+      "id": "rem_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\nFirst push of `lab24` that also sets upstream is...",
+      "choices": [
+        "git push -u origin lab24",
+        "git push lab24",
+        "git remote remove origin",
+        "git bisect start"
+      ],
+      "answer": 0,
+      "explain": "-u records upstream.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_easy_24.mp4",
+        "poster": "media/images/rem_easy_24-frame.png",
+        "figure": "media/images/rem_easy_24.png"
+      }
+    },
+    {
+      "id": "rem_easy_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push -u origin feature/foxtrot26\n```\nA typical lab pull request compares...",
+      "choices": [
+        "lab25 into main",
+        "main into lab25 only",
+        "origin into HEAD always",
+        "tags into stash"
+      ],
+      "answer": 0,
+      "explain": "Propose merging the lab branch into main.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_easy_25.mp4",
+        "poster": "media/images/rem_easy_25-frame.png",
+        "figure": "media/images/rem_easy_25.png"
+      }
+    },
+    {
+      "id": "rem_easy_26",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit fetch origin\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\n`git fetch origin` downloads objects and updates remote-tracking refs.",
+      "answer": true,
+      "explain": "Fetch does not merge.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_easy_26.mp4",
+        "poster": "media/images/rem_easy_26-frame.png",
+        "figure": "media/images/rem_easy_26.png"
+      }
+    },
+    {
+      "id": "rem_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit ls-remote origin | head\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\n`git remote -v` shows...",
+      "choices": [
+        "Fetch and push URLs",
+        "Only tags",
+        "Stash",
+        "Ignore"
+      ],
+      "answer": 0,
+      "explain": "List remotes.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_easy_27.mp4",
+        "poster": "media/images/rem_easy_27-frame.png",
+        "figure": "media/images/rem_easy_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\nA remote named origin usually...",
+      "choices": [
+        "Points at the default hosted copy of your repository",
+        "Is only a local branch name",
+        "Deletes all commits",
+        "Replaces git blame"
+      ],
+      "answer": 0,
+      "explain": "Origin is the conventional name for the primary remote URL (e.g. on GitHub).",
+      "difficulty": "easy",
+      "id": "rem_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_easy_28.mp4",
+        "poster": "media/images/rem_easy_28-frame.png",
+        "figure": "media/images/rem_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push -u origin feature/juliet30\n```\n# Review context: `~/src/golf` slot 29 variant 1\nFirst push of lab1 that also sets upstream is...",
+      "choices": [
+        "git push -u origin lab1",
+        "git push lab1",
+        "git remote remove origin",
+        "git bisect start"
+      ],
+      "answer": 0,
+      "explain": "-u records upstream so later git push can omit remote and branch names.",
+      "difficulty": "easy",
+      "id": "rem_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_easy_29.mp4",
+        "poster": "media/images/rem_easy_29-frame.png",
+        "figure": "media/images/rem_easy_29.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit fetch origin\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\nA typical lab pull request compares...",
+      "choices": [
+        "lab1 into main",
+        "main into lab1 only",
+        "origin into HEAD always",
+        "tags into stash"
+      ],
+      "answer": 0,
+      "explain": "You propose merging your feature/lab branch into the integration branch (main).",
+      "difficulty": "easy",
+      "id": "rem_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_easy_30.mp4",
+        "poster": "media/images/rem_easy_30-frame.png",
+        "figure": "media/images/rem_easy_30.png"
+      }
+    },
+    {
+      "id": "rem_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push -u origin feature/bravo2\n```\n`git remote add origin <url>`...",
+      "choices": [
+        "Adds a named remote",
+        "Deletes main",
+        "Creates a stash",
+        "Starts mergetool"
+      ],
+      "answer": 0,
+      "explain": "add a remote.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_medium_01.mp4",
+        "poster": "media/images/rem_medium_01-frame.png",
+        "figure": "media/images/rem_medium_01.png"
+      }
+    },
+    {
+      "id": "rem_medium_02",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit fetch origin\n```\n`git push origin --force-with-lease feature/lab2` is safer than `--force` because...",
+      "choices": [
+        "It refuses if the remote moved since your last fetch",
+        "It never rewrites",
+        "It only tags",
+        "It ignores lease"
+      ],
+      "answer": 0,
+      "explain": "Lease checks the expected tip.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_medium_02.mp4",
+        "poster": "media/images/rem_medium_02-frame.png",
+        "figure": "media/images/rem_medium_02.png"
+      }
+    },
+    {
+      "id": "rem_medium_03",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit ls-remote origin | head\n```\n`git ls-remote origin` lists refs on the remote without merging.",
+      "answer": true,
+      "explain": "Query remote refs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_medium_03.mp4",
+        "poster": "media/images/rem_medium_03-frame.png",
+        "figure": "media/images/rem_medium_03.png"
+      }
+    },
+    {
+      "id": "rem_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n`git remote set-url origin <new>` updates...",
+      "choices": [
+        "The stored URL",
+        "HEAD commit",
+        "A tag message",
+        "Ignore"
+      ],
+      "answer": 0,
+      "explain": "Change origin URL.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_medium_04.mp4",
+        "poster": "media/images/rem_medium_04-frame.png",
+        "figure": "media/images/rem_medium_04.png"
+      }
+    },
+    {
+      "id": "rem_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push -u origin feature/foxtrot6\n```\n`git push origin HEAD:lab5` pushes...",
+      "choices": [
+        "Current HEAD to remote branch lab5",
+        "All tags",
+        "The stash",
+        "gitignore"
+      ],
+      "answer": 0,
+      "explain": "Refspec push.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_medium_05.mp4",
+        "poster": "media/images/rem_medium_05-frame.png",
+        "figure": "media/images/rem_medium_05.png"
+      }
+    },
+    {
+      "id": "rem_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit fetch origin\n```\n# Review context: `/work/chip/hotel` slot 6 variant 1\n`git remote add origin <url>`...",
+      "choices": [
+        "Adds a named remote",
+        "Deletes main",
+        "Creates a stash",
+        "Starts mergetool"
+      ],
+      "answer": 0,
+      "explain": "add a remote.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_medium_06.mp4",
+        "poster": "media/images/rem_medium_06-frame.png",
+        "figure": "media/images/rem_medium_06.png"
+      }
+    },
+    {
+      "id": "rem_medium_07",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit ls-remote origin | head\n```\n`git push origin --force-with-lease feature/lab7` is safer than `--force` because...",
+      "choices": [
+        "It refuses if the remote moved since your last fetch",
+        "It never rewrites",
+        "It only tags",
+        "It ignores lease"
+      ],
+      "answer": 0,
+      "explain": "Lease checks the expected tip.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_medium_07.mp4",
+        "poster": "media/images/rem_medium_07-frame.png",
+        "figure": "media/images/rem_medium_07.png"
+      }
+    },
+    {
+      "id": "rem_medium_08",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n# Review context: `/tmp/gitlab/bravo` slot 8 variant 1\n`git ls-remote origin` lists refs on the remote without merging.",
+      "answer": true,
+      "explain": "Query remote refs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_medium_08.mp4",
+        "poster": "media/images/rem_medium_08-frame.png",
+        "figure": "media/images/rem_medium_08.png"
+      }
+    },
+    {
+      "id": "rem_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push -u origin feature/juliet10\n```\n# Review context: `C:/proj/charlie` slot 9 variant 1\n`git remote set-url origin <new>` updates...",
+      "choices": [
+        "The stored URL",
+        "HEAD commit",
+        "A tag message",
+        "Ignore"
+      ],
+      "answer": 0,
+      "explain": "Change origin URL.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_medium_09.mp4",
+        "poster": "media/images/rem_medium_09-frame.png",
+        "figure": "media/images/rem_medium_09.png"
+      }
+    },
+    {
+      "id": "rem_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit fetch origin\n```\n`git push origin HEAD:lab10` pushes...",
+      "choices": [
+        "Current HEAD to remote branch lab10",
+        "All tags",
+        "The stash",
+        "gitignore"
+      ],
+      "answer": 0,
+      "explain": "Refspec push.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_medium_10.mp4",
+        "poster": "media/images/rem_medium_10-frame.png",
+        "figure": "media/images/rem_medium_10.png"
+      }
+    },
+    {
+      "id": "rem_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit ls-remote origin | head\n```\n# Review context: `~/src/echo` slot 11 variant 1\n`git remote add origin <url>`...",
+      "choices": [
+        "Adds a named remote",
+        "Deletes main",
+        "Creates a stash",
+        "Starts mergetool"
+      ],
+      "answer": 0,
+      "explain": "add a remote.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_medium_11.mp4",
+        "poster": "media/images/rem_medium_11-frame.png",
+        "figure": "media/images/rem_medium_11.png"
+      }
+    },
+    {
+      "id": "rem_medium_12",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n`git push origin --force-with-lease feature/lab12` is safer than `--force` because...",
+      "choices": [
+        "It refuses if the remote moved since your last fetch",
+        "It never rewrites",
+        "It only tags",
+        "It ignores lease"
+      ],
+      "answer": 0,
+      "explain": "Lease checks the expected tip.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_medium_12.mp4",
+        "poster": "media/images/rem_medium_12-frame.png",
+        "figure": "media/images/rem_medium_12.png"
+      }
+    },
+    {
+      "id": "rem_medium_13",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit push -u origin feature/delta14\n```\n# Review context: `./labs/golf` slot 13 variant 1\n`git ls-remote origin` lists refs on the remote without merging.",
+      "answer": true,
+      "explain": "Query remote refs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_medium_13.mp4",
+        "poster": "media/images/rem_medium_13-frame.png",
+        "figure": "media/images/rem_medium_13.png"
+      }
+    },
+    {
+      "id": "rem_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit fetch origin\n```\n# Review context: `/tmp/gitlab/hotel` slot 14 variant 1\n`git remote set-url origin <new>` updates...",
+      "choices": [
+        "The stored URL",
+        "HEAD commit",
+        "A tag message",
+        "Ignore"
+      ],
+      "answer": 0,
+      "explain": "Change origin URL.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_medium_14.mp4",
+        "poster": "media/images/rem_medium_14-frame.png",
+        "figure": "media/images/rem_medium_14.png"
+      }
+    },
+    {
+      "id": "rem_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit ls-remote origin | head\n```\n`git push origin HEAD:lab15` pushes...",
+      "choices": [
+        "Current HEAD to remote branch lab15",
+        "All tags",
+        "The stash",
+        "gitignore"
+      ],
+      "answer": 0,
+      "explain": "Refspec push.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_medium_15.mp4",
+        "poster": "media/images/rem_medium_15-frame.png",
+        "figure": "media/images/rem_medium_15.png"
+      }
+    },
+    {
+      "id": "rem_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\n`git remote add origin <url>`...",
+      "choices": [
+        "Adds a named remote",
+        "Deletes main",
+        "Creates a stash",
+        "Starts mergetool"
+      ],
+      "answer": 0,
+      "explain": "add a remote.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_medium_16.mp4",
+        "poster": "media/images/rem_medium_16-frame.png",
+        "figure": "media/images/rem_medium_16.png"
+      }
+    },
+    {
+      "id": "rem_medium_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push -u origin feature/hotel18\n```\n`git push origin --force-with-lease feature/lab17` is safer than `--force` because...",
+      "choices": [
+        "It refuses if the remote moved since your last fetch",
+        "It never rewrites",
+        "It only tags",
+        "It ignores lease"
+      ],
+      "answer": 0,
+      "explain": "Lease checks the expected tip.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_medium_17.mp4",
+        "poster": "media/images/rem_medium_17-frame.png",
+        "figure": "media/images/rem_medium_17.png"
+      }
+    },
+    {
+      "id": "rem_medium_18",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit fetch origin\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\n`git ls-remote origin` lists refs on the remote without merging.",
+      "answer": true,
+      "explain": "Query remote refs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_medium_18.mp4",
+        "poster": "media/images/rem_medium_18-frame.png",
+        "figure": "media/images/rem_medium_18.png"
+      }
+    },
+    {
+      "id": "rem_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit ls-remote origin | head\n```\n# Review context: `./labs/echo` slot 19 variant 1\n`git remote set-url origin <new>` updates...",
+      "choices": [
+        "The stored URL",
+        "HEAD commit",
+        "A tag message",
+        "Ignore"
+      ],
+      "answer": 0,
+      "explain": "Change origin URL.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_medium_19.mp4",
+        "poster": "media/images/rem_medium_19-frame.png",
+        "figure": "media/images/rem_medium_19.png"
+      }
+    },
+    {
+      "id": "rem_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n`git push origin HEAD:lab20` pushes...",
+      "choices": [
+        "Current HEAD to remote branch lab20",
+        "All tags",
+        "The stash",
+        "gitignore"
+      ],
+      "answer": 0,
+      "explain": "Refspec push.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_medium_20.mp4",
+        "poster": "media/images/rem_medium_20-frame.png",
+        "figure": "media/images/rem_medium_20.png"
+      }
+    },
+    {
+      "id": "rem_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push -u origin feature/bravo22\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\n`git remote add origin <url>`...",
+      "choices": [
+        "Adds a named remote",
+        "Deletes main",
+        "Creates a stash",
+        "Starts mergetool"
+      ],
+      "answer": 0,
+      "explain": "add a remote.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_medium_21.mp4",
+        "poster": "media/images/rem_medium_21-frame.png",
+        "figure": "media/images/rem_medium_21.png"
+      }
+    },
+    {
+      "id": "rem_medium_22",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit fetch origin\n```\n`git push origin --force-with-lease feature/lab22` is safer than `--force` because...",
+      "choices": [
+        "It refuses if the remote moved since your last fetch",
+        "It never rewrites",
+        "It only tags",
+        "It ignores lease"
+      ],
+      "answer": 0,
+      "explain": "Lease checks the expected tip.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_medium_22.mp4",
+        "poster": "media/images/rem_medium_22-frame.png",
+        "figure": "media/images/rem_medium_22.png"
+      }
+    },
+    {
+      "id": "rem_medium_23",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit ls-remote origin | head\n```\n# Review context: `~/src/alpha` slot 23 variant 1\n`git ls-remote origin` lists refs on the remote without merging.",
+      "answer": true,
+      "explain": "Query remote refs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_medium_23.mp4",
+        "poster": "media/images/rem_medium_23-frame.png",
+        "figure": "media/images/rem_medium_23.png"
+      }
+    },
+    {
+      "id": "rem_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n# Review context: `/work/chip/bravo` slot 24 variant 1\n`git remote set-url origin <new>` updates...",
+      "choices": [
+        "The stored URL",
+        "HEAD commit",
+        "A tag message",
+        "Ignore"
+      ],
+      "answer": 0,
+      "explain": "Change origin URL.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_medium_24.mp4",
+        "poster": "media/images/rem_medium_24-frame.png",
+        "figure": "media/images/rem_medium_24.png"
+      }
+    },
+    {
+      "id": "rem_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push -u origin feature/foxtrot26\n```\n`git push origin HEAD:lab25` pushes...",
+      "choices": [
+        "Current HEAD to remote branch lab25",
+        "All tags",
+        "The stash",
+        "gitignore"
+      ],
+      "answer": 0,
+      "explain": "Refspec push.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_medium_25.mp4",
+        "poster": "media/images/rem_medium_25-frame.png",
+        "figure": "media/images/rem_medium_25.png"
+      }
+    },
+    {
+      "id": "rem_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit fetch origin\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\n`git remote add origin <url>`...",
+      "choices": [
+        "Adds a named remote",
+        "Deletes main",
+        "Creates a stash",
+        "Starts mergetool"
+      ],
+      "answer": 0,
+      "explain": "add a remote.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_medium_26.mp4",
+        "poster": "media/images/rem_medium_26-frame.png",
+        "figure": "media/images/rem_medium_26.png"
+      }
+    },
+    {
+      "id": "rem_medium_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit ls-remote origin | head\n```\n`git push origin --force-with-lease feature/lab27` is safer than `--force` because...",
+      "choices": [
+        "It refuses if the remote moved since your last fetch",
+        "It never rewrites",
+        "It only tags",
+        "It ignores lease"
+      ],
+      "answer": 0,
+      "explain": "Lease checks the expected tip.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_medium_27.mp4",
+        "poster": "media/images/rem_medium_27-frame.png",
+        "figure": "media/images/rem_medium_27.png"
+      }
+    },
+    {
+      "id": "rem_medium_28",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\n`git ls-remote origin` lists refs on the remote without merging.",
+      "answer": true,
+      "explain": "Query remote refs.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_medium_28.mp4",
+        "poster": "media/images/rem_medium_28-frame.png",
+        "figure": "media/images/rem_medium_28.png"
+      }
+    },
+    {
+      "id": "rem_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push -u origin feature/juliet30\n```\n# Review context: `~/src/golf` slot 29 variant 1\n`git remote set-url origin <new>` updates...",
+      "choices": [
+        "The stored URL",
+        "HEAD commit",
+        "A tag message",
+        "Ignore"
+      ],
+      "answer": 0,
+      "explain": "Change origin URL.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_medium_29.mp4",
+        "poster": "media/images/rem_medium_29-frame.png",
+        "figure": "media/images/rem_medium_29.png"
+      }
+    },
+    {
+      "id": "rem_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit fetch origin\n```\n`git push origin HEAD:lab30` pushes...",
+      "choices": [
+        "Current HEAD to remote branch lab30",
+        "All tags",
+        "The stash",
+        "gitignore"
+      ],
+      "answer": 0,
+      "explain": "Refspec push.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_medium_30.mp4",
+        "poster": "media/images/rem_medium_30-frame.png",
+        "figure": "media/images/rem_medium_30.png"
+      }
+    },
+    {
+      "id": "rem_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit ls-remote origin | head\n```\n`git push origin :lab1` (empty local side)...",
+      "choices": [
+        "Deletes lab1 on the remote",
+        "Creates lab1",
+        "Fetches tags",
+        "Starts bisect"
+      ],
+      "answer": 0,
+      "explain": "Delete refspec.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_hard_01.mp4",
+        "poster": "media/images/rem_hard_01-frame.png",
+        "figure": "media/images/rem_hard_01.png"
+      }
+    },
+    {
+      "id": "rem_hard_02",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\nMultiple remotes (`origin` and upstream) are for...",
+      "choices": [
+        "fork vs canonical; fetch both, push your fork",
+        "Invalid Git",
+        "Replacing commits",
+        "Ignoring RTL"
+      ],
+      "answer": 0,
+      "explain": "Fork workflow.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_hard_02.mp4",
+        "poster": "media/images/rem_hard_02-frame.png",
+        "figure": "media/images/rem_hard_02.png"
+      }
+    },
+    {
+      "id": "rem_hard_03",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit push -u origin feature/foxtrot6\n```\n`git clone --bare` has no working tree; used for servers.",
+      "answer": true,
+      "explain": "Bare repos.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_hard_03.mp4",
+        "poster": "media/images/rem_hard_03-frame.png",
+        "figure": "media/images/rem_hard_03.png"
+      }
+    },
+    {
+      "id": "rem_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit fetch origin\n```\nWhy first PR is `lab4` -> `main` not the reverse...",
+      "choices": [
+        "You propose your work into the integration branch",
+        "Git only allows one direction",
+        "Tags require it",
+        "Status fails otherwise"
+      ],
+      "answer": 0,
+      "explain": "PR direction.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_hard_04.mp4",
+        "poster": "media/images/rem_hard_04-frame.png",
+        "figure": "media/images/rem_hard_04.png"
+      }
+    },
+    {
+      "id": "rem_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit ls-remote origin | head\n```\n`git pull` is fetch plus...",
+      "choices": [
+        "Integrate into the current branch (merge or rebase)",
+        "A tag",
+        "stash drop",
+        "bisect"
+      ],
+      "answer": 0,
+      "explain": "Pull = fetch + integrate.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_hard_05.mp4",
+        "poster": "media/images/rem_hard_05-frame.png",
+        "figure": "media/images/rem_hard_05.png"
+      }
+    },
+    {
+      "id": "rem_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n`git push origin :lab6` (empty local side)...",
+      "choices": [
+        "Deletes lab6 on the remote",
+        "Creates lab6",
+        "Fetches tags",
+        "Starts bisect"
+      ],
+      "answer": 0,
+      "explain": "Delete refspec.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_hard_06.mp4",
+        "poster": "media/images/rem_hard_06-frame.png",
+        "figure": "media/images/rem_hard_06.png"
+      }
+    },
+    {
+      "id": "rem_hard_07",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push -u origin feature/juliet10\n```\n# Review context: `./labs/alpha` slot 7 variant 1\nMultiple remotes (`origin` and upstream) are for...",
+      "choices": [
+        "fork vs canonical; fetch both, push your fork",
+        "Invalid Git",
+        "Replacing commits",
+        "Ignoring RTL"
+      ],
+      "answer": 0,
+      "explain": "Fork workflow.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_hard_07.mp4",
+        "poster": "media/images/rem_hard_07-frame.png",
+        "figure": "media/images/rem_hard_07.png"
+      }
+    },
+    {
+      "id": "rem_hard_08",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit fetch origin\n```\n# Review context: `/tmp/gitlab/bravo` slot 8 variant 1\n`git clone --bare` has no working tree; used for servers.",
+      "answer": true,
+      "explain": "Bare repos.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_hard_08.mp4",
+        "poster": "media/images/rem_hard_08-frame.png",
+        "figure": "media/images/rem_hard_08.png"
+      }
+    },
+    {
+      "id": "rem_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit ls-remote origin | head\n```\nWhy first PR is `lab9` -> `main` not the reverse...",
+      "choices": [
+        "You propose your work into the integration branch",
+        "Git only allows one direction",
+        "Tags require it",
+        "Status fails otherwise"
+      ],
+      "answer": 0,
+      "explain": "PR direction.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_hard_09.mp4",
+        "poster": "media/images/rem_hard_09-frame.png",
+        "figure": "media/images/rem_hard_09.png"
+      }
+    },
+    {
+      "id": "rem_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\n`git pull` is fetch plus...",
+      "choices": [
+        "Integrate into the current branch (merge or rebase)",
+        "A tag",
+        "stash drop",
+        "bisect"
+      ],
+      "answer": 0,
+      "explain": "Pull = fetch + integrate.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_hard_10.mp4",
+        "poster": "media/images/rem_hard_10-frame.png",
+        "figure": "media/images/rem_hard_10.png"
+      }
+    },
+    {
+      "id": "rem_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push -u origin feature/delta14\n```\n`git push origin :lab11` (empty local side)...",
+      "choices": [
+        "Deletes lab11 on the remote",
+        "Creates lab11",
+        "Fetches tags",
+        "Starts bisect"
+      ],
+      "answer": 0,
+      "explain": "Delete refspec.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_hard_11.mp4",
+        "poster": "media/images/rem_hard_11-frame.png",
+        "figure": "media/images/rem_hard_11.png"
+      }
+    },
+    {
+      "id": "rem_hard_12",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit fetch origin\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\nMultiple remotes (`origin` and upstream) are for...",
+      "choices": [
+        "fork vs canonical; fetch both, push your fork",
+        "Invalid Git",
+        "Replacing commits",
+        "Ignoring RTL"
+      ],
+      "answer": 0,
+      "explain": "Fork workflow.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_hard_12.mp4",
+        "poster": "media/images/rem_hard_12-frame.png",
+        "figure": "media/images/rem_hard_12.png"
+      }
+    },
+    {
+      "id": "rem_hard_13",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit ls-remote origin | head\n```\n# Review context: `./labs/golf` slot 13 variant 1\n`git clone --bare` has no working tree; used for servers.",
+      "answer": true,
+      "explain": "Bare repos.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_hard_13.mp4",
+        "poster": "media/images/rem_hard_13-frame.png",
+        "figure": "media/images/rem_hard_13.png"
+      }
+    },
+    {
+      "id": "rem_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\nWhy first PR is `lab14` -> `main` not the reverse...",
+      "choices": [
+        "You propose your work into the integration branch",
+        "Git only allows one direction",
+        "Tags require it",
+        "Status fails otherwise"
+      ],
+      "answer": 0,
+      "explain": "PR direction.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_hard_14.mp4",
+        "poster": "media/images/rem_hard_14-frame.png",
+        "figure": "media/images/rem_hard_14.png"
+      }
+    },
+    {
+      "id": "rem_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push -u origin feature/hotel18\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\n`git pull` is fetch plus...",
+      "choices": [
+        "Integrate into the current branch (merge or rebase)",
+        "A tag",
+        "stash drop",
+        "bisect"
+      ],
+      "answer": 0,
+      "explain": "Pull = fetch + integrate.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_hard_15.mp4",
+        "poster": "media/images/rem_hard_15-frame.png",
+        "figure": "media/images/rem_hard_15.png"
+      }
+    },
+    {
+      "id": "rem_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit fetch origin\n```\n`git push origin :lab16` (empty local side)...",
+      "choices": [
+        "Deletes lab16 on the remote",
+        "Creates lab16",
+        "Fetches tags",
+        "Starts bisect"
+      ],
+      "answer": 0,
+      "explain": "Delete refspec.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_hard_16.mp4",
+        "poster": "media/images/rem_hard_16-frame.png",
+        "figure": "media/images/rem_hard_16.png"
+      }
+    },
+    {
+      "id": "rem_hard_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit ls-remote origin | head\n```\n# Review context: `~/src/charlie` slot 17 variant 1\nMultiple remotes (`origin` and upstream) are for...",
+      "choices": [
+        "fork vs canonical; fetch both, push your fork",
+        "Invalid Git",
+        "Replacing commits",
+        "Ignoring RTL"
+      ],
+      "answer": 0,
+      "explain": "Fork workflow.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_hard_17.mp4",
+        "poster": "media/images/rem_hard_17-frame.png",
+        "figure": "media/images/rem_hard_17.png"
+      }
+    },
+    {
+      "id": "rem_hard_18",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\n`git clone --bare` has no working tree; used for servers.",
+      "answer": true,
+      "explain": "Bare repos.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_hard_18.mp4",
+        "poster": "media/images/rem_hard_18-frame.png",
+        "figure": "media/images/rem_hard_18.png"
+      }
+    },
+    {
+      "id": "rem_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push -u origin feature/bravo22\n```\nWhy first PR is `lab19` -> `main` not the reverse...",
+      "choices": [
+        "You propose your work into the integration branch",
+        "Git only allows one direction",
+        "Tags require it",
+        "Status fails otherwise"
+      ],
+      "answer": 0,
+      "explain": "PR direction.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_hard_19.mp4",
+        "poster": "media/images/rem_hard_19-frame.png",
+        "figure": "media/images/rem_hard_19.png"
+      }
+    },
+    {
+      "id": "rem_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit fetch origin\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\n`git pull` is fetch plus...",
+      "choices": [
+        "Integrate into the current branch (merge or rebase)",
+        "A tag",
+        "stash drop",
+        "bisect"
+      ],
+      "answer": 0,
+      "explain": "Pull = fetch + integrate.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_hard_20.mp4",
+        "poster": "media/images/rem_hard_20-frame.png",
+        "figure": "media/images/rem_hard_20.png"
+      }
+    },
+    {
+      "id": "rem_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit ls-remote origin | head\n```\n`git push origin :lab21` (empty local side)...",
+      "choices": [
+        "Deletes lab21 on the remote",
+        "Creates lab21",
+        "Fetches tags",
+        "Starts bisect"
+      ],
+      "answer": 0,
+      "explain": "Delete refspec.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_hard_21.mp4",
+        "poster": "media/images/rem_hard_21-frame.png",
+        "figure": "media/images/rem_hard_21.png"
+      }
+    },
+    {
+      "id": "rem_hard_22",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\nMultiple remotes (`origin` and upstream) are for...",
+      "choices": [
+        "fork vs canonical; fetch both, push your fork",
+        "Invalid Git",
+        "Replacing commits",
+        "Ignoring RTL"
+      ],
+      "answer": 0,
+      "explain": "Fork workflow.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_hard_22.mp4",
+        "poster": "media/images/rem_hard_22-frame.png",
+        "figure": "media/images/rem_hard_22.png"
+      }
+    },
+    {
+      "id": "rem_hard_23",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit push -u origin feature/foxtrot26\n```\n# Review context: `~/src/alpha` slot 23 variant 1\n`git clone --bare` has no working tree; used for servers.",
+      "answer": true,
+      "explain": "Bare repos.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_hard_23.mp4",
+        "poster": "media/images/rem_hard_23-frame.png",
+        "figure": "media/images/rem_hard_23.png"
+      }
+    },
+    {
+      "id": "rem_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit fetch origin\n```\nWhy first PR is `lab24` -> `main` not the reverse...",
+      "choices": [
+        "You propose your work into the integration branch",
+        "Git only allows one direction",
+        "Tags require it",
+        "Status fails otherwise"
+      ],
+      "answer": 0,
+      "explain": "PR direction.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_hard_24.mp4",
+        "poster": "media/images/rem_hard_24-frame.png",
+        "figure": "media/images/rem_hard_24.png"
+      }
+    },
+    {
+      "id": "rem_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit ls-remote origin | head\n```\n# Review context: `./labs/charlie` slot 25 variant 1\n`git pull` is fetch plus...",
+      "choices": [
+        "Integrate into the current branch (merge or rebase)",
+        "A tag",
+        "stash drop",
+        "bisect"
+      ],
+      "answer": 0,
+      "explain": "Pull = fetch + integrate.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_hard_25.mp4",
+        "poster": "media/images/rem_hard_25-frame.png",
+        "figure": "media/images/rem_hard_25.png"
+      }
+    },
+    {
+      "id": "rem_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n`git push origin :lab26` (empty local side)...",
+      "choices": [
+        "Deletes lab26 on the remote",
+        "Creates lab26",
+        "Fetches tags",
+        "Starts bisect"
+      ],
+      "answer": 0,
+      "explain": "Delete refspec.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_hard_26.mp4",
+        "poster": "media/images/rem_hard_26-frame.png",
+        "figure": "media/images/rem_hard_26.png"
+      }
+    },
+    {
+      "id": "rem_hard_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit push -u origin feature/juliet30\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\nMultiple remotes (`origin` and upstream) are for...",
+      "choices": [
+        "fork vs canonical; fetch both, push your fork",
+        "Invalid Git",
+        "Replacing commits",
+        "Ignoring RTL"
+      ],
+      "answer": 0,
+      "explain": "Fork workflow.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_hard_27.mp4",
+        "poster": "media/images/rem_hard_27-frame.png",
+        "figure": "media/images/rem_hard_27.png"
+      }
+    },
+    {
+      "id": "rem_hard_28",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit fetch origin\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\n`git clone --bare` has no working tree; used for servers.",
+      "answer": true,
+      "explain": "Bare repos.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_hard_28.mp4",
+        "poster": "media/images/rem_hard_28-frame.png",
+        "figure": "media/images/rem_hard_28.png"
+      }
+    },
+    {
+      "id": "rem_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit ls-remote origin | head\n```\nWhy first PR is `lab29` -> `main` not the reverse...",
+      "choices": [
+        "You propose your work into the integration branch",
+        "Git only allows one direction",
+        "Tags require it",
+        "Status fails otherwise"
+      ],
+      "answer": 0,
+      "explain": "PR direction.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_hard_29.mp4",
+        "poster": "media/images/rem_hard_29-frame.png",
+        "figure": "media/images/rem_hard_29.png"
+      }
+    },
+    {
+      "id": "rem_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit remote -v\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\n`git pull` is fetch plus...",
+      "choices": [
+        "Integrate into the current branch (merge or rebase)",
+        "A tag",
+        "stash drop",
+        "bisect"
+      ],
+      "answer": 0,
+      "explain": "Pull = fetch + integrate.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/rem_hard_30.mp4",
+        "poster": "media/images/rem_hard_30-frame.png",
+        "figure": "media/images/rem_hard_30.png"
+      }
+    }
+  ]
+}
