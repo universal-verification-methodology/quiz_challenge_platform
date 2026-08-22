@@ -1,0 +1,1692 @@
+{
+  "module": "module04-commit-message-lab",
+  "title": "Commit messages",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -5\n```\nA good commit subject is usually...",
+      "choices": [
+        "A long paste of the entire diff",
+        "Short, imperative, and focused on the change",
+        "Only the filename you edited",
+        "Always empty so Git invents one"
+      ],
+      "answer": 1,
+      "explain": "Prefer a short imperative subject (e.g. Add mul path to ALU), not a dump of the patch.",
+      "difficulty": "easy",
+      "id": "msg_easy_01",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_easy_01.mp4",
+        "poster": "media/images/msg_easy_01-frame.png",
+        "figure": "media/images/msg_easy_01.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit --amend -m \"Fix delta wording\"\n```\nThe commit body is best used to...",
+      "choices": [
+        "Repeat the subject in all caps",
+        "Explain why the change happened and how to verify it",
+        "Store your password",
+        "List every untracked file in the home directory"
+      ],
+      "answer": 1,
+      "explain": "Body carries context: motivation and how a reviewer can check the result.",
+      "difficulty": "easy",
+      "id": "msg_easy_02",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_easy_02.mp4",
+        "poster": "media/images/msg_easy_02-frame.png",
+        "figure": "media/images/msg_easy_02.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\n# subject: imperative, body: why (4)\n```\n\"fixed stuff\" is a strong commit message for coursework delivery.",
+      "answer": false,
+      "explain": "Vague messages hide intent; future you and reviewers need a clear subject (and often a why).",
+      "difficulty": "easy",
+      "id": "msg_easy_03",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_easy_03.mp4",
+        "poster": "media/images/msg_easy_03-frame.png",
+        "figure": "media/images/msg_easy_03.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"Add echo path 5\"\n```\ngit log --oneline is useful because it shows...",
+      "choices": [
+        "Only remote URLs",
+        "A short hash plus each commit subject",
+        "Your editor theme",
+        "Only untracked files"
+      ],
+      "answer": 1,
+      "explain": "One-line log is a quick timeline of subjects-another reason to write them well.",
+      "difficulty": "easy",
+      "id": "msg_easy_04",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_easy_04.mp4",
+        "poster": "media/images/msg_easy_04-frame.png",
+        "figure": "media/images/msg_easy_04.png"
+      }
+    },
+    {
+      "id": "msg_easy_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -5\n```\n# Review context: `~/src/golf` slot 5 variant 1\nA good commit subject is usually...",
+      "choices": [
+        "A long paste of the entire diff",
+        "Short, imperative, and focused on the change",
+        "Only the filename you edited",
+        "Always empty so Git invents one"
+      ],
+      "answer": 1,
+      "explain": "Prefer a short imperative subject.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_easy_05.mp4",
+        "poster": "media/images/msg_easy_05-frame.png",
+        "figure": "media/images/msg_easy_05.png"
+      }
+    },
+    {
+      "id": "msg_easy_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit --amend -m \"Fix hotel wording\"\n```\nThe commit body is best used to...",
+      "choices": [
+        "Repeat the subject in all caps",
+        "Explain why the change happened and how to verify it",
+        "Store your password",
+        "List every untracked file"
+      ],
+      "answer": 1,
+      "explain": "Body carries motivation and verification.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_easy_06.mp4",
+        "poster": "media/images/msg_easy_06-frame.png",
+        "figure": "media/images/msg_easy_06.png"
+      }
+    },
+    {
+      "id": "msg_easy_07",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\n# subject: imperative, body: why (8)\n```\n# Review context: `./labs/alpha` slot 7 variant 1\n\"fixed stuff\" is a strong commit message for coursework delivery.",
+      "answer": false,
+      "explain": "Vague messages hide intent.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_easy_07.mp4",
+        "poster": "media/images/msg_easy_07-frame.png",
+        "figure": "media/images/msg_easy_07.png"
+      }
+    },
+    {
+      "id": "msg_easy_08",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"Add india path 9\"\n```\n`git log --oneline` shows...",
+      "choices": [
+        "Only remote URLs",
+        "A short hash plus each commit subject",
+        "Your editor theme",
+        "Only untracked files"
+      ],
+      "answer": 1,
+      "explain": "One-line log is a timeline of subjects.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_easy_08.mp4",
+        "poster": "media/images/msg_easy_08-frame.png",
+        "figure": "media/images/msg_easy_08.png"
+      }
+    },
+    {
+      "id": "msg_easy_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -5\n```\n`git commit -m \"Add path 9 to ALU\"` sets...",
+      "choices": [
+        "The subject line",
+        "The remote",
+        "A tag",
+        "A stash"
+      ],
+      "answer": 0,
+      "explain": "-m is the subject.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_easy_09.mp4",
+        "poster": "media/images/msg_easy_09-frame.png",
+        "figure": "media/images/msg_easy_09.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit --amend -m \"Fix bravo wording\"\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\nA good commit subject is usually...",
+      "choices": [
+        "A long paste of the entire diff",
+        "Short, imperative, and focused on the change",
+        "Only the filename you edited",
+        "Always empty so Git invents one"
+      ],
+      "answer": 1,
+      "explain": "Prefer a short imperative subject (e.g. Add mul path to ALU), not a dump of the patch.",
+      "difficulty": "easy",
+      "id": "msg_easy_10",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_easy_10.mp4",
+        "poster": "media/images/msg_easy_10-frame.png",
+        "figure": "media/images/msg_easy_10.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# subject: imperative, body: why (12)\n```\n# Review context: `~/src/echo` slot 11 variant 1\nThe commit body is best used to...",
+      "choices": [
+        "Repeat the subject in all caps",
+        "Explain why the change happened and how to verify it",
+        "Store your password",
+        "List every untracked file in the home directory"
+      ],
+      "answer": 1,
+      "explain": "Body carries context: motivation and how a reviewer can check the result.",
+      "difficulty": "easy",
+      "id": "msg_easy_11",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_easy_11.mp4",
+        "poster": "media/images/msg_easy_11-frame.png",
+        "figure": "media/images/msg_easy_11.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"Add charlie path 13\"\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\n\"fixed stuff\" is a strong commit message for coursework delivery.",
+      "answer": false,
+      "explain": "Vague messages hide intent; future you and reviewers need a clear subject (and often a why).",
+      "difficulty": "easy",
+      "id": "msg_easy_12",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_easy_12.mp4",
+        "poster": "media/images/msg_easy_12-frame.png",
+        "figure": "media/images/msg_easy_12.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -5\n```\n# Review context: `./labs/golf` slot 13 variant 1\ngit log --oneline is useful because it shows...",
+      "choices": [
+        "Only remote URLs",
+        "A short hash plus each commit subject",
+        "Your editor theme",
+        "Only untracked files"
+      ],
+      "answer": 1,
+      "explain": "One-line log is a quick timeline of subjects-another reason to write them well.",
+      "difficulty": "easy",
+      "id": "msg_easy_13",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_easy_13.mp4",
+        "poster": "media/images/msg_easy_13-frame.png",
+        "figure": "media/images/msg_easy_13.png"
+      }
+    },
+    {
+      "id": "msg_easy_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit --amend -m \"Fix foxtrot wording\"\n```\n# Review context: `/tmp/gitlab/hotel` slot 14 variant 1\nA good commit subject is usually...",
+      "choices": [
+        "A long paste of the entire diff",
+        "Short, imperative, and focused on the change",
+        "Only the filename you edited",
+        "Always empty so Git invents one"
+      ],
+      "answer": 1,
+      "explain": "Prefer a short imperative subject.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_easy_14.mp4",
+        "poster": "media/images/msg_easy_14-frame.png",
+        "figure": "media/images/msg_easy_14.png"
+      }
+    },
+    {
+      "id": "msg_easy_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# subject: imperative, body: why (16)\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\nThe commit body is best used to...",
+      "choices": [
+        "Repeat the subject in all caps",
+        "Explain why the change happened and how to verify it",
+        "Store your password",
+        "List every untracked file"
+      ],
+      "answer": 1,
+      "explain": "Body carries motivation and verification.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_easy_15.mp4",
+        "poster": "media/images/msg_easy_15-frame.png",
+        "figure": "media/images/msg_easy_15.png"
+      }
+    },
+    {
+      "id": "msg_easy_16",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"Add golf path 17\"\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\n\"fixed stuff\" is a strong commit message for coursework delivery.",
+      "answer": false,
+      "explain": "Vague messages hide intent.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_easy_16.mp4",
+        "poster": "media/images/msg_easy_16-frame.png",
+        "figure": "media/images/msg_easy_16.png"
+      }
+    },
+    {
+      "id": "msg_easy_17",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -5\n```\n# Review context: `~/src/charlie` slot 17 variant 1\n`git log --oneline` shows...",
+      "choices": [
+        "Only remote URLs",
+        "A short hash plus each commit subject",
+        "Your editor theme",
+        "Only untracked files"
+      ],
+      "answer": 1,
+      "explain": "One-line log is a timeline of subjects.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_easy_17.mp4",
+        "poster": "media/images/msg_easy_17-frame.png",
+        "figure": "media/images/msg_easy_17.png"
+      }
+    },
+    {
+      "id": "msg_easy_18",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit --amend -m \"Fix juliet wording\"\n```\n`git commit -m \"Add path 18 to ALU\"` sets...",
+      "choices": [
+        "The subject line",
+        "The remote",
+        "A tag",
+        "A stash"
+      ],
+      "answer": 0,
+      "explain": "-m is the subject.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_easy_18.mp4",
+        "poster": "media/images/msg_easy_18-frame.png",
+        "figure": "media/images/msg_easy_18.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# subject: imperative, body: why (20)\n```\n# Review context: `./labs/echo` slot 19 variant 1\nA good commit subject is usually...",
+      "choices": [
+        "A long paste of the entire diff",
+        "Short, imperative, and focused on the change",
+        "Only the filename you edited",
+        "Always empty so Git invents one"
+      ],
+      "answer": 1,
+      "explain": "Prefer a short imperative subject (e.g. Add mul path to ALU), not a dump of the patch.",
+      "difficulty": "easy",
+      "id": "msg_easy_19",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_easy_19.mp4",
+        "poster": "media/images/msg_easy_19-frame.png",
+        "figure": "media/images/msg_easy_19.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"Add alpha path 21\"\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\nThe commit body is best used to...",
+      "choices": [
+        "Repeat the subject in all caps",
+        "Explain why the change happened and how to verify it",
+        "Store your password",
+        "List every untracked file in the home directory"
+      ],
+      "answer": 1,
+      "explain": "Body carries context: motivation and how a reviewer can check the result.",
+      "difficulty": "easy",
+      "id": "msg_easy_20",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_easy_20.mp4",
+        "poster": "media/images/msg_easy_20-frame.png",
+        "figure": "media/images/msg_easy_20.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -5\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\n\"fixed stuff\" is a strong commit message for coursework delivery.",
+      "answer": false,
+      "explain": "Vague messages hide intent; future you and reviewers need a clear subject (and often a why).",
+      "difficulty": "easy",
+      "id": "msg_easy_21",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_easy_21.mp4",
+        "poster": "media/images/msg_easy_21-frame.png",
+        "figure": "media/images/msg_easy_21.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit --amend -m \"Fix delta wording\"\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\ngit log --oneline is useful because it shows...",
+      "choices": [
+        "Only remote URLs",
+        "A short hash plus each commit subject",
+        "Your editor theme",
+        "Only untracked files"
+      ],
+      "answer": 1,
+      "explain": "One-line log is a quick timeline of subjects-another reason to write them well.",
+      "difficulty": "easy",
+      "id": "msg_easy_22",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_easy_22.mp4",
+        "poster": "media/images/msg_easy_22-frame.png",
+        "figure": "media/images/msg_easy_22.png"
+      }
+    },
+    {
+      "id": "msg_easy_23",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# subject: imperative, body: why (24)\n```\n# Review context: `~/src/alpha` slot 23 variant 1\nA good commit subject is usually...",
+      "choices": [
+        "A long paste of the entire diff",
+        "Short, imperative, and focused on the change",
+        "Only the filename you edited",
+        "Always empty so Git invents one"
+      ],
+      "answer": 1,
+      "explain": "Prefer a short imperative subject.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_easy_23.mp4",
+        "poster": "media/images/msg_easy_23-frame.png",
+        "figure": "media/images/msg_easy_23.png"
+      }
+    },
+    {
+      "id": "msg_easy_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"Add echo path 25\"\n```\n# Review context: `/work/chip/bravo` slot 24 variant 1\nThe commit body is best used to...",
+      "choices": [
+        "Repeat the subject in all caps",
+        "Explain why the change happened and how to verify it",
+        "Store your password",
+        "List every untracked file"
+      ],
+      "answer": 1,
+      "explain": "Body carries motivation and verification.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_easy_24.mp4",
+        "poster": "media/images/msg_easy_24-frame.png",
+        "figure": "media/images/msg_easy_24.png"
+      }
+    },
+    {
+      "id": "msg_easy_25",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -5\n```\n# Review context: `./labs/charlie` slot 25 variant 1\n\"fixed stuff\" is a strong commit message for coursework delivery.",
+      "answer": false,
+      "explain": "Vague messages hide intent.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_easy_25.mp4",
+        "poster": "media/images/msg_easy_25-frame.png",
+        "figure": "media/images/msg_easy_25.png"
+      }
+    },
+    {
+      "id": "msg_easy_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit --amend -m \"Fix hotel wording\"\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\n`git log --oneline` shows...",
+      "choices": [
+        "Only remote URLs",
+        "A short hash plus each commit subject",
+        "Your editor theme",
+        "Only untracked files"
+      ],
+      "answer": 1,
+      "explain": "One-line log is a timeline of subjects.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_easy_26.mp4",
+        "poster": "media/images/msg_easy_26-frame.png",
+        "figure": "media/images/msg_easy_26.png"
+      }
+    },
+    {
+      "id": "msg_easy_27",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# subject: imperative, body: why (28)\n```\n`git commit -m \"Add path 27 to ALU\"` sets...",
+      "choices": [
+        "The subject line",
+        "The remote",
+        "A tag",
+        "A stash"
+      ],
+      "answer": 0,
+      "explain": "-m is the subject.",
+      "difficulty": "easy",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_easy_27.mp4",
+        "poster": "media/images/msg_easy_27-frame.png",
+        "figure": "media/images/msg_easy_27.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"Add india path 29\"\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\nA good commit subject is usually...",
+      "choices": [
+        "A long paste of the entire diff",
+        "Short, imperative, and focused on the change",
+        "Only the filename you edited",
+        "Always empty so Git invents one"
+      ],
+      "answer": 1,
+      "explain": "Prefer a short imperative subject (e.g. Add mul path to ALU), not a dump of the patch.",
+      "difficulty": "easy",
+      "id": "msg_easy_28",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_easy_28.mp4",
+        "poster": "media/images/msg_easy_28-frame.png",
+        "figure": "media/images/msg_easy_28.png"
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -5\n```\n# Review context: `~/src/golf` slot 29 variant 1\nThe commit body is best used to...",
+      "choices": [
+        "Repeat the subject in all caps",
+        "Explain why the change happened and how to verify it",
+        "Store your password",
+        "List every untracked file in the home directory"
+      ],
+      "answer": 1,
+      "explain": "Body carries context: motivation and how a reviewer can check the result.",
+      "difficulty": "easy",
+      "id": "msg_easy_29",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_easy_29.mp4",
+        "poster": "media/images/msg_easy_29-frame.png",
+        "figure": "media/images/msg_easy_29.png"
+      }
+    },
+    {
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit commit --amend -m \"Fix bravo wording\"\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\n\"fixed stuff\" is a strong commit message for coursework delivery.",
+      "answer": false,
+      "explain": "Vague messages hide intent; future you and reviewers need a clear subject (and often a why).",
+      "difficulty": "easy",
+      "id": "msg_easy_30",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_easy_30.mp4",
+        "poster": "media/images/msg_easy_30-frame.png",
+        "figure": "media/images/msg_easy_30.png"
+      }
+    },
+    {
+      "id": "msg_medium_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -5\n```\nConventional `feat:` / `fix:` prefixes are...",
+      "choices": [
+        "Optional style that helps changelog tooling",
+        "Required by Git itself",
+        "Remote names",
+        "Ignore patterns"
+      ],
+      "answer": 0,
+      "explain": "Git does not require them; teams may.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_medium_01.mp4",
+        "poster": "media/images/msg_medium_01-frame.png",
+        "figure": "media/images/msg_medium_01.png"
+      }
+    },
+    {
+      "id": "msg_medium_02",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit commit --amend -m \"Fix delta wording\"\n```\n`git commit --amend` can retitle the latest local commit.",
+      "answer": true,
+      "explain": "Amend rewrites HEAD's message and/or tree.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_medium_02.mp4",
+        "poster": "media/images/msg_medium_02-frame.png",
+        "figure": "media/images/msg_medium_02.png"
+      }
+    },
+    {
+      "id": "msg_medium_03",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# subject: imperative, body: why (4)\n```\n`git log --format='%s'` prints...",
+      "choices": [
+        "Subjects only",
+        "Full diffs",
+        "Remotes",
+        "Stashes"
+      ],
+      "answer": 0,
+      "explain": "%s is the subject placeholder.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_medium_03.mp4",
+        "poster": "media/images/msg_medium_03-frame.png",
+        "figure": "media/images/msg_medium_03.png"
+      }
+    },
+    {
+      "id": "msg_medium_04",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"Add echo path 5\"\n```\nCo-authored-by trailers belong...",
+      "choices": [
+        "In the commit body/trailer block",
+        "In .gitignore",
+        "In a tag name",
+        "In origin URL"
+      ],
+      "answer": 0,
+      "explain": "Trailers are structured body lines.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_medium_04.mp4",
+        "poster": "media/images/msg_medium_04-frame.png",
+        "figure": "media/images/msg_medium_04.png"
+      }
+    },
+    {
+      "id": "msg_medium_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -5\n```\nA body after a blank line is for...",
+      "choices": [
+        "Why and verification, not repeating the subject",
+        "SSH keys",
+        "Tags only",
+        "Stash messages only"
+      ],
+      "answer": 0,
+      "explain": "Blank line separates subject and body.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_medium_05.mp4",
+        "poster": "media/images/msg_medium_05-frame.png",
+        "figure": "media/images/msg_medium_05.png"
+      }
+    },
+    {
+      "id": "msg_medium_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit --amend -m \"Fix hotel wording\"\n```\n# Review context: `/work/chip/hotel` slot 6 variant 1\nConventional `feat:` / `fix:` prefixes are...",
+      "choices": [
+        "Optional style that helps changelog tooling",
+        "Required by Git itself",
+        "Remote names",
+        "Ignore patterns"
+      ],
+      "answer": 0,
+      "explain": "Git does not require them; teams may.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_medium_06.mp4",
+        "poster": "media/images/msg_medium_06-frame.png",
+        "figure": "media/images/msg_medium_06.png"
+      }
+    },
+    {
+      "id": "msg_medium_07",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\n# subject: imperative, body: why (8)\n```\n# Review context: `./labs/alpha` slot 7 variant 1\n`git commit --amend` can retitle the latest local commit.",
+      "answer": true,
+      "explain": "Amend rewrites HEAD's message and/or tree.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_medium_07.mp4",
+        "poster": "media/images/msg_medium_07-frame.png",
+        "figure": "media/images/msg_medium_07.png"
+      }
+    },
+    {
+      "id": "msg_medium_08",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"Add india path 9\"\n```\n# Review context: `/tmp/gitlab/bravo` slot 8 variant 1\n`git log --format='%s'` prints...",
+      "choices": [
+        "Subjects only",
+        "Full diffs",
+        "Remotes",
+        "Stashes"
+      ],
+      "answer": 0,
+      "explain": "%s is the subject placeholder.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_medium_08.mp4",
+        "poster": "media/images/msg_medium_08-frame.png",
+        "figure": "media/images/msg_medium_08.png"
+      }
+    },
+    {
+      "id": "msg_medium_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -5\n```\n# Review context: `C:/proj/charlie` slot 9 variant 1\nCo-authored-by trailers belong...",
+      "choices": [
+        "In the commit body/trailer block",
+        "In .gitignore",
+        "In a tag name",
+        "In origin URL"
+      ],
+      "answer": 0,
+      "explain": "Trailers are structured body lines.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_medium_09.mp4",
+        "poster": "media/images/msg_medium_09-frame.png",
+        "figure": "media/images/msg_medium_09.png"
+      }
+    },
+    {
+      "id": "msg_medium_10",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit --amend -m \"Fix bravo wording\"\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\nA body after a blank line is for...",
+      "choices": [
+        "Why and verification, not repeating the subject",
+        "SSH keys",
+        "Tags only",
+        "Stash messages only"
+      ],
+      "answer": 0,
+      "explain": "Blank line separates subject and body.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_medium_10.mp4",
+        "poster": "media/images/msg_medium_10-frame.png",
+        "figure": "media/images/msg_medium_10.png"
+      }
+    },
+    {
+      "id": "msg_medium_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# subject: imperative, body: why (12)\n```\n# Review context: `~/src/echo` slot 11 variant 1\nConventional `feat:` / `fix:` prefixes are...",
+      "choices": [
+        "Optional style that helps changelog tooling",
+        "Required by Git itself",
+        "Remote names",
+        "Ignore patterns"
+      ],
+      "answer": 0,
+      "explain": "Git does not require them; teams may.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_medium_11.mp4",
+        "poster": "media/images/msg_medium_11-frame.png",
+        "figure": "media/images/msg_medium_11.png"
+      }
+    },
+    {
+      "id": "msg_medium_12",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"Add charlie path 13\"\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\n`git commit --amend` can retitle the latest local commit.",
+      "answer": true,
+      "explain": "Amend rewrites HEAD's message and/or tree.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_medium_12.mp4",
+        "poster": "media/images/msg_medium_12-frame.png",
+        "figure": "media/images/msg_medium_12.png"
+      }
+    },
+    {
+      "id": "msg_medium_13",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -5\n```\n# Review context: `./labs/golf` slot 13 variant 1\n`git log --format='%s'` prints...",
+      "choices": [
+        "Subjects only",
+        "Full diffs",
+        "Remotes",
+        "Stashes"
+      ],
+      "answer": 0,
+      "explain": "%s is the subject placeholder.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_medium_13.mp4",
+        "poster": "media/images/msg_medium_13-frame.png",
+        "figure": "media/images/msg_medium_13.png"
+      }
+    },
+    {
+      "id": "msg_medium_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit --amend -m \"Fix foxtrot wording\"\n```\n# Review context: `/tmp/gitlab/hotel` slot 14 variant 1\nCo-authored-by trailers belong...",
+      "choices": [
+        "In the commit body/trailer block",
+        "In .gitignore",
+        "In a tag name",
+        "In origin URL"
+      ],
+      "answer": 0,
+      "explain": "Trailers are structured body lines.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_medium_14.mp4",
+        "poster": "media/images/msg_medium_14-frame.png",
+        "figure": "media/images/msg_medium_14.png"
+      }
+    },
+    {
+      "id": "msg_medium_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# subject: imperative, body: why (16)\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\nA body after a blank line is for...",
+      "choices": [
+        "Why and verification, not repeating the subject",
+        "SSH keys",
+        "Tags only",
+        "Stash messages only"
+      ],
+      "answer": 0,
+      "explain": "Blank line separates subject and body.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_medium_15.mp4",
+        "poster": "media/images/msg_medium_15-frame.png",
+        "figure": "media/images/msg_medium_15.png"
+      }
+    },
+    {
+      "id": "msg_medium_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"Add golf path 17\"\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\nConventional `feat:` / `fix:` prefixes are...",
+      "choices": [
+        "Optional style that helps changelog tooling",
+        "Required by Git itself",
+        "Remote names",
+        "Ignore patterns"
+      ],
+      "answer": 0,
+      "explain": "Git does not require them; teams may.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_medium_16.mp4",
+        "poster": "media/images/msg_medium_16-frame.png",
+        "figure": "media/images/msg_medium_16.png"
+      }
+    },
+    {
+      "id": "msg_medium_17",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -5\n```\n# Review context: `~/src/charlie` slot 17 variant 1\n`git commit --amend` can retitle the latest local commit.",
+      "answer": true,
+      "explain": "Amend rewrites HEAD's message and/or tree.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_medium_17.mp4",
+        "poster": "media/images/msg_medium_17-frame.png",
+        "figure": "media/images/msg_medium_17.png"
+      }
+    },
+    {
+      "id": "msg_medium_18",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit --amend -m \"Fix juliet wording\"\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\n`git log --format='%s'` prints...",
+      "choices": [
+        "Subjects only",
+        "Full diffs",
+        "Remotes",
+        "Stashes"
+      ],
+      "answer": 0,
+      "explain": "%s is the subject placeholder.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_medium_18.mp4",
+        "poster": "media/images/msg_medium_18-frame.png",
+        "figure": "media/images/msg_medium_18.png"
+      }
+    },
+    {
+      "id": "msg_medium_19",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# subject: imperative, body: why (20)\n```\n# Review context: `./labs/echo` slot 19 variant 1\nCo-authored-by trailers belong...",
+      "choices": [
+        "In the commit body/trailer block",
+        "In .gitignore",
+        "In a tag name",
+        "In origin URL"
+      ],
+      "answer": 0,
+      "explain": "Trailers are structured body lines.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_medium_19.mp4",
+        "poster": "media/images/msg_medium_19-frame.png",
+        "figure": "media/images/msg_medium_19.png"
+      }
+    },
+    {
+      "id": "msg_medium_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"Add alpha path 21\"\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\nA body after a blank line is for...",
+      "choices": [
+        "Why and verification, not repeating the subject",
+        "SSH keys",
+        "Tags only",
+        "Stash messages only"
+      ],
+      "answer": 0,
+      "explain": "Blank line separates subject and body.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_medium_20.mp4",
+        "poster": "media/images/msg_medium_20-frame.png",
+        "figure": "media/images/msg_medium_20.png"
+      }
+    },
+    {
+      "id": "msg_medium_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -5\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\nConventional `feat:` / `fix:` prefixes are...",
+      "choices": [
+        "Optional style that helps changelog tooling",
+        "Required by Git itself",
+        "Remote names",
+        "Ignore patterns"
+      ],
+      "answer": 0,
+      "explain": "Git does not require them; teams may.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_medium_21.mp4",
+        "poster": "media/images/msg_medium_21-frame.png",
+        "figure": "media/images/msg_medium_21.png"
+      }
+    },
+    {
+      "id": "msg_medium_22",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit commit --amend -m \"Fix delta wording\"\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\n`git commit --amend` can retitle the latest local commit.",
+      "answer": true,
+      "explain": "Amend rewrites HEAD's message and/or tree.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_medium_22.mp4",
+        "poster": "media/images/msg_medium_22-frame.png",
+        "figure": "media/images/msg_medium_22.png"
+      }
+    },
+    {
+      "id": "msg_medium_23",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# subject: imperative, body: why (24)\n```\n# Review context: `~/src/alpha` slot 23 variant 1\n`git log --format='%s'` prints...",
+      "choices": [
+        "Subjects only",
+        "Full diffs",
+        "Remotes",
+        "Stashes"
+      ],
+      "answer": 0,
+      "explain": "%s is the subject placeholder.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_medium_23.mp4",
+        "poster": "media/images/msg_medium_23-frame.png",
+        "figure": "media/images/msg_medium_23.png"
+      }
+    },
+    {
+      "id": "msg_medium_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"Add echo path 25\"\n```\n# Review context: `/work/chip/bravo` slot 24 variant 1\nCo-authored-by trailers belong...",
+      "choices": [
+        "In the commit body/trailer block",
+        "In .gitignore",
+        "In a tag name",
+        "In origin URL"
+      ],
+      "answer": 0,
+      "explain": "Trailers are structured body lines.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_medium_24.mp4",
+        "poster": "media/images/msg_medium_24-frame.png",
+        "figure": "media/images/msg_medium_24.png"
+      }
+    },
+    {
+      "id": "msg_medium_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -5\n```\n# Review context: `./labs/charlie` slot 25 variant 1\nA body after a blank line is for...",
+      "choices": [
+        "Why and verification, not repeating the subject",
+        "SSH keys",
+        "Tags only",
+        "Stash messages only"
+      ],
+      "answer": 0,
+      "explain": "Blank line separates subject and body.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_medium_25.mp4",
+        "poster": "media/images/msg_medium_25-frame.png",
+        "figure": "media/images/msg_medium_25.png"
+      }
+    },
+    {
+      "id": "msg_medium_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit --amend -m \"Fix hotel wording\"\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\nConventional `feat:` / `fix:` prefixes are...",
+      "choices": [
+        "Optional style that helps changelog tooling",
+        "Required by Git itself",
+        "Remote names",
+        "Ignore patterns"
+      ],
+      "answer": 0,
+      "explain": "Git does not require them; teams may.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_medium_26.mp4",
+        "poster": "media/images/msg_medium_26-frame.png",
+        "figure": "media/images/msg_medium_26.png"
+      }
+    },
+    {
+      "id": "msg_medium_27",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\n# subject: imperative, body: why (28)\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\n`git commit --amend` can retitle the latest local commit.",
+      "answer": true,
+      "explain": "Amend rewrites HEAD's message and/or tree.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_medium_27.mp4",
+        "poster": "media/images/msg_medium_27-frame.png",
+        "figure": "media/images/msg_medium_27.png"
+      }
+    },
+    {
+      "id": "msg_medium_28",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"Add india path 29\"\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\n`git log --format='%s'` prints...",
+      "choices": [
+        "Subjects only",
+        "Full diffs",
+        "Remotes",
+        "Stashes"
+      ],
+      "answer": 0,
+      "explain": "%s is the subject placeholder.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_medium_28.mp4",
+        "poster": "media/images/msg_medium_28-frame.png",
+        "figure": "media/images/msg_medium_28.png"
+      }
+    },
+    {
+      "id": "msg_medium_29",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -5\n```\n# Review context: `~/src/golf` slot 29 variant 1\nCo-authored-by trailers belong...",
+      "choices": [
+        "In the commit body/trailer block",
+        "In .gitignore",
+        "In a tag name",
+        "In origin URL"
+      ],
+      "answer": 0,
+      "explain": "Trailers are structured body lines.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_medium_29.mp4",
+        "poster": "media/images/msg_medium_29-frame.png",
+        "figure": "media/images/msg_medium_29.png"
+      }
+    },
+    {
+      "id": "msg_medium_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit --amend -m \"Fix bravo wording\"\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\nA body after a blank line is for...",
+      "choices": [
+        "Why and verification, not repeating the subject",
+        "SSH keys",
+        "Tags only",
+        "Stash messages only"
+      ],
+      "answer": 0,
+      "explain": "Blank line separates subject and body.",
+      "difficulty": "medium",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_medium_30.mp4",
+        "poster": "media/images/msg_medium_30-frame.png",
+        "figure": "media/images/msg_medium_30.png"
+      }
+    },
+    {
+      "id": "msg_hard_01",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# subject: imperative, body: why (4)\n```\nWhy a 50/72 guideline exists...",
+      "choices": [
+        "Subjects stay scannable; wrapped bodies stay readable in log",
+        "Git rejects longer text",
+        "GitHub forbids bodies",
+        "Tags cannot be annotated"
+      ],
+      "answer": 0,
+      "explain": "Convention, not a hard Git limit.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_hard_01.mp4",
+        "poster": "media/images/msg_hard_01-frame.png",
+        "figure": "media/images/msg_hard_01.png"
+      }
+    },
+    {
+      "id": "msg_hard_02",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"Add echo path 5\"\n```\nAmending a published commit changes the SHA and confuses clones that already fetched it.",
+      "answer": true,
+      "explain": "Message rewrites are history rewrites.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_hard_02.mp4",
+        "poster": "media/images/msg_hard_02-frame.png",
+        "figure": "media/images/msg_hard_02.png"
+      }
+    },
+    {
+      "id": "msg_hard_03",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -5\n```\nA merge commit message should usually...",
+      "choices": [
+        "Summarize what was integrated and any conflict decisions",
+        "Be empty",
+        "Contain .env secrets",
+        "List every blob SHA"
+      ],
+      "answer": 0,
+      "explain": "Merge messages document the join.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_hard_03.mp4",
+        "poster": "media/images/msg_hard_03-frame.png",
+        "figure": "media/images/msg_hard_03.png"
+      }
+    },
+    {
+      "id": "msg_hard_04",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit --amend -m \"Fix hotel wording\"\n```\n`git commit -F notes4.md` reads the message from...",
+      "choices": [
+        "That file",
+        "origin/main",
+        "The stash",
+        "A tag"
+      ],
+      "answer": 0,
+      "explain": "-F uses a file as the message.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_hard_04.mp4",
+        "poster": "media/images/msg_hard_04-frame.png",
+        "figure": "media/images/msg_hard_04.png"
+      }
+    },
+    {
+      "id": "msg_hard_05",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# subject: imperative, body: why (8)\n```\nRewording with rebase `-i` uses...",
+      "choices": [
+        "reword / r on a commit",
+        "stash pop",
+        "bisect good",
+        "submodule deinit"
+      ],
+      "answer": 0,
+      "explain": "Interactive rebase can reword.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_hard_05.mp4",
+        "poster": "media/images/msg_hard_05-frame.png",
+        "figure": "media/images/msg_hard_05.png"
+      }
+    },
+    {
+      "id": "msg_hard_06",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"Add india path 9\"\n```\n# Review context: `/work/chip/hotel` slot 6 variant 1\nWhy a 50/72 guideline exists...",
+      "choices": [
+        "Subjects stay scannable; wrapped bodies stay readable in log",
+        "Git rejects longer text",
+        "GitHub forbids bodies",
+        "Tags cannot be annotated"
+      ],
+      "answer": 0,
+      "explain": "Convention, not a hard Git limit.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_hard_06.mp4",
+        "poster": "media/images/msg_hard_06-frame.png",
+        "figure": "media/images/msg_hard_06.png"
+      }
+    },
+    {
+      "id": "msg_hard_07",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -5\n```\n# Review context: `./labs/alpha` slot 7 variant 1\nAmending a published commit changes the SHA and confuses clones that already fetched it.",
+      "answer": true,
+      "explain": "Message rewrites are history rewrites.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_hard_07.mp4",
+        "poster": "media/images/msg_hard_07-frame.png",
+        "figure": "media/images/msg_hard_07.png"
+      }
+    },
+    {
+      "id": "msg_hard_08",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit --amend -m \"Fix bravo wording\"\n```\n# Review context: `/tmp/gitlab/bravo` slot 8 variant 1\nA merge commit message should usually...",
+      "choices": [
+        "Summarize what was integrated and any conflict decisions",
+        "Be empty",
+        "Contain .env secrets",
+        "List every blob SHA"
+      ],
+      "answer": 0,
+      "explain": "Merge messages document the join.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_hard_08.mp4",
+        "poster": "media/images/msg_hard_08-frame.png",
+        "figure": "media/images/msg_hard_08.png"
+      }
+    },
+    {
+      "id": "msg_hard_09",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# subject: imperative, body: why (12)\n```\n`git commit -F notes9.md` reads the message from...",
+      "choices": [
+        "That file",
+        "origin/main",
+        "The stash",
+        "A tag"
+      ],
+      "answer": 0,
+      "explain": "-F uses a file as the message.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_hard_09.mp4",
+        "poster": "media/images/msg_hard_09-frame.png",
+        "figure": "media/images/msg_hard_09.png"
+      }
+    },
+    {
+      "id": "msg_hard_10",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"Add charlie path 13\"\n```\n# Review context: `~/unix-git-practice/delta` slot 10 variant 1\nRewording with rebase `-i` uses...",
+      "choices": [
+        "reword / r on a commit",
+        "stash pop",
+        "bisect good",
+        "submodule deinit"
+      ],
+      "answer": 0,
+      "explain": "Interactive rebase can reword.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_hard_10.mp4",
+        "poster": "media/images/msg_hard_10-frame.png",
+        "figure": "media/images/msg_hard_10.png"
+      }
+    },
+    {
+      "id": "msg_hard_11",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -5\n```\n# Review context: `~/src/echo` slot 11 variant 1\nWhy a 50/72 guideline exists...",
+      "choices": [
+        "Subjects stay scannable; wrapped bodies stay readable in log",
+        "Git rejects longer text",
+        "GitHub forbids bodies",
+        "Tags cannot be annotated"
+      ],
+      "answer": 0,
+      "explain": "Convention, not a hard Git limit.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_hard_11.mp4",
+        "poster": "media/images/msg_hard_11-frame.png",
+        "figure": "media/images/msg_hard_11.png"
+      }
+    },
+    {
+      "id": "msg_hard_12",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit commit --amend -m \"Fix foxtrot wording\"\n```\n# Review context: `/work/chip/foxtrot` slot 12 variant 1\nAmending a published commit changes the SHA and confuses clones that already fetched it.",
+      "answer": true,
+      "explain": "Message rewrites are history rewrites.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_hard_12.mp4",
+        "poster": "media/images/msg_hard_12-frame.png",
+        "figure": "media/images/msg_hard_12.png"
+      }
+    },
+    {
+      "id": "msg_hard_13",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# subject: imperative, body: why (16)\n```\n# Review context: `./labs/golf` slot 13 variant 1\nA merge commit message should usually...",
+      "choices": [
+        "Summarize what was integrated and any conflict decisions",
+        "Be empty",
+        "Contain .env secrets",
+        "List every blob SHA"
+      ],
+      "answer": 0,
+      "explain": "Merge messages document the join.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_hard_13.mp4",
+        "poster": "media/images/msg_hard_13-frame.png",
+        "figure": "media/images/msg_hard_13.png"
+      }
+    },
+    {
+      "id": "msg_hard_14",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"Add golf path 17\"\n```\n`git commit -F notes14.md` reads the message from...",
+      "choices": [
+        "That file",
+        "origin/main",
+        "The stash",
+        "A tag"
+      ],
+      "answer": 0,
+      "explain": "-F uses a file as the message.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_hard_14.mp4",
+        "poster": "media/images/msg_hard_14-frame.png",
+        "figure": "media/images/msg_hard_14.png"
+      }
+    },
+    {
+      "id": "msg_hard_15",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -5\n```\n# Review context: `C:/proj/alpha` slot 15 variant 1\nRewording with rebase `-i` uses...",
+      "choices": [
+        "reword / r on a commit",
+        "stash pop",
+        "bisect good",
+        "submodule deinit"
+      ],
+      "answer": 0,
+      "explain": "Interactive rebase can reword.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_hard_15.mp4",
+        "poster": "media/images/msg_hard_15-frame.png",
+        "figure": "media/images/msg_hard_15.png"
+      }
+    },
+    {
+      "id": "msg_hard_16",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit --amend -m \"Fix juliet wording\"\n```\n# Review context: `~/unix-git-practice/bravo` slot 16 variant 1\nWhy a 50/72 guideline exists...",
+      "choices": [
+        "Subjects stay scannable; wrapped bodies stay readable in log",
+        "Git rejects longer text",
+        "GitHub forbids bodies",
+        "Tags cannot be annotated"
+      ],
+      "answer": 0,
+      "explain": "Convention, not a hard Git limit.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_hard_16.mp4",
+        "poster": "media/images/msg_hard_16-frame.png",
+        "figure": "media/images/msg_hard_16.png"
+      }
+    },
+    {
+      "id": "msg_hard_17",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\n# subject: imperative, body: why (20)\n```\n# Review context: `~/src/charlie` slot 17 variant 1\nAmending a published commit changes the SHA and confuses clones that already fetched it.",
+      "answer": true,
+      "explain": "Message rewrites are history rewrites.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_hard_17.mp4",
+        "poster": "media/images/msg_hard_17-frame.png",
+        "figure": "media/images/msg_hard_17.png"
+      }
+    },
+    {
+      "id": "msg_hard_18",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"Add alpha path 21\"\n```\n# Review context: `/work/chip/delta` slot 18 variant 1\nA merge commit message should usually...",
+      "choices": [
+        "Summarize what was integrated and any conflict decisions",
+        "Be empty",
+        "Contain .env secrets",
+        "List every blob SHA"
+      ],
+      "answer": 0,
+      "explain": "Merge messages document the join.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_hard_18.mp4",
+        "poster": "media/images/msg_hard_18-frame.png",
+        "figure": "media/images/msg_hard_18.png"
+      }
+    },
+    {
+      "id": "msg_hard_19",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -5\n```\n`git commit -F notes19.md` reads the message from...",
+      "choices": [
+        "That file",
+        "origin/main",
+        "The stash",
+        "A tag"
+      ],
+      "answer": 0,
+      "explain": "-F uses a file as the message.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_hard_19.mp4",
+        "poster": "media/images/msg_hard_19-frame.png",
+        "figure": "media/images/msg_hard_19.png"
+      }
+    },
+    {
+      "id": "msg_hard_20",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit --amend -m \"Fix delta wording\"\n```\n# Review context: `/tmp/gitlab/foxtrot` slot 20 variant 1\nRewording with rebase `-i` uses...",
+      "choices": [
+        "reword / r on a commit",
+        "stash pop",
+        "bisect good",
+        "submodule deinit"
+      ],
+      "answer": 0,
+      "explain": "Interactive rebase can reword.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_hard_20.mp4",
+        "poster": "media/images/msg_hard_20-frame.png",
+        "figure": "media/images/msg_hard_20.png"
+      }
+    },
+    {
+      "id": "msg_hard_21",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# subject: imperative, body: why (24)\n```\n# Review context: `C:/proj/golf` slot 21 variant 1\nWhy a 50/72 guideline exists...",
+      "choices": [
+        "Subjects stay scannable; wrapped bodies stay readable in log",
+        "Git rejects longer text",
+        "GitHub forbids bodies",
+        "Tags cannot be annotated"
+      ],
+      "answer": 0,
+      "explain": "Convention, not a hard Git limit.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_hard_21.mp4",
+        "poster": "media/images/msg_hard_21-frame.png",
+        "figure": "media/images/msg_hard_21.png"
+      }
+    },
+    {
+      "id": "msg_hard_22",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"Add echo path 25\"\n```\n# Review context: `~/unix-git-practice/hotel` slot 22 variant 1\nAmending a published commit changes the SHA and confuses clones that already fetched it.",
+      "answer": true,
+      "explain": "Message rewrites are history rewrites.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_hard_22.mp4",
+        "poster": "media/images/msg_hard_22-frame.png",
+        "figure": "media/images/msg_hard_22.png"
+      }
+    },
+    {
+      "id": "msg_hard_23",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -5\n```\n# Review context: `~/src/alpha` slot 23 variant 1\nA merge commit message should usually...",
+      "choices": [
+        "Summarize what was integrated and any conflict decisions",
+        "Be empty",
+        "Contain .env secrets",
+        "List every blob SHA"
+      ],
+      "answer": 0,
+      "explain": "Merge messages document the join.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_hard_23.mp4",
+        "poster": "media/images/msg_hard_23-frame.png",
+        "figure": "media/images/msg_hard_23.png"
+      }
+    },
+    {
+      "id": "msg_hard_24",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit --amend -m \"Fix hotel wording\"\n```\n`git commit -F notes24.md` reads the message from...",
+      "choices": [
+        "That file",
+        "origin/main",
+        "The stash",
+        "A tag"
+      ],
+      "answer": 0,
+      "explain": "-F uses a file as the message.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_hard_24.mp4",
+        "poster": "media/images/msg_hard_24-frame.png",
+        "figure": "media/images/msg_hard_24.png"
+      }
+    },
+    {
+      "id": "msg_hard_25",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# subject: imperative, body: why (28)\n```\n# Review context: `./labs/charlie` slot 25 variant 1\nRewording with rebase `-i` uses...",
+      "choices": [
+        "reword / r on a commit",
+        "stash pop",
+        "bisect good",
+        "submodule deinit"
+      ],
+      "answer": 0,
+      "explain": "Interactive rebase can reword.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_hard_25.mp4",
+        "poster": "media/images/msg_hard_25-frame.png",
+        "figure": "media/images/msg_hard_25.png"
+      }
+    },
+    {
+      "id": "msg_hard_26",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"Add india path 29\"\n```\n# Review context: `/tmp/gitlab/delta` slot 26 variant 1\nWhy a 50/72 guideline exists...",
+      "choices": [
+        "Subjects stay scannable; wrapped bodies stay readable in log",
+        "Git rejects longer text",
+        "GitHub forbids bodies",
+        "Tags cannot be annotated"
+      ],
+      "answer": 0,
+      "explain": "Convention, not a hard Git limit.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_hard_26.mp4",
+        "poster": "media/images/msg_hard_26-frame.png",
+        "figure": "media/images/msg_hard_26.png"
+      }
+    },
+    {
+      "id": "msg_hard_27",
+      "type": "true_false",
+      "prompt": "Given this git snippet:\n```bash\ngit log --oneline -5\n```\n# Review context: `C:/proj/echo` slot 27 variant 1\nAmending a published commit changes the SHA and confuses clones that already fetched it.",
+      "answer": true,
+      "explain": "Message rewrites are history rewrites.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_hard_27.mp4",
+        "poster": "media/images/msg_hard_27-frame.png",
+        "figure": "media/images/msg_hard_27.png"
+      }
+    },
+    {
+      "id": "msg_hard_28",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit --amend -m \"Fix bravo wording\"\n```\n# Review context: `~/unix-git-practice/foxtrot` slot 28 variant 1\nA merge commit message should usually...",
+      "choices": [
+        "Summarize what was integrated and any conflict decisions",
+        "Be empty",
+        "Contain .env secrets",
+        "List every blob SHA"
+      ],
+      "answer": 0,
+      "explain": "Merge messages document the join.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_hard_28.mp4",
+        "poster": "media/images/msg_hard_28-frame.png",
+        "figure": "media/images/msg_hard_28.png"
+      }
+    },
+    {
+      "id": "msg_hard_29",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\n# subject: imperative, body: why (32)\n```\n`git commit -F notes29.md` reads the message from...",
+      "choices": [
+        "That file",
+        "origin/main",
+        "The stash",
+        "A tag"
+      ],
+      "answer": 0,
+      "explain": "-F uses a file as the message.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_hard_29.mp4",
+        "poster": "media/images/msg_hard_29-frame.png",
+        "figure": "media/images/msg_hard_29.png"
+      }
+    },
+    {
+      "id": "msg_hard_30",
+      "type": "multiple_choice",
+      "prompt": "Given this git snippet:\n```bash\ngit commit -m \"Add charlie path 33\"\n```\n# Review context: `/work/chip/hotel` slot 30 variant 1\nRewording with rebase `-i` uses...",
+      "choices": [
+        "reword / r on a commit",
+        "stash pop",
+        "bisect good",
+        "submodule deinit"
+      ],
+      "answer": 0,
+      "explain": "Interactive rebase can reword.",
+      "difficulty": "hard",
+      "media": {
+        "type": "video",
+        "src": "media/videos/msg_hard_30.mp4",
+        "poster": "media/images/msg_hard_30-frame.png",
+        "figure": "media/images/msg_hard_30.png"
+      }
+    }
+  ]
+}
